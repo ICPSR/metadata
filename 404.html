@@ -5,18 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="/metadata/img/favicon.ico" />
-    <title>ICPSR Metadata Documentation Portal</title>
+    <title>Metadata Documentation Portal</title>
     <link rel="stylesheet" href="/metadata/css/theme.css" />
     <link rel="stylesheet" href="/metadata/css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/.min.css" />
         <link href="/metadata/./assets/style.css" rel="stylesheet" />
     
-    <script src="/metadata/js/jquery-3.6.0.min.js" defer></script>
     <!--[if lt IE 9]>
       <script src="/metadata/js/html5shiv.min.js"></script>
     <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-      <script>hljs.initHighlightingOnLoad();</script> 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -26,19 +25,17 @@
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
           <a href="/metadata/.">
-          <img src="/metadata/./assets/ICPSR_logo_rgb_white-01.png" class="logo" alt="Logo"/>
+          <img src="/metadata/./assets/ICPSR_logo_rgb_white-01.png" class="logo" alt="ICPSR Logo"/>
+          Metadata Documentation Portal
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="/metadata//search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Explore ICPSR metadata" aria-label="Search ICPSR Metadata Documentation..." title="Type search terms here" />
   </form>
 </div>
+
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="/metadata/.">Home</a>
-                </li>
-              </ul>
               <ul>
                 <li class="toctree-l1"><a class="reference internal" href="/metadata/icpsr_study_schema/">ICPSR Curated Study Metadata Schema</a>
                 </li>
@@ -58,7 +55,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="/metadata/.">ICPSR Metadata Documentation Portal</a>
+          <a href="/metadata/.">Metadata Documentation Portal</a>
         
       </nav>
       <div class="wy-nav-content">
@@ -99,14 +96,14 @@
     
   </span>
 </div>
-    <script>var base_url = '/metadata/';</script>
-    <script src="/metadata/js/theme_extra.js" defer></script>
-    <script src="/metadata/js/theme.js" defer></script>
-      <script src="/metadata/search/main.js" defer></script>
-    <script defer>
-        window.onload = function () {
+    <script src="/metadata/js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "/metadata/";</script>
+    <script src="/metadata/js/theme_extra.js"></script>
+    <script src="/metadata/js/theme.js"></script>
+    <script>
+        jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);
-        };
+        });
     </script>
 
 </body>

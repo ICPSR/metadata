@@ -4251,7 +4251,7 @@ a .wy-menu-vertical li button.toctree-expand {
 .rst-content .wy-alert-neutral.tip a,
 .rst-content .wy-alert-neutral.warning a,
 .wy-alert.wy-alert-neutral a {
-    color: #2980b9
+    color: #2573A7
 }
 
 .rst-content .admonition-todo p:last-child,
@@ -4300,7 +4300,7 @@ a .wy-menu-vertical li button.toctree-expand {
 }
 
 .wy-tray-container li.wy-tray-item-info {
-    background: #2980b9
+    background: #2573A7
 }
 
 .wy-tray-container li.wy-tray-item-warning {
@@ -4481,7 +4481,7 @@ button[disabled] {
 
 .btn-link {
     background-color: transparent !important;
-    color: #2980b9;
+    color: #2573A7;
     box-shadow: none;
     border-color: transparent !important
 }
@@ -4533,7 +4533,7 @@ button[disabled] {
     float: left;
     top: 100%;
     min-width: 100%;
-    background: #fcfcfc;
+    background: #ffffff;
     z-index: 100;
     border: 1px solid #cfd7dd;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .1);
@@ -4551,7 +4551,7 @@ button[disabled] {
 }
 
 .wy-dropdown-menu>dd>a:hover {
-    background: #2980b9;
+    background: #2573A7;
     color: #fff
 }
 
@@ -4591,7 +4591,7 @@ button[disabled] {
 }
 
 .wy-dropdown.wy-dropdown-bubble .wy-dropdown-menu {
-    background: #fcfcfc;
+    background: #ffffff;
     margin-top: 2px
 }
 
@@ -4600,7 +4600,7 @@ button[disabled] {
 }
 
 .wy-dropdown.wy-dropdown-bubble .wy-dropdown-menu a:hover {
-    background: #2980b9;
+    background: #2573A7;
     color: #fff
 }
 
@@ -5206,7 +5206,7 @@ input[type=radio][disabled] {
 }
 
 .wy-inline-validate.wy-inline-validate-info .wy-input-context {
-    color: #2980b9
+    color: #2573A7
 }
 
 .rotate-90 {
@@ -5437,12 +5437,12 @@ input[type=radio][disabled] {
 }
 
 .wy-table-secondary {
-    color: grey;
+    color: #757575;
     font-size: 90%
 }
 
 .wy-table-tertiary {
-    color: grey;
+    color: #757575;
     font-size: 80%
 }
 
@@ -5507,7 +5507,7 @@ input[type=radio][disabled] {
 }
 
 a {
-    color: #2980b9;
+    color: #2573A7;
     text-decoration: none;
     cursor: pointer
 }
@@ -5575,7 +5575,7 @@ a.wy-text-warning:hover {
 }
 
 .wy-text-info {
-    color: #2980b9 !important
+    color: #2573A7 !important
 }
 
 a.wy-text-info:hover {
@@ -5938,7 +5938,7 @@ html {
 }
 
 .wy-menu-vertical li.current a {
-    color: grey;
+    color: #757575;
     border-right: 1px solid #c9c9c9;
     padding: .4045em 2.427em
 }
@@ -5973,19 +5973,19 @@ html {
     color: #404040;
     font-weight: 700;
     position: relative;
-    background: #fcfcfc;
+    background: #ffffff;
     border: none;
     padding: .4045em 1.618em
 }
 
 .wy-menu-vertical li.current>a:hover,
 .wy-menu-vertical li.on a:hover {
-    background: #fcfcfc
+    background: #ffffff
 }
 
 .wy-menu-vertical li.current>a:hover button.toctree-expand,
 .wy-menu-vertical li.on a:hover button.toctree-expand {
-    color: grey
+    color: #757575
 }
 
 .wy-menu-vertical li.current>a button.toctree-expand,
@@ -6052,7 +6052,7 @@ html {
 .wy-menu-vertical li.toctree-l8 a:hover button.toctree-expand,
 .wy-menu-vertical li.toctree-l9 a:hover button.toctree-expand,
 .wy-menu-vertical li.toctree-l10 a:hover button.toctree-expand {
-    color: grey
+    color: #757575
 }
 
 .wy-menu-vertical li.toctree-l2.current li.toctree-l3>a,
@@ -6208,7 +6208,7 @@ html {
     z-index: 200;
     background-color: #115BFB;
     text-align: center;
-    color: #fcfcfc
+    color: #ffffff
 }
 
 .wy-side-nav-search input[type=text] {
@@ -6230,7 +6230,7 @@ html {
 
 .wy-side-nav-search .wy-dropdown>a,
 .wy-side-nav-search>a {
-    color: #fcfcfc;
+    color: #ffffff;
     font-size: 100%;
     font-weight: 700;
     display: inline-block;
@@ -6268,7 +6268,7 @@ html {
 }
 
 .wy-nav .wy-menu-vertical header {
-    color: #2980b9
+    color: #2573A7
 }
 
 .wy-nav .wy-menu-vertical a {
@@ -6309,7 +6309,7 @@ html {
 }
 
 .wy-body-for-nav {
-    background: #fcfcfc
+    background: #ffffff
 }
 
 .wy-grid-for-nav {
@@ -6343,7 +6343,7 @@ html {
 
 .wy-nav-top {
     display: none;
-    background: #2980b9;
+    background: #2573A7;
     color: #fff;
     padding: .4045em .809em;
     position: relative;
@@ -6386,7 +6386,7 @@ html {
 
 .wy-nav-content-wrap {
     margin-left: 300px;
-    background: #fcfcfc;
+    background: #ffffff;
     min-height: 100%
 }
 
@@ -6411,7 +6411,7 @@ html {
 }
 
 footer {
-    color: grey
+    color: #757575
 }
 
 footer p {
@@ -6426,7 +6426,7 @@ footer span.commit code {
     font-size: 1em;
     background: none;
     border: none;
-    color: grey
+    color: #757575
 }
 
 .rst-footer-buttons {
@@ -6477,7 +6477,7 @@ footer span.commit code {
 }
 
 #search-results .context {
-    color: grey;
+    color: #757575;
     font-size: 90%
 }
 
@@ -6487,7 +6487,7 @@ footer span.commit code {
 
 @media screen and (max-width:768px) {
     .wy-body-for-nav {
-        background: #fcfcfc
+        background: #ffffff
     }
 
     .wy-nav-top {
@@ -6534,7 +6534,7 @@ footer span.commit code {
 
     .wy-nav-content {
         margin: 0;
-        background: #fcfcfc
+        background: #ffffff
     }
 }
 
@@ -6556,14 +6556,14 @@ footer span.commit code {
     bottom: 0;
     left: 0;
     width: 300px;
-    color: #fcfcfc;
+    color: #ffffff;
     background: #1f1d1d;
     font-family: Lato, proxima-nova, Helvetica Neue, Arial, sans-serif;
     z-index: 400
 }
 
 .rst-versions a {
-    color: #2980b9;
+    color: #2573A7;
     text-decoration: none
 }
 
@@ -6624,7 +6624,7 @@ footer span.commit code {
 .rst-versions .rst-current-version .rst-content tt.download span:first-child,
 .rst-versions .rst-current-version .wy-menu-vertical li button.toctree-expand,
 .wy-menu-vertical li .rst-versions .rst-current-version button.toctree-expand {
-    color: #fcfcfc
+    color: #ffffff
 }
 
 .rst-versions .rst-current-version .fa-book,
@@ -6655,7 +6655,7 @@ footer span.commit code {
 .rst-versions .rst-other-versions {
     font-size: 90%;
     padding: 12px;
-    color: grey;
+    color: #757575;
     display: none
 }
 
@@ -6676,7 +6676,7 @@ footer span.commit code {
 .rst-versions .rst-other-versions dd a {
     display: inline-block;
     padding: 6px;
-    color: #fcfcfc
+    color: #ffffff
 }
 
 .rst-versions.rst-badge {
@@ -7276,7 +7276,7 @@ html.writer-html5 .rst-content dl.option-list kbd {
 .rst-content table.docutils.footnote,
 html.writer-html4 .rst-content table.docutils.citation,
 html.writer-html5 .rst-content dl.footnote {
-    color: grey
+    color: #757575
 }
 
 .rst-content table.docutils.footnote code,
@@ -7384,7 +7384,7 @@ a .rst-content tt {
 
 .rst-content a code,
 .rst-content a tt {
-    color: #2980b9
+    color: #2573A7
 }
 
 .rst-content dl {
@@ -7420,7 +7420,7 @@ html.writer-html5 .rst-content dl[class]:not(.option-list):not(.field-list):not(
     font-size: 90%;
     line-height: normal;
     background: #e7f2fa;
-    color: #2980b9;
+    color: #2573A7;
     border-top: 3px solid #6ab0de;
     padding: 6px;
     position: relative
