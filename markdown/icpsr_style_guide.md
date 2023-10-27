@@ -1,5 +1,7 @@
 # ICPSR Metadata Style Guide
 
+Last updated: October 27, 2023
+
 These guidelines outline current ICPSR style, grammar, and general usage conventions for writing and editing metadata records.  
 
 ## Completeness
