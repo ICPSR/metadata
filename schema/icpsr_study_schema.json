@@ -289,7 +289,7 @@
               "enum": ["collection and/or analysis of data", "secondary analysis of data", "archiving of data"]
             },
             "$ref": "https://schemas.icpsr.umich.edu/schema/yaml/funding_purpose?version=v1",
-            "icpsrGuidance": "This is an internal ICPSR element that is not publicly displayed.",
+            "icpsrGuidance": "This is an internal ICPSR element that is not publicly displayed. Certain ICPSR topical archives find this useful as they assemble reports for their funding agencies.",
             "examples": [
               ["collection and/or analysis of data", "secondary analysis of data"],
               ["archiving of data"]
