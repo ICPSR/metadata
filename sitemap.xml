@@ -2,32 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://icpsr.github.io/metadata/</loc>
-         <lastmod>2024-12-05</lastmod>
+         <lastmod>2024-12-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://icpsr.github.io/metadata/icpsr_metadata_api/</loc>
-         <lastmod>2024-12-05</lastmod>
+         <lastmod>2024-12-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://icpsr.github.io/metadata/icpsr_study_schema/</loc>
-         <lastmod>2024-12-05</lastmod>
+         <lastmod>2024-12-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://icpsr.github.io/metadata/icpsr_style_guide/</loc>
-         <lastmod>2024-12-05</lastmod>
+         <lastmod>2024-12-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://icpsr.github.io/metadata/request_change/</loc>
-         <lastmod>2024-12-05</lastmod>
+         <lastmod>2024-12-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://icpsr.github.io/metadata/version_history/</loc>
-         <lastmod>2024-12-05</lastmod>
+         <lastmod>2024-12-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
