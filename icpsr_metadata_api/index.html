@@ -66,17 +66,11 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#icpsr-metadata-api-mappings">ICPSR Metadata API Mappings</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#additional-mapping-details">Additional Mapping Details</a>
+    <li class="toctree-l2"><a class="reference internal" href="#element-specific-mapping-notes">Element-Specific Mapping Notes</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#geographic-coverage-area">Geographic Coverage Area</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#time-period-dates">Time Period: Dates</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#dublin-core-and-marcxml-modifications">Dublin Core and MARCXML Modifications</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#dcat-us-modifications">DCAT-US Modifications</a>
-    </li>
-        </ul>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#restrictions">Restrictions</a>
     </li>
@@ -120,15 +114,13 @@
  - <a href="https://www.loc.gov/standards/marcxml/">MARCXML</a>
  - <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/">Dublin Core</a>. </p>
 <p>This <a href="https://docs.google.com/spreadsheets/d/1Avw212FfzxRjsUFvlJOLtsJclKeL8VJc0pbhLQevXg8/edit?usp=sharing">Metadata API Mappings</a> spreadsheet provides more information about how ICPSR metadata elements align with the above-mentioned standards. </p>
-<h2 id="additional-mapping-details">Additional Mapping Details</h2>
+<h2 id="element-specific-mapping-notes">Element-Specific Mapping Notes</h2>
 <p>This section provides additional information about non-standard mappings from ICPSR's local metadata schema to various export schemas available via the API.</p>
 <h3 id="geographic-coverage-area">Geographic Coverage Area</h3>
 <p>The current version of DCAT-US only permits a single value for the <a href="https://resources.data.gov/resources/dcat-us/#spatial">spatial</a> metadata element. In cases where a study has multiple Geographic Coverage Area entries, ICPSR will use the term "Multiple" in the 'spatial' property and then add all the terms to an array in the 'spatialExt' property, an ICPSR-specific extension of the the base DCAT-US schema.</p>
 <h3 id="time-period-dates">Time Period: Dates</h3>
-<h4 id="dublin-core-and-marcxml-modifications">Dublin Core and MARCXML Modifications</h4>
-<p>While ICPSR's <a href="https://icpsr.github.io/metadata/icpsr_study_schema/#18-time-period">Time Period</a> element is repeatable, not all metadata standards permit multiple date elements or allow structured descriptive text to contextualize multiple date values. To better align with the Dublin Core and MARCXML standards and simplify the presentation of time period information, ICPSR will collapse multiple time periods into a single date range representing the earliest and latest dates to which the data refer.</p>
-<h4 id="dcat-us-modifications">DCAT-US Modifications</h4>
-<p>The current version of DCAT-US only permits a single value for the <a href="https://resources.data.gov/resources/dcat-us/#temporal">temporal</a> metadata element. In cases where a study has multiple Time Period entries, ICPSR will collapse them into a single date range (representing the earliest and latest dates to which the data refer) and use that value for the 'temporal' property. Each individual Time Period entry will then be added to an array in the 'temporalExt' property, an ICPSR-specific extension of the the base DCAT-US schema.</p>
+<p><em>Dublin Core and MARCXML Date Expressions:</em> While ICPSR's <a href="https://icpsr.github.io/metadata/icpsr_study_schema/#18-time-period">Time Period</a> element is repeatable, not all metadata standards permit multiple date elements or allow structured descriptive text to contextualize multiple date values. To better align with the Dublin Core and MARCXML standards and simplify the presentation of time period information, ICPSR will collapse multiple time periods into a single date range representing the earliest and latest dates to which the data refer.</p>
+<p><em>DCAT-US Date Expressions:</em> The current version of DCAT-US only permits a single value for the <a href="https://resources.data.gov/resources/dcat-us/#temporal">temporal</a> metadata element. In cases where a study has multiple Time Period entries, ICPSR will collapse them into a single date range (representing the earliest and latest dates to which the data refer) and use that value for the 'temporal' property. Each individual Time Period entry will then be added to an array in the 'temporalExt' property, an ICPSR-specific extension of the the base DCAT-US schema.</p>
 <h3 id="restrictions">Restrictions</h3>
 <p>ICPSR's information about <em>data availability</em> (i.e., the availability of data for members-only vs. the general public) and <em>restriction type</em> (i.e., restricted use vs. public use) are maintained in system administrative metadata (as opposed to study-level metadata). These details are combined with Restriction statements in relevant metadata elements for the various export schema, using the following conventions: </p>
 <ul>
