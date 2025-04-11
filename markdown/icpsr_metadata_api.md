@@ -1,19 +1,39 @@
-# ICPSR Metadata API Documentation
+# ICPSR Metadata Export API
 
-## Under Development: A New API to Export Metadata!
+ICPSR has developed a new application programming interface (API) to help community members 
 
-ICPSR is developing a new application programming interface (API) so that community members can perform bulk exports of metadata records. This new API will:
+  - Search for ICPSR data collections by specific metadata fields (e.g., study identifier, subject terms, geographic coverage area, original release date, etc.)
+  - Export metadata records for those data collections in various standardized formats (e.g., DCAT-US, MARCXML, Dublin Core).
 
-  - Simplify and standardize the process of accessing metadata records.
-  - Allow ICPSR to provide metadata in a broader range of standards and formats.
+This new Object Export API will furthermore help ICPSR to:
+
+  - Simplify and standardize the process of creating metadata records.
   - Support more complex queries so that users can find the metadata records that best meet their needs.
+  - Provide metadata records in a broader range of standards and formats.
 
-## ICPSR Metadata API Mappings
+## Getting Started
 
-Upon its release, the ICPSR Metadata API will produce records that conform to the following standards (with more to come in the future): 
+Community members interested in using the new API should consult the [ICPSR Object-Export API User Guide](https://docs.google.com/document/d/1fkr7SBnpl9hX_xClajnpNxwC67JCEUvPhD_VQjKJ_SM/edit?usp=sharing). 
 
-  - [DCAT-US](https://resources.data.gov/resources/dcat-us/): a U.S. government extension of the Data Catalog Vocabulary (DCAT), designed to improve the discoverability and interoperability of federal open data. It provides a standardized way to describe datasets, data services, and distributions using RDF-based metadata, ensuring consistency across data catalogs like data.gov. This standard aligns with international best practices while incorporating specific requirements for U.S. government data publishing.
+This guide provides thorough instructions to use the API; topics include:
+
+  - Acquiring a temporary University of Michigan account (for non-UM affiliations).
+  - Acquiring API credentials.
+  - Crafting and submitting queries for metadata records.
+  - Downloading and interpreting metadata records.
+
+Questions or suggestions regarding the API should be submitted to ICPSR-help [at] umich.edu.
+
+## API Metadata Mappings
+
+Metadata records produced by the ICPSR Object Export API conform to the following standards (with more to come in the future): 
+
+  - [DCAT-US](https://resources.data.gov/resources/dcat-us/): a U.S. government extension of the Data Catalog Vocabulary (DCAT), designed to improve the discoverability and interoperability of federal open data. It provides a standardized way to describe datasets, data services, and distributions using RDF-based metadata, ensuring consistency across data catalogs like data.gov. This standard aligns with international best practices while incorporating specific requirements for U.S. government data publishing. 
+
+    > _Please note that ICPSR's DCAT-US metadata exports conform to [this local extension of the DCAT-US standard](assets/dcat-us.json)._
+
   - [MARCXML](https://www.loc.gov/standards/marcxml/): an XML-based representation of the MARC (Machine-Readable Cataloging) standard, developed by the Library of Congress for bibliographic and authority data. It preserves the structure and semantics of MARC records while enabling interoperability with modern XML-based systems. This format allows libraries and archives to exchange, transform, and integrate catalog data more easily with digital repositories and web technologies.
+
   - [Dublin Core](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/): a simple yet flexible schema for describing digital and physical resources, widely used for interoperability across different information systems. Designed to enhance resource discovery and metadata sharing, Dublin Core is commonly used in libraries, data repositories, and web-based metadata applications. 
 
 This [Metadata API Mappings](https://docs.google.com/spreadsheets/d/1Avw212FfzxRjsUFvlJOLtsJclKeL8VJc0pbhLQevXg8/edit?usp=sharing) spreadsheet provides more information about how ICPSR metadata elements align with the above-mentioned standards. 
@@ -48,3 +68,7 @@ Here are examples of how these statements appear in metadata exports:
 | Membership requirement and no use restriction | "Available to ICPSR member institutions." |
 | No membership requirement with a use restriction | "Available to the general public. Access to these data is restricted. Users interested in obtaining these data must complete a Restricted Data Use Agreement, specify the reason for the request, and obtain IRB approval or notice of exemption for their research. Visit [https://doi.org/10.3886/ICPSR37328.v1](https://doi.org/10.3886/ICPSR37328.v1) to apply for access to restricted data." |
 | Membership requirement with a use restriction | "Available to ICPSR member institutions. This data collection may not be used for any purpose other than statistical reporting and analysis. Use of these data to learn the identity of any person or establishment is prohibited. To protect respondent privacy, all data files in this collection are restricted from general dissemination. To obtain these restricted files, researchers must agree to the terms and conditions of a Restricted Data Use Agreement. Visit [https://doi.org/10.3886/ICPSR37229.v1](https://doi.org/10.3886/ICPSR37229.v1) to apply for access to restricted data."</restrctn>
+
+### Title
+
+*MARCXML Expression:* The [MARC guidelines for Field 245](https://www.loc.gov/marc/bibliographic/bd245.html) note that "subfield $a includes all the information up to and including the first mark of ISBD punctuation (e.g., an equal sign (=), a colon (:), a semicolon (;), or a slash (/)) or the medium designator (e.g., [microform])" and that "subfield $b contains all the data following the first mark of ISBD punctuation." Given the variations in how colons have been used in ICPSR's study titles over the past 60+ years, all title information will be presented in subfield $a. 

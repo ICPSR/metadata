@@ -401,6 +401,15 @@ def main():
 
                 else:
                     processed_lines = check_write(line, fo, processed_lines, index)
+
+            #now let's add our version history; first insert a blank line
+            fo.write('\n')
+            version_history_file = os.path.join(markdown_dir, "version_history.md")
+            with open(version_history_file, 'r', encoding='utf-8') as f:
+                version_lines = f.readlines()
+
+                for v in version_lines:
+                    fo.write(v)
             
         #remove temp folder
         print("\n\nRemoving temp folder...")
