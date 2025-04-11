@@ -197,7 +197,7 @@
             "type": "string",
             "controlledVocab": "N/A",
             "usageNotes": "Include the city and state (or country) where the distributor is located.",
-            "examples": ["Ann Arbor, MI", "Princeton, NJ"]
+            "examples": ["Ann Arbor, MI", "Chicago, IL"]
           },
           "order": {
             "description": "The order of importance for the distributors of the data collection.",
