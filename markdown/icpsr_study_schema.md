@@ -589,7 +589,7 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 ```
 
 ```json
-"Princeton, NJ"
+"Chicago, IL"
 ```
 
 ##### <a name="distributor_items_order"></a>10.1.3. Order
@@ -2160,4 +2160,13 @@ This element is only meant to convey specific, known, geography. If there is a v
     }
 ]
 ```
+
+
+## ICPSR Metadata Schema Version History
+
+| Date | Version | Note |
+|------|---------|------|
+| April 21, 2025 | v1.2 | Updated field definitions to improve clarity. |
+| June 28, 2024 | v1.1 | Removed guidance regarding null entries for National Institute of Justice studies. Several fields previously required "None" when otherwise a field would be left blank. Updated internal guidance for 'external source id' and 'funding purpose' elements. Added 'study number' and distributor 'order' elements to address earlier oversights. |
+| Oct. 30, 2023 | v1 | Initial release and publication of the ICPSR Metadata Schema. |
 
