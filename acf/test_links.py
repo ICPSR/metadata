@@ -23,7 +23,7 @@ xml_hyperlinks = set()
 # Find all <source> elements at different levels of the XML hierarchy
 for source in root.xpath('.//source'):
     if source.text:
-        xml_hyperlinks.add(source.text.strip().lower())
+        xml_hyperlinks.add(source.text.strip())
 
 bad_links = []
 for url in xml_hyperlinks:
@@ -42,8 +42,14 @@ for url in xml_hyperlinks:
         print(f"\n{url} request encountered an error: {requests.RequestException}")
         bad_links.append(url)
 
-with open(bad_link_log, mode='a', newline='', encoding='utf-8') as file:
-    writer = csv.writer(file)
-    writer.writerow(['Bad URL', 'Corrected URL'])
-    for url in bad_links:
-        writer.writerow([url, ''])
+if len(bad_links) > 0:
+    with open(bad_link_log, mode='a', newline='', encoding='utf-8') as file:
+        writer = csv.writer(file)
+        writer.writerow(['Bad URL', 'Corrected URL'])
+        for url in bad_links:
+            writer.writerow([url, ''])
+
+    print(f'\n\nERRORS! Please consult {bad_link_log}')
+
+else:
+    print('\n\nNo errors!')

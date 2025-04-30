@@ -219,6 +219,12 @@ def check_controlled_vocabs(cv_list, cv_used, details, current_position):
             cv_list.append('Economic Security and Mobility')
             write_error(details, f"{current_position} - Missing term: when 'Child Support' is used, 'Economic Security and Mobility' must also be included.")
 
+    if cv_used in ('offices', 'federal'):
+        if cv_list != sorted(cv_list, key=str.lower):
+            write_error(details, f"{current_position} - {cv_used.capitalize()} list is not in alphabetical order; correct in MS Word.")
+            cv_list = sorted(cv_list, key=str.lower)
+
+
     return cv_list
 
 def parse_requirement_blocks(data, cell, temp_list, details, parent_position):

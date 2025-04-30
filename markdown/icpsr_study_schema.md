@@ -1,6 +1,6 @@
 # ICPSR Metadata Schema
 
-Last updated: June 28, 2024
+Last updated: April 11, 2025
 
 This is the metadata schema used to describe data collections at the Inter-university Consortium for Political and Social Research (ICPSR). These rules and definitions represent ICPSR's metadata practices and are intended to (a) assist ICPSR staff with metadata entry, and (b) help ICPSR users -- including data depositors and researchers accessing data -- understand how to use and interpret our metadata.
 
@@ -8,48 +8,50 @@ For a machine-actionable copy of this information, please see the [JSON Schema v
 
 ## Metadata Elements: Overview
 
-| Property                                               | Required? | Repeatable? | Accepted Values           | Description                                                                                                                                                                                                                                                                                                                                                                    |
-| ------------------------------------------------------ | --------- | ----------- | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [Version](#version )                                   | Yes       | No          | Number                    | The current version number for the data collection.                                                                                                                                                                                                                                                                                                                            |
-| [Version Date](#version_date )                         | Yes       | No          | Text                      | The date on which the current version of the data collection was released by ICPSR.                                                                                                                                                                                                                                                                                            |
-| [Original Release Date](#original_release_date )       | No        | No          | Text                      | The date on which the data collection was originally released by ICPSR.                                                                                                                                                                                                                                                                                                        |
-| [Title](#title )                                       | Yes       | No          | Text                      | The authoritative title of the data collection. A full title should include a descriptive string that captures what the data collection contains as well as the geographic scope of and the time period covered by the data collection.                                                                                                                                        |
-| [Alternate Title](#alternate_title )                   | No        | Yes         | Text                      | Alternate name(s) or acronym(s) commonly used to refer to the data collection.                                                                                                                                                                                                                                                                                                 |
-| [Link Title](#link_title )                             | No        | No          | Text                      | The title of the item being linked to. Restricted to ICPSR 'union catalog' records – i.e., external resources to which ICPSR links as a courtesy.                                                                                                                                                                                                                              |
-| [Link URL](#link_url )                                 | No        | No          | Text                      | The URL of the item being linked to. Restricted to ICPSR 'union catalog' records – i.e., external resources to which ICPSR links as a courtesy.                                                                                                                                                                                                                                |
-| [Principal Investigator](#principal_investigator )     | Yes       | Yes         | Multi-part; see subfields           | The entity or entities responsible for the data collection, presented in order of importance. A Principal Investigator (PI) may be a person or an organization. Each data collection requires at least one PI.                                                                                                                                                                 |
-| [Citation](#citation )                                 | No        | No          | Text                      | The established bibliographic reference for the data collection.                                                                                                                                                                                                                                                                                                               |
-| [Distributor](#distributor )                           | Yes       | Yes         | Multi-part; see subfields           | The organization(s) responsible for distributing the data collection. Values include both the name and the location of the Distributor(s).                                                                                                                                                                                                                                     |
-| [Study Number](#study_number )                         | Yes       | No          | Number                    | A unique, numerical value used by ICPSR to identify and track data collections.                                                                                                                                                                                                                                                                                                |
-| [Digital Object Identifier (DOI)](#doi )                                           | No        | No          | Text                      | The registered persistent digital object identifier (DOI) associated with the data collection.                                                                                                                                                                                                                                                                                 |
-| [Funding Source](#funding_source )                     | No        | Yes         | Multi-part; see subfields           | Information about funding that supported the data collection.                                                                                                                                                                                                                                                                                                                  |
-| [External Source ID](#external_source_ID )             | No        | Yes         | Text                      | A unique identifier supplied by the depositor.                                                                                                                                                                                                                                                                                                                                 |
-| [Summary](#summary )                                   | Yes       | No          | Text                      | A full description or abstract of the data collection's subject matter or intellectual content. The main goal of the Summary is to give the user a clear sense of what the collection is about, including the purpose of the collection, the major topics covered, and what questions the principal investigators attempted to answer when they conducted the data collection. |
-| [Subject Term](#subject_term )                         | Yes       | Yes         | Text                      | A controlled list of terms used for indexing purposes to indicate what topics a data collection reflects. Subject Terms serve to increase the collection's discoverability by topic.                                                                                                                                                                                           |
-| [Geographic Coverage Area](#geographic_coverage_area ) | Yes       | Yes         | Text                      | Geographic areas covered in the data. In addition to the total geographic scope of the data, may include any additional levels of geographic coding provided in the variables.                                                                                                                                                                                                 |
-| [Time Period](#time_period )                           | Yes       | Yes         | Multi-part; see subfields           | Information about the time period(s) to which the data refer. The time period should focus on the dates the data are actually about, regardless of when the data were collected.                                                                                                                                                                                               |
-| [Collection Date](#collection_date )                   | No        | Yes         | Multi-part; see subfields           | Information on the date(s) when the data were physically collected.                                                                                                                                                                                                                                                                                                            |
-| [Universe](#universe )                                 | No        | No          | Text                      | The total group of persons or other entities (e.g., households, organizations, etc.) that are the object of research and to which analytic results refer.                                                                                                                                                                                                                      |
-| [Data Type](#data_type )                               | No        | Yes         | Text                      | Information describing the kind of data included in the data collection.                                                                                                                                                                                                                                                                                                       |
-| [Collection Note](#collection_note )                   | No        | Yes         | Text                      | A description of technical details and other characteristics of the data collection (such as unique authoring, discrepancies, dissemination, or processing information) that cannot be recorded in other metadata elements but constitutes important information for the secondary data user.                                                                                  |
-| [Study Purpose](#study_purpose )                       | No        | No          | Text                      | Describes the main objectives of the study, including the research questions being investigated.                                                                                                                                                                                                                                                                               |
-| [Study Design](#study_design )                         | No        | No          | Text                      | Describes the procedures the researchers used to contact subjects and/or to collect the data.                                                                                                                                                                                                                                                                                  |
-| [Variable Description](#variable_description )         | No        | No          | Text                      | Significant variables that are present in the data files distributed for public release, particularly demographic variables.                                                                                                                                                                                                                                                   |
-| [Sampling](#sampling )                                 | No        | No          | Text                      | The methods used to select the subset of the population that data are to be collected from (e.g., simple, systematic, stratified).                                                                                                                                                                                                                                             |
-| [Time Method](#time_method )                           | No        | Yes         | Text                      | The time dimension in which the data were collected and framed.                                                                                                                                                                                                                                                                                                                |
-| [Data Source](#data_source )                           | No        | Yes         | Text                      | The source(s) of the data, when that source is external to the data collection and can be independently cited.                                                                                                                                                                                                                                                                 |
-| [Collection Mode](#collection_mode )                   | No        | Yes         | Text                      | The procedure(s), technique(s), or mode(s) of inquiry used to collect the data.                                                                                                                                                                                                                                                                                                |
-| [Extent of Processing](#extent_of_processing )         | No        | Yes         | Text                      | Describes processing activities and checks performed on data collections by ICPSR curation staff.                                                                                                                                                                                                                                                                              |
-| [Weight](#weight )                                     | No        | No          | Text                      | A description of the weight variables and the criteria for using them in analyzing the data. May included other information about how the data is weighted even if no weight variables are available.                                                                                                                                                                          |
-| [Response Rates](#response_rates )                     | No        | No          | Text                      | The percentage of respondents in the sample who participated in the data collection.                                                                                                                                                                                                                                                                                           |
-| [Scale](#scale )                                       | No        | No          | Text                      | Any commonly known scale used to collect data for the data collection (e.g., psychological scales such as MMPI and CPI, or occupational scales such as the Census Occupational Codes).                                                                                                                                                                                         |
-| [Unit of Observation](#unit_of_observation )           | No        | Yes         | Text                      | Describes the entity being analyzed in the data collection; otherwise known as analysis unit.                                                                                                                                                                                                                                                                                  |
-| [Smallest Geographic Unit](#smallest_geographic_unit ) | No        | No          | Text                      | The smallest geographic unit used in the dataset.                                                                                                                                                                                                                                                                                                                              |
-| [Restrictions](#restrictions )                         | No        | No          | Text                      | Information regarding any limitations on use or restrictions on access to the file(s).                                                                                                                                                                                                                                                                                         |
-| [Changes to Collection](#changes_to_collection )       | No        | Yes         | Multi-part; see subfields           | A summary description of changes that have been made to the data collection since its last release.                                                                                                                                                                                                                                                                            |
-| [Series](#series )                                     | No        | No          | Text                      | An ICPSR series is a named collection of related studies.                                                                                                                                                                                                                                                                                                                      |
-| [Classification](#classification )                     | No        | Yes         | Text                      | ICPSR classifications address topics broadly, and are meant to be a good starting point for exploring the collection.                                                                                                                                                                                                                                                          |
-| [Filesets](#filesets )                                 | No        | Yes         | Multi-part; see subfields           |  Identifies the grouping of files in a data collection. Every ICPSR data collection with at least one file must have at least one defined Fileset.                                                                                                                                                                                                                             |
+| Property                                               | Required? | Repeatable? | Accepted Values           | Description                                                                                                                                                                                           |
+| ------------------------------------------------------ | --------- | ----------- | ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Version](#version )                                   | Yes       | No          | Number                    | The current version number for the data collection.                                                                                                                                                   |
+| [Version Date](#version_date )                         | Yes       | No          | Text                      | The date on which the current version of the data collection was released by ICPSR.                                                                                                                   |
+| [Original Release Date](#original_release_date )       | No        | No          | Text                      | The date on which the data collection was originally released by ICPSR.                                                                                                                               |
+| [Title](#title )                                       | Yes       | No          | Text                      | The official title that describes what the data collection is about, its geographic scope, and the time period it covered.                                                                            |
+| [Alternate Title](#alternate_title )                   | No        | Yes         | Text                      | The alternate name(s) or acronym(s) commonly used to refer to the data collection.                                                                                                                    |
+| [Link Title](#link_title )                             | No        | No          | Text                      | The title of an external resource that is included in the ICPSR catalog as a courtesy to users.                                                                                                       |
+| [Link URL](#link_url )                                 | No        | No          | Text                      | The URL of an external resource that is included in the ICPSR catalog as a courtesy to users.                                                                                                         |
+| [Principal Investigator](#principal_investigator )     | Yes       | Yes         | Multi-part; see subfields           | The key people or organizations responsible for the data collection, listed by importance. Each data collection requires at least one PI, either a person or an organization.                         |
+| [Citation](#citation )                                 | No        | No          | Text                      | The official way to reference the data collection in writing.                                                                                                                                         |
+| [Distributor](#distributor )                           | Yes       | Yes         | Multi-part; see subfields           | The organization(s) responsible for distributing the data collection.                                                                                                                                 |
+| [Study Number](#study_number )                         | Yes       | No          | Number                    | A unique, numerical value used by ICPSR to identify and track data collections.                                                                                                                       |
+| [Digital Object Identifier (DOI)](#doi )                                           | No        | No          | Text                      | The registered persistent digital object identifier (DOI) associated with the data collection.                                                                                                        |
+| [Funding Source](#funding_source )                     | No        | Yes         | Multi-part; see subfields           | The sources of funding that supported the data collection.                                                                                                                                            |
+| [External Source ID](#external_source_ID )             | No        | Yes         | Text                      | A unique identifier supplied by the data depositor.                                                                                                                                                   |
+| [Summary](#summary )                                   | Yes       | No          | Text                      | A description of the data collection that helps users understand its purpose, substance, and key topics.                                                                                              |
+| [Subject Term](#subject_term )                         | Yes       | Yes         | Text                      | A controlled list of social science terms maintained by ICPSR and used to indicate topics related to the data collection.                                                                             |
+| [Geographic Coverage Area](#geographic_coverage_area ) | Yes       | Yes         | Text                      | The geographic locations where the data refer or are related.                                                                                                                                         |
+| [Time Period](#time_period )                           | Yes       | Yes         | Multi-part; see subfields           | The time period(s) to which the data refer, regardless of when the data were collected.                                                                                                               |
+| [Collection Date](#collection_date )                   | No        | Yes         | Multi-part; see subfields           | The date(s) when the data were physically collected.                                                                                                                                                  |
+| [Universe](#universe )                                 | No        | No          | Text                      | The total group of persons or other entities (e.g., households or organizations) that were the object of research and to which analytic results refer.                                                |
+| [Data Type](#data_type )                               | No        | Yes         | Text                      | The types of data included in the data collection.                                                                                                                                                    |
+| [Collection Note](#collection_note )                   | No        | Yes         | Text                      | Important details about the data collection (like unique authoring, discrepencies, or processing information) that can't be recorded in other metadata elements.                                      |
+| [Study Purpose](#study_purpose )                       | No        | No          | Text                      | The study's main goals and associated research questions.                                                                                                                                             |
+| [Study Design](#study_design )                         | No        | No          | Text                      | The procedures used to contact participants and gather data.                                                                                                                                          |
+| [Variable Description](#variable_description )         | No        | No          | Text                      | Significant variables (particularly demographic variables) in the publicly released data files.                                                                                                       |
+| [Sampling](#sampling )                                 | No        | No          | Text                      | The methods used to select the subset of the population that data are to be collected from (e.g., simple, systematic, stratified).                                                                    |
+| [Time Method](#time_method )                           | No        | Yes         | Text                      | The methods used to collect data over time, like snapshots at one point (cross-sectional) or repeatedly (longitudinal) to study changes or trends.                                                    |
+| [Data Source](#data_source )                           | No        | Yes         | Text                      | The source of the data, when that source is external to the data collection and can be independently cited.                                                                                           |
+| [Collection Mode](#collection_mode )                   | No        | Yes         | Text                      | The method(s) or procedure(s) used to collect the data.                                                                                                                                               |
+| [Extent of Processing](#extent_of_processing )         | No        | Yes         | Text                      | Processing activities and checks performed on the data collection by ICPSR curation staff.                                                                                                            |
+| [Weight](#weight )                                     | No        | No          | Text                      | The weight variables and the criteria for using them in data analysis or other information about how the data are weighted if no weight variables are present.                                        |
+| [Response Rates](#response_rates )                     | No        | No          | Text                      | The percentage of respondents in the sample who participated in the data collection.                                                                                                                  |
+| [Scale](#scale )                                       | No        | No          | Text                      | Any commonly known scales used to collect data for the data collection (e.g., MMPI, CPI, the Census Occupational Codes, etc.).                                                                        |
+| [Unit of Observation](#unit_of_observation )           | No        | Yes         | Text                      | The object(s) of analysis for the data collection, such as an organization, individual, or household.                                                                                                 |
+| [Smallest Geographic Unit](#smallest_geographic_unit ) | No        | No          | Text                      | The smallest geographic unit (e.g., state or census tract) used in the dataset.                                                                                                                       |
+| [Restrictions](#restrictions )                         | No        | No          | Text                      | Rules about how the data collection can be accessed or used.                                                                                                                                          |
+| [Membership Required](#membership_required )           | No        | No          | boolean                                      | The availability of the data collection in terms of ICPSR membership. Members-only data may only be downloaded by affiliates of ICPSR member institutions who contribute funding to support the data. |
+| [Restricted Access](#restricted_access )               | No        | No          | boolean                                      | General indication of any access restrictions associated with the data collection. More detailed information is provided in the Restrictions element.                                                 |
+| [Changes to Collection](#changes_to_collection )       | No        | Yes         | Multi-part; see subfields           | A record of how the data collection has changed over time.                                                                                                                                            |
+| [Series](#series )                                     | No        | No          | Text                      | A named collection of related studies.                                                                                                                                                                |
+| [Classification](#classification )                     | No        | Yes         | Text                      | Topics used to organize data collections and help users explore the ICPSR catalog.                                                                                                                    |
+| [Filesets](#filesets )                                 | No        | Yes         | Multi-part; see subfields           | The grouping of files in the data collection.                                                                                                                                                         |
 
 ## Key for Metadata Element Entries
 
@@ -146,7 +148,7 @@ Metadata-only updates to the data collection do not increment the version number
 
 ### <a name="title"></a>4. Title         
 
-**Description:** The authoritative title of the data collection. A full title should include a descriptive string that captures what the data collection contains as well as the geographic scope of and the time period covered by the data collection.
+**Description:** The official title that describes what the data collection is about, its geographic scope, and the time period it covered.
 
 **Required**: Yes
 
@@ -216,7 +218,7 @@ Time Period:
 
 ### <a name="alternate_title"></a>5. Alternate Title         
 
-**Description:** Alternate name(s) or acronym(s) commonly used to refer to the data collection.
+**Description:** The alternate name(s) or acronym(s) commonly used to refer to the data collection.
 
 **Required**: No
 
@@ -256,7 +258,7 @@ Time Period:
 
 ### <a name="link_title"></a>6. Link Title         
 
-**Description:** The title of the item being linked to. Restricted to ICPSR 'union catalog' records – i.e., external resources to which ICPSR links as a courtesy.
+**Description:** The title of an external resource that is included in the ICPSR catalog as a courtesy to users.
 
 **Required**: No
 
@@ -276,7 +278,7 @@ Time Period:
 
 ### <a name="link_url"></a>7. Link URL         
 
-**Description:** The URL of the item being linked to. Restricted to ICPSR 'union catalog' records – i.e., external resources to which ICPSR links as a courtesy.
+**Description:** The URL of an external resource that is included in the ICPSR catalog as a courtesy to users.
 
 **Required**: No
 
@@ -296,7 +298,7 @@ Time Period:
 
 ### <a name="principal_investigator"></a>8. Principal Investigator         
 
-**Description:** The entity or entities responsible for the data collection, presented in order of importance. A Principal Investigator (PI) may be a person or an organization. Each data collection requires at least one PI.
+**Description:** The key people or organizations responsible for the data collection, listed by importance. Each data collection requires at least one PI, either a person or an organization.
 
 **Required**: Yes
 
@@ -338,7 +340,7 @@ Additional points regarding affiliated organizations:
 | ----------------------------------------------------------- | --------- | ----------- | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Person](#principal_investigator_items_person )             | No        | No          | Multi-part; see subfields          | The name of a person primarily responsible for the data collection.                                                                                                                            |
 | [Organization](#principal_investigator_items_organization ) | No        | No          | Text            | The name of the organization primarily responsible for the data collection OR the organization with which an individual PI was affiliated at the time of a data collection's deposit at ICPSR. |
-| [Order](#principal_investigator_items_order )               | Yes       | No          | Number          | The order of importance for the PIs associated with the data collection -- typically provided to ICPSR by the lead PI.                                                                         |
+| [Order](#principal_investigator_items_order )               | Yes       | No          | Number          | The order or rank of importance for the PIs associated with the data collection, typically provided to ICPSR by the lead PI.                                                                   |
 
 ##### <a name="principal_investigator_items_person"></a>8.1.1. Person
 
@@ -435,7 +437,7 @@ Additional points regarding affiliated organizations:
 
 ##### <a name="principal_investigator_items_order"></a>8.1.3. Order
 
-**Description:** The order of importance for the PIs associated with the data collection -- typically provided to ICPSR by the lead PI.
+**Description:** The order or rank of importance for the PIs associated with the data collection, typically provided to ICPSR by the lead PI.
 
 **Required**: Yes
 
@@ -494,7 +496,7 @@ Additional points regarding affiliated organizations:
 
 ### <a name="citation"></a>9. Citation         
 
-**Description:** The established bibliographic reference for the data collection.
+**Description:** The official way to reference the data collection in writing.
 
 **Required**: No
 
@@ -524,7 +526,7 @@ For additional information about how DOIs for citations are generated, see the D
 
 ### <a name="distributor"></a>10. Distributor         
 
-**Description:** The organization(s) responsible for distributing the data collection. Values include both the name and the location of the Distributor(s).
+**Description:** The organization(s) responsible for distributing the data collection.
 
 **Required**: Yes
 
@@ -538,15 +540,15 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 
 #### <a name="autogenerated_heading_4"></a>10.1. Subfields:
 
-| Property                                 | Required? | Repeatable? | Accepted Values | Description                                                                           |
-| ---------------------------------------- | --------- | ----------- | --------------- | ------------------------------------------------------------------------------------- |
-| [Name](#distributor_items_name )         | Yes       | No          | Text            | The name of the organization(s) responsible for distributing the data collection.     |
-| [Location](#distributor_items_location ) | Yes       | No          | Text            | The location of the organization(s) responsible for distributing the data collection. |
-| [Order](#distributor_items_order )       | Yes       | No          | Number          | The order of importance for the distributors of the data collection.                  |
+| Property                                 | Required? | Repeatable? | Accepted Values | Description                                                          |
+| ---------------------------------------- | --------- | ----------- | --------------- | -------------------------------------------------------------------- |
+| [Name](#distributor_items_name )         | Yes       | No          | Text            | The name of the data distributor.                                    |
+| [Location](#distributor_items_location ) | Yes       | No          | Text            | The location of the data distributor.                                |
+| [Order](#distributor_items_order )       | Yes       | No          | Number          | The order of importance for the distributors of the data collection. |
 
 ##### <a name="distributor_items_name"></a>10.1.1. Name
 
-**Description:** The name of the organization(s) responsible for distributing the data collection.
+**Description:** The name of the data distributor.
 
 **Required**: Yes
 
@@ -568,7 +570,7 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 
 ##### <a name="distributor_items_location"></a>10.1.2. Location
 
-**Description:** The location of the organization(s) responsible for distributing the data collection.
+**Description:** The location of the data distributor.
 
 **Required**: Yes
 
@@ -587,7 +589,7 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 ```
 
 ```json
-"Princeton, NJ"
+"Chicago, IL"
 ```
 
 ##### <a name="distributor_items_order"></a>10.1.3. Order
@@ -698,7 +700,7 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 
 ### <a name="funding_source"></a>13. Funding Source         
 
-**Description:** Information about funding that supported the data collection.
+**Description:** The sources of funding that supported the data collection.
 
 **Required**: No
 
@@ -708,16 +710,16 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 
 #### <a name="autogenerated_heading_5"></a>13.1. Subfields:
 
-| Property                                            | Required? | Repeatable? | Accepted Values           | Description                                                                                         |
-| --------------------------------------------------- | --------- | ----------- | ------------------------- | --------------------------------------------------------------------------------------------------- |
-| [Agency](#funding_source_items_agency )             | Yes       | No          | Text                      | The name of the organization that supported the production and/or archiving of the data collection. |
-| [Grant Number](#funding_source_items_grant_number ) | No        | Yes         | Text                      | The unique identifier associated with the funding.                                                  |
-| [Purpose](#funding_source_items_purpose )           | No        | Yes         | Text                      | The purpose of the funding.                                                                         |
-| [Order](#funding_source_items_order )               | Yes       | No          | Number                    | The relative order of funding sources associated with the data collection.                          |
+| Property                                            | Required? | Repeatable? | Accepted Values           | Description                                                                |
+| --------------------------------------------------- | --------- | ----------- | ------------------------- | -------------------------------------------------------------------------- |
+| [Agency](#funding_source_items_agency )             | Yes       | No          | Text                      | An organization that supported the data collection.                        |
+| [Grant Number](#funding_source_items_grant_number ) | No        | Yes         | Text                      | A unique identifier associated with the funding.                           |
+| [Purpose](#funding_source_items_purpose )           | No        | Yes         | Text                      | The purpose of the funding.                                                |
+| [Order](#funding_source_items_order )               | Yes       | No          | Number                    | The relative order of funding sources associated with the data collection. |
 
 ##### <a name="funding_source_items_agency"></a>13.1.1. Agency
 
-**Description:** The name of the organization that supported the production and/or archiving of the data collection.
+**Description:** An organization that supported the data collection.
 
 **Required**: Yes
 
@@ -752,7 +754,7 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 
 ##### <a name="funding_source_items_grant_number"></a>13.1.2. Grant Number
 
-**Description:** The unique identifier associated with the funding.
+**Description:** A unique identifier associated with the funding.
 
 **Required**: No
 
@@ -883,7 +885,7 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 
 ### <a name="external_source_ID"></a>14. External Source ID         
 
-**Description:** A unique identifier supplied by the depositor.
+**Description:** A unique identifier supplied by the data depositor.
 
 **Required**: No
 
@@ -911,7 +913,7 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 
 ### <a name="summary"></a>15. Summary         
 
-**Description:** A full description or abstract of the data collection's subject matter or intellectual content. The main goal of the Summary is to give the user a clear sense of what the collection is about, including the purpose of the collection, the major topics covered, and what questions the principal investigators attempted to answer when they conducted the data collection.
+**Description:** A description of the data collection that helps users understand its purpose, substance, and key topics.
 
 **Required**: Yes
 
@@ -939,7 +941,7 @@ The Summary is written in the third person and avoids attempting to address issu
 
 ### <a name="subject_term"></a>16. Subject Term         
 
-**Description:** A controlled list of terms used for indexing purposes to indicate what topics a data collection reflects. Subject Terms serve to increase the collection's discoverability by topic.
+**Description:** A controlled list of social science terms maintained by ICPSR and used to indicate topics related to the data collection.
 
 **Required**: Yes
 
@@ -978,7 +980,7 @@ The Summary is written in the third person and avoids attempting to address issu
 
 ### <a name="geographic_coverage_area"></a>17. Geographic Coverage Area         
 
-**Description:** Geographic areas covered in the data. In addition to the total geographic scope of the data, may include any additional levels of geographic coding provided in the variables.
+**Description:** The geographic locations where the data refer or are related.
 
 **Required**: Yes
 
@@ -1026,7 +1028,7 @@ The [Getty Thesaurus of Geographic Names](http://www.getty.edu/research/tools/vo
 
 ### <a name="time_period"></a>18. Time Period         
 
-**Description:** Information about the time period(s) to which the data refer. The time period should focus on the dates the data are actually about, regardless of when the data were collected.
+**Description:** The time period(s) to which the data refer, regardless of when the data were collected.
 
 **Required**: Yes
 
@@ -1036,14 +1038,14 @@ The [Getty Thesaurus of Geographic Names](http://www.getty.edu/research/tools/vo
 
 #### <a name="autogenerated_heading_11"></a>18.1. Subfields:
 
-| Property                                     | Required? | Repeatable? | Accepted Values | Description                                                                                                                                                                                                                                                                                                                                  |
-| -------------------------------------------- | --------- | ----------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Date](#time_period_items_date )             | Yes       | No          | Text            | The date for a time period to which the data refer.                                                                                                                                                                                                                                                                                          |
-| [Time Frame](#time_period_items_time_frame ) | No        | No          | Text            | An optional free text description of the time(s) (or 'time frame') to which the data refer, typically used for time periods that cannot be expressed using just numbers, such as seasons or semesters (e.g., 'Fall 2012'), or to add context to a specific Time Period when multiple entries are present (e.g., 'Wave 1' or 'Student data'). |
+| Property                                     | Required? | Repeatable? | Accepted Values | Description                                                                                                                                             |
+| -------------------------------------------- | --------- | ----------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Date](#time_period_items_date )             | Yes       | No          | Text            | The date (or date range) for a time period to which the data refer.                                                                                     |
+| [Time Frame](#time_period_items_time_frame ) | No        | No          | Text            | An optional free-text description of the time period, used for non-numeric dates (e.g., 'Fall 2012') or to add context when multiple dates are present. |
 
 ##### <a name="time_period_items_date"></a>18.1.1. Date
 
-**Description:** The date for a time period to which the data refer.
+**Description:** The date (or date range) for a time period to which the data refer.
 
 **Required**: Yes
 
@@ -1079,7 +1081,7 @@ Dates are formatted in accordance with ISO 8601 (YYYY, YYYY-MM, or YYYY-MM-DD). 
 
 ##### <a name="time_period_items_time_frame"></a>18.1.2. Time Frame
 
-**Description:** An optional free text description of the time(s) (or 'time frame') to which the data refer, typically used for time periods that cannot be expressed using just numbers, such as seasons or semesters (e.g., 'Fall 2012'), or to add context to a specific Time Period when multiple entries are present (e.g., 'Wave 1' or 'Student data').
+**Description:** An optional free-text description of the time period, used for non-numeric dates (e.g., 'Fall 2012') or to add context when multiple dates are present.
 
 **Required**: No
 
@@ -1131,7 +1133,7 @@ The textual description should not simply restate the time period in words. For 
 
 ### <a name="collection_date"></a>19. Collection Date         
 
-**Description:** Information on the date(s) when the data were physically collected.
+**Description:** The date(s) when the data were physically collected.
 
 **Required**: No
 
@@ -1141,14 +1143,14 @@ The textual description should not simply restate the time period in words. For 
 
 #### <a name="autogenerated_heading_12"></a>19.1. Subfields:
 
-| Property                                         | Required? | Repeatable? | Accepted Values | Description                                                                                                                                                                                                                                                                                           |
-| ------------------------------------------------ | --------- | ----------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Date](#collection_date_items_date )             | Yes       | No          | Text            | The date for a period in which data were collected.                                                                                                                                                                                                                                                   |
-| [Time Frame](#collection_date_items_time_frame ) | No        | No          | Text            | An optional free text description of a period in which the data were collected, typically used for time periods that cannot be expressed using just numbers (e.g., 'Fall 2012') or to add context to a specific Collection Date when multiple entries are present (e.g., 'Wave 1' or 'Student data'). |
+| Property                                         | Required? | Repeatable? | Accepted Values | Description                                                                                                                                                        |
+| ------------------------------------------------ | --------- | ----------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [Date](#collection_date_items_date )             | Yes       | No          | Text            | The date (or date range) of the data collection period.                                                                                                            |
+| [Time Frame](#collection_date_items_time_frame ) | No        | No          | Text            | An optional free-text description of the data collection period, used for non-numeric dates (e.g., 'Fall 2012') or to add context when multiple dates are present. |
 
 ##### <a name="collection_date_items_date"></a>19.1.1. Date
 
-**Description:** The date for a period in which data were collected.
+**Description:** The date (or date range) of the data collection period.
 
 **Required**: Yes
 
@@ -1180,7 +1182,7 @@ The textual description should not simply restate the time period in words. For 
 
 ##### <a name="collection_date_items_time_frame"></a>19.1.2. Time Frame
 
-**Description:** An optional free text description of a period in which the data were collected, typically used for time periods that cannot be expressed using just numbers (e.g., 'Fall 2012') or to add context to a specific Collection Date when multiple entries are present (e.g., 'Wave 1' or 'Student data').
+**Description:** An optional free-text description of the data collection period, used for non-numeric dates (e.g., 'Fall 2012') or to add context when multiple dates are present.
 
 **Required**: No
 
@@ -1232,7 +1234,7 @@ The textual description should not simply restate the time period in words. For 
 
 ### <a name="universe"></a>20. Universe         
 
-**Description:** The total group of persons or other entities (e.g., households, organizations, etc.) that are the object of research and to which analytic results refer.
+**Description:** The total group of persons or other entities (e.g., households or organizations) that were the object of research and to which analytic results refer.
 
 **Required**: No
 
@@ -1274,7 +1276,7 @@ The textual description should not simply restate the time period in words. For 
 
 ### <a name="data_type"></a>21. Data Type         
 
-**Description:** Information describing the kind of data included in the data collection.
+**Description:** The types of data included in the data collection.
 
 **Required**: No
 
@@ -1321,7 +1323,7 @@ The textual description should not simply restate the time period in words. For 
 
 ### <a name="collection_note"></a>22. Collection Note         
 
-**Description:** A description of technical details and other characteristics of the data collection (such as unique authoring, discrepancies, dissemination, or processing information) that cannot be recorded in other metadata elements but constitutes important information for the secondary data user.
+**Description:** Important details about the data collection (like unique authoring, discrepencies, or processing information) that can't be recorded in other metadata elements.
 
 **Required**: No
 
@@ -1362,7 +1364,7 @@ The textual description should not simply restate the time period in words. For 
 
 ### <a name="study_purpose"></a>23. Study Purpose         
 
-**Description:** Describes the main objectives of the study, including the research questions being investigated.
+**Description:** The study's main goals and associated research questions.
 
 **Required**: No
 
@@ -1390,7 +1392,7 @@ The textual description should not simply restate the time period in words. For 
 
 ### <a name="study_design"></a>24. Study Design         
 
-**Description:** Describes the procedures the researchers used to contact subjects and/or to collect the data.
+**Description:** The procedures used to contact participants and gather data.
 
 **Required**: No
 
@@ -1412,7 +1414,7 @@ The textual description should not simply restate the time period in words. For 
 
 ### <a name="variable_description"></a>25. Variable Description         
 
-**Description:** Significant variables that are present in the data files distributed for public release, particularly demographic variables.
+**Description:** Significant variables (particularly demographic variables) in the publicly released data files.
 
 **Required**: No
 
@@ -1485,7 +1487,7 @@ The textual description should not simply restate the time period in words. For 
 
 ### <a name="time_method"></a>27. Time Method         
 
-**Description:** The time dimension in which the data were collected and framed.
+**Description:** The methods used to collect data over time, like snapshots at one point (cross-sectional) or repeatedly (longitudinal) to study changes or trends.
 
 **Required**: No
 
@@ -1526,7 +1528,7 @@ The textual description should not simply restate the time period in words. For 
 
 ### <a name="data_source"></a>28. Data Source         
 
-**Description:** The source(s) of the data, when that source is external to the data collection and can be independently cited.
+**Description:** The source of the data, when that source is external to the data collection and can be independently cited.
 
 **Required**: No
 
@@ -1561,7 +1563,7 @@ The textual description should not simply restate the time period in words. For 
 
 ### <a name="collection_mode"></a>29. Collection Mode         
 
-**Description:** The procedure(s), technique(s), or mode(s) of inquiry used to collect the data.
+**Description:** The method(s) or procedure(s) used to collect the data.
 
 **Required**: No
 
@@ -1611,7 +1613,7 @@ The textual description should not simply restate the time period in words. For 
 
 ### <a name="extent_of_processing"></a>30. Extent of Processing         
 
-**Description:** Describes processing activities and checks performed on data collections by ICPSR curation staff.
+**Description:** Processing activities and checks performed on the data collection by ICPSR curation staff.
 
 **Required**: No
 
@@ -1650,7 +1652,7 @@ The textual description should not simply restate the time period in words. For 
 
 ### <a name="weight"></a>31. Weight         
 
-**Description:** A description of the weight variables and the criteria for using them in analyzing the data. May included other information about how the data is weighted even if no weight variables are available.
+**Description:** The weight variables and the criteria for using them in data analysis or other information about how the data are weighted if no weight variables are present.
 
 **Required**: No
 
@@ -1706,7 +1708,7 @@ The textual description should not simply restate the time period in words. For 
 
 ### <a name="scale"></a>33. Scale         
 
-**Description:** Any commonly known scale used to collect data for the data collection (e.g., psychological scales such as MMPI and CPI, or occupational scales such as the Census Occupational Codes).
+**Description:** Any commonly known scales used to collect data for the data collection (e.g., MMPI, CPI, the Census Occupational Codes, etc.).
 
 **Required**: No
 
@@ -1736,7 +1738,7 @@ The textual description should not simply restate the time period in words. For 
 
 ### <a name="unit_of_observation"></a>34. Unit of Observation         
 
-**Description:** Describes the entity being analyzed in the data collection; otherwise known as analysis unit.
+**Description:** The object(s) of analysis for the data collection, such as an organization, individual, or household.
 
 **Required**: No
 
@@ -1770,7 +1772,7 @@ The textual description should not simply restate the time period in words. For 
 
 ### <a name="smallest_geographic_unit"></a>35. Smallest Geographic Unit         
 
-**Description:** The smallest geographic unit used in the dataset.
+**Description:** The smallest geographic unit (e.g., state or census tract) used in the dataset.
 
 **Required**: No
 
@@ -1804,7 +1806,7 @@ This element is only meant to convey specific, known, geography. If there is a v
 
 ### <a name="restrictions"></a>36. Restrictions         
 
-**Description:** Information regarding any limitations on use or restrictions on access to the file(s).
+**Description:** Rules about how the data collection can be accessed or used.
 
 **Required**: No
 
@@ -1822,9 +1824,57 @@ This element is only meant to convey specific, known, geography. If there is a v
 "These data may not be used for any purpose other than statistical reporting and analysis. Use of these data to learn the identity of any person or establishment is strictly prohibited. To protect respondent privacy, certain files within this data collection are restricted from general dissemination. To obtain these files, researchers must agree to the terms and conditions of a Restricted Data Use Agreement in accordance with existing ICPSR servicing policies."
 ```
 
-### <a name="changes_to_collection"></a>37. Changes to Collection         
+### <a name="membership_required"></a>37. Membership Required         
 
-**Description:** A summary description of changes that have been made to the data collection since its last release.
+**Description:** The availability of the data collection in terms of ICPSR membership. Members-only data may only be downloaded by affiliates of ICPSR member institutions who contribute funding to support the data.
+
+**Required**: No
+
+**Repeatable**: No
+
+**Accepted Values**: Text
+
+**Controlled Vocabulary:** N/A
+
+**Usage Notes:** True indicates the data are only available to members; false indicates that the data are available to all users. Additional access restrictions (i.e., due to sensitive data or disclosure risks) may still apply.
+
+**Examples:** 
+
+```json
+"True"
+```
+
+```json
+"False"
+```
+
+### <a name="restricted_access"></a>38. Restricted Access         
+
+**Description:** General indication of any access restrictions associated with the data collection. More detailed information is provided in the Restrictions element.
+
+**Required**: No
+
+**Repeatable**: No
+
+**Accepted Values**: Text
+
+**Controlled Vocabulary:** N/A
+
+**Usage Notes:** True indicates that an access restriction is associated with the data collection; false indicates no access restrictions are present. Additional membership requirements may still apply.
+
+**Examples:** 
+
+```json
+"True"
+```
+
+```json
+"False"
+```
+
+### <a name="changes_to_collection"></a>39. Changes to Collection         
+
+**Description:** A record of how the data collection has changed over time.
 
 **Required**: No
 
@@ -1836,14 +1886,14 @@ This element is only meant to convey specific, known, geography. If there is a v
 
 **Usage Notes:** Textual changes are recorded only when data or documentation files are updated or added to the data collection (and the Version number is incremented).
 
-#### <a name="autogenerated_heading_20"></a>37.1. Subfields:
+#### <a name="autogenerated_heading_20"></a>39.1. Subfields:
 
 | Property                                   | Required? | Repeatable? | Accepted Values | Description                                                                    |
 | ------------------------------------------ | --------- | ----------- | --------------- | ------------------------------------------------------------------------------ |
 | [Date](#changes_to_collection_items_date ) | No        | No          | Text            | The date on which an update occurred. ICPSR automatically generates this date. |
 | [Note](#changes_to_collection_items_note ) | No        | No          | Text            | An explanation of the nature of the update.                                    |
 
-##### <a name="changes_to_collection_items_date"></a>37.1.1. Date
+##### <a name="changes_to_collection_items_date"></a>39.1.1. Date
 
 **Description:** The date on which an update occurred. ICPSR automatically generates this date.
 
@@ -1863,7 +1913,7 @@ This element is only meant to convey specific, known, geography. If there is a v
 "2019-05-05"
 ```
 
-##### <a name="changes_to_collection_items_note"></a>37.1.2. Note
+##### <a name="changes_to_collection_items_note"></a>39.1.2. Note
 
 **Description:** An explanation of the nature of the update.
 
@@ -1905,9 +1955,9 @@ This element is only meant to convey specific, known, geography. If there is a v
 ]
 ```
 
-### <a name="series"></a>38. Series         
+### <a name="series"></a>40. Series         
 
-**Description:** An ICPSR series is a named collection of related studies.
+**Description:** A named collection of related studies.
 
 **Required**: No
 
@@ -1945,9 +1995,9 @@ This element is only meant to convey specific, known, geography. If there is a v
 ]
 ```
 
-### <a name="classification"></a>39. Classification         
+### <a name="classification"></a>41. Classification         
 
-**Description:** ICPSR classifications address topics broadly, and are meant to be a good starting point for exploring the collection.
+**Description:** Topics used to organize data collections and help users explore the ICPSR catalog.
 
 **Required**: No
 
@@ -1973,9 +2023,9 @@ This element is only meant to convey specific, known, geography. If there is a v
 ]
 ```
 
-### <a name="filesets"></a>40. Filesets         
+### <a name="filesets"></a>42. Filesets         
 
-**Description:**  Identifies the grouping of files in a data collection. Every ICPSR data collection with at least one file must have at least one defined Fileset.
+**Description:** The grouping of files in the data collection.
 
 **Required**: No
 
@@ -1985,9 +2035,9 @@ This element is only meant to convey specific, known, geography. If there is a v
 
 **Controlled Vocabulary:** N/A
 
-**Usage Notes:** Filesets are used at ICPSR to make a convenient package for description, discovery, preservation and dissemination -- a package that is smaller than the data collection but larger than the individual file. A fileset typically contains a single file of statistical data plus additional files that support the data -- such as setups for statistical software, documentation, and alternative data representations. A data collection may have multiple filesets. Each Fileset has a Number, and may also have a Name and an SDA (Survey Documentation and Analysis) Note.
+**Usage Notes:** Filesets are used at ICPSR to make a convenient package for description, discovery, preservation and dissemination -- a package that is smaller than the data collection but larger than the individual file. A fileset typically contains a single file of statistical data plus additional files that support the data -- such as setups for statistical software, documentation, and alternative data representations. Every ICPSR data collection with at least one file must have at least one defined Fileset; a data collection may have multiple filesets. Each Fileset has a Number, and may also have a Name and an SDA (Survey Documentation and Analysis) Note.
 
-#### <a name="autogenerated_heading_22"></a>40.1. Subfields:
+#### <a name="autogenerated_heading_22"></a>42.1. Subfields:
 
 | Property                              | Required? | Repeatable? | Accepted Values | Description                                                                                               |
 | ------------------------------------- | --------- | ----------- | --------------- | --------------------------------------------------------------------------------------------------------- |
@@ -1995,7 +2045,7 @@ This element is only meant to convey specific, known, geography. If there is a v
 | [Name](#filesets_items_name )         | No        | No          | Text            | A brief title used to distinguish each fileset within a data collection.                                  |
 | [SDA Note](#filesets_items_sda_note ) | No        | No          | Text            | Additional information about the fileset for the purpose of helping online analysis users.                |
 
-##### <a name="filesets_items_number"></a>40.1.1. Number
+##### <a name="filesets_items_number"></a>42.1.1. Number
 
 **Description:** A number that uniquely identifies a 'part' or component file that is associated with the data collection.
 
@@ -2021,7 +2071,7 @@ This element is only meant to convey specific, known, geography. If there is a v
 3
 ```
 
-##### <a name="filesets_items_name"></a>40.1.2. Name
+##### <a name="filesets_items_name"></a>42.1.2. Name
 
 **Description:** A brief title used to distinguish each fileset within a data collection.
 
@@ -2053,7 +2103,7 @@ This element is only meant to convey specific, known, geography. If there is a v
 "Northbound Restricted-Use Data"
 ```
 
-##### <a name="filesets_items_sda_note"></a>40.1.3. SDA Note
+##### <a name="filesets_items_sda_note"></a>42.1.3. SDA Note
 
 **Description:** Additional information about the fileset for the purpose of helping online analysis users.
 
@@ -2110,4 +2160,13 @@ This element is only meant to convey specific, known, geography. If there is a v
     }
 ]
 ```
+
+
+## ICPSR Metadata Schema Version History
+
+| Date | Version | Note |
+|------|---------|------|
+| April 21, 2025 | v1.2 | Updated field definitions to improve clarity. |
+| June 28, 2024 | v1.1 | Removed guidance regarding null entries for National Institute of Justice studies. Several fields previously required "None" when otherwise a field would be left blank. Updated internal guidance for 'external source id' and 'funding purpose' elements. Added 'study number' and distributor 'order' elements to address earlier oversights. |
+| Oct. 30, 2023 | v1 | Initial release and publication of the ICPSR Metadata Schema. |
 

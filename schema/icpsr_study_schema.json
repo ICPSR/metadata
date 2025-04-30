@@ -31,7 +31,7 @@
       "examples": [ "2001-02-07", "2020-08-12" ]
     },
     "title": {
-      "description": "The authoritative title of the data collection. A full title should include a descriptive string that captures what the data collection contains as well as the geographic scope of and the time period covered by the data collection.",
+      "description": "The official title that describes what the data collection is about, its geographic scope, and the time period it covered.",
       "type": "string",
       "controlledVocab": "N/A",
       "$ref": "https://schemas.icpsr.umich.edu/schema/yaml/title?version=v1",
@@ -44,7 +44,7 @@
       ]
     },
     "alternate_title": {
-      "description": "Alternate name(s) or acronym(s) commonly used to refer to the data collection.",
+      "description": "The alternate name(s) or acronym(s) commonly used to refer to the data collection.",
       "type": "array",
       "items": {
         "type": "string"
@@ -59,21 +59,21 @@
       ]
     },
     "link_title": {
-      "description": "The title of the item being linked to. Restricted to ICPSR 'union catalog' records – i.e., external resources to which ICPSR links as a courtesy.",
+      "description": "The title of an external resource that is included in the ICPSR catalog as a courtesy to users.",
       "type": "string",
       "controlledVocab": "N/A",
       "usageNotes": "Always appears with the Link URL.",
       "examples": [ "Cebu Longitudinal Health and Nutrition Survey" ]
     },
     "link_url": {
-      "description": "The URL of the item being linked to. Restricted to ICPSR 'union catalog' records – i.e., external resources to which ICPSR links as a courtesy.",
+      "description": "The URL of an external resource that is included in the ICPSR catalog as a courtesy to users.",
       "type": "string",
       "controlledVocab": "N/A",
       "usageNotes": "Always appears with the Link Title.",
       "examples": [ "https://cebu.cpc.unc.edu/" ]
     },
     "principal_investigator": {
-      "description": "The entity or entities responsible for the data collection, presented in order of importance. A Principal Investigator (PI) may be a person or an organization. Each data collection requires at least one PI.",
+      "description": "The key people or organizations responsible for the data collection, listed by importance. Each data collection requires at least one PI, either a person or an organization.",
       "type": "array",
       "controlledVocab": "The [ICPSR Personal Names Authority List](https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10002) and [Organization Names Authority List](https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10004) are the primary authority control sources for PI names. The [Virtual International Authority File](https://viaf.org/) (VIAF) serves as a secondary resource if names are not present in ICPSR lists.",
       "$ref": "https://schemas.icpsr.umich.edu/schema/yaml/pi_names?version=v1",
@@ -125,7 +125,7 @@
             ]
           },
           "order": {
-            "description": "The order of importance for the PIs associated with the data collection -- typically provided to ICPSR by the lead PI.",
+            "description": "The order or rank of importance for the PIs associated with the data collection, typically provided to ICPSR by the lead PI.",
             "type": "integer",
             "controlledVocab": "N/A",
             "usageNotes": "A value of '1' indicates the primary PI, '2' the second, and so forth.",
@@ -168,7 +168,7 @@
       ]
     },
     "citation": {
-      "description": "The established bibliographic reference for the data collection.",
+      "description": "The official way to reference the data collection in writing.",
       "type": "string",
       "controlledVocab": "N/A",
       "$ref": "https://schemas.icpsr.umich.edu/schema/yaml/citation?version=v1",
@@ -178,13 +178,13 @@
       ]
     },
     "distributor": {
-      "description": "The organization(s) responsible for distributing the data collection. Values include both the name and the location of the Distributor(s).",
+      "description": "The organization(s) responsible for distributing the data collection.",
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
           "name": {
-            "description": "The name of the organization(s) responsible for distributing the data collection.",
+            "description": "The name of the data distributor.",
             "type": "string",
             "controlledVocab": "[ICPSR Organization Names Authority List](https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10004)",
             "examples": [
@@ -193,11 +193,11 @@
             ]
           },
           "location": {
-            "description": "The location of the organization(s) responsible for distributing the data collection.",
+            "description": "The location of the data distributor.",
             "type": "string",
             "controlledVocab": "N/A",
             "usageNotes": "Include the city and state (or country) where the distributor is located.",
-            "examples": ["Ann Arbor, MI", "Princeton, NJ"]
+            "examples": ["Ann Arbor, MI", "Chicago, IL"]
           },
           "order": {
             "description": "The order of importance for the distributors of the data collection.",
@@ -250,13 +250,13 @@
       "examples": [ "https://doi.org/10.3886/ICPSR03025.v2", "https://doi.org/10.3886/ICPSR06425.v1" ]
     },
     "funding_source": {
-      "description": "Information about funding that supported the data collection.",
+      "description": "The sources of funding that supported the data collection.",
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
           "agency": {
-            "description": "The name of the organization that supported the production and/or archiving of the data collection.",
+            "description": "An organization that supported the data collection.",
             "type": "string",
             "controlledVocab": "The [ICPSR Organization Names Authority List](https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10004) is the primary authority control source for funding agencies. The [Virtual International Authority File](https://viaf.org/) (VIAF) serves as a secondary resource if names are not present in the ICPSR list.",
             "$ref": "https://schemas.icpsr.umich.edu/schema/yaml/funding_agency?version=v1",
@@ -268,7 +268,7 @@
             ]
           },
           "grant_number": {
-            "description": "The unique identifier associated with the funding.",
+            "description": "A unique identifier associated with the funding.",
             "type": "array",
             "items": {
               "type": "string"
@@ -331,7 +331,7 @@
       ]
     },
     "external_source_ID": {
-      "description": "A unique identifier supplied by the depositor.",
+      "description": "A unique identifier supplied by the data depositor.",
       "type": "array",
       "items": {
         "type": "string"
@@ -344,7 +344,7 @@
       ]
     },
     "summary": {
-      "description": "A full description or abstract of the data collection's subject matter or intellectual content. The main goal of the Summary is to give the user a clear sense of what the collection is about, including the purpose of the collection, the major topics covered, and what questions the principal investigators attempted to answer when they conducted the data collection.",
+      "description": "A description of the data collection that helps users understand its purpose, substance, and key topics.",
       "type": "string",
       "controlledVocab": "N/A",
       "$ref": "https://schemas.icpsr.umich.edu/schema/yaml/summary?version=v1",
@@ -354,7 +354,7 @@
       ]
     },
     "subject_term": {
-      "description": "A controlled list of terms used for indexing purposes to indicate what topics a data collection reflects. Subject Terms serve to increase the collection's discoverability by topic.",
+      "description": "A controlled list of social science terms maintained by ICPSR and used to indicate topics related to the data collection.",
       "type": "array",
       "items": {
         "type": "string"
@@ -370,7 +370,7 @@
       ]
     },
     "geographic_coverage_area": {
-      "description": "Geographic areas covered in the data. In addition to the total geographic scope of the data, may include any additional levels of geographic coding provided in the variables.",
+      "description": "The geographic locations where the data refer or are related.",
       "type": "array",
       "items": {
         "type": "string"
@@ -386,13 +386,13 @@
       ]
     },
     "time_period": {
-      "description": "Information about the time period(s) to which the data refer. The time period should focus on the dates the data are actually about, regardless of when the data were collected.",
+      "description": "The time period(s) to which the data refer, regardless of when the data were collected.",
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
           "date": {
-            "description": "The date for a time period to which the data refer.",
+            "description": "The date (or date range) for a time period to which the data refer.",
             "type": "string",
             "controlledVocab": "N/A",
             "$ref": "https://schemas.icpsr.umich.edu/schema/yaml/time_period_date?version=v1",
@@ -405,7 +405,7 @@
 
           },
           "time_frame": {
-            "description": "An optional free text description of the time(s) (or 'time frame') to which the data refer, typically used for time periods that cannot be expressed using just numbers, such as seasons or semesters (e.g., 'Fall 2012'), or to add context to a specific Time Period when multiple entries are present (e.g., 'Wave 1' or 'Student data').",
+            "description": "An optional free-text description of the time period, used for non-numeric dates (e.g., 'Fall 2012') or to add context when multiple dates are present.",
             "type": "string",
             "controlledVocab": "N/A",
             "$ref": "https://schemas.icpsr.umich.edu/schema/yaml/time_period_time_frame?version=v1",
@@ -437,13 +437,13 @@
       ]
     },
     "collection_date": {
-      "description": "Information on the date(s) when the data were physically collected.",
+      "description": "The date(s) when the data were physically collected.",
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
           "date": {
-            "description": "The date for a period in which data were collected.",
+            "description": "The date (or date range) of the data collection period.",
             "type": "string",
             "controlledVocab": "N/A",
             "usageNotes": "Dates are formatted in accordance with ISO 8601 (YYYY, YYYY-MM, or YYYY-MM-DD). One hyphen separates the parts of a date; two hyphens separate two dates. Ranges may be expressed in years (YYYY--YYYY), months (YYYY-MM--YYYY-MM), or days (YYYY-MM-DD--YYYY-MM-DD). No spaces are permitted in date expressions.",
@@ -455,7 +455,7 @@
             ]
           },
           "time_frame": {
-            "description": "An optional free text description of a period in which the data were collected, typically used for time periods that cannot be expressed using just numbers (e.g., 'Fall 2012') or to add context to a specific Collection Date when multiple entries are present (e.g., 'Wave 1' or 'Student data').",
+            "description": "An optional free-text description of the data collection period, used for non-numeric dates (e.g., 'Fall 2012') or to add context when multiple dates are present.",
             "type": "string",
             "controlledVocab": "N/A",
             "$ref": "https://schemas.icpsr.umich.edu/schema/yaml/collection_date_time_frame?version=v1",
@@ -487,7 +487,7 @@
       ]
     },
     "universe": {
-      "description": "The total group of persons or other entities (e.g., households, organizations, etc.) that are the object of research and to which analytic results refer.",
+      "description": "The total group of persons or other entities (e.g., households or organizations) that were the object of research and to which analytic results refer.",
       "type": "string",
       "controlledVocab": "N/A",
       "usageNotes": "Age, nationality, and residence commonly help to delineate a given universe, but any of a number of factors may be involved, such as sex, race, income, veteran status, criminal convictions, etc. The Universe may consist of elements other than persons, such as housing units, court cases, deaths, countries, etc. It should be possible to tell from the description of the universe whether a given individual or element (hypothetical or real) is a member of the population under study. Typically, the Universe statement is about one sentence or shorter, and reflects the entire possible population a data collection sought to study.",
@@ -502,7 +502,7 @@
       ]
     },
     "data_type": {
-      "description": "Information describing the kind of data included in the data collection.",
+      "description": "The types of data included in the data collection.",
       "type": "array",
       "items": {
         "type": "string",
@@ -532,7 +532,7 @@
       ]
     },
     "collection_note": {
-      "description": "A description of technical details and other characteristics of the data collection (such as unique authoring, discrepancies, dissemination, or processing information) that cannot be recorded in other metadata elements but constitutes important information for the secondary data user.",
+      "description": "Important details about the data collection (like unique authoring, discrepencies, or processing information) that can't be recorded in other metadata elements.",
       "type": "array",
       "items": {
         "type": "string"
@@ -556,7 +556,7 @@
       ]
     },
     "study_purpose": {
-      "description": "Describes the main objectives of the study, including the research questions being investigated.",
+      "description": "The study's main goals and associated research questions.",
       "type": "string",
       "controlledVocab": "N/A",
       "usageNotes": "The Study Purpose provides more specific information than the Summary element, including the data collection's objectives, intended achievements, and lists of questions it sought to answer. This element can also include historical or background information about the research project. As with the Summary, the text should be written in third person and avoid any commentary on the data collection's outcomes.",
@@ -567,7 +567,7 @@
         ]
     },
     "study_design": {
-      "description": "Describes the procedures the researchers used to contact subjects and/or to collect the data.",
+      "description": "The procedures used to contact participants and gather data.",
       "type": "string",
       "controlledVocab": "N/A",
       "$ref": "https://schemas.icpsr.umich.edu/schema/yaml/study_design?version=v1",
@@ -576,7 +576,7 @@
       ]
     },
     "variable_description": {
-      "description": "Significant variables that are present in the data files distributed for public release, particularly demographic variables.",
+      "description": "Significant variables (particularly demographic variables) in the publicly released data files.",
       "type": "string",
       "controlledVocab": "N/A",
       "usageNotes": "The Variable Description provides more detailed information than the Summary, including a review of variables that are important for users to know about. The codebook, setup files, and variable groups are appropriate sources of information for Variable Description.",
@@ -611,7 +611,7 @@
       ]
     },
     "time_method": {
-      "description": "The time dimension in which the data were collected and framed.",
+      "description": "The methods used to collect data over time, like snapshots at one point (cross-sectional) or repeatedly (longitudinal) to study changes or trends.",
       "type": "array",
       "items": {
         "type": "string",
@@ -636,7 +636,7 @@
       ]
     },
     "data_source": {
-      "description": "The source(s) of the data, when that source is external to the data collection and can be independently cited.",
+      "description": "The source of the data, when that source is external to the data collection and can be independently cited.",
       "type": "array",
       "items": {
         "type": "string"
@@ -657,7 +657,7 @@
       ]
     },
     "collection_mode": {
-      "description": "The procedure(s), technique(s), or mode(s) of inquiry used to collect the data.",
+      "description": "The method(s) or procedure(s) used to collect the data.",
       "type": "array",
       "items": {
         "type": "string",
@@ -691,7 +691,7 @@
       ]
     },
     "extent_of_processing": {
-      "description": "Describes processing activities and checks performed on data collections by ICPSR curation staff.",
+      "description": "Processing activities and checks performed on the data collection by ICPSR curation staff.",
       "icpsrGuidance": "This element is displayed to end-users in version history.",
       "type": "array",
       "items": {
@@ -718,7 +718,7 @@
       ]
     },
     "weight": {
-      "description": "A description of the weight variables and the criteria for using them in analyzing the data. May included other information about how the data is weighted even if no weight variables are available.",
+      "description": "The weight variables and the criteria for using them in data analysis or other information about how the data are weighted if no weight variables are present.",
       "type": "string",
       "controlledVocab": "N/A",
       "usageNotes": "Weight includes any information about weighting variables in the data, as well as any other weight information provided by the Principal Investigator. If a weighting formula or coefficient was developed, provide this formula, define its elements, and indicate how the formula is applied to the data. It is acceptable to summarize information contained in documentation and refer users to that documentation for more information.",
@@ -740,7 +740,7 @@
       ]
     },
     "scale": {
-      "description": "Any commonly known scale used to collect data for the data collection (e.g., psychological scales such as MMPI and CPI, or occupational scales such as the Census Occupational Codes).",
+      "description": "Any commonly known scales used to collect data for the data collection (e.g., MMPI, CPI, the Census Occupational Codes, etc.).",
       "type": "string",
       "controlledVocab": "N/A",
       "$ref": "https://schemas.icpsr.umich.edu/schema/yaml/scale?version=v1",
@@ -750,7 +750,7 @@
       ]
     },
     "unit_of_observation": {
-      "description": "Describes the entity being analyzed in the data collection; otherwise known as analysis unit.",
+      "description": "The object(s) of analysis for the data collection, such as an organization, individual, or household.",
       "type": "array",
       "controlledVocab": "N/A",
       "items": {
@@ -764,7 +764,7 @@
       ]
     },
     "smallest_geographic_unit": {
-      "description": "The smallest geographic unit used in the dataset.",
+      "description": "The smallest geographic unit (e.g., state or census tract) used in the dataset.",
       "type": "string",
       "controlledVocab": "N/A",
       "$ref": "https://schemas.icpsr.umich.edu/schema/yaml/smallest_geographic_unit?version=v1",
@@ -775,7 +775,7 @@
       ]
     },
     "restrictions": {
-      "description": "Information regarding any limitations on use or restrictions on access to the file(s).",
+      "description": "Rules about how the data collection can be accessed or used.",
       "type": "string",
       "controlledVocab": "N/A",
       "usageNotes": "Restrictions informs users that access to certain variables in a collection may be limited, and that they should contact ICPSR directly to inquire about accessing them.",
@@ -783,8 +783,22 @@
         "These data may not be used for any purpose other than statistical reporting and analysis. Use of these data to learn the identity of any person or establishment is strictly prohibited. To protect respondent privacy, certain files within this data collection are restricted from general dissemination. To obtain these files, researchers must agree to the terms and conditions of a Restricted Data Use Agreement in accordance with existing ICPSR servicing policies."
       ]
     },
+    "membership_required": {
+      "description": "The availability of the data collection in terms of ICPSR membership. Members-only data may only be downloaded by affiliates of ICPSR member institutions who contribute funding to support the data.",
+      "type": "boolean",
+      "controlledVocab": "N/A",
+      "usageNotes": "True indicates the data are only available to members; false indicates that the data are available to all users. Additional access restrictions (i.e., due to sensitive data or disclosure risks) may still apply.",
+      "examples": ["True", "False"]
+    },
+    "restricted_access": {
+      "description": "General indication of any access restrictions associated with the data collection. More detailed information is provided in the Restrictions element.",
+      "type": "boolean",
+      "controlledVocab": "N/A",
+      "usageNotes": "True indicates that an access restriction is associated with the data collection; false indicates no access restrictions are present. Additional membership requirements may still apply.",
+      "examples": ["True", "False"]
+    },
     "changes_to_collection": {
-      "description": "A summary description of changes that have been made to the data collection since its last release.",
+      "description": "A record of how the data collection has changed over time.",
       "type": "array",
       "controlledVocab": "N/A",
       "items": {
@@ -824,7 +838,7 @@
       ]
     },
     "series": {
-      "description": "An ICPSR series is a named collection of related studies.",
+      "description": "A named collection of related studies.",
       "type": "string",
       "controlledVocab": "[ICPSR Series](https://www.icpsr.umich.edu/web/ICPSR/search/series)",
       "usageNotes": "Typically the studies in an ICPSR series are produced by the same group of investigators, and either explore different facets of the same topic, or repeat the same investigation over time. Each series name is given in title case (all major words are capitalized, while minor words are lowercased) and ends with the word 'Series'.",
@@ -836,7 +850,7 @@
       ]
     },
     "classification": {
-      "description": "ICPSR classifications address topics broadly, and are meant to be a good starting point for exploring the collection.",
+      "description": "Topics used to organize data collections and help users explore the ICPSR catalog.",
       "type": "array",
       "items": {
         "type": "string"
@@ -849,7 +863,7 @@
       ]
     },
     "filesets": {
-      "description": " Identifies the grouping of files in a data collection. Every ICPSR data collection with at least one file must have at least one defined Fileset.",
+      "description": "The grouping of files in the data collection.",
       "type": "array",
       "controlledVocab": "N/A",
       "items": {
@@ -887,7 +901,7 @@
         "dependentRequired": { "name": ["number"] },
         "additionalProperties": false
       },
-      "usageNotes": "Filesets are used at ICPSR to make a convenient package for description, discovery, preservation and dissemination -- a package that is smaller than the data collection but larger than the individual file. A fileset typically contains a single file of statistical data plus additional files that support the data -- such as setups for statistical software, documentation, and alternative data representations. A data collection may have multiple filesets. Each Fileset has a Number, and may also have a Name and an SDA (Survey Documentation and Analysis) Note.",
+      "usageNotes": "Filesets are used at ICPSR to make a convenient package for description, discovery, preservation and dissemination -- a package that is smaller than the data collection but larger than the individual file. A fileset typically contains a single file of statistical data plus additional files that support the data -- such as setups for statistical software, documentation, and alternative data representations. Every ICPSR data collection with at least one file must have at least one defined Fileset; a data collection may have multiple filesets. Each Fileset has a Number, and may also have a Name and an SDA (Survey Documentation and Analysis) Note.",
       "examples": [
         [
           {
