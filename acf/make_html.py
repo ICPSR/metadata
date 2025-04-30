@@ -1,9 +1,9 @@
 from lxml import etree
 
 # Paths to your files
-xml_file = 'C:/ACF/FINAL APPROVED STATE RECORDS/Tennessee/tennessee_20250219.xml'
-xsl_file = 'C:/icpsr_github/metadata/acf/statetemplatev5_edit.xsl'
-output_html = 'C:/ACF/FINAL APPROVED STATE RECORDS/Tennessee/tennessee_20250410.html'
+xml_file = 'C:/ACF/FINAL APPROVED STATE RECORDS/Coquille Tribe/coquille_indian_tribe_20250425.xml'
+xsl_file = 'C:/icpsr_github/metadata/acf/statetemplatev5.xsl'
+output_html = 'C:/ACF/FINAL APPROVED STATE RECORDS/Coquille Tribe/coquille_indian_tribe_20250425.html'
 
 # Parse the XML and XSL files
 xml_doc = etree.parse(xml_file)

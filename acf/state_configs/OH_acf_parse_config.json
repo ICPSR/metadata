@@ -1,9 +1,10 @@
 {
-    "input_doc": "C:/testing/ACF/Ohio/Ohio_test.docx",
-    "out_dir": "C:/testing/ACF/Ohio",
+    "input_doc": "C:/ACF/FINAL APPROVED STATE RECORDS/Ohio/Ohio_Copy.docx",
+    "out_dir": "C:/ACF/FINAL APPROVED STATE RECORDS/Ohio",
     "xsd_file": "schema_final.xsd",
     "xsl_file": "statetemplatev5.xsl",
     "category": "false",
+    "titleContent": "false",
     "titleName": "Title",
     "subtitleName": "",
     "articleName": "Chapter",

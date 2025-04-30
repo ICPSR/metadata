@@ -265,7 +265,7 @@
                     </xsl:if>
 
                     <!-- Bullet point list for associatedFederal -->
-                    <b>Associated Federal Records</b>
+                    <b><u>Associated Federal Records</u></b>
                     <ul>
                         <xsl:for-each
                           select="associatedFederalRecords/federal">
@@ -281,94 +281,48 @@
 
                 <!-- Start by checking if there are definitions. Note that section headings will change if we are working with titleContent vs. article -->
                 <xsl:if test="definitions">
-                    <b>Definitions for 
+                    <b>Definitions related to 
                       <xsl:choose>
-                        <!-- Only show Title info if we're in a titleContent context -->
+                        <!-- If we're in a titleContent context -->
                         <xsl:when test="self::titleContent">
-                          <xsl:value-of select="ancestor::record/titleName"/>
-                          <xsl:text> </xsl:text>
-                          <xsl:value-of select="ancestor::title/number"/>
-                          <xsl:if test="ancestor::title/source">
-                            <xsl:text> (</xsl:text>
-                            <a href="{ancestor::title/source}">
-                              <xsl:value-of select="ancestor::title/name"/>
-                            </a>
-                            <xsl:text>)</xsl:text>
-                          </xsl:if>
+                          <xsl:value-of select="$titleNumber"/>
+                          <xsl:text> (</xsl:text>
+                          <xsl:copy-of select="$titleLink"/>
+                          <xsl:text>)</xsl:text>
                         </xsl:when>
 
-                        <!-- Otherwise, build up Article, Part, SubPart in order -->
+                        <!-- Otherwise, use the most specific level available -->
                         <xsl:otherwise>
-
-                          <!-- Subtitle (optional) -->
-                          <xsl:if test="subtitle/number">
-                            <xsl:value-of select="ancestor::record/subtitleName"/>
-                            <xsl:text> </xsl:text>
-                            <xsl:value-of select="subtitle/number"/>
-                            <xsl:if test="subtitle/source">
+                          <xsl:choose>
+                            <xsl:when test="part/subPart">
+                              <xsl:value-of select="$subPartNumber"/>
                               <xsl:text> (</xsl:text>
-                              <a href="{subtitle/source}">
-                                <xsl:value-of select="subtitle/name"/>
-                              </a>
+                              <xsl:copy-of select="$subPartLink"/>
                               <xsl:text>)</xsl:text>
-                            </xsl:if>
-                            <xsl:text> </xsl:text>
-                          </xsl:if>
-
-                          <!-- Article -->
-                          <xsl:if test="number and self::article">
-                            <xsl:value-of select="ancestor::record/articleName"/>
-                            <xsl:text> </xsl:text>
-                            <xsl:value-of select="number"/>
-                            <xsl:if test="source">
+                            </xsl:when>
+                            <xsl:when test="part">
+                              <xsl:choose>
+                                <xsl:when test="part/altName">
+                                  <xsl:value-of select="$alt_partNumber"/>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                  <xsl:value-of select="$partNumber"/>
+                                </xsl:otherwise>
+                              </xsl:choose>
                               <xsl:text> (</xsl:text>
-                              <a href="{source}">
-                                <xsl:value-of select="name"/>
-                              </a>
+                              <xsl:copy-of select="$partLink"/>
                               <xsl:text>)</xsl:text>
-                            </xsl:if>
-                            <xsl:text> </xsl:text>
-                          </xsl:if>
-
-                          <!-- Part -->
-                          <xsl:if test="part/number">
-                            <xsl:choose>
-                              <xsl:when test="part/altName">
-                                <xsl:value-of select="part/altName"/>
-                              </xsl:when>
-                              <xsl:otherwise>
-                                <xsl:value-of select="ancestor::record/partName"/>
-                              </xsl:otherwise>
-                            </xsl:choose>
-                            <xsl:text> </xsl:text>
-                            <xsl:value-of select="part/number"/>
-                            <xsl:if test="part/source">
+                            </xsl:when>
+                            <xsl:otherwise>
+                              <xsl:value-of select="$articleNumber"/>
                               <xsl:text> (</xsl:text>
-                              <a href="{part/source}">
-                                <xsl:value-of select="part/name"/>
-                              </a>
+                              <xsl:copy-of select="$articleLink"/>
                               <xsl:text>)</xsl:text>
-                            </xsl:if>
-                            <xsl:text> </xsl:text>
-                          </xsl:if>
-
-                          <!-- SubPart -->
-                          <xsl:if test="part/subPart/number">
-                            <xsl:value-of select="ancestor::record/subPartName"/>
-                            <xsl:text> </xsl:text>
-                            <xsl:value-of select="part/subPart/number"/>
-                            <xsl:if test="part/subPart/source">
-                              <xsl:text> (</xsl:text>
-                              <a href="{part/subPart/source}">
-                                <xsl:value-of select="part/subPart/name"/>
-                              </a>
-                              <xsl:text>)</xsl:text>
-                            </xsl:if>
-                          </xsl:if>
-
+                            </xsl:otherwise>
+                          </xsl:choose>
                         </xsl:otherwise>
                       </xsl:choose>
-                    </b>
+                    </b> 
                     <!-- Now present each statute and associated defined terms -->
                     <ul>
                         <xsl:for-each select="definitions/statute">
@@ -392,91 +346,45 @@
 
                 <!-- Now check if there are requirements. -->
                 <xsl:if test="requirements">
-                    <b>Requirements for 
+                    <b>Requirements related to 
                       <xsl:choose>
-                        <!-- Only show Title info if we're in a titleContent context -->
+                        <!-- If we're in a titleContent context -->
                         <xsl:when test="self::titleContent">
-                          <xsl:value-of select="ancestor::record/titleName"/>
-                          <xsl:text> </xsl:text>
-                          <xsl:value-of select="ancestor::title/number"/>
-                          <xsl:if test="ancestor::title/source">
-                            <xsl:text> (</xsl:text>
-                            <a href="{ancestor::title/source}">
-                              <xsl:value-of select="ancestor::title/name"/>
-                            </a>
-                            <xsl:text>)</xsl:text>
-                          </xsl:if>
+                          <xsl:value-of select="$titleNumber"/>
+                          <xsl:text> (</xsl:text>
+                          <xsl:copy-of select="$titleLink"/>
+                          <xsl:text>)</xsl:text>
                         </xsl:when>
 
-                        <!-- Otherwise, build up Article, Part, SubPart in order -->
+                        <!-- Otherwise, pick the most specific granularity -->
                         <xsl:otherwise>
-
-                          <!-- Subtitle (optional) -->
-                          <xsl:if test="subtitle/number">
-                            <xsl:value-of select="ancestor::record/subtitleName"/>
-                            <xsl:text> </xsl:text>
-                            <xsl:value-of select="subtitle/number"/>
-                            <xsl:if test="subtitle/source">
+                          <xsl:choose>
+                            <xsl:when test="part/subPart">
+                              <xsl:value-of select="$subPartNumber"/>
                               <xsl:text> (</xsl:text>
-                              <a href="{subtitle/source}">
-                                <xsl:value-of select="subtitle/name"/>
-                              </a>
+                              <xsl:copy-of select="$subPartLink"/>
                               <xsl:text>)</xsl:text>
-                            </xsl:if>
-                            <xsl:text> </xsl:text>
-                          </xsl:if>  
-                          
-                          <!-- Article -->
-                          <xsl:if test="number and self::article">
-                            <xsl:value-of select="ancestor::record/articleName"/>
-                            <xsl:text> </xsl:text>
-                            <xsl:value-of select="number"/>
-                            <xsl:if test="source">
+                            </xsl:when>
+                            <xsl:when test="part">
+                              <xsl:choose>
+                                <xsl:when test="part/altName">
+                                  <xsl:value-of select="$alt_partNumber"/>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                  <xsl:value-of select="$partNumber"/>
+                                </xsl:otherwise>
+                              </xsl:choose>
                               <xsl:text> (</xsl:text>
-                              <a href="{source}">
-                                <xsl:value-of select="name"/>
-                              </a>
+                              <xsl:copy-of select="$partLink"/>
                               <xsl:text>)</xsl:text>
-                            </xsl:if>
-                            <xsl:text> </xsl:text>
-                          </xsl:if>
-
-                          <!-- Part -->
-                          <xsl:if test="part/number">
-                            <xsl:choose>
-                              <xsl:when test="part/altName">
-                                <xsl:value-of select="part/altName"/>
-                              </xsl:when>
-                              <xsl:otherwise>
-                                <xsl:value-of select="ancestor::record/partName"/>
-                              </xsl:otherwise>
-                            </xsl:choose>
-                            <xsl:text> </xsl:text>
-                            <xsl:value-of select="part/number"/>
-                            <xsl:if test="part/source">
+                            </xsl:when>
+                            <xsl:otherwise>
+                              <xsl:value-of select="$articleNumber"/>
                               <xsl:text> (</xsl:text>
-                              <a href="{part/source}">
-                                <xsl:value-of select="part/name"/>
-                              </a>
+                              <xsl:copy-of select="$articleLink"/>
                               <xsl:text>)</xsl:text>
-                            </xsl:if>
-                            <xsl:text> </xsl:text>
-                          </xsl:if>
-
-                          <!-- SubPart -->
-                          <xsl:if test="part/subPart/number">
-                            <xsl:value-of select="ancestor::record/subPartName"/>
-                            <xsl:text> </xsl:text>
-                            <xsl:value-of select="part/subPart/number"/>
-                            <xsl:if test="part/subPart/source">
-                              <xsl:text> (</xsl:text>
-                              <a href="{part/subPart/source}">
-                                <xsl:value-of select="part/subPart/name"/>
-                              </a>
-                              <xsl:text>)</xsl:text>
-                            </xsl:if>
-                          </xsl:if>
-
+                            </xsl:otherwise>
+                          </xsl:choose>
                         </xsl:otherwise>
                       </xsl:choose>
                     </b>
