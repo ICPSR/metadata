@@ -5,7 +5,7 @@ projects/somar/test_credentials.json
 projects/somar/draft_dois.csv
 projects/ror/
 projects/terms_of_use/
-projects/jinja-tests/export_request-*.json
+projects/jinja_tests/export_request-*.json
 projects/datacite/
 projects/ddi_doi_cleanup/input/
 projects/ddi_doi_cleanup/output
