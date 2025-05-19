@@ -27,10 +27,13 @@
                     .doublespace {
                         margin: 20px 0;
                     }
+                    body {
+                        font-family: "Times New Roman", Times, serif;
+                    }
             </style>
             </head>
             <body>
-                <table style="width:100%; border:1 px solid black;">
+                <table style="width:100%; border:1px solid black;">
                      <xsl:apply-templates select="category/title | title"/>
                 </table>
             </body>
@@ -77,7 +80,7 @@
             <td>
                 <br/>
                 <!-- ACF offices associated, it creates a section on the bullet list for each office and sorts it alphabetically. -->
-                <b>ACF Offices Associated</b>
+                <b><u>ACF Offices Associated</u></b>
                 <br/>
                 <ul>
                     <xsl:for-each select="officesAssociated/office">
@@ -295,6 +298,21 @@
                             </a>
                             <xsl:text>)</xsl:text>
                           </xsl:if>
+                        
+
+                          <xsl:if test="subtitle/number">
+                            <xsl:value-of select="ancestor::record/subtitleName"/>
+                            <xsl:text> </xsl:text>
+                            <xsl:value-of select="subtitle/number"/>
+                            <xsl:if test="subtitle/source">
+                              <xsl:text> (</xsl:text>
+                              <a href="{subtitle/source}">
+                                <xsl:value-of select="subtitle/name"/>
+                              </a>
+                              <xsl:text>)</xsl:text>
+                            </xsl:if>
+                            <xsl:text> </xsl:text>
+                          </xsl:if>
                         </xsl:when>
 
                         <!-- Otherwise, build up Article, Part, SubPart in order -->
@@ -407,6 +425,19 @@
                             <xsl:text>)</xsl:text>
                           </xsl:if>
                         </xsl:when>
+                        <xsl:if test="subtitle/number">
+                            <xsl:value-of select="ancestor::record/subtitleName"/>
+                            <xsl:text> </xsl:text>
+                            <xsl:value-of select="subtitle/number"/>
+                            <xsl:if test="subtitle/source">
+                              <xsl:text> (</xsl:text>
+                              <a href="{subtitle/source}">
+                                <xsl:value-of select="subtitle/name"/>
+                              </a>
+                              <xsl:text>)</xsl:text>
+                            </xsl:if>
+                            <xsl:text> </xsl:text>
+                          </xsl:if>
 
                         <!-- Otherwise, build up Article, Part, SubPart in order -->
                         <xsl:otherwise>

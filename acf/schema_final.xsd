@@ -107,6 +107,7 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element ref="domain"/>
+        <xs:element minOccurs="0" ref="subtitle"/>
         <xs:element ref="associatedFederalRecords"/>
         <xs:choice minOccurs="1" maxOccurs="1">
           <xs:sequence>

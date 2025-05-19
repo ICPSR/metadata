@@ -1,5 +1,5 @@
 {
-   "input_doc": "C:/ACF/FINAL APPROVED STATE RECORDS/Hawaii/Hawaii_Copy.docx",
+    "input_doc": "C:/ACF/FINAL APPROVED STATE RECORDS/Hawaii/Hawaii_Copy.docx",
     "out_dir": "C:/ACF/FINAL APPROVED STATE RECORDS/Hawaii",
     "xsd_file": "schema_final.xsd",
     "xsl_file": "statetemplatev5.xsl",

@@ -1,0 +1,158 @@
+{% set study   = tree.get('study', [{}])[0] %}
+{% set series  = tree.get('series', []) %}
+{% set dataset = tree.get('dataset', []) %}
+{% set conformance_path = tree.get('static_path', '') ~ '/conformance/dcat-us.json' %}
+
+{%set icpsr = "Inter-university Consortium for Political and Social Research" %}
+
+{
+    "@context": "https://project-open-data.cio.gov/v1.1/schema/catalog.jsonld",
+    "@type": "dcat:Catalog",
+    "conformsTo": "https://project-open-data.cio.gov/v1.1/schema",
+    "describedBy": "{{ conformance_path }}",
+    "dataset": [
+        {
+            "@type": "dcat:Dataset"
+            
+            {% if study.doi %}
+                , "identifier": {{ study.doi[0] | jsonify }}
+            {% else %}
+                , "identifier": {{ study.identifier[0] | jsonify }}
+            {% endif %}
+
+            {% if study.title %}
+                , "title": {{ study.title[0] | jsonify }}
+            {% endif %}
+
+            {% if study.description %}
+                , "description": {{ study.description | join('\n') | strip_tags | jsonify }}
+            {% endif %}
+
+            {% if study.issued %}
+                , "issued": {{ study.issued[0] | jsonify }}
+            {% endif %}
+
+            {% if study.modified %}
+                , "modified": {{ study.modified[0] | jsonify }}
+            {% endif %}
+
+            {% if study.accessRights %}
+                , "rights": "See {{ study.doi | first | default("product home page") }} for additional information about terms of use, restrictions, and data access."
+            {% endif %}
+
+            {% if study.keyword %}
+                , "keyword": {{ study.keyword | jsonify }}
+            {% endif %}
+
+            {% if study.restricted %}
+                {% if study.restricted[0] == "true" %}
+                    , "accessLevel": "restricted public"
+                {% else %}
+                    , "accessLevel": "public"
+                {% endif %}
+            {% endif %}
+
+            {% if study.licenseURI %}
+                , "license": {{ study.licenseURI[0] | jsonify }}
+            {% endif %}
+
+            , "publisher": {
+                "@type": "org:Organization",
+
+                {% set archiveDesc = study.ownerArchive | map('crosswalk', 'archiveDesc') | select | first | trim %}
+
+                {% if archiveDesc %} 
+                    {% if archiveDesc | lower == "icpsr" %}
+                        {%set archiveDesc = icpsr %}
+                    {% endif %}
+                    "name": {{ archiveDesc | jsonify }}
+                    {% if archiveDesc != icpsr %}
+                        , "subOrganizationOf": { 
+                            "@type": "org:Organization",
+                            "name": {{ icpsr | jsonify }} 
+                        }
+                    {% endif %}
+                {% else %}
+                    "name": {{ icpsr | jsonify }}
+                {% endif %}
+              }
+
+            , "contactPoint": {
+                "@type": "vcard:Contact",
+
+                {% if study.fundingOrg %}
+                    {% set fn       =  study.fundingOrg | map('crosswalk', 'contactPointFullName') | select | first %}
+                    {% set hasEmail =  study.fundingOrg | map('crosswalk', 'contactPointHasEmail') | select | first %}
+                {% endif %}
+
+                {% if fn and hasEmail %}
+                    "fn": {{ fn | jsonify }},
+                    "hasEmail": "mailto:{{ hasEmail }}"
+                {% else %}
+                    "fn": {{ icpsr | jsonify }},
+                    "hasEmail": "mailto:ICPSR-help@umich.edu"
+                {% endif %}
+            }
+
+            {% if study.fundingOrg %}
+                {% set bureauCode = study.fundingOrg | map('crosswalk', 'bureauCode')   | unique | select | list %}
+                {% set programCode = study.fundingOrg | map('crosswalk', 'programCode') | unique | select | list %}
+            {% endif %}
+            
+            , "bureauCode": {{ (bureauCode or ["Not Applicable"]) | jsonify }}
+            , "programCode": {{ (programCode or ["Not Applicable"]) | jsonify }}
+
+            {% if study.spatial %}
+                {% if study.spatial | length > 1 %}
+                    , "spatial": "Multiple"
+                    , "spatialExt": {{ study.spatial | jsonify }}
+                {% else %}
+                    , "spatial": {{ study.spatial[0] | jsonify }}
+                {% endif %}
+            {% endif %}
+
+            {% if study.timePeriod %}
+                , "temporal": {{ study.timePeriod | collapse_date_ranges | jsonify }}
+
+                {% if study.timePeriod | length > 1 %}
+                    , "temporalExt": {{ study.timePeriod | flatten_date_ranges | sort | jsonify }}
+                {% endif %}
+            {% endif %}
+
+            {% if series | length > 0 and series[0].url %}
+                , "isPartOf": {{ series[0].url[0] | jsonify }} 
+            {% endif %}
+
+            {% if study.doi %}
+                , "landingPage": {{ study.doi[0] | jsonify }}
+            {% endif %}
+
+            {% if dataset | length > 0 %}
+                , "distribution": [
+                    {% for entry in dataset | defaultattr("identifier", "") | sort(attribute="identifier") %}
+                        {
+                            "@type": "dcat:Distribution"
+
+                            {% if entry.title %}
+                                , "title": {{ entry.title[0] | jsonify }}
+                            {% endif %}
+
+                            {% if study.doi %}
+                                , "accessURL": {{ study.doi[0] | jsonify }}
+                            {% endif %}
+
+                            {% if entry.describedBy %}
+                                , "describedBy": {{ entry.describedBy[0] | jsonify }}
+                            {% endif %}
+
+                            {% if entry.describedByType %}
+                                , "describedByType": {{ entry.describedByType[0] | jsonify }}
+                            {% endif %}
+                        }
+                        {% if not loop.last %},{% endif %}
+                    {% endfor %}
+                ]
+            {% endif %}
+        }
+    ]
+}

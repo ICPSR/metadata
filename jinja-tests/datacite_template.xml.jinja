@@ -1,0 +1,206 @@
+{% set study = tree.get('study', [{}])[0] %}
+{% set series  = tree.get('series', []) %}
+{% set dataset = tree.get('dataset', []) %}
+
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4/metadata.xsd">
+
+	{# DOI #}
+	{% if study.doi %}
+	    <identifier identifierType="DOI">{{ study.doi[0] | replace("https://doi.org/", "") }}</identifier>
+	{% endif %}
+
+	{# Principal Investigators: include affiliation, if relevant #}
+    {% if study.creator %}
+        <creators>
+        {% for creator in study.creator %}   
+        	<creator>                 
+            {% if creator.type == 'foaf:Person' %}
+            	<creatorName nameType="Personal">{{ creator.name }}</creatorName>
+                {% if creator.affiliation %}
+                    <affiliation>{{ creator.affiliation }}</affiliation>
+                {% endif %}
+            {% else %}
+                <creatorName nameType="Organizational">{{ creator.name }}</creatorName>
+            {% endif %}
+            </creator>
+        {% endfor %}
+        </creators>
+    {% endif %}
+
+    {# Title of study #}
+    <titles>
+    {% if study.title %}
+        <title xml:lang="en">{{ study.title[0] | trim | replace('"', "&quot;") | replace("'", "&apos;") | escape }}</title>
+    {% endif %}
+
+    {# Alternate Title #}
+    {% if study.altTitle %}
+        {% for altTitle in study.altTitle %}
+            <title titleType="AlternativeTitle" xml:lang="en">{{ altTitle | trim | replace('"', "&quot;") | replace("'", "&apos;") | escape }}</title>
+        {% endfor %}
+    {% endif %}
+    </titles>
+
+    {# Distributors #}
+    {% if study.distributor %}
+        <publisher>{{ study.distributor[0] }}</publisher>
+
+    {# Version Date #}
+    <publicationYear>{{ (study.issued[0] if study.version[0] == 'V1' else study.modified[0]) | from_iso_date | format_date('%Y') }}</publicationYear>
+
+   	{# Data Type #}
+    {% if study.kindOfData %}
+    	<resourceType resourceTypeGeneral="Dataset">{{ study.kindOfData | join(', ') | trim }}</resourceType>
+
+	{# Subject Terms #}
+    {% if study.keyword %}
+        <subjects>
+        {% for keyword in study.keyword %}
+            <subject subjectScheme="ICPSR thesaurus" xml:lang="en">{{ keyword | trim | replace('"', "&quot;") | replace("'", "&apos;") | escape }}</subject>
+        {% endfor %}
+        </subjects>
+    {% endif %}
+
+    {# Time Period #}
+    {# REVISE ONCE TIME PERIOD TIME FRAME IS INCLUDED IN STAGING DATABASE; ADD dateInformation ATTRIBUTE #}
+	<dates>
+    {% if study.timePeriod %}
+    	{% for period in study.timePeriod %}
+    		{% if period.startDate and period.endDate %}
+    			{% set dateEntry = period.startDate ~ "/" ~ period.endDate %}
+			{% elif period.startDate and period.endDate is not defined %}
+				{% set dateEntry = period.startDate %}
+			{% elif period.endDate and period.startDate is not defined %}
+				{% set dateEntry = period.endDate %}
+			{% endif %}
+			<date dateType="Valid">{{ dateEntry }}</date>
+
+		{% endfor %}
+	{% endif %}
+
+	{# Collection Dates #}
+	{% if study.collectionDate %}
+    	{% for date in study.collectionDate %}
+    		{% if date.startDate and date.endDate %}
+    			{% set dateEntry = date.startDate ~ "/" ~ date.endDate %}
+			{% elif date.startDate and date.endDate is not defined %}
+				{% set dateEntry = date.startDate %}
+			{% elif date.endDate and date.startDate is not defined %}
+				{% set dateEntry = date.endDate %}
+			{% endif %}
+
+			{% if date.description is defined and date.description %}
+				<date dateType="Collected" dateInformation="{{ date.description }}">{{ dateEntry }}</date>
+			{% else %}
+				<date dateType="Collected">{{ dateEntry }}</date>
+			{% endif %}
+			
+		{% endfor %}
+	{% endif %}
+
+	{# ICPSR Study Number #}
+	{% if study.identifier %}
+    <alternateIdentifiers>
+    	<alternateIdentifier alternateIdentifierType='ICPSR Study Number'>{{ study.identifier[0] }}</alternateIdentifier>
+	</alternateIdentifiers>
+	{% endif %}
+
+    {# Version #}
+    {% if study.version %}
+        <version>{{ study.version[0] }}</version>
+    {% endif %}
+
+    <rightsList>
+
+    {# License #}
+	{% if study.licenseURI %}
+        <rights rightsURI="{{ study.licenseURI[0] }}">ICPSR Terms of Use</rights>
+    {% endif %}
+
+    {# Restrictions #}
+    {% if study.membershipRequired[0] == "true" %}
+        {% set restrictionNote = "Available to ICPSR member institutions." %}
+    {% else %}
+        {% set restrictionNote = "Available to the general public." %}
+    {% endif %}
+
+    {% if study.restricted[0] == "true" %}
+        {% if study.accessRights %}
+            {% set restrictionNote = restrictionNote ~ " " ~ study.accessRights[0] %}
+        {% else %}
+            {% set restrictionNote = restrictionNote ~ " Special restrictions apply to one or more files." %}
+        {% endif %}
+
+        {% if study.doi %}
+            {% set restrictionNote = restrictionNote ~ " Visit " ~ study.doi[0] ~ " to apply for access to restricted data." %}
+        {% endif %}
+    {% endif %}
+
+    <rights>{{ restrictionNote }}</rights>
+	</rightsList>
+    <descriptions>
+
+    {# Summary #}
+    {% if study.description %}
+        <description xml:lang="en" descriptionType="Abstract">{{ study.description | join('\n') | strip_tags | trim | replace('"', "&quot;") | replace("'", "&apos;") | escape }}</description>
+    {% endif %}
+
+    {# Study Design #}
+    {% if study.studyDesign %}
+        <description xml:lang="en" descriptionType="Methods">{{ study.studyDesign | join('\n') | strip_tags | trim | replace('"', "&quot;") | replace("'", "&apos;") | escape }}</description>
+    {% endif %}
+
+    {# Collection Notes #}
+    {% if study.collectionNotes %}
+        {% for collNote in study.collectionNotes | sort(attribute="order") | unique(attribute="order")%}
+            <description xml:lang="en" descriptionType="Other">{{ collNote.note | strip_tags | trim | replace('"', "&quot;") | replace("'", "&apos;") | escape }}</description>
+        {% endfor %}
+    {% endif %}
+
+    </descriptions>
+	<geoLocations>    
+
+	{# Geographic Coverage #}
+    {% for spatialTerm in study.spatial %}
+    	<geoLocation>
+        	<geoLocationPlace>{{ spatialTerm | trim | replace('"', "&quot;") | replace("'", "&apos;") | escape }}</geoLocationPlace>
+    	</geoLocation>
+    {% endfor %}
+    </geoLocations>
+
+    {# Funding Agencies #}
+    <fundingReferences>
+	{% if study.funding %}
+		{% for funding in study.funding %}
+			<fundingReference>
+			{% if funding.organization %}
+				<funderName>{{ funding.organization | trim | replace('"', "&quot;") | replace("'", "&apos;") | escape }}</funderName>
+			{% endif %}
+            {% if funding.grant %}
+                <awardNumber>{{ funding.grant | trim }}</awardNumber>
+            {% endif %}
+            </fundingReference>
+        {% endfor %}
+    {% endif %}
+
+    </fundingReferences>
+
+    {# Series #}
+    {% if series %}
+        <relatedItems>
+        {% for s in series %}
+        	<relatedItem relatedItemType="Collection" relationType="IsPublishedIn">
+        	{% if s.url is defined and s.url %}
+        		<relatedItemIdentifier relatedItemIdentifierType="URL">{{ s.url[0] }}</relatedItemIdentifier>
+        	{% endif %}
+        	{% if s.title is defined and s.title %}
+        		<titles>
+		            <title>{{ s.title[0] | trim }}</title>
+	            </titles>
+            {% endif %}
+            </relatedItem>
+        {% endfor %}
+        </relatedItems>
+    {% endif %}
+
+</resource>

@@ -1,6 +1,6 @@
 {
-    "input_doc": "C:/testing/ACF/Yurok/Yurok Tribe_test.docx",
-    "out_dir": "C:/testing/ACF/Yurok",
+    "input_doc": "C:/ACF/FINAL APPROVED STATE RECORDS/Yurok Tribe/Yurok Tribe_Copy.docx",
+    "out_dir": "C:/ACF/FINAL APPROVED STATE RECORDS/Yurok Tribe",
     "xsd_file": "schema_final.xsd",
     "xsl_file": "statetemplatev5.xsl",
     "category": "false",

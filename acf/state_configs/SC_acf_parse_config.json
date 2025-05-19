@@ -1,8 +1,8 @@
 {
-   "input_doc": "C:/ACF/FINAL APPROVED STATE RECORDS/South Carolina/South Carolina_Copy.docx",
+    "input_doc": "C:/ACF/FINAL APPROVED STATE RECORDS/South Carolina/South Carolina_Copy.docx",
     "out_dir": "C:/ACF/FINAL APPROVED STATE RECORDS/South Carolina",
     "xsd_file": "schema_final.xsd",
-    "xsl_file": "statetemplatev5.xsl",
+    "xsl_file": "statetemplatev5_full_hierarchy.xsl",
     "category": "false",
     "titleName": "Title",
     "subtitleName": "",

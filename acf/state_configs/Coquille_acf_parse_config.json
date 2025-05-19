@@ -1,8 +1,8 @@
 {
-   "input_doc": "C:/ACF/FINAL APPROVED STATE RECORDS/Coquille Tribe/Coquille_Copy.docx",
+    "input_doc": "C:/ACF/FINAL APPROVED STATE RECORDS/Coquille Tribe/Coquille_Copy.docx",
     "out_dir": "C:/ACF/FINAL APPROVED STATE RECORDS/Coquille Tribe",
     "xsd_file": "schema_final.xsd",
-    "xsl_file": "statetemplatev5.xsl",
+    "xsl_file": "statetemplatev5_coquille.xsl",
     "category": "false",
     "titleName": "Ordinance",
     "subtitleName": "Article",

@@ -27,10 +27,13 @@
                     .doublespace {
                         margin: 20px 0;
                     }
+                    body {
+                        font-family: "Times New Roman", Times, serif;
+                    }
             </style>
             </head>
             <body>
-                <table style="width:100%; border:1 px solid black;">
+                <table style="width:100%; border:1px solid black;">
                      <xsl:apply-templates select="category/title | title"/>
                 </table>
             </body>
@@ -77,7 +80,7 @@
             <td>
                 <br/>
                 <!-- ACF offices associated, it creates a section on the bullet list for each office and sorts it alphabetically. -->
-                <b>ACF Offices Associated</b>
+                <u><b><u>ACF Offices Associated</u></b></u>
                 <br/>
                 <ul>
                     <xsl:for-each select="officesAssociated/office">

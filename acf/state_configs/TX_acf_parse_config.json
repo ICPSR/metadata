@@ -1,8 +1,8 @@
 {
-   "input_doc": "C:/ACF/FINAL APPROVED STATE RECORDS/Texas/Texas_Copy.docx",
+    "input_doc": "C:/ACF/FINAL APPROVED STATE RECORDS/Texas/Texas_Copy.docx",
     "out_dir": "C:/ACF/FINAL APPROVED STATE RECORDS/Texas",
     "xsd_file": "schema_final.xsd",
-    "xsl_file": "statetemplatev5.xsl",
+    "xsl_file": "statetemplatev5_no_subtitle.xsl",
     "category": "true",
     "titleName": "Title",
     "subtitleName": "Subtitle",

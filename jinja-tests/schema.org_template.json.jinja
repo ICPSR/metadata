@@ -1,0 +1,209 @@
+{% set study   = tree.get('study', [{}])[0] %}
+{% set series  = tree.get('series', []) %}
+{% set dataset = tree.get('dataset', []) %}
+
+{%set icpsr = "Inter-university Consortium for Political and Social Research" %}
+
+{
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+
+    {# DOI / Identifier #}
+    {% if study.doi %}
+        , "identifier": {
+            "@id": {{ study.doi[0] | jsonify }}
+            , "@type": "PropertyValue"
+            , "propertyID": "https://registry.identifiers.org/registry/doi"
+            , "name": "Digital Object Identifier"
+            , "value": {{ study.doi[0] | replace('https://doi.org/', 'doi:') | jsonify }}
+        }
+        , "url": {{ study.doi[0] | jsonify }}
+    {% else %}
+        , "identifier": {{ study.identifier[0] | jsonify }}
+    {% endif %}
+
+    {# Recommended by Google; use default value for all studies #}
+    , "includedInDataCatalog": "https://www.icpsr.umich.edu/"
+
+    {# Title #}
+    {% if study.title %}
+        , "name": {{ study.title[0] | jsonify }}
+    {% endif %}
+
+    {# Alternate Titles #}
+    {% if study.altTitle %}
+        {% if study.altTitle | length > 1 %}
+            , "alternateName": [
+            {% for altTitle in study.altTitle %}
+                {{ altTitle | jsonify }}
+                {% if not loop.last %},{% endif %}
+            {% endfor %}
+            ]            
+        {% else %}
+            , "alternateName": {{ study.altTitle[0] | jsonify }}
+        {% endif %}
+    {% endif %}
+
+    {# Version #}
+    {% if study.version %}
+        , "version": {{ study.version[0] | jsonify }}
+    {% endif %}
+
+    {# Principal Investigators #}
+    {% if study.creator | length > 0 %}
+        , "creator": [
+            {% for pi in study.creator | defaultattr("order", "") | sort(attribute="order") %}
+                {
+                    {% if pi.type == "foaf:Person" %}
+                        "@type": "Person"
+                    {% else %}
+                        "@type": "Organization"
+                    {% endif %}
+                    
+                    , "name": {{ pi.name | jsonify }}
+                    
+                    {% if pi.affiliation %}
+                        , "affiliation": {{ pi.affiliation | jsonify }}
+                    {% endif %}
+                }
+                {% if not loop.last %},{% endif %}
+            {% endfor %}
+        ]
+    {% endif %}
+
+    {# Distributor #}
+    {% if study.distributor %} 
+        {% if study.distributor | length > 1 %}
+            , "publisher": [
+            {% for org in study.distributor %}
+                {
+                    "@type": "Organization"
+                    "name": {{ org | jsonify }}
+                }
+                {% if not loop.last %},{% endif %}
+            {% endfor %}
+            ]
+        {% else %}
+            , "publisher": {
+                "@type": "Organization"
+                "name": {{ org | jsonify }}
+            }
+        {% endif %}
+    {% endif %}
+
+    {# Original Release Date #}
+    {% if study.issued %}
+        , "datePublished": {{ study.issued[0] | from_iso_date | format_date('%Y-%m-%d') | jsonify }}
+    {% endif %}
+
+    {# Version Date #}
+    {% if study.modified %}
+        , "dateModified": {{ study.modified[0] | from_iso_date | format_date('%Y-%m-%d') | jsonify }}
+    {% endif %}
+
+    {# Funding Sources #}  
+    {% if study.funding %}
+        {% if study.funding | length > 1 %}
+            , "funding": [
+            {% for funding in study.funding %}
+                {
+                    "@type": "MonetaryGrant",
+                    "funder": {
+                        "@type": "Organization",
+                        "name": {{ funding.organization | jsonify }}
+                    }
+                    {% if funding.grant %}
+                        , "identifier": {{ funding.grant | jsonify }}
+                    {% endif %}
+                }
+                {% if not loop.last %},{% endif %}
+            {% endfor %}
+            ]
+        {% else %}
+            , "funding": {
+                "@type": "MonetaryGrant",
+                "funder": {
+                    "@type": "Organization",
+                    "name": {{ study.funding[0].organization | jsonify }}
+                }
+                {% if funding.grant %}
+                    , "identifier": {{ study.funding[0].grant | jsonify }}
+                {% endif %}
+            }
+        {% endif %}
+    {% endif %}
+
+    {# Summary #}
+    {% if study.description %}
+        , "description": {{ study.description[0] | strip_tags | jsonify }}
+    {% endif %}
+
+    {# Subject Terms #}
+    {% if study.keyword %}
+        , "keyword": {{ study.keyword | jsonify }}
+    {% endif %}
+
+    {# Geographic Coverage Area #}
+    {% if study.spatial %}
+        , "spatialCoverage": {{ study.spatial | jsonify }}
+    {% endif %}
+
+    {# Time Period #}
+    {% if study.timePeriod %}
+        , "temporalCoverage": {{ study.timePeriod | flatten_date_ranges | sort | jsonify }}
+    {% endif %}
+
+    {# Series #}
+    {% if series | length > 0 and series[0].url %}
+        , "isPartOf": {{ series[0].url[0] | jsonify }} 
+    {% endif %}
+
+    {# License #}
+    {% if study.licenseURI %}
+        , "license": {{ study.licenseURI[0] | jsonify }}
+    {% endif %}
+
+    {# Restrictions #}
+    {% if study.membershipRequired[0] == "true" %}
+        {% set restrictionNote = "Available to ICPSR member institutions." %}
+    {% else %}
+        {% set restrictionNote = "Available to the general public." %}
+    {% endif %}
+
+    {% if study.restricted[0] == "true" %}
+        {% if study.accessRights %}
+            {% set restrictionNote = restrictionNote ~ " " ~ study.accessRights[0] %}
+        {% else %}
+            {% set restrictionNote = restrictionNote ~ " Special restrictions apply to one or more files. %}
+        {% endif %}
+
+        {% set restrictionNote = restrictionNote ~ " Visit " ~ study.doi[0] ~ " for more information." %}
+
+    {% endif %}
+
+    , "conditionsOfAccess": {{ restrictionNote }}
+
+    {# Filesets #}
+    {% if dataset | length > 0 %}
+        , "distribution": [
+            {% for entry in dataset | defaultattr("identifier", "") | sort(attribute="identifier") %}
+                {
+                    "@type": "DataDownload"
+
+                    {% if entry.title %}
+                        , "name": {{ entry.title[0] | jsonify }}
+                    {% endif %}
+
+                    {% if entry.identifier %}
+                        , "identifier": {{ entry.identifier[0] | jsonify }}
+                    {% endif %}
+
+                    {% if entry.describedBy %}
+                        , "usageInfo": {{ entry.describedBy[0] | jsonify }}
+                    {% endif %}
+                }
+                {% if not loop.last %},{% endif %}
+            {% endfor %}
+        ]
+    {% endif %}
+}

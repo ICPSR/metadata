@@ -1,0 +1,81 @@
+<codeBook xmlns="ddi:codebook:2_5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="ddi:codebook:2_5 http://www.ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/codebook.xsd" version="2.5" codeBookAgency="us.icpsr" ID="ICPSR-36363">
+  <docDscr>
+    <citation>
+      <titlStmt>
+        <titl>Metadata record for Data on Dispute Related Violence in a Northeastern City, United States, 2010 to 2012</titl>
+        <IDNo agency="ICPSR">36363</IDNo>
+      </titlStmt>
+      <prodStmt>
+        <producer abbr="ICPSR">Inter-university Consortium for Political and Social Research</producer>
+        <copyright>ICPSR metadata records are licensed under a Creative Commons Attribution-Noncommercial 3.0 United States License <ExtLink URI="http://creativecommons.org/licenses/by-nc/3.0/us/"/></copyright>
+      </prodStmt>
+    </citation>
+  </docDscr>
+  <stdyDscr>
+    <citation>
+      <titlStmt>
+        <titl>Data on Dispute Related Violence in a Northeastern City, United States, 2010 to 2012</titl>
+        <IDNo agency="ICPSR">36363</IDNo>
+        <IDNo agency="DataCite">https://doi.org/10.3886/ICPSR36363.v1</IDNo>
+      </titlStmt>
+      <rspStmt>
+        <AuthEnty affiliation="Rochester Institute of Technology">Altheimer, Irshad</AuthEnty>
+      </rspStmt>
+      <prodStmt>
+        <fundAg>United States Department of Justice. Office of Justice Programs. National Institute of Justice</fundAg>
+        <grantNo agency="United States Department of Justice. Office of Justice Programs. National Institute of Justice">2013-IJ-CX-0021</grantNo>
+      </prodStmt>
+      <distStmt>
+        <distrbtr abbr="ICPSR" affiliation="Institute for Social Research, University of Michigan">Inter-university Consortium for Political and Social Research</distrbtr>
+        <distDate date="2018-04-26">April 26, 2018</distDate>
+      </distStmt>
+      <verStmt>
+        <version date="2018-04-26">study.version[0]</version>
+      </verStmt>
+      <biblCit>Altheimer, Irshad. Data on Dispute Related Violence in a Northeastern City, United States, 2010 to 2012. Inter-university Consortium for Political and Social Research [distributor], 2018-04-26. https://doi.org/10.3886/ICPSR36363.v1</biblCit>
+      <holdings URI="https://doi.org/10.3886/ICPSR36363.v1"/>
+    </citation>
+    <stdyInfo>
+      <subject>
+        <keyword vocab="ICPSR thesaurus">drug related crimes</keyword>
+        <keyword vocab="ICPSR thesaurus">offenders</keyword>
+        <keyword vocab="ICPSR thesaurus">urban crime</keyword>
+        <keyword vocab="ICPSR thesaurus">victimization</keyword>
+        <keyword vocab="ICPSR thesaurus">violence</keyword>
+        <keyword vocab="ICPSR thesaurus">weapons offenses</keyword>
+      </subject>
+      <abstract contentType="abstract">These data are part of NACJD&amp;apos;s Fast Track Release and are distributed as they were received from the data depositor. The files have been zipped by NACJD for release, but not checked or processed except for the removal of direct identifiers. Users should refer to the accompanying readme file for a brief description of the files available with this collection and consult the investigator(s) if further information is needed.The objective of this project was to enhance understanding of violent disputes by examining the use of aggression to rectify a perceived wrong. It also sought to identify the factors that determine if retaliatory violence occurs within disputes as well as to understand how long retaliatory disputes last, and what factors lead to the termination of such disputes. This collection includes two SPSS data files: &amp;quot;Dispute_Database_for_NACJD.sav&amp;quot; with 40 variables and 111 cases and &amp;quot;Northeastern_City_Violence_Database_NACJD_submission.sav&amp;quot; with 164 variables and 1,303 cases.</abstract>
+      <abstract contentType="purpose">STUDY PURPOSE: The objective of this study was to enhance understanding of violent disputes. Towards that end, this project had five specific aims:To leverage police data to expand knowledge on dispute-related violenceTo examine qualitative differences across disputesTo identify the factors that determine if retaliatory violence occurs within disputesTo understand how long retaliatory disputes last and what factors lead to the termination of such disputesTo identify those factors that influence whether a dispute turns lethal</abstract>
+      <abstract contentType="mixed">STUDY DESIGN: Data for this project were collected from investigative documents of a police department in a Northeastern city. These documents were coded to create two quantitative datasets. The first dataset is a dispute-level data set.  This dataset was created by coding 111 dispute bulletins from the Northeastern City Police Department. The second data set was an individual-level dataset that included data from assaultive violence in Northeastern city from 2010 to 2012.</abstract>
+      <abstract contentType="mixed">COMMON SCALES: None</abstract>
+      <sumDscr>
+        <collDate event="start" date="2010">2010</collDate>
+        <collDate event="end" date="2012">2012</collDate>
+        <geogCover>United States</geogCover>
+        <geogUnit>None</geogUnit>
+        <anlyUnit>Incident</anlyUnit>
+        <universe>Dispute_Database_for_NACJD.sav: Violent retaliatory disputes tracked by analysts from the Northeastern City Police Department, 2010-2012.Northeastern_City_Violence_Database_NACJD_submission.sav: All incidents of assaultive violence known to police in Northeastern City from 2010 to 2012.</universe>
+        <dataKind>administrative records data</dataKind>
+        <dataKind>aggregate data</dataKind>
+        <dataKind>event/transaction data</dataKind>
+      </sumDscr>
+    </stdyInfo>
+    <method>
+      <dataColl>
+        <timeMeth>Cross-sectional</timeMeth>
+        <sampProc>All known assaults that occurred to police were included in the datasets.</sampProc>
+        <collMode>coded on-site observation</collMode>
+      </dataColl>
+      <notes>These data are part of NACJD&amp;apos;s Fast Track Release and are distributed as they there received from the data depositor. The files have been zipped by NACJD for release, but not checked or processed except of the removal of direct identifiers. Users should refer to the accompany readme file for a brief description of the files available with this collections and consult the investigator(s) if further information is needed.</notes>
+      <anlyInfo>
+        <respRate>N/A</respRate>
+      </anlyInfo>
+    </method>
+    <dataAccs>
+      <useStmt>
+        <restrctn>Available to the general public. Access to these data is restricted. Users interested in obtaining these data must complete a Restricted Data Use Agreement, specify the reasons for the request, and obtain IRB approval or notice of exemption for their research. Visit https://doi.org/10.3886/ICPSR36363.v1 to apply for access to restricted data.</restrctn>
+        <conditions>ICPSR Terms of Use <ExtLink URI="https://www.icpsr.umich.edu/web/ICPSR/studies/36363/terms"/></conditions>
+      </useStmt>
+    </dataAccs>
+  </stdyDscr>
+</codeBook>

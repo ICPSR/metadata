@@ -5,14 +5,13 @@ import os
 import time
 import csv
 
-if len(sys.argv) < 3:
-    print('Add the state and an xml file as arguments!')
+if len(sys.argv) < 2:
+    print('Add the xml file as arguments!')
     sys.exit(1)
 
-state = sys.argv[1].lower().replace(' ', '_')
-xml_file = sys.argv[2]
+xml_file = sys.argv[1]
 out_dir = os.path.dirname(xml_file)
-bad_link_log = os.path.join(out_dir, f"{state}_bad_links.csv")
+bad_link_log = os.path.join(out_dir, "bad_links.csv")
 
 tree = etree.parse(xml_file)
 root = tree.getroot()

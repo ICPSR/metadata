@@ -1,6 +1,6 @@
 {
-    "input_doc": "C:/testing/ACF/Oregon/Oregon_test.docx",
-    "out_dir": "C:/testing/ACF/Oregon",
+    "input_doc": "C:/ACF/FINAL APPROVED STATE RECORDS/Oregon/Oregon_Copy.docx",
+    "out_dir": "C:/ACF/FINAL APPROVED STATE RECORDS/Oregon",
     "xsd_file": "schema_final.xsd",
     "xsl_file": "statetemplatev5.xsl",
     "category": "false",

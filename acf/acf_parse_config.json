@@ -1,6 +1,6 @@
 {
-    "input_doc": "C:/ACF/FINAL APPROVED STATE RECORDS/Utah/Utah_copy.docx",
-    "out_dir": "C:/ACF/FINAL APPROVED STATE RECORDS/Utah",
+    "input_doc": "C:/ACF/FINAL APPROVED STATE RECORDS/Yurok Tribe/Yurok Tribe_Copy.docx",
+    "out_dir": "C:/ACF/FINAL APPROVED STATE RECORDS/Yurok Tribe",
     "xsd_file": "schema_final.xsd",
     "xsl_file": "statetemplatev5.xsl",
     "category": "false",
@@ -10,9 +10,9 @@
     "partName": [],
     "subPartName": "",
     "titleContent": "false",
-    "state": "Utah",
-    "state_code_pattern": "^(.+?)\\s?\\u2013\\s?(.*?)\\s?\\(?(Utah\\s\\sCode\\s\\u00A7\\s[-\\w\\.]+)\\)?$",
-    "statute_pattern": "^(Utah\\s\\sCode\\s\\u00A7\\s[-\\w\\.]+)\\s+[-\\u2013\\u2014]\\s+(.*)$",
+    "state": "Yurok Tribe",
+    "state_code_pattern": "^(.+?)\\s?\\u2013\\s?(.*?)\\s?\\(?(YTC\\s[\\d\\.]+)\\)?$",
+    "statute_pattern": "^(YTC\\s[\\d\\.]+)\\s+[-\\u2013\\u2014]\\s+(.*)$",
     "patterns": {
         "base": "(.+)\\s?\\u2013\\s?(.*)\\s+",
         "Alabama": "^(.+?)\\s?\\u2013\\s?(.*?)\\s?\\(?(AL\\sCode\\s\\u00A7\\s[-\\w\\.]+)\\)?$",

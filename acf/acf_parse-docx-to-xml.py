@@ -221,13 +221,15 @@ def check_controlled_vocabs(cv_list, cv_used, details, current_position):
 
     if cv_used in ('offices', 'federal'):
         if cv_list != sorted(cv_list, key=str.lower):
-            write_error(details, f"{current_position} - {cv_used.capitalize()} list is not in alphabetical order; correct in MS Word.")
+            write_error(details, f"{current_position} - {cv_used.capitalize()} list is not in alphabetical order; correct in MS Word: {cv_list}.")
             cv_list = sorted(cv_list, key=str.lower)
 
 
     return cv_list
 
 def parse_requirement_blocks(data, cell, temp_list, details, parent_position):
+
+    en_dash = '\u2013'
 
     # Patterns to identify the different parts of each entry
     label_desc_state_code_pattern = rf"{details['state_code_pattern']}"
@@ -265,6 +267,41 @@ def parse_requirement_blocks(data, cell, temp_list, details, parent_position):
                 state_code = state_code.replace(')', '').strip()
             except ValueError:
                 print(f'\nValueError: unable to parse this content: {data_slice[0]}') 
+
+        # WE NEED TO CHECK / ACCOUNT FOR EN DASH ISSUES
+        # In particular, we need to watch out for instances where there are multiple en dashes
+        if en_dash in description:
+            # print("\nMultiple en dashes found. Here’s the string:")
+
+            text = f"{label} {en_dash} {description}"
+            # positions = [m.start() for m in re.finditer(en_dash, text)]
+            # preview = text
+            # for j, pos in enumerate(positions[::-1], 1):
+            #     idx = positions[-j]
+            #     preview = preview[:idx] + f"[{j}]{en_dash}" + preview[idx + 1:]
+            # print(preview)
+
+            # while True:
+            #     try:
+            #         choice = int(input(f"Which en dash # should be used to split label/description (1–{len(positions)})? "))
+            #         if 1 <= choice <= len(positions):
+            #             split_index = positions[choice - 1]
+            #             break
+            #         else:
+            #             print("Invalid number. Try again.")
+            #     except ValueError:
+            #         print("Please enter a valid integer.")
+
+            # Find all matches
+            en_dash_matches = list(re.finditer(en_dash, text))
+
+            if en_dash_matches:
+                last_match = en_dash_matches[-1]  # The last en dash
+                split_index = last_match.start()
+
+                # Split using selected en dash only
+                label = text[:split_index].strip()
+                description = text[split_index + 1:].strip()
 
         try:
             # update dict
@@ -327,8 +364,12 @@ def parse_to_dict(list_of_strings, cell, search_term):
     
     for t_idx, t in enumerate(list_of_strings):
 
-        #the search terms should always occur at beginning of string
-        if any(t.lower().startswith(term.lower()) for term in search_term):
+        # Find the first search term that matches the start of t; the search terms should always occur at beginning of string
+        # This was the old way we matched; had to change to accommodate lables with a space:
+        # if any(t.lower().startswith(term.lower()) for term in search_term):
+        matched_term = next((term for term in search_term if t.lower().startswith(term.lower())), None)
+
+        if matched_term:        
 
             # if found, assign values to dictionary
             temp_dict = {
@@ -341,7 +382,7 @@ def parse_to_dict(list_of_strings, cell, search_term):
 
             # NOTE: we have at least one state that does not include Title #'s. Add handling for this...
             try:
-                temp_dict['number'] = t.split(' ', 1)[1].strip()
+                temp_dict['number'] = t.split(f'{matched_term} ')[1].strip()
             except IndexError:
                 temp_dict['number'] = None
 
@@ -526,7 +567,14 @@ def parse_tables(doc, details, record_data, object_type):
 
                     # if we expect to find subtitles, check to see if there is any text between the Title and the Article
                     if details['subtitleName']:
-                        subtitle_slice = article_overview[title_end_idx+1:temp_article_dict['start_idx']]
+                        
+                        if found_titleContent:
+                            subtitle_slice = []
+                            for sub_index, item in enumerate(article_overview[title_end_idx+1:]):
+                                if item.startswith(details['subtitleName']):
+                                    subtitle_slice = article_overview[sub_index:]
+                        else:
+                            subtitle_slice = article_overview[title_end_idx+1:temp_article_dict['start_idx']]
 
                         # if there is actually text here, return subtitle info
                         if len(subtitle_slice) > 0:
@@ -767,6 +815,11 @@ def write_xml(details, record_data):
             else:
                 article_elem = etree.SubElement(title_elem, "article")
                 etree.SubElement(article_elem, "domain").text = article.get("domain", '')
+                if record_data[title].get("subtitle", {}):
+                    subtitle_elem = etree.SubElement(article_elem, "subtitle")
+                    etree.SubElement(subtitle_elem, "number").text = record_data[title]['subtitle'].get("number", "")
+                    etree.SubElement(subtitle_elem, "name").text = record_data[title]['subtitle'].get("name", "")
+                    etree.SubElement(subtitle_elem, "source").text = record_data[title]['subtitle'].get("source", "")
 
             # add subtitle info, id present
             if article.get("subtitle", {}):
@@ -1022,6 +1075,8 @@ def main(details):
         # delete tmp file
         os.remove(details['tmp_audit_log'])
 
+        print('\n\nERRORS IN WORD DOC! CHECK AUDIT FILE!!!')
+
     print('\n\n----------------------------------------------------\n\nProcess complete!')
 
 if __name__ == "__main__":
@@ -1087,6 +1142,8 @@ if __name__ == "__main__":
     if not isinstance(details.get('partName'), list):
         print('\n\nThe "partName" value must be a list!')
         sys.exit(1)
+
+    print(f'\n\nWorking on {details['state'].upper()} record')
 
     main(details)
 

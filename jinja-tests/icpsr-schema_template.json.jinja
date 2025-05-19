@@ -1,0 +1,271 @@
+{% set study   = tree.get('study', [{}])[0] %}
+{% set series  = tree.get('series', []) %}
+{% set dataset = tree.get('dataset', []) %}
+
+{
+	"context": "schema/icpsr_study_schema.json",
+    
+    {# VERSION #}
+    {% if study.version %}
+    	"version": {{ study.version[0] | jsonify }}
+	{% endif %}
+
+	{# VERSION DATE #}
+	{% if study.modified %}
+        , "version_date": {{ study.modified[0]) | from_iso_date | format_date('%Y-%m-%d') | jsonify }}
+    {% endif %}
+
+    {# ORIGINAL RELEASE DATE #}
+    {% if study.issued %}
+    	, "original_release_date": {{ study.issued[0]) | from_iso_date | format_date('%Y-%m-%d') | jsonify }}
+    {% endif %}
+
+    {# TITLE #}
+    {% if study.title %}
+        , "title": {{ study.title[0] | jsonify }}
+    {% endif %}
+
+    {# ALTERNATE TITLES #}
+    {% if study.altTitle %}
+        , "alternate_title": [
+        {% for altTitle in study.altTitle %}
+            {{ altTitle | jsonify }}
+            {% if not loop.last %},{% endif %}
+        {% endfor %}
+        ]            
+    {% endif %}
+
+    {# PRINCIPAL INVESTIGATORS #}
+    {% if study.creator | length > 0 %}
+        , "principal_investigator": [
+            {% for pi in study.creator | defaultattr("order", "") | sort(attribute="order") %}
+                { 
+                    "name": {{ pi.name | jsonify }}
+                    
+                    {% if pi.affiliation %}
+                        , "affiliation": {{ pi.affiliation | jsonify }}
+                    {% endif %}
+
+                    , "order": {{ pi.order | jsonify }}
+                }
+                {% if not loop.last %},{% endif %}
+            {% endfor %}
+        ]
+    {% endif %}
+
+    {# CITATION #}
+    {% if study.citation %}
+        , "citation": {{ study.citation[0] | jsonify }}
+    {% endif %}
+
+    {# DISTRIBUTOR #}
+    {% if study.distributor | length > 0 %} 
+        , "distributor": [
+        {% for org in study.distributor %}
+            {
+                "name": {{ org | jsonify }}
+            }
+            {% if not loop.last %},{% endif %}
+        {% endfor %}
+        ]
+    {% endif %}
+
+    {# STUDY NUMBER #}
+    {% if study.identifier %}
+    	, "study_number": {{ study.identifier[0] | jsonify }}
+    {% endif %}
+
+    {# DOI  #}
+    {% if study.doi %}
+        , "doi": {{ study.doi[0] | jsonify }}
+    {% endif %}
+
+    {# FUNDING SOURCES #}
+    {% if study.funding | length > 0 %}
+    	, "funding_source" [
+    	{% for funding in study.funding %}
+    		{
+    			"agency": {{ funding.organization | jsonify }}
+				{% if funding.grant %}
+	                , "grant_number": {{ funding.grant | jsonify }}
+	            {% endif %}
+    		}
+    		{% if not loop.last %},{% endif %}
+        {% endfor %}
+    	]
+	{% endif %}
+
+	{# SUMMARY #}
+    {% if study.description %}
+        , "summary": {{ study.description[0] | strip_tags | jsonify }}
+    {% endif %}
+
+    {# SUBJECT TERMS #}
+    {% if study.keyword %}
+        , "subject_term": {{ study.keyword | jsonify }}
+    {% endif %}
+
+    {# GEOGRAPHIC COVERAGE AREA #}
+    {% if study.spatial %}
+        , "geographic_coverage_area": {{ study.spatial | jsonify }}
+    {% endif %}
+
+    {# TIME PERIOD #}
+    {% if study.timePeriod | length > 0 %}
+    	, "time_period": [
+    	{% for period in study.timePeriod %}
+    		{
+    		{% if period.startDate and period.endDate %}
+    			{% set dateRange = period.startDate ~ "--" ~ period.endDate %}
+    			"date": {{ dateRange | jsonify }}
+			{% elif period.startDate and period.endDate is not defined %}
+				"date": {{ period.startDate | jsonify }}
+			{% elif period.endDate and period.startDate is not defined %}
+				"date": {{ period.endDate | jsonify }}
+			{% endif %}
+
+			{# NOTE: UPDATE WITH 'TIME_FRAME' ONCE IT IS INCLUDED IN STAGING DATABASE#}
+			}
+			{% if not loop.last %},{% endif %}
+		{% endfor %}
+	{% endif %}
+    			
+ 	{# COLLECTION DATES #}
+    {% if study.collectionDate | length > 0 %}
+    	, "collection_date": [
+    	{% for date in study.collectionDate %}
+    		{
+    		{% if date.startDate and date.endDate %}
+    			{% set dateRange = date.startDate ~ "--" ~ date.endDate %}
+    			"date": {{ dateRange | jsonify }}
+			{% elif date.startDate and date.endDate is not defined %}
+				"date": {{ date.startDate | jsonify }}
+			{% elif date.endDate and date.startDate is not defined %}
+				"date": {{ date.endDate | jsonify }}
+			{% endif %}
+
+			{% if date.description is defined and date.description %}
+				, "time_frame": {{ date.description }}
+			}
+			{% if not loop.last %},{% endif %}
+		{% endfor %}
+	{% endif %}	
+
+	{# UNIVERSE #}
+    {% if study.universe %}
+    	, "universe": {{ study.universe[0] | jsonify }}
+	{% endif %}
+
+	{# DATA TYPE #}
+    {% if study.kindOfData | length > 0 %}
+    	, "data_type": {{ study.kindOfData | jsonify }}
+    {% endif %}
+
+    {# COLLECTION NOTES #}
+    {% if study.collectionNotes %}
+    	, "collection_note": [
+        {% for collNote in study.collectionNotes | sort(attribute="order") | unique(attribute="order")%}
+            {{ collNote.note | strip_tags | jsonify }}
+        	{% if not loop.last %},{% endif %}
+        {% endfor %}
+        ]
+    {% endif %}
+
+    {# STUDY PURPOSE #}
+    {% if study.purpose %}
+    	, "study_purpose": {{ study.purpose[0] | strip_tags | jsonify }}
+	{% endif %}
+
+	{# STUDY DESIGN #}
+	{% if study.studyDesign %}
+		, "study_design": {{ study.studyDesign[0] | strip_tags | jsonify }}
+	{% endif %}
+
+	{# VARIABLE DESCRIPTION: ADD HERE ONCE STAGING DATABASE IS UPDATED #}
+
+	{# SAMPLING #}
+    {% if study.samplingProcedure %}
+    	, "sampling": {{ study.samplingProcedure[0] | strip_tags | jsonify }}
+	{% endif %}
+
+	{# TIME METHOD #}
+    {% if study.timeMethod | length > 0 %}
+    	, "time_method": {{ study.timeMethod | jsonify }}
+	{% endif %}
+
+	{# DATA SOURCES #}
+    {% if study.source | length > 0 %}
+    	, "data_source": {{ study.source | jsonify }}
+	{% endif %}
+
+	{# COLLECTION MODE #}
+    {% if study.collectionMode | length > 0 %}
+    	, "collection_mode": {{ study.collectionMode | jsonify }}
+	{% endif %}
+
+	{# WEIGHT: INCLUDE HERE ONCE STAGING DATABASE IS UPDATED #}
+
+	{# RESPONSE RATES #}
+    {% if study.responseRate %}
+    	, "response_rates": {{ study.responseRate[0] | strip_tags | jsonify }}
+	{% endif %}
+
+	{# SCALES #}
+    {% if study.commonScales and study.commonScales != 'None' %}
+    	, "scales": {{ study.commonScales[0] | strip_tags | jsonify }}
+	{% endif %}
+
+	{# UNIT OF OBSERVATION #}
+	{% if study.analysisUnit | length > 0 %}
+    	, "unit_of_observation": {{ study.analysisUnit | jsonify }}
+	{% endif %}
+
+	{# SMALLEST GEOGRAPHIC UNIT #}
+    {% if study.geographicUnit and study.geographicUnit != 'None' %}
+    	, "smallest_geographic_unit": {{ study.geographicUnit[0] | strip_tags | jsonify }}
+	{% endif %}
+
+	{# RESTRICTIONS #}
+	{% if study.accessRights %}
+    	, "restrictions": {{ study.accessRights[0] | strip_tags | jsonify }}
+	{% endif %}
+
+ 	{# COLLECTION CHANGES #}
+    {% if study.collectionChanges %}
+    	, "changes_to_collection": [
+    	{% for collectionChange in study.collectionChanges | map('strip_tags') | map('trim') | sort %}
+    		{{ collectionChange | jsonify }}
+    		{% if not loop.last %},{% endif %}
+        {% endfor %}
+        ]
+    {% endif %}
+
+    {# SERIES #}
+    {% if series | length > 0 and series[0].title %}
+        , "series": {{ series[0].title[0] | jsonify }} 
+    {% endif %}
+
+	{# CLASSIFS #}    
+	{% if study.classifications | length > 0 %}
+    	, "classification": {{ study.classifications | jsonify }}
+	{% endif %}
+
+	{# FILESETS #}
+	{% if dataset | length > 0 %}
+		, "filesets": [
+		{% for entry in dataset | defaultattr("identifier", "") | sort(attribute="identifier") %}
+			{
+			{% if entry.identifier %}
+				{% set number = entry.identifier[0] | replace(study.identifier[0], "") | replace("-", "") | int %}
+                "number": {{ number | jsonify }},			
+            {% endif %}
+
+            {% if entry.title %}
+                "name": {{ entry.title[0] | jsonify }}
+            {% endif %}
+            }
+            {% if not loop.last %},{% endif %}
+        {% endfor %}
+		]
+	{% endif %}
+}

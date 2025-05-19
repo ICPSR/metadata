@@ -1,0 +1,373 @@
+{% set study = tree.get('study', [{}])[0] %}
+{% set series  = tree.get('series', []) %}
+{% set dataset = tree.get('dataset', []) %}
+
+<codeBook
+    xsi:schemaLocation="ddi:codebook:2_5 http://www.ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/codebook.xsd" xmlns="ddi:codebook:2_5" version="2.5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" codeBookAgency="us.icpsr" 
+
+    {# add ID attribute if study.identifier is present #}
+    {% if study.identifier %}
+        {% set id = "ICPSR-" ~ study.identifier[0] %}
+        ID="{{ id }}"
+     {% endif %}
+    >
+
+    {# The 'docDscr' section describes the metadata record itself #}
+    <docDscr>
+    <citation>
+
+    {# Title of metadata record #}
+    <titlStmt>
+    {% if study.title %}
+        <titl>Metadata record for {{ study.title[0] | trim | replace('"', "&quot;") | replace("'", "&apos;") | escape }}</titl>
+    {% endif %} 
+
+    {# Identifier for metadata record #}
+    {% if study.identifier %}
+        <IDNo agency="ICPSR">{{ study.identifier[0] }}</IDNo>
+    {% endif %}       
+    </titlStmt>
+
+    {# Production statement: hard code this, as it will be same for all records #}
+    <prodStmt>
+        <producer abbr="ICPSR">Inter-university Consortium for Political and Social Research</producer>
+        <copyright>ICPSR metadata records are licensed under a Creative Commons Attribution-Noncommercial 3.0 United States License <ExtLink URI="http://creativecommons.org/licenses/by-nc/3.0/us/"/></copyright>
+    </prodStmt>
+    </citation>
+    </docDscr>
+
+    {# The 'studyDscr' section describes the study itself #}
+    <stdyDscr>
+
+    {# the citation section includes metadata relevant to citations #}
+    <citation>
+
+    {# Title of study #}
+    <titlStmt>
+    {% if study.title %}
+        <titl>{{ study.title[0] | trim | replace('"', "&quot;") | replace("'", "&apos;") | escape }}</titl>
+    {% endif %}
+
+    {# Alternate Title #}
+    {% if study.altTitle %}
+        {% for altTitle in study.altTitle %}
+            <altTitl>{{ altTitle | trim | replace('"', "&quot;") | replace("'", "&apos;") | escape }}</altTitl>
+        {% endfor %}
+    {% endif %}
+
+    {# ICPSR Study Number #}
+    {% if study.identifier %}
+        <IDNo agency="ICPSR">{{ study.identifier[0] }}</IDNo>
+    {% endif %}
+
+    {# Study Digital Object Identifier (DOI) #}
+    {% if study.doi %}
+        <IDNo agency="DataCite">{{ study.doi[0] }}</IDNo>
+    {% endif %}
+
+    </titlStmt>
+
+    {# Principal Investigators: include affiliation, if relevant #}
+    {% if study.creator %}
+        <rspStmt>
+        {% for creator in study.creator %}                    
+            {% if creator.type == 'foaf:Person' %}
+                {% if creator.affiliation %}
+                    <AuthEnty affiliation="{{ creator.affiliation }}">{{ creator.name }}</AuthEnty>                    
+                {% else %}
+                    <AuthEnty">{{ creator.name }}</AuthEnty>
+                {% endif %}
+            {% else %}
+                <AuthEnty">{{ creator.name }}</AuthEnty>
+            {% endif %}
+        {% endfor %}
+        </rspStmt>
+    {% endif %}
+
+    {# Funding Agencies #}
+    {# The fundingOrg property is a set of all funding agencies; use this to avoid duplicate organization names #}
+
+    {% if study.fundingOrg %}
+        <prodStmt>
+        {% for org in study.fundingOrg %}
+            <fundAg>{{ org | trim | replace('"', "&quot;") | replace("'", "&apos;") | escape }}</fundAg>
+        {% endfor %}
+
+        {# Use the study.funding property to get all relevant grants (even if from the same organization) #}
+
+        {% for funding in study.funding %}
+            {% if funding.grant %}
+                <grantNo agency="{{ funding.organization | trim | replace('"', "&quot;") | replace("'", "&apos;") | escape }}">{{ funding.grant | trim }}</grantNo>
+            {% endif %}
+        {% endfor %}
+        </prodStmt>
+    {% endif %}
+
+    {# Distributors #}
+    {% if study.distributor %}
+        <distStmt>
+        {% for distributor in study.distributor %}
+            {% if distributor.lower() == "inter-university consortium for political and social research" %}
+                <distrbtr abbr="ICPSR" affiliation="Institute for Social Research, University of Michigan">Inter-university Consortium for Political and Social Research</distrbtr>
+            {% else %}
+                <distrbtr>{{ distributor }}</distrbtr>
+            {% endif %}
+        {% endfor %}
+        <distDate date="{{ (study.issued[0] if study.version[0] == 'V1' else study.modified[0]) | from_iso_date | format_date('%Y-%m-%d') }}">{{ (study.issued[0] if study.version[0] == 'V1' else study.modified[0]) | from_iso_date | format_date('%B %d, %Y') }}</distDate>
+        </distStmt>
+    {% endif %}
+
+    {# Series #}
+    {% if series %}
+        <serStmt>
+        {% for s in series %}
+            <serName>{{ s.title[0] | trim }}</serName>
+        {% endfor %}
+        </serStmt>
+    {% endif %}
+ 
+    {# Version #}
+    <verStmt>
+    {% if study.version %}
+        <version date="{{ (study.issued[0] if study.version[0] == 'V1' else study.modified[0]) | from_iso_date | format_date('%Y-%m-%d') }}">study.version[0]</version>
+    {% endif %}
+
+    {# Collection Changes #}
+    {% if study.collectionChanges %}
+        {% for collectionChange in study.collectionChanges | map('strip_tags') | map('trim') | sort %}
+            <notes>{{ collectionChange }}</notes>
+        {% endfor %}
+    {% endif %}
+    </verStmt> 
+
+    {# Citation #}
+    {% if study.citation %}
+        <biblCit>{{ study.citation[0] | strip_tags | trim | replace('"', "&quot;") | replace("'", "&apos;") | escape }}</biblCit>
+    {% endif %}
+
+    {# 'Holdings' -- DOI #}
+    {% if study.doi %}
+        <holdings URI="{{ study.doi[0] }}"></holdings>
+    {% endif %}
+   </citation>
+
+    {# The stdyInfo section includes study-level metadata beyond citations#}
+    <stdyInfo>
+
+    {# Subject Terms #}
+    {% if study.keyword %}
+        <subject>
+        {% for keyword in study.keyword %}
+            <keyword vocab="ICPSR thesaurus">{{ keyword | trim | replace('"', "&quot;") | replace("'", "&apos;") | escape }}</keyword>
+        {% endfor %}
+        </subject>
+    {% endif %}
+
+    {# Summary #}
+    {% if study.description %}
+        <abstract contentType="abstract">{{ study.description | join('\n') | strip_tags | trim | replace('"', "&quot;") | replace("'", "&apos;") | escape }}</abstract>
+    {% endif %}
+
+    {# Purpose of Study #}
+    {% if study.purpose %}
+        <abstract contentType="purpose">STUDY PURPOSE: {{ study.purpose | join('\n') | strip_tags | trim | replace('"', "&quot;") | replace("'", "&apos;") | escape }}</abstract>
+    {% endif %}
+
+    {# Study Design #}
+    {% if study.studyDesign %}
+        <abstract contentType="mixed">STUDY DESIGN: {{ study.studyDesign | join('\n') | strip_tags | trim | replace('"', "&quot;") | replace("'", "&apos;") | escape }}</abstract>
+    {% endif %}
+
+    {# Scales #}
+    {% if study.commonScales and study.commonScales != 'None' %}
+        <abstract contentType="mixed">COMMON SCALES: {{ study.commonScales | join(', ') | strip_tags | trim | replace('"', "&quot;") | replace("'", "&apos;") | escape }}</abstract>
+    {% endif %}
+
+    {# VARIABLE DESCRIPTION: ADD HERE ONCE STAGING DATABASE IS UPDATED #}
+
+    {# The sumDscr provides a summary description of the data themselves, including relevant dates, geographic locations, scope of data, etc. #}
+    <sumDscr>
+
+    {# Time Period #}
+    {# REVISE ONCE TIME PERIOD TIME FRAME IS INCLUDED IN STAGING DATABASE #}
+
+    {# NOTE: we need to be able to 'count' related start/end dates so that we can connect the two via the 'cycle' attribute--e.g., cycle="C1". It looks like we need to use the 'namespace' feature to overcome scope limitation of variables in for loops #}
+
+    {% if study.timePeriod %}
+        {% set ns = namespace(count = 1) %}
+        {% for period in study.TimePeriod | defaultattr("startDate", "") | sort(attribute="startDate") %}
+            
+            {% set cycle = "C" ~ ns.count %}
+            
+            {% if "startDate" in period %}
+                <timePrd event="start" cycle="{{ cycle }}" date="{{ period.startDate }}">{{ period.startDate }}</timePrd>
+            {% endif %}
+            
+            {% if "endDate" in period %}
+                <timePrd event="end" cycle="{{ cycle }}" date="{{ period.endDate }}">{{ period.endDate }}</timePrd>
+            {% endif %}
+
+            {% set ns.count = ns.count + 1 %}
+
+        {% endfor %}
+    {% endif %}
+
+    {# Collection Dates #}
+    {% if study.collectionDate %}
+        {% for date in study.collectionDate | defaultattr("startDate", "") | sort(attribute="startDate") %}
+            {% if "startDate" in date %}
+                {% if "description" in date %}
+                    <collDate event="start" date="{{ date.startDate }}">{{ date.startDate }} ({{ date.description }})</collDate>
+                {% else %}
+                    <collDate event="start" date="{{ date.startDate }}">{{ date.startDate }}</collDate>
+                {% endif %}
+            {% endif %}
+            {% if "endDate" in date %}
+                {% if "description" in date %}
+                    <collDate event="end" date="{{ date.endDate }}">{{ date.endDate }} ({{ date.description }})</collDate>
+                {% else %}
+                    <collDate event="end" date="{{ date.endDate }}">{{ date.endDate }}</collDate>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+    
+    {# Geographic Coverage #}
+    {% for spatialTerm in study.spatial %}
+        <geogCover>{{ spatialTerm | trim | replace('"', "&quot;") | replace("'", "&apos;") | escape }}</geogCover>
+    {% endfor %}
+
+    {# Smallest Geographic Unit #}
+    {% if study.geographicUnit and study.geographicUnit != 'None' %}
+        <geogUnit>{{ study.geographicUnit[0] }}</geogUnit>
+    {% endif %}
+
+    {# Unit of Analysis #}
+    {% if study.analysisUnit %}
+        {% for unit in study.analysisUnit %}
+            <anlyUnit>{{ unit }}</anlyUnit>
+        {% endfor %}
+    {% endif %}
+
+    {# Universe #}
+    {% if study.universe %}
+        <universe>{{ study.universe[0] | strip_tags | trim | replace('"', "&quot;") | replace("'", "&apos;") | escape }}</universe>
+    {% endif %}
+
+    {# Data Type #}
+    {% if study.kindOfData %}
+        {% for type in study.kindOfData %}
+            <dataKind>{{ type }}</dataKind>
+        {% endfor %}
+    {% endif %}
+    </sumDscr>
+    </stdyInfo>
+
+    {# The 'method' section provides information on the study methodology and data collection #}
+    <method>
+    <dataColl>
+
+    {# Time Method #}
+    {% if study.timeMethod %}
+        {% for method in study.timeMethod %}
+            <timeMeth>{{ method }}</timeMeth>
+        {% endfor %}
+    {% endif %}
+
+    {# Sampling #}
+    {% if study.samplingProcedure %}
+        <sampProc>{{ study.samplingProcedure[0] | strip_tags | trim | replace('"', "&quot;") | replace("'", "&apos;") | escape }}</sampProc>
+    {% endif %}
+
+    {# Collection Mode #}
+    {% if study.collectionMode %}
+        {% for mode in study.collectionMode %}
+            <collMode>{{ mode }}</collMode>
+        {% endfor %}
+    {% endif %}
+
+    {# Data Sources #}
+    {% if study.source %}
+        <sources>
+        {% for source in study.source %}
+            <dataSrc>{{ source | strip_tags | trim | replace('"', "&quot;") | replace("'", "&apos;") | escape }}</dataSrc>
+        {% endfor %}
+        </sources>
+    {% endif %}
+    </dataColl>
+
+    {# WEIGHT: INCLUDE HERE ONCE STAGING DATABASE IS UPDATED #}
+
+    {# Collection Notes #}
+    {% if study.collectionNotes %}
+        {% for collNote in study.collectionNotes | sort(attribute="order") | unique(attribute="order")%}
+            <notes>{{ collNote.note | strip_tags | trim | replace('"', "&quot;") | replace("'", "&apos;") | escape }}</notes>
+        {% endfor %}
+    {% endif %}
+
+    {# Response Rates #}
+    {% if study.responseRate %}
+        <anlyInfo>
+            <respRate>{{ study.responseRate[0] | strip_tags | trim | replace('"', "&quot;") | replace("'", "&apos;") | escape }}</respRate>
+        </anlyInfo>
+    {% endif %}
+    </method>
+
+    {# The Data Access section describes access conditions and terms of use for the study #}
+    <dataAccs>
+
+    {# The Data Set Availability section provides information on availability and storage of the collection. If we include data sets for a study, we will hard code the availability as ICPSR (with the study DOI as the URI) #}
+    {% if study.dataset and study.doi %}
+        <setAvail media="online">
+            <accsPlac URI="{{ study.doi[0] }}">Inter-university Consortium for Political and Social Research</accsPlac>
+        </setAvail>
+    {% endif %}
+
+    {# The Use Statement section provides information on conditions and restrictions related to data use #}
+    <useStmt>
+
+    {# Restrictions #}
+
+    {% if study.membershipRequired[0] == "true" %}
+        {% set restrictionNote = "Available to ICPSR member institutions." %}
+    {% else %}
+        {% set restrictionNote = "Available to the general public." %}
+    {% endif %}
+
+    {% if study.restricted[0] == "true" %}
+        {% if study.accessRights %}
+            {% set restrictionNote = restrictionNote ~ " " ~ study.accessRights[0] %}
+        {% else %}
+            {% set restrictionNote = restrictionNote ~ " Special restrictions apply to one or more files." %}
+        {% endif %}
+
+        {% if study.doi %}
+            {% set restrictionNote = restrictionNote ~ " Visit " ~ study.doi[0] ~ " to apply for access to restricted data." %}
+        {% endif %}
+    {% endif %}
+
+    <restrctn>{{ restrictionNote }}</restrctn>
+
+    {# License #}
+    {% if study.licenseURI %}
+        <conditions>ICPSR Terms of Use <ExtLink URI="{{ study.licenseURI[0] }}"/></conditions>
+    {% endif %}
+
+    </useStmt>
+    </dataAccs>
+    </stdyDscr>
+
+    {# The File Description section includes information about the data sets associated with the study #}
+
+    {% if dataset %}
+        {% for dataFile in dataset %}
+            {% set fileID = "ICPSR-" ~ dataFile.identifier[0] %}
+            <fileDscr>
+                <fileTxt>
+                    <fileName ID="{{ fileID }}>{{ dataFile.title[0] }}</fileName>
+                </fileTxt>
+            </fileDscr>
+        {% endfor %}
+    {% endif %}
+
+</codeBook>

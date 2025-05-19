@@ -3,3 +3,9 @@ somar/XML/
 somar/prod_credentials.json
 somar/test_credentials.json
 somar/draft_dois.csv
+ror/
+terms_of_use/
+jinja-tests/export_request-*.json
+datacite/
+ddi/input/
+ddi/output

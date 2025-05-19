@@ -1,0 +1,34 @@
+<metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dcterms="http://purl.org/dc/terms/" xsi:schemaLocation="https://www.dublincore.org/schemas/xmls/qdc/dcterms.xsd">
+  <dcterms:title xml:lang="en">United Nations Roll Call Data, 1946-1985</dcterms:title>
+  <dcterms:type>Dataset</dcterms:type>
+  <dcterms:creator>Inter-university Consortium for Political and Social Research</dcterms:creator>
+  <dcterms:issued>1984-05-03</dcterms:issued>
+  <dcterms:modified>1992-02-16</dcterms:modified>
+  <dcterms:bibliographicCitation>Inter-university Consortium for Political and Social Research. United Nations Roll Call Data, 1946-1985.  [distributor], 1992-02-16. https://doi.org/10.3886/ICPSR05512.v1</dcterms:bibliographicCitation>
+  <dcterms:identifier>https://doi.org/10.3886/ICPSR05512.v1</dcterms:identifier>
+  <dcterms:description xml:lang="en">This collection consists of roll calls voted upon in the 
+ United Nations. It includes votes of the General Assembly, five 
+ additional special sessions and selected committees. It is a composite 
+ of political debate and world opinion of the post-1945 international 
+ community. The collection provides for the analysis over time of world 
+ opinion on issues and concerns raised by members of the international 
+ community, while also allowing for the study of the dynamics through 
+ which alliances and factions are formed within and between nations of 
+the world.</dcterms:description>
+  <dcterms:subject xml:lang="en">United Nations</dcterms:subject>
+  <dcterms:subject xml:lang="en">historical data</dcterms:subject>
+  <dcterms:subject xml:lang="en">international organizations</dcterms:subject>
+  <dcterms:subject xml:lang="en">legislative bodies</dcterms:subject>
+  <dcterms:subject xml:lang="en">political debate</dcterms:subject>
+  <dcterms:subject xml:lang="en">political history</dcterms:subject>
+  <dcterms:subject xml:lang="en">post-World War II</dcterms:subject>
+  <dcterms:subject xml:lang="en">roll call data</dcterms:subject>
+  <dcterms:subject xml:lang="en">roll call voting records</dcterms:subject>
+  <dcterms:subject xml:lang="en">twentieth century</dcterms:subject>
+  <dcterms:subject xml:lang="en">voting behavior</dcterms:subject>
+  <dcterms:subject xml:lang="en">world politics</dcterms:subject>
+  <dcterms:spatial>Global</dcterms:spatial>
+  <dcterms:temporal>1946/1985</dcterms:temporal>
+  <dcterms:license>https://www.icpsr.umich.edu/web/ICPSR/studies/05512/terms</dcterms:license>
+  <dcterms:provenance xml:lang="en">2018-02-15 The citation of this study may have changed due to the new version control system that has been implemented. The previous citation was: Inter-university Consortium for Political and Social Research. UNITED NATIONS ROLL CALL DATA, 1946-1985. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [producer and distributor], 1982. http://doi.org/10.3886/ICPSR05512.v1</dcterms:provenance>
+</metadata>

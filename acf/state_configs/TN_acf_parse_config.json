@@ -1,6 +1,6 @@
 {
-    "input_doc": "C:/testing/ACF/Tennessee/Tennessee_test.docx",
-    "out_dir": "C:/testing/ACF/Tennessee",
+    "input_doc": "C:/ACF/FINAL APPROVED STATE RECORDS/Tennessee/Tennessee_Copy.docx",
+    "out_dir": "C:/ACF/FINAL APPROVED STATE RECORDS/Tennessee",
     "xsd_file": "schema_final.xsd",
     "xsl_file": "statetemplatev5.xsl",
     "category": "false",

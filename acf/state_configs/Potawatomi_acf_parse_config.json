@@ -1,5 +1,5 @@
 {
-   "input_doc": "C:/ACF/FINAL APPROVED STATE RECORDS/Potawatomi/Potawatomi_Copy.docx",
+    "input_doc": "C:/ACF/FINAL APPROVED STATE RECORDS/Potawatomi/Potawatomi_Copy.docx",
     "out_dir": "C:/ACF/FINAL APPROVED STATE RECORDS/Potawatomi",
     "xsd_file": "schema_final.xsd",
     "xsl_file": "statetemplatev5.xsl",

@@ -1,0 +1,39 @@
+DOCX Fixes
+
+1) Fix MS Word smart quotes
+	- Replace: ’ and ‘
+	- Use: '
+
+	- Replace “ and ”
+	- Use: "
+
+2) Fix delimiters used with statute definitions and requirements
+	- Replace:' - '
+	- With: ' – '
+
+	- Replace: --
+	- With: –
+
+4) Ensure consistent text with statute information
+	- Use "Definitions related to" instead of "Definitions for"
+
+	- Use "Requirements related to" instead of "Requirements for"
+
+5) Search for and fix placeholder text:
+    - ()
+    - text
+    - 999
+
+6) Make sure 'ACF Offices Associated' is underlined, with no colon
+
+7) Wild card search example: Act [0-9]{1,} (*)\) Article
+
+8) Replace 'thin space' with regular
+	-  
+
+9) En dash spacing:
+	- –([A-Za-z])
+	- – \1
+
+	- ([A-Za-z])–
+	- \1 –
