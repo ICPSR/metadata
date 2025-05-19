@@ -1,6 +1,6 @@
 # ICPSR Metadata Schema
 
-Last updated: April 11, 2025
+Last updated: May 19, 2025
 
 This is the metadata schema used to describe data collections at the Inter-university Consortium for Political and Social Research (ICPSR). These rules and definitions represent ICPSR's metadata practices and are intended to (a) assist ICPSR staff with metadata entry, and (b) help ICPSR users -- including data depositors and researchers accessing data -- understand how to use and interpret our metadata.
 
@@ -1495,7 +1495,7 @@ The textual description should not simply restate the time period in words. For 
 
 **Accepted Values**: Text
 
-**Controlled Vocabulary:** [DDI Controlled Vocabulary for Time Method](https://ddialliance.org/Specification/DDI-CV/TimeMethod_1.2.html). See below for terms and definitions:
+**Controlled Vocabulary:** [DDI Controlled Vocabulary for Time Method](https://vocabularies.cessda.eu/vocabulary/TimeMethod). See below for terms and definitions:
 
 | *Term* | *Definition* |
 |----------|---------------|
@@ -1748,7 +1748,7 @@ The textual description should not simply restate the time period in words. For 
 
 **Controlled Vocabulary:** N/A
 
-**Usage Notes:** Use a brief phrase, for example: 'Individual,' 'Family,' 'Household,' or 'Organization'; when possible, conform to the [DDI Controlled Vocabulary for Analysis Unit](https://vocabularies.cessda.eu/vocabulary/AnalysisUnit?v=2.1.3&lang=en).
+**Usage Notes:** Use a brief phrase, for example: 'Individual,' 'Family,' 'Household,' or 'Organization'; when possible, conform to the [DDI Controlled Vocabulary for Analysis Unit](https://vocabularies.cessda.eu/vocabulary/AnalysisUnit).
 
 **Examples:** 
 

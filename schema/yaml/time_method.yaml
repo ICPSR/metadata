@@ -2,7 +2,7 @@
   $schema: https://json-schema.org/draft-07/schema#
   $id: https://schemas.icpsr.umich.edu/schema/yaml/time_method?version=v1
   controlledVocab: |
-    [DDI Controlled Vocabulary for Time Method](https://ddialliance.org/Specification/DDI-CV/TimeMethod_1.2.html). See below for terms and definitions:
+    [DDI Controlled Vocabulary for Time Method](https://vocabularies.cessda.eu/vocabulary/TimeMethod). See below for terms and definitions:
 
     | *Term* | *Definition* |
     |----------|---------------|

@@ -756,7 +756,7 @@
       "items": {
         "type": "string"
       },
-      "usageNotes": "Use a brief phrase, for example: 'Individual,' 'Family,' 'Household,' or 'Organization'; when possible, conform to the [DDI Controlled Vocabulary for Analysis Unit](https://vocabularies.cessda.eu/vocabulary/AnalysisUnit?v=2.1.3&lang=en).",
+      "usageNotes": "Use a brief phrase, for example: 'Individual,' 'Family,' 'Household,' or 'Organization'; when possible, conform to the [DDI Controlled Vocabulary for Analysis Unit](https://vocabularies.cessda.eu/vocabulary/AnalysisUnit).",
       "examples": [
         ["Organization"],
         ["Individual, Household"],
