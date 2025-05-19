@@ -1,5 +1,11 @@
-somar/drafts/
-somar/XML/
-somar/prod_credentials.json
-somar/test_credentials.json
-somar/draft_dois.csv
+projects/somar/drafts/
+projects/somar/XML/
+projects/somar/prod_credentials.json
+projects/somar/test_credentials.json
+projects/somar/draft_dois.csv
+projects/ror/
+projects/terms_of_use/
+projects/jinja_tests/export_request-*.json
+projects/datacite/
+projects/ddi_doi_cleanup/input/
+projects/ddi_doi_cleanup/output

@@ -1,0 +1,141 @@
+{% set study = tree.get('study', [{}])[0] %}
+{% set series  = tree.get('series', []) %}
+{% set dataset = tree.get('dataset', []) %}
+
+<metadata 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:dcterms="http://purl.org/dc/terms/" 
+    xsi:schemaLocation="https://www.dublincore.org/schemas/xmls/qdc/dcterms.xsd">
+
+    {# Title #}
+    {% if study.title %}
+        <dcterms:title xml:lang="en">{{ study.title[0] | trim }}</dcterms:title>
+    {% endif %}
+
+    {# Alternative Title(s) #}
+    {% if study.altTitle %}
+        {% for alt_title in study.altTitle %}
+            <dcterms:alternative xml:lang="en">{{ alt_title | trim }}</dcterms:alternative>
+        {% endfor %}
+    {% endif %}
+
+    {# Declare resource type; assume the hard-coded value would change if template is used for other resource types #}
+    <dcterms:type>Dataset</dcterms:type>
+    
+    {# Principal Investigator(s) #}
+    {% if study.creator %}
+        {% set creators = study.creator %}
+
+        {% for creator in creators %}
+            <dcterms:creator>{{ creator.name }}</dcterms:creator>
+        {% endfor %}
+    {% endif %}
+
+    {# Original Release Date #}
+    {% if study.issued %}
+        <dcterms:issued>{{ study.issued[0] | from_iso_date | format_date('%Y-%m-%d') }}</dcterms:issued>
+    {% endif %}
+
+    {# Version Date #}
+    {% if study.modified %}
+        <dcterms:modified>{{ study.modified[0] | from_iso_date | format_date('%Y-%m-%d') }}</dcterms:modified>
+    {% endif %}
+
+    {# Citation #}
+    {% if study.citation %}
+        <dcterms:bibliographicCitation>{{ study.citation[0] | strip_tags | trim }}</dcterms:bibliographicCitation>
+    {% endif %}
+
+    {# Distributor #}
+    {% if study.distributor %}
+        {% for distributor in study.distributor %}
+            <dcterms:publisher>{{ distributor | trim }}</dcterms:publisher>
+        {% endfor %}  
+    {% endif %}
+
+    {# Identifier (DOI) #}
+    {% if study.doi %}
+        <dcterms:identifier>{{ study.doi[0] }}</dcterms:identifier>
+    {% endif %}
+
+    {# Summary #}
+    {% if study.description %}
+        <dcterms:description xml:lang="en">{{ study.description | join('\n') | strip_tags | trim }}</dcterms:description>
+    {% endif %}
+
+    {# Subject Terms #}
+    {% for keyword in study.keyword %}
+        <dcterms:subject xml:lang="en">{{ keyword | trim }}</dcterms:subject>
+    {% endfor %}
+
+    {# Geographic Coverage #}
+    {% for spatialTerm in study.spatial %}
+        <dcterms:spatial>{{ spatialTerm | trim }}</dcterms:spatial>
+    {% endfor %}
+
+    {# Time Period #}
+    {% if study.timePeriod | length > 0 %}
+        {#
+            1. More than one date-range exists within the temporal metadata:
+                { 1900–1935, 1948–1950 } -> “1900/1950”
+            2. A date-range exists but a second, unpaired start-date exists beyond the range:
+                { 1990–1993, 2001– } -> “1990/2001”
+            3. A date-range exists but a second, unpaired end-date exists before the range:
+                { 2005–2010, –1998 } -> “1998/2010”
+            4. No start-date exists; there are only one or more end-dates:
+                { –1991, –1994 } -> “1991/1994”
+            5. No end-date exists; there are only one or more start-dates:
+                { 1989–, } -> “1989”
+        #}
+
+        {% set startDate = study.timePeriod | map(attribute="endDate", default="") | select | min %} {# backup value in case no startDate exists #}
+        {% set startDate = study.timePeriod | map(attribute="startDate", default=startDate) | min %}
+
+        {% set endDate = study.timePeriod | map(attribute="startDate", default="") | select | max %} {# backup value in case no endDate exists #}
+        {% set endDate = study.timePeriod | map(attribute="endDate", default=endDate) | max %}
+
+        <dcterms:temporal>{{ [startDate, endDate] | unique | join('/') }}</dcterms:temporal>
+    {% endif %}
+
+    {# Data Source #}
+    {% if study.source %}
+        {% for sourceItem in study.source %}
+            <dcterms:source>{{ sourceItem | trim }}</dcterms:source>
+        {% endfor %}
+    {% endif %}
+
+    {# Restrictions #}
+    {% if study.membershipRequired[0] == "true" %}
+        {% set restrictionNote = "Available to ICPSR member institutions." %}
+    {% else %}
+        {% set restrictionNote = "Available to the general public." %}
+    {% endif %}
+
+    {% if study.restricted[0] == "true" %}
+        {% set restrictionNote = restrictionNote ~ "  Special restrictions apply to one or more files." %}
+        {% if study.doi %}
+            {% set restrictionNote = restrictionNote ~ "  Visit " ~ study.doi[0] ~ " to apply for access to restricted data." %}
+        {% endif %}
+        <dcterms:accessRights xml:lang="en">{{ restrictionNote }}</dcterms:accessRights>
+    {% endif %}
+
+    {# Study License / Terms of Use #}
+    {% if study.licenseURI %}
+        <dcterms:license>{{ study.licenseURI[0]}}</dcterms:license>
+    {% endif %}
+
+
+    {# Collection Changes #}
+    {% if study.collectionChanges %}
+        {% for collectionChange in study.collectionChanges | map('strip_tags') | map('trim') | sort %}
+            <dcterms:provenance xml:lang="en">{{ collectionChange }}</dcterms:provenance>
+        {% endfor %}
+    {% endif %}
+
+    {# Series #}
+    {% if series %}
+        {% for s in series %}
+            <dcterms:isPartOf>{{ s.title[0] | trim }}</dcterms:isPartOf>
+        {% endfor %}
+    {% endif %}
+</metadata>

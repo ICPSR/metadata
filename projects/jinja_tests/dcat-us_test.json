@@ -1,0 +1,45 @@
+{
+    "@context": "https://project-open-data.cio.gov/v1.1/schema/catalog.jsonld",
+    "@type": "dcat:Catalog",
+    "conformsTo": "https://project-open-data.cio.gov/v1.1/schema",
+    "describedBy": "/conformance/dcat-us.json",
+    "dataset": [
+        {
+            "@type": "dcat:Dataset",
+            "identifier": "https://doi.org/10.3886/ICPSR36363.v1",
+            "title": "Data on Dispute Related Violence in a Northeastern City, United States, 2010 to 2012",
+            "description": "These data are part of NACJD's Fast Track Release and are distributed as they were received from the data depositor. The files have been zipped by NACJD for release, but not checked or processed except for the removal of direct identifiers. Users should refer to the accompanying readme file for a brief description of the files available with this collection and consult the investigator(s) if further information is needed.The objective of this project was to enhance understanding of violent disputes by examining the use of aggression to rectify a perceived wrong. It also sought to identify the factors that determine if retaliatory violence occurs within disputes as well as to understand how long retaliatory disputes last, and what factors lead to the termination of such disputes. This collection includes two SPSS data files: \"Dispute_Database_for_NACJD.sav\" with 40 variables and 111 cases and \"Northeastern_City_Violence_Database_NACJD_submission.sav\" with 164 variables and 1,303 cases.",
+            "issued": "2018-04-26T09:23:58",
+            "modified": "2018-04-26T09:28:47",
+            "rights": "See https://doi.org/10.3886/ICPSR36363.v1 for additional information about terms of use, restrictions, and data access.",
+            "keyword": [
+                "drug related crimes",
+                "offenders",
+                "urban crime",
+                "victimization",
+                "violence",
+                "weapons offenses"
+            ],
+            "accessLevel": "restricted public",
+            "license": "https://www.icpsr.umich.edu/web/ICPSR/studies/36363/terms",
+            "publisher": {
+                "@type": "org:Organization",
+                "name": "Inter-university Consortium for Political and Social Research"
+            },
+            "contactPoint": {
+                "@type": "vcard:Contact",
+                "fn": "Inter-university Consortium for Political and Social Research",
+                "hasEmail": "mailto:ICPSR-help@umich.edu"
+            },
+            "bureauCode": [
+                "Not Applicable"
+            ],
+            "programCode": [
+                "Not Applicable"
+            ],
+            "spatial": "United States",
+            "temporal": "2010/2012",
+            "landingPage": "https://doi.org/10.3886/ICPSR36363.v1"
+        }
+    ]
+}

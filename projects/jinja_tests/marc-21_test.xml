@@ -1,0 +1,139 @@
+<collection xmlns="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim https://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+  <record>
+    <leader>     cmm a22      u 4500</leader>
+    <controlfield tag="001">https://doi.org/10.3886/ICPSR05512.v1</controlfield>
+    <controlfield tag="003">MiAaI</controlfield>
+    <controlfield tag="005">19920216000000.0</controlfield>
+    <controlfield tag="006">m    f   | |      </controlfield>
+    <controlfield tag="007">cr |||||||||||</controlfield>
+    <controlfield tag="008">840503e19840503miu    f   | |      ||| d</controlfield>
+    <datafield tag="040" ind1=" " ind2=" ">
+      <subfield code="a">MiAaI</subfield>
+      <subfield code="c">MiAaI</subfield>
+    </datafield>
+    <datafield tag="045" ind1="2" ind2=" ">
+      <subfield code="b">d1946</subfield>
+      <subfield code="b">d1985</subfield>
+    </datafield>
+    <datafield tag="110" ind1="2" ind2=" ">
+      <subfield code="a">Inter-university Consortium for Political and Social Research</subfield>
+    </datafield>
+    <datafield tag="245" ind1="0" ind2="0">
+      <subfield code="a">United Nations Roll Call Data, 1946-1985</subfield>
+    </datafield>
+    <datafield tag="251" ind1=" " ind2=" ">
+      <subfield code="a">V1</subfield>
+    </datafield>
+    <datafield tag="264" ind1=" " ind2="1">
+      <subfield code="a">Ann Arbor, MI :</subfield>
+      <subfield code="b">Inter-university Consortium for Political and Social Research,</subfield>
+      <subfield code="c">1984-05-03.</subfield>
+    </datafield>
+    <datafield tag="300" ind1=" " ind2=" ">
+      <subfield code="a">1 online resource</subfield>
+    </datafield>
+    <datafield tag="336" ind1=" " ind2=" ">
+      <subfield code="a">computer data</subfield>
+      <subfield code="b">cod</subfield>
+      <subfield code="2">rdacontent</subfield>
+    </datafield>
+    <datafield tag="337" ind1=" " ind2=" ">
+      <subfield code="a">computer</subfield>
+      <subfield code="b">c</subfield>
+      <subfield code="2">rdamedia</subfield>
+    </datafield>
+    <datafield tag="338" ind1=" " ind2=" ">
+      <subfield code="a">online resource</subfield>
+      <subfield code="b">cr</subfield>
+      <subfield code="2">rdacarrier</subfield>
+    </datafield>
+    <datafield tag="362" ind1="0" ind2=" ">
+      <subfield code="a">V1 (1984-05-03)-</subfield>
+    </datafield>
+    <datafield tag="500" ind1=" " ind2=" ">
+      <subfield code="a">Roll calls for the 30th through 40th Plenary Sessions 
+ reflect the Singer-Small National Number coding scheme described in 
+ Melvin Small and J. David Singer. "Resort to Arms." Beverly Hills, 
+ Ca.: Sage Publications, 1982. SPSS control card files are available for 
+Sessions 33-40.</subfield>
+    </datafield>
+    <datafield tag="506" ind1="1" ind2=" ">
+      <subfield code="a">Available to ICPSR member institutions.</subfield>
+    </datafield>
+    <datafield tag="516" ind1="8" ind2=" ">
+      <subfield code="a">roll call voting data</subfield>
+    </datafield>
+    <datafield tag="520" ind1=" " ind2=" ">
+      <subfield code="a">This collection consists of roll calls voted upon in the 
+ United Nations. It includes votes of the General Assembly, five 
+ additional special sessions and selected committees. It is a composite 
+ of political debate and world opinion of the post-1945 international 
+ community. The collection provides for the analysis over time of world 
+ opinion on issues and concerns raised by members of the international 
+ community, while also allowing for the study of the dynamics through 
+ which alliances and factions are formed within and between nations of 
+the world.</subfield>
+    </datafield>
+    <datafield tag="524" ind1=" " ind2=" ">
+      <subfield code="a">Inter-university Consortium for Political and Social Research. United Nations Roll Call Data, 1946-1985.  [distributor], 1992-02-16. https://doi.org/10.3886/ICPSR05512.v1</subfield>
+    </datafield>
+    <datafield tag="561" ind1=" " ind2=" ">
+      <subfield code="a">2018-02-15 The citation of this study may have changed due to the new version control system that has been implemented. The previous citation was: <ul><li>Inter-university Consortium for Political and Social Research. UNITED NATIONS ROLL CALL DATA, 1946-1985. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [producer and distributor], 1982. http://doi.org/10.3886/ICPSR05512.v1</li></ul></subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="7">
+      <subfield code="a">United Nations</subfield>
+      <subfield code="2">icpsr</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="7">
+      <subfield code="a">historical data</subfield>
+      <subfield code="2">icpsr</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="7">
+      <subfield code="a">international organizations</subfield>
+      <subfield code="2">icpsr</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="7">
+      <subfield code="a">legislative bodies</subfield>
+      <subfield code="2">icpsr</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="7">
+      <subfield code="a">political debate</subfield>
+      <subfield code="2">icpsr</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="7">
+      <subfield code="a">political history</subfield>
+      <subfield code="2">icpsr</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="7">
+      <subfield code="a">post-World War II</subfield>
+      <subfield code="2">icpsr</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="7">
+      <subfield code="a">roll call data</subfield>
+      <subfield code="2">icpsr</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="7">
+      <subfield code="a">roll call voting records</subfield>
+      <subfield code="2">icpsr</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="7">
+      <subfield code="a">twentieth century</subfield>
+      <subfield code="2">icpsr</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="7">
+      <subfield code="a">voting behavior</subfield>
+      <subfield code="2">icpsr</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="7">
+      <subfield code="a">world politics</subfield>
+      <subfield code="2">icpsr</subfield>
+    </datafield>
+    <datafield tag="651" ind1=" " ind2="7">
+      <subfield code="a">Global</subfield>
+      <subfield code="2">icpsr</subfield>
+    </datafield>
+    <datafield tag="856" ind1="4" ind2="0">
+      <subfield code="u">https://doi.org/10.3886/ICPSR05512.v1</subfield>
+    </datafield>
+  </record>
+</collection>

@@ -1,0 +1,393 @@
+{% set study = tree.get('study', [{}])[0] %}
+{% set series = tree.get('series', []) %}
+{% set dataset = tree.get('dataset', []) %}
+
+<collection
+    xmlns="http://www.loc.gov/MARC21/slim"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.loc.gov/MARC21/slim https://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+    <record>
+        {#
+           Leader
+        #}
+        {% set leader = " "*5 %} {# Position 0-4: Record length.  Left blank. #}
+
+        {# Position 5: Record status #}
+        {% if study.issued and study.modified and study.issued[0] == study.modified[0] %}
+            {% set leader = leader ~ 'n' %} {# New record #}
+        {% else %}
+            {% set leader = leader ~ 'c' %} {# Corrected or revised record #}
+        {% endif %}
+
+        {% set leader = leader ~ 'm' %}   {# Position 6: Type of record: 'm' == 'Computer file' #}
+        {% set leader = leader ~ 'm' %}   {# Position 7: Bibliographic level: 'm' == 'Monograph / item' #}
+        {% set leader = leader ~ ' ' %}   {# Position 8: Type of control: Left blank. #}
+        {% set leader = leader ~ 'a' %}   {# Position 9: Character coding: 'a' == Unicode #}
+        {% set leader = leader ~ '2' %}   {# Position 10: Indicator count: Hardcode 2 per MARC spec #}
+        {% set leader = leader ~ '2' %}   {# Position 11: Subfield code count: Hardcode 2 per MARC spec #}
+        {% set leader = leader ~ " "*5 %} {# Positions 12-16: Base address of data.  Left blank. #}
+        {% set leader = leader ~ " " %}   {# Position 17: Encoding level.  Left blank (Full Level). #}
+        {% set leader = leader ~ "u" %}   {# Position 18: Descriptive cataloging form.  Set to 'u' because these metadata are converted from another format. #}
+        {% set leader = leader ~ " " %}   {# Position 19: Multipart resource record level.  Left blank (N/A) #}
+        {% set leader = leader ~ "4500" %}{# Positions 20-23: Hardcoded to 4500 per MARC spec #}
+
+        <leader>{{ leader }}</leader>
+
+        {# Control Fields #}
+
+        {# Control 001: Control Number #}
+        {% if study.doi %}
+            <controlfield tag="001">{{ study.doi[0] }}</controlfield>
+        {% else %}
+            <controlfield tag="001">{{ study.identifier[0] }}</controlfield>
+        {% endif %}
+
+        <controlfield tag="003">MiAaI</controlfield> {# Org code for ICPSR per https://www.loc.gov/marc/organizations/org-search.php #}
+
+        {# Control 005: Modification timestamp. #}
+        {% if study.modified %}
+            <controlfield tag="005">{{ study.modified[0] | from_iso_date | format_date('%Y%m%d%H%M%S.%f', 16) }}</controlfield>
+            {# ex. the date "August 2nd, 2022 at 4:05:08.100015 pm" will printed as "20220802160508.100015" #}
+        {% endif %}
+
+        {# Control 006: Additional Characteristics #}
+        {% set control006 = 'm' %}                {# Position 00: Form of material ('m' == Computer file) #}
+        {% set control006 = control006 ~ " "*4 %} {# Position 01-04: Undefined and left blank #}
+        {% set control006 = control006 ~ "f" %}   {# Position 05: Target audience ('f' == Specialized) #}
+        {% set control006 = control006 ~ " " %}   {# Position 06: Form of item (Blank == unspecified) #}
+        {% set control006 = control006 ~ " "*2 %} {# Position 07-08: Undefined #}
+        {% set control006 = control006 ~ '|' %}   {# Position 09: Type of computer file ('|' == No attempt to code) – we cannot guarantee datatype for this position #}
+        {% set control006 = control006 ~ " " %}   {# Position 10: Undefined #}
+        {% set control006 = control006 ~ "|" %}   {# Position 11: Government publication ('|' == No attempt to code) – we cannot guarantee the context for this position #}
+        {% set control006 = control006 ~ " "*6 %} {# Position 12-17: Undefined #}
+
+        <controlfield tag="006">{{ control006 }}</controlfield>
+
+        {# Control 007: Physical Description #}
+        {% set control007 = 'c' %}                {# Position 00: Category of material ('c' == Electronic resource) #}
+        {% set control007 = control007 ~ "r" %}   {# Postiion 01: Specific material designation ('r' == Remote) #}
+        {% set control007 = control007 ~ " " %}   {# Postiion 02: Undefined #}
+        {% set control007 = control007 ~ "|" %}   {# Position 03: Color ('|' == No attempt to code) #}
+        {% set control007 = control007 ~ "|" %}   {# Position 04: Dimensions ('|' == No attempt to code) #}
+        {% set control007 = control007 ~ "|" %}   {# Position 05: Sound ('|' == No attempt to code) #}
+        {% set control007 = control007 ~ "|||" %} {# Position 06-08: Bit depth ('|||' == No attempt to code ) #}
+        {% set control007 = control007 ~ "|" %}   {# Position 09: File formats ('|' == No attempt to code) #}
+        {% set control007 = control007 ~ "|" %}   {# Position 10: Quality assurance targets ('|' == No attempt to code) #}
+        {% set control007 = control007 ~ "|" %}   {# Position 11: Antecedent ('|' == No attempt to code) #}
+        {% set control007 = control007 ~ "|" %}   {# Position 12: Compression ('|' == No attempt to code) #}
+        {% set control007 = control007 ~ "|" %}   {# Position 13: Reformatting quality ('|' == No attempt to code) #}
+    
+        <controlfield tag="007">{{ control007 }}</controlfield>
+
+        {# Control 008: Fixed-length data elements #}
+        {% set pubDateShort = study.issued[0] | from_iso_date | format_date('%y%m%d') %}  {# ex. the date August 2nd, 2022 will become "220802" #}
+        {% set pubDateLong  = study.issued[0] | from_iso_date | format_date('%Y%m%d') %}  {# ex. the date August 2nd, 2022 will become "20220802" #}
+
+        {% set control008 = pubDateShort %}                 {# Position 00-05: Date of record creation. #}
+        {% set control008 = control008 ~ "e" %}             {# Position 06: Type of date ('e' == Detailed date) #}
+        {% set control008 = control008 ~ pubDateLong %}     {# Position 07-14: Detailed date of publication. #}
+        {% set control008 = control008 ~ 'miu' %}           {# Position 15-17: Place of publication ('miu' == Michigan, USA) #}
+        {% set control008 = control008 ~ control006[1:] %}  {# Position 18-34: Copy of control006 values 01-17 #}
+        {% set control008 = control008 ~ '|||' %}           {# Position 35-37: Language ('|||' == No attempt to code) – we cannot guarantee the language of publication) #}
+        {% set control008 = control008 ~ " " %}             {# Position 38: Modified record (Blank == not modified) #}
+        {% set control008 = control008 ~ "d" %}             {# Position 39: Cataloging source ('d' == 'Other) #}
+
+        <controlfield tag="008">{{ control008 }}</controlfield>
+
+        {#
+           Data Fields
+        #}
+
+        {# Cataloging source #}
+        <datafield tag="040" ind1=" " ind2=" ">
+            <subfield code="a">MiAaI</subfield> {# Original agency: MARC code for ICPSR #}
+            <subfield code="c">MiAaI</subfield> {# Transcribing agency: MARC code for ICPSR #}
+        </datafield>
+
+        {# Time Period #}
+        {% if study.timePeriod | length > 0 %}
+            {% set timePeriod = study.timePeriod | collapse_date_ranges %}
+
+            <datafield tag="045" ind1="2" ind2=" ">
+                {% for date in (timePeriod.split('/') | unique) %}
+                    <subfield code="b">d{{ date | truncate(10) | replace('-', '') }}</subfield>
+                {% endfor %}
+            </datafield>
+        {% endif %}
+
+        {# Principal Investigator #}
+        {% if study.creator %}
+            {% set pi = study.creator | selectattr("order", "equalto", "0") | first %}
+
+            {% if pi.type == 'foaf:Person' %}
+                <datafield tag="100" ind1="1" ind2=" ">
+                    <subfield code="a">{{ pi.name }}</subfield>
+                    {% if pi.affiliation %}
+                        <subfield code="u">{{ pi.affiliation }}</subfield>
+                    {% endif %}
+                </datafield>
+            {% else %}
+                <datafield tag="110" ind1="2" ind2=" ">
+                    <subfield code="a">{{ pi.name }}</subfield>
+                </datafield>
+            {% endif %}
+        {% endif %}
+
+        {# Title #}
+        {% if study.title %}
+            {# indicate leading articles in titles #}
+            {%  set lower_title = study.title[0].lower() %}
+            {% if lower_title.startswith('a ') %}
+                {% set article_length = 1 %}
+            {% elif lower_title.startswith('an ') %}
+                {% set article_length = 2 %}
+            {% elif lower_title.startswith('the ') %}
+                {% set article_length = 3 %}
+            {% else %}
+                {% set article_length = 0 %}
+            {% endif %}
+
+            <datafield tag="245" ind1="0" ind2="{{ article_length }}">
+                <subfield code="a">{{ study.title[0] | trim }}</subfield>
+            </datafield>
+        {% endif %}
+
+        {# Alternate Title #}
+        {% if study.altTitle %}
+            <datafield tag="246" ind1="2" ind2=" ">
+                <subfield code="a">{{ study.altTitle[0] | trim }}</subfield>
+            </datafield>
+        {% endif %}
+
+        {# Version #}
+        {% if study.version %}
+            <datafield tag="251" ind1=" " ind2=" ">
+                <subfield code="a">{{ study.version[0] | trim }}</subfield>
+            </datafield>
+        {% endif %}
+
+        {# Distribution #}
+        {% if study.distributor %}
+            <datafield tag="264" ind1=" " ind2="1">
+                {% if study.distributor[0].lower() == "inter-university consortium for political and social research" %}
+                    <subfield code="a">{{ "Ann Arbor, MI :" }}</subfield>
+                {% endif %}
+                <subfield code="b">{{ study.distributor[0] | trim }},</subfield>
+                {% if study.issued %}
+                    <subfield code="c">{{ (study.issued[0] if study.version[0] == 'V1' else study.modified[0]) | from_iso_date | format_date('%Y-%m-%d') }}.</subfield>
+                    {# ex. the date August 2nd, 2022 will become "2022-08-02" #}
+                {% endif %}
+            </datafield>
+        {% endif %}
+
+        {# Phsyical Description #}
+        <datafield tag="300" ind1=" " ind2=" ">
+          <subfield code="a">1 online resource</subfield>
+        </datafield>
+
+        {# Content Type #}
+        <datafield tag="336" ind1=" " ind2=" ">
+          <subfield code="a">computer data</subfield>
+          <subfield code="b">cod</subfield>
+          <subfield code="2">rdacontent</subfield>
+        </datafield>
+
+        {# Media Type #}
+        <datafield tag="337" ind1=" " ind2=" ">
+          <subfield code="a">computer</subfield>
+          <subfield code="b">c</subfield>
+          <subfield code="2">rdamedia</subfield>
+        </datafield>
+
+        {# Carrier Type #}
+        <datafield tag="338" ind1=" " ind2=" ">
+          <subfield code="a">online resource</subfield>
+          <subfield code="b">cr</subfield>
+          <subfield code="2">rdacarrier</subfield>
+        </datafield>
+
+        {# Version Date #}
+        {% if study.issued %}
+            {% set study_first_issue = 'V1 (' ~ (study.issued[0] | from_iso_date | format_date('%Y-%m-%d')) ~ ')'%}
+
+            {% if study.version[0] != 'V1' %}
+                {% set study_last_issue = study.version[0] ~ ' (' ~ (study.modified[0] | from_iso_date | format_date('%Y-%m-%d')) ~ ')' %}
+            {% endif %}
+
+            <datafield tag="362" ind1="0" ind2=" ">
+                <subfield code="a">{{ study_first_issue }}-{{ study_last_issue }}</subfield>
+            </datafield>
+        {% endif %}
+
+        {# Series #}
+        {% for s in series %}
+            <datafield tag="490" ind1="0" ind2=" ">
+                <subfield code="a">{{ s.title[0] | trim }}</subfield>
+            </datafield>
+        {% endfor %}
+
+        {# Collection Notes #}
+        {% if study.collectionNotes %}
+            {% for collectionNote in (study.collectionNotes | selectattr("note") | defaultattr("order", "") | sort(attribute="order")) %}
+                <datafield tag="500" ind1=" " ind2=" ">
+                    <subfield code="a">{{ collectionNote.note | trim }}</subfield>
+                </datafield>
+            {% endfor %}
+        {% endif %}
+
+        {# Datasets #}
+        {% set dataset = (dataset | selectattr("title") | defaultattr("identifier", "") | sort(attribute="identifier") | map(attribute="title") | map('first') | map('trim') | join(' -- ')) %}
+        {% if dataset %}
+            <datafield tag="505" ind1="8" ind2=" ">
+                <subfield code="a">{{ dataset }}</subfield>
+            </datafield>
+        {% endif %}
+
+        {# Restrictions #}
+        {% set restrictionInd = 0 %}
+
+        {% if study.membershipRequired[0] == "true" %}
+            {% set restrictionInd = 1 %}
+            {% set restrictionNote = "Available to ICPSR member institutions." %}
+        {% else %}
+            {% set restrictionNote = "Available to the general public." %}
+        {% endif %}
+
+        {% if study.restricted[0] == "true" %}
+            {% set restrictionInd = 1 %}
+            {% set restrictionNote = restrictionNote ~ "  Special restrictions apply to one or more files." %}
+            {% if study.doi %}
+                {% set restrictionNote = restrictionNote ~ "  Visit " ~ study.doi[0] ~ " to apply for access to restricted data." %}
+            {% endif %}
+        {% endif %}
+
+        <datafield tag="506" ind1="{{ restrictionInd }}" ind2=" ">
+            <subfield code="a">{{ restrictionNote }}</subfield>
+        </datafield>
+
+        {# Data type #}
+        {% if study.kindOfData %}
+            {% for kindOfData in (study.kindOfData | map('trim')) %}
+                <datafield tag="516" ind1="8" ind2=" ">
+                    <subfield code="a">{{ kindOfData }}</subfield>
+                </datafield>
+            {% endfor %}
+        {% endif %}
+
+        {# Collection Dates #}
+        {% if study.collectionDate %}
+            {% for date in (study.collectionDate | defaultattr("startDate", "") | sort(attribute="startDate")) %}
+                <datafield tag="518" ind1=" " ind2=" ">
+                    {% if date.startDate or date.endDate %}
+                        <subfield code="a">Data collected {{ [date.startDate, date.endDate] | select | join(' through ') }}</subfield>
+                    {% endif %}
+                    {% if date.description %}
+                        <subfield code="o">{{ date.description }}</subfield>
+                    {% endif %}
+                </datafield>
+            {% endfor %}
+        {% endif %}
+
+        {# Description #}
+        {% if study.description %}
+            <datafield tag="520" ind1=" " ind2=" ">
+                <subfield code="a">{{ study.description | join('\n') | trim }}</subfield>
+            </datafield>
+        {% endif %}
+
+        {# Purpose of Study #}
+        {% if study.purpose %}
+            <datafield tag="520" ind1="3" ind2=" ">
+                <subfield code="a">{{ study.purpose | join('\n') | trim }}</subfield>
+            </datafield>
+        {% endif %}
+
+        {# Citation #}
+        {% if study.citation %}
+            <datafield tag="524" ind1=" " ind2=" ">
+                <subfield code="a">{{ study.citation[0] | strip_tags | trim }}</subfield>
+            </datafield>
+        {% endif %}
+
+        {# Funder #}
+        {% for funding in study.funding %}
+            <datafield tag="536" ind1=" " ind2=" ">
+                {% if funding.organization %}
+                    <subfield code="a">Sponsored by {{ funding.organization | trim }}</subfield>
+                {% endif %}
+                {% if funding.grant %}
+                    <subfield code="c">{{ funding.grant | trim }}</subfield>
+                {% endif %}
+            </datafield>
+        {% endfor %}
+
+        {# Collection Changes #}
+        {% for collectionChange in (study.collectionChanges | map('trim') | sort) %}
+            <datafield tag="561" ind1=" " ind2=" ">
+                <subfield code="a">{{ collectionChange }}</subfield>
+            </datafield>
+        {% endfor %}
+
+        {# Universe #}
+        {% if study.universe %}
+            <datafield tag="567" ind1=" " ind2=" ">
+                <subfield code="a">{{ study.universe[0] | trim }}</subfield>
+            </datafield>
+        {% endif %}
+
+        {# Subject Terms #}
+        {% for keyword in (study.keyword | map('trim')) %}
+            <datafield tag="650" ind1=" " ind2="7">
+                <subfield code="a">{{ keyword }}</subfield>
+                <subfield code="2">icpsr</subfield>
+            </datafield>
+        {% endfor %}
+
+        {# Geographic Coverage #}
+        {% for spatialTerm in (study.spatial | map('trim')) %}
+            <datafield tag="651" ind1=" " ind2="7">
+                <subfield code="a">{{ spatialTerm }}</subfield>
+                <subfield code="2">icpsr</subfield>
+            </datafield>
+        {% endfor %}
+
+        {# Secondary Investigators #}
+        {% if study.creator %}
+            {% for creator in (study.creator | rejectattr("order", "equalto", "0")) %}
+                {% if creator.type == 'foaf:Person' %}
+                    <datafield tag="700" ind1="1" ind2=" ">
+                        <subfield code="a">{{ creator.name }}</subfield>
+                        {% if creator.affiliation %}
+                            <subfield code="u">{{ creator.affiliation }}</subfield>
+                        {% endif %}
+                    </datafield>
+                {% else %}
+                    <datafield tag="710" ind1="2" ind2=" ">
+                        <subfield code="a">{{ creator.name }}</subfield>
+                    </datafield>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+
+        {# Data Source #}
+        {% if study.source %}
+            <datafield tag="786" ind1="0" ind2=" ">
+                <subfield code="n">{{ study.source[0] | trim }}</subfield>
+            </datafield>
+        {% endif %}
+
+        {# Series Added Entry #}
+        {% for s in series %}
+            <datafield tag="830" ind1=" " ind2="0">
+                <subfield code="a">{{ s.title[0] | trim }}</subfield>
+            </datafield>
+        {% endfor %}
+
+        {# Link to study #}
+        {% if study.doi %}
+            <datafield tag="856" ind1="4" ind2="0">
+                <subfield code="u">{{ study.doi[0] }}</subfield>
+            </datafield>
+        {% endif %}
+    </record>
+</collection>

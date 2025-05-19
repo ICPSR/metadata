@@ -1,0 +1,75 @@
+{
+    "bureauCode": {
+        "regex": true,
+        "mapping": {
+            ".*bureau of justice statistics.*": "011:21",
+            "United States Department of Justice. Office of Justice Programs. National Institute of Justice": "011:21",
+            ".*office of juvenile justice and delinquency prevention.*": "011:21"
+        }
+    },
+    "programCode": {
+        "regex": true,
+        "mapping": {
+            ".*bureau of justice statistics.*": "011:061",
+            "United States Department of Justice. Office of Justice Programs. National Institute of Justice": "011:060",
+            ".*office of juvenile justice and delinquency prevention.*": "011:061"
+        }
+    },
+    "contactPointFullName": {
+        "regex": true,
+        "mapping": {
+            ".*bureau of justice statistics.*": "Bureau of Justice Statistics United States Department of Justice",
+            "United States Department of Justice. Office of Justice Programs. National Institute of Justice": "Open Data Office of Justice Programs (USDOJ)",
+            ".*office of juvenile justice and delinquency prevention.*": "Office of Juvenile Justice and Delinquency Prevention"
+        }
+    },
+    "contactPointHasEmail": {
+        "regex": true,
+        "mapping": {
+            ".*bureau of justice statistics.*": "askbjs@usdoj.gov",
+            "United States Department of Justice. Office of Justice Programs. National Institute of Justice": "opendata@usdoj.gov",
+            ".*office of juvenile justice and delinquency prevention.*": "opengov@usdoj.gov"
+        }
+    },
+    "archiveDesc": {
+        "regex": false,
+        "mapping": {
+            "ICPSR": "Inter-university Consortium for Political and Social Research General Archive",
+            "HMCA": "Health and Medical Care Archive",
+            "NADAC": "National Archive of Data on Arts and Culture",
+            "NACDA": "National Archive of Computerized Data on Aging",
+            "NACJD": "National Archive of Criminal Justice Data",
+            "SAMHDA": "Substance Abuse and Mental Health Data Archive",
+            "CCEERC": "Child Care and Early Education Research Connections",
+            "DSDR": "Data Sharing for Demographic Research",
+            "UCC": "University of Cape Coast's Centre for Data Archiving, Management, Analysis and Advocacy (DAMAA)",
+            "ADDEP": "Archive of Data on Disability to Enable Policy and research",
+            "gmsdata": "Gates Millennium Scholarship Data",
+            "civicleads": "Civic Learning, Engagement, and Action Data Sharing",
+            "odf": "Open Data Flint",
+            "pcoridata": "Patient-Centered Outcomes Research Institute Data Repository",
+            "OBSSR": "Office of Behavioral and Social Sciences Research Archive",
+            "facts": "Firearm Safety Among Children and Teens Consortium",
+            "CPES": "Collaborative Psychiatric Epidemiology Surveys (CPES)",
+            "ECE": "Early Childcare Education Resources",
+            "eceda": "Early Care and Education Data Archive",
+            "CFDA": "Child and Family Data Archive",
+            "PEERS": "Partnership for Expanding Education Research in STEM",
+            "APA": "American Psychological Association",
+            "CENSUS": "United States Census Bureau Data Repository",
+            "NCAA": "NCAA Data Archive",
+            "NAHDAP": "National Addiction and HIV Data Archive Program",
+            "METLDB": "Measures of Effective Teaching Longitudinal Database",
+            "AERA": "American Educational Research Association Archive",
+            "AHRQMCC": "Agency for Healthcare Research and Quality Multiple Chronic Conditions Research Network",
+            "appfed": "Application Portal for Restricted Data for Federal Statistics (App-Fed)",
+            "RCMD": "Resource Center for Minority Data",
+            "TEST": "ICPSR Training and Testing Archive",
+            "DAIRL": "Data Archive for Interdisciplinary Research on Learning",
+            "psid": "Panel Study of Income Dynamics (PSID) Public Data Extract Repository",
+            "pcodr": "Patient-Centered Outcomes Data Repository",
+            "CBII": "College and Beyond II",
+            "mcc": "Millennium Challenge Corporation Evaluation Catalog"
+        }
+    }
+}

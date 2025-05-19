@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+ <!-- Base of each record. -->
+  <xs:element name="record">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="state"/>
+        <xs:element ref="articleName"/>
+        <xs:element ref="titleName"/>
+        <xs:element minOccurs="0" ref="partName"/>
+        <xs:element minOccurs="0" ref="subPartName"/>
+        <xs:element minOccurs="0" ref="subtitleName"/>
+        <xs:choice>
+          <xs:element maxOccurs="unbounded" ref="category"/>
+          <xs:element maxOccurs="unbounded" ref="title"/>
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Parking lot for elements without any children. -->
+  <xs:element name="state" type="xs:string"/>
+  <xs:element name="articleName" type="xs:string"/>
+  <xs:element name="titleName" type="xs:string"/>
+  <xs:element name="subtitleName" type="xs:string"/>
+  <xs:element name="partName" type="xs:string"/>
+  <xs:element name="subPartName" type="xs:string"/>
+  <xs:element name="name" type="xs:string"/>
+  <xs:element name="number" type="xs:string"/>
+  <xs:element name="source" type="source_type"/>
+  <xs:element name="entity" type="xs:string"/>
+  <xs:element name="description" type="xs:string"/>
+  <xs:element name="label" type="xs:string"/>
+  <xs:element name="altName" type="xs:string"/>
+  <xs:element name="definedTerm" type="xs:string"/>
+  <xs:element name="altCode" type="xs:string"/>
+  <xs:element name="altSource" type="xs:string"/>
+  
+  <xs:simpleType name="source_type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="2"/> <!-- Requires at least 1 character -->
+      <xs:pattern value="https?://.*"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  
+  <!-- Complex elements, roughly heirarchical -->
+  
+  <xs:element name="category">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element minOccurs="0" ref="source"/>
+        <xs:element maxOccurs="unbounded" ref="title"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="title">
+    <xs:complexType>
+      <xs:sequence>
+       <xs:element ref="number"/>
+       <xs:element ref="name"/>
+       <xs:element ref="source"/>
+       <xs:element ref="officesAssociated"/>
+       <xs:choice maxOccurs="unbounded">        
+        <xs:element ref="article"/>
+        <xs:element ref="titleContent"/>
+       </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="officesAssociated">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="office"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="article">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="domain"/>
+        <xs:element minOccurs="0" ref="subtitle"/>
+        <xs:element ref="number"/>
+        <xs:element ref="name"/>
+        <xs:element ref="source"/>
+        <xs:element minOccurs="0" ref="part"/>
+        <xs:element ref="associatedFederalRecords"/>
+        <xs:choice minOccurs="1" maxOccurs="1">
+          <xs:sequence>
+            <xs:element ref="definitions" minOccurs = "1"/>
+            <xs:element ref="requirements" minOccurs = "0"/>
+          </xs:sequence>
+          <xs:sequence>
+            <xs:element ref="requirements" minOccurs = "1"/>
+          </xs:sequence>
+         
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="titleContent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="domain"/>
+        <xs:element minOccurs="0" ref="subtitle"/>
+        <xs:element ref="associatedFederalRecords"/>
+        <xs:choice minOccurs="1" maxOccurs="1">
+          <xs:sequence>
+            <xs:element ref="definitions" minOccurs = "1"/>
+            <xs:element ref="requirements" minOccurs = "0"/>
+          </xs:sequence>
+          <xs:sequence>
+            <xs:element ref="requirements" minOccurs = "1"/>
+          </xs:sequence>
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="subtitle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="number"/>
+        <xs:element ref="name"/>
+        <xs:element ref="source"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="part">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="number"/>
+        <xs:element ref="name"/>
+        <xs:element ref="source"/>
+        <xs:element minOccurs="0" ref="altName"/>
+        <xs:element minOccurs="0" ref="subPart"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="associatedFederalRecords">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="federal"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="subPart">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="number"/>
+        <xs:element ref="name"/>
+        <xs:element ref="source"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="definitions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="statute"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="requirements">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="statute"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+   
+  <xs:element name="statute">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:sequence id="stat_req">
+          <xs:element ref="label"/>
+          <xs:element minOccurs="0" ref="description"/>
+          <xs:element ref="stateCode"/>
+          <xs:element ref="source"/>
+          <xs:element minOccurs="0" ref="altCode"/>
+          <xs:element minOccurs="0" ref="altSource"/>
+          <xs:element ref="appliesTo"/>
+          <xs:element ref="terms"/>
+        </xs:sequence>
+        <xs:sequence id="stat_def">
+          <xs:element ref="stateCode"/>
+          <xs:element ref="source"/>
+          <xs:element ref="definedTerms"/>
+        </xs:sequence>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:group name="stat_req">
+    <xs:all>
+      
+    </xs:all>
+  </xs:group>
+  
+  <xs:element name="appliesTo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="entity"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="terms">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="term"/>
+      </xs:sequence>
+    </xs:complexType>
+    <xs:unique name="term_restrict">
+      <xs:selector xpath="term"/>
+      <xs:field xpath="."/>
+    </xs:unique>
+  </xs:element>
+  
+  <xs:element name="definedTerms">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="definedTerm"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="stateCode" type="code"/>
+  <xs:simpleType name="code">
+    <xs:restriction base="xs:token">
+      <xs:pattern value="[A-Za-z0-9].+"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  
+<!-- Enumerated elements. -->  
+  <xs:element name="office">
+     <xs:simpleType>
+       <xs:restriction base="xs:string">
+         <xs:whiteSpace value="collapse"/>
+         <xs:enumeration value="Administration on Children, Youth, and Families (ACYF)"/>
+         <xs:enumeration value="Children's Bureau (CB)"/>
+         <xs:enumeration value="Family and Youth Services Bureau (FYSB)"/>
+         <xs:enumeration value="Office of Child Support Enforcement (OCSE)"/>
+         <xs:enumeration value="Office of Family Assistance (OFA)"/>
+         <xs:enumeration value="Office of Head Start (OHS)"/>
+         <xs:enumeration value="Office of Planning, Research, and Evaluation (OPRE)"/>
+         <xs:enumeration value="Office of Child Care (OCC)"/>
+         <xs:enumeration value="Office of Community Services (OCS)"/>
+         <xs:enumeration value="Office of Early Childhood Development (ECD)"/>
+         <xs:enumeration value="Office on Trafficking in Persons (OTIP)"/>
+         <xs:enumeration value="Administration for Native Americans (ANA)"/>
+         <xs:enumeration value="Office of Refugee Resettlement (ORR)"/>
+         <xs:enumeration value="N/A"/>
+       </xs:restriction>
+     </xs:simpleType>
+  </xs:element>
+  <xs:element name="domain">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="Public Records"/>
+        <xs:enumeration value="Medical Assistance"/>
+        <xs:enumeration value="Public Assistance"/>
+        <xs:enumeration value="Child Welfare Services"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  
+  <xs:element name="federal">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:enumeration value="21st Century Cures Act"/>
+        <xs:enumeration value="Adam Walsh"/>
+        <xs:enumeration value="BJS"/>
+        <xs:enumeration value="CAPEA"/>
+        <xs:enumeration value="CAPTA"/>
+        <xs:enumeration value="CCDBG"/>
+        <xs:enumeration value="CSBG"/>
+        <xs:enumeration value="EETC"/>
+        <xs:enumeration value="Evidence Act/CIPSEA"/>
+        <xs:enumeration value="FCIA"/>
+        <xs:enumeration value="FERPA"/>
+        <xs:enumeration value="FISMA"/>
+        <xs:enumeration value="FVPSA"/>
+        <xs:enumeration value="Head Start Act"/>
+        <xs:enumeration value="HIPAA/HITECH"/>
+        <xs:enumeration value="ICWA"/>
+        <xs:enumeration value="IDEA"/>
+        <xs:enumeration value="IRS"/>
+        <xs:enumeration value="LIHEAP"/>
+        <xs:enumeration value="Medicare Act/CMS"/>
+        <xs:enumeration value="MVHAA"/>
+        <xs:enumeration value="NCHS"/>
+        <xs:enumeration value="NAPA"/>
+        <xs:enumeration value="OASDI"/>
+        <xs:enumeration value="Privacy Act"/>
+        <xs:enumeration value="Refugee Education Assistance Act"/>
+        <xs:enumeration value="RHYA"/>
+        <xs:enumeration value="SAMHSA/SAPT"/>
+        <xs:enumeration value="Section 1137 of the SSA"/>
+        <xs:enumeration value="SNAP/2018 Farm Bill"/>
+        <xs:enumeration value="SSA Title IV-A"/>
+        <xs:enumeration value="SSA Title IV-B"/>
+        <xs:enumeration value="SSA Title IV-D"/>
+        <xs:enumeration value="SSA Title IV-E"/>
+        <xs:enumeration value="SSA Title XIX"/>
+        <xs:enumeration value="SSBG"/>
+        <xs:enumeration value="TVPA"/>
+        <xs:enumeration value="UIFSA"/>
+        <xs:enumeration value="US Repatriation Program"/>
+        <xs:enumeration value="N/A"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  
+  <xs:element name="term">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:whiteSpace value="collapse"/>
+        <xs:enumeration value="Abuse and Neglect"/>
+        <xs:enumeration value="Adoption and Foster Care"/>
+        <xs:enumeration value="Background Checks"/>
+        <xs:enumeration value="Biometric Information"/>
+        <xs:enumeration value="Breach Response"/>
+        <xs:enumeration value="Child Care"/>
+        <xs:enumeration value="Child Support"/>
+        <xs:enumeration value="Children and Youth Services"/>
+        <xs:enumeration value="Confidentiality"/>
+        <xs:enumeration value="Criminal Justice/Courts"/>
+        <xs:enumeration value="Cross-jurisdictional"/>
+        <xs:enumeration value="Data Collection"/>
+        <xs:enumeration value="Data Recipient Requirements"/>
+        <xs:enumeration value="Data Retention"/>
+        <xs:enumeration value="Databases"/>
+        <xs:enumeration value="Disability"/>
+        <xs:enumeration value="Domestic Violence"/>
+        <xs:enumeration value="Early Childhood"/>
+        <xs:enumeration value="Economic Security and Mobility"/>
+        <xs:enumeration value="Education – Higher Ed"/>
+        <xs:enumeration value="Education – K-12"/>
+        <xs:enumeration value="Education – Pre-K"/>
+        <xs:enumeration value="Family Services"/>
+        <xs:enumeration value="Genetic Information"/>
+        <xs:enumeration value="Grants &amp; Funding"/>
+        <xs:enumeration value="Health Care"/>
+        <xs:enumeration value="How the Law Relates to Other Laws"/>
+        <xs:enumeration value="Human Trafficking"/>
+        <xs:enumeration value="Immigration &amp; Refugee Services"/>
+        <xs:enumeration value="Income Verification"/>
+        <xs:enumeration value="Individual Subject Rights"/>
+        <xs:enumeration value="Information Security"/>
+        <xs:enumeration value="Information Technology Systems"/>
+        <xs:enumeration value="Medicaid/Medicare"/>
+        <xs:enumeration value="Mental Health"/>
+        <xs:enumeration value="Military"/>
+        <xs:enumeration value="Minorities"/>
+        <xs:enumeration value="Missing and Unidentified Persons"/>
+        <xs:enumeration value="Non-Compliance and Consequences for Misuse"/>
+        <xs:enumeration value="Nutrition Assistance"/>
+        <xs:enumeration value="Parents"/>
+        <xs:enumeration value="Preservation of Culture"/>
+        <xs:enumeration value="Program Eligibility"/>
+        <xs:enumeration value="Runaway and Homeless Youth"/>
+        <xs:enumeration value="Substance Abuse"/>
+        <xs:enumeration value="Taxpayer Information"/>
+        <xs:enumeration value="Tribal/Native American"/>
+        <xs:enumeration value="Use and Sharing – Programmatic"/>
+        <xs:enumeration value="Use and Sharing – Research"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  
+</xs:schema>
