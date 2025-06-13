@@ -14,6 +14,9 @@ DOCX Fixes
 	- Replace: --
 	- With: –
 
+	- Replace: --
+	- With: —
+
 4) Ensure consistent text with statute information
 	- Use "Definitions related to" instead of "Definitions for"
 
