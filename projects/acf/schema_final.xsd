@@ -87,6 +87,7 @@
         <xs:element ref="number"/>
         <xs:element ref="name"/>
         <xs:element ref="source"/>
+        <xs:element minOccurs="0" ref="altName"/>
         <xs:element minOccurs="0" ref="part"/>
         <xs:element ref="associatedFederalRecords"/>
         <xs:choice minOccurs="1" maxOccurs="1">
@@ -108,6 +109,7 @@
       <xs:sequence>
         <xs:element ref="domain"/>
         <xs:element minOccurs="0" ref="subtitle"/>
+        <xs:element minOccurs="0" ref="part"/>
         <xs:element ref="associatedFederalRecords"/>
         <xs:choice minOccurs="1" maxOccurs="1">
           <xs:sequence>
@@ -128,6 +130,7 @@
         <xs:element ref="number"/>
         <xs:element ref="name"/>
         <xs:element ref="source"/>
+        <xs:element minOccurs="0" ref="altName"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
