@@ -2,7 +2,7 @@
   $schema: https://json-schema.org/draft-07/schema#
   $id: https://schemas.icpsr.umich.edu/schema/yaml/pi_names?version=v1
   usageNotes: |+
-    A principal investigator (PI) may be a person or an organization; use the Person or Organization element as appropriate. If the PI is identified as a person, their affiliated organization (if applicable) should be included in the Organization element.
+    List individuals and organizations that are chiefly responsible for the study across its entire life cycle or made significant intellectual contributions to the research. A principal investigator (PI) may be a person or an organization; use the Person or Organization element as appropriate. If the PI is identified as a person, their affiliated organization (if applicable) should be included in the Organization element.
 
     When entering the name of an individual or organizational PI, the following hierarchy of authority control sources should be used to make sure the name conforms to best practices within ICPSR and the broader academic community:  
 
