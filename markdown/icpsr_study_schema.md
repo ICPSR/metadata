@@ -1,6 +1,6 @@
 # ICPSR Metadata Schema
 
-Last updated: May 19, 2025
+Last updated: September 05, 2025
 
 This is the metadata schema used to describe data collections at the Inter-university Consortium for Political and Social Research (ICPSR). These rules and definitions represent ICPSR's metadata practices and are intended to (a) assist ICPSR staff with metadata entry, and (b) help ICPSR users -- including data depositors and researchers accessing data -- understand how to use and interpret our metadata.
 
@@ -308,7 +308,7 @@ Time Period:
 
 **Controlled Vocabulary:** The [ICPSR Personal Names Authority List](https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10002) and [Organization Names Authority List](https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10004) are the primary authority control sources for PI names. The [Virtual International Authority File](https://viaf.org/) (VIAF) serves as a secondary resource if names are not present in ICPSR lists.
 
-**Usage Notes:** A principal investigator (PI) may be a person or an organization; use the Person or Organization element as appropriate. If the PI is identified as a person, their affiliated organization (if applicable) should be included in the Organization element.  
+**Usage Notes:** List individuals and organizations that are chiefly responsible for the study across its entire life cycle or made significant intellectual contributions to the research. A principal investigator (PI) may be a person or an organization; use the Person or Organization element as appropriate. If the PI is identified as a person, their affiliated organization (if applicable) should be included in the Organization element.  
 
 When entering the name of an individual or organizational PI, the following hierarchy of authority control sources should be used to make sure the name conforms to best practices within ICPSR and the broader academic community:    
 
