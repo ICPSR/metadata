@@ -9,20 +9,35 @@ from datetime import datetime
 # set variables.
 working_dir = os.path.dirname(os.path.abspath(__file__))
 draft_dois = os.path.join(working_dir, "draft_dois.csv")
-minted_dois = os.path.join(working_dir, "minted_dois.csv")
 xml_dir = os.path.join(working_dir, "XML")
 
+#check 'test' vs. 'prod'
 try:
     if sys.argv[1].lower() == 'test':
         credentials = os.path.join(working_dir, "test_credentials.json")
+        minted_dois = os.path.join(working_dir, "test_minted_dois.csv")
     elif sys.argv[1].lower() == 'prod':
         credentials = os.path.join(working_dir, "prod_credentials.json")
+        minted_dois = os.path.join(working_dir, "minted_dois.csv")
     else:
         print('\n\nWARNING: script only accepts "prod" or "test" as first argument.')
         sys.exit(1)
 
 except IndexError:
-    print('\n\nUsage: python somar_dois.py <prod OR test>')
+    print('\n\nUsage: python somar_dois.py <prod OR test> <draft or publish>')
+    sys.exit(1)
+
+#check 'draft' vs. 'publish'
+try:
+    if sys.argv[2].lower() == 'publish':
+        event_status = 'publish'
+    elif sys.argv[2].lower() == 'draft':
+        event_status = ''
+    else:
+        print('\n\nWARNING: script only accepts "publish" or "draft" as first argument.')
+        sys.exit(1)
+except IndexError:
+    print('\n\nUsage: python somar_dois.py <prod OR test> <draft or publish>')
     sys.exit(1)
 
 #make sure we have our draft_dois CSV in our working dir
@@ -146,7 +161,7 @@ for index, row in somar.iterrows():
         'data': {
             'type': 'dois', 
             'attributes': {
-                'event': 'publish', 
+                'event': event_status, 
                 'identifiers': {
                     'identifier': item_doi, 
                     'identifierType': 'DOI'
@@ -183,7 +198,3 @@ for index, row in somar.iterrows():
 
 #Save the dataframe as a csv, for easiest copy/pasting into the google sheet. MAKE SURE TO KEEP THIS, YOU WILL NEED IT WHEN YOU UPDATE.
 somar.to_csv(minted_dois, index=False)
-try:
-    os.replace(minted_dois, draft_dois)
-except Exception as e:
-    print(f"Error replacing file: {e}")
