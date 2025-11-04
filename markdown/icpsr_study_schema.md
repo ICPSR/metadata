@@ -1,6 +1,6 @@
 # ICPSR Metadata Schema
 
-Last updated: September 12, 2025
+Last updated: November 04, 2025
 
 This is the metadata schema used to describe data collections at the Inter-university Consortium for Political and Social Research (ICPSR). These rules and definitions represent ICPSR's metadata practices and are intended to (a) assist ICPSR staff with metadata entry, and (b) help ICPSR users -- including data depositors and researchers accessing data -- understand how to use and interpret our metadata.
 
@@ -951,9 +951,9 @@ The Summary is written in the third person and avoids attempting to address issu
 
 **Controlled Vocabulary:** The [ICPSR Subject Thesaurus](https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001) and the [ICPSR Personal Names Authority List](https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10002) are preferred sources.
 
-**Usage Notes:** The [Library of Congress Subject Terms](https://authorities.loc.gov) is referenced when adding new terms to the ICPSR Subject Thesaurus.
+**Usage Notes:** The [Library of Congress Subject Terms](https://authorities.loc.gov) and the [European Language Social Science Thesaurus](https://elsst.cessda.eu/) are referenced when adding new terms to the ICPSR Subject Thesaurus.
 
-**ICPSR Input Guidance:** Non-thesaurus terms can be submitted in the metadata editor and will be reviewed by the metadata librarian. If an ICPSR staff member submits a non-thesaurus term, the metadata librarian will gauge the necessity of this term, check it against the Library of Congress Subject Headings to see if a different related term should be used, and consider it for addition to the ICPSR thesaurus.
+**ICPSR Input Guidance:** Non-thesaurus terms can be submitted in the metadata editor and will be reviewed by the metadata librarian. If an ICPSR staff member submits a non-thesaurus term, the metadata librarian will gauge the necessity of this term, check it against the Library of Congress Subject Headings and European Language Social Science Thesaurus to see if a different related term should be used, and consider it for addition to the ICPSR thesaurus.
 
 **Examples:** 
 
