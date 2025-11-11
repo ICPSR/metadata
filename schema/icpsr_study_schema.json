@@ -576,7 +576,7 @@
       ]
     },
     "variable_description": {
-      "description": "Significant variables (particularly demographic variables) in the publicly released data files.",
+      "description": "Significant variables (particularly demographic variables) in the data files.",
       "type": "string",
       "controlledVocab": "N/A",
       "usageNotes": "The Variable Description provides more detailed information than the Summary, including a review of variables that are important for users to know about. The codebook, setup files, and variable groups are appropriate sources of information for Variable Description.",
