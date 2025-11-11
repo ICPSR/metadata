@@ -1,6 +1,6 @@
 # ICPSR Metadata Schema
 
-Last updated: November 04, 2025
+Last updated: November 11, 2025
 
 This is the metadata schema used to describe data collections at the Inter-university Consortium for Political and Social Research (ICPSR). These rules and definitions represent ICPSR's metadata practices and are intended to (a) assist ICPSR staff with metadata entry, and (b) help ICPSR users -- including data depositors and researchers accessing data -- understand how to use and interpret our metadata.
 
@@ -34,7 +34,7 @@ For a machine-actionable copy of this information, please see the [JSON Schema v
 | [Collection Note](#collection_note )                   | No        | Yes         | Text                      | Important details about the data collection (like unique authoring, discrepencies, or processing information) that can't be recorded in other metadata elements.                                      |
 | [Study Purpose](#study_purpose )                       | No        | No          | Text                      | The study's main goals and associated research questions.                                                                                                                                             |
 | [Study Design](#study_design )                         | No        | No          | Text                      | The procedures used to contact participants and gather data.                                                                                                                                          |
-| [Variable Description](#variable_description )         | No        | No          | Text                      | Significant variables (particularly demographic variables) in the publicly released data files.                                                                                                       |
+| [Variable Description](#variable_description )         | No        | No          | Text                      | Significant variables (particularly demographic variables) in the data files.                                                                                                                         |
 | [Sampling](#sampling )                                 | No        | No          | Text                      | The methods used to select the subset of the population that data are to be collected from (e.g., simple, systematic, stratified).                                                                    |
 | [Time Method](#time_method )                           | No        | Yes         | Text                      | The methods used to collect data over time, like snapshots at one point (cross-sectional) or repeatedly (longitudinal) to study changes or trends.                                                    |
 | [Data Source](#data_source )                           | No        | Yes         | Text                      | The source of the data, when that source is external to the data collection and can be independently cited.                                                                                           |
@@ -1414,7 +1414,7 @@ The textual description should not simply restate the time period in words. For 
 
 ### <a name="variable_description"></a>25. Variable Description         
 
-**Description:** Significant variables (particularly demographic variables) in the publicly released data files.
+**Description:** Significant variables (particularly demographic variables) in the data files.
 
 **Required**: No
 
