@@ -1,6 +1,6 @@
 # ICPSR Metadata Schema
 
-Last updated: November 11, 2025
+Last updated: January 05, 2026
 
 This is the metadata schema used to describe data collections at the Inter-university Consortium for Political and Social Research (ICPSR). These rules and definitions represent ICPSR's metadata practices and are intended to (a) assist ICPSR staff with metadata entry, and (b) help ICPSR users -- including data depositors and researchers accessing data -- understand how to use and interpret our metadata.
 
@@ -1718,7 +1718,7 @@ The textual description should not simply restate the time period in words. For 
 
 **Controlled Vocabulary:** N/A
 
-**Usage Notes:** The inclusion of a common scale should be identified in the documentation associated with this dataset and confirmed by variable names or labels. The scales can be cited either as a list or described in full sentences. If the questionnaire used has a finite list of responses (e.g., 'Always, Sometimes, Rarely, Never' or Strongly Agree, Agree, Disagree, Strongly Disagree'), it is acceptable for this element to note 'A Likert-type scale was used,' or 'Several Likert-type scales were used.' However, it is not required to note Likart-type scales in situations where only such scales were used, given their ubiquity.  
+**Usage Notes:** Include common scales that can be readily identified from the data, documentation, or other related materials. ICPSR curators are not expected to infer or research scales that are not explicitly indicated. The scales can be cited either as a list or described in full sentences. If the questionnaire used has a finite list of responses (e.g., 'Always, Sometimes, Rarely, Never' or Strongly Agree, Agree, Disagree, Strongly Disagree'), it is acceptable for this element to note 'A Likert-type scale was used,' or 'Several Likert-type scales were used.' However, it is not required to note Likart-type scales in situations where only such scales were used, given their ubiquity.  
 
 **Examples:** 
 
