@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://icpsr.github.io/metadata/icpsr_metadata_api/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>ICPSR Metadata Export API - Metadata Documentation Portal</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../assets/style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "ICPSR Metadata Export API";
+        var mkdocs_page_input_path = "icpsr_metadata_api.md";
+        var mkdocs_page_url = "/metadata/icpsr_metadata_api/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-PNP7RD0R04"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-PNP7RD0R04");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="..">
+          <img src="../assets/ICPSR_logo_rgb_white-01.png" class="logo" alt="ICPSR Logo"/>
+          Metadata Documentation Portal
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Explore ICPSR metadata" aria-label="Search ICPSR Metadata Documentation..." title="Type search terms here" />
+  </form>
+</div>
+
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../icpsr_study_schema/">ICPSR Metadata Schema</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../icpsr_style_guide/">ICPSR Metadata Style Guide</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">ICPSR Metadata Export API</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#api-metadata-mappings">API Metadata Mappings</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#element-specific-mapping-notes">Element-Specific Mapping Notes</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#geographic-coverage-area">Geographic Coverage Area</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#time-period-dates">Time Period: Dates</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#restrictions">Restrictions</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#example-conditions-and-values">Example Conditions and Values</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#title">Title</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../request_change/">ICPSR Metadata Change Process</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Metadata Documentation Portal</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><!-- Empty override file take the place of readthedocs/breadcrumbs.html, which generates the top nav breadcrumbs. -->
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="icpsr-metadata-export-api">ICPSR Metadata Export API</h1>
+<p>ICPSR has developed a new application programming interface (API) to help researchers and data users:</p>
+<ul>
+<li><strong>Search</strong> data collections by specific metadata fields such as study identifier, subject terms, geographic coverage area, original release date -- and even run more advanced queries.</li>
+<li><strong>Export</strong> metadata about those collections in widely used formats such as DCAT-US, MARCXML, and Dublin Core, making it easier to share and integrate with other systems.</li>
+</ul>
+<h2 id="getting-started">Getting Started</h2>
+<p>If you're interested in using the API, please read the <a href="https://docs.google.com/document/d/1fkr7SBnpl9hX_xClajnpNxwC67JCEUvPhD_VQjKJ_SM/edit?usp=sharing">ICPSR Object-Export API User Guide</a>. </p>
+<p>This guide offers step-by-step instructions, including how to:</p>
+<ul>
+<li>Get a temporary University of Michigan account (if you're not already affiliated with U-M).</li>
+<li>Request API credentials.</li>
+<li>Build and submit queries to search metadata.</li>
+<li>Download and understand metadata records.</li>
+</ul>
+<p>If you have questions or feedback about the API, please contact ICPSR-help [at] umich.edu.</p>
+<h2 id="api-metadata-mappings">API Metadata Mappings</h2>
+<p>Metadata records produced by the ICPSR Object Export API are available in the following formats (with more to be added in the future): </p>
+<ul>
+<li>
+<p><a href="https://resources.data.gov/resources/dcat-us/">DCAT-US</a>: A U.S. government extension of the Data Catalog Vocabulary (DCAT), designed to make federal data easier to find and use. It provides a standardized way to describe datasets, data services, and distributions using RDF-based metadata, ensuring consistency across data catalogs like data.gov. DCAT-US aligns with international standards while meeting U.S. government requirements for data publishing. </p>
+<blockquote>
+<p><em>Note: ICPSR's DCAT-US metadata exports conform to <a href="../assets/dcat-us.json">this local extension of the DCAT-US standard</a>.</em></p>
+</blockquote>
+</li>
+<li>
+<p><a href="https://www.loc.gov/standards/marcxml/">MARCXML</a>: An XML version of the MARC (Machine-Readable Cataloging) standard used by libraries to organize and share bibliographic data. This format helps libraries and archives exchange and integrate catalog data with modern systems and digital repositories.</p>
+</li>
+<li>
+<p><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/">Dublin Core</a>: A flexible and simple schema for describing digital and physical resources.  It's widely used in libraries, data repositories, and web-based applications to imrpove the discoverability and sharing of metadata. </p>
+</li>
+</ul>
+<p>For more details on how ICPSR metadata map to these standards, check out this <a href="https://docs.google.com/spreadsheets/d/1Avw212FfzxRjsUFvlJOLtsJclKeL8VJc0pbhLQevXg8/edit?usp=sharing">Metadata API Mappings</a> spreadsheet. </p>
+<h2 id="element-specific-mapping-notes">Element-Specific Mapping Notes</h2>
+<p>This section explains how ICPSR's metadata elements are mapped to various export formats in the API, including non-standard mappings.</p>
+<h3 id="geographic-coverage-area">Geographic Coverage Area</h3>
+<p>DCAT-US currently only permits a single value for the <a href="https://resources.data.gov/resources/dcat-us/#spatial">spatial</a> metadata element. If a study has multiple Geographic Coverage Area entries, ICPSR will use the term "Multiple" in the 'spatial' property and list all geographic areas in an array under the 'spatialExt' property.  This is an ICPSR-specific extension to the DCAT-US schema.</p>
+<h3 id="time-period-dates">Time Period: Dates</h3>
+<p><em>Dublin Core and MARCXML Date Expressions:</em> While ICPSR's <a href="https://icpsr.github.io/metadata/icpsr_study_schema/#18-time-period">Time Period</a> element can have multiple date values, not all metadata standards allow this. To align better with Dublin Core and MARCXML, ICPSR combines multiple time periods into a single date range representing the earliest and latest dates to which the data refer.</p>
+<p><em>DCAT-US Date Expressions:</em> DCAT-US currently supports only one date for the <a href="https://resources.data.gov/resources/dcat-us/#temporal">temporal</a> element. If a study has multiple Time Period entries, ICPSR will combine them into a single date range (showing the earliest and latest dates to which the data refer). These individual time periods will be added to an array under the 'temporalExt' property, which is an ICPSR-specific extension to the DCAT-US schema.</p>
+<h3 id="restrictions">Restrictions</h3>
+<p>ICPSR tracks <em>data availability</em> (i.e., the availability of data for members-only vs. the general public) and <em>restriction type</em> (i.e., restricted use vs. public use) in systems-level metadata, not at the study level. These details are combined with Restriction statements in the relevant metadata elements for different export formats, using the following conventions: </p>
+<ul>
+<li>
+<p>If ICPSR membership is required, the property value will start with "Available to ICPSR member institutions."</p>
+</li>
+<li>
+<p>If there's no membership requirement, it will start with "Available to the general public."</p>
+</li>
+<li>
+<p>If there are additional use restrictions, the content of the Restrictions metadata field will be appended, along with a hyperlink to the study's homepage for more information. </p>
+</li>
+</ul>
+<h4 id="example-conditions-and-values">Example Conditions and Values</h4>
+<table>
+<thead>
+<tr>
+<th>Conditions</th>
+<th>Example Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No membership requirement and no use restriction</td>
+<td>"Available to the general public."</td>
+</tr>
+<tr>
+<td>Membership requirement and no use restriction</td>
+<td>"Available to ICPSR member institutions."</td>
+</tr>
+<tr>
+<td>No membership requirement with a use restriction</td>
+<td>"Available to the general public. Access to these data is restricted. Users interested in obtaining these data must complete a Restricted Data Use Agreement, specify the reason for the request, and obtain IRB approval or notice of exemption for their research. Visit <a href="https://doi.org/10.3886/ICPSR37328.v1">https://doi.org/10.3886/ICPSR37328.v1</a> to apply for access to restricted data."</td>
+</tr>
+<tr>
+<td>Membership requirement with a use restriction</td>
+<td>"Available to ICPSR member institutions. This data collection may not be used for any purpose other than statistical reporting and analysis. Use of these data to learn the identity of any person or establishment is prohibited. To protect respondent privacy, all data files in this collection are restricted from general dissemination. To obtain these restricted files, researchers must agree to the terms and conditions of a Restricted Data Use Agreement. Visit <a href="https://doi.org/10.3886/ICPSR37229.v1">https://doi.org/10.3886/ICPSR37229.v1</a> to apply for access to restricted data."</restrctn></td>
+</tr>
+</tbody>
+</table>
+<h3 id="title">Title</h3>
+<p><em>MARCXML Expression:</em> According to <a href="https://www.loc.gov/marc/bibliographic/bd245.html">MARC guidelines for Field 245</a>, "subfield $a includes all the information up to and including the first mark of ISBD punctuation (e.g., an equal sign (=), a colon (:), a semicolon (;), or a slash (/)) or the medium designator (e.g., [microform])" and that "subfield $b contains all the data following the first mark of ISBD punctuation." Given the variation in how colons have been used in ICPSR's study titles over the past 60+ years, all title information will be placed in subfield $a. </p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    <div class="icpsr_footer">
+      <p><a href="https://www.icpsr.umich.edu/web/pages/datamanagement/policies/access.html">Accessibility</a> | <a href="mailto:ICPSR-help@umich.edu">Contact Us</a></p>
+    </div>
+  </div>
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../icpsr_style_guide/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../request_change/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
