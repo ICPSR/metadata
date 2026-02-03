@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://archive.icpsr.umich.edu/schema/property_banks/external_data_sources",
+  "title": "External Data Sources",
+  "description": "The source of the data, when that source is external to the data collection and can be independently cited.",
+  "type": "array",
+  "items": {
+    "type": "string"
+  },                
+  "usageNotes": "External data sources include books, journal articles, administrative records, agency-sponsored surveys, and machine-readable files. Each source includes at minimum the title, author, publication year, and journal (if applicable). Any citation format is accepted.",
+  "examples": [
+    ["'Voting Scores.' Congressional Quarterly Almanac 33 (1977), 487-498"],
+    [
+      "United States Bureau of the Census Economic Surveys, 1998-2000",           
+      "United States Congressional Record, 1989"
+    ],
+    ["Annual Company Organization Survey, 2003"]
+  ]
+}

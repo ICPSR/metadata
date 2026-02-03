@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://archive.icpsr.umich.edu/schema/property_banks/collection_modes",
+  "title": "Collection Modes",
+  "description": "The method(s) or procedure(s) used to collect the data.",
+  "usageNotes": "This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance CV ModeOfCollection https://rdf-vocabulary.ddialliance.org/ddi-cv/ModeOfCollection/4.0.3/ModeOfCollection.html.",
+  "controlledVocab": "collectionModes",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "label": {
+        "title": "Collection Mode",
+        "description": "A human-readable form of the term.",
+        "type": "string",
+        "examples": [
+          "Face-to-face interview: Computer-assisted (CAPI/CAMI)",
+          "Measurements and tests",
+          "Computer-based observation"
+        ]
+      },
+      "code": {
+        "title": "Collection Mode Code",
+        "description": "A machine-readable/-actionable form of the term.",
+        "type": "string",
+        "examples": ["Interview.FaceToFace.CAPIorCAMI", "MeasurementsAndTests", "Observation.ComputerBased"]
+      },
+      "uri": {
+        "title": "Collection Mode URI",
+        "description": "The URI for the term.",
+        "type": "string"
+      }
+    },
+    "required": ["label", "code", "uri"]
+  },
+  "examples": [
+    [
+      {
+        "label": "Face-to-face interview: Computer-assisted (CAPI/CAMI)",
+        "code": "Interview.FaceToFace.CAPIorCAMI",
+        "uri": "https://example.com/collection_modes/234"
+      }
+    ],
+    [
+      {
+        "label": "Measurements and tests",
+        "code": "MeasurementsAndTests",
+        "uri": "https://example.com/collection_modes/972"
+      },
+      {
+        "label": "Computer-based observation",
+        "code": "Observation.ComputerBased",
+        "uri": "https://example.com/collection_modes/113"
+      }
+    ]
+  ]
+}

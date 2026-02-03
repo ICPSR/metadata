@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://archive.icpsr.umich.edu/schema/property_banks/study_purpose",
+  "title": "Study Purpose",
+  "description": "The study's main goals and associated research questions.",
+  "type": "string",
+  "usageNotes": "The Study Purpose provides more specific information than the Summary element, such as the data collection's objectives, intended achievements, and research questions the principal investigators sought to answer. This element can also include historical or background information about the research project. As with the Summary, the text should be written in third person and avoid any commentary on the data collection's outcomes.",
+  "examples": [
+    "The purpose of this study is to advance understanding of the barriers and enablers associated with colorectal cancer (CRC) screening among Somali men ages 50-74 in Minnesota.",
+    "The purpose of the study's qualitative phase is to explore veterans' experiences by identifying factors that they believe caused or contributed to their contact with the criminal justice system."
+  ]
+}

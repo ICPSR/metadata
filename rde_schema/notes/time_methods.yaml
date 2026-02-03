@@ -1,0 +1,19 @@
+---
+  $schema: https://json-schema.org/draft-07/schema#
+  $id: https://schemas.icpsr.umich.edu/notes/time_methods
+  controlledVocab: |
+    [DDI Controlled Vocabulary for Time Method](https://ddialliance.org/Specification/DDI-CV/TimeMethod_1.2.html). See below for terms and definitions:
+
+    | *Term* | *Definition* |
+    |----------|---------------|
+    | Cross-sectional | Data collected by observing subjects within the study period, without regard to changes over time. May include more than one collection event. Analysis of cross-sectional data often consists in comparing the differences and similarities among subjects. |
+    | Cross-sectional ad-hoc follow-up | Data collected at one point in time to complete information collected in a previous cross-sectional study; the decision to collect follow-up data was not included in the original study design. |
+    | Longitudinal | Data collected repeatedly over time to allow studying change in a population. At least some of the questions or modules are repeated over waves. Use the broad term when none of the subterms is suitable. |
+    | Longitudinal: Cohort / Event-based | Data collected over time from the same cohort of respondents. The individuals in the cohort are connected in some way or have shared some significant experience within a given period. In some cases, the samples may differ between waves but are drawn from the same cohort. Examples: birth year, disease (clinical trials), common problem (intervention studies), education, employment, family formation, participation in an event. |
+    | Longitudinal: Panel | Data collected over time from, or about, the same sample of respondents. Differs from cohort/event-based data in that the selection of respondents is not based on their being connected in some way or having shared some significant experience. |
+    | Longitudinal: Panel: Continuous | Data collected from a panel of respondents on a regular basis. |
+    | Longitudinal: Panel: Interval | Data collected from a panel of respondents only when information is needed. |
+    | Longitudinal: Trend / Repeated Cross-section | Data collected from different samples or different groups of people from the same population at several points in time, using at least partly the same set of questions/variables. Conclusions are drawn for the population. Examples: European Social Survey (ESS), national longitudinal crime surveys. |
+    | Time Series | Data collected repeatedly over time to study change in observations. These are typically "objective" measurements of phenomena that can be observed externally, as opposed to attitudes/opinions or feelings. Examples may include economic/financial indicators, natural/meteorological phenomena, vital statistics, etc. |
+    | Time Series: Continuous | Measurements are taken at every instant in time. Examples: lie detectors, electrocardiograms, etc. |
+    | Time Series: Discrete | Measurements are taken at (usually regularly) spaced intervals. Examples: macroeconomics (weekly share prices, monthly profits, sales); meteorology (hourly temperature); measurements of individuals (blood pressure, weight, height); sociology (crime figures, employment figures), etc. |

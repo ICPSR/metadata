@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://archive.icpsr.umich.edu/schema/property_banks/geographic_coverage_areas",
+  "title": "Geographic Coverage Areas",
+  "description": "The geographic locations where the data refer or are related.",
+  "usageNotes": "Geographic locations are drawn from the GeoNames geographical database. Source: https://www.geonames.org/",
+  "controlledVocab": "geoNames",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "city": {
+        "title": "City",
+        "description": "A town, city, or similar political entity covered in a data collection",
+        "type": "string",
+        "examples": ["Ann Arbor", "Hanover", "Chongqing"]
+      },
+      "county": {
+        "title": "County",
+        "description": "A county or similar administrative area covered in a data collection",
+        "type": "string",
+        "examples": ["Monroe County", "Washtenaw County", "Cuyahoga County"]
+      },
+      "state": {
+        "title": "State",
+        "description": "A state, province, canton or similar political entity covered in a data collection",
+        "type": "string",
+        "examples": ["Michigan", "Manitoba", "Yunnan"]
+      },
+      "country": {
+        "title": "Country",
+        "description": "A country covered in a data collection",
+        "type": "string",
+        "examples": ["United States", "China", "Ghana"]
+      },
+      "uri": {
+        "title": "Geographic Coverage Area URI",
+        "description": "The unique identifier for the geographic coverage area.",
+        "type": "string",
+        "format": "uri",
+        "examples": [ "https://www.geonames.org/4990729/", "https://www.geonames.org/6269554" ]
+      }
+    },
+    "required": ["country"]
+  },
+  "usageNotes": "In addition to the total geographic scope of the data, may include any additional levels of geographic coding provided in the variables.",
+  "examples": [
+    [
+      {
+        "city": "Cleveland",
+        "state": "Ohio",
+        "country": "United States",
+        "uri":  "https://www.geonames.org/5150529"
+      },
+      {
+        "city": "Pittsburgh",
+        "state": "Pennsylvania",
+        "country": "United States",
+        "uri": "https://www.geonames.org/5206379"
+      }
+    ],
+    [
+      {
+        "country": "Germany"
+      }
+    ]
+  ]
+}

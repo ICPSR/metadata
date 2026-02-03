@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://archive.icpsr.umich.edu/schema/property_banks/jel_classifications",
+  "title": "Journal of Economic Literature (JEL) Classification Codes",
+  "description": "Classification codes used to categorize economic research.",
+  "usageNotes": "This controlled vocabulary was taken from the American Economic Association's JEL Classifications Codes. Source: https://www.aeaweb.org/jel/guide/jel.php",
+  "controlledVocab": "jelClassifications",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "label": {
+        "title": "JEL Classification Term",
+        "description": "A human-readable form of the term.",
+        "type": "string",
+        "examples": [
+          "A12 Relation of Economics to Other Disciplines",
+          "B00 History of Economic Thought, Methodology, and Heterodox Approaches"
+        ]
+      },
+      "code": {
+        "title": "JEL Classification Code",
+        "description": "A machine-readable/-actionable form of the term.",
+        "type": "string",
+        "examples": [
+          "a12",
+          "b00",
+          "n22"
+        ]
+      },
+      "uri": {
+        "title": "JEL Classification URI",
+        "description": "The URI for the JEL classification code.",
+        "type": "string",
+        "format": "uri",
+        "examples": [
+          "http://example.com/jel/a12",
+          "http://example.com/jel/b00"
+        ]
+      }
+    },
+    "required": ["label"]
+  },
+  "examples": [
+    [
+      {
+        "label": "A12 Relation of Economics to Other Disciplines",
+        "code": "a12",
+        "uri": "http://example.com/jel/a12"
+      },
+      {
+        "label": "B00 History of Economic Thought, Methodology, and Heterodox Approaches",
+        "code": "b00",
+        "uri": "http://example.com/jel/b00"
+      }
+    ],
+    [
+      {
+        "label": "N22 Economic History: Financial Markets and Institutions: U.S.; Canada: 1913-",
+        "code": "n22",
+        "uri": "http://example.com/jel/n22"
+      }
+    ]
+  ]
+}

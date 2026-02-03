@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://archive.icpsr.umich.edu/schema/property_banks/principal_investigators",
+  "title": "Principal Investigators",
+  "description": "The key people or organizations responsible for the data collection, listed by importance. Each data collection requires at least one PI, either a person or an organization.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "person": {
+        "$ref": "https://archive.icpsr.umich.edu/schema/property_banks/person/version/1"
+      },
+      "organization": {
+        "$ref": "https://archive.icpsr.umich.edu/schema/property_banks/organization/version/1"
+      },
+      "order": {
+        "title": "Order",
+        "description": "The order or rank of importance for the PIs associated with the data collection, typically provided to ICPSR by the lead PI.",
+        "type": "integer",
+        "examples": [0,1,2,3]
+      }
+    },
+    "allOf": [
+      {
+        "oneOf": [
+          { "required": ["person"] },
+          { "required": ["organization"] }
+        ]   
+      },
+      {
+        "required": ["order"]
+      }
+    ]
+  },
+  "minItems": 1,
+  "examples": [
+    "<p><b>Personal Principal Investigator</b></p><p><table><thead><tr><th>First Name</th><th>Last Name</th><th>Affiliation</th></tr></thead><tbody><tr><td>Veronica</td><td>Martinez-Ebers</td><td>National Institute for Law and Equity</td></tr><tr><td>Lawrence F.</td><td>Travis III</td><td>University of Cincinnati</td></tr></tbody></table></p>",
+    "<p><b>Organizational Principal Investigator</b></p><p><table><thead><tr><th>Name</th></tr></thead><tbody><tr><td>United States Department of Labor. Bureau of Labor Statistics</td></tr><tr><td>The Washington Post</td></tr></tbody></table></p>"
+  ],
+  "json_examples": [
+    [
+      {
+        "person": {
+          "name": {
+            "given": "Jane"
+          }
+        },
+        "order": 0
+      }
+    ],
+    [
+      {
+        "person": {
+          "name": {
+            "given": "Joe Q.",
+            "family": "Doe IV"
+          },
+          "orcid": "https://orcid.org/0000-0001-6666-5717",
+          "researcher_passport_profile_id": "1234",
+          "affiliations": [
+            {
+              "name": "Urban Institute",
+              "name_code": "1234",
+              "name_uri": "https://icpsr.example.com/organizations/1234",
+              "ror": "https://ror.org/017pz3h73",
+              "icpsr_org_id": "xyz123"
+            },
+            {
+              "name": "Example University"
+            }
+          ]
+        },
+        "order": 0
+      },
+      {
+        "organization": 
+          {
+            "name": "Harvard University. Medical School",
+            "name_code": "7823",
+            "name_uri": "https://icpsr.example.com/organizations/7823",
+            "ror": "https://ror.org/456cg6k91"
+          },
+        "order": 1
+      }
+    ]
+  ]
+}

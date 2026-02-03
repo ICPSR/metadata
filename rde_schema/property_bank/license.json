@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://archive.icpsr.umich.edu/schema/property_banks/license",
+  "title": "License",
+  "description": "A license governing the data's use.",
+  "type": "object",
+  "controlledVocab": "licenses",
+  "properties": {
+    "name": {
+      "title": "License Name",
+      "type": "string"
+    },
+    "code": {
+      "title": "License Code",
+      "type": "string"
+    },
+    "uri": {
+      "title": "License URI",
+      "type": "string",
+      "format": "uri"
+    }
+  },
+  "examples": [
+    {
+      "name": "Creative Commons Attribution Non Commercial 4.0 International",
+      "code": "CC-BY-NC-4.0",
+      "uri": "https://creativecommons.org/licenses/by-nc/4.0/"
+    }
+  ]
+}

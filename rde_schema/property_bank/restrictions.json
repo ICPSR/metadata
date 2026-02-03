@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://archive.icpsr.umich.edu/schema/property_banks/restrictions",
+  "title": "Restrictions",
+  "description": "Rules about how the data collection can be accessed or used.",
+  "type": "string",
+  "usageNotes": "Restrictions inform users that access to the data collection or certain variables may be limited, and that they should contact ICPSR directly to inquire about accessing them.",
+  "examples": [
+    "The public-use data files in this collection are available for access by the general public.", 
+    "This material is sensitive in nature and is available as restricted data through ICPSR. Users are required to apply for access, and there may be a wait time before access can be provided. "
+  ]
+}

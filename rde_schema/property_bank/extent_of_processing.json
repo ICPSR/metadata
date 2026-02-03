@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://archive.icpsr.umich.edu/schema/property_banks/extent_of_processing",
+  "title": "Extent of Processing",
+  "description": "Processing activities and checks performed on the data collection by ICPSR curation staff.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "curation_level": {
+        "description": "The pre-defined level at which the data collection was curated.",
+        "type": "string",
+        "usageNotes": "Select the appropriate ICPSR Curation level.",
+        "examples": ["1", "2", "3"]
+      },
+      "documentation_version": {
+        "description": "The version of Curation level documentation used with the data collection.",
+        "type": "string",
+        "usageNotes": "Select the appropriate version number for the ICPSR Curation Level documentation.",
+        "examples": ["1", "2", "3"]
+      },
+      "documentation_uri": {
+        "description": "The DOI for the correct version of the ICPSR Curation Level documentation.",
+        "type": "string",
+        "format": "uri",
+        "usageNotes": "Enter the correct DOI for the documentation as stored in the University of Michigan Deep Blue repository.",
+        "examples": [
+          "https://dx.doi.org/10.7302/22511",
+          "https://dx.doi.org/10.7302/22390"
+        ]
+      }
+    },
+    "required": ["curation_level", "documentation_version", "documentation_uri"]
+  },
+  "usageNotes": "All fields must be present so that correct Extent of Processing note can be formatted.",
+  "examples": [
+    [
+      {
+        "curation_level": "1",
+        "documentation_version": "1",
+        "documentation_uri": "https://dx.doi.org/10.7302/22390"
+      }
+    ]
+  ]
+}

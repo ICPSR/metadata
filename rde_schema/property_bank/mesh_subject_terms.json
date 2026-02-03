@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://archive.icpsr.umich.edu/schema/property_banks/mesh_subject_terms",
+  "title": "Medical Subject Headings (MeSH) Terms",
+  "description": "Biomedical and health-related terms from the National Library of Medicine that describe the data collection's topics.",
+  "usageNotes": "This controlled vocabulary was taken from the National Library of Medicine's Medical Subject Headings (MeSH). Source: https://www.ncbi.nlm.nih.gov/mesh/",
+  "type": "array",
+  "controlledVocab": "mesh",
+  "items": {
+    "type": "object",
+    "properties": {
+      "label": {
+        "title": "MeSH Subject Term",
+        "description": "A human-readable form of the subject term.",
+        "type": "string",
+        "examples": ["anxiety", "brain waves"]
+      },
+      "code": {
+        "title": "MeSH Subject Term Code",
+        "description": "A machine-readable/-actionable form of the subject term.",
+        "type": "string",
+        "examples": ["D001007", "D058256"]
+      },
+      "uri": {
+        "title": "MeSH Subject Term URI",
+        "description": "The URI for the subject term as maintained in MeSH.",
+        "type": "string",
+        "format": "uri",
+        "usageNotes": "Enter the MeSH RDF Unique Identifier.",
+        "examples": [
+          "http://id.nlm.nih.gov/mesh/D001007",
+          "http://id.nlm.nih.gov/mesh/D058256"
+        ]
+      }
+    },
+    "required": ["label", "code", "uri"]
+  },
+  "examples": [
+    [
+      {
+        "label": "anxiety",
+        "code": "D001007",
+        "uri": "http://id.nlm.nih.gov/mesh/D001007"
+      },
+      {
+        "label": "brain waves",
+        "code": "D058256",
+        "uri": "http://id.nlm.nih.gov/mesh/D058256"
+      }
+    ]
+  ]
+}

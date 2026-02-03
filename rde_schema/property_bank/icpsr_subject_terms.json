@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://archive.icpsr.umich.edu/schema/property_banks/icpsr_subject_terms",
+  "title": "ICPSR Subject Terms",
+  "description": "A controlled list of social science terms maintained by ICPSR and used to indicate topics related to the data collection.",
+  "usageNotes": "This controlled vocabulary was taken from the ICPSR Subject Terms Thesaurus. Source: https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001.",
+  "controlledVocab": "subjectTerms",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "label": {
+        "title": "ICPSR Subject Term",
+        "description": "A human-readable form of the subject term.",
+        "type": "string",
+        "examples": ["abduction", "ability", "Abolition movement"]
+      },
+      "code": {
+        "title": "ICPSR Subject Term Code",
+        "description": "A machine-readable/-actionable form of the subject term.",
+        "type": "string",
+        "examples": ["20391", "24123", "23632"]
+      },
+      "uri": {
+        "title": "ICPSR Subject Term URI",
+        "description": "The URI for the subject term.",
+        "type": "string",
+        "examples": [
+          "https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/20391",
+          "https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/24040"
+        ]
+      }
+    },
+    "required": ["label", "code", "uri"]
+  },
+  "examples": [
+    [
+      {
+        "label": "biographical data",
+        "code": "20391",
+        "uri": "https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/20391"
+      },
+      {
+        "label": "age",
+        "code": "24123",
+        "uri": "https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/24123"
+      }
+    ],
+    [
+      {
+        "label": "happiness",
+        "code": "25624",
+        "uri": "https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/25624"
+      }
+    ]
+  ]
+}

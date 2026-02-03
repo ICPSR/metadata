@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://archive.icpsr.umich.edu/schema/property_banks/distributors",
+  "title": "Distributors",
+  "description": "The organization(s) responsible for distributing the data collection.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "organization": {
+        "$ref": "https://archive.icpsr.umich.edu/schema/property_banks/organization/version/1"
+      },
+      "order": {
+        "title": "Order",
+        "description": "The order of importance for the distributors of the data collection.",
+        "type": "integer",
+        "usageNotes": "A value of '0' indicates the primary distributor, '1' the second, and so forth.",
+        "examples": [0,1,2,3]
+      }
+    },
+    "required": ["organization", "order"]
+  },
+  "minItems": 1,
+  "examples": [
+    [
+      {
+        "organization": {
+          "name": "Inter-university Consortium for Political and Social Research",
+          "name_code": "1234",
+          "name_uri": "https://icpsr.example.com/organizations/1234",
+          "ror": "https://ror.org/017pz3h73"
+        },
+        "order": 0
+      },
+      {
+        "organization": {
+          "name": "GESIS",
+          "name_code": "2345",
+          "name_uri": "https://icpsr.example.com/organizations/2345",
+          "ror": "https://ror.org/018afyw53"
+        },
+        "order": 1
+      }
+    ],
+    [
+      {
+        "organization": {
+          "name": "Roper Center for Public Opinion Research",
+          "name_code": "1234",
+          "name_uri": "https://icpsr.example.com/organizations/1234"
+        },
+        "order": 0
+      }
+    ]
+  ]
+}

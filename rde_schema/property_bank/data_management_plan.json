@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://archive.icpsr.umich.edu/schema/property_banks/data_management_plan",
+  "title": "Data Management Plan",
+  "description": "A link to the data management plan (preferably a persistent identifier such as a DOI).",
+  "type": "string",
+  "format": "uri",
+  "examples": [
+    "https://doi.org/10.1000/182"
+  ]
+}

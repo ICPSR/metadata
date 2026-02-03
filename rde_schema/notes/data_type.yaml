@@ -1,0 +1,24 @@
+---
+  $schema: https://json-schema.org/draft-07/schema#
+  $id: https://schemas.icpsr.umich.edu/notes/data_type
+  controlledVocab: |
+    Local ICPSR controlled vocabulary. See below for terms and definitions:
+
+    | *Term* | *Definition* |
+    |----------|---------------|
+    | administrative records data | Information collected on individuals or groups as part of the routine administrative procedures of an agency, business, or institution. Such data are not usually collected with research purposes in mind, may be voluminous, and may require preparation such as coding in order to be usable by researchers. Examples include income tax forms, patent applications, death certificates, etc. |
+    | aggregate data | Data compiled into summaries or summary reports, typically for the purposes of public reporting or statistical analysis. |
+    | audio: sound data | Sound data recorded either in analog or digital form. |
+    | census/enumeration data | Data collected from all members of a population. |
+    | clinical data | Data related to psychological or medical testing. |
+    | event/transaction data | Data that deal with a succession of events or transactions occurring over a specified time period. |
+    | experimental data | Data collected from experiments that are not clinical in nature. |
+    | geographic information system (GIS) data | Data that captures positions and spatial patterns on Earth's surface. |
+    | image: photographs, drawings, graphical representations | Data recorded as a still image. |
+    | medical records | Health-related data that is associated with regular patient care. |
+    | observational data | Data collected through observation, with the research subject not directly involved in the recording of information. |
+    | program source code | Human-readable instructions that a programmer writes to specify the actions to be performed bya computer. |
+    | roll call voting data | Records of votes cast by legislative bodies.
+    | survey data | Data collected from a sample of respondents, generally through structured interviews or self-administered questionnaires. |
+    | text | Written work, readable by a machine or human. |
+    | video: film, animation, etc. | Moving image with, or without sound recorded either in analog or digital form. |

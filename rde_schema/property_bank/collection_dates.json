@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://archive.icpsr.umich.edu/schema/property_banks/collection_dates",
+  "title": "Collection Dates",
+  "description": "The date(s) when the data were physically collected.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "start_date": {
+        "title": "Start Date",
+        "description": "The start date of the data collection period. Must be in YYYY-MM-DD, YYYY-MM, or YYYY format with no spaces.",
+        "type": "string",
+        "examples": ["2000", "2019-10", "2021-03-01"]
+      },
+      "end_date": {
+        "title": "End Date",
+        "description": "The end date of the data collection period. Must be in YYYY-MM-DD, YYYY-MM, or YYYY format with no spaces.",
+        "type": "string",
+        "examples": ["2000", "2019-10", "2021-03-01"]
+      },
+      "time_frame": {
+        "title": "Time Frame",
+        "description": "An optional free-text description of the data collection period, used for non-numeric dates (e.g., 'Fall 2012') or to add context when multiple dates are present.",
+        "type": "string",
+        "usageNotes": "The Time Frame should not simply restate the date(s) in words. For example, if the Collection Date starts in 2020-01, the Time Frame should repeat 'January 2020'.",
+        "examples": [ "Fall 2001", "Student data"]
+      }
+    },
+    "required": ["start_date", "end_date"]
+  },
+  "minItems": 1,
+  "examples": [
+    [
+      {
+        "start_date": "2018",
+        "end_date": "2018",
+        "time_frame": "Summer and Fall 2018"
+      },
+      {
+        "start_date": "2020-10",
+        "end_date": "2020-10"
+      }
+    ]
+  ]
+}

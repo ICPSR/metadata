@@ -1,0 +1,10 @@
+{
+    "$schema": "https://json-schema.org/draft-07/schema#",
+    "$id": "https://archive.icpsr.umich.edu/schema/property_banks/link_url",
+    "title": "Link URL",
+    "description": "The URL of an external resource that is included in the ICPSR catalog as a courtesy to users.",
+    "type": "string",
+    "format": "uri",
+    "usageNotes": "Always used in conjunction with the Link Title element.",
+    "examples": ["Cebu Longitudinal Health and Nutrition Survey"]
+}

@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://archive.icpsr.umich.edu/schema/property_banks/funding_sources",
+  "title": "Funding Sources",
+  "description": "The sources of funding that supported the data collection.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "organization": {
+        "$ref": "https://archive.icpsr.umich.edu/schema/property_banks/organization/version/1"
+      },
+      "grants": {
+        "title": "Funding Awards",
+        "description": "Financial support for the data collection.",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+              "grant_number": {
+                "title": "Funding Identifier",
+                "description": "The unique identifier for the funding (e.g., ABC-0123456.",
+                "type": "string",
+                "examples": [
+                    "SES-1835721",
+                    "MDR-8550085",
+                    "40791"
+                ]
+              },
+              "grant_uri": {
+                "title": "Funding URL",
+                "description": "A unique identifier (URL), preferably a persistent one like a DOI,  linking to a landing page with funding information.",
+                "type": "string",
+                "format": "uri",
+                "examples": [
+                  "https://doi.org/10.35802/212242"
+                ]
+              }
+          },
+          "required": ["grant_number"]
+        }
+      },
+      "order": {
+        "title": "Order",
+        "description": "Internal ICPSR field used to determine the order of importance for the funders associated with the data collection.",
+        "type": "integer",
+        "examples": [
+          0,
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    "required": ["organization", "order"]
+  },
+  "examples": [
+    [
+      {
+        "organization": {
+          "name": "Robert Wood Johnson Foundation",
+          "name_code": "5643",
+          "name_uri": "https://icpsr.example.com/organizations/5643",
+          "ror": "https://ror.org/02ymmdj85"
+        },
+        "grants": [
+          {
+            "grant_number": "MDR-8550085"
+          },
+          {
+            "grant_number": "MDR-8550204"
+          }
+        ],
+        "order": 0
+      },
+      {
+        "organization": {
+          "name": "United States Department of Justice. Office of Justice Programs. Bureau of Justice Statistics",
+          "name_code": "2342",
+          "name_uri": "https://icpsr.example.com/organizations/2342",
+          "ror": "https://ror.org/0006s4z66"
+        },
+        "grants": [
+          {
+            "grant_number": "SES-1835721",
+            "grant_uri": "https://doi.org/10.35802/000000"
+          }
+        ],
+        "order": 1
+      }
+    ],
+    [
+      {
+        "organization": {
+          "name": "Acme Foundation"
+        },
+        "order": 0
+      }
+    ]
+  ]
+}

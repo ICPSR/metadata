@@ -1,0 +1,157 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://archive.icpsr.umich.edu/schema/property_banks/contributors",
+  "title": "Contributors",
+  "description": "The people or organizations (other than the principal investigators) that contributed to the data collection in supporting roles.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "person": {
+        "$ref": "https://archive.icpsr.umich.edu/schema/property_banks/person/version/1"
+      },
+      "organization": {
+        "$ref": "https://archive.icpsr.umich.edu/schema/property_banks/organization/version/1"
+      },
+      "contributor_type": {
+        "title": "Contributor Types",
+        "description": "The role(s) played by the contributor in regard to the data collection.",
+        "controlledVocab": "contributorTypes",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "label": {
+              "title": "Contributor Type",
+              "description": "A human-readable form of the term.",
+              "type": "string",
+              "examples": [
+                "Contact Person",
+                "Data Collector",
+                "Data Curator"
+              ]
+            },
+            "code": {
+              "title": "Contributor Type Code",
+              "description": "A machine-readable/-actionable form of the term.",
+              "type": "string",
+              "examples": [
+                "contactPerson",
+                "dataCollector",
+                "dataCurator"
+              ]
+            },
+            "uri": {
+              "title": "Contributor Type URI",
+              "description": "The URI for the term.",
+              "type": "string"
+            }
+          }
+        },
+        "examples": [
+          [
+            {
+              "label": "Contact Person",
+              "code": "contactPerson",
+              "uri": "https://example.com/contributorTypes/972"
+            },
+            {
+              "label": "Data Collector",
+              "code": "dataCollector",
+              "uri": "https://example.com/contributorTypes/007"
+            }
+          ],
+          [
+            {
+              "label": "Data Curator",
+              "code": "dataCurator",
+              "uri": "https://example.com/contributorTypes/875"
+            }
+          ]
+        ]
+      }
+    },
+    "allOf": [
+      {
+        "oneOf": [
+          { "required": ["person"] },
+          { "required": ["organization"] }
+        ]   
+      },
+      {
+        "required": ["contributor_types"]
+      }
+    ]
+  },
+  "minItems": 1,
+  "examples": [
+    [
+      {
+        "person": {
+          "name": {
+            "given": "Joe"
+          }
+        },
+        "contributor_type": [
+          {
+            "label": "Data Curator",
+            "code": "dataCurator",
+            "uri": "https://example.com/contributorTypes/875"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "person": {
+          "name": {
+            "given": "Jane Q.",
+            "family": "Doe"
+          },
+          "orcid": "https://orcid.org/0000-0001-6666-5717",
+          "researcher_passport_profile_id": "1234",
+          "affiliations": [
+            {
+              "name": "Urban Institute",
+              "name_code": "1234",
+              "name_uri": "https://icpsr.example.com/organizations/1234",
+              "ror": "https://ror.org/017pz3h73",
+              "icpsr_org_id": "xyz123"
+            },
+            {
+              "name": "Example University"
+            }
+          ]
+        },
+        "contributor_type": [
+          {
+            "label": "Contact Person",
+            "code": "ContactPerson",
+            "uri": "https://example.com/contributorTypes/972"
+          },
+          {
+            "label": "Data Collector",
+            "code": "DataCollector",
+            "uri": "https://example.com/contributorTypes/007"
+          }
+        ]
+      },
+      {
+        "organization": 
+          {
+            "name": "Harvard University. Medical School",
+            "name_code": "7823",
+            "name_uri": "https://icpsr.example.com/organizations/7823",
+            "ror": "https://ror.org/456cg6k91"
+          },
+        "contributor_type": [
+          {
+            "label": "Other Role",
+            "code": "",
+            "uri": ""
+          }
+        ]
+      }
+    ]
+  ]
+}

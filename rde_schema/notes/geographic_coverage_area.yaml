@@ -1,0 +1,13 @@
+---
+  $schema: https://json-schema.org/draft-07/schema#
+  $id: https://schemas.icpsr.umich.edu/notes/geographic_coverage_area
+  usageNotes: |
+    
+    Each geographic term's full hierarchy must be included; please note: 
+    
+    * For a U.S. city, the state and country are listed alongside (e.g., 'Los Angeles, California, United States'). 
+    * Non-U.S. geographic subdivisions need not include hierarchical relations, with the specific exceptions of Canadian provinces and the countries within the United Kingdom.
+    * 'Global' may be appropriate for studies where the universe of participants is truly worldwide. Possible examples include online surveys that are not restricted by geography, or studies of organizations, such as NGOs.
+    * County-level information is typically not indicated. If a U.S. county will be included, the state name and 'United States' must be listed as well.
+
+    The [Getty Thesaurus of Geographic Names](http://www.getty.edu/research/tools/vocabularies/tgn/index.html) is referenced when introducing new geographic names.  

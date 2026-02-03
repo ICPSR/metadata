@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://archive.icpsr.umich.edu/schema/property_banks/preregistration",
+  "title": "Preregistration",
+  "description": "A link to a research plan for the data collection (preferably a persistent identifier such as a DOI).",
+  "type": "string",
+  "format": "uri",
+  "examples": [
+    "https://doi.org/10.1000/182"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://archive.icpsr.umich.edu/schema/property_banks/citation",
+  "title": "Citation",
+  "description": "The official way to reference the data collection in writing.",
+  "type": "string",
+  "usageNotes": "The Citation is dynamically assembled from other entry fields in this format: PI (list). Title. Distributor (list), Issued Date. DOI. Note: ICPSR 'union catalog' records (i.e., external resource to which ICPSR links as a courtesy) do not have citations.",
+  "examples": [
+    "University of Michigan. Survey Research Center. Economic Behavior Program. Survey of Consumer Attitudes and Behavior, September 2018. Inter-university Consortium for Political and Social Research [distributor], 2021-11-18. https://doi.org/10.3886/ICPSR38121.v1",
+    "United States Department of Justice. Office of Justice Programs. Office of Juvenile Justice and Delinquency Prevention. Juvenile Residential Facility Census, 2020 [United States]. Inter-university Consortium for Political and Social Research [distributor], 2024-07-15. https://doi.org/10.3886/ICPSR38914.v1"
+  ]
+}

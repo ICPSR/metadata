@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://archive.icpsr.umich.edu/schema/property_banks/sampling_procedures",
+  "title": "Sampling Procedures",
+  "description": "The type(s) of sample and sample design used to select survey respondents to represent the population.",
+  "usageNotes": "The sample is a selection out of the universe of all possible relevant cases (e.g., adults in the United States, housing units in three counties of Michigan, etc.) that could have been included in the data collection. Note that some studies, such as censuses, do not utilize samples but include all members of the universe. This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance CV SamplingProcedure https://rdf-vocabulary.ddialliance.org/ddi-cv/SamplingProcedure/1.1.4/SamplingProcedure.html.",
+  "controlledVocab": "samplingProcedures",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "label": {
+        "description": "A human-readable form of the term.",
+        "type": "string",
+        "examples": [
+          "Probability: Systematic random", 
+          "Other",
+          "Total universe/Complete enumeration"
+        ]
+      },
+      "code": {
+        "description": "A machine-readable/-actionable form of the term.",
+        "type": "string",
+        "examples": [
+          "Probability.SystematicRandom",
+          "Other",
+          "TotalUniverseCompleteEnumeration"
+        ]
+      },
+      "uri": {
+        "description": "The URI for the term.",
+        "type": "string"
+      }
+    },
+    "required": ["label", "code", "uri"]
+  },
+  "items": {
+      "type": "string"
+  }, 
+  "examples": [
+    [
+      {
+        "label": "Probability: Systematic random",
+        "code": "Probability.SystematicRandom",
+        "uri": "https://example.com/sampling_procedures/123"
+      },
+      {
+        "label": "Other",
+        "code": "Other",
+        "uri": "https://example.com/sampling_procedures/737"
+      }
+    ],
+    [
+      {
+        "label": "Total universe/Complete enumeration",
+        "code": "TotalUniverseCompleteEnumeration",
+        "uri": "https://example.com/sampling_procedures/234"
+      }
+    ]
+  ]
+}

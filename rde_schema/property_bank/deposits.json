@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://archive.icpsr.umich.edu/schema/property_banks/deposits",
+  "title": "Deposits",
+  "description": "Information about deposits associated with the data collection.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "person": { "$ref": "https://archive.icpsr.umich.edu/schema/property_banks/person/version/1" },
+      "deposit_date": {
+        "title": "Deposit Date",
+        "description": "The date on which a deposit was made.",
+        "type": "string",
+        "format": "date",
+        "examples": ["2024-03-03", "2022-02-22"]
+      }
+    },
+    "required": ["person", "deposit_date"]
+  },
+  "examples": [
+    [
+      {
+        "person": {
+          "name": {
+              "given": "Jane Q.",
+              "family": "Doe"
+          },
+          "orcid": "https://orcid.org/0000-0001-6666-5717"
+        },
+        "deposit_date": "2020-10-31"
+      },
+      {
+        "person": {
+          "name": {
+              "given": "John.",
+              "family": "Smith"
+          }
+        },
+        "deposit_date": "2023-01-22"
+      }
+    ],
+    [
+      {
+        "person": {
+          "name": {
+              "given": "H. P.",
+              "family": "Lovecraft III"
+          }
+        },
+        "deposit_date": "2019-08-12"
+      }
+    ]
+  ]
+}
+

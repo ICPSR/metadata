@@ -1,0 +1,39 @@
+---
+  $schema: https://json-schema.org/draft-07/schema#
+  $id: https://schemas.icpsr.umich.edu/notes/title
+  usageNotes: |
+    The Title includes three essential parts: the title proper, the geography, and the time period.
+
+    Title Proper:
+
+      * The title proper is a descriptive string that captures what the data collection contains. 
+      
+      * The title proper uses title case: all major words are capitalized, while minor words are lowercased.
+
+      * For new studies, ICPSR starts with the title proper provided by the data depositor. Most title propers are straightforward about their contents, such as the 'American Community Survey' or the 'Census of Law Enforcement Training Academies.' Some title propers include a more branded description, such as 'Bridge of Faith: Aim4Peace Community-Based Violence Prevention Project or Contents' and 'Contexts of Cyberbullying: An Epidemiologic Study using Electronic Detection and Social Network Analysis.'
+
+      * For updated studies, ICPSR uses the existing title in production, making changes as necessary to add new years or additional geographical locations. For studies that are part of an ICPSR series, titles remain consistent with the previous series studies.
+
+    Geography:
+
+      * All titles include the data collection's geography. If the geography is already included in the title proper, it is not repeated.
+      
+      * Cities are paired with state or province names that are spelled out (e.g., Portland, Oregon), unless the city names are unique or well-known.
+
+      * Studies with more than four geographic locations typically are summarized using, for example, '5 countries,' '8 German cities,' '20 U.S. states' instead of listing all locations. In the latter case, 'U.S.' is used rather than 'United States' or 'American'.
+      
+      * Descriptors that do not have a distinct geographic area, such as 'communities' or 'regions', are not included in titles. 
+
+      * 'Global' may be appropriate for studies where the universe of participants is truly worldwide. Possible examples include online surveys that are not restricted by geography, or studies of organizations, such as NGOs. 
+
+      * Brackets are typically not indicated. They are indicated when a study has National, Federal, Congressional, or American in the title. Brackets can be indicated if a non-United States study has “National” in the title, or a similar word specific to that country.
+
+    Time Period:
+
+      * All titles include the data collection's time period, which reflects the time period that the data collection covers and should match the Time Period. For example, in the 'Uganda Elite Study, 1964-1968', it is assumed that the Ugandans were surveyed about events in 1964-1968, even if the actual data collection might not have taken place until later.
+
+      * If the time period is already included in the title proper, it is not repeated.
+
+      * For most studies, a single year or range of years is acceptable. Years are written as four digits, including when used in a range (e.g., '1999', '2001-2003', or '1999, 2010, 2015').
+
+      * Months are included only when part of ICPSR series that have multiple releases, which are otherwise identical, each year. In these cases, months are spelled out (e.g., 'September 2020' instead of '9/2020' or 'Sept. 2020').

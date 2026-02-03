@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://archive.icpsr.umich.edu/schema/property_banks/units_of_analysis",
+  "title": "Units of Analysis",
+  "description": "The object(s) of analysis for the data collection, such as an organization, individual, or household.",
+  "usageNotes": "This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance CV AnalysisUnit https://rdf-vocabulary.ddialliance.org/ddi-cv/AnalysisUnit/2.1.3/AnalysisUnit.html.",
+  "controlledVocab": "analysisUnits",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "label": {
+        "description": "A human-readable form of the term.",
+        "type": "string",
+        "examples": [
+          "Organization/Institution", 
+          "Individual", 
+          "Household"
+        ]
+      },
+      "code": {
+        "description": "A machine-readable/-actionable form of the term.",
+        "type": "string",
+        "examples": [
+          "OrganizationOrInstitution", 
+          "Individual", 
+          "Household"
+        ]
+      },
+      "uri": {
+        "description": "The URI for the term.",
+        "type": "string"
+      }
+    },
+    "required": ["label", "code", "uri"]
+  },
+  "examples": [
+    [
+      {
+        "label": "Organization/Institution",
+        "code": "OrganizationOrInstitution",
+        "uri": "https://example.com/units_of_analysis/123"
+      },
+      {
+        "label": "Individual",
+        "code": "Individual",
+        "uri": "https://example.com/units_of_analysis/234"
+      }
+    ],
+    [
+      {
+        "label": "Household",
+        "code": "Household",
+        "uri": "https://example.com/units_of_analysis/737"
+      }
+    ]
+  ]
+}

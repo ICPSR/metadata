@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://archive.icpsr.umich.edu/schema/property_banks/smallest_geographic_unit",
+  "title": "Smallest Geographic Unit",
+  "description": "The smallest geographic unit (e.g., state or census tract) used in the dataset.",
+  "controlledVocab": "smallestGeographicUnits",
+  "type": "object",
+  "properties": {
+    "label": {
+      "title": "Smallest Geographic Unit Term",
+      "type": "string"
+    },
+    "code": {
+      "title": "Smallest Geographic Unit Code",
+      "type": "string"
+    },
+    "uri": {
+      "title": "Smallest Geographic Unit URI",
+      "type": "string",
+      "format": "uri"
+    }
+  },
+  "usageNotes": "Geographic Unit is intended to represent specific, known geography -- e.g., county, census district, FIPS code, electoral district, and any other conveyor of specific geography that is represented by a variable. If the data do not include a geographic variable by which the data can be analyzed, this element is not indicated. If all the cases are from a single state, but the cases are not subdivided geographically within that state, then 'state' is not indicated. This element is only meant to convey specific, known, geography. If there is a variable indicating which testing site a survey was taken at, but the locations of the testing sites were masked by the PI, this element is likely not indicated.",
+  "examples": [
+    {
+      "label": "state",
+      "code": "123",
+      "uri": "https://example.com/smallest_geographic_unit/123"
+    }, 
+    {
+      "label": "Census tract",
+      "code": "234",
+      "uri": "https://example.com/smallest_geographic_unit/234"
+    }, 
+    {
+      "label": "precinct",
+      "code": "345",
+      "uri": "https://example.com/smallest_geographic_unit/345"
+    }
+  ]
+}

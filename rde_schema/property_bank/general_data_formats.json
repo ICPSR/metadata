@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://archive.icpsr.umich.edu/schema/property_banks/general_data_formats",
+  "title": "General Data Formats",
+  "description": "The file format types present in the data collection.",
+  "usageNotes": "This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance CV GeneralDataFormat https://rdf-vocabulary.ddialliance.org/ddi-cv/GeneralDataFormat/2.0.3/GeneralDataFormat.html.",
+  "controlledVocab": "generalDataFormats",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "label": {
+        "title": "General Data Format",
+        "description": "A human-readable form of the term.",
+        "type": "string",
+        "examples": [
+          "Text",
+          "Still image",
+          "Numeric"
+        ]
+      },
+      "code": {
+        "title": "General Data Format Code",
+        "description": "A machine-readable/-actionable form of the term.",
+        "type": "string",
+        "examples": [
+          "Text",
+          "StillImage",
+          "Numeric"
+        ]
+      },
+      "uri": {
+        "title": "General Data Format URI",
+        "description": "The URI for the term.",
+        "type": "string"
+      }
+    },
+    "required": ["label", "code", "uri"]
+  },
+  "examples": [
+    [
+      {
+        "label": "Text",
+        "code": "Text",
+        "uri": "https://example.com/general_data_format/972"
+      },
+      {
+        "label": "Still image",
+        "code": "StillImage",
+        "uri": "https://example.com/general_data_format/234"
+      }
+    ],
+    [
+      {
+        "label": "Numeric",
+        "code": "Numeric",
+        "uri": "https://example.com/general_data_format/563"
+      }
+    ]
+  ]
+}

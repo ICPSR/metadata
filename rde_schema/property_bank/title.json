@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://archive.icpsr.umich.edu/schema/property_banks/title",
+  "title": "Title",
+  "description": "The official title that describes what the data collection is about, its geographic scope, and the time period it covered.",
+  "type": "string",
+  "examples": [
+    "Bridge of Faith: Aim4Peace Community-Based Violence Prevention Project, Kansas City, Missouri, 2014-2017",
+    "Health and Relationships Project, United States, 2014-2015",
+    "Targeted Interventions to Prevent Chronic Low Back Pain in High Risk Patients: A Multi-Site Pragmatic Randomized Controlled Trial (TARGET Trial), 4 U.S. cities, 2016-2019",
+    "Aid Like A Paycheck (ALAP), Texas and California, 2014-2017",
+    "COVID-19 Disruptions Disproportionately Affect Female Academics, Global, 2020"
+  ]
+}

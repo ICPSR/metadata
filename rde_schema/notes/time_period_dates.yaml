@@ -1,0 +1,9 @@
+---
+  $schema: https://json-schema.org/draft-07/schema#
+  $id: https://schemas.icpsr.umich.edu/notes/time_period_dates
+  usageNotes: |
+    Time Periods focus on the dates the data are actually about, regardless of when the data were collected. 
+    
+    Time Periods generally correspond to the dates that appear in the Title; days and months may be included in the Time Period even though they are not in the Title.
+
+    Dates are formatted as YYYY, YYYY-MM, or YYYY-MM-DD. No spaces are permitted in date expressions.

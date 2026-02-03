@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://archive.icpsr.umich.edu/schema/property_banks/notes",
+  "title": "Notes",
+  "description": "Important details about the data collection (like unique authoring, discrepancies, or processing information) that can't be recorded in other metadata elements.",
+  "type": "array",
+  "items": { "type": "string" },
+  "examples": [
+      [
+        "Information on the Index of Consumer Sentiment, the Index of Current Economic Conditions, and the Index of Consumer Expectations and how they were created can be found in the P.I. Codebook", 
+        "Dataset 1 should be attributed to Jane Doe while datasets 2-6 should be attributed to John Doe"
+      ],
+      ["Additional information on the Survey of Consumers can be found by visiting the Survey of Consumers Website"]
+  ]
+}

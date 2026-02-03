@@ -1,0 +1,60 @@
+{
+    "$schema": "https://json-schema.org/draft-07/schema#",
+    "$id": "https://archive.icpsr.umich.edu/schema/property_banks/oversamples",
+    "title": "Oversamples",
+    "description": "Key group(s) given higher odds of selection into a probability sample than would occur by chance, allowing for both within- and between-group comparisons in the resulting data.",
+    "controlledVocab": "oversamples",
+    "usageNotes": "Do not mark as an oversample if the study is about a particular group by design (e.g., a study of crime victims is not an oversample of crime victims but may contain oversamples for race or age).",
+    "type": "array",
+    "items": { 
+      "type": "object",
+      "properties": {
+        "label": {
+          "title": "Oversample",
+          "description": "A human-readable form of the language name.",
+          "type": "string",
+          "examples": [
+            "Age",
+            "Race/Ethnicity",
+            "Other"
+          ]
+        },
+        "code": {
+          "title": "Oversample Code",
+          "description": "A machine-readable/-actionable form of the term.",
+          "type": "string",
+          "examples": [
+            "Age",
+            "RaceEthnicity",
+            "Other"
+          ]
+        },
+        "uri": {
+          "title": "Oversample URI",
+          "description": "The URI for the term.",
+          "type": "string"
+        }
+      }
+    },
+    "examples": [
+      [
+        {
+          "label": "Age",
+          "code": "Age",
+          "uri": "https://example.com/oversamples/789"
+        }
+      ], 
+      [
+        {
+          "label": "Race/Ethnicity",
+          "code": "RaceEthnicity",
+          "uri": "https://example.com/oversamples/456"
+        },
+        {
+          "label": "Other",
+          "code": "Other",
+          "uri": "https://example.com/oversamples/123"
+        }
+      ]
+    ]
+}

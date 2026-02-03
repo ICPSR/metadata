@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://archive.icpsr.umich.edu/schema/property_banks/time_periods",
+  "title": "Time Periods",
+  "description": "The time period(s) to which the data refer, regardless of when the data were collected.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+        "start_date": {
+          "title": "Start Date",
+          "description": "The start date for the time period the data refer to, formatted as YYYY, YYYY-MM, or YYYY-MM-DD, with no spaces in date expressions.",
+          "type": "string",
+          "examples": ["2000", "2019-10", "2021-03-01"]
+        },
+        "end_date": {
+          "title": "End Date",
+          "description": "The end date for the time period the data refer to, formatted as YYYY, YYYY-MM, or YYYY-MM-DD, with no spaces in date expressions.",
+          "type": "string",
+          "examples": ["2000", "2019-10", "2021-03-01"]
+        },
+        "time_frame": {
+          "title": "Time Frame",
+          "description": "An optional free-text description of the time period, used for non-numeric dates (e.g., 'Fall 2012') or to add context when multiple dates are present.",
+          "type": "string",
+          "usageNotes": "The Time Frame should not simply restate the date(s) in words. For example, if the Time Period starts in 2020-01, the Time Frame should repeat 'January 2020'.",
+          "examples": [ "Fall 2001", "Winter Semester 2019"]
+        }
+    },
+    "required": ["start_date", "end_date"]
+  },
+  "minItems": 1,
+  "examples": [
+    [
+      {
+        "start_date": "2018",
+        "end_date": "2018",
+        "time_frame": "Summer and Fall 2018"
+      },
+      {
+        "start_date": "2020-10",
+        "end_date": "2020-10"
+      }
+    ]
+  ]
+}

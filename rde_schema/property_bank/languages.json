@@ -1,0 +1,59 @@
+{
+    "$schema": "https://json-schema.org/draft-07/schema#",
+    "$id": "https://archive.icpsr.umich.edu/schema/property_banks/languages",
+    "title": "Languages",
+    "description": "The language(s) used in the data collection.",
+    "controlledVocab": "languages",
+    "type": "array",
+    "items": { 
+      "type": "object",
+      "properties": {
+        "label": {
+          "title": "Language",
+          "description": "A human-readable form of the language name.",
+          "type": "string",
+          "examples": [
+            "English",
+            "French",
+            "German"
+          ]
+        },
+        "code": {
+          "title": "Language Code",
+          "description": "A machine-readable/-actionable form of the term.",
+          "type": "string",
+          "examples": [
+            "en",
+            "fr",
+            "de"
+          ]
+        },
+        "uri": {
+          "title": "Language URI",
+          "description": "The URI for the term.",
+          "type": "string"
+        }
+      }
+    },
+    "examples": [
+      [
+        {
+          "label": "English",
+          "code": "en",
+          "uri": "https://example.com/languages/en"
+        }
+      ], 
+      [
+        {
+          "label": "English",
+          "code": "en",
+          "uri": "https://example.com/languages/en"
+        },
+        {
+          "label": "French",
+          "code": "fr",
+          "uri": "https://example.com/languages/fr"
+        }
+      ]
+    ]
+}

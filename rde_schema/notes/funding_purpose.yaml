@@ -1,0 +1,11 @@
+---
+  $schema: https://json-schema.org/draft-07/schema#
+  $id: https://schemas.icpsr.umich.edu/notes/funding_purpose
+  controlledVocab: |
+    Local ICPSR controlled vocabulary. See below for terms and definitions:
+
+    | *Term* | *Definition* |
+    |----------|---------------|
+    | collection and/or analysis of data | The funder supported the collection and/or analysis of the study's data. |
+    | secondary analysis of data | The funder supported secondary analysis performed on the data. |
+    | archiving of data | The funder supported the archiving and preservation of the data. |

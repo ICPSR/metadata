@@ -1,0 +1,14 @@
+{
+    "$schema": "https://json-schema.org/draft-07/schema#",
+    "$id": "https://archive.icpsr.umich.edu/schema/property_banks/alternate_titles",
+    "title": "Alternate Titles",
+    "description": "The alternate name(s) or acronym(s) commonly used to refer to the data collection.",
+    "type": "array",
+    "items": { "type": "string" },
+    "examples": [
+      ["Add Health Parent Study"], 
+      ["FACES 2009"], 
+      ["Survey of Consumers"], 
+      ["Eurobarometer 85.2"]
+    ]
+}

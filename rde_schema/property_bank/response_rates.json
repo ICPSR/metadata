@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://archive.icpsr.umich.edu/schema/property_banks/response_rates",
+  "title": "Response Rates",
+  "description": "The percentage of respondents in the sample who participated in the data collection.",
+  "type": "string",
+  "usageNotes": "This field is only applicable if the data were collected with a survey instrument and the response rates are provided.",
+  "examples": [
+    "The overall response rate for this survey was 20.22%; 72.6% for existing panelists and 10.4% for new panelists, using AAPOR Response Rate 1.",
+    "Not applicable."
+  ]
+}

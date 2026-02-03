@@ -1,0 +1,93 @@
+{
+    "$schema": "https://json-schema.org/draft-07/schema#",
+    "$id": "https://archive.icpsr.umich.edu/schema/property_banks/common_data_elements",
+    "title": "Common Data Elements",
+    "description": "Common Data Elements (standardized concepts used to ensure consistency and interoperability across datasets) found in the data collection.",
+    "controlledVocab": "commonDataElements",
+    "type": "array",
+    "items": { 
+      "type": "object",
+      "properties": {
+        "common_data_element": {
+          "title": "Common Data Element",
+          "description": "A common data element used in the data collection.",
+          "type": "object",
+          "properties": {
+            "label": {
+              "title": "Common Data Element Label",
+              "description": "A human-readable form of the term.",
+              "type": "string",
+              "examples": [
+                "Age"
+              ]
+            },
+            "code": {
+              "title": "Common Data Element Code",
+              "description": "A machine-readable/-actionable form of the term.",
+              "type": "string",
+              "examples": [
+                "PDjBiGXjO"
+              ]
+            },
+            "uri": {
+              "title": "Common Data Element URI",
+              "description": "The URI for the term.",
+              "type": "string"
+            }
+          },
+          "required": ["label", "code", "uri"]
+        },
+        "cde_source": {
+          "title": "Common Data Element Source",
+          "description": "The source of the Common Data Element",
+          "type": "string"
+        },
+        "cde_bundle": {
+          "title": "Common Data Element Bundle",
+          "description": "The bundle of which the Common Data Element is part.",
+          "type": "string"
+        },
+        "associated_variable": {
+          "title": "Associated Variable",
+          "description": "The variable from the data collection that aligns with the Common Data Element.",
+          "type": "string"
+        }
+      },
+      "required": [ "common_data_element", "cde_source", "associated_variable"] 
+    },
+    "examples": [
+      [
+        {
+          "common_data_element": {
+            "label": "Age",
+            "code": "PDjBiGXjO",
+            "uri": "https://example.com/commonDataElement/PDjBiGXjO"
+          },
+          "cde_source": "NLM",
+          "cde_bundle": "ctyKfVm8k_B",
+          "associated_variable": "AGE"
+        },
+        {
+          "common_data_element": {
+            "label": "Age Units",
+            "code": "FEjsyPDoH",
+            "uri": "https://example.com/commonDataElement/FEjsyPDoH"
+          },
+          "cde_source": "NLM",
+          "cde_bundle": "ctyKfVm8k_B",
+          "associated_variable": "AGE_UNITS"
+        }
+      ],
+      [
+        {
+          "common_data_element": {
+            "label": "Annual Household Income Range",
+            "code": "_N_myh18QM",
+            "uri": "https://example.com/commonDataElement/_N_myh18QM"
+          },
+          "cde_source": "NLM",
+          "associated_variable": "HOUSEHOLD_INCOME"
+        }
+      ]
+    ]
+}

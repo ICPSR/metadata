@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://archive.icpsr.umich.edu/schema/property_banks/organization",
+  "title": "Organization",
+  "description": "An organization associated with an ICPSR data collection or service.",
+  "type": "object",
+  "controlledVocab": "organizations",
+  "properties": {
+    "name": {
+      "title": "Organization Name",
+      "description": "The organization's name.",
+      "type": "string",
+      "examples": [
+        "Federal Reserve Bank of St. Louis. Research Division", 
+        "University of Michigan. Institute for Social Research"
+      ]
+    },
+    "name_code": {
+      "title": "Organization Name Code",
+        "description": "A machine-readable/-actionable form of the organization's name.",
+      "type": "string",
+      "examples": ["1234", "2345", "3456"]
+    },
+    "name_uri": {
+      "title": "Organization Name URI",
+      "description": "The URI for the organization's name.",
+      "type": "string"
+    },
+    "ror": {
+      "title": "ROR Identifier",
+      "description": "The organization's Research Organization Registry (ROR) identifier.",
+      "type": "string",
+      "format": "uri",
+      "examples": [ "https://ror.org/02q7mkh03" ]
+    },
+    "email": {
+      "title": "Email Address",
+      "description": "The organization's email address.",
+      "type": "string",
+      "format": "email",
+      "examples": ["info@example.com"]
+    }
+  },
+  "required": ["name"],
+  "examples": [
+    {
+      "name": "Urban Institute",
+      "name_code": "1234",
+      "name_uri": "https://icpsr.example.com/organizations/1234",
+      "ror": "https://ror.org/017pz3h73",
+      "email": "info@urban.institute"
+    }
+  ]
+}
