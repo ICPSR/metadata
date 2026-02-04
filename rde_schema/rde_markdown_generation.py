@@ -200,6 +200,10 @@ def render_simple_field(schema, required, schema_refs):
 
     return markdown
 
+def shorten_multi_part(text):
+    if text == "Multi-part element; see subfield definitions for more information.":
+        return "Multi-part element; see subfields"
+    return text
 
 def render_complete_examples(schema, has_subfields):
     """Render main property-level examples depending on whether subfields exist."""
