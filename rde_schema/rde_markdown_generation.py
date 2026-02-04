@@ -4,6 +4,7 @@ from pathlib import Path
 from datetime import datetime
 import os
 
+
 # ----------------------------
 # Utilities
 # ----------------------------
@@ -66,6 +67,12 @@ def resolve_ref(ref_url, schema_refs):
 # ----------------------------
 # Rendering helpers
 # ----------------------------
+
+def shorten_multi_part(text):
+    if text == "Multi-part element; see subfield definitions for more information.":
+        return "Multi-part element; see subfields"
+    return text
+
 
 def render_property_header(schema):
     title = schema.get('title', 'Untitled')
@@ -134,7 +141,7 @@ def render_subfields(schema, schema_refs, type_mapping):
             f"| {prop.get('title', name)} | "
             f"{'Yes' if name in required else 'No'} | "
             f"{repeatable} | "
-            f"{accepted} | "
+            f"{shorten_multi_part(accepted)} | "
             f"{prop.get('description', '')} |"
         )
 
@@ -154,7 +161,6 @@ def render_subfields(schema, schema_refs, type_mapping):
         if 'usageNotes' in prop:
             markdown.append(f"**Usage Notes:** {prop['usageNotes']}\n")
 
-        # Examples for subfield
         if prop.get('examples'):
             markdown.append("**Examples:**\n")
             for example in prop['examples']:
@@ -164,37 +170,6 @@ def render_subfields(schema, schema_refs, type_mapping):
                 else:
                     markdown.append(json.dumps(example, indent=2))
                 markdown.append("```\n")
-
-    return markdown
-
-
-def render_complete_examples(schema, has_subfields):
-    examples = schema.get("examples")
-    if not examples:
-        return []
-
-    markdown = []
-
-    heading = "###### Complete Examples (with Subfields):" if has_subfields else "**Examples**:"
-    markdown.append(heading)
-    markdown.append("")
-
-    for example_set in examples:
-        if isinstance(example_set, list):
-            # Array of objects or strings
-            for obj in example_set:
-                markdown.append("```")
-                if isinstance(obj, dict):
-                    for k, v in obj.items():
-                        markdown.append(f"    {k}: {v}")
-                else:
-                    markdown.append(f"    {obj}")
-                markdown.append("```\n")
-        else:
-            # Single primitive example
-            markdown.append("```")
-            markdown.append(f"    {example_set}")
-            markdown.append("```\n")
 
     return markdown
 
@@ -216,6 +191,45 @@ def render_simple_field(schema, required, schema_refs):
     elif isinstance(usage, str):
         markdown.append(f"**Usage Notes:** {usage}\n")
 
+    if schema.get('examples') and not is_array_of_objects(schema):
+        markdown.append("**Examples:**\n")
+        for ex in schema['examples']:
+            markdown.append("```")
+            markdown.append(f"    {ex}" if isinstance(ex, str) else json.dumps(ex, indent=2))
+            markdown.append("```\n")
+
+    return markdown
+
+
+def render_complete_examples(schema, has_subfields):
+    """Render main property-level examples depending on whether subfields exist."""
+    examples = schema.get('examples')
+    if not examples:
+        return []
+
+    heading = "###### Complete Examples (with Subfields):" if has_subfields else "**Examples:**"
+    markdown = [heading]
+
+    for ex_group in examples:
+        # ex_group can be a dict, list of dicts, or list of primitives
+        if isinstance(ex_group, list):
+            for ex_item in ex_group:
+                markdown.append("```")
+                if isinstance(ex_item, dict):
+                    for key, value in ex_item.items():
+                        markdown.append(f"    {key}: {value}")
+                else:
+                    markdown.append(f"    {ex_item}")
+                markdown.append("```\n")
+        elif isinstance(ex_group, dict):
+            markdown.append("```")
+            for key, value in ex_group.items():
+                markdown.append(f"    {key}: {value}")
+            markdown.append("```\n")
+        else:
+            markdown.append("```")
+            markdown.append(f"    {ex_group}")
+            markdown.append("```\n")
     return markdown
 
 
@@ -245,15 +259,12 @@ def json_schema_to_markdown(schema, property_name=None, required_fields=None, sc
     toc_entry = build_toc_entry(title, anchor, required, repeatable, accepted, description)
 
     has_subfields = is_array_of_objects(schema)
-
     if has_subfields:
         markdown.extend(render_subfields(schema, schema_refs, type_mapping))
-
-    # For non-subfield properties, render usageNotes & simple field metadata
     else:
         markdown.extend(render_simple_field(schema, required, schema_refs))
 
-    # Render main property-level examples 
+    # Render main property-level examples
     markdown.extend(render_complete_examples(schema, has_subfields))
 
     return '\n'.join(markdown), toc_entry
@@ -324,7 +335,7 @@ def process_json_folder(property_folder, output_file, notes_folder=None):
     for e in toc:
         all_md.append(
             f"| [{e['title']}](#{e['anchor']}) | {e['required']} | {e['repeatable']} | "
-            f"{e['accepted_values']} | {e['description']} |"
+            f"{shorten_multi_part(e['accepted_values'])} | {e['description']} |"
         )
 
     all_md.append("\n---\n## Metadata Elements: Detailed Information\n")
