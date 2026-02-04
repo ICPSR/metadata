@@ -1,317 +1,355 @@
 import json
-import os
+import yaml
 from pathlib import Path
 from datetime import datetime
+import os
+
+# ----------------------------
+# Utilities
+# ----------------------------
 
 def create_anchor(title):
-    """Create an anchor link from a title.
-    
-    Args:
-        title: The title to convert to an anchor
-    
-    Returns:
-        A URL-safe anchor string
-    """
-    # Convert to lowercase, replace spaces with hyphens, remove special chars
-    anchor = title.lower()
-    anchor = anchor.replace(' ', '-')
-    # Keep only alphanumeric characters and hyphens
+    anchor = title.lower().replace(' ', '-')
     anchor = ''.join(c for c in anchor if c.isalnum() or c == '-')
-    # Remove consecutive hyphens
     while '--' in anchor:
         anchor = anchor.replace('--', '-')
-    # Remove leading/trailing hyphens
-    anchor = anchor.strip('-')
-    return anchor
+    return anchor.strip('-')
 
 
-def json_schema_to_markdown(schema, property_name=None, required_fields=None):
-    """Convert a JSON Schema object to Markdown documentation.
-    
-    Args:
-        schema: The JSON schema object
-        property_name: The name of this property (for checking required status)
-        required_fields: List of required field names from parent schema
-    
-    Returns:
-        A tuple of (markdown_string, toc_entry_dict)
-    """
-    
-    markdown = []
-    repeatable = "No"  # Default
-    is_required = "No"  # Default
-    
-    # Check if this property is required
-    if property_name and required_fields and property_name in required_fields:
-        is_required = "Yes"
-    
-    # Title with anchor using HTML
+def describe_schema_type(schema, type_mapping):
+    if not isinstance(schema, dict):
+        return "", "No"
+
+    schema_type = schema.get("type")
+
+    if schema_type == "array":
+        items = schema.get("items", {})
+        item_type = items.get("type")
+        accepted = type_mapping.get(item_type, item_type or "Array")
+        return accepted, "Yes"
+
+    accepted = type_mapping.get(schema_type, schema_type or "")
+    return accepted, "No"
+
+
+def is_array_of_objects(schema):
+    return (
+        schema.get("type") == "array"
+        and schema.get("items", {}).get("type") == "object"
+        and "properties" in schema.get("items", {})
+    )
+
+
+def extract_from_pointer(doc, pointer_path):
+    current = doc
+    for part in pointer_path.split('/'):
+        if isinstance(current, dict) and part in current:
+            current = current[part]
+        else:
+            return None
+    return current
+
+
+def resolve_ref(ref_url, schema_refs):
+    if '#/' in ref_url:
+        base, pointer = ref_url.split('#/', 1)
+        doc = schema_refs.get(base) or schema_refs.get(base.split('/version/')[0])
+        if doc:
+            return doc, pointer
+
+    return (
+        schema_refs.get(ref_url)
+        or schema_refs.get(ref_url.split('/version/')[0])
+    )
+
+
+# ----------------------------
+# Rendering helpers
+# ----------------------------
+
+def render_property_header(schema):
     title = schema.get('title', 'Untitled')
     anchor = create_anchor(title)
-    markdown.append(f'<a id="{anchor}"></a>')
-    markdown.append(f"### {title}\n")
-    
-    # Description
+    return [
+        f'<a id="{anchor}"></a>',
+        f"### {title}\n"
+    ], title, anchor
+
+
+def render_core_metadata(schema, type_mapping):
+    markdown = []
+
     description = schema.get('description', '')
     if description:
         markdown.append(f"**Description:** {description}\n")
-    
-    # Determine repeatable and type
-    if 'type' in schema:
-        type_mapping = {
-            'string': 'Text',
-            'integer': 'Number',
-            'boolean': 'Boolean',
-            'object': 'Multi-part element; see subfield definitions for more information.'
-        }
-        
-        # Handle arrays specially
-        if schema['type'] == 'array':
-            repeatable = "Yes"
-            # Look for the type in items
-            if 'items' in schema and 'type' in schema['items']:
-                items_type = schema['items']['type']
-                readable_type = type_mapping.get(items_type, items_type)
-            else:
-                readable_type = 'Array'
-        else:
-            readable_type = type_mapping.get(schema['type'], schema['type'])
-    
+
+    accepted, repeatable = describe_schema_type(schema, type_mapping)
+
     markdown.append(f"**Repeatable**: {repeatable}\n")
-    markdown.append(f"**Accepted Values**: {readable_type}\n")
-    
-    # Create TOC entry for this schema
-    toc_entry = {
+    markdown.append(f"**Accepted Values**: {accepted}\n")
+
+    return markdown, accepted, repeatable, description
+
+
+def build_toc_entry(title, anchor, required, repeatable, accepted_values, description):
+    return {
         'title': title,
         'anchor': anchor,
-        'required': is_required,
+        'required': required,
         'repeatable': repeatable,
-        'accepted_values': readable_type,
+        'accepted_values': accepted_values,
         'description': description
     }
-    
-    # Check if this is an array of objects with properties (complex nested structure)
-    has_subfields = (schema.get('type') == 'array' and 
-                     schema.get('items', {}).get('type') == 'object' and
-                     'properties' in schema.get('items', {}))
-    
-    if has_subfields:
-        # Generate subfields table
-        markdown.append("#### Subfields:\n")
-        markdown.append("| Property | Required? | Repeatable? | Accepted Values | Description |")
-        markdown.append("| -------- | --------- | ----------- | --------------- | ----------- |")
-        
-        items = schema['items']
-        properties = items.get('properties', {})
-        item_required = items.get('required', [])
-        
-        for prop_name, prop_schema in properties.items():
-            prop_title = prop_schema.get('title', prop_name)
-            prop_required = "Yes" if prop_name in item_required else "No"
-            prop_repeatable = "No"  # Subfields are not repeatable unless they're arrays themselves
-            
-            # Get the type
-            if prop_schema.get('type') == 'array':
-                prop_repeatable = "Yes"
-                if 'items' in prop_schema and 'type' in prop_schema['items']:
-                    prop_type = type_mapping.get(prop_schema['items']['type'], prop_schema['items']['type'])
-                else:
-                    prop_type = 'Array'
+
+
+def render_subfields(schema, schema_refs, type_mapping):
+    markdown = []
+
+    items = schema['items']
+    properties = items.get('properties', {})
+    required = items.get('required', [])
+
+    markdown.append("#### Subfields:\n")
+    markdown.append("| Property | Required? | Repeatable? | Accepted Values | Description |")
+    markdown.append("| -------- | --------- | ----------- | --------------- | ----------- |")
+
+    resolved = {}
+
+    for name, prop in properties.items():
+        if '$ref' in prop:
+            ref = resolve_ref(prop['$ref'], schema_refs)
+            if isinstance(ref, tuple):
+                doc, pointer = ref
+                resolved[name] = extract_from_pointer(doc, pointer) or prop
+            elif ref:
+                resolved[name] = ref
             else:
-                prop_type = type_mapping.get(prop_schema.get('type', ''), prop_schema.get('type', ''))
-            
-            prop_description = prop_schema.get('description', '')
-            
-            markdown.append(f"| {prop_title} | {prop_required} | {prop_repeatable} | {prop_type} | {prop_description} |")
-        
-        markdown.append("")  # Empty line after table
-        
-        # Now generate detailed sections for each subfield
-        for prop_name, prop_schema in properties.items():
-            prop_title = prop_schema.get('title', prop_name)
-            prop_required = "Yes" if prop_name in item_required else "No"
-            prop_description = prop_schema.get('description', '')
-            
-            markdown.append(f"##### {prop_title}\n")
-            markdown.append(f"**Description:** {prop_description}\n")
-            markdown.append(f"**Required**: {prop_required}\n")
-            markdown.append(f"**Repeatable**: No\n")
-            
-            # Get accepted values for subfield
-            if prop_schema.get('type') == 'array':
-                if 'items' in prop_schema and 'type' in prop_schema['items']:
-                    subfield_type = type_mapping.get(prop_schema['items']['type'], prop_schema['items']['type'])
-                else:
-                    subfield_type = 'Array'
-            else:
-                subfield_type = type_mapping.get(prop_schema.get('type', ''), prop_schema.get('type', ''))
-            
-            markdown.append(f"**Accepted Values**: {subfield_type}\n")
-            
-            # Usage notes for subfield
-            if 'usageNotes' in prop_schema:
-                markdown.append(f"**Usage Notes:** {prop_schema['usageNotes']}\n")
-            
-            # Examples for subfield
-            if 'examples' in prop_schema and prop_schema['examples']:
-                markdown.append("**Examples:**\n")
-                for example in prop_schema['examples']:
-                    # Format as JSON code block
-                    markdown.append("```json")
-                    markdown.append(f'"{example}"' if isinstance(example, str) else json.dumps(example, indent=2))
-                    markdown.append("```\n")
-        
-        # Complete examples section - formatted as readable text
-        if 'examples' in schema and schema['examples']:
-            markdown.append("###### Complete Examples (with Subfields):\n")
-            
-            for example_group in schema['examples']:
-                # Handle if examples is a list of objects
-                if isinstance(example_group, list):
-                    for example_obj in example_group:
-                        markdown.append("```")
-                        for key, value in example_obj.items():
-                            # Get the title for this property
-                            prop_title = properties.get(key, {}).get('title', key)
-                            markdown.append(f"    {prop_title}: {value}")
-                        markdown.append("```\n")
-                # Handle if example is a single object
-                elif isinstance(example_group, dict):
-                    markdown.append("```")
-                    for key, value in example_group.items():
-                        prop_title = properties.get(key, {}).get('title', key)
-                        markdown.append(f"    {prop_title}: {value}")
-                    markdown.append("```\n")
-    
-    else:
-        # Simple type (not nested object) - use original format
-        if is_required != "No":
-            markdown.append(f"**Required**: {is_required}\n")
-        
-        # Usage Notes
-        if 'usageNotes' in schema:
-            markdown.append(f"**Usage Notes:** {schema['usageNotes']}\n")
-        
-        # Examples - wrap in code blocks
-        if 'examples' in schema and schema['examples']:
+                resolved[name] = prop
+        else:
+            resolved[name] = prop
+
+    for name, prop in resolved.items():
+        accepted, repeatable = describe_schema_type(prop, type_mapping)
+        markdown.append(
+            f"| {prop.get('title', name)} | "
+            f"{'Yes' if name in required else 'No'} | "
+            f"{repeatable} | "
+            f"{accepted} | "
+            f"{prop.get('description', '')} |"
+        )
+
+    markdown.append("")
+
+    for name, prop in resolved.items():
+        accepted, _ = describe_schema_type(prop, type_mapping)
+
+        markdown.extend([
+            f"##### {prop.get('title', name)}\n",
+            f"**Description:** {prop.get('description', '')}\n",
+            f"**Required**: {'Yes' if name in required else 'No'}\n",
+            "**Repeatable**: No\n",
+            f"**Accepted Values**: {accepted}\n"
+        ])
+
+        if 'usageNotes' in prop:
+            markdown.append(f"**Usage Notes:** {prop['usageNotes']}\n")
+
+        # Examples for subfield
+        if prop.get('examples'):
             markdown.append("**Examples:**\n")
-            for example in schema['examples']:
-                markdown.append("```")
-                markdown.append(f"{example}")
+            for example in prop['examples']:
+                markdown.append("```json")
+                if isinstance(example, str):
+                    markdown.append(f'"{example}"')
+                else:
+                    markdown.append(json.dumps(example, indent=2))
                 markdown.append("```\n")
-    
+
+    return markdown
+
+
+def render_complete_examples(schema, has_subfields):
+    examples = schema.get("examples")
+    if not examples:
+        return []
+
+    markdown = []
+
+    heading = "###### Complete Examples (with Subfields):" if has_subfields else "###### Examples:"
+    markdown.append(heading)
+    markdown.append("")
+
+    for example_set in examples:
+        if isinstance(example_set, list):
+            # Array of objects or strings
+            for obj in example_set:
+                markdown.append("```")
+                if isinstance(obj, dict):
+                    for k, v in obj.items():
+                        markdown.append(f"    {k}: {v}")
+                else:
+                    markdown.append(f"    {obj}")
+                markdown.append("```\n")
+        else:
+            # Single primitive example
+            markdown.append("```")
+            markdown.append(f"    {example_set}")
+            markdown.append("```\n")
+
+    return markdown
+
+
+def render_simple_field(schema, required, schema_refs):
+    markdown = []
+
+    if required == "Yes":
+        markdown.append(f"**Required**: {required}\n")
+
+    usage = schema.get('usageNotes')
+    if isinstance(usage, dict) and '$ref' in usage:
+        ref = resolve_ref(usage['$ref'], schema_refs)
+        if isinstance(ref, tuple):
+            doc, pointer = ref
+            text = extract_from_pointer(doc, pointer)
+            if text:
+                markdown.append(f"**Usage Notes:** {text}\n")
+    elif isinstance(usage, str):
+        markdown.append(f"**Usage Notes:** {usage}\n")
+
+    # Examples for simple fields
+    markdown.extend(render_complete_examples(schema, has_subfields=False))
+
+    return markdown
+
+
+# ----------------------------
+# Main conversion
+# ----------------------------
+
+def json_schema_to_markdown(schema, property_name=None, required_fields=None, schema_refs=None):
+    type_mapping = {
+        'string': 'Text',
+        'integer': 'Number',
+        'boolean': 'Boolean',
+        'object': 'Multi-part element; see subfield definitions for more information.'
+    }
+
+    schema_refs = schema_refs or {}
+    markdown = []
+
+    required = "Yes" if property_name and required_fields and property_name in required_fields else "No"
+
+    header, title, anchor = render_property_header(schema)
+    markdown.extend(header)
+
+    core_md, accepted, repeatable, description = render_core_metadata(schema, type_mapping)
+    markdown.extend(core_md)
+
+    toc_entry = build_toc_entry(title, anchor, required, repeatable, accepted, description)
+
+    has_subfields = is_array_of_objects(schema)
+
+    if has_subfields:
+        markdown.extend(render_subfields(schema, schema_refs, type_mapping))
+
+    # Render main property-level examples after subfields (if any)
+    markdown.extend(render_complete_examples(schema, has_subfields))
+
+    # For non-subfield properties, render usageNotes & simple field metadata
+    if not has_subfields:
+        markdown.extend(render_simple_field(schema, required, schema_refs))
+
     return '\n'.join(markdown), toc_entry
 
 
-def process_json_folder(input_folder, output_file):
-    """Process all JSON files in a folder and output to a single Markdown file.
-    
-    Args:
-        input_folder: Path to folder containing JSON schema files
-        output_file: Path to output Markdown file
-    """
-    
-    # List of files to skip
-    skip_files = [
-        "common_data_elements.json", 
-        "contributors.json", 
-        "deposits.json", 
-        "extent_of_processing.json", 
-        "external_source_id.json", 
-        "languages.json", 
-        "link_title.json", 
-        "link_url.json", 
-        "manuscript_number.json", 
-        "oversamples.json", 
-        "restrictions.json", 
+# ----------------------------
+# Folder processing
+# ----------------------------
+
+def load_all_schemas(property_folder, skip_files, notes_folder=None):
+    refs = {}
+
+    for path in Path(property_folder).glob('*.json'):
+        if path.name in skip_files:
+            continue
+        data = json.loads(path.read_text(encoding='utf-8'))
+        if '$id' in data:
+            refs[data['$id']] = data
+            refs[data['$id'].split('/version/')[0]] = data
+
+    if notes_folder and Path(notes_folder).exists():
+        for path in Path(notes_folder).glob('*.yaml'):
+            data = yaml.safe_load(path.read_text(encoding='utf-8'))
+            if data and '$id' in data:
+                refs[data['$id']] = data
+
+    return refs
+
+
+def process_json_folder(property_folder, output_file, notes_folder=None):
+    skip_files = {
+        "common_data_elements.json",
+        "contributors.json",
+        "deposits.json",
+        "extent_of_processing.json",
+        "external_source_id.json",
+        "languages.json",
+        "link_title.json",
+        "link_url.json",
+        "manuscript_number.json",
+        "oversamples.json",
+        "restrictions.json",
         "study_purpose.json"
+    }
+
+    schema_refs = load_all_schemas(property_folder, skip_files, notes_folder)
+    json_files = sorted(f for f in Path(property_folder).glob('*.json') if f.name not in skip_files)
+
+    all_md = [
+        "# DRAFT ICPSR RDE Metadata Schema Documentation\n",
+        f"Last updated: {datetime.now().strftime('%B %d, %Y')}\n"
     ]
-    
-    # Get all JSON files in the folder
-    json_files = sorted(Path(input_folder).glob('*.json'))
-    
-    if not json_files:
-        print(f"No JSON files found in {input_folder}")
-        return
-    
-    # Filter out files in the skip list
-    json_files = [f for f in json_files if f.name not in skip_files]
-    
-    if not json_files:
-        print(f"No JSON files to process after applying skip list")
-        return
-    
-    print(f"Skipping {len(skip_files)} files")
-    print(f"Processing {len(json_files)} files\n")
-    
-    all_markdown = []
-    toc_entries = []
-    
-    # Add a header to the document
-    all_markdown.append("# DRAFT ICPSR RDE Metadata Schema Documentation\n")
-    current_date = datetime.now().strftime('%B %d, %Y')
-    all_markdown.append(f"Last updated: {current_date}\n")
-    all_markdown.append("This metadata schema was developed as part of the Inter-university Consortium for Political and Social Research (ICPSR) as part of the NSF-funded [Research Data Ecosystem (RDE)](https://www.icpsr.umich.edu/sites/icpsr/find-data/working-together/projects/rde) project. The schema is used to describe ICPSR data collections; these rules and definitions are intended to (a) assist ICPSR staff with metadata entry, and (b) help ICPSR users – including data depositors and researchers accessing data – understand how to use and interpret our metadata.\n")
-    
-    # Process each JSON file first to collect TOC entries
-    schema_markdowns = []
-    for json_file in json_files:
-        print(f"Processing: {json_file.name}")
-        
-        try:
-            with open(json_file, 'r', encoding='utf-8') as f:
-                schema = json.load(f)
-            
-            # Convert schema to markdown and get TOC entry
-            markdown_output, toc_entry = json_schema_to_markdown(schema)
-            schema_markdowns.append(markdown_output)
-            toc_entries.append(toc_entry)
-            
-        except json.JSONDecodeError as e:
-            print(f"Error parsing {json_file.name}: {e}")
-            continue
-        except Exception as e:
-            print(f"Error processing {json_file.name}: {e}")
-            continue
-    
-    # Generate Table of Contents
-    all_markdown.append("## Metadata Elements: Overview\n")
-    all_markdown.append("| Property | Required? | Repeatable? | Accepted Values | Description |")
-    all_markdown.append("| -------- | --------- | ----------- | --------------- | ----------- |")
-    
-    for entry in toc_entries:
-        title_link = f"[{entry['title']}](#{entry['anchor']})"
-        # Abbreviate the accepted values for TOC display
-        accepted_values_display = entry['accepted_values']
-        if accepted_values_display == "Multi-part element; see subfield definitions for more information.":
-            accepted_values_display = "Multi-part element; see subfield"
-        
-        all_markdown.append(
-            f"| {title_link} | {entry['required']} | {entry['repeatable']} | "
-            f"{accepted_values_display} | {entry['description']} |"
+
+    toc = []
+    sections = []
+
+    for path in json_files:
+        print(f"Processing {os.path.basename(path)}...")
+        schema = json.loads(path.read_text(encoding='utf-8'))
+        md, entry = json_schema_to_markdown(schema, schema_refs=schema_refs)
+        sections.append(md)
+        toc.append(entry)
+
+    all_md.append("## Metadata Elements: Overview\n")
+    all_md.append("| Property | Required? | Repeatable? | Accepted Values | Description |")
+    all_md.append("| -------- | --------- | ----------- | --------------- | ----------- |")
+
+    for e in toc:
+        all_md.append(
+            f"| [{e['title']}](#{e['anchor']}) | {e['required']} | {e['repeatable']} | "
+            f"{e['accepted_values']} | {e['description']} |"
         )
-    
-    all_markdown.append("\n---\n")
 
-    all_markdown.append("## Metadata Elements: Detailed Information\n")
-    
-    # Add all schema documentation
-    for schema_md in schema_markdowns:
-        all_markdown.append(schema_md)
-        all_markdown.append("\n---\n")
-    
-    # Write all markdown to a single file
-    with open(output_file, 'w', encoding='utf-8') as f:
-        f.write('\n'.join(all_markdown))
-    
+    all_md.append("\n---\n## Metadata Elements: Detailed Information\n")
+
+    for section in sections:
+        all_md.append(section)
+        all_md.append("\n---\n")
+
+    Path(output_file).write_text('\n'.join(all_md), encoding='utf-8')
     print(f"\nSuccessfully generated: {output_file}")
-    print(f"Processed {len(json_files)} JSON files")
 
-# Example usage
+
+# ----------------------------
+# Entry point
+# ----------------------------
+
 if __name__ == "__main__":
-    # Specify your input folder and output file
-    input_folder = "C:/icpsr_github/metadata/rde_schema/property_bank"  # Change this to your folder path
-    output_file = "C:/icpsr_github/metadata/rde_schema/icpsr_rde_schema.md"
-    
-    # Process all JSON files in the folder
-    process_json_folder(input_folder, output_file)
+
+    main_dir = "C:/icpsr_github/metadata/rde_schema"
+
+    process_json_folder(
+        property_folder = os.path.join(main_dir, "property_bank"),
+        notes_folder=os.path.join(main_dir, "notes"),
+        output_file=os.path.join(main_dir, "icpsr_rde_schema.md")
+    )

@@ -1,8 +1,6 @@
 # DRAFT ICPSR RDE Metadata Schema Documentation
 
-Last updated: February 03, 2026
-
-This metadata schema was developed as part of the Inter-university Consortium for Political and Social Research (ICPSR) as part of the NSF-funded [Research Data Ecosystem (RDE)](https://www.icpsr.umich.edu/sites/icpsr/find-data/working-together/projects/rde) project. The schema is used to describe ICPSR data collections; these rules and definitions are intended to (a) assist ICPSR staff with metadata entry, and (b) help ICPSR users – including data depositors and researchers accessing data – understand how to use and interpret our metadata.
+Last updated: February 04, 2026
 
 ## Metadata Elements: Overview
 
@@ -10,44 +8,43 @@ This metadata schema was developed as part of the Inter-university Consortium fo
 | -------- | --------- | ----------- | --------------- | ----------- |
 | [Alternate Titles](#alternate-titles) | No | Yes | Text | The alternate name(s) or acronym(s) commonly used to refer to the data collection. |
 | [Citation](#citation) | No | No | Text | The official way to reference the data collection in writing. |
-| [Collection Dates](#collection-dates) | No | Yes | Multi-part element; see subfield | The date(s) when the data were physically collected. |
-| [Collection Modes](#collection-modes) | No | Yes | Multi-part element; see subfield | The method(s) or procedure(s) used to collect the data. |
+| [Collection Dates](#collection-dates) | No | Yes | Multi-part element; see subfield definitions for more information. | The date(s) when the data were physically collected. |
+| [Collection Modes](#collection-modes) | No | Yes | Multi-part element; see subfield definitions for more information. | The method(s) or procedure(s) used to collect the data. |
 | [Data Management Plan](#data-management-plan) | No | No | Text | A link to the data management plan (preferably a persistent identifier such as a DOI). |
-| [Data Source Types](#data-source-types) | No | Yes | Multi-part element; see subfield | The source(s) of the data as collected by the Principal Investigators. |
-| [Distributors](#distributors) | No | Yes | Multi-part element; see subfield | The organization(s) responsible for distributing the data collection. |
+| [Data Source Types](#data-source-types) | No | Yes | Multi-part element; see subfield definitions for more information. | The source(s) of the data as collected by the Principal Investigators. |
+| [Distributors](#distributors) | No | Yes | Multi-part element; see subfield definitions for more information. | The organization(s) responsible for distributing the data collection. |
 | [External Data Sources](#external-data-sources) | No | Yes | Text | The source of the data, when that source is external to the data collection and can be independently cited. |
-| [Funding Sources](#funding-sources) | No | Yes | Multi-part element; see subfield | The sources of funding that supported the data collection. |
-| [General Data Formats](#general-data-formats) | No | Yes | Multi-part element; see subfield | The file format types present in the data collection. |
-| [Geographic Coverage Areas](#geographic-coverage-areas) | No | Yes | Multi-part element; see subfield | The geographic locations where the data refer or are related. |
-| [ICPSR Subject Terms](#icpsr-subject-terms) | No | Yes | Multi-part element; see subfield | A controlled list of social science terms maintained by ICPSR and used to indicate topics related to the data collection. |
-| [Journal of Economic Literature (JEL) Classification Codes](#journal-of-economic-literature-jel-classification-codes) | No | Yes | Multi-part element; see subfield | Classification codes used to categorize economic research. |
-| [License](#license) | No | No | Multi-part element; see subfield | A license governing the data's use. |
-| [Medical Subject Headings (MeSH) Terms](#medical-subject-headings-mesh-terms) | No | Yes | Multi-part element; see subfield | Biomedical and health-related terms from the National Library of Medicine that describe the data collection's topics. |
+| [Funding Sources](#funding-sources) | No | Yes | Multi-part element; see subfield definitions for more information. | The sources of funding that supported the data collection. |
+| [General Data Formats](#general-data-formats) | No | Yes | Multi-part element; see subfield definitions for more information. | The file format types present in the data collection. |
+| [Geographic Coverage Areas](#geographic-coverage-areas) | No | Yes | Multi-part element; see subfield definitions for more information. | The geographic locations where the data refer or are related. |
+| [ICPSR Subject Terms](#icpsr-subject-terms) | No | Yes | Multi-part element; see subfield definitions for more information. | A controlled list of social science terms maintained by ICPSR and used to indicate topics related to the data collection. |
+| [Journal of Economic Literature (JEL) Classification Codes](#journal-of-economic-literature-jel-classification-codes) | No | Yes | Multi-part element; see subfield definitions for more information. | Classification codes used to categorize economic research. |
+| [License](#license) | No | No | Multi-part element; see subfield definitions for more information. | A license governing the data's use. |
+| [Medical Subject Headings (MeSH) Terms](#medical-subject-headings-mesh-terms) | No | Yes | Multi-part element; see subfield definitions for more information. | Biomedical and health-related terms from the National Library of Medicine that describe the data collection's topics. |
 | [Nationally Representative Sample](#nationally-representative-sample) | No | No | Text | Indicates whether the data collection uses a sampling design intended to represent the demographics, behaviors, and/or characteristics of the entire nation. This typically involves probability-based methods that allow generalization. It does not include convenience samples that appear similar to the nation by chance. |
 | [Notes](#notes) | No | Yes | Text | Important details about the data collection (like unique authoring, discrepancies, or processing information) that can't be recorded in other metadata elements. |
-| [Organization](#organization) | No | No | Multi-part element; see subfield | An organization associated with an ICPSR data collection or service. |
-| [Person](#person) | No | No | Multi-part element; see subfield | A person associated with an ICPSR data collection or service. |
+| [Organization](#organization) | No | No | Multi-part element; see subfield definitions for more information. | An organization associated with an ICPSR data collection or service. |
+| [Person](#person) | No | No | Multi-part element; see subfield definitions for more information. | A person associated with an ICPSR data collection or service. |
 | [Preregistration](#preregistration) | No | No | Text | A link to a research plan for the data collection (preferably a persistent identifier such as a DOI). |
-| [Principal Investigators](#principal-investigators) | No | Yes | Multi-part element; see subfield | The key people or organizations responsible for the data collection, listed by importance. Each data collection requires at least one PI, either a person or an organization. |
+| [Principal Investigators](#principal-investigators) | No | Yes | Multi-part element; see subfield definitions for more information. | The key people or organizations responsible for the data collection, listed by importance. Each data collection requires at least one PI, either a person or an organization. |
 | [Response Rates](#response-rates) | No | No | Text | The percentage of respondents in the sample who participated in the data collection. |
 | [Sampling Note](#sampling-note) | No | No | Text | Supplemental information about the sampling process that does not fit neatly into the Sampling Procedure field. |
 | [Sampling Procedures](#sampling-procedures) | No | Yes | Text | The type(s) of sample and sample design used to select survey respondents to represent the population. |
 | [Scales](#scales) | No | No | Text | Any commonly known scales used to collect data for the data collection (e.g., MMPI, CPI, the Census Occupational Codes, etc.). |
-| [Smallest Geographic Unit](#smallest-geographic-unit) | No | No | Multi-part element; see subfield | The smallest geographic unit (e.g., state or census tract) used in the dataset. |
-| [Software Applications](#software-applications) | No | Yes | Multi-part element; see subfield | Software used by the principal investigator(s) to collect or analyze data, required to understand how the data were obtained or to reproduce results. |
+| [Smallest Geographic Unit](#smallest-geographic-unit) | No | No | Multi-part element; see subfield definitions for more information. | The smallest geographic unit (e.g., state or census tract) used in the dataset. |
+| [Software Applications](#software-applications) | No | Yes | Multi-part element; see subfield definitions for more information. | Software used by the principal investigator(s) to collect or analyze data, required to understand how the data were obtained or to reproduce results. |
 | [Study Design](#study-design) | No | No | Text | The procedures used to contact participants and gather data. |
 | [Summary](#summary) | No | No | Text | A description of the data collection that helps users understand its purpose, substance, and key topics. |
-| [Time Methods](#time-methods) | No | Yes | Multi-part element; see subfield | The methods used to collect data over time, like snapshots at one point (cross-sectional) or repeatedly (longitudinal) to study changes or trends |
-| [Time Periods](#time-periods) | No | Yes | Multi-part element; see subfield | The time period(s) to which the data refer, regardless of when the data were collected. |
+| [Time Methods](#time-methods) | No | Yes | Multi-part element; see subfield definitions for more information. | The methods used to collect data over time, like snapshots at one point (cross-sectional) or repeatedly (longitudinal) to study changes or trends |
+| [Time Periods](#time-periods) | No | Yes | Multi-part element; see subfield definitions for more information. | The time period(s) to which the data refer, regardless of when the data were collected. |
 | [Title](#title) | No | No | Text | The official title that describes what the data collection is about, its geographic scope, and the time period it covered. |
-| [Units of Analysis](#units-of-analysis) | No | Yes | Multi-part element; see subfield | The object(s) of analysis for the data collection, such as an organization, individual, or household. |
+| [Units of Analysis](#units-of-analysis) | No | Yes | Multi-part element; see subfield definitions for more information. | The object(s) of analysis for the data collection, such as an organization, individual, or household. |
 | [Universe](#universe) | No | No | Text | The total group of persons or other entities (e.g., households or organizations) that were the object of research and to which analytic results refer. |
 | [Variable Description](#variable-description) | No | No | Text | Significant variables (particularly demographic variables) in the data files. |
-| [Version History](#version-history) | No | Yes | Multi-part element; see subfield | A record of how the data collection has changed over time. |
+| [Version History](#version-history) | No | Yes | Multi-part element; see subfield definitions for more information. | A record of how the data collection has changed over time. |
 | [Weights](#weights) | No | No | Text | The weight variables and the criteria for using them in data analysis or other information about how the data are weighted if no weight variables are present. |
 
 ---
-
 ## Metadata Elements: Detailed Information
 
 <a id="alternate-titles"></a>
@@ -59,22 +56,40 @@ This metadata schema was developed as part of the Inter-university Consortium fo
 
 **Accepted Values**: Text
 
-**Examples:**
+###### Examples:
 
 ```
-['Add Health Parent Study']
-```
-
-```
-['FACES 2009']
+    Add Health Parent Study
 ```
 
 ```
-['Survey of Consumers']
+    FACES 2009
 ```
 
 ```
-['Eurobarometer 85.2']
+    Survey of Consumers
+```
+
+```
+    Eurobarometer 85.2
+```
+
+###### Examples:
+
+```
+    Add Health Parent Study
+```
+
+```
+    FACES 2009
+```
+
+```
+    Survey of Consumers
+```
+
+```
+    Eurobarometer 85.2
 ```
 
 
@@ -89,16 +104,26 @@ This metadata schema was developed as part of the Inter-university Consortium fo
 
 **Accepted Values**: Text
 
+###### Examples:
+
+```
+    University of Michigan. Survey Research Center. Economic Behavior Program. Survey of Consumer Attitudes and Behavior, September 2018. Inter-university Consortium for Political and Social Research [distributor], 2021-11-18. https://doi.org/10.3886/ICPSR38121.v1
+```
+
+```
+    United States Department of Justice. Office of Justice Programs. Office of Juvenile Justice and Delinquency Prevention. Juvenile Residential Facility Census, 2020 [United States]. Inter-university Consortium for Political and Social Research [distributor], 2024-07-15. https://doi.org/10.3886/ICPSR38914.v1
+```
+
 **Usage Notes:** The Citation is dynamically assembled from other entry fields in this format: PI (list). Title. Distributor (list), Issued Date. DOI. Note: ICPSR 'union catalog' records (i.e., external resource to which ICPSR links as a courtesy) do not have citations.
 
-**Examples:**
+###### Examples:
 
 ```
-University of Michigan. Survey Research Center. Economic Behavior Program. Survey of Consumer Attitudes and Behavior, September 2018. Inter-university Consortium for Political and Social Research [distributor], 2021-11-18. https://doi.org/10.3886/ICPSR38121.v1
+    University of Michigan. Survey Research Center. Economic Behavior Program. Survey of Consumer Attitudes and Behavior, September 2018. Inter-university Consortium for Political and Social Research [distributor], 2021-11-18. https://doi.org/10.3886/ICPSR38121.v1
 ```
 
 ```
-United States Department of Justice. Office of Justice Programs. Office of Juvenile Justice and Delinquency Prevention. Juvenile Residential Facility Census, 2020 [United States]. Inter-university Consortium for Political and Social Research [distributor], 2024-07-15. https://doi.org/10.3886/ICPSR38914.v1
+    United States Department of Justice. Office of Justice Programs. Office of Juvenile Justice and Delinquency Prevention. Juvenile Residential Facility Census, 2020 [United States]. Inter-university Consortium for Political and Social Research [distributor], 2024-07-15. https://doi.org/10.3886/ICPSR38914.v1
 ```
 
 
@@ -194,14 +219,14 @@ United States Department of Justice. Office of Justice Programs. Office of Juven
 ###### Complete Examples (with Subfields):
 
 ```
-    Start Date: 2018
-    End Date: 2018
-    Time Frame: Summer and Fall 2018
+    start_date: 2018
+    end_date: 2018
+    time_frame: Summer and Fall 2018
 ```
 
 ```
-    Start Date: 2020-10
-    End Date: 2020-10
+    start_date: 2020-10
+    end_date: 2020-10
 ```
 
 
@@ -285,21 +310,21 @@ United States Department of Justice. Office of Justice Programs. Office of Juven
 ###### Complete Examples (with Subfields):
 
 ```
-    Collection Mode: Face-to-face interview: Computer-assisted (CAPI/CAMI)
-    Collection Mode Code: Interview.FaceToFace.CAPIorCAMI
-    Collection Mode URI: https://example.com/collection_modes/234
+    label: Face-to-face interview: Computer-assisted (CAPI/CAMI)
+    code: Interview.FaceToFace.CAPIorCAMI
+    uri: https://example.com/collection_modes/234
 ```
 
 ```
-    Collection Mode: Measurements and tests
-    Collection Mode Code: MeasurementsAndTests
-    Collection Mode URI: https://example.com/collection_modes/972
+    label: Measurements and tests
+    code: MeasurementsAndTests
+    uri: https://example.com/collection_modes/972
 ```
 
 ```
-    Collection Mode: Computer-based observation
-    Collection Mode Code: Observation.ComputerBased
-    Collection Mode URI: https://example.com/collection_modes/113
+    label: Computer-based observation
+    code: Observation.ComputerBased
+    uri: https://example.com/collection_modes/113
 ```
 
 
@@ -314,10 +339,16 @@ United States Department of Justice. Office of Justice Programs. Office of Juven
 
 **Accepted Values**: Text
 
-**Examples:**
+###### Examples:
 
 ```
-https://doi.org/10.1000/182
+    https://doi.org/10.1000/182
+```
+
+###### Examples:
+
+```
+    https://doi.org/10.1000/182
 ```
 
 
@@ -401,21 +432,21 @@ https://doi.org/10.1000/182
 ###### Complete Examples (with Subfields):
 
 ```
-    Data Source Type: Registers/Records/Accounts: Medical/Clinical
-    Data Source Type Code: RegistersRecordsAccounts.MedicalClinical
-    Data Source Type URI: https://example.com/data_source_type/123
+    label: Registers/Records/Accounts: Medical/Clinical
+    code: RegistersRecordsAccounts.MedicalClinical
+    uri: https://example.com/data_source_type/123
 ```
 
 ```
-    Data Source Type: Events/Interactions
-    Data Source Type Code: EventsInteractions
-    Data Source Type URI: https://example.com/data_source_type/234
+    label: Events/Interactions
+    code: EventsInteractions
+    uri: https://example.com/data_source_type/234
 ```
 
 ```
-    Data Source Type: Other
-    Data Source Type Code: Other
-    Data Source Type URI: https://example.com/data_source_type/737
+    label: Other
+    code: Other
+    uri: https://example.com/data_source_type/737
 ```
 
 
@@ -434,18 +465,30 @@ https://doi.org/10.1000/182
 
 | Property | Required? | Repeatable? | Accepted Values | Description |
 | -------- | --------- | ----------- | --------------- | ----------- |
-| organization | Yes | No |  |  |
+| Organization | Yes | No | Multi-part element; see subfield definitions for more information. | An organization associated with an ICPSR data collection or service. |
 | Order | Yes | No | Number | The order of importance for the distributors of the data collection. |
 
-##### organization
+##### Organization
 
-**Description:** 
+**Description:** An organization associated with an ICPSR data collection or service.
 
 **Required**: Yes
 
 **Repeatable**: No
 
-**Accepted Values**: 
+**Accepted Values**: Multi-part element; see subfield definitions for more information.
+
+**Examples:**
+
+```json
+{
+  "name": "Urban Institute",
+  "name_code": "1234",
+  "name_uri": "https://icpsr.example.com/organizations/1234",
+  "ror": "https://ror.org/017pz3h73",
+  "email": "info@urban.institute"
+}
+```
 
 ##### Order
 
@@ -481,17 +524,17 @@ https://doi.org/10.1000/182
 
 ```
     organization: {'name': 'Inter-university Consortium for Political and Social Research', 'name_code': '1234', 'name_uri': 'https://icpsr.example.com/organizations/1234', 'ror': 'https://ror.org/017pz3h73'}
-    Order: 0
+    order: 0
 ```
 
 ```
     organization: {'name': 'GESIS', 'name_code': '2345', 'name_uri': 'https://icpsr.example.com/organizations/2345', 'ror': 'https://ror.org/018afyw53'}
-    Order: 1
+    order: 1
 ```
 
 ```
     organization: {'name': 'Roper Center for Public Opinion Research', 'name_code': '1234', 'name_uri': 'https://icpsr.example.com/organizations/1234'}
-    Order: 0
+    order: 0
 ```
 
 
@@ -506,20 +549,42 @@ https://doi.org/10.1000/182
 
 **Accepted Values**: Text
 
+###### Examples:
+
+```
+    'Voting Scores.' Congressional Quarterly Almanac 33 (1977), 487-498
+```
+
+```
+    United States Bureau of the Census Economic Surveys, 1998-2000
+```
+
+```
+    United States Congressional Record, 1989
+```
+
+```
+    Annual Company Organization Survey, 2003
+```
+
 **Usage Notes:** External data sources include books, journal articles, administrative records, agency-sponsored surveys, and machine-readable files. Each source includes at minimum the title, author, publication year, and journal (if applicable). Any citation format is accepted.
 
-**Examples:**
+###### Examples:
 
 ```
-["'Voting Scores.' Congressional Quarterly Almanac 33 (1977), 487-498"]
-```
-
-```
-['United States Bureau of the Census Economic Surveys, 1998-2000', 'United States Congressional Record, 1989']
+    'Voting Scores.' Congressional Quarterly Almanac 33 (1977), 487-498
 ```
 
 ```
-['Annual Company Organization Survey, 2003']
+    United States Bureau of the Census Economic Surveys, 1998-2000
+```
+
+```
+    United States Congressional Record, 1989
+```
+
+```
+    Annual Company Organization Survey, 2003
 ```
 
 
@@ -538,19 +603,31 @@ https://doi.org/10.1000/182
 
 | Property | Required? | Repeatable? | Accepted Values | Description |
 | -------- | --------- | ----------- | --------------- | ----------- |
-| organization | Yes | No |  |  |
+| Organization | Yes | No | Multi-part element; see subfield definitions for more information. | An organization associated with an ICPSR data collection or service. |
 | Funding Awards | No | Yes | Multi-part element; see subfield definitions for more information. | Financial support for the data collection. |
 | Order | Yes | No | Number | Internal ICPSR field used to determine the order of importance for the funders associated with the data collection. |
 
-##### organization
+##### Organization
 
-**Description:** 
+**Description:** An organization associated with an ICPSR data collection or service.
 
 **Required**: Yes
 
 **Repeatable**: No
 
-**Accepted Values**: 
+**Accepted Values**: Multi-part element; see subfield definitions for more information.
+
+**Examples:**
+
+```json
+{
+  "name": "Urban Institute",
+  "name_code": "1234",
+  "name_uri": "https://icpsr.example.com/organizations/1234",
+  "ror": "https://ror.org/017pz3h73",
+  "email": "info@urban.institute"
+}
+```
 
 ##### Funding Awards
 
@@ -594,19 +671,19 @@ https://doi.org/10.1000/182
 
 ```
     organization: {'name': 'Robert Wood Johnson Foundation', 'name_code': '5643', 'name_uri': 'https://icpsr.example.com/organizations/5643', 'ror': 'https://ror.org/02ymmdj85'}
-    Funding Awards: [{'grant_number': 'MDR-8550085'}, {'grant_number': 'MDR-8550204'}]
-    Order: 0
+    grants: [{'grant_number': 'MDR-8550085'}, {'grant_number': 'MDR-8550204'}]
+    order: 0
 ```
 
 ```
     organization: {'name': 'United States Department of Justice. Office of Justice Programs. Bureau of Justice Statistics', 'name_code': '2342', 'name_uri': 'https://icpsr.example.com/organizations/2342', 'ror': 'https://ror.org/0006s4z66'}
-    Funding Awards: [{'grant_number': 'SES-1835721', 'grant_uri': 'https://doi.org/10.35802/000000'}]
-    Order: 1
+    grants: [{'grant_number': 'SES-1835721', 'grant_uri': 'https://doi.org/10.35802/000000'}]
+    order: 1
 ```
 
 ```
     organization: {'name': 'Acme Foundation'}
-    Order: 0
+    order: 0
 ```
 
 
@@ -690,21 +767,21 @@ https://doi.org/10.1000/182
 ###### Complete Examples (with Subfields):
 
 ```
-    General Data Format: Text
-    General Data Format Code: Text
-    General Data Format URI: https://example.com/general_data_format/972
+    label: Text
+    code: Text
+    uri: https://example.com/general_data_format/972
 ```
 
 ```
-    General Data Format: Still image
-    General Data Format Code: StillImage
-    General Data Format URI: https://example.com/general_data_format/234
+    label: Still image
+    code: StillImage
+    uri: https://example.com/general_data_format/234
 ```
 
 ```
-    General Data Format: Numeric
-    General Data Format Code: Numeric
-    General Data Format URI: https://example.com/general_data_format/563
+    label: Numeric
+    code: Numeric
+    uri: https://example.com/general_data_format/563
 ```
 
 
@@ -848,21 +925,21 @@ https://doi.org/10.1000/182
 ###### Complete Examples (with Subfields):
 
 ```
-    City: Cleveland
-    State: Ohio
-    Country: United States
-    Geographic Coverage Area URI: https://www.geonames.org/5150529
+    city: Cleveland
+    state: Ohio
+    country: United States
+    uri: https://www.geonames.org/5150529
 ```
 
 ```
-    City: Pittsburgh
-    State: Pennsylvania
-    Country: United States
-    Geographic Coverage Area URI: https://www.geonames.org/5206379
+    city: Pittsburgh
+    state: Pennsylvania
+    country: United States
+    uri: https://www.geonames.org/5206379
 ```
 
 ```
-    Country: Germany
+    country: Germany
 ```
 
 
@@ -956,21 +1033,21 @@ https://doi.org/10.1000/182
 ###### Complete Examples (with Subfields):
 
 ```
-    ICPSR Subject Term: biographical data
-    ICPSR Subject Term Code: 20391
-    ICPSR Subject Term URI: https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/20391
+    label: biographical data
+    code: 20391
+    uri: https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/20391
 ```
 
 ```
-    ICPSR Subject Term: age
-    ICPSR Subject Term Code: 24123
-    ICPSR Subject Term URI: https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/24123
+    label: age
+    code: 24123
+    uri: https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/24123
 ```
 
 ```
-    ICPSR Subject Term: happiness
-    ICPSR Subject Term Code: 25624
-    ICPSR Subject Term URI: https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/25624
+    label: happiness
+    code: 25624
+    uri: https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/25624
 ```
 
 
@@ -1060,21 +1137,21 @@ https://doi.org/10.1000/182
 ###### Complete Examples (with Subfields):
 
 ```
-    JEL Classification Term: A12 Relation of Economics to Other Disciplines
-    JEL Classification Code: a12
-    JEL Classification URI: http://example.com/jel/a12
+    label: A12 Relation of Economics to Other Disciplines
+    code: a12
+    uri: http://example.com/jel/a12
 ```
 
 ```
-    JEL Classification Term: B00 History of Economic Thought, Methodology, and Heterodox Approaches
-    JEL Classification Code: b00
-    JEL Classification URI: http://example.com/jel/b00
+    label: B00 History of Economic Thought, Methodology, and Heterodox Approaches
+    code: b00
+    uri: http://example.com/jel/b00
 ```
 
 ```
-    JEL Classification Term: N22 Economic History: Financial Markets and Institutions: U.S.; Canada: 1913-
-    JEL Classification Code: n22
-    JEL Classification URI: http://example.com/jel/n22
+    label: N22 Economic History: Financial Markets and Institutions: U.S.; Canada: 1913-
+    code: n22
+    uri: http://example.com/jel/n22
 ```
 
 
@@ -1089,10 +1166,16 @@ https://doi.org/10.1000/182
 
 **Accepted Values**: Multi-part element; see subfield definitions for more information.
 
-**Examples:**
+###### Examples:
 
 ```
-{'name': 'Creative Commons Attribution Non Commercial 4.0 International', 'code': 'CC-BY-NC-4.0', 'uri': 'https://creativecommons.org/licenses/by-nc/4.0/'}
+    {'name': 'Creative Commons Attribution Non Commercial 4.0 International', 'code': 'CC-BY-NC-4.0', 'uri': 'https://creativecommons.org/licenses/by-nc/4.0/'}
+```
+
+###### Examples:
+
+```
+    {'name': 'Creative Commons Attribution Non Commercial 4.0 International', 'code': 'CC-BY-NC-4.0', 'uri': 'https://creativecommons.org/licenses/by-nc/4.0/'}
 ```
 
 
@@ -1180,15 +1263,15 @@ https://doi.org/10.1000/182
 ###### Complete Examples (with Subfields):
 
 ```
-    MeSH Subject Term: anxiety
-    MeSH Subject Term Code: D001007
-    MeSH Subject Term URI: http://id.nlm.nih.gov/mesh/D001007
+    label: anxiety
+    code: D001007
+    uri: http://id.nlm.nih.gov/mesh/D001007
 ```
 
 ```
-    MeSH Subject Term: brain waves
-    MeSH Subject Term Code: D058256
-    MeSH Subject Term URI: http://id.nlm.nih.gov/mesh/D058256
+    label: brain waves
+    code: D058256
+    uri: http://id.nlm.nih.gov/mesh/D058256
 ```
 
 
@@ -1203,14 +1286,24 @@ https://doi.org/10.1000/182
 
 **Accepted Values**: Text
 
-**Examples:**
+###### Examples:
 
 ```
-Yes
+    Yes
 ```
 
 ```
-No
+    No
+```
+
+###### Examples:
+
+```
+    Yes
+```
+
+```
+    No
 ```
 
 
@@ -1225,14 +1318,32 @@ No
 
 **Accepted Values**: Text
 
-**Examples:**
+###### Examples:
 
 ```
-['Information on the Index of Consumer Sentiment, the Index of Current Economic Conditions, and the Index of Consumer Expectations and how they were created can be found in the P.I. Codebook', 'Dataset 1 should be attributed to Jane Doe while datasets 2-6 should be attributed to John Doe']
+    Information on the Index of Consumer Sentiment, the Index of Current Economic Conditions, and the Index of Consumer Expectations and how they were created can be found in the P.I. Codebook
 ```
 
 ```
-['Additional information on the Survey of Consumers can be found by visiting the Survey of Consumers Website']
+    Dataset 1 should be attributed to Jane Doe while datasets 2-6 should be attributed to John Doe
+```
+
+```
+    Additional information on the Survey of Consumers can be found by visiting the Survey of Consumers Website
+```
+
+###### Examples:
+
+```
+    Information on the Index of Consumer Sentiment, the Index of Current Economic Conditions, and the Index of Consumer Expectations and how they were created can be found in the P.I. Codebook
+```
+
+```
+    Dataset 1 should be attributed to Jane Doe while datasets 2-6 should be attributed to John Doe
+```
+
+```
+    Additional information on the Survey of Consumers can be found by visiting the Survey of Consumers Website
 ```
 
 
@@ -1247,10 +1358,16 @@ No
 
 **Accepted Values**: Multi-part element; see subfield definitions for more information.
 
-**Examples:**
+###### Examples:
 
 ```
-{'name': 'Urban Institute', 'name_code': '1234', 'name_uri': 'https://icpsr.example.com/organizations/1234', 'ror': 'https://ror.org/017pz3h73', 'email': 'info@urban.institute'}
+    {'name': 'Urban Institute', 'name_code': '1234', 'name_uri': 'https://icpsr.example.com/organizations/1234', 'ror': 'https://ror.org/017pz3h73', 'email': 'info@urban.institute'}
+```
+
+###### Examples:
+
+```
+    {'name': 'Urban Institute', 'name_code': '1234', 'name_uri': 'https://icpsr.example.com/organizations/1234', 'ror': 'https://ror.org/017pz3h73', 'email': 'info@urban.institute'}
 ```
 
 
@@ -1265,14 +1382,24 @@ No
 
 **Accepted Values**: Multi-part element; see subfield definitions for more information.
 
-**Examples:**
+###### Examples:
 
 ```
-{'name': {'given': 'Jane Q.', 'family': 'Doe II'}, 'orcid': 'https://orcid.org/0000-0001-6666-5717', 'researcher_passport_profile_id': '1234', 'affiliations': [{'name': 'Urban Institute', 'name_code': '2342', 'name_uri': 'https://icpsr.example.com/organizations/2342', 'ror': 'https://ror.org/017pz3h73', 'icpsr_org_id': 'xyz123'}, {'name': 'Example University'}], 'email': 'jane.doe@example.com'}
+    {'name': {'given': 'Jane Q.', 'family': 'Doe II'}, 'orcid': 'https://orcid.org/0000-0001-6666-5717', 'researcher_passport_profile_id': '1234', 'affiliations': [{'name': 'Urban Institute', 'name_code': '2342', 'name_uri': 'https://icpsr.example.com/organizations/2342', 'ror': 'https://ror.org/017pz3h73', 'icpsr_org_id': 'xyz123'}, {'name': 'Example University'}], 'email': 'jane.doe@example.com'}
 ```
 
 ```
-{'name': {'given': 'Joe'}}
+    {'name': {'given': 'Joe'}}
+```
+
+###### Examples:
+
+```
+    {'name': {'given': 'Jane Q.', 'family': 'Doe II'}, 'orcid': 'https://orcid.org/0000-0001-6666-5717', 'researcher_passport_profile_id': '1234', 'affiliations': [{'name': 'Urban Institute', 'name_code': '2342', 'name_uri': 'https://icpsr.example.com/organizations/2342', 'ror': 'https://ror.org/017pz3h73', 'icpsr_org_id': 'xyz123'}, {'name': 'Example University'}], 'email': 'jane.doe@example.com'}
+```
+
+```
+    {'name': {'given': 'Joe'}}
 ```
 
 
@@ -1287,10 +1414,16 @@ No
 
 **Accepted Values**: Text
 
-**Examples:**
+###### Examples:
 
 ```
-https://doi.org/10.1000/182
+    https://doi.org/10.1000/182
+```
+
+###### Examples:
+
+```
+    https://doi.org/10.1000/182
 ```
 
 
@@ -1309,29 +1442,75 @@ https://doi.org/10.1000/182
 
 | Property | Required? | Repeatable? | Accepted Values | Description |
 | -------- | --------- | ----------- | --------------- | ----------- |
-| person | No | No |  |  |
-| organization | No | No |  |  |
+| Person | No | No | Multi-part element; see subfield definitions for more information. | A person associated with an ICPSR data collection or service. |
+| Organization | No | No | Multi-part element; see subfield definitions for more information. | An organization associated with an ICPSR data collection or service. |
 | Order | No | No | Number | The order or rank of importance for the PIs associated with the data collection, typically provided to ICPSR by the lead PI. |
 
-##### person
+##### Person
 
-**Description:** 
-
-**Required**: No
-
-**Repeatable**: No
-
-**Accepted Values**: 
-
-##### organization
-
-**Description:** 
+**Description:** A person associated with an ICPSR data collection or service.
 
 **Required**: No
 
 **Repeatable**: No
 
-**Accepted Values**: 
+**Accepted Values**: Multi-part element; see subfield definitions for more information.
+
+**Examples:**
+
+```json
+{
+  "name": {
+    "given": "Jane Q.",
+    "family": "Doe II"
+  },
+  "orcid": "https://orcid.org/0000-0001-6666-5717",
+  "researcher_passport_profile_id": "1234",
+  "affiliations": [
+    {
+      "name": "Urban Institute",
+      "name_code": "2342",
+      "name_uri": "https://icpsr.example.com/organizations/2342",
+      "ror": "https://ror.org/017pz3h73",
+      "icpsr_org_id": "xyz123"
+    },
+    {
+      "name": "Example University"
+    }
+  ],
+  "email": "jane.doe@example.com"
+}
+```
+
+```json
+{
+  "name": {
+    "given": "Joe"
+  }
+}
+```
+
+##### Organization
+
+**Description:** An organization associated with an ICPSR data collection or service.
+
+**Required**: No
+
+**Repeatable**: No
+
+**Accepted Values**: Multi-part element; see subfield definitions for more information.
+
+**Examples:**
+
+```json
+{
+  "name": "Urban Institute",
+  "name_code": "1234",
+  "name_uri": "https://icpsr.example.com/organizations/1234",
+  "ror": "https://ror.org/017pz3h73",
+  "email": "info@urban.institute"
+}
+```
 
 ##### Order
 
@@ -1363,6 +1542,14 @@ https://doi.org/10.1000/182
 
 ###### Complete Examples (with Subfields):
 
+```
+    <p><b>Personal Principal Investigator</b></p><p><table><thead><tr><th>First Name</th><th>Last Name</th><th>Affiliation</th></tr></thead><tbody><tr><td>Veronica</td><td>Martinez-Ebers</td><td>National Institute for Law and Equity</td></tr><tr><td>Lawrence F.</td><td>Travis III</td><td>University of Cincinnati</td></tr></tbody></table></p>
+```
+
+```
+    <p><b>Organizational Principal Investigator</b></p><p><table><thead><tr><th>Name</th></tr></thead><tbody><tr><td>United States Department of Labor. Bureau of Labor Statistics</td></tr><tr><td>The Washington Post</td></tr></tbody></table></p>
+```
+
 
 ---
 
@@ -1375,16 +1562,26 @@ https://doi.org/10.1000/182
 
 **Accepted Values**: Text
 
+###### Examples:
+
+```
+    The overall response rate for this survey was 20.22%; 72.6% for existing panelists and 10.4% for new panelists, using AAPOR Response Rate 1.
+```
+
+```
+    Not applicable.
+```
+
 **Usage Notes:** This field is only applicable if the data were collected with a survey instrument and the response rates are provided.
 
-**Examples:**
+###### Examples:
 
 ```
-The overall response rate for this survey was 20.22%; 72.6% for existing panelists and 10.4% for new panelists, using AAPOR Response Rate 1.
+    The overall response rate for this survey was 20.22%; 72.6% for existing panelists and 10.4% for new panelists, using AAPOR Response Rate 1.
 ```
 
 ```
-Not applicable.
+    Not applicable.
 ```
 
 
@@ -1399,16 +1596,26 @@ Not applicable.
 
 **Accepted Values**: Text
 
+###### Examples:
+
+```
+    National sample of telephone numbers from cell (RDD) sampling frame.
+```
+
+```
+    The probability sample selected to represent the universe consists of approximately 71,000 households.
+```
+
 **Usage Notes:** A detailed discussion of such things as sampling error or other limitations of the sampling methodology is not required here.
 
-**Examples:**
+###### Examples:
 
 ```
-National sample of telephone numbers from cell (RDD) sampling frame.
+    National sample of telephone numbers from cell (RDD) sampling frame.
 ```
 
 ```
-The probability sample selected to represent the universe consists of approximately 71,000 households.
+    The probability sample selected to represent the universe consists of approximately 71,000 households.
 ```
 
 
@@ -1423,16 +1630,46 @@ The probability sample selected to represent the universe consists of approximat
 
 **Accepted Values**: Text
 
+###### Examples:
+
+```
+    label: Probability: Systematic random
+    code: Probability.SystematicRandom
+    uri: https://example.com/sampling_procedures/123
+```
+
+```
+    label: Other
+    code: Other
+    uri: https://example.com/sampling_procedures/737
+```
+
+```
+    label: Total universe/Complete enumeration
+    code: TotalUniverseCompleteEnumeration
+    uri: https://example.com/sampling_procedures/234
+```
+
 **Usage Notes:** The sample is a selection out of the universe of all possible relevant cases (e.g., adults in the United States, housing units in three counties of Michigan, etc.) that could have been included in the data collection. Note that some studies, such as censuses, do not utilize samples but include all members of the universe. This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance CV SamplingProcedure https://rdf-vocabulary.ddialliance.org/ddi-cv/SamplingProcedure/1.1.4/SamplingProcedure.html.
 
-**Examples:**
+###### Examples:
 
 ```
-[{'label': 'Probability: Systematic random', 'code': 'Probability.SystematicRandom', 'uri': 'https://example.com/sampling_procedures/123'}, {'label': 'Other', 'code': 'Other', 'uri': 'https://example.com/sampling_procedures/737'}]
+    label: Probability: Systematic random
+    code: Probability.SystematicRandom
+    uri: https://example.com/sampling_procedures/123
 ```
 
 ```
-[{'label': 'Total universe/Complete enumeration', 'code': 'TotalUniverseCompleteEnumeration', 'uri': 'https://example.com/sampling_procedures/234'}]
+    label: Other
+    code: Other
+    uri: https://example.com/sampling_procedures/737
+```
+
+```
+    label: Total universe/Complete enumeration
+    code: TotalUniverseCompleteEnumeration
+    uri: https://example.com/sampling_procedures/234
 ```
 
 
@@ -1447,16 +1684,42 @@ The probability sample selected to represent the universe consists of approximat
 
 **Accepted Values**: Text
 
+###### Examples:
+
+```
+    The baseline data collection included one scale - the CES-D index for maternal depression [Cole, J. C., Rabin, A. S., Smith, T. L., and Kaufman, A. S. (2004). Development and validation of a Rasch-derived CES-D short form. Psychological assessment, 16(4), 360]. All scales used for outcomes at ages 1 through 3 are listed in Appendix Tables 1 and 2 in the User Guide. Please refer to the User Guide and P.I. Codebook, available under the 'Data and Documentation' tab, for details.
+```
+
+```
+    Squires, J., Bricker, D. D., and Twombly, E. (2009). Ages and stages questionnaires. Baltimore, MD: Paul H. Brookes.
+```
+
+```
+    Briggs-Gowan, M. J., Carter, A. S., Irwin, J. R., Wachtel, K., and Cicchetti, D. V. (2004). The Brief Infant-Toddler Social and Emotional Assessment: screening for social-emotional problems and delays in competence. Journal of pediatric psychology, 29(2), 143-155.
+```
+
+```
+    Yu, L., Buysse, D. J., Germain, A., Moul, D. E., Stover, A., Dodds, N. E., ... and Pilkonis, P. A. (2012). Development of short forms from the PROMIS sleep disturbance and sleep-related impairment item banks. Behavioral sleep medicine, 10(1), 6-24.
+```
+
 **Usage Notes:** Include common scales that can be readily identified from the data, documentation, or other related materials. ICPSR curators are not expected to infer or research scales that are not explicitly indicated. The scales can be cited either as a list or described in full sentences. If the questionnaire used has a finite list of responses (e.g., 'Always, Sometimes, Rarely, Never' or Strongly Agree, Agree, Disagree, Strongly Disagree'), it is acceptable for this element to note 'A Likert-type scale was used,' or 'Several Likert-type scales were used.' However, it is not required to note Likart-type scales in situations where only such scales were used, given their ubiquity.
 
-**Examples:**
+###### Examples:
 
 ```
-["The baseline data collection included one scale - the CES-D index for maternal depression [Cole, J. C., Rabin, A. S., Smith, T. L., and Kaufman, A. S. (2004). Development and validation of a Rasch-derived CES-D short form. Psychological assessment, 16(4), 360]. All scales used for outcomes at ages 1 through 3 are listed in Appendix Tables 1 and 2 in the User Guide. Please refer to the User Guide and P.I. Codebook, available under the 'Data and Documentation' tab, for details."]
+    The baseline data collection included one scale - the CES-D index for maternal depression [Cole, J. C., Rabin, A. S., Smith, T. L., and Kaufman, A. S. (2004). Development and validation of a Rasch-derived CES-D short form. Psychological assessment, 16(4), 360]. All scales used for outcomes at ages 1 through 3 are listed in Appendix Tables 1 and 2 in the User Guide. Please refer to the User Guide and P.I. Codebook, available under the 'Data and Documentation' tab, for details.
 ```
 
 ```
-['Squires, J., Bricker, D. D., and Twombly, E. (2009). Ages and stages questionnaires. Baltimore, MD: Paul H. Brookes.', 'Briggs-Gowan, M. J., Carter, A. S., Irwin, J. R., Wachtel, K., and Cicchetti, D. V. (2004). The Brief Infant-Toddler Social and Emotional Assessment: screening for social-emotional problems and delays in competence. Journal of pediatric psychology, 29(2), 143-155.', 'Yu, L., Buysse, D. J., Germain, A., Moul, D. E., Stover, A., Dodds, N. E., ... and Pilkonis, P. A. (2012). Development of short forms from the PROMIS sleep disturbance and sleep-related impairment item banks. Behavioral sleep medicine, 10(1), 6-24.']
+    Squires, J., Bricker, D. D., and Twombly, E. (2009). Ages and stages questionnaires. Baltimore, MD: Paul H. Brookes.
+```
+
+```
+    Briggs-Gowan, M. J., Carter, A. S., Irwin, J. R., Wachtel, K., and Cicchetti, D. V. (2004). The Brief Infant-Toddler Social and Emotional Assessment: screening for social-emotional problems and delays in competence. Journal of pediatric psychology, 29(2), 143-155.
+```
+
+```
+    Yu, L., Buysse, D. J., Germain, A., Moul, D. E., Stover, A., Dodds, N. E., ... and Pilkonis, P. A. (2012). Development of short forms from the PROMIS sleep disturbance and sleep-related impairment item banks. Behavioral sleep medicine, 10(1), 6-24.
 ```
 
 
@@ -1471,20 +1734,34 @@ The probability sample selected to represent the universe consists of approximat
 
 **Accepted Values**: Multi-part element; see subfield definitions for more information.
 
+###### Examples:
+
+```
+    {'label': 'state', 'code': '123', 'uri': 'https://example.com/smallest_geographic_unit/123'}
+```
+
+```
+    {'label': 'Census tract', 'code': '234', 'uri': 'https://example.com/smallest_geographic_unit/234'}
+```
+
+```
+    {'label': 'precinct', 'code': '345', 'uri': 'https://example.com/smallest_geographic_unit/345'}
+```
+
 **Usage Notes:** Geographic Unit is intended to represent specific, known geography -- e.g., county, census district, FIPS code, electoral district, and any other conveyor of specific geography that is represented by a variable. If the data do not include a geographic variable by which the data can be analyzed, this element is not indicated. If all the cases are from a single state, but the cases are not subdivided geographically within that state, then 'state' is not indicated. This element is only meant to convey specific, known, geography. If there is a variable indicating which testing site a survey was taken at, but the locations of the testing sites were masked by the PI, this element is likely not indicated.
 
-**Examples:**
+###### Examples:
 
 ```
-{'label': 'state', 'code': '123', 'uri': 'https://example.com/smallest_geographic_unit/123'}
-```
-
-```
-{'label': 'Census tract', 'code': '234', 'uri': 'https://example.com/smallest_geographic_unit/234'}
+    {'label': 'state', 'code': '123', 'uri': 'https://example.com/smallest_geographic_unit/123'}
 ```
 
 ```
-{'label': 'precinct', 'code': '345', 'uri': 'https://example.com/smallest_geographic_unit/345'}
+    {'label': 'Census tract', 'code': '234', 'uri': 'https://example.com/smallest_geographic_unit/234'}
+```
+
+```
+    {'label': 'precinct', 'code': '345', 'uri': 'https://example.com/smallest_geographic_unit/345'}
 ```
 
 
@@ -1817,13 +2094,13 @@ The probability sample selected to represent the universe consists of approximat
 ###### Complete Examples (with Subfields):
 
 ```
-    Software Name: siegfried
-    Software Version: 1.11.1
-    Software Description: Siegfried is a signature-based file format identification tool, implementing the National Archives UK's PRONOM file format signatures; freedesktop.org's MIME-info file format signatures; the Library of Congress's FDD file format signatures (beta); and Wikidata (beta).
-    Programming Languages: ['go', 'javascript', 'other']
-    Operating Systems: ['mac', 'linux', 'windows']
-    License: https://www.apache.org/licenses/LICENSE-2.0
-    Download URL: https://github.com/richardlehane/siegfried/archive/refs/heads/main.zip
+    name: siegfried
+    software_version: 1.11.1
+    description: Siegfried is a signature-based file format identification tool, implementing the National Archives UK's PRONOM file format signatures; freedesktop.org's MIME-info file format signatures; the Library of Congress's FDD file format signatures (beta); and Wikidata (beta).
+    programming_languages: ['go', 'javascript', 'other']
+    operating_systems: ['mac', 'linux', 'windows']
+    license: https://www.apache.org/licenses/LICENSE-2.0
+    download_url: https://github.com/richardlehane/siegfried/archive/refs/heads/main.zip
 ```
 
 
@@ -1838,12 +2115,18 @@ The probability sample selected to represent the universe consists of approximat
 
 **Accepted Values**: Text
 
-**Usage Notes:** The Study Design provides more detailed information than the Summary, including how surveys were prepared and administered, how interviews were conducted, or how the data were obtained and compiled, as well as information about deadlines and follow-ups to respondents.
-
-**Examples:**
+###### Examples:
 
 ```
-Data on organizational culture in each of the 12 courts (Part 1) were obtained by administering the Court Culture Assessment Instrument (CCAI) to all judges with a felony criminal court docket and to all senior court administrators. A total of 224 respondents completed the questionnaire. The CCAI was used to assess five key dimensions of current court culture orientation: (1) dominant case management style, (2) judicial and court staff relations, (3) change management, (4) courthouse leadership, and (5) internal organization. The determination of what culture judges and court administrators desired to establish in the near future was also obtained through the application of the same instrument (CACI) as practitioners were asked to indicate the type of culture in each work area (or content dimension) they would like to see in their court in the next five years.
+    Data on organizational culture in each of the 12 courts (Part 1) were obtained by administering the Court Culture Assessment Instrument (CCAI) to all judges with a felony criminal court docket and to all senior court administrators. A total of 224 respondents completed the questionnaire. The CCAI was used to assess five key dimensions of current court culture orientation: (1) dominant case management style, (2) judicial and court staff relations, (3) change management, (4) courthouse leadership, and (5) internal organization. The determination of what culture judges and court administrators desired to establish in the near future was also obtained through the application of the same instrument (CACI) as practitioners were asked to indicate the type of culture in each work area (or content dimension) they would like to see in their court in the next five years.
+```
+
+**Usage Notes:** The Study Design provides more detailed information than the Summary, including how surveys were prepared and administered, how interviews were conducted, or how the data were obtained and compiled, as well as information about deadlines and follow-ups to respondents.
+
+###### Examples:
+
+```
+    Data on organizational culture in each of the 12 courts (Part 1) were obtained by administering the Court Culture Assessment Instrument (CCAI) to all judges with a felony criminal court docket and to all senior court administrators. A total of 224 respondents completed the questionnaire. The CCAI was used to assess five key dimensions of current court culture orientation: (1) dominant case management style, (2) judicial and court staff relations, (3) change management, (4) courthouse leadership, and (5) internal organization. The determination of what culture judges and court administrators desired to establish in the near future was also obtained through the application of the same instrument (CACI) as practitioners were asked to indicate the type of culture in each work area (or content dimension) they would like to see in their court in the next five years.
 ```
 
 
@@ -1858,16 +2141,29 @@ Data on organizational culture in each of the 12 courts (Part 1) were obtained b
 
 **Accepted Values**: Text
 
-**Usage Notes:** {'$ref': 'https://schemas.icpsr.umich.edu/notes/summary/usageNotes'}
-
-**Examples:**
+###### Examples:
 
 ```
-In 2014, Chicago Public Schools, looking to reduce the possibility of gun violence among school-aged youth, applied for a grant through the National Institute of Justice. CPS was awarded the Comprehensive School Safety Initiative grant and use said grant to establish the 'Connect and Redirect to Respect' program. This program used student social media data to identify and intervene with students thought to be at higher risk for committing violence. At-risk behaviors included brandishing a weapon, instigating conflict online, signaling gang involvement, and threats towards others. Identified at-risk students would be contacted by a member of the CPS Network Safety Team or the Chicago Police Department's Gang School Safety Team, depending on the risk level of the behavior. To evaluate the efficacy of CRR, the University of Chicago Crime Lab compared outcomes for students enrolled in schools that received the program to outcomes for students enrolled in comparison schools, which did not receive the program. 32 schools were selected for the study, with a total of 44,503 students. Demographic variables included age, race, sex, and ethnicity. Misconduct and academic variables included arrest history, in-school suspensions, out-of-school suspensions, GPA, and attendance days.
+    In 2014, Chicago Public Schools, looking to reduce the possibility of gun violence among school-aged youth, applied for a grant through the National Institute of Justice. CPS was awarded the Comprehensive School Safety Initiative grant and use said grant to establish the 'Connect and Redirect to Respect' program. This program used student social media data to identify and intervene with students thought to be at higher risk for committing violence. At-risk behaviors included brandishing a weapon, instigating conflict online, signaling gang involvement, and threats towards others. Identified at-risk students would be contacted by a member of the CPS Network Safety Team or the Chicago Police Department's Gang School Safety Team, depending on the risk level of the behavior. To evaluate the efficacy of CRR, the University of Chicago Crime Lab compared outcomes for students enrolled in schools that received the program to outcomes for students enrolled in comparison schools, which did not receive the program. 32 schools were selected for the study, with a total of 44,503 students. Demographic variables included age, race, sex, and ethnicity. Misconduct and academic variables included arrest history, in-school suspensions, out-of-school suspensions, GPA, and attendance days.
 ```
 
 ```
-The Health and Relationship Project is a study of both spouses in same-sex and different-sex marriages who were legally married and aged 35 to 65 at the time of data collection (2015). There are two parts of this study: a baseline questionnaire and a daily diary questionnaire completed for 10 consecutive days; both components were completed online and spouses were asked to complete the surveys separately. The baseline questionnaire asks participants about a number of topics related to marriage and health, including stress, health status and health behaviors, relationship quality, and how they have approached health problems in the past. The diary questionnaire asks participants a number of questions about the past 24 hours, including daily stress experiences, social interactions, and health behaviors.
+    The Health and Relationship Project is a study of both spouses in same-sex and different-sex marriages who were legally married and aged 35 to 65 at the time of data collection (2015). There are two parts of this study: a baseline questionnaire and a daily diary questionnaire completed for 10 consecutive days; both components were completed online and spouses were asked to complete the surveys separately. The baseline questionnaire asks participants about a number of topics related to marriage and health, including stress, health status and health behaviors, relationship quality, and how they have approached health problems in the past. The diary questionnaire asks participants a number of questions about the past 24 hours, including daily stress experiences, social interactions, and health behaviors.
+```
+
+**Usage Notes:** The Summary may include information about the different parts of the data collection not adequately conveyed by the Fileset names or found elsewhere in the metadata. Other important components include a listing of major variables or categories of variables (with examples) as well as an indication of the data collection's unit of analysis (i.e., who or what is being studied: individuals, housing units, courts, criminal acts, etc.). Most often the unit of analysis is the individual; where it is not, it is particularly important to make this clear.
+
+The Summary is written in the third person and avoids attempting to address issues of how the data might be used, who might be interested in the data, or any evaluative comments about the worth or usefulness of the data collection. The Summary uses past tense when describing the process of collecting the data and present tense when necessary, such as when describing the data (e.g., 'The MIDUS Refresher collection is split into two datasets.'). Numerals are used instead of spelling them out; if a number is spelled out for emphasis, the number is attached in parentheses (e.g. 'Two thousand (2,000)').
+
+
+###### Examples:
+
+```
+    In 2014, Chicago Public Schools, looking to reduce the possibility of gun violence among school-aged youth, applied for a grant through the National Institute of Justice. CPS was awarded the Comprehensive School Safety Initiative grant and use said grant to establish the 'Connect and Redirect to Respect' program. This program used student social media data to identify and intervene with students thought to be at higher risk for committing violence. At-risk behaviors included brandishing a weapon, instigating conflict online, signaling gang involvement, and threats towards others. Identified at-risk students would be contacted by a member of the CPS Network Safety Team or the Chicago Police Department's Gang School Safety Team, depending on the risk level of the behavior. To evaluate the efficacy of CRR, the University of Chicago Crime Lab compared outcomes for students enrolled in schools that received the program to outcomes for students enrolled in comparison schools, which did not receive the program. 32 schools were selected for the study, with a total of 44,503 students. Demographic variables included age, race, sex, and ethnicity. Misconduct and academic variables included arrest history, in-school suspensions, out-of-school suspensions, GPA, and attendance days.
+```
+
+```
+    The Health and Relationship Project is a study of both spouses in same-sex and different-sex marriages who were legally married and aged 35 to 65 at the time of data collection (2015). There are two parts of this study: a baseline questionnaire and a daily diary questionnaire completed for 10 consecutive days; both components were completed online and spouses were asked to complete the surveys separately. The baseline questionnaire asks participants about a number of topics related to marriage and health, including stress, health status and health behaviors, relationship quality, and how they have approached health problems in the past. The diary questionnaire asks participants a number of questions about the past 24 hours, including daily stress experiences, social interactions, and health behaviors.
 ```
 
 
@@ -1951,21 +2247,21 @@ The Health and Relationship Project is a study of both spouses in same-sex and d
 ###### Complete Examples (with Subfields):
 
 ```
-    Time Method: Registers/Records/Accounts: Medical/Clinical
-    Time Method Code: RegistersRecordsAccounts.MedicalClinical
-    Time Method URI: https://example.com/time_methods/123
+    label: Registers/Records/Accounts: Medical/Clinical
+    code: RegistersRecordsAccounts.MedicalClinical
+    uri: https://example.com/time_methods/123
 ```
 
 ```
-    Time Method: Events/Interactions
-    Time Method Code: EventsInteractions
-    Time Method URI: https://example.com/time_methods/234
+    label: Events/Interactions
+    code: EventsInteractions
+    uri: https://example.com/time_methods/234
 ```
 
 ```
-    Time Method: Other
-    Time Method Code: Other
-    Time Method URI: https://example.com/time_methods/737
+    label: Other
+    code: Other
+    uri: https://example.com/time_methods/737
 ```
 
 
@@ -2061,14 +2357,14 @@ The Health and Relationship Project is a study of both spouses in same-sex and d
 ###### Complete Examples (with Subfields):
 
 ```
-    Start Date: 2018
-    End Date: 2018
-    Time Frame: Summer and Fall 2018
+    start_date: 2018
+    end_date: 2018
+    time_frame: Summer and Fall 2018
 ```
 
 ```
-    Start Date: 2020-10
-    End Date: 2020-10
+    start_date: 2020-10
+    end_date: 2020-10
 ```
 
 
@@ -2083,26 +2379,48 @@ The Health and Relationship Project is a study of both spouses in same-sex and d
 
 **Accepted Values**: Text
 
-**Examples:**
+###### Examples:
 
 ```
-Bridge of Faith: Aim4Peace Community-Based Violence Prevention Project, Kansas City, Missouri, 2014-2017
-```
-
-```
-Health and Relationships Project, United States, 2014-2015
+    Bridge of Faith: Aim4Peace Community-Based Violence Prevention Project, Kansas City, Missouri, 2014-2017
 ```
 
 ```
-Targeted Interventions to Prevent Chronic Low Back Pain in High Risk Patients: A Multi-Site Pragmatic Randomized Controlled Trial (TARGET Trial), 4 U.S. cities, 2016-2019
+    Health and Relationships Project, United States, 2014-2015
 ```
 
 ```
-Aid Like A Paycheck (ALAP), Texas and California, 2014-2017
+    Targeted Interventions to Prevent Chronic Low Back Pain in High Risk Patients: A Multi-Site Pragmatic Randomized Controlled Trial (TARGET Trial), 4 U.S. cities, 2016-2019
 ```
 
 ```
-COVID-19 Disruptions Disproportionately Affect Female Academics, Global, 2020
+    Aid Like A Paycheck (ALAP), Texas and California, 2014-2017
+```
+
+```
+    COVID-19 Disruptions Disproportionately Affect Female Academics, Global, 2020
+```
+
+###### Examples:
+
+```
+    Bridge of Faith: Aim4Peace Community-Based Violence Prevention Project, Kansas City, Missouri, 2014-2017
+```
+
+```
+    Health and Relationships Project, United States, 2014-2015
+```
+
+```
+    Targeted Interventions to Prevent Chronic Low Back Pain in High Risk Patients: A Multi-Site Pragmatic Randomized Controlled Trial (TARGET Trial), 4 U.S. cities, 2016-2019
+```
+
+```
+    Aid Like A Paycheck (ALAP), Texas and California, 2014-2017
+```
+
+```
+    COVID-19 Disruptions Disproportionately Affect Female Academics, Global, 2020
 ```
 
 
@@ -2215,32 +2533,58 @@ COVID-19 Disruptions Disproportionately Affect Female Academics, Global, 2020
 
 **Accepted Values**: Text
 
+###### Examples:
+
+```
+    All households in the United States with phones.
+```
+
+```
+    Part 1: Thirty cities in Massachusetts during 1980-1986. Parts 2-4: All residents in Massachusetts during 1986.
+```
+
+```
+    Individuals self-identified as transgender, trans, genderqueer, non-binary, or other identities on the transgender identity spectrum aged 18 and older residing in the fifty U.S. states, the District of Columbia, American Samoa, Guam, Puerto Rico, and U.S. military bases overseas.
+```
+
+```
+    Jihadists from the United States and Canada, along with Incels from Germany, Canada, the United States, and United Kingdom.
+```
+
+```
+    All publicly funded medical examiner and coroner offices.
+```
+
+```
+    Uncertified ballots for the 2000 United States presidential election in Florida.
+```
+
 **Usage Notes:** Age, nationality, and residence commonly help to delineate a given universe, but any of a number of factors may be involved, such as sex, race, income, veteran status, criminal convictions, etc. The Universe may consist of elements other than persons, such as housing units, court cases, deaths, countries, etc. It should be possible to tell from the description of the universe whether a given individual or element (hypothetical or real) is a member of the population under study. Typically, the Universe statement is about one sentence or shorter, and reflects the entire possible population a data collection sought to study.
 
-**Examples:**
+###### Examples:
 
 ```
-All households in the United States with phones.
-```
-
-```
-Part 1: Thirty cities in Massachusetts during 1980-1986. Parts 2-4: All residents in Massachusetts during 1986.
+    All households in the United States with phones.
 ```
 
 ```
-Individuals self-identified as transgender, trans, genderqueer, non-binary, or other identities on the transgender identity spectrum aged 18 and older residing in the fifty U.S. states, the District of Columbia, American Samoa, Guam, Puerto Rico, and U.S. military bases overseas.
+    Part 1: Thirty cities in Massachusetts during 1980-1986. Parts 2-4: All residents in Massachusetts during 1986.
 ```
 
 ```
-Jihadists from the United States and Canada, along with Incels from Germany, Canada, the United States, and United Kingdom.
+    Individuals self-identified as transgender, trans, genderqueer, non-binary, or other identities on the transgender identity spectrum aged 18 and older residing in the fifty U.S. states, the District of Columbia, American Samoa, Guam, Puerto Rico, and U.S. military bases overseas.
 ```
 
 ```
-All publicly funded medical examiner and coroner offices.
+    Jihadists from the United States and Canada, along with Incels from Germany, Canada, the United States, and United Kingdom.
 ```
 
 ```
-Uncertified ballots for the 2000 United States presidential election in Florida.
+    All publicly funded medical examiner and coroner offices.
+```
+
+```
+    Uncertified ballots for the 2000 United States presidential election in Florida.
 ```
 
 
@@ -2255,16 +2599,26 @@ Uncertified ballots for the 2000 United States presidential election in Florida.
 
 **Accepted Values**: Text
 
+###### Examples:
+
+```
+    The data includes variables about participants' and their parents' moods, interviewer observations, families' activities, families' health history, participants' school records, and parents' substance use. Demographic variables include race, religion, annual household income, and the participants' parents' employment statuses.
+```
+
+```
+    The LGBTQ Hate Crimes Interviews dataset contains more in-depth information, including victim demographic information, substance abuse history, information on whether the victim is open about their LGBTQ identification, the victim's job status, and information about how the victim reacted to the crime, such as whether or not they reported the crime to the police and their level of cooperation with the police and prosecution.
+```
+
 **Usage Notes:** The Variable Description provides more detailed information than the Summary, including a review of variables that are important for users to know about. The codebook, setup files, and variable groups are appropriate sources of information for Variable Description.
 
-**Examples:**
+###### Examples:
 
 ```
-The data includes variables about participants' and their parents' moods, interviewer observations, families' activities, families' health history, participants' school records, and parents' substance use. Demographic variables include race, religion, annual household income, and the participants' parents' employment statuses.
+    The data includes variables about participants' and their parents' moods, interviewer observations, families' activities, families' health history, participants' school records, and parents' substance use. Demographic variables include race, religion, annual household income, and the participants' parents' employment statuses.
 ```
 
 ```
-The LGBTQ Hate Crimes Interviews dataset contains more in-depth information, including victim demographic information, substance abuse history, information on whether the victim is open about their LGBTQ identification, the victim's job status, and information about how the victim reacted to the crime, such as whether or not they reported the crime to the police and their level of cooperation with the police and prosecution.
+    The LGBTQ Hate Crimes Interviews dataset contains more in-depth information, including victim demographic information, substance abuse history, information on whether the victim is open about their LGBTQ identification, the victim's job status, and information about how the victim reacted to the crime, such as whether or not they reported the crime to the police and their level of cooperation with the police and prosecution.
 ```
 
 
@@ -2389,16 +2743,26 @@ The LGBTQ Hate Crimes Interviews dataset contains more in-depth information, inc
 
 **Accepted Values**: Text
 
+###### Examples:
+
+```
+    Both the TransPop and Cisgender datasets have the same variable named WEIGHT as the weighting variable. The combination datasets have a set of three weight variables (WEIGHT_TRANSPOP, WEIGHT_CISGENDER, WEIGHT_CISGENDER_TRANSPOP)
+```
+
+```
+    A weight variable with two implied decimal places has been included and must be used in any analysis.
+```
+
 **Usage Notes:** Weight includes any information about weighting variables in the data, as well as any other weight information provided by the Principal Investigator. If a weighting formula or coefficient was developed, provide this formula, define its elements, and indicate how the formula is applied to the data. It is acceptable to summarize additional documentation and refer users to those resources for more information.
 
-**Examples:**
+###### Examples:
 
 ```
-Both the TransPop and Cisgender datasets have the same variable named WEIGHT as the weighting variable. The combination datasets have a set of three weight variables (WEIGHT_TRANSPOP, WEIGHT_CISGENDER, WEIGHT_CISGENDER_TRANSPOP)
+    Both the TransPop and Cisgender datasets have the same variable named WEIGHT as the weighting variable. The combination datasets have a set of three weight variables (WEIGHT_TRANSPOP, WEIGHT_CISGENDER, WEIGHT_CISGENDER_TRANSPOP)
 ```
 
 ```
-A weight variable with two implied decimal places has been included and must be used in any analysis.
+    A weight variable with two implied decimal places has been included and must be used in any analysis.
 ```
 
 
