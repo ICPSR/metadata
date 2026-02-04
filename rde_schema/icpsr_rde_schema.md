@@ -56,25 +56,7 @@ Last updated: February 04, 2026
 
 **Accepted Values**: Text
 
-###### Examples:
-
-```
-    Add Health Parent Study
-```
-
-```
-    FACES 2009
-```
-
-```
-    Survey of Consumers
-```
-
-```
-    Eurobarometer 85.2
-```
-
-###### Examples:
+**Examples**:
 
 ```
     Add Health Parent Study
@@ -104,19 +86,9 @@ Last updated: February 04, 2026
 
 **Accepted Values**: Text
 
-###### Examples:
-
-```
-    University of Michigan. Survey Research Center. Economic Behavior Program. Survey of Consumer Attitudes and Behavior, September 2018. Inter-university Consortium for Political and Social Research [distributor], 2021-11-18. https://doi.org/10.3886/ICPSR38121.v1
-```
-
-```
-    United States Department of Justice. Office of Justice Programs. Office of Juvenile Justice and Delinquency Prevention. Juvenile Residential Facility Census, 2020 [United States]. Inter-university Consortium for Political and Social Research [distributor], 2024-07-15. https://doi.org/10.3886/ICPSR38914.v1
-```
-
 **Usage Notes:** The Citation is dynamically assembled from other entry fields in this format: PI (list). Title. Distributor (list), Issued Date. DOI. Note: ICPSR 'union catalog' records (i.e., external resource to which ICPSR links as a courtesy) do not have citations.
 
-###### Examples:
+**Examples**:
 
 ```
     University of Michigan. Survey Research Center. Economic Behavior Program. Survey of Consumer Attitudes and Behavior, September 2018. Inter-university Consortium for Political and Social Research [distributor], 2021-11-18. https://doi.org/10.3886/ICPSR38121.v1
@@ -339,13 +311,7 @@ Last updated: February 04, 2026
 
 **Accepted Values**: Text
 
-###### Examples:
-
-```
-    https://doi.org/10.1000/182
-```
-
-###### Examples:
+**Examples**:
 
 ```
     https://doi.org/10.1000/182
@@ -549,27 +515,9 @@ Last updated: February 04, 2026
 
 **Accepted Values**: Text
 
-###### Examples:
-
-```
-    'Voting Scores.' Congressional Quarterly Almanac 33 (1977), 487-498
-```
-
-```
-    United States Bureau of the Census Economic Surveys, 1998-2000
-```
-
-```
-    United States Congressional Record, 1989
-```
-
-```
-    Annual Company Organization Survey, 2003
-```
-
 **Usage Notes:** External data sources include books, journal articles, administrative records, agency-sponsored surveys, and machine-readable files. Each source includes at minimum the title, author, publication year, and journal (if applicable). Any citation format is accepted.
 
-###### Examples:
+**Examples**:
 
 ```
     'Voting Scores.' Congressional Quarterly Almanac 33 (1977), 487-498
@@ -1166,13 +1114,7 @@ Last updated: February 04, 2026
 
 **Accepted Values**: Multi-part element; see subfield definitions for more information.
 
-###### Examples:
-
-```
-    {'name': 'Creative Commons Attribution Non Commercial 4.0 International', 'code': 'CC-BY-NC-4.0', 'uri': 'https://creativecommons.org/licenses/by-nc/4.0/'}
-```
-
-###### Examples:
+**Examples**:
 
 ```
     {'name': 'Creative Commons Attribution Non Commercial 4.0 International', 'code': 'CC-BY-NC-4.0', 'uri': 'https://creativecommons.org/licenses/by-nc/4.0/'}
@@ -1286,17 +1228,7 @@ Last updated: February 04, 2026
 
 **Accepted Values**: Text
 
-###### Examples:
-
-```
-    Yes
-```
-
-```
-    No
-```
-
-###### Examples:
+**Examples**:
 
 ```
     Yes
@@ -1318,21 +1250,7 @@ Last updated: February 04, 2026
 
 **Accepted Values**: Text
 
-###### Examples:
-
-```
-    Information on the Index of Consumer Sentiment, the Index of Current Economic Conditions, and the Index of Consumer Expectations and how they were created can be found in the P.I. Codebook
-```
-
-```
-    Dataset 1 should be attributed to Jane Doe while datasets 2-6 should be attributed to John Doe
-```
-
-```
-    Additional information on the Survey of Consumers can be found by visiting the Survey of Consumers Website
-```
-
-###### Examples:
+**Examples**:
 
 ```
     Information on the Index of Consumer Sentiment, the Index of Current Economic Conditions, and the Index of Consumer Expectations and how they were created can be found in the P.I. Codebook
@@ -1358,13 +1276,7 @@ Last updated: February 04, 2026
 
 **Accepted Values**: Multi-part element; see subfield definitions for more information.
 
-###### Examples:
-
-```
-    {'name': 'Urban Institute', 'name_code': '1234', 'name_uri': 'https://icpsr.example.com/organizations/1234', 'ror': 'https://ror.org/017pz3h73', 'email': 'info@urban.institute'}
-```
-
-###### Examples:
+**Examples**:
 
 ```
     {'name': 'Urban Institute', 'name_code': '1234', 'name_uri': 'https://icpsr.example.com/organizations/1234', 'ror': 'https://ror.org/017pz3h73', 'email': 'info@urban.institute'}
@@ -1382,17 +1294,7 @@ Last updated: February 04, 2026
 
 **Accepted Values**: Multi-part element; see subfield definitions for more information.
 
-###### Examples:
-
-```
-    {'name': {'given': 'Jane Q.', 'family': 'Doe II'}, 'orcid': 'https://orcid.org/0000-0001-6666-5717', 'researcher_passport_profile_id': '1234', 'affiliations': [{'name': 'Urban Institute', 'name_code': '2342', 'name_uri': 'https://icpsr.example.com/organizations/2342', 'ror': 'https://ror.org/017pz3h73', 'icpsr_org_id': 'xyz123'}, {'name': 'Example University'}], 'email': 'jane.doe@example.com'}
-```
-
-```
-    {'name': {'given': 'Joe'}}
-```
-
-###### Examples:
+**Examples**:
 
 ```
     {'name': {'given': 'Jane Q.', 'family': 'Doe II'}, 'orcid': 'https://orcid.org/0000-0001-6666-5717', 'researcher_passport_profile_id': '1234', 'affiliations': [{'name': 'Urban Institute', 'name_code': '2342', 'name_uri': 'https://icpsr.example.com/organizations/2342', 'ror': 'https://ror.org/017pz3h73', 'icpsr_org_id': 'xyz123'}, {'name': 'Example University'}], 'email': 'jane.doe@example.com'}
@@ -1414,13 +1316,7 @@ Last updated: February 04, 2026
 
 **Accepted Values**: Text
 
-###### Examples:
-
-```
-    https://doi.org/10.1000/182
-```
-
-###### Examples:
+**Examples**:
 
 ```
     https://doi.org/10.1000/182
@@ -1562,19 +1458,9 @@ Last updated: February 04, 2026
 
 **Accepted Values**: Text
 
-###### Examples:
-
-```
-    The overall response rate for this survey was 20.22%; 72.6% for existing panelists and 10.4% for new panelists, using AAPOR Response Rate 1.
-```
-
-```
-    Not applicable.
-```
-
 **Usage Notes:** This field is only applicable if the data were collected with a survey instrument and the response rates are provided.
 
-###### Examples:
+**Examples**:
 
 ```
     The overall response rate for this survey was 20.22%; 72.6% for existing panelists and 10.4% for new panelists, using AAPOR Response Rate 1.
@@ -1596,19 +1482,9 @@ Last updated: February 04, 2026
 
 **Accepted Values**: Text
 
-###### Examples:
-
-```
-    National sample of telephone numbers from cell (RDD) sampling frame.
-```
-
-```
-    The probability sample selected to represent the universe consists of approximately 71,000 households.
-```
-
 **Usage Notes:** A detailed discussion of such things as sampling error or other limitations of the sampling methodology is not required here.
 
-###### Examples:
+**Examples**:
 
 ```
     National sample of telephone numbers from cell (RDD) sampling frame.
@@ -1630,29 +1506,9 @@ Last updated: February 04, 2026
 
 **Accepted Values**: Text
 
-###### Examples:
-
-```
-    label: Probability: Systematic random
-    code: Probability.SystematicRandom
-    uri: https://example.com/sampling_procedures/123
-```
-
-```
-    label: Other
-    code: Other
-    uri: https://example.com/sampling_procedures/737
-```
-
-```
-    label: Total universe/Complete enumeration
-    code: TotalUniverseCompleteEnumeration
-    uri: https://example.com/sampling_procedures/234
-```
-
 **Usage Notes:** The sample is a selection out of the universe of all possible relevant cases (e.g., adults in the United States, housing units in three counties of Michigan, etc.) that could have been included in the data collection. Note that some studies, such as censuses, do not utilize samples but include all members of the universe. This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance CV SamplingProcedure https://rdf-vocabulary.ddialliance.org/ddi-cv/SamplingProcedure/1.1.4/SamplingProcedure.html.
 
-###### Examples:
+**Examples**:
 
 ```
     label: Probability: Systematic random
@@ -1684,27 +1540,9 @@ Last updated: February 04, 2026
 
 **Accepted Values**: Text
 
-###### Examples:
-
-```
-    The baseline data collection included one scale - the CES-D index for maternal depression [Cole, J. C., Rabin, A. S., Smith, T. L., and Kaufman, A. S. (2004). Development and validation of a Rasch-derived CES-D short form. Psychological assessment, 16(4), 360]. All scales used for outcomes at ages 1 through 3 are listed in Appendix Tables 1 and 2 in the User Guide. Please refer to the User Guide and P.I. Codebook, available under the 'Data and Documentation' tab, for details.
-```
-
-```
-    Squires, J., Bricker, D. D., and Twombly, E. (2009). Ages and stages questionnaires. Baltimore, MD: Paul H. Brookes.
-```
-
-```
-    Briggs-Gowan, M. J., Carter, A. S., Irwin, J. R., Wachtel, K., and Cicchetti, D. V. (2004). The Brief Infant-Toddler Social and Emotional Assessment: screening for social-emotional problems and delays in competence. Journal of pediatric psychology, 29(2), 143-155.
-```
-
-```
-    Yu, L., Buysse, D. J., Germain, A., Moul, D. E., Stover, A., Dodds, N. E., ... and Pilkonis, P. A. (2012). Development of short forms from the PROMIS sleep disturbance and sleep-related impairment item banks. Behavioral sleep medicine, 10(1), 6-24.
-```
-
 **Usage Notes:** Include common scales that can be readily identified from the data, documentation, or other related materials. ICPSR curators are not expected to infer or research scales that are not explicitly indicated. The scales can be cited either as a list or described in full sentences. If the questionnaire used has a finite list of responses (e.g., 'Always, Sometimes, Rarely, Never' or Strongly Agree, Agree, Disagree, Strongly Disagree'), it is acceptable for this element to note 'A Likert-type scale was used,' or 'Several Likert-type scales were used.' However, it is not required to note Likart-type scales in situations where only such scales were used, given their ubiquity.
 
-###### Examples:
+**Examples**:
 
 ```
     The baseline data collection included one scale - the CES-D index for maternal depression [Cole, J. C., Rabin, A. S., Smith, T. L., and Kaufman, A. S. (2004). Development and validation of a Rasch-derived CES-D short form. Psychological assessment, 16(4), 360]. All scales used for outcomes at ages 1 through 3 are listed in Appendix Tables 1 and 2 in the User Guide. Please refer to the User Guide and P.I. Codebook, available under the 'Data and Documentation' tab, for details.
@@ -1734,23 +1572,9 @@ Last updated: February 04, 2026
 
 **Accepted Values**: Multi-part element; see subfield definitions for more information.
 
-###### Examples:
-
-```
-    {'label': 'state', 'code': '123', 'uri': 'https://example.com/smallest_geographic_unit/123'}
-```
-
-```
-    {'label': 'Census tract', 'code': '234', 'uri': 'https://example.com/smallest_geographic_unit/234'}
-```
-
-```
-    {'label': 'precinct', 'code': '345', 'uri': 'https://example.com/smallest_geographic_unit/345'}
-```
-
 **Usage Notes:** Geographic Unit is intended to represent specific, known geography -- e.g., county, census district, FIPS code, electoral district, and any other conveyor of specific geography that is represented by a variable. If the data do not include a geographic variable by which the data can be analyzed, this element is not indicated. If all the cases are from a single state, but the cases are not subdivided geographically within that state, then 'state' is not indicated. This element is only meant to convey specific, known, geography. If there is a variable indicating which testing site a survey was taken at, but the locations of the testing sites were masked by the PI, this element is likely not indicated.
 
-###### Examples:
+**Examples**:
 
 ```
     {'label': 'state', 'code': '123', 'uri': 'https://example.com/smallest_geographic_unit/123'}
@@ -2115,15 +1939,9 @@ Last updated: February 04, 2026
 
 **Accepted Values**: Text
 
-###### Examples:
-
-```
-    Data on organizational culture in each of the 12 courts (Part 1) were obtained by administering the Court Culture Assessment Instrument (CCAI) to all judges with a felony criminal court docket and to all senior court administrators. A total of 224 respondents completed the questionnaire. The CCAI was used to assess five key dimensions of current court culture orientation: (1) dominant case management style, (2) judicial and court staff relations, (3) change management, (4) courthouse leadership, and (5) internal organization. The determination of what culture judges and court administrators desired to establish in the near future was also obtained through the application of the same instrument (CACI) as practitioners were asked to indicate the type of culture in each work area (or content dimension) they would like to see in their court in the next five years.
-```
-
 **Usage Notes:** The Study Design provides more detailed information than the Summary, including how surveys were prepared and administered, how interviews were conducted, or how the data were obtained and compiled, as well as information about deadlines and follow-ups to respondents.
 
-###### Examples:
+**Examples**:
 
 ```
     Data on organizational culture in each of the 12 courts (Part 1) were obtained by administering the Court Culture Assessment Instrument (CCAI) to all judges with a felony criminal court docket and to all senior court administrators. A total of 224 respondents completed the questionnaire. The CCAI was used to assess five key dimensions of current court culture orientation: (1) dominant case management style, (2) judicial and court staff relations, (3) change management, (4) courthouse leadership, and (5) internal organization. The determination of what culture judges and court administrators desired to establish in the near future was also obtained through the application of the same instrument (CACI) as practitioners were asked to indicate the type of culture in each work area (or content dimension) they would like to see in their court in the next five years.
@@ -2141,22 +1959,12 @@ Last updated: February 04, 2026
 
 **Accepted Values**: Text
 
-###### Examples:
-
-```
-    In 2014, Chicago Public Schools, looking to reduce the possibility of gun violence among school-aged youth, applied for a grant through the National Institute of Justice. CPS was awarded the Comprehensive School Safety Initiative grant and use said grant to establish the 'Connect and Redirect to Respect' program. This program used student social media data to identify and intervene with students thought to be at higher risk for committing violence. At-risk behaviors included brandishing a weapon, instigating conflict online, signaling gang involvement, and threats towards others. Identified at-risk students would be contacted by a member of the CPS Network Safety Team or the Chicago Police Department's Gang School Safety Team, depending on the risk level of the behavior. To evaluate the efficacy of CRR, the University of Chicago Crime Lab compared outcomes for students enrolled in schools that received the program to outcomes for students enrolled in comparison schools, which did not receive the program. 32 schools were selected for the study, with a total of 44,503 students. Demographic variables included age, race, sex, and ethnicity. Misconduct and academic variables included arrest history, in-school suspensions, out-of-school suspensions, GPA, and attendance days.
-```
-
-```
-    The Health and Relationship Project is a study of both spouses in same-sex and different-sex marriages who were legally married and aged 35 to 65 at the time of data collection (2015). There are two parts of this study: a baseline questionnaire and a daily diary questionnaire completed for 10 consecutive days; both components were completed online and spouses were asked to complete the surveys separately. The baseline questionnaire asks participants about a number of topics related to marriage and health, including stress, health status and health behaviors, relationship quality, and how they have approached health problems in the past. The diary questionnaire asks participants a number of questions about the past 24 hours, including daily stress experiences, social interactions, and health behaviors.
-```
-
 **Usage Notes:** The Summary may include information about the different parts of the data collection not adequately conveyed by the Fileset names or found elsewhere in the metadata. Other important components include a listing of major variables or categories of variables (with examples) as well as an indication of the data collection's unit of analysis (i.e., who or what is being studied: individuals, housing units, courts, criminal acts, etc.). Most often the unit of analysis is the individual; where it is not, it is particularly important to make this clear.
 
 The Summary is written in the third person and avoids attempting to address issues of how the data might be used, who might be interested in the data, or any evaluative comments about the worth or usefulness of the data collection. The Summary uses past tense when describing the process of collecting the data and present tense when necessary, such as when describing the data (e.g., 'The MIDUS Refresher collection is split into two datasets.'). Numerals are used instead of spelling them out; if a number is spelled out for emphasis, the number is attached in parentheses (e.g. 'Two thousand (2,000)').
 
 
-###### Examples:
+**Examples**:
 
 ```
     In 2014, Chicago Public Schools, looking to reduce the possibility of gun violence among school-aged youth, applied for a grant through the National Institute of Justice. CPS was awarded the Comprehensive School Safety Initiative grant and use said grant to establish the 'Connect and Redirect to Respect' program. This program used student social media data to identify and intervene with students thought to be at higher risk for committing violence. At-risk behaviors included brandishing a weapon, instigating conflict online, signaling gang involvement, and threats towards others. Identified at-risk students would be contacted by a member of the CPS Network Safety Team or the Chicago Police Department's Gang School Safety Team, depending on the risk level of the behavior. To evaluate the efficacy of CRR, the University of Chicago Crime Lab compared outcomes for students enrolled in schools that received the program to outcomes for students enrolled in comparison schools, which did not receive the program. 32 schools were selected for the study, with a total of 44,503 students. Demographic variables included age, race, sex, and ethnicity. Misconduct and academic variables included arrest history, in-school suspensions, out-of-school suspensions, GPA, and attendance days.
@@ -2379,29 +2187,7 @@ The Summary is written in the third person and avoids attempting to address issu
 
 **Accepted Values**: Text
 
-###### Examples:
-
-```
-    Bridge of Faith: Aim4Peace Community-Based Violence Prevention Project, Kansas City, Missouri, 2014-2017
-```
-
-```
-    Health and Relationships Project, United States, 2014-2015
-```
-
-```
-    Targeted Interventions to Prevent Chronic Low Back Pain in High Risk Patients: A Multi-Site Pragmatic Randomized Controlled Trial (TARGET Trial), 4 U.S. cities, 2016-2019
-```
-
-```
-    Aid Like A Paycheck (ALAP), Texas and California, 2014-2017
-```
-
-```
-    COVID-19 Disruptions Disproportionately Affect Female Academics, Global, 2020
-```
-
-###### Examples:
+**Examples**:
 
 ```
     Bridge of Faith: Aim4Peace Community-Based Violence Prevention Project, Kansas City, Missouri, 2014-2017
@@ -2533,35 +2319,9 @@ The Summary is written in the third person and avoids attempting to address issu
 
 **Accepted Values**: Text
 
-###### Examples:
-
-```
-    All households in the United States with phones.
-```
-
-```
-    Part 1: Thirty cities in Massachusetts during 1980-1986. Parts 2-4: All residents in Massachusetts during 1986.
-```
-
-```
-    Individuals self-identified as transgender, trans, genderqueer, non-binary, or other identities on the transgender identity spectrum aged 18 and older residing in the fifty U.S. states, the District of Columbia, American Samoa, Guam, Puerto Rico, and U.S. military bases overseas.
-```
-
-```
-    Jihadists from the United States and Canada, along with Incels from Germany, Canada, the United States, and United Kingdom.
-```
-
-```
-    All publicly funded medical examiner and coroner offices.
-```
-
-```
-    Uncertified ballots for the 2000 United States presidential election in Florida.
-```
-
 **Usage Notes:** Age, nationality, and residence commonly help to delineate a given universe, but any of a number of factors may be involved, such as sex, race, income, veteran status, criminal convictions, etc. The Universe may consist of elements other than persons, such as housing units, court cases, deaths, countries, etc. It should be possible to tell from the description of the universe whether a given individual or element (hypothetical or real) is a member of the population under study. Typically, the Universe statement is about one sentence or shorter, and reflects the entire possible population a data collection sought to study.
 
-###### Examples:
+**Examples**:
 
 ```
     All households in the United States with phones.
@@ -2599,19 +2359,9 @@ The Summary is written in the third person and avoids attempting to address issu
 
 **Accepted Values**: Text
 
-###### Examples:
-
-```
-    The data includes variables about participants' and their parents' moods, interviewer observations, families' activities, families' health history, participants' school records, and parents' substance use. Demographic variables include race, religion, annual household income, and the participants' parents' employment statuses.
-```
-
-```
-    The LGBTQ Hate Crimes Interviews dataset contains more in-depth information, including victim demographic information, substance abuse history, information on whether the victim is open about their LGBTQ identification, the victim's job status, and information about how the victim reacted to the crime, such as whether or not they reported the crime to the police and their level of cooperation with the police and prosecution.
-```
-
 **Usage Notes:** The Variable Description provides more detailed information than the Summary, including a review of variables that are important for users to know about. The codebook, setup files, and variable groups are appropriate sources of information for Variable Description.
 
-###### Examples:
+**Examples**:
 
 ```
     The data includes variables about participants' and their parents' moods, interviewer observations, families' activities, families' health history, participants' school records, and parents' substance use. Demographic variables include race, religion, annual household income, and the participants' parents' employment statuses.
@@ -2743,19 +2493,9 @@ The Summary is written in the third person and avoids attempting to address issu
 
 **Accepted Values**: Text
 
-###### Examples:
-
-```
-    Both the TransPop and Cisgender datasets have the same variable named WEIGHT as the weighting variable. The combination datasets have a set of three weight variables (WEIGHT_TRANSPOP, WEIGHT_CISGENDER, WEIGHT_CISGENDER_TRANSPOP)
-```
-
-```
-    A weight variable with two implied decimal places has been included and must be used in any analysis.
-```
-
 **Usage Notes:** Weight includes any information about weighting variables in the data, as well as any other weight information provided by the Principal Investigator. If a weighting formula or coefficient was developed, provide this formula, define its elements, and indicate how the formula is applied to the data. It is acceptable to summarize additional documentation and refer users to those resources for more information.
 
-###### Examples:
+**Examples**:
 
 ```
     Both the TransPop and Cisgender datasets have the same variable named WEIGHT as the weighting variable. The combination datasets have a set of three weight variables (WEIGHT_TRANSPOP, WEIGHT_CISGENDER, WEIGHT_CISGENDER_TRANSPOP)

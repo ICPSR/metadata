@@ -175,7 +175,7 @@ def render_complete_examples(schema, has_subfields):
 
     markdown = []
 
-    heading = "###### Complete Examples (with Subfields):" if has_subfields else "###### Examples:"
+    heading = "###### Complete Examples (with Subfields):" if has_subfields else "**Examples**:"
     markdown.append(heading)
     markdown.append("")
 
@@ -216,9 +216,6 @@ def render_simple_field(schema, required, schema_refs):
     elif isinstance(usage, str):
         markdown.append(f"**Usage Notes:** {usage}\n")
 
-    # Examples for simple fields
-    markdown.extend(render_complete_examples(schema, has_subfields=False))
-
     return markdown
 
 
@@ -252,12 +249,12 @@ def json_schema_to_markdown(schema, property_name=None, required_fields=None, sc
     if has_subfields:
         markdown.extend(render_subfields(schema, schema_refs, type_mapping))
 
-    # Render main property-level examples after subfields (if any)
-    markdown.extend(render_complete_examples(schema, has_subfields))
-
     # For non-subfield properties, render usageNotes & simple field metadata
-    if not has_subfields:
+    else:
         markdown.extend(render_simple_field(schema, required, schema_refs))
+
+    # Render main property-level examples 
+    markdown.extend(render_complete_examples(schema, has_subfields))
 
     return '\n'.join(markdown), toc_entry
 
