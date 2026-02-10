@@ -4,7 +4,6 @@ from pathlib import Path
 from datetime import datetime
 import os
 
-
 # ----------------------------
 # Utilities
 # ----------------------------
@@ -16,22 +15,22 @@ def create_anchor(title):
         anchor = anchor.replace('--', '-')
     return anchor.strip('-')
 
+def shorten_multi_part(text):
+    if text == "Multi-part element; see subfield definitions for more information.":
+        return "Multi-part element; see subfields"
+    return text
 
 def describe_schema_type(schema, type_mapping):
     if not isinstance(schema, dict):
         return "", "No"
-
     schema_type = schema.get("type")
-
     if schema_type == "array":
         items = schema.get("items", {})
         item_type = items.get("type")
         accepted = type_mapping.get(item_type, item_type or "Array")
         return accepted, "Yes"
-
     accepted = type_mapping.get(schema_type, schema_type or "")
     return accepted, "No"
-
 
 def is_array_of_objects(schema):
     return (
@@ -39,7 +38,6 @@ def is_array_of_objects(schema):
         and schema.get("items", {}).get("type") == "object"
         and "properties" in schema.get("items", {})
     )
-
 
 def extract_from_pointer(doc, pointer_path):
     current = doc
@@ -50,29 +48,17 @@ def extract_from_pointer(doc, pointer_path):
             return None
     return current
 
-
 def resolve_ref(ref_url, schema_refs):
     if '#/' in ref_url:
         base, pointer = ref_url.split('#/', 1)
         doc = schema_refs.get(base) or schema_refs.get(base.split('/version/')[0])
         if doc:
             return doc, pointer
-
-    return (
-        schema_refs.get(ref_url)
-        or schema_refs.get(ref_url.split('/version/')[0])
-    )
-
+    return schema_refs.get(ref_url) or schema_refs.get(ref_url.split('/version/')[0])
 
 # ----------------------------
 # Rendering helpers
 # ----------------------------
-
-def shorten_multi_part(text):
-    if text == "Multi-part element; see subfield definitions for more information.":
-        return "Multi-part element; see subfields"
-    return text
-
 
 def render_property_header(schema):
     title = schema.get('title', 'Untitled')
@@ -82,23 +68,18 @@ def render_property_header(schema):
         f"### {title}\n"
     ], title, anchor
 
-
 def render_core_metadata(schema, type_mapping):
     markdown = []
-
     description = schema.get('description', '')
     if description:
         markdown.append(f"**Description:** {description}\n")
-
     accepted, repeatable = describe_schema_type(schema, type_mapping)
-
     markdown.append(f"**Repeatable**: {repeatable}\n")
     markdown.append(f"**Accepted Values**: {accepted}\n")
-
     return markdown, accepted, repeatable, description
 
-
 def build_toc_entry(title, anchor, required, repeatable, accepted_values, description):
+    accepted_values = shorten_multi_part(accepted_values)
     return {
         'title': title,
         'anchor': anchor,
@@ -108,20 +89,25 @@ def build_toc_entry(title, anchor, required, repeatable, accepted_values, descri
         'description': description
     }
 
-
 def render_subfields(schema, schema_refs, type_mapping):
     markdown = []
 
-    items = schema['items']
-    properties = items.get('properties', {})
-    required = items.get('required', [])
+    # Support both:
+    # - object with properties
+    # - array of objects
+    if schema.get("type") == "array":
+        items = schema['items']
+        properties = items.get('properties', {})
+        required = items.get('required', [])
+    else:
+        properties = schema.get('properties', {})
+        required = schema.get('required', [])
 
     markdown.append("#### Subfields:\n")
     markdown.append("| Property | Required? | Repeatable? | Accepted Values | Description |")
     markdown.append("| -------- | --------- | ----------- | --------------- | ----------- |")
 
     resolved = {}
-
     for name, prop in properties.items():
         if '$ref' in prop:
             ref = resolve_ref(prop['$ref'], schema_refs)
@@ -135,21 +121,24 @@ def render_subfields(schema, schema_refs, type_mapping):
         else:
             resolved[name] = prop
 
+    # Build a map of key -> title for complete examples
+    key_to_title = {k: v.get('title', k) for k, v in resolved.items()}
+
     for name, prop in resolved.items():
         accepted, repeatable = describe_schema_type(prop, type_mapping)
+        accepted = shorten_multi_part(accepted)
         markdown.append(
             f"| {prop.get('title', name)} | "
             f"{'Yes' if name in required else 'No'} | "
             f"{repeatable} | "
-            f"{shorten_multi_part(accepted)} | "
+            f"{accepted} | "
             f"{prop.get('description', '')} |"
         )
-
     markdown.append("")
 
     for name, prop in resolved.items():
         accepted, _ = describe_schema_type(prop, type_mapping)
-
+        accepted = shorten_multi_part(accepted)
         markdown.extend([
             f"##### {prop.get('title', name)}\n",
             f"**Description:** {prop.get('description', '')}\n",
@@ -157,10 +146,8 @@ def render_subfields(schema, schema_refs, type_mapping):
             "**Repeatable**: No\n",
             f"**Accepted Values**: {accepted}\n"
         ])
-
         if 'usageNotes' in prop:
             markdown.append(f"**Usage Notes:** {prop['usageNotes']}\n")
-
         if prop.get('examples'):
             markdown.append("**Examples:**\n")
             for example in prop['examples']:
@@ -171,8 +158,7 @@ def render_subfields(schema, schema_refs, type_mapping):
                     markdown.append(json.dumps(example, indent=2))
                 markdown.append("```\n")
 
-    return markdown
-
+    return markdown, key_to_title
 
 def render_simple_field(schema, required, schema_refs):
     markdown = []
@@ -191,51 +177,36 @@ def render_simple_field(schema, required, schema_refs):
     elif isinstance(usage, str):
         markdown.append(f"**Usage Notes:** {usage}\n")
 
-    if schema.get('examples') and not is_array_of_objects(schema):
+    if schema.get('examples'):
         markdown.append("**Examples:**\n")
         for ex in schema['examples']:
-            markdown.append("```")
-            markdown.append(f"    {ex}" if isinstance(ex, str) else json.dumps(ex, indent=2))
-            markdown.append("```\n")
+            markdown.extend(["```", f"{ex}", "```\n"])
 
     return markdown
 
-def shorten_multi_part(text):
-    if text == "Multi-part element; see subfield definitions for more information.":
-        return "Multi-part element; see subfields"
-    return text
+def render_complete_examples(schema, has_subfields, key_to_title=None):
+    markdown = []
+    if 'examples' not in schema:
+        return markdown
 
-def render_complete_examples(schema, has_subfields):
-    """Render main property-level examples depending on whether subfields exist."""
-    examples = schema.get('examples')
-    if not examples:
-        return []
+    heading = "###### Complete Examples (with Subfields):" if has_subfields else "**Examples**:"
+    markdown.append(heading)
 
-    heading = "###### Complete Examples (with Subfields):" if has_subfields else "**Examples:**"
-    markdown = [heading]
-
-    for ex_group in examples:
-        # ex_group can be a dict, list of dicts, or list of primitives
-        if isinstance(ex_group, list):
-            for ex_item in ex_group:
-                markdown.append("```")
-                if isinstance(ex_item, dict):
-                    for key, value in ex_item.items():
-                        markdown.append(f"    {key}: {value}")
-                else:
-                    markdown.append(f"    {ex_item}")
-                markdown.append("```\n")
-        elif isinstance(ex_group, dict):
-            markdown.append("```")
-            for key, value in ex_group.items():
-                markdown.append(f"    {key}: {value}")
-            markdown.append("```\n")
-        else:
-            markdown.append("```")
-            markdown.append(f"    {ex_group}")
-            markdown.append("```\n")
+    for example_group in schema['examples']:
+        markdown.append("```")
+        if isinstance(example_group, list):  # array of objects
+            for obj in example_group:
+                for k, v in obj.items():
+                    title = key_to_title.get(k, k) if key_to_title else k
+                    markdown.append(f"    {title}: {v}")
+        elif isinstance(example_group, dict):
+            for k, v in example_group.items():
+                title = key_to_title.get(k, k) if key_to_title else k
+                markdown.append(f"    {title}: {v}")
+        else:  # primitive example
+            markdown.append(f"    {example_group}")
+        markdown.append("```\n")
     return markdown
-
 
 # ----------------------------
 # Main conversion
@@ -262,17 +233,17 @@ def json_schema_to_markdown(schema, property_name=None, required_fields=None, sc
 
     toc_entry = build_toc_entry(title, anchor, required, repeatable, accepted, description)
 
-    has_subfields = is_array_of_objects(schema)
-    if has_subfields:
-        markdown.extend(render_subfields(schema, schema_refs, type_mapping))
+    if is_array_of_objects(schema) or is_object_with_properties(schema):
+        sub_md, key_to_title = render_subfields(schema, schema_refs, type_mapping)
+        markdown.extend(sub_md)
     else:
         markdown.extend(render_simple_field(schema, required, schema_refs))
+        key_to_title = None
 
-    # Render main property-level examples
-    markdown.extend(render_complete_examples(schema, has_subfields))
+    # Render property-level examples
+    markdown.extend(render_complete_examples(schema, is_array_of_objects(schema), key_to_title))
 
     return '\n'.join(markdown), toc_entry
-
 
 # ----------------------------
 # Folder processing
@@ -280,7 +251,6 @@ def json_schema_to_markdown(schema, property_name=None, required_fields=None, sc
 
 def load_all_schemas(property_folder, skip_files, notes_folder=None):
     refs = {}
-
     for path in Path(property_folder).glob('*.json'):
         if path.name in skip_files:
             continue
@@ -296,7 +266,6 @@ def load_all_schemas(property_folder, skip_files, notes_folder=None):
                 refs[data['$id']] = data
 
     return refs
-
 
 def process_json_folder(property_folder, output_file, notes_folder=None):
     skip_files = {
@@ -337,9 +306,10 @@ def process_json_folder(property_folder, output_file, notes_folder=None):
     all_md.append("| -------- | --------- | ----------- | --------------- | ----------- |")
 
     for e in toc:
+        accepted_display = shorten_multi_part(e['accepted_values'])
         all_md.append(
             f"| [{e['title']}](#{e['anchor']}) | {e['required']} | {e['repeatable']} | "
-            f"{shorten_multi_part(e['accepted_values'])} | {e['description']} |"
+            f"{accepted_display} | {e['description']} |"
         )
 
     all_md.append("\n---\n## Metadata Elements: Detailed Information\n")
@@ -351,17 +321,15 @@ def process_json_folder(property_folder, output_file, notes_folder=None):
     Path(output_file).write_text('\n'.join(all_md), encoding='utf-8')
     print(f"\nSuccessfully generated: {output_file}")
 
-
 # ----------------------------
 # Entry point
 # ----------------------------
 
 if __name__ == "__main__":
-
     main_dir = "C:/icpsr_github/metadata/rde_schema"
 
     process_json_folder(
-        property_folder = os.path.join(main_dir, "property_bank"),
+        property_folder=os.path.join(main_dir, "property_bank"),
         notes_folder=os.path.join(main_dir, "notes"),
         output_file=os.path.join(main_dir, "icpsr_rde_schema.md")
     )
