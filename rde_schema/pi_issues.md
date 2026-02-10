@@ -339,12 +339,3 @@ _Email Address_ (level 7 heading)
 3
 ```
 
-###### Complete Examples (with Subfields):
-```
-    <p><b>Personal Principal Investigator</b></p><p><table><thead><tr><th>First Name</th><th>Last Name</th><th>Affiliation</th></tr></thead><tbody><tr><td>Veronica</td><td>Martinez-Ebers</td><td>National Institute for Law and Equity</td></tr><tr><td>Lawrence F.</td><td>Travis III</td><td>University of Cincinnati</td></tr></tbody></table></p>
-```
-
-```
-    <p><b>Organizational Principal Investigator</b></p><p><table><thead><tr><th>Name</th></tr></thead><tbody><tr><td>United States Department of Labor. Bureau of Labor Statistics</td></tr><tr><td>The Washington Post</td></tr></tbody></table></p>
-```
-
