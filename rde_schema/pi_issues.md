@@ -207,41 +207,6 @@ _Email Address_ (level 7 heading)
 "j.doe@example.com"
 ```
 
-## Complete Examples (with Subfields):
-
-```json
-{
-  "name": {
-    "given": "Jane Q.",
-    "family": "Doe II"
-  },
-  "orcid": "https://orcid.org/0000-0001-6666-5717",
-  "researcher_passport_profile_id": "1234",
-  "affiliations": [
-    {
-      "name": "Urban Institute",
-      "name_code": "2342",
-      "name_uri": "https://icpsr.example.com/organizations/2342",
-      "ror": "https://ror.org/017pz3h73",
-      "icpsr_org_id": "xyz123"
-    },
-    {
-      "name": "Example University"
-    }
-  ],
-  "email": "jane.doe@example.com"
-}
-```
-
-```json
-{
-  "name": {
-    "given": "Joe"
-  }
-}
-```
-
-
 ##### Organization (level 5 heading)
 
 **Description:** An organization associated with an ICPSR data collection or service.
