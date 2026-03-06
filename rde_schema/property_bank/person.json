@@ -38,16 +38,11 @@
       ]
     },
     "orcid": {
-      "Title": "ORCID Identifier",
+      "title": "ORCID Identifier",
       "description": "The person's Open Researcher and Contributor ID (ORCID).",
       "type": "string",
       "format": "uri",
       "examples": [ "https://orcid.org/0000-0001-6289-1234" ]
-    },
-    "researcher_passport_profile_id": {
-      "description": "The person's ICPSR Researcher Passport Identifier.",
-      "type": "string",
-      "examples": []
     },
     "affiliations": {
       "title": "Affiliation(s)",
