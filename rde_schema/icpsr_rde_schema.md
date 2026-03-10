@@ -1,6 +1,6 @@
 # ICPSR RDE Metadata Schema
 
-Last updated: March 06, 2026
+Last updated: March 10, 2026
 
 ## Overview
 
@@ -57,20 +57,20 @@ Last updated: March 06, 2026
 
 **Examples:**
 
-```yaml
-- Add Health Parent Study
+```text
+"Add Health Parent Study"
 ```
 
-```yaml
-- FACES 2009
+```text
+"FACES 2009"
 ```
 
-```yaml
-- Survey of Consumers
+```text
+"Survey of Consumers"
 ```
 
-```yaml
-- Eurobarometer 85.2
+```text
+"Eurobarometer 85.2"
 ```
 
 
@@ -88,11 +88,11 @@ Last updated: March 06, 2026
 **Examples:**
 
 ```text
-University of Michigan. Survey Research Center. Economic Behavior Program. Survey of Consumer Attitudes and Behavior, September 2018. Inter-university Consortium for Political and Social Research [distributor], 2021-11-18. https://doi.org/10.3886/ICPSR38121.v1
+"University of Michigan. Survey Research Center. Economic Behavior Program. Survey of Consumer Attitudes and Behavior, September 2018. Inter-university Consortium for Political and Social Research [distributor], 2021-11-18. https://doi.org/10.3886/ICPSR38121.v1"
 ```
 
 ```text
-United States Department of Justice. Office of Justice Programs. Office of Juvenile Justice and Delinquency Prevention. Juvenile Residential Facility Census, 2020 [United States]. Inter-university Consortium for Political and Social Research [distributor], 2024-07-15. https://doi.org/10.3886/ICPSR38914.v1
+"United States Department of Justice. Office of Justice Programs. Office of Juvenile Justice and Delinquency Prevention. Juvenile Residential Facility Census, 2020 [United States]. Inter-university Consortium for Political and Social Research [distributor], 2024-07-15. https://doi.org/10.3886/ICPSR38914.v1"
 ```
 
 
@@ -124,15 +124,15 @@ United States Department of Justice. Office of Justice Programs. Office of Juven
 **Examples:**
 
 ```text
-2000
+"2000"
 ```
 
 ```text
-2019-10
+"2019-10"
 ```
 
 ```text
-2021-03-01
+"2021-03-01"
 ```
 
 <a name="collection-dates_end_date"></a>
@@ -146,15 +146,15 @@ United States Department of Justice. Office of Justice Programs. Office of Juven
 **Examples:**
 
 ```text
-2000
+"2000"
 ```
 
 ```text
-2019-10
+"2019-10"
 ```
 
 ```text
-2021-03-01
+"2021-03-01"
 ```
 
 <a name="collection-dates_time_frame"></a>
@@ -169,22 +169,22 @@ United States Department of Justice. Office of Justice Programs. Office of Juven
 **Examples:**
 
 ```text
-Fall 2001
+"Fall 2001"
 ```
 
 ```text
-Student data
+"Student data"
 ```
 
 ###### Complete Collection Dates Examples (with Subfields):
 
 ```yaml
-- Start Date: '2018'
-  End Date: '2018'
-  Time Frame: Summer and Fall 2018
+- "Start Date": "2018"
+  "End Date": "2018"
+  "Time Frame": "Summer and Fall 2018"
 
-- Start Date: 2020-10
-  End Date: 2020-10
+- "Start Date": "2020-10"
+  "End Date": "2020-10"
 ```
 
 
@@ -217,15 +217,15 @@ Student data
 **Examples:**
 
 ```text
-Face-to-face interview: Computer-assisted (CAPI/CAMI)
+"Face-to-face interview: Computer-assisted (CAPI/CAMI)"
 ```
 
 ```text
-Measurements and tests
+"Measurements and tests"
 ```
 
 ```text
-Computer-based observation
+"Computer-based observation"
 ```
 
 <a name="collection-modes_code"></a>
@@ -239,15 +239,15 @@ Computer-based observation
 **Examples:**
 
 ```text
-Interview.FaceToFace.CAPIorCAMI
+"Interview.FaceToFace.CAPIorCAMI"
 ```
 
 ```text
-MeasurementsAndTests
+"MeasurementsAndTests"
 ```
 
 ```text
-Observation.ComputerBased
+"Observation.ComputerBased"
 ```
 
 <a name="collection-modes_uri"></a>
@@ -260,19 +260,19 @@ Observation.ComputerBased
 ###### Complete Collection Modes Examples (with Subfields):
 
 ```yaml
-- Collection Mode: 'Face-to-face interview: Computer-assisted (CAPI/CAMI)'
-  Collection Mode Code: Interview.FaceToFace.CAPIorCAMI
-  Collection Mode URI: https://example.com/collection_modes/234
+- "Collection Mode": "Face-to-face interview: Computer-assisted (CAPI/CAMI)"
+  "Collection Mode Code": "Interview.FaceToFace.CAPIorCAMI"
+  "Collection Mode URI": "https://example.com/collection_modes/234"
 ```
 
 ```yaml
-- Collection Mode: Measurements and tests
-  Collection Mode Code: MeasurementsAndTests
-  Collection Mode URI: https://example.com/collection_modes/972
+- "Collection Mode": "Measurements and tests"
+  "Collection Mode Code": "MeasurementsAndTests"
+  "Collection Mode URI": "https://example.com/collection_modes/972"
 
-- Collection Mode: Computer-based observation
-  Collection Mode Code: Observation.ComputerBased
-  Collection Mode URI: https://example.com/collection_modes/113
+- "Collection Mode": "Computer-based observation"
+  "Collection Mode Code": "Observation.ComputerBased"
+  "Collection Mode URI": "https://example.com/collection_modes/113"
 ```
 
 
@@ -289,7 +289,7 @@ Observation.ComputerBased
 **Examples:**
 
 ```text
-https://doi.org/10.1000/182
+"https://doi.org/10.1000/182"
 ```
 
 
@@ -322,15 +322,15 @@ https://doi.org/10.1000/182
 **Examples:**
 
 ```text
-Registers/Records/Accounts: Medical/Clinical
+"Registers/Records/Accounts: Medical/Clinical"
 ```
 
 ```text
-Events/Interactions
+"Events/Interactions"
 ```
 
 ```text
-Other
+"Other"
 ```
 
 <a name="data-source-types_code"></a>
@@ -344,15 +344,15 @@ Other
 **Examples:**
 
 ```text
-RegistersRecordsAccounts.MedicalClinical
+"RegistersRecordsAccounts.MedicalClinical"
 ```
 
 ```text
-EventsInteractions
+"EventsInteractions"
 ```
 
 ```text
-Other
+"Other"
 ```
 
 <a name="data-source-types_uri"></a>
@@ -365,19 +365,19 @@ Other
 ###### Complete Data Source Types Examples (with Subfields):
 
 ```yaml
-- Data Source Type: 'Registers/Records/Accounts: Medical/Clinical'
-  Data Source Type Code: RegistersRecordsAccounts.MedicalClinical
-  Data Source Type URI: https://example.com/data_source_type/123
+- "Data Source Type": "Registers/Records/Accounts: Medical/Clinical"
+  "Data Source Type Code": "RegistersRecordsAccounts.MedicalClinical"
+  "Data Source Type URI": "https://example.com/data_source_type/123"
 
-- Data Source Type: Events/Interactions
-  Data Source Type Code: EventsInteractions
-  Data Source Type URI: https://example.com/data_source_type/234
+- "Data Source Type": "Events/Interactions"
+  "Data Source Type Code": "EventsInteractions"
+  "Data Source Type URI": "https://example.com/data_source_type/234"
 ```
 
 ```yaml
-- Data Source Type: Other
-  Data Source Type Code: Other
-  Data Source Type URI: https://example.com/data_source_type/737
+- "Data Source Type": "Other"
+  "Data Source Type Code": "Other"
+  "Data Source Type URI": "https://example.com/data_source_type/737"
 ```
 
 
@@ -415,54 +415,46 @@ Other
 
 **Examples:**
 
-```yaml
-0
-...
-
+```text
+"0"
 ```
 
-```yaml
-1
-...
-
+```text
+"1"
 ```
 
-```yaml
-2
-...
-
+```text
+"2"
 ```
 
-```yaml
-3
-...
-
+```text
+"3"
 ```
 
 ###### Complete Distributors Examples (with Subfields):
 
 ```yaml
-- Organization:
-    Name: Inter-university Consortium for Political and Social Research
-    Name Code: '1234'
-    Name Uri: https://icpsr.example.com/organizations/1234
-    Ror: https://ror.org/017pz3h73
-  Order: 0
+- "Organization":
+    "Name": "Inter-university Consortium for Political and Social Research"
+    "Name Code": "1234"
+    "Name Uri": "https://icpsr.example.com/organizations/1234"
+    "Ror": "https://ror.org/017pz3h73"
+  "Order": 0
 
-- Organization:
-    Name: GESIS
-    Name Code: '2345'
-    Name Uri: https://icpsr.example.com/organizations/2345
-    Ror: https://ror.org/018afyw53
-  Order: 1
+- "Organization":
+    "Name": "GESIS"
+    "Name Code": "2345"
+    "Name Uri": "https://icpsr.example.com/organizations/2345"
+    "Ror": "https://ror.org/018afyw53"
+  "Order": 1
 ```
 
 ```yaml
-- Organization:
-    Name: Roper Center for Public Opinion Research
-    Name Code: '1234'
-    Name Uri: https://icpsr.example.com/organizations/1234
-  Order: 0
+- "Organization":
+    "Name": "Roper Center for Public Opinion Research"
+    "Name Code": "1234"
+    "Name Uri": "https://icpsr.example.com/organizations/1234"
+  "Order": 0
 ```
 
 
@@ -479,18 +471,17 @@ Other
 
 **Examples:**
 
-```yaml
-- '''Voting Scores.'' Congressional Quarterly Almanac 33 (1977), 487-498'
+```text
+"'Voting Scores.' Congressional Quarterly Almanac 33 (1977), 487-498"
 ```
 
-```yaml
-- United States Bureau of the Census Economic Surveys, 1998-2000
-
-- United States Congressional Record, 1989
+```text
+"United States Bureau of the Census Economic Surveys, 1998-2000"
+"United States Congressional Record, 1989"
 ```
 
-```yaml
-- Annual Company Organization Survey, 2003
+```text
+"Annual Company Organization Survey, 2003"
 ```
 
 
@@ -543,15 +534,15 @@ Other
 **Examples:**
 
 ```text
-SES-1835721
+"SES-1835721"
 ```
 
 ```text
-MDR-8550085
+"MDR-8550085"
 ```
 
 ```text
-40791
+"40791"
 ```
 
 <a name="funding-sources_grants_grant_uri"></a>
@@ -565,7 +556,7 @@ MDR-8550085
 **Examples:**
 
 ```text
-https://doi.org/10.35802/212242
+"https://doi.org/10.35802/212242"
 ```
 
 <a name="funding-sources_order"></a>
@@ -578,59 +569,51 @@ https://doi.org/10.35802/212242
 
 **Examples:**
 
-```yaml
-0
-...
-
+```text
+"0"
 ```
 
-```yaml
-1
-...
-
+```text
+"1"
 ```
 
-```yaml
-2
-...
-
+```text
+"2"
 ```
 
-```yaml
-3
-...
-
+```text
+"3"
 ```
 
 ###### Complete Funding Sources Examples (with Subfields):
 
 ```yaml
-- Organization:
-    Name: Robert Wood Johnson Foundation
-    Name Code: '5643'
-    Name Uri: https://icpsr.example.com/organizations/5643
-    Ror: https://ror.org/02ymmdj85
-  Funding Awards:
-  - Funding Identifier: MDR-8550085
-  - Funding Identifier: MDR-8550204
-  Order: 0
+- "Organization":
+    "Name": "Robert Wood Johnson Foundation"
+    "Name Code": "5643"
+    "Name Uri": "https://icpsr.example.com/organizations/5643"
+    "Ror": "https://ror.org/02ymmdj85"
+  "Funding Awards":
+  - "Funding Identifier": "MDR-8550085"
+  - "Funding Identifier": "MDR-8550204"
+  "Order": 0
 
-- Organization:
-    Name: United States Department of Justice. Office of Justice Programs. Bureau
-      of Justice Statistics
-    Name Code: '2342'
-    Name Uri: https://icpsr.example.com/organizations/2342
-    Ror: https://ror.org/0006s4z66
-  Funding Awards:
-  - Funding Identifier: SES-1835721
-    Funding URL: https://doi.org/10.35802/000000
-  Order: 1
+- "Organization":
+    "Name": "United States Department of Justice. Office of Justice Programs. Bureau\
+      \ of Justice Statistics"
+    "Name Code": "2342"
+    "Name Uri": "https://icpsr.example.com/organizations/2342"
+    "Ror": "https://ror.org/0006s4z66"
+  "Funding Awards":
+  - "Funding Identifier": "SES-1835721"
+    "Funding URL": "https://doi.org/10.35802/000000"
+  "Order": 1
 ```
 
 ```yaml
-- Organization:
-    Name: Acme Foundation
-  Order: 0
+- "Organization":
+    "Name": "Acme Foundation"
+  "Order": 0
 ```
 
 
@@ -663,15 +646,15 @@ https://doi.org/10.35802/212242
 **Examples:**
 
 ```text
-Text
+"Text"
 ```
 
 ```text
-Still image
+"Still image"
 ```
 
 ```text
-Numeric
+"Numeric"
 ```
 
 <a name="general-data-formats_code"></a>
@@ -685,15 +668,15 @@ Numeric
 **Examples:**
 
 ```text
-Text
+"Text"
 ```
 
 ```text
-StillImage
+"StillImage"
 ```
 
 ```text
-Numeric
+"Numeric"
 ```
 
 <a name="general-data-formats_uri"></a>
@@ -706,19 +689,19 @@ Numeric
 ###### Complete General Data Formats Examples (with Subfields):
 
 ```yaml
-- General Data Format: Text
-  General Data Format Code: Text
-  General Data Format URI: https://example.com/general_data_format/972
+- "General Data Format": "Text"
+  "General Data Format Code": "Text"
+  "General Data Format URI": "https://example.com/general_data_format/972"
 
-- General Data Format: Still image
-  General Data Format Code: StillImage
-  General Data Format URI: https://example.com/general_data_format/234
+- "General Data Format": "Still image"
+  "General Data Format Code": "StillImage"
+  "General Data Format URI": "https://example.com/general_data_format/234"
 ```
 
 ```yaml
-- General Data Format: Numeric
-  General Data Format Code: Numeric
-  General Data Format URI: https://example.com/general_data_format/563
+- "General Data Format": "Numeric"
+  "General Data Format Code": "Numeric"
+  "General Data Format URI": "https://example.com/general_data_format/563"
 ```
 
 
@@ -753,15 +736,15 @@ Numeric
 **Examples:**
 
 ```text
-Ann Arbor
+"Ann Arbor"
 ```
 
 ```text
-Hanover
+"Hanover"
 ```
 
 ```text
-Chongqing
+"Chongqing"
 ```
 
 <a name="geographic-coverage-areas_county"></a>
@@ -775,15 +758,15 @@ Chongqing
 **Examples:**
 
 ```text
-Monroe County
+"Monroe County"
 ```
 
 ```text
-Washtenaw County
+"Washtenaw County"
 ```
 
 ```text
-Cuyahoga County
+"Cuyahoga County"
 ```
 
 <a name="geographic-coverage-areas_state"></a>
@@ -797,15 +780,15 @@ Cuyahoga County
 **Examples:**
 
 ```text
-Michigan
+"Michigan"
 ```
 
 ```text
-Manitoba
+"Manitoba"
 ```
 
 ```text
-Yunnan
+"Yunnan"
 ```
 
 <a name="geographic-coverage-areas_country"></a>
@@ -819,15 +802,15 @@ Yunnan
 **Examples:**
 
 ```text
-United States
+"United States"
 ```
 
 ```text
-China
+"China"
 ```
 
 ```text
-Ghana
+"Ghana"
 ```
 
 <a name="geographic-coverage-areas_uri"></a>
@@ -841,29 +824,29 @@ Ghana
 **Examples:**
 
 ```text
-https://www.geonames.org/4990729/
+"https://www.geonames.org/4990729/"
 ```
 
 ```text
-https://www.geonames.org/6269554
+"https://www.geonames.org/6269554"
 ```
 
 ###### Complete Geographic Coverage Areas Examples (with Subfields):
 
 ```yaml
-- City: Cleveland
-  State: Ohio
-  Country: United States
-  Geographic Coverage Area URI: https://www.geonames.org/5150529
+- "City": "Cleveland"
+  "State": "Ohio"
+  "Country": "United States"
+  "Geographic Coverage Area URI": "https://www.geonames.org/5150529"
 
-- City: Pittsburgh
-  State: Pennsylvania
-  Country: United States
-  Geographic Coverage Area URI: https://www.geonames.org/5206379
+- "City": "Pittsburgh"
+  "State": "Pennsylvania"
+  "Country": "United States"
+  "Geographic Coverage Area URI": "https://www.geonames.org/5206379"
 ```
 
 ```yaml
-- Country: Germany
+- "Country": "Germany"
 ```
 
 
@@ -896,15 +879,15 @@ https://www.geonames.org/6269554
 **Examples:**
 
 ```text
-abduction
+"abduction"
 ```
 
 ```text
-ability
+"ability"
 ```
 
 ```text
-Abolition movement
+"Abolition movement"
 ```
 
 <a name="icpsr-subject-terms_code"></a>
@@ -918,15 +901,15 @@ Abolition movement
 **Examples:**
 
 ```text
-20391
+"20391"
 ```
 
 ```text
-24123
+"24123"
 ```
 
 ```text
-23632
+"23632"
 ```
 
 <a name="icpsr-subject-terms_uri"></a>
@@ -940,29 +923,29 @@ Abolition movement
 **Examples:**
 
 ```text
-https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/20391
+"https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/20391"
 ```
 
 ```text
-https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/24040
+"https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/24040"
 ```
 
 ###### Complete ICPSR Subject Terms Examples (with Subfields):
 
 ```yaml
-- ICPSR Subject Term: biographical data
-  ICPSR Subject Term Code: '20391'
-  ICPSR Subject Term URI: https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/20391
+- "ICPSR Subject Term": "biographical data"
+  "ICPSR Subject Term Code": "20391"
+  "ICPSR Subject Term URI": "https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/20391"
 
-- ICPSR Subject Term: age
-  ICPSR Subject Term Code: '24123'
-  ICPSR Subject Term URI: https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/24123
+- "ICPSR Subject Term": "age"
+  "ICPSR Subject Term Code": "24123"
+  "ICPSR Subject Term URI": "https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/24123"
 ```
 
 ```yaml
-- ICPSR Subject Term: happiness
-  ICPSR Subject Term Code: '25624'
-  ICPSR Subject Term URI: https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/25624
+- "ICPSR Subject Term": "happiness"
+  "ICPSR Subject Term Code": "25624"
+  "ICPSR Subject Term URI": "https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/25624"
 ```
 
 
@@ -995,11 +978,11 @@ https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/24040
 **Examples:**
 
 ```text
-A12 Relation of Economics to Other Disciplines
+"A12 Relation of Economics to Other Disciplines"
 ```
 
 ```text
-B00 History of Economic Thought, Methodology, and Heterodox Approaches
+"B00 History of Economic Thought, Methodology, and Heterodox Approaches"
 ```
 
 <a name="journal-of-economic-literature-(jel)-classification-codes_code"></a>
@@ -1013,15 +996,15 @@ B00 History of Economic Thought, Methodology, and Heterodox Approaches
 **Examples:**
 
 ```text
-a12
+"a12"
 ```
 
 ```text
-b00
+"b00"
 ```
 
 ```text
-n22
+"n22"
 ```
 
 <a name="journal-of-economic-literature-(jel)-classification-codes_uri"></a>
@@ -1035,31 +1018,31 @@ n22
 **Examples:**
 
 ```text
-http://example.com/jel/a12
+"http://example.com/jel/a12"
 ```
 
 ```text
-http://example.com/jel/b00
+"http://example.com/jel/b00"
 ```
 
 ###### Complete Journal of Economic Literature (JEL) Classification Codes Examples (with Subfields):
 
 ```yaml
-- JEL Classification Term: A12 Relation of Economics to Other Disciplines
-  JEL Classification Code: a12
-  JEL Classification URI: http://example.com/jel/a12
+- "JEL Classification Term": "A12 Relation of Economics to Other Disciplines"
+  "JEL Classification Code": "a12"
+  "JEL Classification URI": "http://example.com/jel/a12"
 
-- JEL Classification Term: B00 History of Economic Thought, Methodology, and Heterodox
-    Approaches
-  JEL Classification Code: b00
-  JEL Classification URI: http://example.com/jel/b00
+- "JEL Classification Term": "B00 History of Economic Thought, Methodology, and Heterodox\
+    \ Approaches"
+  "JEL Classification Code": "b00"
+  "JEL Classification URI": "http://example.com/jel/b00"
 ```
 
 ```yaml
-- JEL Classification Term: 'N22 Economic History: Financial Markets and Institutions:
-    U.S.; Canada: 1913-'
-  JEL Classification Code: n22
-  JEL Classification URI: http://example.com/jel/n22
+- "JEL Classification Term": "N22 Economic History: Financial Markets and Institutions:\
+    \ U.S.; Canada: 1913-"
+  "JEL Classification Code": "n22"
+  "JEL Classification URI": "http://example.com/jel/n22"
 ```
 
 
@@ -1104,10 +1087,9 @@ http://example.com/jel/b00
 ###### Complete License Examples (with Subfields):
 
 ```yaml
-License Name: Creative Commons Attribution Non Commercial 4.0 International
-License Code: CC-BY-NC-4.0
-License URI: https://creativecommons.org/licenses/by-nc/4.0/
-
+"License Name": "Creative Commons Attribution Non Commercial 4.0 International"
+"License Code": "CC-BY-NC-4.0"
+"License URI": "https://creativecommons.org/licenses/by-nc/4.0/"
 ```
 
 
@@ -1140,11 +1122,11 @@ License URI: https://creativecommons.org/licenses/by-nc/4.0/
 **Examples:**
 
 ```text
-anxiety
+"anxiety"
 ```
 
 ```text
-brain waves
+"brain waves"
 ```
 
 <a name="medical-subject-headings-(mesh)-terms_code"></a>
@@ -1158,11 +1140,11 @@ brain waves
 **Examples:**
 
 ```text
-D001007
+"D001007"
 ```
 
 ```text
-D058256
+"D058256"
 ```
 
 <a name="medical-subject-headings-(mesh)-terms_uri"></a>
@@ -1177,23 +1159,23 @@ D058256
 **Examples:**
 
 ```text
-http://id.nlm.nih.gov/mesh/D001007
+"http://id.nlm.nih.gov/mesh/D001007"
 ```
 
 ```text
-http://id.nlm.nih.gov/mesh/D058256
+"http://id.nlm.nih.gov/mesh/D058256"
 ```
 
 ###### Complete Medical Subject Headings (MeSH) Terms Examples (with Subfields):
 
 ```yaml
-- MeSH Subject Term: anxiety
-  MeSH Subject Term Code: D001007
-  MeSH Subject Term URI: http://id.nlm.nih.gov/mesh/D001007
+- "MeSH Subject Term": "anxiety"
+  "MeSH Subject Term Code": "D001007"
+  "MeSH Subject Term URI": "http://id.nlm.nih.gov/mesh/D001007"
 
-- MeSH Subject Term: brain waves
-  MeSH Subject Term Code: D058256
-  MeSH Subject Term URI: http://id.nlm.nih.gov/mesh/D058256
+- "MeSH Subject Term": "brain waves"
+  "MeSH Subject Term Code": "D058256"
+  "MeSH Subject Term URI": "http://id.nlm.nih.gov/mesh/D058256"
 ```
 
 
@@ -1210,11 +1192,11 @@ http://id.nlm.nih.gov/mesh/D058256
 **Examples:**
 
 ```text
-Yes
+"Yes"
 ```
 
 ```text
-No
+"No"
 ```
 
 
@@ -1230,18 +1212,13 @@ No
 
 **Examples:**
 
-```yaml
-- Information on the Index of Consumer Sentiment, the Index of Current Economic Conditions,
-  and the Index of Consumer Expectations and how they were created can be found in
-  the P.I. Codebook
-
-- Dataset 1 should be attributed to Jane Doe while datasets 2-6 should be attributed
-  to John Doe
+```text
+"Information on the Index of Consumer Sentiment, the Index of Current Economic Conditions, and the Index of Consumer Expectations and how they were created can be found in the P.I. Codebook"
+"Dataset 1 should be attributed to Jane Doe while datasets 2-6 should be attributed to John Doe"
 ```
 
-```yaml
-- Additional information on the Survey of Consumers can be found by visiting the Survey
-  of Consumers Website
+```text
+"Additional information on the Survey of Consumers can be found by visiting the Survey of Consumers Website"
 ```
 
 
@@ -1275,11 +1252,11 @@ No
 **Examples:**
 
 ```text
-Federal Reserve Bank of St. Louis. Research Division
+"Federal Reserve Bank of St. Louis. Research Division"
 ```
 
 ```text
-University of Michigan. Institute for Social Research
+"University of Michigan. Institute for Social Research"
 ```
 
 <a name="organization_name_code"></a>
@@ -1293,15 +1270,15 @@ University of Michigan. Institute for Social Research
 **Examples:**
 
 ```text
-1234
+"1234"
 ```
 
 ```text
-2345
+"2345"
 ```
 
 ```text
-3456
+"3456"
 ```
 
 <a name="organization_name_uri"></a>
@@ -1322,7 +1299,7 @@ University of Michigan. Institute for Social Research
 **Examples:**
 
 ```text
-https://ror.org/02q7mkh03
+"https://ror.org/02q7mkh03"
 ```
 
 <a name="organization_email"></a>
@@ -1336,18 +1313,17 @@ https://ror.org/02q7mkh03
 **Examples:**
 
 ```text
-info@example.com
+"info@example.com"
 ```
 
 ###### Complete Organization Examples (with Subfields):
 
 ```yaml
-Organization Name: Urban Institute
-Organization Name Code: '1234'
-Organization Name URI: https://icpsr.example.com/organizations/1234
-ROR Identifier: https://ror.org/017pz3h73
-Email Address: info@urban.institute
-
+"Organization Name": "Urban Institute"
+"Organization Name Code": "1234"
+"Organization Name URI": "https://icpsr.example.com/organizations/1234"
+"ROR Identifier": "https://ror.org/017pz3h73"
+"Email Address": "info@urban.institute"
 ```
 
 
@@ -1380,15 +1356,13 @@ Email Address: info@urban.institute
 **Examples:**
 
 ```yaml
-Given Name (First Name): Susan B.
-Family Name (Last Name): Anthony
-
+"Given Name (First Name)": "Susan B."
+"Family Name (Last Name)": "Anthony"
 ```
 
 ```yaml
-Given Name (First Name): John
-Family Name (Last Name): Doe IV
-
+"Given Name (First Name)": "John"
+"Family Name (Last Name)": "Doe IV"
 ```
 
 ##### Subfields:
@@ -1409,19 +1383,19 @@ Family Name (Last Name): Doe IV
 **Examples:**
 
 ```text
-Chantel
+"Chantel"
 ```
 
 ```text
-Giannis
+"Giannis"
 ```
 
 ```text
-Mary Kate
+"Mary Kate"
 ```
 
 ```text
-John Q.
+"John Q."
 ```
 
 <a name="person_name_family"></a>
@@ -1435,15 +1409,15 @@ John Q.
 **Examples:**
 
 ```text
-Smith
+"Smith"
 ```
 
 ```text
-Jordan Jr.
+"Jordan Jr."
 ```
 
 ```text
-Escobar-Vega
+"Escobar-Vega"
 ```
 
 <a name="person_orcid"></a>
@@ -1457,7 +1431,7 @@ Escobar-Vega
 **Examples:**
 
 ```text
-https://orcid.org/0000-0001-6289-1234
+"https://orcid.org/0000-0001-6289-1234"
 ```
 
 <a name="person_affiliations"></a>
@@ -1478,32 +1452,30 @@ https://orcid.org/0000-0001-6289-1234
 **Examples:**
 
 ```text
-j.doe@example.com
+"j.doe@example.com"
 ```
 
 ###### Complete Person Examples (with Subfields):
 
 ```yaml
-Personal Name:
-  Given Name (First Name): Jane Q.
-  Family Name (Last Name): Doe II
-ORCID Identifier: https://orcid.org/0000-0001-6666-5717
-Researcher Passport Profile Id: '1234'
-Affiliation(s):
-- Name: Urban Institute
-  Name Code: '2342'
-  Name Uri: https://icpsr.example.com/organizations/2342
-  Ror: https://ror.org/017pz3h73
-  Icpsr Org Id: xyz123
-- Name: Example University
-Email Address: jane.doe@example.com
-
+"Personal Name":
+  "Given Name (First Name)": "Jane Q."
+  "Family Name (Last Name)": "Doe II"
+"ORCID Identifier": "https://orcid.org/0000-0001-6666-5717"
+"Researcher Passport Profile Id": "1234"
+"Affiliation(s)":
+- "Name": "Urban Institute"
+  "Name Code": "2342"
+  "Name Uri": "https://icpsr.example.com/organizations/2342"
+  "Ror": "https://ror.org/017pz3h73"
+  "Icpsr Org Id": "xyz123"
+- "Name": "Example University"
+"Email Address": "jane.doe@example.com"
 ```
 
 ```yaml
-Personal Name:
-  Given Name (First Name): Joe
-
+"Personal Name":
+  "Given Name (First Name)": "Joe"
 ```
 
 
@@ -1520,7 +1492,7 @@ Personal Name:
 **Examples:**
 
 ```text
-https://doi.org/10.1000/182
+"https://doi.org/10.1000/182"
 ```
 
 
@@ -1565,38 +1537,30 @@ https://doi.org/10.1000/182
 
 **Examples:**
 
-```yaml
-0
-...
-
+```text
+"0"
 ```
 
-```yaml
-1
-...
-
+```text
+"1"
 ```
 
-```yaml
-2
-...
-
+```text
+"2"
 ```
 
-```yaml
-3
-...
-
+```text
+"3"
 ```
 
 ###### Complete Principal Investigators Examples (with Subfields):
 
 ```text
-<p><b>Personal Principal Investigator</b></p><p><table><thead><tr><th>First Name</th><th>Last Name</th><th>Affiliation</th></tr></thead><tbody><tr><td>Veronica</td><td>Martinez-Ebers</td><td>National Institute for Law and Equity</td></tr><tr><td>Lawrence F.</td><td>Travis III</td><td>University of Cincinnati</td></tr></tbody></table></p>
+"<p><b>Personal Principal Investigator</b></p><p><table><thead><tr><th>First Name</th><th>Last Name</th><th>Affiliation</th></tr></thead><tbody><tr><td>Veronica</td><td>Martinez-Ebers</td><td>National Institute for Law and Equity</td></tr><tr><td>Lawrence F.</td><td>Travis III</td><td>University of Cincinnati</td></tr></tbody></table></p>"
 ```
 
 ```text
-<p><b>Organizational Principal Investigator</b></p><p><table><thead><tr><th>Name</th></tr></thead><tbody><tr><td>United States Department of Labor. Bureau of Labor Statistics</td></tr><tr><td>The Washington Post</td></tr></tbody></table></p>
+"<p><b>Organizational Principal Investigator</b></p><p><table><thead><tr><th>Name</th></tr></thead><tbody><tr><td>United States Department of Labor. Bureau of Labor Statistics</td></tr><tr><td>The Washington Post</td></tr></tbody></table></p>"
 ```
 
 
@@ -1614,11 +1578,11 @@ https://doi.org/10.1000/182
 **Examples:**
 
 ```text
-The overall response rate for this survey was 20.22%; 72.6% for existing panelists and 10.4% for new panelists, using AAPOR Response Rate 1.
+"The overall response rate for this survey was 20.22%; 72.6% for existing panelists and 10.4% for new panelists, using AAPOR Response Rate 1."
 ```
 
 ```text
-Not applicable.
+"Not applicable."
 ```
 
 
@@ -1636,11 +1600,11 @@ Not applicable.
 **Examples:**
 
 ```text
-National sample of telephone numbers from cell (RDD) sampling frame.
+"National sample of telephone numbers from cell (RDD) sampling frame."
 ```
 
 ```text
-The probability sample selected to represent the universe consists of approximately 71,000 households.
+"The probability sample selected to represent the universe consists of approximately 71,000 households."
 ```
 
 
@@ -1658,19 +1622,19 @@ The probability sample selected to represent the universe consists of approximat
 **Examples:**
 
 ```yaml
-- Label: 'Probability: Systematic random'
-  Code: Probability.SystematicRandom
-  Uri: https://example.com/sampling_procedures/123
+- "Label": "Probability: Systematic random"
+  "Code": "Probability.SystematicRandom"
+  "Uri": "https://example.com/sampling_procedures/123"
 
-- Label: Other
-  Code: Other
-  Uri: https://example.com/sampling_procedures/737
+- "Label": "Other"
+  "Code": "Other"
+  "Uri": "https://example.com/sampling_procedures/737"
 ```
 
 ```yaml
-- Label: Total universe/Complete enumeration
-  Code: TotalUniverseCompleteEnumeration
-  Uri: https://example.com/sampling_procedures/234
+- "Label": "Total universe/Complete enumeration"
+  "Code": "TotalUniverseCompleteEnumeration"
+  "Uri": "https://example.com/sampling_procedures/234"
 ```
 
 
@@ -1687,27 +1651,14 @@ The probability sample selected to represent the universe consists of approximat
 
 **Examples:**
 
-```yaml
-- The baseline data collection included one scale - the CES-D index for maternal depression
-  [Cole, J. C., Rabin, A. S., Smith, T. L., and Kaufman, A. S. (2004). Development
-  and validation of a Rasch-derived CES-D short form. Psychological assessment, 16(4),
-  360]. All scales used for outcomes at ages 1 through 3 are listed in Appendix Tables
-  1 and 2 in the User Guide. Please refer to the User Guide and P.I. Codebook, available
-  under the 'Data and Documentation' tab, for details.
+```text
+"The baseline data collection included one scale - the CES-D index for maternal depression [Cole, J. C., Rabin, A. S., Smith, T. L., and Kaufman, A. S. (2004). Development and validation of a Rasch-derived CES-D short form. Psychological assessment, 16(4), 360]. All scales used for outcomes at ages 1 through 3 are listed in Appendix Tables 1 and 2 in the User Guide. Please refer to the User Guide and P.I. Codebook, available under the 'Data and Documentation' tab, for details."
 ```
 
-```yaml
-- 'Squires, J., Bricker, D. D., and Twombly, E. (2009). Ages and stages questionnaires.
-  Baltimore, MD: Paul H. Brookes.'
-
-- 'Briggs-Gowan, M. J., Carter, A. S., Irwin, J. R., Wachtel, K., and Cicchetti, D.
-  V. (2004). The Brief Infant-Toddler Social and Emotional Assessment: screening for
-  social-emotional problems and delays in competence. Journal of pediatric psychology,
-  29(2), 143-155.'
-
-- Yu, L., Buysse, D. J., Germain, A., Moul, D. E., Stover, A., Dodds, N. E., ... and
-  Pilkonis, P. A. (2012). Development of short forms from the PROMIS sleep disturbance
-  and sleep-related impairment item banks. Behavioral sleep medicine, 10(1), 6-24.
+```text
+"Squires, J., Bricker, D. D., and Twombly, E. (2009). Ages and stages questionnaires. Baltimore, MD: Paul H. Brookes."
+"Briggs-Gowan, M. J., Carter, A. S., Irwin, J. R., Wachtel, K., and Cicchetti, D. V. (2004). The Brief Infant-Toddler Social and Emotional Assessment: screening for social-emotional problems and delays in competence. Journal of pediatric psychology, 29(2), 143-155."
+"Yu, L., Buysse, D. J., Germain, A., Moul, D. E., Stover, A., Dodds, N. E., ... and Pilkonis, P. A. (2012). Development of short forms from the PROMIS sleep disturbance and sleep-related impairment item banks. Behavioral sleep medicine, 10(1), 6-24."
 ```
 
 
@@ -1753,24 +1704,21 @@ The probability sample selected to represent the universe consists of approximat
 ###### Complete Smallest Geographic Unit Examples (with Subfields):
 
 ```yaml
-Smallest Geographic Unit Term: state
-Smallest Geographic Unit Code: '123'
-Smallest Geographic Unit URI: https://example.com/smallest_geographic_unit/123
-
+"Smallest Geographic Unit Term": "state"
+"Smallest Geographic Unit Code": "123"
+"Smallest Geographic Unit URI": "https://example.com/smallest_geographic_unit/123"
 ```
 
 ```yaml
-Smallest Geographic Unit Term: Census tract
-Smallest Geographic Unit Code: '234'
-Smallest Geographic Unit URI: https://example.com/smallest_geographic_unit/234
-
+"Smallest Geographic Unit Term": "Census tract"
+"Smallest Geographic Unit Code": "234"
+"Smallest Geographic Unit URI": "https://example.com/smallest_geographic_unit/234"
 ```
 
 ```yaml
-Smallest Geographic Unit Term: precinct
-Smallest Geographic Unit Code: '345'
-Smallest Geographic Unit URI: https://example.com/smallest_geographic_unit/345
-
+"Smallest Geographic Unit Term": "precinct"
+"Smallest Geographic Unit Code": "345"
+"Smallest Geographic Unit URI": "https://example.com/smallest_geographic_unit/345"
 ```
 
 
@@ -1812,15 +1760,15 @@ Smallest Geographic Unit URI: https://example.com/smallest_geographic_unit/345
 **Examples:**
 
 ```text
-JHOVE
+"JHOVE"
 ```
 
 ```text
-ffmpeg
+"ffmpeg"
 ```
 
 ```text
-json-schema-for-humans
+"json-schema-for-humans"
 ```
 
 <a name="software-applications_software_version"></a>
@@ -1834,15 +1782,15 @@ json-schema-for-humans
 **Examples:**
 
 ```text
-1
+"1"
 ```
 
 ```text
-2.0.4
+"2.0.4"
 ```
 
 ```text
-Auto-Build 2023-01-15 12:36
+"Auto-Build 2023-01-15 12:36"
 ```
 
 <a name="software-applications_description"></a>
@@ -1856,11 +1804,11 @@ Auto-Build 2023-01-15 12:36
 **Examples:**
 
 ```text
-JHOVE, the JSTOR/Harvard Object Validation Environment, is an extensible software framework for performing format identification, validation, and characterization of digital objects.
+"JHOVE, the JSTOR/Harvard Object Validation Environment, is an extensible software framework for performing format identification, validation, and characterization of digital objects."
 ```
 
 ```text
-ffmpeg is a very fast video and audio converter that can also grab from a live audio/video source. It can also convert between arbitrary sample rates and resize video on the fly with a high quality polyphase filter.
+"ffmpeg is a very fast video and audio converter that can also grab from a live audio/video source. It can also convert between arbitrary sample rates and resize video on the fly with a high quality polyphase filter."
 ```
 
 <a name="software-applications_programming_languages"></a>
@@ -1873,18 +1821,17 @@ ffmpeg is a very fast video and audio converter that can also grab from a live a
 
 **Examples:**
 
-```yaml
-- python
+```text
+"python"
 ```
 
-```yaml
-- shell
-
-- r
+```text
+"shell"
+"r"
 ```
 
-```yaml
-- other
+```text
+"other"
 ```
 
 <a name="software-applications_operating_systems"></a>
@@ -1897,20 +1844,18 @@ ffmpeg is a very fast video and audio converter that can also grab from a live a
 
 **Examples:**
 
-```yaml
-- windows
+```text
+"windows"
 ```
 
-```yaml
-- windows
-
-- mac
-
-- linux
+```text
+"windows"
+"mac"
+"linux"
 ```
 
-```yaml
-- other
+```text
+"other"
 ```
 
 <a name="software-applications_memory_requirements"></a>
@@ -1924,15 +1869,15 @@ ffmpeg is a very fast video and audio converter that can also grab from a live a
 **Examples:**
 
 ```text
-4 GB
+"4 GB"
 ```
 
 ```text
-1GB of RAM (2GB for a 64-bit version)
+"1GB of RAM (2GB for a 64-bit version)"
 ```
 
 ```text
-4 GB of GPU memory for HD and some 4K media; 6 GB or more for 4K and higher
+"4 GB of GPU memory for HD and some 4K media; 6 GB or more for 4K and higher"
 ```
 
 <a name="software-applications_processor_requirements"></a>
@@ -1946,15 +1891,15 @@ ffmpeg is a very fast video and audio converter that can also grab from a live a
 **Examples:**
 
 ```text
-Intel i5/ i7/ Ryzen 7
+"Intel i5/ i7/ Ryzen 7"
 ```
 
 ```text
-Minimum 1 GHz; Recommended 2GHz or more
+"Minimum 1 GHz; Recommended 2GHz or more"
 ```
 
 ```text
-2.5–2.9 GHz or faster processor
+"2.5–2.9 GHz or faster processor"
 ```
 
 <a name="software-applications_software_requirements"></a>
@@ -1968,15 +1913,15 @@ Minimum 1 GHz; Recommended 2GHz or more
 **Examples:**
 
 ```text
-Java runtime environment
+"Java runtime environment"
 ```
 
 ```text
-Requires additional Python libraries: numpy, v1.11.2; scipy, v0.18.1, and pandas, v0.19.0
+"Requires additional Python libraries: numpy, v1.11.2; scipy, v0.18.1, and pandas, v0.19.0"
 ```
 
 ```text
-Compile with GNU auto tools
+"Compile with GNU auto tools"
 ```
 
 <a name="software-applications_storage_requirements"></a>
@@ -1990,15 +1935,15 @@ Compile with GNU auto tools
 **Examples:**
 
 ```text
-3.5 GB for new installations, 5 GB for upgrades (including temporary files required during installation)
+"3.5 GB for new installations, 5 GB for upgrades (including temporary files required during installation)"
 ```
 
 ```text
-15 GB of free disk space
+"15 GB of free disk space"
 ```
 
 ```text
-8 GB of available hard-disk space for installation; additional free space required during installation
+"8 GB of available hard-disk space for installation; additional free space required during installation"
 ```
 
 <a name="software-applications_device_requirements"></a>
@@ -2022,11 +1967,11 @@ Compile with GNU auto tools
 **Examples:**
 
 ```text
-https://www.apache.org/licenses/LICENSE-2.0
+"https://www.apache.org/licenses/LICENSE-2.0"
 ```
 
 ```text
-https://opensource.org/licenses/LGPL-2.0
+"https://opensource.org/licenses/LGPL-2.0"
 ```
 
 <a name="software-applications_download_url"></a>
@@ -2040,11 +1985,11 @@ https://opensource.org/licenses/LGPL-2.0
 **Examples:**
 
 ```text
-https://github.com/richardlehane/siegfried/archive/refs/heads/main.zip
+"https://github.com/richardlehane/siegfried/archive/refs/heads/main.zip"
 ```
 
 ```text
-https://cdn.nationalarchives.gov.uk/documents/droid-binary-6.5.2-bin-win32-with-jre.zip
+"https://cdn.nationalarchives.gov.uk/documents/droid-binary-6.5.2-bin-win32-with-jre.zip"
 ```
 
 <a name="software-applications_install_url"></a>
@@ -2058,32 +2003,32 @@ https://cdn.nationalarchives.gov.uk/documents/droid-binary-6.5.2-bin-win32-with-
 **Examples:**
 
 ```text
-https://github.com/richardlehane/siegfried
+"https://github.com/richardlehane/siegfried"
 ```
 
 ```text
-https://www.nationalarchives.gov.uk/information-management/manage-information/preserving-digital-records/droid/
+"https://www.nationalarchives.gov.uk/information-management/manage-information/preserving-digital-records/droid/"
 ```
 
 ###### Complete Software Applications Examples (with Subfields):
 
 ```yaml
-- Software Name: siegfried
-  Software Version: 1.11.1
-  Software Description: Siegfried is a signature-based file format identification
-    tool, implementing the National Archives UK's PRONOM file format signatures; freedesktop.org's
-    MIME-info file format signatures; the Library of Congress's FDD file format signatures
-    (beta); and Wikidata (beta).
-  Programming Languages:
-  - go
-  - javascript
-  - other
-  Operating Systems:
-  - mac
-  - linux
-  - windows
-  License: https://www.apache.org/licenses/LICENSE-2.0
-  Download URL: https://github.com/richardlehane/siegfried/archive/refs/heads/main.zip
+- "Software Name": "siegfried"
+  "Software Version": "1.11.1"
+  "Software Description": "Siegfried is a signature-based file format identification\
+    \ tool, implementing the National Archives UK's PRONOM file format signatures;\
+    \ freedesktop.org's MIME-info file format signatures; the Library of Congress's\
+    \ FDD file format signatures (beta); and Wikidata (beta)."
+  "Programming Languages":
+  - "go"
+  - "javascript"
+  - "other"
+  "Operating Systems":
+  - "mac"
+  - "linux"
+  - "windows"
+  "License": "https://www.apache.org/licenses/LICENSE-2.0"
+  "Download URL": "https://github.com/richardlehane/siegfried/archive/refs/heads/main.zip"
 ```
 
 
@@ -2101,7 +2046,7 @@ https://www.nationalarchives.gov.uk/information-management/manage-information/pr
 **Examples:**
 
 ```text
-Data on organizational culture in each of the 12 courts (Part 1) were obtained by administering the Court Culture Assessment Instrument (CCAI) to all judges with a felony criminal court docket and to all senior court administrators. A total of 224 respondents completed the questionnaire. The CCAI was used to assess five key dimensions of current court culture orientation: (1) dominant case management style, (2) judicial and court staff relations, (3) change management, (4) courthouse leadership, and (5) internal organization. The determination of what culture judges and court administrators desired to establish in the near future was also obtained through the application of the same instrument (CACI) as practitioners were asked to indicate the type of culture in each work area (or content dimension) they would like to see in their court in the next five years.
+"Data on organizational culture in each of the 12 courts (Part 1) were obtained by administering the Court Culture Assessment Instrument (CCAI) to all judges with a felony criminal court docket and to all senior court administrators. A total of 224 respondents completed the questionnaire. The CCAI was used to assess five key dimensions of current court culture orientation: (1) dominant case management style, (2) judicial and court staff relations, (3) change management, (4) courthouse leadership, and (5) internal organization. The determination of what culture judges and court administrators desired to establish in the near future was also obtained through the application of the same instrument (CACI) as practitioners were asked to indicate the type of culture in each work area (or content dimension) they would like to see in their court in the next five years."
 ```
 
 
@@ -2121,11 +2066,11 @@ The Summary is written in the third person and avoids attempting to address issu
 **Examples:**
 
 ```text
-In 2014, Chicago Public Schools, looking to reduce the possibility of gun violence among school-aged youth, applied for a grant through the National Institute of Justice. CPS was awarded the Comprehensive School Safety Initiative grant and use said grant to establish the 'Connect and Redirect to Respect' program. This program used student social media data to identify and intervene with students thought to be at higher risk for committing violence. At-risk behaviors included brandishing a weapon, instigating conflict online, signaling gang involvement, and threats towards others. Identified at-risk students would be contacted by a member of the CPS Network Safety Team or the Chicago Police Department's Gang School Safety Team, depending on the risk level of the behavior. To evaluate the efficacy of CRR, the University of Chicago Crime Lab compared outcomes for students enrolled in schools that received the program to outcomes for students enrolled in comparison schools, which did not receive the program. 32 schools were selected for the study, with a total of 44,503 students. Demographic variables included age, race, sex, and ethnicity. Misconduct and academic variables included arrest history, in-school suspensions, out-of-school suspensions, GPA, and attendance days.
+"In 2014, Chicago Public Schools, looking to reduce the possibility of gun violence among school-aged youth, applied for a grant through the National Institute of Justice. CPS was awarded the Comprehensive School Safety Initiative grant and use said grant to establish the 'Connect and Redirect to Respect' program. This program used student social media data to identify and intervene with students thought to be at higher risk for committing violence. At-risk behaviors included brandishing a weapon, instigating conflict online, signaling gang involvement, and threats towards others. Identified at-risk students would be contacted by a member of the CPS Network Safety Team or the Chicago Police Department's Gang School Safety Team, depending on the risk level of the behavior. To evaluate the efficacy of CRR, the University of Chicago Crime Lab compared outcomes for students enrolled in schools that received the program to outcomes for students enrolled in comparison schools, which did not receive the program. 32 schools were selected for the study, with a total of 44,503 students. Demographic variables included age, race, sex, and ethnicity. Misconduct and academic variables included arrest history, in-school suspensions, out-of-school suspensions, GPA, and attendance days."
 ```
 
 ```text
-The Health and Relationship Project is a study of both spouses in same-sex and different-sex marriages who were legally married and aged 35 to 65 at the time of data collection (2015). There are two parts of this study: a baseline questionnaire and a daily diary questionnaire completed for 10 consecutive days; both components were completed online and spouses were asked to complete the surveys separately. The baseline questionnaire asks participants about a number of topics related to marriage and health, including stress, health status and health behaviors, relationship quality, and how they have approached health problems in the past. The diary questionnaire asks participants a number of questions about the past 24 hours, including daily stress experiences, social interactions, and health behaviors.
+"The Health and Relationship Project is a study of both spouses in same-sex and different-sex marriages who were legally married and aged 35 to 65 at the time of data collection (2015). There are two parts of this study: a baseline questionnaire and a daily diary questionnaire completed for 10 consecutive days; both components were completed online and spouses were asked to complete the surveys separately. The baseline questionnaire asks participants about a number of topics related to marriage and health, including stress, health status and health behaviors, relationship quality, and how they have approached health problems in the past. The diary questionnaire asks participants a number of questions about the past 24 hours, including daily stress experiences, social interactions, and health behaviors."
 ```
 
 
@@ -2158,15 +2103,15 @@ The Health and Relationship Project is a study of both spouses in same-sex and d
 **Examples:**
 
 ```text
-Cross-section
+"Cross-section"
 ```
 
 ```text
-Longitudinal: Cohort/Event-based
+"Longitudinal: Cohort/Event-based"
 ```
 
 ```text
-Time series
+"Time series"
 ```
 
 <a name="time-methods_code"></a>
@@ -2180,15 +2125,15 @@ Time series
 **Examples:**
 
 ```text
-CrossSection
+"CrossSection"
 ```
 
 ```text
-Longitudinal.CohortEventBased
+"Longitudinal.CohortEventBased"
 ```
 
 ```text
-Other
+"Other"
 ```
 
 <a name="time-methods_uri"></a>
@@ -2201,19 +2146,19 @@ Other
 ###### Complete Time Methods Examples (with Subfields):
 
 ```yaml
-- Time Method: 'Registers/Records/Accounts: Medical/Clinical'
-  Time Method Code: RegistersRecordsAccounts.MedicalClinical
-  Time Method URI: https://example.com/time_methods/123
+- "Time Method": "Registers/Records/Accounts: Medical/Clinical"
+  "Time Method Code": "RegistersRecordsAccounts.MedicalClinical"
+  "Time Method URI": "https://example.com/time_methods/123"
 
-- Time Method: Events/Interactions
-  Time Method Code: EventsInteractions
-  Time Method URI: https://example.com/time_methods/234
+- "Time Method": "Events/Interactions"
+  "Time Method Code": "EventsInteractions"
+  "Time Method URI": "https://example.com/time_methods/234"
 ```
 
 ```yaml
-- Time Method: Other
-  Time Method Code: Other
-  Time Method URI: https://example.com/time_methods/737
+- "Time Method": "Other"
+  "Time Method Code": "Other"
+  "Time Method URI": "https://example.com/time_methods/737"
 ```
 
 
@@ -2245,15 +2190,15 @@ Other
 **Examples:**
 
 ```text
-2000
+"2000"
 ```
 
 ```text
-2019-10
+"2019-10"
 ```
 
 ```text
-2021-03-01
+"2021-03-01"
 ```
 
 <a name="time-periods_end_date"></a>
@@ -2267,15 +2212,15 @@ Other
 **Examples:**
 
 ```text
-2000
+"2000"
 ```
 
 ```text
-2019-10
+"2019-10"
 ```
 
 ```text
-2021-03-01
+"2021-03-01"
 ```
 
 <a name="time-periods_time_frame"></a>
@@ -2290,22 +2235,22 @@ Other
 **Examples:**
 
 ```text
-Fall 2001
+"Fall 2001"
 ```
 
 ```text
-Winter Semester 2019
+"Winter Semester 2019"
 ```
 
 ###### Complete Time Periods Examples (with Subfields):
 
 ```yaml
-- Start Date: '2018'
-  End Date: '2018'
-  Time Frame: Summer and Fall 2018
+- "Start Date": "2018"
+  "End Date": "2018"
+  "Time Frame": "Summer and Fall 2018"
 
-- Start Date: 2020-10
-  End Date: 2020-10
+- "Start Date": "2020-10"
+  "End Date": "2020-10"
 ```
 
 
@@ -2322,23 +2267,23 @@ Winter Semester 2019
 **Examples:**
 
 ```text
-Bridge of Faith: Aim4Peace Community-Based Violence Prevention Project, Kansas City, Missouri, 2014-2017
+"Bridge of Faith: Aim4Peace Community-Based Violence Prevention Project, Kansas City, Missouri, 2014-2017"
 ```
 
 ```text
-Health and Relationships Project, United States, 2014-2015
+"Health and Relationships Project, United States, 2014-2015"
 ```
 
 ```text
-Targeted Interventions to Prevent Chronic Low Back Pain in High Risk Patients: A Multi-Site Pragmatic Randomized Controlled Trial (TARGET Trial), 4 U.S. cities, 2016-2019
+"Targeted Interventions to Prevent Chronic Low Back Pain in High Risk Patients: A Multi-Site Pragmatic Randomized Controlled Trial (TARGET Trial), 4 U.S. cities, 2016-2019"
 ```
 
 ```text
-Aid Like A Paycheck (ALAP), Texas and California, 2014-2017
+"Aid Like A Paycheck (ALAP), Texas and California, 2014-2017"
 ```
 
 ```text
-COVID-19 Disruptions Disproportionately Affect Female Academics, Global, 2020
+"COVID-19 Disruptions Disproportionately Affect Female Academics, Global, 2020"
 ```
 
 
@@ -2371,15 +2316,15 @@ COVID-19 Disruptions Disproportionately Affect Female Academics, Global, 2020
 **Examples:**
 
 ```text
-Organization/Institution
+"Organization/Institution"
 ```
 
 ```text
-Individual
+"Individual"
 ```
 
 ```text
-Household
+"Household"
 ```
 
 <a name="units-of-analysis_code"></a>
@@ -2393,15 +2338,15 @@ Household
 **Examples:**
 
 ```text
-OrganizationOrInstitution
+"OrganizationOrInstitution"
 ```
 
 ```text
-Individual
+"Individual"
 ```
 
 ```text
-Household
+"Household"
 ```
 
 <a name="units-of-analysis_uri"></a>
@@ -2414,19 +2359,19 @@ Household
 ###### Complete Units of Analysis Examples (with Subfields):
 
 ```yaml
-- Label: Organization/Institution
-  Code: OrganizationOrInstitution
-  Uri: https://example.com/units_of_analysis/123
+- "Label": "Organization/Institution"
+  "Code": "OrganizationOrInstitution"
+  "Uri": "https://example.com/units_of_analysis/123"
 
-- Label: Individual
-  Code: Individual
-  Uri: https://example.com/units_of_analysis/234
+- "Label": "Individual"
+  "Code": "Individual"
+  "Uri": "https://example.com/units_of_analysis/234"
 ```
 
 ```yaml
-- Label: Household
-  Code: Household
-  Uri: https://example.com/units_of_analysis/737
+- "Label": "Household"
+  "Code": "Household"
+  "Uri": "https://example.com/units_of_analysis/737"
 ```
 
 
@@ -2444,27 +2389,27 @@ Household
 **Examples:**
 
 ```text
-All households in the United States with phones.
+"All households in the United States with phones."
 ```
 
 ```text
-Part 1: Thirty cities in Massachusetts during 1980-1986. Parts 2-4: All residents in Massachusetts during 1986.
+"Part 1: Thirty cities in Massachusetts during 1980-1986. Parts 2-4: All residents in Massachusetts during 1986."
 ```
 
 ```text
-Individuals self-identified as transgender, trans, genderqueer, non-binary, or other identities on the transgender identity spectrum aged 18 and older residing in the fifty U.S. states, the District of Columbia, American Samoa, Guam, Puerto Rico, and U.S. military bases overseas.
+"Individuals self-identified as transgender, trans, genderqueer, non-binary, or other identities on the transgender identity spectrum aged 18 and older residing in the fifty U.S. states, the District of Columbia, American Samoa, Guam, Puerto Rico, and U.S. military bases overseas."
 ```
 
 ```text
-Jihadists from the United States and Canada, along with Incels from Germany, Canada, the United States, and United Kingdom.
+"Jihadists from the United States and Canada, along with Incels from Germany, Canada, the United States, and United Kingdom."
 ```
 
 ```text
-All publicly funded medical examiner and coroner offices.
+"All publicly funded medical examiner and coroner offices."
 ```
 
 ```text
-Uncertified ballots for the 2000 United States presidential election in Florida.
+"Uncertified ballots for the 2000 United States presidential election in Florida."
 ```
 
 
@@ -2482,11 +2427,11 @@ Uncertified ballots for the 2000 United States presidential election in Florida.
 **Examples:**
 
 ```text
-The data includes variables about participants' and their parents' moods, interviewer observations, families' activities, families' health history, participants' school records, and parents' substance use. Demographic variables include race, religion, annual household income, and the participants' parents' employment statuses.
+"The data includes variables about participants' and their parents' moods, interviewer observations, families' activities, families' health history, participants' school records, and parents' substance use. Demographic variables include race, religion, annual household income, and the participants' parents' employment statuses."
 ```
 
 ```text
-The LGBTQ Hate Crimes Interviews dataset contains more in-depth information, including victim demographic information, substance abuse history, information on whether the victim is open about their LGBTQ identification, the victim's job status, and information about how the victim reacted to the crime, such as whether or not they reported the crime to the police and their level of cooperation with the police and prosecution.
+"The LGBTQ Hate Crimes Interviews dataset contains more in-depth information, including victim demographic information, substance abuse history, information on whether the victim is open about their LGBTQ identification, the victim's job status, and information about how the victim reacted to the crime, such as whether or not they reported the crime to the police and their level of cooperation with the police and prosecution."
 ```
 
 
@@ -2519,15 +2464,15 @@ The LGBTQ Hate Crimes Interviews dataset contains more in-depth information, inc
 **Examples:**
 
 ```text
-V1
+"V1"
 ```
 
 ```text
-V2
+"V2"
 ```
 
 ```text
-V3
+"V3"
 ```
 
 <a name="version-history_version_date"></a>
@@ -2541,11 +2486,11 @@ V3
 **Examples:**
 
 ```text
-2020-07-20
+"2020-07-20"
 ```
 
 ```text
-2022-01-31
+"2022-01-31"
 ```
 
 <a name="version-history_version_note"></a>
@@ -2559,33 +2504,33 @@ V3
 **Examples:**
 
 ```text
-File CB3025.ALL.PDF was removed from any previous datasets and flagged as a study-level file, so that it will accompany all downloads.
+"File CB3025.ALL.PDF was removed from any previous datasets and flagged as a study-level file, so that it will accompany all downloads."
 ```
 
 ```text
-The data producer provided additional data files.
+"The data producer provided additional data files."
 ```
 
 ```text
-The codebook descriptions of variables TANSUP, EMOSUP, and SOCSUP were corrected.
+"The codebook descriptions of variables TANSUP, EMOSUP, and SOCSUP were corrected."
 ```
 
 ###### Complete Version History Examples (with Subfields):
 
 ```yaml
-- Version Number: V2
-  Version Date: '2023-08-12'
-  Version Note: The data producer provided additional data files.
+- "Version Number": "V2"
+  "Version Date": "2023-08-12"
+  "Version Note": "The data producer provided additional data files."
 
-- Version Number: V1
-  Version Date: '2021-03-01'
-  Version Note: Initial release
+- "Version Number": "V1"
+  "Version Date": "2021-03-01"
+  "Version Note": "Initial release"
 ```
 
 ```yaml
-- Version Number: V1
-  Version Date: '2024-06-28'
-  Version Note: Initial release
+- "Version Number": "V1"
+  "Version Date": "2024-06-28"
+  "Version Note": "Initial release"
 ```
 
 
@@ -2603,11 +2548,11 @@ The codebook descriptions of variables TANSUP, EMOSUP, and SOCSUP were corrected
 **Examples:**
 
 ```text
-Both the TransPop and Cisgender datasets have the same variable named WEIGHT as the weighting variable. The combination datasets have a set of three weight variables (WEIGHT_TRANSPOP, WEIGHT_CISGENDER, WEIGHT_CISGENDER_TRANSPOP)
+"Both the TransPop and Cisgender datasets have the same variable named WEIGHT as the weighting variable. The combination datasets have a set of three weight variables (WEIGHT_TRANSPOP, WEIGHT_CISGENDER, WEIGHT_CISGENDER_TRANSPOP)"
 ```
 
 ```text
-A weight variable with two implied decimal places has been included and must be used in any analysis.
+"A weight variable with two implied decimal places has been included and must be used in any analysis."
 ```
 
 

@@ -3,6 +3,14 @@ from pathlib import Path
 from datetime import datetime
 import yaml
 
+class QuoteDumper(yaml.SafeDumper):
+    pass
+
+def quoted_str_representer(dumper, data):
+    return dumper.represent_scalar("tag:yaml.org,2002:str", data, style='"')
+
+QuoteDumper.add_representer(str, quoted_str_representer)
+
 ROOT = Path("C:/icpsr_github/metadata/rde_schema")
 PROPERTY_DIR = ROOT / "property_bank"
 OUTPUT_FILE = ROOT / "icpsr_rde_schema.md"
@@ -40,6 +48,77 @@ skip_files = {
 
 def anchor(text):
     return text.lower().replace(" ", "-").replace("_", "-")
+
+def convert_example_to_titles(data, schema):
+    """
+    Recursively replace property keys with schema 'title' values.
+    Works for objects and arrays of objects.
+    """
+    if isinstance(data, dict):
+        props = schema.get("properties", {})
+        result = {}
+
+        for key, value in data.items():
+            prop_schema = props.get(key, {})
+            title = prop_schema.get("title", key.replace("_", " ").title())
+
+            result[title] = convert_example_to_titles(value, prop_schema)
+
+        return result
+
+    elif isinstance(data, list):
+        items_schema = schema.get("items", {})
+        return [convert_example_to_titles(item, items_schema) for item in data]
+
+    else:
+        return data
+
+def render_yaml_examples(examples, schema):
+    md = []
+
+    for ex in examples:
+
+        # strings stay unchanged
+        if isinstance(ex, (str, int, float)):
+            md.append("```text")
+            md.append(f'"{ex}"')
+            md.append("```\n")
+            continue
+
+        # list containing only simple values (strings or numbers)
+        if isinstance(ex, list) and all(isinstance(i, (str, int, float)) for i in ex):
+            md.append("```text")
+            for item in ex:
+                md.append(f'"{item}"')
+            md.append("```\n")
+            continue
+
+        # convert keys to titles
+        human_ex = convert_example_to_titles(ex, schema)
+
+        # dump YAML normally
+        #yaml_str = yaml.safe_dump(human_ex, sort_keys=False)
+
+        # dump YAML; enclose everything in quotes
+        yaml_str = yaml.dump(human_ex, Dumper=QuoteDumper, sort_keys=False)
+        yaml_str = yaml_str.replace("\n...\n", "\n").rstrip(".\n")
+
+        # insert a blank line between top-level list items
+        if isinstance(human_ex, list):
+            lines = yaml_str.splitlines()
+            new_lines = []
+            for i, line in enumerate(lines):
+                new_lines.append(line)
+                # if the next line starts a new '- ', insert a blank line
+                if i + 1 < len(lines) and lines[i + 1].startswith("- "):
+                    new_lines.append("")  # blank line between items
+            yaml_str = "\n".join(new_lines)
+
+        md.append("```yaml")
+        md.append(yaml_str)
+        md.append("```\n")
+
+    return md
 
 def get_usage_notes(note):
     """
@@ -212,10 +291,7 @@ def render_subfields(properties, required, parent_anchor, level=4):
         # Examples per subfield
         if "examples" in prop:
             md.append("\n**Examples:**\n")
-            for ex in prop["examples"]:
-                md.append("```json")
-                md.append(json.dumps(ex, indent=2) if isinstance(ex, (dict, list)) else f'"{ex}"')
-                md.append("```\n")
+            md.extend(render_yaml_examples(prop["examples"], prop))
 
         # Recurse for nested subfields
         subprops, subreq = get_subfields(prop)
@@ -258,28 +334,25 @@ def render_property(name, schema):
     items_type = schema.get("items", {}).get("type")
 
     if "examples" in schema:
-        if schema_type == "object" or (schema_type == "array" and items_type == "object"):
-            # Complex type → "Complete Examples (with Subfields)"
-            md.append(f"###### Complete {title} Examples (with Subfields):\n")
-            md.append("```json")
-            md.append(json.dumps(schema["examples"], indent=2))
-            md.append("```\n")
-        else:
-            # Scalar type → normal examples
-            md.append("\n**Examples:**\n")
-            for ex in schema["examples"]:
-                md.append("```json")
-                md.append(json.dumps(ex, indent=2) if isinstance(ex, (dict, list)) else f'"{ex}"')
-                md.append("```\n")
 
-    return md, {
-        "title": title,
-        "anchor": anchor_id,
-        "required": required,
-        "repeatable": get_repeatable(schema),
-        "type": get_type(schema),
-        "description": desc
-    }
+        schema_type = schema.get("type")
+        items_type = schema.get("items", {}).get("type")
+
+        if schema_type == "object" or (schema_type == "array" and items_type == "object"):
+            md.append(f"###### Complete {title} Examples (with Subfields):\n")
+        else:
+            md.append("\n**Examples:**\n")
+
+        md.extend(render_yaml_examples(schema["examples"], schema))
+
+        return md, {
+            "title": title,
+            "anchor": anchor_id,
+            "required": required,
+            "repeatable": get_repeatable(schema),
+            "type": get_type(schema),
+            "description": desc
+        }
 
 # ----------------------------
 # Main
