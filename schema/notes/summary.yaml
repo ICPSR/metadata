@@ -1,6 +1,6 @@
 ---
   $schema: https://json-schema.org/draft-07/schema#
-  $id: https://schemas.icpsr.umich.edu/schema/yaml/summary?version=v1
+  $id: https://schemas.icpsr.umich.edu/schema/notes/summary?version=v1
   usageNotes: |
     The main goal of the Summary is to give the reader a clear sense of what the data collection is about, including substantive information about the different parts of the data collection not adequately conveyed by the Fileset names or found elsewhere in the metadata. 
     

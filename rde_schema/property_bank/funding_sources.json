@@ -47,8 +47,7 @@
         "examples": [
           0,
           1,
-          2,
-          3
+          2
         ]
       }
     },
@@ -59,8 +58,6 @@
       {
         "organization": {
           "name": "Robert Wood Johnson Foundation",
-          "name_code": "5643",
-          "name_uri": "https://icpsr.example.com/organizations/5643",
           "ror": "https://ror.org/02ymmdj85"
         },
         "grants": [
@@ -75,9 +72,7 @@
       },
       {
         "organization": {
-          "name": "United States Department of Justice. Office of Justice Programs. Bureau of Justice Statistics",
-          "name_code": "2342",
-          "name_uri": "https://icpsr.example.com/organizations/2342",
+          "name": "Bureau of Justice Statistics",
           "ror": "https://ror.org/0006s4z66"
         },
         "grants": [

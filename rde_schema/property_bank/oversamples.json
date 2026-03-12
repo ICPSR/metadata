@@ -10,50 +10,56 @@
       "type": "object",
       "properties": {
         "label": {
-          "title": "Oversample",
+          "title": "Label",
           "description": "A human-readable form of the language name.",
           "type": "string",
           "examples": [
             "Age",
             "Race/Ethnicity",
-            "Other"
+            "Sex"
           ]
         },
         "code": {
-          "title": "Oversample Code",
+          "title": "Code",
           "description": "A machine-readable/-actionable form of the term.",
           "type": "string",
           "examples": [
             "Age",
             "RaceEthnicity",
-            "Other"
+            "Sex"
           ]
         },
         "uri": {
-          "title": "Oversample URI",
+          "title": "URI",
           "description": "The URI for the term.",
-          "type": "string"
+          "type": "string",
+          "examples": [
+            "/api/v1/vocab-terms/oversamples/terms/Age",
+            "/api/v1/vocab-terms/oversamples/terms/RaceEthnicity",
+            "/api/v1/vocab-terms/oversamples/terms/Sex"
+          ]
         }
-      }
+      },
+      "required": ["label", "code", "uri"]
     },
     "examples": [
       [
         {
           "label": "Age",
           "code": "Age",
-          "uri": "https://example.com/oversamples/789"
+          "uri": "/api/v1/vocab-terms/oversamples/terms/Age"
         }
       ], 
       [
         {
           "label": "Race/Ethnicity",
           "code": "RaceEthnicity",
-          "uri": "https://example.com/oversamples/456"
+          "uri": "/api/v1/vocab-terms/oversamples/terms/RaceEthnicity"
         },
         {
-          "label": "Other",
-          "code": "Other",
-          "uri": "https://example.com/oversamples/123"
+          "label": "Sex",
+          "code": "Sex",
+          "uri": "/api/v1/vocab-terms/oversamples/terms/Sex"
         }
       ]
     ]

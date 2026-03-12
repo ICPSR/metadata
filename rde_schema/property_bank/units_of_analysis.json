@@ -10,6 +10,7 @@
     "type": "object",
     "properties": {
       "label": {
+        "title": "Label",
         "description": "A human-readable form of the term.",
         "type": "string",
         "examples": [
@@ -19,6 +20,7 @@
         ]
       },
       "code": {
+        "title": "Code",
         "description": "A machine-readable/-actionable form of the term.",
         "type": "string",
         "examples": [
@@ -28,8 +30,14 @@
         ]
       },
       "uri": {
+        "title": "URI",
         "description": "The URI for the term.",
-        "type": "string"
+        "type": "string",
+        "examples": [
+          "/api/v1/vocab-terms/analysisUnits/OrganizationOrInstitution", 
+          "/api/v1/vocab-terms/analysisUnits/Individual", 
+          "/api/v1/vocab-terms/analysisUnits/Household"
+        ]
       }
     },
     "required": ["label", "code", "uri"]
@@ -39,19 +47,19 @@
       {
         "label": "Organization/Institution",
         "code": "OrganizationOrInstitution",
-        "uri": "https://example.com/units_of_analysis/123"
+        "uri": "/api/v1/vocab-terms/analysisUnits/OrganizationOrInstitution"
       },
       {
         "label": "Individual",
         "code": "Individual",
-        "uri": "https://example.com/units_of_analysis/234"
+        "uri": "/api/v1/vocab-terms/analysisUnits/Individual"
       }
     ],
     [
       {
         "label": "Household",
         "code": "Household",
-        "uri": "https://example.com/units_of_analysis/737"
+        "uri": "/api/v1/vocab-terms/analysisUnits/Household"
       }
     ]
   ]

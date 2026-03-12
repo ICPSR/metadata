@@ -1,6 +1,6 @@
 ---
   $schema: https://json-schema.org/draft-07/schema#
-  $id: https://schemas.icpsr.umich.edu/schema/yaml/time_period_date?version=v1
+  $id: https://schemas.icpsr.umich.edu/schema/notes/time_period_date?version=v1
   usageNotes: |
     Time Periods focus on the dates the data are actually about, regardless of when the data were collected. 
     

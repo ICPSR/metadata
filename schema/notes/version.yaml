@@ -1,6 +1,6 @@
 ---
   $schema: https://json-schema.org/draft-07/schema#
-  $id: https://schemas.icpsr.umich.edu/schema/yaml/version?version=v1
+  $id: https://schemas.icpsr.umich.edu/schema/notes/version?version=v1
   usageNotes: |
     Version numbers are integers without leading zeros. Versioning begins when a data collection is first archived. Each subsequent update of the data collection increments the version number by 1. The version number is incremented when modifying or adding:
     

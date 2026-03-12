@@ -38,7 +38,7 @@
         "description": "The unique identifier for the geographic coverage area.",
         "type": "string",
         "format": "uri",
-        "examples": [ "https://www.geonames.org/4990729/", "https://www.geonames.org/6269554" ]
+        "examples": [ "https://sws.geonames.org/4990729/", "https://sws.geonames.org/6269554/" ]
       }
     },
     "required": ["country"]
@@ -50,18 +50,18 @@
         "city": "Cleveland",
         "state": "Ohio",
         "country": "United States",
-        "uri":  "https://www.geonames.org/5150529"
+        "uri":  "https://sws.geonames.org/5150529/"
       },
       {
         "city": "Pittsburgh",
         "state": "Pennsylvania",
         "country": "United States",
-        "uri": "https://www.geonames.org/5206379"
+        "uri": "https://sws.geonames.org/5206379/"
       }
     ],
     [
       {
-        "country": "Germany"
+        "country": "Prussia"
       }
     ]
   ]

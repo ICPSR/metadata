@@ -10,25 +10,33 @@
     "type": "object",
     "properties": {
       "label": {
-        "title": "Data Source Type",
+        "title": "Label",
         "description": "A human-readable form of the term.",
         "type": "string",
         "examples": [
           "Registers/Records/Accounts: Medical/Clinical",
           "Events/Interactions", 
-          "Other"
+          "Research data: Published"
         ]
       },
       "code": {
-        "title": "Data Source Type Code",
+        "title": "Code",
         "description": "A machine-readable/-actionable form of the term.",
         "type": "string",
-        "examples": ["RegistersRecordsAccounts.MedicalClinical", "EventsInteractions", "Other"]
+        "examples": [
+          "RegistersRecordsAccounts.MedicalClinical", 
+          "EventsInteractions", 
+          "ResearchData.Published"]
       },
       "uri": {
-        "title": "Data Source Type URI",
+        "title": "URI",
         "description": "The URI for the term.",
-        "type": "string"
+        "type": "string",
+        "examples": [
+          "/api/v1/vocab-terms/dataSourceTypes/terms/RegistersRecordsAccounts.MedicalClinical",
+          "/api/v1/vocab-terms/dataSourceTypes/terms/EventsInteractions",
+          "/api/v1/vocab-terms/dataSourceTypes/terms/ResearchData.Published"
+        ]
       }
     },
     "required": ["label", "code", "uri"]
@@ -38,19 +46,19 @@
       {
         "label": "Registers/Records/Accounts: Medical/Clinical",
         "code": "RegistersRecordsAccounts.MedicalClinical",
-        "uri": "https://example.com/data_source_type/123"
+        "uri": "/api/v1/vocab-terms/dataSourceTypes/terms/RegistersRecordsAccounts.MedicalClinical"
       },
       {
         "label": "Events/Interactions",
         "code": "EventsInteractions",
-        "uri": "https://example.com/data_source_type/234"
+        "uri": "/api/v1/vocab-terms/dataSourceTypes/terms/EventsInteractions"
       }
     ],
     [
       {
-        "label": "Other",
-        "code": "Other",
-        "uri": "https://example.com/data_source_type/737"
+        "label": "Research data: Published",
+        "code": "ResearchData.Published",
+        "uri": "/api/v1/vocab-terms/dataSourceTypes/terms/ResearchData.Published"
       }
     ]
   ]

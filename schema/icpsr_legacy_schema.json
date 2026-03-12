@@ -8,13 +8,15 @@
   "additionalProperties": false,
   "properties": {
     "version": {
+      "title": "Version",
       "description": "The current version number for the data collection.",
       "type": "integer",
       "controlledVocab": "N/A",
-      "$ref": "https://schemas.icpsr.umich.edu/schema/yaml/version?version=v1",
+      "usageNotes": {"$ref": "https://schemas.icpsr.umich.edu/schema/notes/version#/usageNotes"},
       "examples": [ 1, 2 ]
     },
     "version_date": {
+      "title": "Version Date",
       "description": "The date on which the current version of the data collection was released by ICPSR.",
       "type": "string",
       "format": "date",
@@ -23,6 +25,7 @@
       "examples": [ "2006-03-30", "2019-05-05" ]
     },
     "original_release_date": {
+      "title": "Original Release Date",
       "description": "The date on which the data collection was originally released by ICPSR.",
       "type": "string",
       "format": "date",
@@ -31,10 +34,11 @@
       "examples": [ "2001-02-07", "2020-08-12" ]
     },
     "title": {
+      "title": "Title",
       "description": "The official title that describes what the data collection is about, its geographic scope, and the time period it covered.",
       "type": "string",
       "controlledVocab": "N/A",
-      "$ref": "https://schemas.icpsr.umich.edu/schema/yaml/title?version=v1",
+      "usageNotes": {"$ref": "https://schemas.icpsr.umich.edu/schema/notes/title#/usageNotes"},
       "examples": [
         "Bridge of Faith: Aim4Peace Community-Based Violence Prevention Project, Kansas City, Missouri, 2014-2017",
         "Health and Relationships Project, United States, 2014-2015",
@@ -44,6 +48,7 @@
       ]
     },
     "alternate_title": {
+      "title": "Alternate Title",
       "description": "The alternate name(s) or acronym(s) commonly used to refer to the data collection.",
       "type": "array",
       "items": {
@@ -59,6 +64,7 @@
       ]
     },
     "link_title": {
+      "title": "Link Title",
       "description": "The title of an external resource that is included in the ICPSR catalog as a courtesy to users.",
       "type": "string",
       "controlledVocab": "N/A",
@@ -66,6 +72,7 @@
       "examples": [ "Cebu Longitudinal Health and Nutrition Survey" ]
     },
     "link_url": {
+      "title": "Link URL",
       "description": "The URL of an external resource that is included in the ICPSR catalog as a courtesy to users.",
       "type": "string",
       "controlledVocab": "N/A",
@@ -73,22 +80,26 @@
       "examples": [ "https://cebu.cpc.unc.edu/" ]
     },
     "principal_investigator": {
+      "title": "Principal Investigator",
       "description": "The key people or organizations responsible for the data collection, listed by importance. Each data collection requires at least one PI, either a person or an organization.",
       "type": "array",
       "controlledVocab": "The [ICPSR Personal Names Authority List](https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10002) and [Organization Names Authority List](https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10004) are the primary authority control sources for PI names. The [Virtual International Authority File](https://viaf.org/) (VIAF) serves as a secondary resource if names are not present in ICPSR lists.",
-      "$ref": "https://schemas.icpsr.umich.edu/schema/yaml/pi_names?version=v1",
+      "usageNotes": {"$ref": "https://schemas.icpsr.umich.edu/schema/notes/pi_names#/usageNotes"},
       "items": {
         "type": "object",
         "properties": {
           "person": {
+            "title": "Person",
             "description": "The name of a person primarily responsible for the data collection.",
             "type": "object",
             "properties": {
+              "title": "Given (First) Name",
               "given_name": {
                 "description": "The person's given name.",
                 "type": "string"
               },
               "family_name": {
+                "title": "Family (Last) Name",
                 "description": "The person's family name (e.g., surname).",
                 "type": "string"
               }
@@ -115,6 +126,7 @@
             ]
           },
           "organization": {
+            "title": "Organization",
             "description": "The name of the organization primarily responsible for the data collection OR the organization with which an individual PI was affiliated at the time of a data collection's deposit at ICPSR.",
             "type": "string",
             "examples": [
@@ -125,6 +137,7 @@
             ]
           },
           "order": {
+            "title": "Order",
             "description": "The order or rank of importance for the PIs associated with the data collection, typically provided to ICPSR by the lead PI.",
             "type": "integer",
             "controlledVocab": "N/A",
@@ -168,22 +181,25 @@
       ]
     },
     "citation": {
+      "title": "Citation",
       "description": "The official way to reference the data collection in writing.",
       "type": "string",
       "controlledVocab": "N/A",
-      "$ref": "https://schemas.icpsr.umich.edu/schema/yaml/citation?version=v1",
+      "usageNotes": {"$ref": "https://schemas.icpsr.umich.edu/schema/notes/citation#/usageNotes"},
       "examples": [
         ["University of Michigan. Survey Research Center. Economic Behavior Program. Survey of Consumer Attitudes and Behavior, September 2018. Inter-university Consortium for Political and Social Research [distributor], 2021-11-18. https://doi.org/10.3886/ICPSR38121.v1"],
         ["Goldin, Claudia, and Lawrence Katz. The 1915 Iowa State Census Project. ICPSR28501-v1. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor], 2010-12-14. http://doi.org/10.3886/ICPSR28501.v1"]
       ]
     },
     "distributor": {
+      "title": "Distributor",
       "description": "The organization(s) responsible for distributing the data collection.",
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
           "name": {
+            "title": "Name",
             "description": "The name of the data distributor.",
             "type": "string",
             "controlledVocab": "[ICPSR Organization Names Authority List](https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10004)",
@@ -193,6 +209,7 @@
             ]
           },
           "location": {
+            "title": "Location",
             "description": "The location of the data distributor.",
             "type": "string",
             "controlledVocab": "N/A",
@@ -200,6 +217,7 @@
             "examples": ["Ann Arbor, MI", "Chicago, IL"]
           },
           "order": {
+            "title": "Title",
             "description": "The order of importance for the distributors of the data collection.",
             "type": "integer",
             "controlledVocab": "N/A",
@@ -211,7 +229,7 @@
         "additionalProperties": false
       },
       "minItems": 1,
-      "$ref": "https://schemas.icpsr.umich.edu/schema/yaml/distributor?version=v1",
+      "icpsrGuidance": {"$ref": "https://schemas.icpsr.umich.edu/schema/notes/distributor#/icpsrGuidance"},
       "examples": [
         [
           {
@@ -235,6 +253,7 @@
       ]
     },
     "study_number": {
+      "title": "Study Number",
       "description": "A unique, numerical value used by ICPSR to identify and track data collections.",
       "type": "integer",
       "controlledVocab": "N/A",
@@ -242,6 +261,7 @@
       "examples": [2760, 3025, 38672]
     },
     "doi": {
+      "title": "Digital Object Identifier (DOI)",
       "description": "The registered persistent digital object identifier (DOI) associated with the data collection.",
       "type": "string",
       "format": "uri",
@@ -250,16 +270,18 @@
       "examples": [ "https://doi.org/10.3886/ICPSR03025.v2", "https://doi.org/10.3886/ICPSR06425.v1" ]
     },
     "funding_source": {
+      "title": "Funding Source",
       "description": "The sources of funding that supported the data collection.",
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
           "agency": {
+            "title": "Agency",
             "description": "An organization that supported the data collection.",
             "type": "string",
             "controlledVocab": "The [ICPSR Organization Names Authority List](https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10004) is the primary authority control source for funding agencies. The [Virtual International Authority File](https://viaf.org/) (VIAF) serves as a secondary resource if names are not present in the ICPSR list.",
-            "$ref": "https://schemas.icpsr.umich.edu/schema/yaml/funding_agency?version=v1",
+            "usageNotes": {"$ref": "https://schemas.icpsr.umich.edu/schema/notes/funding_agency#/usageNotes"},
             "icpsrGuidance": "The Principal Investigator's home institution does not need to be listed as a funding agency unless the PI provides a grant number (or other award information) or makes a specific request.",
             "examples": [
               "United States Department of Justice. Office of Justice Programs. Bureau of Justice Statistics",
@@ -268,6 +290,7 @@
             ]
           },
           "grant_number": {
+            "title": "Grant Number",
             "description": "A unique identifier associated with the funding.",
             "type": "array",
             "items": {
@@ -282,13 +305,14 @@
             ]
           },
           "purpose": {
+            "title": "Purpose",
             "description": "The purpose of the funding.",
             "type": "array",
             "items": {
               "type": "string",
               "enum": ["collection and/or analysis of data", "secondary analysis of data", "archiving of data"]
             },
-            "$ref": "https://schemas.icpsr.umich.edu/schema/yaml/funding_purpose?version=v1",
+            "controlledVocab": {"$ref": "https://schemas.icpsr.umich.edu/schema/notes/funding_purpose#/controlledVocab"},
             "icpsrGuidance": "This is an internal ICPSR element that is not publicly displayed. Certain ICPSR topical archives find this useful as they assemble reports for their funding agencies.",
             "examples": [
               ["collection and/or analysis of data", "secondary analysis of data"],
@@ -296,6 +320,7 @@
             ]
           },
           "order": {
+            "title": "Order",
             "description": "The relative order of funding sources associated with the data collection.",
             "type": "integer",
             "controlledVocab": "N/A",
@@ -304,7 +329,7 @@
           }
         },
         "required": ["agency", "order"],
-        "dependentRequired": { "grant_numbers": ["agency"] },
+        "dependentRequired": { "grant_number": ["agency"] },
         "additionalProperties": false
       },
       "examples": [
@@ -331,6 +356,7 @@
       ]
     },
     "external_source_ID": {
+      "title": "External Source ID",
       "description": "A unique identifier supplied by the data depositor.",
       "type": "array",
       "items": {
@@ -344,16 +370,18 @@
       ]
     },
     "summary": {
+      "title": "Summary",
       "description": "A description of the data collection that helps users understand its purpose, substance, and key topics.",
       "type": "string",
       "controlledVocab": "N/A",
-      "$ref": "https://schemas.icpsr.umich.edu/schema/yaml/summary?version=v1",
+      "usageNotes": {"$ref": "https://schemas.icpsr.umich.edu/schema/notes/summary#/usageNotes"},
       "examples": [
         "In 2014, Chicago Public Schools, looking to reduce the possibility of gun violence among school-aged youth, applied for a grant through the National Institute of Justice. CPS was awarded the Comprehensive School Safety Initiative grant and use said grant to establish the 'Connect and Redirect to Respect' program. This program used student social media data to identify and intervene with students thought to be at higher risk for committing violence. At-risk behaviors included brandishing a weapon, instigating conflict online, signaling gang involvement, and threats towards others. Identified at-risk students would be contacted by a member of the CPS Network Safety Team or the Chicago Police Department's Gang School Safety Team, depending on the risk level of the behavior. To evaluate the efficacy of CRR, the University of Chicago Crime Lab compared outcomes for students enrolled in schools that received the program to outcomes for students enrolled in comparison schools, which did not receive the program. 32 schools were selected for the study, with a total of 44,503 students. Demographic variables included age, race, sex, and ethnicity. Misconduct and academic variables included arrest history, in-school suspensions, out-of-school suspensions, GPA, and attendance days.",
         "The Health and Relationship Project is a study of both spouses in same-sex and different-sex marriages who were legally married and aged 35 to 65 at the time of data collection (2015). There are two parts of this study: a baseline questionnaire and a daily diary questionnaire completed for 10 consecutive days; both components were completed online and spouses were asked to complete the surveys separately. The baseline questionnaire asks participants about a number of topics related to marriage and health, including stress, health status and health behaviors, relationship quality, and how they have approached health problems in the past. The diary questionnaire asks participants a number of questions about the past 24 hours, including daily stress experiences, social interactions, and health behaviors."
       ]
     },
     "subject_term": {
+      "title": "Subject Term",
       "description": "A controlled list of social science terms maintained by ICPSR and used to indicate topics related to the data collection.",
       "type": "array",
       "items": {
@@ -370,6 +398,7 @@
       ]
     },
     "geographic_coverage_area": {
+      "title": "Geographic Coverage Area",
       "description": "The geographic locations where the data refer or are related.",
       "type": "array",
       "items": {
@@ -377,7 +406,7 @@
       },
       "minItems": 1,
       "controlledVocab": "[ICPSR Geographic Names Thesaurus](https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10003).",
-      "$ref": "https://schemas.icpsr.umich.edu/schema/yaml/geographic_coverage_area?version=v1",
+      "usageNotes": {"$ref": "https://schemas.icpsr.umich.edu/schema/notes/geographic_coverage_area#/usageNotes"},
       "icpsrGuidance": "The metadata editor will automatically put this element's values in alphabetical order, regardless of hierarchy.",
       "examples": [
         ["United States", "Maryland", "Baltimore"],
@@ -386,16 +415,18 @@
       ]
     },
     "time_period": {
+      "title": "Time Period",
       "description": "The time period(s) to which the data refer, regardless of when the data were collected.",
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
           "date": {
+            "title": "Date",
             "description": "The date (or date range) for a time period to which the data refer.",
             "type": "string",
             "controlledVocab": "N/A",
-            "$ref": "https://schemas.icpsr.umich.edu/schema/yaml/time_period_date?version=v1",
+            "usageNotes": {"$ref": "https://schemas.icpsr.umich.edu/schema/notes/time_period_date#/usageNotes"},
             "examples": [
               "2020",
               "2021--2022",
@@ -405,10 +436,11 @@
 
           },
           "time_frame": {
+            "title": "Time Frame",
             "description": "An optional free-text description of the time period, used for non-numeric dates (e.g., 'Fall 2012') or to add context when multiple dates are present.",
             "type": "string",
             "controlledVocab": "N/A",
-            "$ref": "https://schemas.icpsr.umich.edu/schema/yaml/time_period_time_frame?version=v1",
+            "usageNotes": {"$ref": "https://schemas.icpsr.umich.edu/schema/notes/time_period_time_frame#/usageNotes"},
             "examples": [
               "Wave 1",
               "Spring 2013",
@@ -437,12 +469,14 @@
       ]
     },
     "collection_date": {
+      "title": "Collection Date",
       "description": "The date(s) when the data were physically collected.",
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
           "date": {
+            "title": "Date",
             "description": "The date (or date range) of the data collection period.",
             "type": "string",
             "controlledVocab": "N/A",
@@ -455,10 +489,11 @@
             ]
           },
           "time_frame": {
+            "title": "Time Frame",
             "description": "An optional free-text description of the data collection period, used for non-numeric dates (e.g., 'Fall 2012') or to add context when multiple dates are present.",
             "type": "string",
             "controlledVocab": "N/A",
-            "$ref": "https://schemas.icpsr.umich.edu/schema/yaml/collection_date_time_frame?version=v1",
+            "usageNotes": {"$ref": "https://schemas.icpsr.umich.edu/schema/notes/collection_date_time_frame#/usageNotes"},
             "examples": [
               "Wave 1",
               "Spring 2013",
@@ -487,6 +522,7 @@
       ]
     },
     "universe": {
+      "title": "Universe",
       "description": "The total group of persons or other entities (e.g., households or organizations) that were the object of research and to which analytic results refer.",
       "type": "string",
       "controlledVocab": "N/A",
@@ -502,6 +538,7 @@
       ]
     },
     "data_type": {
+      "title": "Data Type",
       "description": "The types of data included in the data collection.",
       "type": "array",
       "items": {
@@ -525,13 +562,14 @@
           "video: film, animation, etc."
         ]
       },
-      "$ref": "https://schemas.icpsr.umich.edu/schema/yaml/data_type?version=v1",
+      "controlledVocab": {"$ref": "https://schemas.icpsr.umich.edu/schema/notes/data_type#/controlledVocab"},
       "examples": [
         ["administrative records data"],
         ["census/enumeration data", "survey data", "video: film, animation, etc."]
       ]
     },
     "collection_note": {
+      "title": "Collection Note",
       "description": "Important details about the data collection (like unique authoring, discrepencies, or processing information) that can't be recorded in other metadata elements.",
       "type": "array",
       "items": {
@@ -556,6 +594,7 @@
       ]
     },
     "study_purpose": {
+      "title": "Study Purpose",
       "description": "The study's main goals and associated research questions.",
       "type": "string",
       "controlledVocab": "N/A",
@@ -567,15 +606,18 @@
         ]
     },
     "study_design": {
+      "title": "Study Design",
       "description": "The procedures used to contact participants and gather data.",
       "type": "string",
       "controlledVocab": "N/A",
-      "$ref": "https://schemas.icpsr.umich.edu/schema/yaml/study_design?version=v1",
+      "usageNotes": {"$ref": "https://schemas.icpsr.umich.edu/schema/notes/study_design#/usageNotes"},
+      "icpsrGuidance": {"$ref": "https://schemas.icpsr.umich.edu/schema/notes/study_design#/icpsrGuidance"},
       "examples": [
         "Data on organizational culture in each of the 12 courts (Part 1) were obtained by administering the Court Culture Assessment Instrument (CCAI) to all judges with a felony criminal court docket and to all senior court administrators. A total of 224 respondents completed the questionnaire. The CCAI was used to assess five key dimensions of current court culture orientation: (1) dominant case management style, (2) judicial and court staff relations, (3) change management, (4) courthouse leadership, and (5) internal organization. The determination of what culture judges and court administrators desired to establish in the near future was also obtained through the application of the same instrument (CACI) as practitioners were asked to indicate the type of culture in each work area (or content dimension) they would like to see in their court in the next five years. Additionally, surveys were conducted of prosecuting attorneys (Part 2) and public defender attorneys (Part 3) to gauge their views on how well the courts in which they practice achieve the goals of access, fairness, and managerial effectiveness. Every prosecutor and public defender with two years or more experience in representing the state or criminal defendants in felony cases was asked to complete a questionnaire probing their thoughts on how well their court acted to promote access to records through availability and staff cooperation, treating litigants, witnesses, jurors and others fairly, and demonstrating concern for the rights and interests of others in the criminal trial process, including attorney and victims. A total of 334 prosecuting attorneys and 260 public defense attorneys completed the 46-item trial court process survey."
       ]
     },
     "variable_description": {
+      "title": "Variable Description",
       "description": "Significant variables (particularly demographic variables) in the data files.",
       "type": "string",
       "controlledVocab": "N/A",
@@ -586,6 +628,7 @@
       ]
     },
     "sampling": {
+      "title": "Sampling",
       "description": "The methods used to select the subset of the population that data are to be collected from (e.g., simple, systematic, stratified).",
       "type": "string",
       "controlledVocab": "N/A",
@@ -611,6 +654,7 @@
       ]
     },
     "time_method": {
+      "title": "Time Method",
       "description": "The methods used to collect data over time, like snapshots at one point (cross-sectional) or repeatedly (longitudinal) to study changes or trends.",
       "type": "array",
       "items": {
@@ -629,13 +673,14 @@
           "Time Series: Discrete"
         ]
       },
-      "$ref": "https://schemas.icpsr.umich.edu/schema/yaml/time_method?version=v1",
+      "controlledVocab": {"$ref": "https://schemas.icpsr.umich.edu/schema/notes/time_method#/controlledVocab"},
       "examples": [
         ["Cross-sectional"],
         ["Longitudinal: Cohort / Event-based", "Time Series"]
       ]
     },
     "data_source": {
+      "title": "Data Source",
       "description": "The source of the data, when that source is external to the data collection and can be independently cited.",
       "type": "array",
       "items": {
@@ -657,6 +702,7 @@
       ]
     },
     "collection_mode": {
+      "title": "Collection Mode",
       "description": "The method(s) or procedure(s) used to collect the data.",
       "type": "array",
       "items": {
@@ -684,13 +730,14 @@
           "web-based survey"
         ]
       },
-      "$ref": "https://schemas.icpsr.umich.edu/schema/yaml/collection_mode?version=v1",
+      "controlledVocab": {"$ref": "https://schemas.icpsr.umich.edu/schema/notes/collection_mode#/controlledVocab"},
       "examples": [
         ["audio computer-assisted self interview (ACASI)"],
         ["computer-assisted self interview (CASI)", "face-to-face interview"]
       ]
     },
     "extent_of_processing": {
+      "title": "Extent of Processing",
       "description": "Processing activities and checks performed on the data collection by ICPSR curation staff.",
       "icpsrGuidance": "This element is displayed to end-users in version history.",
       "type": "array",
@@ -705,7 +752,7 @@
           "Standardized missing values"
         ]
       },
-      "$ref": "https://schemas.icpsr.umich.edu/schema/yaml/extent_of_processing?version=v1",
+      "controlledVocab": {"$ref": "https://schemas.icpsr.umich.edu/schema/notes/extent_of_processing#/controlledVocab"},
       "examples": [
         [
           "Created variable labels and/or value labels.", 
@@ -718,6 +765,7 @@
       ]
     },
     "weight": {
+      "title": "Weight",
       "description": "The weight variables and the criteria for using them in data analysis or other information about how the data are weighted if no weight variables are present.",
       "type": "string",
       "controlledVocab": "N/A",
@@ -729,6 +777,7 @@
       ]
     },
     "response_rates": {
+      "title": "Response Rates",
       "description": "The percentage of respondents in the sample who participated in the data collection.",
       "type": "string",
       "controlledVocab": "N/A",
@@ -740,16 +789,18 @@
       ]
     },
     "scale": {
+      "title": "Scale",
       "description": "Any commonly known scales used to collect data for the data collection (e.g., MMPI, CPI, the Census Occupational Codes, etc.).",
       "type": "string",
       "controlledVocab": "N/A",
-      "$ref": "https://schemas.icpsr.umich.edu/schema/yaml/scale?version=v1",
+      "usageNotes": {"$ref": "https://schemas.icpsr.umich.edu/schema/notes/scale#/usageNotes"},
       "examples": [
         ["The baseline data collection included one scale - the CES-D index for maternal depression [Cole, J. C., Rabin, A. S., Smith, T. L., and Kaufman, A. S. (2004). Development and validation of a Rasch-derived CES-D short form. Psychological assessment, 16(4), 360]. All scales used for outcomes at ages 1 through 3 are listed in Appendix Tables 1 and 2 in the User Guide. Please refer to the User Guide and P.I. Codebook, available under the 'Data and Documentation' tab, for details."],
         ["Squires, J., Bricker, D. D., and Twombly, E. (2009). Ages and stages questionnaires. Baltimore, MD: Paul H. Brookes.", "Briggs-Gowan, M. J., Carter, A. S., Irwin, J. R., Wachtel, K., and Cicchetti, D. V. (2004). The Brief Infant-Toddler Social and Emotional Assessment: screening for social-emotional problems and delays in competence. Journal of pediatric psychology, 29(2), 143-155.", "Yu, L., Buysse, D. J., Germain, A., Moul, D. E., Stover, A., Dodds, N. E., ... and Pilkonis, P. A. (2012). Development of short forms from the PROMIS sleep disturbance and sleep-related impairment item banks. Behavioral sleep medicine, 10(1), 6-24."]
       ]
     },
     "unit_of_observation": {
+      "title": "Unit of Observation",
       "description": "The object(s) of analysis for the data collection, such as an organization, individual, or household.",
       "type": "array",
       "controlledVocab": "N/A",
@@ -764,10 +815,12 @@
       ]
     },
     "smallest_geographic_unit": {
+      "title": "Smallest Geographic Unit",
       "description": "The smallest geographic unit (e.g., state or census tract) used in the dataset.",
       "type": "string",
       "controlledVocab": "N/A",
-      "$ref": "https://schemas.icpsr.umich.edu/schema/yaml/smallest_geographic_unit?version=v1",
+      "usageNotes": {"$ref": "https://schemas.icpsr.umich.edu/schema/notes/smallest_geographic_unit#/usageNotes"},
+      "icpsrGuidance": {"$ref": "https://schemas.icpsr.umich.edu/schema/notes/smallest_geographic_unit#/icpsrGuidance"},
       "examples": [
         "state",
         "Census tract",
@@ -775,6 +828,7 @@
       ]
     },
     "restrictions": {
+      "title": "Restrictions",
       "description": "Rules about how the data collection can be accessed or used.",
       "type": "string",
       "controlledVocab": "N/A",
@@ -784,6 +838,7 @@
       ]
     },
     "membership_required": {
+      "title": "Membership Required",
       "description": "The availability of the data collection in terms of ICPSR membership. Members-only data may only be downloaded by affiliates of ICPSR member institutions who contribute funding to support the data.",
       "type": "boolean",
       "controlledVocab": "N/A",
@@ -791,6 +846,7 @@
       "examples": ["True", "False"]
     },
     "restricted_access": {
+      "title": "Restricted Access",
       "description": "General indication of any access restrictions associated with the data collection. More detailed information is provided in the Restrictions element.",
       "type": "boolean",
       "controlledVocab": "N/A",
@@ -798,6 +854,7 @@
       "examples": ["True", "False"]
     },
     "changes_to_collection": {
+      "title": "Changes to Collection",
       "description": "A record of how the data collection has changed over time.",
       "type": "array",
       "controlledVocab": "N/A",
@@ -805,12 +862,14 @@
         "type": "object",
         "properties": {
           "date": {
+            "title": "Date",
             "description": "The date on which an update occurred. ICPSR automatically generates this date.",
             "type": "string",
             "format": "date",
             "examples": [ "2006-03-30", "2019-05-05" ]
           },
           "note": {
+            "title": "Note",
             "description": "An explanation of the nature of the update.",
             "type": "string",
             "examples": [
@@ -838,6 +897,7 @@
       ]
     },
     "series": {
+      "title": "Series",
       "description": "A named collection of related studies.",
       "type": "string",
       "controlledVocab": "[ICPSR Series](https://www.icpsr.umich.edu/web/ICPSR/search/series)",
@@ -850,6 +910,7 @@
       ]
     },
     "classification": {
+      "title": "Classification",
       "description": "Topics used to organize data collections and help users explore the ICPSR catalog.",
       "type": "array",
       "items": {
@@ -863,6 +924,7 @@
       ]
     },
     "filesets": {
+      "title": "Filesets",
       "description": "The grouping of files in the data collection.",
       "type": "array",
       "controlledVocab": "N/A",
@@ -870,12 +932,14 @@
         "type": "object",
         "properties": {
           "number": {
+            "title": "Number",
             "description": "A number that uniquely identifies a 'part' or component file that is associated with the data collection.",
             "type": "integer",
             "usageNotes": "Fileset numbers are typically (but not always) consecutive integers beginning with 1. (In some cases, the number may be drawn from an external resource, such as FIPS state and county codes.) The numbers correspond to the 'part numbers' embedded in ICPSR standard filenames.",
             "examples": [1, 2, 3]
           },
           "name": {
+            "title": "Name",
             "description": "A brief title used to distinguish each fileset within a data collection.",
             "type": "string",
             "controlledVocab": "N/A",
@@ -888,6 +952,7 @@
             ]
           },
           "sda_note": {
+            "title": "SDA Note",
             "description": "Additional information about the fileset for the purpose of helping online analysis users.",
             "type": "string",
             "controlledVocab": "N/A",

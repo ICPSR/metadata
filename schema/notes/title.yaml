@@ -1,6 +1,6 @@
 ---
   $schema: https://json-schema.org/draft-07/schema#
-  $id: https://schemas.icpsr.umich.edu/schema/yaml/title?version=v1
+  $id: https://schemas.icpsr.umich.edu/schema/notes/title?version=v1
   usageNotes: |
     The Title includes three essential parts: the title proper, the geography, and the time period.
 

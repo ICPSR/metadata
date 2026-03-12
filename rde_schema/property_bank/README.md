@@ -1,5 +1,5 @@
 # ICPSR Property Bank Entries
-Updated on December 17, 2025
+Updated on February 23, 2026
 
 The RDE Ingest module presents an important opportunity to revise and refine the RDE Metadata Schema. To facilitate a metadata-driven ingest process, we are pivoting from archive-based schemas (e.g., one schema developed explicitly for the AEA Repository, a separate one for NACJD, etc.) to a 'property bank' model, which involves a collection of individually-defined metadata elements (i.e., the 'property bank') that may be reused (via the JSON Schema [$ref](https://json-schema.org/understanding-json-schema/structuring#dollarref) keyword) in one or more composite metadata schemas. Within the property bank, each metadata element will be defined in its own [JSON Schema](https://json-schema.org/understanding-json-schema) document; Metadata & Preservation will contribute information about how the property may be used (e.g., definition of the term, accepted data type, controlled vocabularies, examples of valid values, etc.), while CNS will contribute technical details (e.g., limits on string lengths, UI components, error messages, etc.).
 
@@ -9,6 +9,7 @@ These metadata elements have been reviewed by the Metadata & Preservation team, 
 
 | Property Title | Description |
 | ----- | ----------- |
+| [ADA Accessibility](ada_accessibility.json) | Indicates whether the data collection is ADA accessible, conforming to WCAG 2.1 AA standards, or qualifies for the ADA archival exception. |
 | [Alternate Titles](alternate_titles.json) | The alternate name(s) or acronym(s) commonly used to refer to the data collection. |
 | [Citation](citation.json) | The official way to reference the data collection in writing. |
 | [Collection Dates](collection_dates.json) | The date(s) when the data were physically collected. |

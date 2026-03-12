@@ -10,26 +10,34 @@
     "type": "object",
     "properties": {
       "label": {
+        "title": "Label",
         "description": "A human-readable form of the term.",
         "type": "string",
         "examples": [
           "Probability: Systematic random", 
-          "Other",
+          "Theoretical Sampling",
           "Total universe/Complete enumeration"
         ]
       },
       "code": {
+        "title": "Code",
         "description": "A machine-readable/-actionable form of the term.",
         "type": "string",
         "examples": [
           "Probability.SystematicRandom",
-          "Other",
+          "TheoreticalSampling",
           "TotalUniverseCompleteEnumeration"
         ]
       },
       "uri": {
+        "title": "URI",
         "description": "The URI for the term.",
-        "type": "string"
+        "type": "string",
+        "examples": [
+          "/api/v1/vocab-terms/samplingProcedures/terms/Probability.SystematicRandom",
+          "/api/v1/vocab-terms/samplingProcedures/terms/TheoreticalSampling",
+          "/api/v1/vocab-terms/samplingProcedures/terms/TotalUniverseCompleteEnumeration"
+        ]
       }
     },
     "required": ["label", "code", "uri"]
@@ -42,19 +50,19 @@
       {
         "label": "Probability: Systematic random",
         "code": "Probability.SystematicRandom",
-        "uri": "https://example.com/sampling_procedures/123"
+        "uri": "/api/v1/vocab-terms/samplingProcedures/terms/Probability.SystematicRandom"
       },
       {
-        "label": "Other",
-        "code": "Other",
-        "uri": "https://example.com/sampling_procedures/737"
+        "label": "Theoretical Sampling",
+        "code": "TheoreticalSampling",
+        "uri": "/api/v1/vocab-terms/samplingProcedures/terms/TheoreticalSampling"
       }
     ],
     [
       {
         "label": "Total universe/Complete enumeration",
         "code": "TotalUniverseCompleteEnumeration",
-        "uri": "https://example.com/sampling_procedures/234"
+        "uri": "/api/v1/vocab-terms/samplingProcedures/terms/TotalUniverseCompleteEnumeration"
       }
     ]
   ]

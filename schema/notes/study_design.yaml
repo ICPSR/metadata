@@ -1,6 +1,6 @@
 ---
   $schema: https://json-schema.org/draft-07/schema#
-  $id: https://schemas.icpsr.umich.edu/schema/yaml/study_design?version=v1
+  $id: https://schemas.icpsr.umich.edu/schema/notes/study_design?version=v1
   usageNotes: |
     The Study Design provides more detailed information than the Summary, including how surveys were prepared and administered, how interviews were conducted, or how the data were obtained and compiled, as well as information about deadlines and follow-ups to respondents.
   icpsrGuidance: |

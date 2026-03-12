@@ -15,7 +15,7 @@
         "description": "The order of importance for the distributors of the data collection.",
         "type": "integer",
         "usageNotes": "A value of '0' indicates the primary distributor, '1' the second, and so forth.",
-        "examples": [0,1,2,3]
+        "examples": [0,1,2]
       }
     },
     "required": ["organization", "order"]
@@ -26,17 +26,13 @@
       {
         "organization": {
           "name": "Inter-university Consortium for Political and Social Research",
-          "name_code": "1234",
-          "name_uri": "https://icpsr.example.com/organizations/1234",
-          "ror": "https://ror.org/017pz3h73"
+          "ror": "https://ror.org/02q7mkh03"
         },
         "order": 0
       },
       {
         "organization": {
-          "name": "GESIS",
-          "name_code": "2345",
-          "name_uri": "https://icpsr.example.com/organizations/2345",
+          "name": "GESIS - Leibniz-Institute for the Social Sciences",
           "ror": "https://ror.org/018afyw53"
         },
         "order": 1
@@ -45,9 +41,7 @@
     [
       {
         "organization": {
-          "name": "Roper Center for Public Opinion Research",
-          "name_code": "1234",
-          "name_uri": "https://icpsr.example.com/organizations/1234"
+          "name": "Roper Center for Public Opinion Research"
         },
         "order": 0
       }

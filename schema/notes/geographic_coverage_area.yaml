@@ -1,6 +1,6 @@
 ---
   $schema: https://json-schema.org/draft-07/schema#
-  $id: https://schemas.icpsr.umich.edu/schema/yaml/geographic_coverage_area?version=v1
+  $id: https://schemas.icpsr.umich.edu/schema/notes/geographic_coverage_area?version=v1
   usageNotes: |
     
     Each geographic term's full hierarchy must be included; please note: 

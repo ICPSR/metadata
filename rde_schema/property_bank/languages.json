@@ -9,7 +9,7 @@
       "type": "object",
       "properties": {
         "label": {
-          "title": "Language",
+          "title": "Label",
           "description": "A human-readable form of the language name.",
           "type": "string",
           "examples": [
@@ -19,7 +19,7 @@
           ]
         },
         "code": {
-          "title": "Language Code",
+          "title": "Code",
           "description": "A machine-readable/-actionable form of the term.",
           "type": "string",
           "examples": [
@@ -29,7 +29,7 @@
           ]
         },
         "uri": {
-          "title": "Language URI",
+          "title": "URI",
           "description": "The URI for the term.",
           "type": "string"
         }
@@ -45,9 +45,9 @@
       ], 
       [
         {
-          "label": "English",
-          "code": "en",
-          "uri": "https://example.com/languages/en"
+          "label": "German",
+          "code": "de",
+          "uri": "https://example.com/languages/de"
         },
         {
           "label": "French",

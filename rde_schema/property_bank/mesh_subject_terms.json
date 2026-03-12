@@ -10,22 +10,21 @@
     "type": "object",
     "properties": {
       "label": {
-        "title": "MeSH Subject Term",
+        "title": "Label",
         "description": "A human-readable form of the subject term.",
         "type": "string",
         "examples": ["anxiety", "brain waves"]
       },
       "code": {
-        "title": "MeSH Subject Term Code",
+        "title": "Code",
         "description": "A machine-readable/-actionable form of the subject term.",
         "type": "string",
         "examples": ["D001007", "D058256"]
       },
       "uri": {
-        "title": "MeSH Subject Term URI",
+        "title": "URI",
         "description": "The URI for the subject term as maintained in MeSH.",
         "type": "string",
-        "format": "uri",
         "usageNotes": "Enter the MeSH RDF Unique Identifier.",
         "examples": [
           "http://id.nlm.nih.gov/mesh/D001007",

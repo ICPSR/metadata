@@ -10,7 +10,7 @@
     "type": "object",
     "properties": {
       "label": {
-        "title": "Time Method",
+        "title": "Label",
         "description": "A human-readable form of the term.",
         "type": "string",
         "examples": [
@@ -20,19 +20,24 @@
         ]
       },
       "code": {
-        "title": "Time Method Code",
+        "title": "Code",
         "description": "A machine-readable/-actionable form of the term.",
         "type": "string",
         "examples": [
           "CrossSection",
           "Longitudinal.CohortEventBased",
-          "Other"
+          "TimeSeries"
         ]
       },
       "uri": {
-        "title": "Time Method URI",
+        "title": "URI",
         "description": "The URI for the term.",
-        "type": "string"
+        "type": "string",
+        "examples": [
+          "/api/v1/vocab-terms/timeMethods/terms/CrossSection",
+          "/api/v1/vocab-terms/timeMethods/terms/Longitudinal.CohortEventBased",
+          "/api/v1/vocab-terms/timeMethods/terms/TimeSeries"
+        ]
       }
     },
     "required": [ "label", "code", "uri" ]
@@ -42,19 +47,19 @@
       {
         "label": "Registers/Records/Accounts: Medical/Clinical",
         "code": "RegistersRecordsAccounts.MedicalClinical",
-        "uri": "https://example.com/time_methods/123"
+        "uri": "/api/v1/vocab-terms/timeMethods/terms/RegistersRecordsAccounts.MedicalClinical"
       },
       {
         "label": "Events/Interactions",
         "code": "EventsInteractions",
-        "uri": "https://example.com/time_methods/234"
+        "uri": "/api/v1/vocab-terms/timeMethods/terms/EventsInteractions"
       }
     ],
     [
       {
-        "label": "Other",
-        "code": "Other",
-        "uri": "https://example.com/time_methods/737"
+        "label": "Time series",
+        "code": "TimeSeries",
+        "uri": "/api/v1/vocab-terms/timeMethods/terms/TimeSeries"
       }
     ]
   ]

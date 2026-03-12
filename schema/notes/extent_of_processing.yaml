@@ -1,6 +1,6 @@
 ---
   $schema: https://json-schema.org/draft-07/schema#
-  $id: https://schemas.icpsr.umich.edu/schema/yaml/extent_of_processing?version=v1
+  $id: https://schemas.icpsr.umich.edu/schema/notes/extent_of_processing?version=v1
   controlledVocab: |
     Local ICPSR controlled vocabulary. See below for terms and definitions:
 

@@ -10,7 +10,7 @@
     "type": "object",
     "properties": {
       "label": {
-        "title": "General Data Format",
+        "title": "Label",
         "description": "A human-readable form of the term.",
         "type": "string",
         "examples": [
@@ -20,7 +20,7 @@
         ]
       },
       "code": {
-        "title": "General Data Format Code",
+        "title": "Code",
         "description": "A machine-readable/-actionable form of the term.",
         "type": "string",
         "examples": [
@@ -30,7 +30,7 @@
         ]
       },
       "uri": {
-        "title": "General Data Format URI",
+        "title": "URI",
         "description": "The URI for the term.",
         "type": "string"
       }
@@ -42,19 +42,19 @@
       {
         "label": "Text",
         "code": "Text",
-        "uri": "https://example.com/general_data_format/972"
+        "uri": "/api/v1/vocab-terms/generalDataFormats/terms/Text"
       },
       {
         "label": "Still image",
         "code": "StillImage",
-        "uri": "https://example.com/general_data_format/234"
+        "uri": "/api/v1/vocab-terms/generalDataFormats/terms/StillImage"
       }
     ],
     [
       {
         "label": "Numeric",
         "code": "Numeric",
-        "uri": "https://example.com/general_data_format/563"
+        "uri": "/api/v1/vocab-terms/generalDataFormats/terms/Numeric"
       }
     ]
   ]

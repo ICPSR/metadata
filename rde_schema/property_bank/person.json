@@ -68,14 +68,10 @@
         "family": "Doe II"
       },
       "orcid": "https://orcid.org/0000-0001-6666-5717",
-      "researcher_passport_profile_id": "1234",
       "affiliations": [
         {
           "name": "Urban Institute",
-          "name_code": "2342",
-          "name_uri": "https://icpsr.example.com/organizations/2342",
-          "ror": "https://ror.org/017pz3h73",
-          "icpsr_org_id": "xyz123"
+          "ror": "https://ror.org/017pz3h73"
         },
         {
           "name": "Example University"
@@ -85,7 +81,8 @@
     },
     {
       "name": {
-        "given": "Joe"
+        "given": "Joe",
+        "family": "Smith"
       }
     }
   ]

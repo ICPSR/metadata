@@ -6,25 +6,45 @@
   "type": "object",
   "controlledVocab": "licenses",
   "properties": {
-    "name": {
-      "title": "License Name",
-      "type": "string"
+    "label": {
+      "title": "Label",
+      "description": "A human-readable form of the term.",
+      "type": "string",
+      "examples": [
+        "Creative Commons Attribution Non Commercial 4.0 International",
+        "Apache License 1.0"
+      ]
     },
     "code": {
-      "title": "License Code",
-      "type": "string"
+      "title": "Code",
+      "description": "A machine-readable/-actionable form of the term.",
+      "type": "string",
+      "examples": [
+        "CC-BY-NC-4.0",
+        "Apache-1.0"
+      ]
     },
     "uri": {
-      "title": "License URI",
+      "title": "URI",
+      "description": "The URI for the term.",
       "type": "string",
-      "format": "uri"
+      "examples": [
+        "/api/v1/vocab-terms/licenses/terms/CC-BY-4.0",
+        "/api/v1/vocab-terms/licenses/terms/Apache-1.0"
+      ]
     }
   },
+  "required": ["label", "code", "uri"],
   "examples": [
     {
-      "name": "Creative Commons Attribution Non Commercial 4.0 International",
+      "label": "Creative Commons Attribution Non Commercial 4.0 International",
       "code": "CC-BY-NC-4.0",
-      "uri": "https://creativecommons.org/licenses/by-nc/4.0/"
+      "uri": "/api/v1/vocab-terms/licenses/terms/CC-BY-4.0"
+    },
+    {
+      "label": "Apache License 1.0",
+      "code": "Apache-1.0",
+      "uri": "/api/v1/vocab-terms/licenses/terms/Apache-1.0"
     }
   ]
 }

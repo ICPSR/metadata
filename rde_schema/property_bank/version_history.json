@@ -8,6 +8,7 @@
       "type": "object",
       "properties": {
         "version_number": {
+          "title": "Version Number",
           "description": "A version number for a study.",
           "type": "string",
           "pattern": "^[vV]\\d+(.\\d+)?(.\\d+)?$",
@@ -19,12 +20,14 @@
           ]
         },
         "version_date": {
+          "title": "Version Date",
           "description": "The date on which a given version of a data collection was released.",
           "type": "string",
           "format": "date",
           "examples": ["2020-07-20", "2022-01-31"]
         },
         "version_note": {
+          "title": "Version Note",
           "description": "Provenance information about a given version of the data collection.",
           "type": "string",
           "examples": [

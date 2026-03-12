@@ -35,11 +35,18 @@
       {
         "start_date": "2018",
         "end_date": "2018",
-        "time_frame": "Summer and Fall 2018"
+        "time_frame": "Wave 1"
       },
       {
         "start_date": "2020-10",
-        "end_date": "2020-10"
+        "end_date": "2020-10",
+        "time_frame": "Wave 2"
+      }
+    ],
+    [
+      {
+        "start_date": "2003-01-01",
+        "end_date": "2003-12-31"
       }
     ]
   ]

@@ -14,7 +14,7 @@
           "type": "object",
           "properties": {
             "label": {
-              "title": "Common Data Element Label",
+              "title": "Label",
               "description": "A human-readable form of the term.",
               "type": "string",
               "examples": [
@@ -22,7 +22,7 @@
               ]
             },
             "code": {
-              "title": "Common Data Element Code",
+              "title": "Code",
               "description": "A machine-readable/-actionable form of the term.",
               "type": "string",
               "examples": [
@@ -30,7 +30,7 @@
               ]
             },
             "uri": {
-              "title": "Common Data Element URI",
+              "title": "URI",
               "description": "The URI for the term.",
               "type": "string"
             }

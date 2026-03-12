@@ -10,7 +10,7 @@
     "type": "object",
     "properties": {
       "label": {
-        "title": "Collection Mode",
+        "title": "Label",
         "description": "A human-readable form of the term.",
         "type": "string",
         "examples": [
@@ -20,15 +20,16 @@
         ]
       },
       "code": {
-        "title": "Collection Mode Code",
+        "title": "Code",
         "description": "A machine-readable/-actionable form of the term.",
         "type": "string",
         "examples": ["Interview.FaceToFace.CAPIorCAMI", "MeasurementsAndTests", "Observation.ComputerBased"]
       },
       "uri": {
-        "title": "Collection Mode URI",
+        "title": "URI",
         "description": "The URI for the term.",
-        "type": "string"
+        "type": "string",
+        "examples": ["/api/v1/vocab-terms/collectionModes/terms/Interview.FaceToFace.CAPIorCAMI"]
       }
     },
     "required": ["label", "code", "uri"]
@@ -38,19 +39,19 @@
       {
         "label": "Face-to-face interview: Computer-assisted (CAPI/CAMI)",
         "code": "Interview.FaceToFace.CAPIorCAMI",
-        "uri": "https://example.com/collection_modes/234"
+        "uri": "/api/v1/vocab-terms/collectionModes/terms/Interview.FaceToFace.CAPIorCAMI"
       }
     ],
     [
       {
         "label": "Measurements and tests",
         "code": "MeasurementsAndTests",
-        "uri": "https://example.com/collection_modes/972"
+        "uri": "/api/v1/vocab-terms/collectionModes/terms/MeasurementsAndTests"
       },
       {
         "label": "Computer-based observation",
         "code": "Observation.ComputerBased",
-        "uri": "https://example.com/collection_modes/113"
+        "uri": "/api/v1/vocab-terms/collectionModes/terms/Observation.ComputerBased"
       }
     ]
   ]

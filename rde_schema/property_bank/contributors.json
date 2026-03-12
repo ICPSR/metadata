@@ -109,12 +109,9 @@
             "family": "Doe"
           },
           "orcid": "https://orcid.org/0000-0001-6666-5717",
-          "researcher_passport_profile_id": "1234",
           "affiliations": [
             {
               "name": "Urban Institute",
-              "name_code": "1234",
-              "name_uri": "https://icpsr.example.com/organizations/1234",
               "ror": "https://ror.org/017pz3h73",
               "icpsr_org_id": "xyz123"
             },
@@ -140,8 +137,6 @@
         "organization": 
           {
             "name": "Harvard University. Medical School",
-            "name_code": "7823",
-            "name_uri": "https://icpsr.example.com/organizations/7823",
             "ror": "https://ror.org/456cg6k91"
           },
         "contributor_type": [

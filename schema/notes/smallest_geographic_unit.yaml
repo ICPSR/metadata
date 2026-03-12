@@ -1,6 +1,6 @@
 ---
   $schema: https://json-schema.org/draft-07/schema#
-  $id: https://schemas.icpsr.umich.edu/schema/yaml/smallest_geographic_unit?version=v1
+  $id: https://schemas.icpsr.umich.edu/schema/notes/smallest_geographic_unit?version=v1
   usageNotes: |
     Geographic Unit is intended to represent specific, known geography -- e.g., county, census district, FIPS code, electoral district, and any other conveyor of specific geography that is represented by a variable.
 

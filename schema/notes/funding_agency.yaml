@@ -1,6 +1,6 @@
 ---
   $schema: https://json-schema.org/draft-07/schema#
-  $id: https://schemas.icpsr.umich.edu/schema/yaml/funding_agency?version=v1
+  $id: https://schemas.icpsr.umich.edu/schema/notes/funding_agency?version=v1
   usageNotes: |
      When entering the name of a funding agency, the following hierarchy of authority control sources should be used to make sure the name conforms to best practices within ICPSR and the broader academic community:
 
