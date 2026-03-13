@@ -3,6 +3,7 @@ from pathlib import Path
 from datetime import datetime
 import yaml
 import sys
+import argparse
 
 class QuoteDumper(yaml.SafeDumper):
     pass
@@ -11,10 +12,6 @@ def quoted_str_representer(dumper, data):
     return dumper.represent_scalar("tag:yaml.org,2002:str", data, style='"')
 
 QuoteDumper.add_representer(str, quoted_str_representer)
-
-ROOT = Path("C:/icpsr_github/metadata/schema")
-PROPERTY_DIR = ROOT
-OUTPUT_FILE = ROOT / "icpsr_legacy_schema-TEST.md"
 
 # ----------------------------
 # Configuration
@@ -181,16 +178,17 @@ def ref_to_link(ref):
 # Schema loading
 # ----------------------------
 
-def load_schemas():
+def load_schemas(PROPERTY_DIR, mode):
     schemas = {}
     file_list = PROPERTY_DIR.glob("*.json")
 
-    if len(file_list) == 1:
-        f = Path(file_list[0])
-        data = json.loads(f.read_text(encoding="utf-8"))
-        schemas = data['properties']
+    if mode == "legacy":
+        if len(file_list) == 1:
+            f = Path(file_list[0])
+            data = json.loads(f.read_text(encoding="utf-8"))
+            schemas = data['properties']
     
-    elif len(file_list) > 1:
+    else:
         for f in PROPERTY_DIR.glob("*.json"):
             if f.name in skip_files:
                 continue
@@ -373,7 +371,45 @@ def render_property(name, schema):
 # ----------------------------
 
 def main():
-    schemas = load_schemas()
+
+    parser = argparse.ArgumentParser(description="Generate Markdown from JSON Schema(s).")
+    parser.add_argument(
+        "--input",
+        help="Path to the project directory",
+        required=True
+    )
+    parser.add_argument(
+        "--mode",
+        choices=["legacy", "current"],
+        default="directory",
+        help="Whether to process legacy or current ICPSR metadata schema."
+    )
+    args = parser.parse_args()
+    input_path = Path(args.input)
+    mode = args.mode
+    current_date = datetime.now().strftime('%B %d, %Y')
+
+    if mode == "legacy":
+        ROOT = input_path / "schema"
+        PROPERTY_DIR = ROOT 
+        OUTPUT_FILE = input_path / "markdown" / "icpsr_legacy_schema.md"
+
+        intro_text=(
+           "# ICPSR Legacy Metadata Schema\n"
+           f"Last updated: {current_date}\n"
+           "**PLEASE NOTE:** This is a legacy version of the ICPSR Metadata Schema and is NOT applicable to studies published on ICPSR's new data repository at [https://www.icpsr.umich.edu/sites/](https://www.icpsr.umich.edu/sites/). Access the ICPSR Metadata Schema [documentation](https://icpsr.github.io/metadata/icpsr_metadata_schema/) for more information on current practices."
+        )
+    else:
+        ROOT = input_path / "rde_schema"
+        PROPERTY_DIR = ROOT / "property_bank"
+        OUTPUT_FILE = input_path / "markdown" / "icpsr_rde_schema.md"
+
+    schemas = load_schemas(PROPERTY_DIR, mode)
+
+    # exit if 'schemas' is empty:
+    if not schemas:
+        print(f"No schemas found in {PROPERTY_DIR} (using mode {mode})")
+        sys.exit(1)
     sections = []
     toc = []
 
