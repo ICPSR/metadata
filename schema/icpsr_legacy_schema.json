@@ -93,8 +93,8 @@
             "description": "The name of a person primarily responsible for the data collection.",
             "type": "object",
             "properties": {
-              "title": "Given (First) Name",
               "given_name": {
+                "title": "Given (First) Name",
                 "description": "The person's given name.",
                 "type": "string"
               },

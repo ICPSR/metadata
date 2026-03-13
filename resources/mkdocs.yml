@@ -1,10 +1,11 @@
-site_name: Metadata Documentation Portal
+site_name: ICPSR Metadata Documentation Portal
 site_url: https://icpsr.github.io/metadata/
 docs_dir: ../markdown
 site_dir: ../site
 nav:
   - Home: index.md
-  - ICPSR Metadata Schema: icpsr_study_schema.md
+  - ICPSR Metadata Schema: icpsr_metadata_schema.md
+  - ICPSR Legacy Metadata Schema: icpsr_legacy_schema.md
   - ICPSR Metadata Style Guide: icpsr_style_guide.md
   - ICPSR Metadata Export API: icpsr_metadata_api.md 
   - ICPSR Metadata Change Process: request_change.md
@@ -18,5 +19,11 @@ theme:
   navigation_depth: 5
   sticky_navigation: true
   include_homepage_in_sidebar: false
+plugins:
+  - redirects:
+      redirect_maps:
+        'icpsr_study_schema.md': 'icpsr_legacy_schema.md'
 extra_css: 
-  - ./assets/style.css
+  - assets/style.css
+extra_javascript:
+  - assets/a11y-nav.js

@@ -120,6 +120,11 @@ form .search-query {
     background: rgba(255, 255, 255, 0.7);
 }
 
+/* Underline links in content areas */
+.rst-content a {
+    text-decoration: underline;
+}
+
 /*
  * Account for wide tables which go off the side.
  * Override borders to avoid weirdness on narrow tables.

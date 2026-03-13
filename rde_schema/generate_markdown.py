@@ -2,6 +2,7 @@ import json
 from pathlib import Path
 from datetime import datetime
 import yaml
+import sys
 
 class QuoteDumper(yaml.SafeDumper):
     pass
@@ -11,9 +12,9 @@ def quoted_str_representer(dumper, data):
 
 QuoteDumper.add_representer(str, quoted_str_representer)
 
-ROOT = Path("C:/icpsr_github/metadata/rde_schema")
-PROPERTY_DIR = ROOT / "property_bank"
-OUTPUT_FILE = ROOT / "icpsr_rde_schema.md"
+ROOT = Path("C:/icpsr_github/metadata/schema")
+PROPERTY_DIR = ROOT
+OUTPUT_FILE = ROOT / "icpsr_legacy_schema-TEST.md"
 
 # ----------------------------
 # Configuration
@@ -182,11 +183,20 @@ def ref_to_link(ref):
 
 def load_schemas():
     schemas = {}
-    for f in PROPERTY_DIR.glob("*.json"):
-        if f.name in skip_files:
-            continue
+    file_list = PROPERTY_DIR.glob("*.json")
+
+    if len(file_list) == 1:
+        f = Path(file_list[0])
         data = json.loads(f.read_text(encoding="utf-8"))
-        schemas[f.stem] = data
+        schemas = data['properties']
+    
+    elif len(file_list) > 1:
+        for f in PROPERTY_DIR.glob("*.json"):
+            if f.name in skip_files:
+                continue
+            data = json.loads(f.read_text(encoding="utf-8"))
+            schemas[f.stem] = data
+
     return schemas
 
 # ----------------------------
@@ -243,7 +253,11 @@ def render_subfields(properties, required, parent_anchor, level=4):
 
     # Table rows
     for name, prop in properties.items():
-        title = prop.get("title", name.replace("_", " ").title())
+        try:
+            title = prop.get("title", name.replace("_", " ").title())
+        except AttributeError:
+            print(name, prop)
+            sys.exit(1)
         desc = prop.get("description", "")
         if "$ref" in prop and ("property_banks/person/" in prop["$ref"] or "property_banks/organization/" in prop["$ref"]):
             ref_title, desc = ref_to_link(prop["$ref"])
@@ -364,7 +378,11 @@ def main():
     toc = []
 
     for name, schema in sorted(schemas.items()):
-        md, entry = render_property(name, schema)
+        try:
+            md, entry = render_property(name, schema)
+        except TypeError:
+            print(name)
+            sys.exit(1)
         sections.extend(md)
         sections.append("\n---\n")
         toc.append(entry)
