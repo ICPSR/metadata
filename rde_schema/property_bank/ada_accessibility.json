@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://archive.icpsr.umich.edu/schema/property_banks/ada_accessibility",
+  "title": "ADA Accessibility",
+  "description": "Indicates whether the data collection is ADA accessible, conforming to WCAG 2.1 AA standards, or qualifies for the ADA archival exception.",
+  "controlledVocab": "adaAccessibility",
+  "type": "object",
+  "properties": {
+    "label": {
+        "title": "Label",
+        "description": "A human-readable form of the term.",
+        "type": "string",
+        "examples": [
+          "ADA Accessible",
+          "ADA Archival"
+        ]
+      },
+    "code": {
+      "title": "Code",
+      "description": "A machine-readable/-actionable form of the term.",
+      "type": "string",
+      "examples": [
+        "ada.accessible",
+        "ada.archival"
+      ]
+    },
+    "uri": {
+      "title": "URI",
+      "description": "The URI for the term.",
+      "type": "string",
+      "examples": [
+        "/api/v1/vocab-terms/adaAccessibility/terms/ada.accessible",
+        "/api/v1/vocab-terms/adaAccessibility/terms/ada.archival"
+      ]
+    }
+  },
+  "required": ["label", "code", "uri"],
+  "examples": [
+    {
+      "label": "ADA Accessible",
+      "code": "ada.accessible",
+      "uri": "/api/v1/vocab-terms/adaAccessibility/terms/ada.accessible"
+    },
+    {
+      "label": "ADA Archival",
+      "code": "ada.archival",
+      "uri": "/api/v1/vocab-terms/adaAccessibility/terms/ada.archival"
+    }
+  ]
+}

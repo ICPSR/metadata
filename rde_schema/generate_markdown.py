@@ -397,7 +397,7 @@ def main():
         intro_text=(
            "# ICPSR Legacy Metadata Schema\n"
            f"Last updated: {current_date}\n"
-           "**PLEASE NOTE:** This is a legacy version of the ICPSR Metadata Schema and is NOT applicable to studies published on ICPSR's new data repository at [https://www.icpsr.umich.edu/sites/](https://www.icpsr.umich.edu/sites/). Access the ICPSR Metadata Schema [documentation](https://icpsr.github.io/metadata/icpsr_metadata_schema/) for more information on current practices."
+           "**PLEASE NOTE:** This legacy documentation is NOT applicable to studies published on ICPSR's new data repository at [https://www.icpsr.umich.edu/sites/](https://www.icpsr.umich.edu/sites/). Access the [ICPSR Metadata Schema](https://icpsr.github.io/metadata/icpsr_metadata_schema/) for more information on ICPSR's current practices."
         )
     else:
         ROOT = input_path / "rde_schema"
