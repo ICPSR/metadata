@@ -3,3 +3,225 @@
     padding-top: 20px;     /* Add padding above text */
     padding-bottom: 20px;  /* Add padding below text */
   }
+
+.wy-table-responsive table td,
+.wy-table-responsive table th {
+    white-space: inherit
+}
+
+.rst-content a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.rst-content pre code {
+    white-space: pre-wrap;
+}
+
+.rst-content .wy-alert-neutral.admonition-todo a,
+.rst-content .wy-alert-neutral.admonition a,
+.rst-content .wy-alert-neutral.attention a,
+.rst-content .wy-alert-neutral.caution a,
+.rst-content .wy-alert-neutral.danger a,
+.rst-content .wy-alert-neutral.error a,
+.rst-content .wy-alert-neutral.hint a,
+.rst-content .wy-alert-neutral.important a,
+.rst-content .wy-alert-neutral.note a,
+.rst-content .wy-alert-neutral.seealso a,
+.rst-content .wy-alert-neutral.tip a,
+.rst-content .wy-alert-neutral.warning a,
+.wy-alert.wy-alert-neutral a {
+    color: #2573A7
+}
+
+.wy-tray-container li.wy-tray-item-info {
+    background: #2573A7;
+}
+
+.btn-link {
+    color: #2573A7;
+}
+
+.wy-dropdown-menu {
+    background: #ffffff;
+}
+
+.wy-dropdown-menu>dd>a:hover {
+    background: #2573A7;
+}
+
+.wy-dropdown.wy-dropdown-bubble .wy-dropdown-menu {
+    background: #ffffff;
+}
+
+.wy-dropdown.wy-dropdown-bubble .wy-dropdown-menu a:hover {
+    background: #2573A7;
+}
+
+.wy-inline-validate.wy-inline-validate-info .wy-input-context {
+    color: #2573A7
+}
+
+.wy-table-secondary {
+    color: #757575;
+}
+
+.wy-table-tertiary {
+    color: #757575;
+}
+
+a {
+    color: #2573A7;
+}
+
+.wy-text-info {
+    color: #2573A7 !important
+}
+
+.wy-menu-vertical li.current a {
+    color: #757575;
+}
+
+.wy-menu-vertical li.current>a,
+.wy-menu-vertical li.on a {
+    background: #ffffff;
+}
+
+.wy-menu-vertical li.current>a:hover,
+.wy-menu-vertical li.on a:hover {
+    background: #ffffff;
+}
+
+.wy-menu-vertical li.current>a:hover button.toctree-expand,
+.wy-menu-vertical li.on a:hover button.toctree-expand {
+    color: #757575;
+}
+
+.wy-menu-vertical li.toctree-l2 a:hover button.toctree-expand,
+.wy-menu-vertical li.toctree-l3 a:hover button.toctree-expand,
+.wy-menu-vertical li.toctree-l4 a:hover button.toctree-expand,
+.wy-menu-vertical li.toctree-l5 a:hover button.toctree-expand,
+.wy-menu-vertical li.toctree-l6 a:hover button.toctree-expand,
+.wy-menu-vertical li.toctree-l7 a:hover button.toctree-expand,
+.wy-menu-vertical li.toctree-l8 a:hover button.toctree-expand,
+.wy-menu-vertical li.toctree-l9 a:hover button.toctree-expand,
+.wy-menu-vertical li.toctree-l10 a:hover button.toctree-expand {
+    color: #757575;
+}
+
+.wy-side-nav-search {
+    color: #ffffff;
+}
+
+.wy-side-nav-search .wy-dropdown>a,
+.wy-side-nav-search>a {
+    color: #ffffff;
+}
+
+.wy-nav .wy-menu-vertical header {
+    color: #2573A7;
+}
+
+.wy-body-for-nav {
+    background: #ffffff;
+}
+
+.wy-nav-top {
+    background: #2573A7;
+}
+
+.wy-nav-content-wrap {
+    background: #ffffff;
+}
+
+footer {
+    color: #757575
+}
+
+footer p {
+    color: #757575;
+}
+
+#search-results .context {
+    color: #757575;
+}
+
+@media screen and (max-width:768px) {
+    .wy-body-for-nav {
+        background: #ffffff
+    }
+}
+
+@media screen and (min-width:1100px) {
+    .wy-nav-content {
+        background: #ffffff;
+    }
+}
+
+.rst-versions {
+    color: #ffffff;
+}
+
+.rst-versions a {
+    color: #2573A7;
+}
+
+.rst-content .code-block-caption .rst-versions .rst-current-version .headerlink,
+.rst-content .eqno .rst-versions .rst-current-version .headerlink,
+.rst-content .rst-versions .rst-current-version .admonition-title,
+.rst-content code.download .rst-versions .rst-current-version span:first-child,
+.rst-content dl dt .rst-versions .rst-current-version .headerlink,
+.rst-content h1 .rst-versions .rst-current-version .headerlink,
+.rst-content h2 .rst-versions .rst-current-version .headerlink,
+.rst-content h3 .rst-versions .rst-current-version .headerlink,
+.rst-content h4 .rst-versions .rst-current-version .headerlink,
+.rst-content h5 .rst-versions .rst-current-version .headerlink,
+.rst-content h6 .rst-versions .rst-current-version .headerlink,
+.rst-content p .rst-versions .rst-current-version .headerlink,
+.rst-content table>caption .rst-versions .rst-current-version .headerlink,
+.rst-content tt.download .rst-versions .rst-current-version span:first-child,
+.rst-versions .rst-current-version .fa,
+.rst-versions .rst-current-version .icon,
+.rst-versions .rst-current-version .rst-content .admonition-title,
+.rst-versions .rst-current-version .rst-content .code-block-caption .headerlink,
+.rst-versions .rst-current-version .rst-content .eqno .headerlink,
+.rst-versions .rst-current-version .rst-content code.download span:first-child,
+.rst-versions .rst-current-version .rst-content dl dt .headerlink,
+.rst-versions .rst-current-version .rst-content h1 .headerlink,
+.rst-versions .rst-current-version .rst-content h2 .headerlink,
+.rst-versions .rst-current-version .rst-content h3 .headerlink,
+.rst-versions .rst-current-version .rst-content h4 .headerlink,
+.rst-versions .rst-current-version .rst-content h5 .headerlink,
+.rst-versions .rst-current-version .rst-content h6 .headerlink,
+.rst-versions .rst-current-version .rst-content p .headerlink,
+.rst-versions .rst-current-version .rst-content table>caption .headerlink,
+.rst-versions .rst-current-version .rst-content tt.download span:first-child,
+.rst-versions .rst-current-version .wy-menu-vertical li button.toctree-expand,
+.wy-menu-vertical li .rst-versions .rst-current-version button.toctree-expand {
+    color: #ffffff
+}
+
+.rst-versions .rst-other-versions {
+    color: #757575;
+}
+
+.rst-versions .rst-other-versions dd a {
+    color: #ffffff;
+}
+
+.rst-content table.docutils.footnote,
+html.writer-html4 .rst-content table.docutils.citation,
+html.writer-html5 .rst-content dl.footnote {
+    color: #757575
+}
+
+.rst-content a code,
+.rst-content a tt {
+    color: #2573A7;
+    text-decoration: underline;
+}
+
+html.writer-html4 .rst-content dl:not(.docutils)>dt,
+html.writer-html5 .rst-content dl[class]:not(.option-list):not(.field-list):not(.footnote):not(.glossary):not(.simple)>dt {
+    color: #2573A7;
+}
