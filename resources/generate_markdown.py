@@ -361,7 +361,7 @@ def render_property(name, schema, ROOT, mode):
         items_type = schema.get("items", {}).get("type")
 
         if schema_type == "object" or (schema_type == "array" and items_type == "object"):
-            md.append(f"###### Complete {title} Examples (with Subfields):\n")
+            md.append("#### Complete Examples (with Subfields):\n")
         else:
             md.append("**Examples:**\n")
 

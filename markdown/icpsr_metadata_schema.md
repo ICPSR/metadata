@@ -127,7 +127,7 @@ Full information for each ICPSR study metadata element includes the following fi
 "/api/v1/vocab-terms/adaAccessibility/terms/ada.archival"
 ```
 
-###### Complete ADA Accessibility Examples (with Subfields):
+#### Complete Examples (with Subfields):
 
 ```yaml
 "Label": "ADA Accessible"
@@ -268,7 +268,7 @@ Full information for each ICPSR study metadata element includes the following fi
 "Student data"
 ```
 
-###### Complete Collection Dates Examples (with Subfields):
+#### Complete Examples (with Subfields):
 
 ```yaml
 - "Start Date": "2018"
@@ -359,7 +359,7 @@ Full information for each ICPSR study metadata element includes the following fi
 "/api/v1/vocab-terms/collectionModes/terms/Interview.FaceToFace.CAPIorCAMI"
 ```
 
-###### Complete Collection Modes Examples (with Subfields):
+#### Complete Examples (with Subfields):
 
 ```yaml
 - "Label": "Face-to-face interview: Computer-assisted (CAPI/CAMI)"
@@ -475,7 +475,7 @@ Full information for each ICPSR study metadata element includes the following fi
 "/api/v1/vocab-terms/dataSourceTypes/terms/ResearchData.Published"
 ```
 
-###### Complete Data Source Types Examples (with Subfields):
+#### Complete Examples (with Subfields):
 
 ```yaml
 - "Label": "Registers/Records/Accounts: Medical/Clinical"
@@ -539,7 +539,7 @@ Full information for each ICPSR study metadata element includes the following fi
 "2"
 ```
 
-###### Complete Distributors Examples (with Subfields):
+#### Complete Examples (with Subfields):
 
 ```yaml
 - "Organization":
@@ -679,7 +679,7 @@ Full information for each ICPSR study metadata element includes the following fi
 "2"
 ```
 
-###### Complete Funding Sources Examples (with Subfields):
+#### Complete Examples (with Subfields):
 
 ```yaml
 - "Organization":
@@ -773,7 +773,7 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** Yes  
 **Repeatable:** No  
 **Accepted Values:** Text  
-###### Complete General Data Formats Examples (with Subfields):
+#### Complete Examples (with Subfields):
 
 ```yaml
 - "Label": "Text"
@@ -913,7 +913,7 @@ Full information for each ICPSR study metadata element includes the following fi
 "https://sws.geonames.org/6269554/"
 ```
 
-###### Complete Geographic Coverage Areas Examples (with Subfields):
+#### Complete Examples (with Subfields):
 
 ```yaml
 - "City": "Cleveland"
@@ -1009,7 +1009,7 @@ Full information for each ICPSR study metadata element includes the following fi
 "https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/24040"
 ```
 
-###### Complete ICPSR Subject Terms Examples (with Subfields):
+#### Complete Examples (with Subfields):
 
 ```yaml
 - "ICPSR Subject Term": "biographical data"
@@ -1109,7 +1109,7 @@ Full information for each ICPSR study metadata element includes the following fi
 "/api/v1/vocab-terms/jelClassifications/terms/N22"
 ```
 
-###### Complete Journal of Economic Literature (JEL) Classification Codes Examples (with Subfields):
+#### Complete Examples (with Subfields):
 
 ```yaml
 - "Label": "Relation of Economics to Other Disciplines"
@@ -1196,7 +1196,7 @@ Full information for each ICPSR study metadata element includes the following fi
 "/api/v1/vocab-terms/licenses/terms/Apache-1.0"
 ```
 
-###### Complete License Examples (with Subfields):
+#### Complete Examples (with Subfields):
 
 ```yaml
 "Label": "Creative Commons Attribution Non Commercial 4.0 International"
@@ -1281,7 +1281,7 @@ Full information for each ICPSR study metadata element includes the following fi
 "http://id.nlm.nih.gov/mesh/D058256"
 ```
 
-###### Complete Medical Subject Headings (MeSH) Terms Examples (with Subfields):
+#### Complete Examples (with Subfields):
 
 ```yaml
 - "Label": "anxiety"
@@ -1395,7 +1395,7 @@ Full information for each ICPSR study metadata element includes the following fi
 "info@example.com"
 ```
 
-###### Complete Organization Examples (with Subfields):
+#### Complete Examples (with Subfields):
 
 ```yaml
 "Organization Name": "Urban Institute"
@@ -1527,7 +1527,7 @@ Full information for each ICPSR study metadata element includes the following fi
 "j.doe@example.com"
 ```
 
-###### Complete Person Examples (with Subfields):
+#### Complete Examples (with Subfields):
 
 ```yaml
 "Personal Name":
@@ -1616,7 +1616,7 @@ Full information for each ICPSR study metadata element includes the following fi
 "2"
 ```
 
-###### Complete Principal Investigators Examples (with Subfields):
+#### Complete Examples (with Subfields):
 
 ```yaml
 - "Person":
@@ -1821,7 +1821,7 @@ Full information for each ICPSR study metadata element includes the following fi
 "/api/v1/vocab-terms/smallestGeographicUnits/terms/StateProvince"
 ```
 
-###### Complete Smallest Geographic Unit Examples (with Subfields):
+#### Complete Examples (with Subfields):
 
 ```yaml
 "Label": "Basic Geographic Units"
@@ -2117,7 +2117,7 @@ Full information for each ICPSR study metadata element includes the following fi
 "https://www.nationalarchives.gov.uk/information-management/manage-information/preserving-digital-records/droid/"
 ```
 
-###### Complete Software Applications Examples (with Subfields):
+#### Complete Examples (with Subfields):
 
 ```yaml
 - "Software Name": "siegfried"
@@ -2260,7 +2260,7 @@ The Summary is written in the third person and avoids attempting to address issu
 "/api/v1/vocab-terms/timeMethods/terms/TimeSeries"
 ```
 
-###### Complete Time Methods Examples (with Subfields):
+#### Complete Examples (with Subfields):
 
 ```yaml
 - "Label": "Registers/Records/Accounts: Medical/Clinical"
@@ -2356,7 +2356,7 @@ The Summary is written in the third person and avoids attempting to address issu
 "Winter Semester 2019"
 ```
 
-###### Complete Time Periods Examples (with Subfields):
+#### Complete Examples (with Subfields):
 
 ```yaml
 - "Start Date": "2018"
@@ -2486,7 +2486,7 @@ The Summary is written in the third person and avoids attempting to address issu
 "/api/v1/vocab-terms/analysisUnits/Household"
 ```
 
-###### Complete Units of Analysis Examples (with Subfields):
+#### Complete Examples (with Subfields):
 
 ```yaml
 - "Label": "Organization/Institution"
@@ -2640,7 +2640,7 @@ The Summary is written in the third person and avoids attempting to address issu
 "The codebook descriptions of variables TANSUP, EMOSUP, and SOCSUP were corrected."
 ```
 
-###### Complete Version History Examples (with Subfields):
+#### Complete Examples (with Subfields):
 
 ```yaml
 - "Version Number": "V2"
