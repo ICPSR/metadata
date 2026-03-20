@@ -48,14 +48,14 @@ jobs:
       - name: Generate Legacy Schema Documentation
         if: steps.changed-schema.outputs.any_changed == 'true'
         run: |
-          python resources/generate_markdown_schema.py \
+          python resources/generate_markdown.py \
             --input $GITHUB_WORKSPACE \
             --mode legacy
 
       - name: Generate Current Schema Documentation
         if: steps.changed-rde.outputs.any_changed == 'true'
         run: |
-          python resources/generate_markdown_schema.py \
+          python resources/generate_markdown.py \
             --input $GITHUB_WORKSPACE \
             --mode current
 
