@@ -118,7 +118,7 @@ def render_yaml_examples(examples, schema):
 
     return md
 
-def get_usage_notes(note):
+def get_usage_notes(note, ROOT):
     """
     Returns usage notes text for a property.
     Supports either inline string or $ref to local YAML file.
@@ -237,7 +237,7 @@ def render_examples(examples):
         md.append("```\n")
     return md
 
-def render_subfields(properties, required, parent_anchor, level=4):
+def render_subfields(ROOT, properties, required, parent_anchor, level=4):
     """
     Render subfields table AND detailed per-subfield sections with anchors and examples.
     """
@@ -296,7 +296,7 @@ def render_subfields(properties, required, parent_anchor, level=4):
         #     md.append(f"**Controlled Vocabulary:** {check_cvs(prop['controlledVocab'])}  ")
 
         if "usageNotes" in prop:
-            note = get_usage_notes(prop['usageNotes'])
+            note = get_usage_notes(prop['usageNotes'], ROOT)
             if note:
                 md.append(f"**Usage Notes:** {note}  ")
 
@@ -308,11 +308,11 @@ def render_subfields(properties, required, parent_anchor, level=4):
         # Recurse for nested subfields
         subprops, subreq = get_subfields(prop)
         if subprops:
-            md.extend(render_subfields(subprops, subreq, anchor_id, level + 1))
+            md.extend(render_subfields(ROOT, subprops, subreq, anchor_id, level + 1))
 
     return md
 
-def render_property(name, schema):
+def render_property(name, schema, ROOT):
     md = []
 
     title = schema.get("title", name.replace("_", " ").title())
@@ -333,13 +333,13 @@ def render_property(name, schema):
     #     md.append(f"**Controlled Vocabulary:** {check_cvs(schema['controlledVocab'])}  ")
 
     if "usageNotes" in schema:
-        note = get_usage_notes(schema['usageNotes'])
+        note = get_usage_notes(schema['usageNotes'], ROOT)
         if note:
             md.append(f"**Usage Notes:** {note}  ")
 
     properties, required_subfields = get_subfields(schema)
     if properties:
-        md.extend(render_subfields(properties, required_subfields, anchor_id))
+        md.extend(render_subfields(ROOT, properties, required_subfields, anchor_id))
 
     # Examples
     schema_type = schema.get("type")
@@ -393,16 +393,49 @@ def main():
         ROOT = input_path / "schema"
         PROPERTY_DIR = ROOT 
         OUTPUT_FILE = input_path / "markdown" / "icpsr_legacy_schema.md"
-
+        version_file = input_path / "markdown" / "legacy_schema_version_history.md"
         intro_text=(
            "# ICPSR Legacy Metadata Schema\n"
            f"Last updated: {current_date}\n"
-           "**PLEASE NOTE:** This legacy documentation is NOT applicable to studies published on ICPSR's new data repository at [https://www.icpsr.umich.edu/sites/](https://www.icpsr.umich.edu/sites/). Access the [ICPSR Metadata Schema](https://icpsr.github.io/metadata/icpsr_metadata_schema/) for more information on ICPSR's current practices."
+           "**PLEASE NOTE:** This documentation describes the legacy ICPSR Metadata Schema. ICPSR is transitioning to a new metadata framework used for studies published in our new data repository at [https://www.icpsr.umich.edu/sites/](https://www.icpsr.umich.edu/sites/). For details on the new framework, see the [ICPSR Metadata Schema documentation](https://icpsr.github.io/metadata/icpsr_metadata_schema/).\n"
+           "This legacy metadata schema was used to describe data collections at the Inter-university Consortium for Political and Social Research (ICPSR) over the previous decade. These rules and definitions represent ICPSR's metadata practices and are provided as a historical resource to help ICPSR users and staff understand past practices.\n"
+           "A machine-readable copy of this information is also available as a [JSON Schema](https://github.com/ICPSR/metadata/blob/main/schema/icpsr_study_schema.json)\n\n"
         )
+        key_text = """## Key for Metadata Element Entries
+
+        Full information for each ICPSR study metadata element includes the following fields:
+
+        - **Description:** A short description of the metadata element and the information it is intended to convey.
+        - **Required:** Indicates whether the metadata element is mandatory ("Yes") or optional ("No"). Required elements must include at least one value.
+        - **Repeatable:** Indicates whether the metadata element may be repeated ("Yes") or if it may only occur once ("No").
+        - **Accepted values:** The type of values that may be used with the metadata element; options include text (with additional requirements, such as date formatting, noted when present) and numbers. Multi-part metadata elements have accepted value information provided in entries for individual subelements.
+        - **Controlled Vocabulary:** Indicates the specific controlled vocabulary (i.e., a set of standardized terms) that must be used to provide values for the metadata element ('N/A' indicates no controlled vocabulary is required).
+        - **Usage Notes:** Additional information about the nature, scope, and conventions for values that may be added to the metadata element.
+        - **ICPSR Input Guidance:** Information for ICPSR staff related to using internal tools and resources to create and input metadata values. These notes are made available to the general ICPSR community for transparency.
+        - **Examples:** Examples of valid values for the metadata element.
+        """
     else:
         ROOT = input_path / "rde_schema"
         PROPERTY_DIR = ROOT / "property_bank"
-        OUTPUT_FILE = input_path / "markdown" / "icpsr_rde_schema.md"
+        OUTPUT_FILE = input_path / "markdown" / "icpsr_metadata_schema.md"
+        version_file = input_path / "markdown" / "schema_version_history.md"
+        intro_text=(
+           "# ICPSR Metadata Schema\n"
+           f"Last updated: {current_date}\n"
+           "This is the metadata schema used to describe data collections at the Inter-university Consortium for Political and Social Research (ICPSR). These rules and definitions represent ICPSR's metadata practices and are intended to (a) assist ICPSR staff with metadata entry, and (b) help ICPSR users -- including data depositors and researchers accessing data -- understand how to use and interpret our metadata.\n\n"
+        )
+
+        key_text = """## Key for Metadata Element Entries
+
+        Full information for each ICPSR study metadata element includes the following fields:
+
+        - **Description:** A short description of the metadata element and the information it is intended to convey.
+        - **Required:** Indicates whether the metadata element is mandatory ("Yes") or optional ("No"). Required elements must include at least one value.
+        - **Repeatable:** Indicates whether the metadata element may be repeated ("Yes") or if it may only occur once ("No").
+        - **Accepted values:** The type of values that may be used with the metadata element; options include text (with additional requirements, such as date formatting, noted when present) and numbers. Multi-part metadata elements have accepted value information provided in entries for individual subelements.
+        - **Usage Notes:** Additional information about the nature, scope, and conventions for values that may be added to the metadata element.
+        - **Examples:** Examples of valid values for the metadata element.
+        """
 
     schemas = load_schemas(PROPERTY_DIR, mode)
 
@@ -415,7 +448,7 @@ def main():
 
     for name, schema in sorted(schemas.items()):
         try:
-            md, entry = render_property(name, schema)
+            md, entry = render_property(name, schema, ROOT)
         except TypeError:
             print(name)
             sys.exit(1)
@@ -424,9 +457,8 @@ def main():
         toc.append(entry)
 
     output = []
-    output.append("# ICPSR RDE Metadata Schema\n")
-    output.append(f"Last updated: {datetime.now():%B %d, %Y}\n")
-    output.append("## Overview\n")
+    output.append(intro_text)
+    output.append("## Metadata Elements: Overview\n")
 
     output.append("| Property | Required? | Repeatable? | Accepted Values | Description |")
     output.append("|---|---|---|---|---|")
@@ -440,8 +472,13 @@ def main():
             f"{e['description']} |"
         )
 
-    output.append("\n---\n## Properties\n")
+    output.append(key_text)
+    output.append("\n---\n## Metadata Elements: Detailed Information\n")
     output.extend(sections)
+
+    # Add version history information
+    version_lines = version_file.read_text(encoding="utf-8").splitlines()
+    output.extend(version_lines)
 
     OUTPUT_FILE.write_text("\n".join(output), encoding="utf-8")
     print(f"Markdown generated: {OUTPUT_FILE}")

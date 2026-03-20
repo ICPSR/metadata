@@ -1,0 +1,208 @@
+[
+    {
+        "code": "BasicUnits",
+        "label": "Basic Geographic Units",
+        "description": "Basic geographic units for use with the Smallest Geographic Unit metadata property",
+        "type": "TreeVocabTermDTO"
+    },
+    {
+        "code": "GeocodedLocation",
+        "label": "Geocoded Location",
+        "description": "A precise geographic point derived from an address, typically represented as coordinates or address strings.",
+        "type": "TreeVocabTermDTO",
+        "path": "BasicUnits"
+
+    },
+    {
+        "code": "Parcel",
+        "label": "Parcel",
+        "description": "A discrete use of land ownership, often defined in property records or tax assessments.",
+        "type": "TreeVocabTermDTO",
+        "path": "BasicUnits"
+    },
+    {
+        "code": "GridCell",
+        "label": "Grid Cell",
+        "description": "A unit of spatial data that divides an area into rectangular, square intervals (e.g., 1km x 1km grid), typically used in mapping or environmental studies.",
+        "type": "TreeVocabTermDTO",
+        "path": "BasicUnits"
+    },
+    {
+        "code": "LocalUnits",
+        "label": "Local Geographic Units",
+        "description": "Local geographic units for use with the Smallest Geographic Unit metadata property",
+        "type": "TreeVocabTermDTO"
+    },
+    {
+        "code": "PostalCodeZipCode",
+        "label": "Postal Code/Zip Code",
+        "description": "Geographic areas defined by postal delivery routes or regions, used for organizing mail delivery.",
+        "type": "TreeVocabTermDTO",
+        "path": "LocalUnits"
+    },
+    {
+        "code": "NeighborhoodCommunityArea",
+        "label": "Neighborhood/Community Area",
+        "description": "Informally defined areas within a city, usually based on local recognition rather than official administrative boundaries.",
+        "type": "TreeVocabTermDTO",
+        "path": "LocalUnits"
+    },
+    {
+        "code": "CityMunicipality",
+        "label": "City/Municipality",
+        "description": "A local government jurisdictions that covers urban areas, which can range from large cities to small towns and villages.",
+        "type": "TreeVocabTermDTO",
+        "path": "LocalUnits"
+    },
+    {
+        "code": "CountyDistrictParish",
+        "label": "County/District/Parish",
+        "description": "A geographic area that is part of a state or province (e.g., parishes in Louisiana, boroughs in Alaska).",
+        "type": "TreeVocabTermDTO",
+        "path": "LocalUnits"
+    },
+    {
+        "code": "LargerUnits",
+        "label": "Larger Geographic Units",
+        "description": "Larger geographic units for use with the Smallest Geographic Unit metadata property",
+        "type": "TreeVocabTermDTO"
+    },
+    {
+        "code": "StateProvince",
+        "label": "State/Province",
+        "description": "A major administrative division within a country.  In the U.S., this includes the 50 states and the District of Columbia.  Other countries, like Canada and Australia, have provinces or states (e.g., Ontario in Canada, New South Wales in Australia).",
+        "type": "TreeVocabTermDTO",
+        "path": "LargerUnits"
+    },
+    {
+        "code": "Territory",
+        "label": "Territory",
+        "description": "A region under the jurisdiction of a national government, but not a fully self-governing state or province (e.g., Puerto Rico, Northwest Territories, Falkland Islands).",
+        "type": "TreeVocabTermDTO",
+        "path": "LargerUnits"
+    },
+    {
+        "code": "Country",
+        "label": "Country",
+        "description": "A sovereign nation or territory that is recognized as an independent political entity, such as the United States, Canada, or France.",
+        "type": "TreeVocabTermDTO",
+        "path": "LargerUnits"
+    },
+    {
+        "code": "CensusUnits",
+        "label": "Census Units",
+        "description": "Census units for use with the Smallest Geographic Unit metadata property",
+        "type": "TreeVocabTermDTO"
+    },
+    {
+        "code": "CensusBlock",
+        "label": "Census Block",
+        "description": "The smallest geographic unit used in national censuses, often corresponding to a city block or small neighborhood.",
+        "type": "TreeVocabTermDTO",
+        "path": "CensusUnits"
+    },
+    {
+        "code": "CensusBlockGroup",
+        "label": "Census Block Group",
+        "description": "A collection of adjacent census blocks—typically all blocks within part of a census tract.",
+        "type": "TreeVocabTermDTO",
+        "path": "CensusUnits"
+    },
+    {
+        "code": "CensusTract",
+        "label": "Census Tract",
+        "description": "Small geographic units used in national censuses, typically representing 2,500 to 8,000 people.  They are designed to provide detailed statistical data for neighborhoods or communities.",
+        "type": "TreeVocabTermDTO",
+        "path": "CensusUnits"
+    },
+    {
+        "code": "CensusDivision",
+        "label": "Census Division",
+        "description": "Larger geographic areas used for statistical reporting, grouping states or provinces within a country.  These divisions are smaller than regions but larger than individual states or provinces.",
+        "type": "TreeVocabTermDTO",
+        "path": "CensusUnits"
+    },
+    {
+        "code": "CensusRegion",
+        "label": "Census Region",
+        "description": "Broader groupings of census divisions used to organize and report data at a national level (e.g., Northeast, Midwest, South, West).",
+        "type": "TreeVocabTermDTO",
+        "path": "CensusUnits"
+    },
+    {
+        "code": "PublicUseMicrodataArea",
+        "label": "Public Use Microdata Area (PUMA)",
+        "description": "Geographic areas with populations of 100,000 or more, used for the release of detailed public-use microdata from the U.S. Census.",
+        "type": "TreeVocabTermDTO",
+        "path": "CensusUnits"
+    },
+    {
+        "code": "CoreBasedStatisticalArea",
+        "label": "Core-Based Statistical Area (CBSA)",
+        "description": "A term that includes both Metropolitan and Micropolitan Statistical Areas.  These areas are based on urban centers and their surrounding communities as defined by the U.S. Office of Management and Budget (OMB).",
+        "type": "TreeVocabTermDTO",
+        "path": "CensusUnits"
+    },
+    {
+        "code": "MetropolitanStatisticalArea",
+        "label": "Metropolitan Statistical Area (MSA)",
+        "description": "A Core-Based Statistical Area (CBSA) that includes an urban core with a population of 50,000 or more.",
+        "type": "TreeVocabTermDTO",
+        "path": "CensusUnits"
+    },
+    {
+        "code": "MicropolitanStatisticalArea",
+        "label": "Micropolitan Statistical Area",
+        "description": "A Core-Based Statistical Area (CBSA) that includes an urban core population of at least 10,000 but less than 50,000.",
+        "type": "TreeVocabTermDTO",
+        "path": "CensusUnits"
+    },
+    {
+        "code": "ZIPCodeTabulationArea",
+        "label": "ZIP Code Tabulation Area (ZCTA)",
+        "description": "Geographic areas created by the U.S. Census Bureau to approximate the boundaries of ZIP Codes for demographic analysis.",
+        "type": "TreeVocabTermDTO",
+        "path": "CensusUnits"
+    },
+    {
+        "code": "ElectoralLegalCrossJurisdictionalEducationalDistricts",
+        "label": "Electoral, Legal, Cross-Jurisdictional, and Educational Districts",
+        "description": "Geographic units that represent electoral, legal, cross-jurisdictional, and educational districts for use with the Smallest Geographic Unit metadata property",
+        "type": "TreeVocabTermDTO"
+    },
+    {
+        "code": "VotingDistrictPrecinct",
+        "label": "Voting District/Precinct",
+        "description": "Geographic areas used for organizing elections, often serving as the smallest electoral units where voters cast their ballots.",
+        "type": "TreeVocabTermDTO",
+        "path": "ElectoralLegalCrossJurisdictionalEducationalDistricts"
+    },
+    {
+        "code": "CongressionalDistrict",
+        "label": "Congressional District",
+        "description": "A geographic area used for electing representatives to federal or state legislative offices in the United States.",
+        "type": "TreeVocabTermDTO",
+        "path": "ElectoralLegalCrossJurisdictionalEducationalDistricts"
+    },
+    {
+        "code": "FederalCourtDistrict",
+        "label": "Federal Court District",
+        "description": "A geographic area where a U.S. District Court has jurisdiction to hear and decide federal cases.",
+        "type": "TreeVocabTermDTO",
+        "path": "ElectoralLegalCrossJurisdictionalEducationalDistricts"
+    },
+    {
+        "code": "SchoolDistrict",
+        "label": "School District",
+        "description": "The administrative boundaries for local education systems, typically overseeing public schools from elementary through secondary levels.",
+        "type": "TreeVocabTermDTO",
+        "path": "ElectoralLegalCrossJurisdictionalEducationalDistricts"
+    },
+    {
+        "code": "IndigenousTribalLands",
+        "label": "Indigenous/Tribal Lands",
+        "description": "Areas legally recognized as Indigenous or tribal nations, often with unique legal, cultural, or sovereignty status.",
+        "type": "TreeVocabTermDTO",
+        "path": "ElectoralLegalCrossJurisdictionalEducationalDistricts"
+    }
+]

@@ -1,0 +1,32 @@
+[
+	{
+        "code": "DataCollector",
+        "label": "Data Collector",
+        "description": "The person/organization responsible for finding or gathering/collecting data under the guideance of the Principal Investigator (PI).",
+        "type": "TreeVocabTermDTO"
+    },
+    {
+        "code": "DataCurator",
+        "label": "Data Curator",
+        "description": "The person/organization responsible for reviewing, enhancing, cleaning, and/or standardizing the data and associated metadata submitted to the repository.",
+        "type": "TreeVocabTermDTO"
+    },
+    {
+        "code": "DataManager",
+        "label": "Data Manager",
+        "description": "The person/organization responsible for maintaining the finished data resource.",
+        "type": "TreeVocabTermDTO"
+    },
+    {
+        "code": "ProjectManager",
+        "label": "Project Manager",
+        "description": "A person/organization officially designated as the manager of a project (which may consist of one or many project teams and sub-teams).",
+        "type": "TreeVocabTermDTO"
+    },
+    {
+        "code": "Researcher",
+        "label": "Researcher",
+        "description": "A person/organization involved in analysing data or the results of an experiment or formal study. May indicate an intern or assistant who helped with research but was not listed as a Principal Investigator.",
+        "type": "TreeVocabTermDTO"
+    }
+]

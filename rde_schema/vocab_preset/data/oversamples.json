@@ -1,0 +1,32 @@
+[
+	{
+		"code": "Age",
+        "label": "Age",
+        "description": "Oversampling based on specific age groups (e.g., children, young adults, older adults).",
+        "type": "TreeVocabTermDTO"
+	},
+	{
+		"code": "RaceEthnicity",
+        "label": "Race/Ethnicity",
+        "description": "Oversampling based on self-identified racial or ethnic backgrounds (e.g., Black/African American, Hispanic/Latino, Indigenous populations).",
+        "type": "TreeVocabTermDTO"
+	},
+	{
+		"code": "SexualOrientationGenderIdentity",
+        "label": "Sexual Orientation/Gender Identity (SOGI)",
+        "description": "Oversampling based on self-reported sexual orientation (e.g., lesbian, gay, bisexual) or gender identity (e.g., transgender, non-binary).",
+        "type": "TreeVocabTermDTO"
+	},
+	{
+		"code": "Sex",
+        "label": "Sex",
+        "description": "Oversampling based on sex assigned at birth (e.g., male, female).",
+        "type": "TreeVocabTermDTO"
+	},
+	{
+		"code": "CitizenshipImmigrationStatus",
+        "label": "Citizenship/Immigration Status",
+        "description": "Oversampling based on citizenship, residency, or immigration classifications (e.g., naturalized citizens, undocumented immigrants, refugees).",
+        "type": "TreeVocabTermDTO"
+	}
+]

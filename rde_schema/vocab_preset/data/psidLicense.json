@@ -1,0 +1,8 @@
+[
+  {
+    "code": "psidLicense",
+    "label": "PSID License",
+    "description": "<p>You agree not to redistribute data or other materials without the written agreement of ICPSR, unless:</p><ul><li>You serve as the OFFICIAL or DESIGNATED REPRESENTATIVE at an ICPSR MEMBER INSTITUTION and are assisting AUTHORIZED USERS with obtaining data, or</li><li>You are collaborating with other AUTHORIZED USERS to analyze the data for research or instructional purposes.</li></ul>",
+    "type": "TreeVocabTermDTO"
+  }
+]
