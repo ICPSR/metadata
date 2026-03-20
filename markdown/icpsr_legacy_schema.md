@@ -619,7 +619,11 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 **Repeatable:** Yes  
 **Accepted Values:** Text  
 **Controlled Vocabulary:** N/A  
-**ICPSR Input Guidance:** This is an internal ICPSR element that is not publicly displayed. An External Source ID consists of: an ICPSR-defined source organization code, a colon, and a Depositor-supplied ID.  
+**ICPSR Input Guidance:** This is an internal ICPSR element that is not publicly displayed. An External Source ID consists of: 
+
+  * an ICPSR-defined source organization code  
+  * a colon  
+  * a Depositor-supplied ID.  
 **Examples:**
 
 ```text

@@ -363,7 +363,7 @@
         "type": "string"
       },
       "controlledVocab": "N/A",
-      "icpsrGuidance": "This is an internal ICPSR element that is not publicly displayed. An External Source ID consists of: an ICPSR-defined source organization code, a colon, and a Depositor-supplied ID.",
+      "icpsrGuidance": {"$ref": "https://schemas.icpsr.umich.edu/schema/notes/external_source_ID#/icpsrGuidance"},
       "examples": [ 
         ["BJS:271"],
         ["PSC:12345"]
