@@ -401,19 +401,19 @@ def main():
            "This legacy metadata schema was used to describe data collections at the Inter-university Consortium for Political and Social Research (ICPSR) over the previous decade. These rules and definitions represent ICPSR's metadata practices and are provided as a historical resource to help ICPSR users and staff understand past practices.\n\n"
            "A machine-readable copy of this information is also available as a [JSON Schema](https://github.com/ICPSR/metadata/blob/main/schema/icpsr_study_schema.json)\n\n"
         )
-        key_text = """## Key for Metadata Element Entries
-
-        Full information for each ICPSR study metadata element includes the following fields:  
-
-        - **Description:** A short description of the metadata element and the information it is intended to convey.  
-        - **Required:** Indicates whether the metadata element is mandatory ("Yes") or optional ("No"). Required elements must include at least one value.
-        - **Repeatable:** Indicates whether the metadata element may be repeated ("Yes") or if it may only occur once ("No").  
-        - **Accepted values:** The type of values that may be used with the metadata element; options include text (with additional requirements, such as date formatting, noted when present) and numbers. Multi-part metadata elements have accepted value information provided in entries for individual subelements.  
-        - **Controlled Vocabulary:** Indicates the specific controlled vocabulary (i.e., a set of standardized terms) that must be used to provide values for the metadata element ('N/A' indicates no controlled vocabulary is required).  
-        - **Usage Notes:** Additional information about the nature, scope, and conventions for values that may be added to the metadata element.  
-        - **ICPSR Input Guidance:** Information for ICPSR staff related to using internal tools and resources to create and input metadata values. These notes are made available to the general ICPSR community for transparency.  
-        - **Examples:** Examples of valid values for the metadata element.  
-        """
+        key_text = (
+            "## Key for Metadata Element Entries\n"
+            "Full information for each ICPSR study metadata element includes the following fields:\n\n"
+            "- **Description:** A short description of the metadata element and the information it is intended to convey.\n"
+            "- **Required:** Indicates whether the metadata element is mandatory ('Yes') or optional ('No'). Required elements must include at least one value.\n"
+            "- **Repeatable:** Indicates whether the metadata element may be repeated ('Yes') or if it may only occur once ('No').\n"
+            "- **Accepted values:** The type of values that may be used with the metadata element; options include text (with additional requirements, such as date formatting, noted when present) and numbers. Multi-part metadata elements have accepted value information provided in entries for individual subelements.\n"
+            "- **Controlled Vocabulary:** Indicates the specific controlled vocabulary (i.e., a set of standardized terms) that must be used to provide values for the metadata element ('N/A' indicates no controlled vocabulary is required).\n"
+            "- **Usage Notes:** Additional information about the nature, scope, and conventions for values that may be added to the metadata element.\n"
+            "- **ICPSR Input Guidance:** Information for ICPSR staff related to using internal tools and resources to create and input metadata values. These notes are made available to the general ICPSR community for transparency.\n"
+            "- **Examples:** Examples of valid values for the metadata element.\n\n"
+        )
+        
     else:
         ROOT = input_path / "rde_schema"
         PROPERTY_DIR = ROOT / "property_bank"
@@ -424,18 +424,16 @@ def main():
            f"Last updated: {current_date}\n\n"
            "This is the metadata schema used to describe data collections at the Inter-university Consortium for Political and Social Research (ICPSR). These rules and definitions represent ICPSR's metadata practices and are intended to (a) assist ICPSR staff with metadata entry, and (b) help ICPSR users -- including data depositors and researchers accessing data -- understand how to use and interpret our metadata.\n\n"
         )
-
-        key_text = """## Key for Metadata Element Entries
-
-        Full information for each ICPSR study metadata element includes the following fields:
-
-        - **Description:** A short description of the metadata element and the information it is intended to convey.
-        - **Required:** Indicates whether the metadata element is mandatory ("Yes") or optional ("No"). Required elements must include at least one value.
-        - **Repeatable:** Indicates whether the metadata element may be repeated ("Yes") or if it may only occur once ("No").
-        - **Accepted values:** The type of values that may be used with the metadata element; options include text (with additional requirements, such as date formatting, noted when present) and numbers. Multi-part metadata elements have accepted value information provided in entries for individual subelements.
-        - **Usage Notes:** Additional information about the nature, scope, and conventions for values that may be added to the metadata element.
-        - **Examples:** Examples of valid values for the metadata element.
-        """
+        key_text = (
+        "## Key for Metadata Element Entries\n"
+        "Full information for each ICPSR study metadata element includes the following fields:\n\n"
+        "- **Description:** A short description of the metadata element and the information it is intended to convey.\n"
+        "- **Required:** Indicates whether the metadata element is mandatory ('Yes') or optional ('No'). Required elements must include at least one value.\n"
+        "- **Repeatable:** Indicates whether the metadata element may be repeated ('Yes') or if it may only occur once ('No').\n"
+        "- **Accepted values:** The type of values that may be used with the metadata element; options include text (with additional requirements, such as date formatting, noted when present) and numbers. Multi-part metadata elements have accepted value information provided in entries for individual subelements.\n"
+        "- **Usage Notes:** Additional information about the nature, scope, and conventions for values that may be added to the metadata element.\n"
+        "- **Examples:** Examples of valid values for the metadata element.\n\n"
+    )
 
     schemas = load_schemas(PROPERTY_DIR, mode)
 
