@@ -1,10 +1,11 @@
 ---
   $schema: https://json-schema.org/draft-07/schema#
   $id: https://schemas.icpsr.umich.edu/schema/notes/funding_agency?version=v1
-  usageNotes: |
+  usageNotes: |+
      When entering the name of a funding agency, the following hierarchy of authority control sources should be used to make sure the name conforms to best practices within ICPSR and the broader academic community:
 
        1. If the funding agency has sponsored archived data at ICPSR, use the name as it has been displayed previously within the ICPSR catalog.  
        2. If the funding agency is in the [ICPSR Organization Names Authority List](https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10004), conform to the listed name form.
        3. If the funding agency is not available in an ICPSR authority list, consult [VIAF](https://viaf.org).  
        4. If the funding agency does not have a VIAF record, consult another authoritative source, such as the organization's website or Google Scholar.  
+

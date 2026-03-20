@@ -1,7 +1,8 @@
 ---
   $schema: https://json-schema.org/draft-07/schema#
   $id: https://schemas.icpsr.umich.edu/schema/notes/citation?version=v1
-  usageNotes: |
-    The Citation is dynamically assembled from other entry elements in this format: Principal-Investigator-list. Study-Title. Distributor-list, Version-Date. DOI. ICPSR 'union catalog' records – i.e., external resource to which ICPSR links as a courtesy – do not have citations generated.
+  usageNotes: |+
+    The Citation is dynamically assembled from other entry elements in this format: Principal-Investigator-list. Study-Title. Distributor-list, Version-Date. DOI. ICPSR 'union catalog' records (i.e., external resource to which ICPSR links as a courtesy) do not have citations generated. 
 
     For additional information about how DOIs for citations are generated, see the Digital Object Identifier element usage notes.
+

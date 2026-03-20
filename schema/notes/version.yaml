@@ -1,7 +1,7 @@
 ---
   $schema: https://json-schema.org/draft-07/schema#
   $id: https://schemas.icpsr.umich.edu/schema/notes/version?version=v1
-  usageNotes: |
+  usageNotes: |+
     Version numbers are integers without leading zeros. Versioning begins when a data collection is first archived. Each subsequent update of the data collection increments the version number by 1. The version number is incremented when modifying or adding:
     
       * Data files, including additions of datasets or supplemental data files, additional masking, increasing curation level, or resupplied datasets
@@ -9,3 +9,4 @@
       * SDA (Survey Documentation and Analysis) files
     
     Metadata-only updates to the data collection do not increment the version number. Changes to the version number require a textual summary to be added to Changes to Collection.
+

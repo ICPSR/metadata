@@ -288,25 +288,23 @@ def render_subfields(ROOT, mode, properties, required, parent_anchor, level=4):
         md.append(f"<a name=\"{anchor_id}\"></a>")
         md.append(f"{'#' * (level + 1)} {title}\n")
 
-        md.append(f"**Description:** {desc}  ")
-        md.append(f"**Required:** {req}  ")
-        md.append(f"**Repeatable:** {rep}  ")
-        md.append(f"**Accepted Values:** {typ}  ")
+        md.append(f"**Description:** {desc}\n")
+        md.append(f"**Required:** {req}\n")
+        md.append(f"**Repeatable:** {rep}\n")
+        md.append(f"**Accepted Values:** {typ}\n")
 
         if "controlledVocab" in prop and mode == "legacy":
             controlledVocab = get_yaml_notes(prop['controlledVocab'], "controlledVocab", ROOT)
-            md.append(f"**Controlled Vocabulary:** {controlledVocab}  ")
-            if controlledVocab != "N/A":
-                md.append('\n')
+            md.append(f"**Controlled Vocabulary:** {controlledVocab}\n")
 
         if "usageNotes" in prop:
             note = get_yaml_notes(prop['usageNotes'], "usageNotes", ROOT)
             if note:
-                md.append(f"**Usage Notes:** {note}  ")
+                md.append(f"**Usage Notes:** {note}\n")
 
         if "icpsrGuidance" in prop:
             icpsrGuidance = get_yaml_notes(prop['icpsrGuidance'], "icpsrGuidance", ROOT)
-            md.append(f"**ICPSR Input Guidance:** {icpsrGuidance}  ")
+            md.append(f"**ICPSR Input Guidance:** {icpsrGuidance}\n")
 
         # Examples per subfield
         if "examples" in prop:
@@ -331,26 +329,25 @@ def render_property(name, schema, ROOT, mode):
     md.append(f"<a id=\"{anchor_id}\"></a>")
     md.append(f"### {title}\n")
     if desc:
-        md.append(f"**Description:** {desc}  ")
-    md.append(f"**Required:** {required}  ")
-    md.append(f"**Repeatable:** {get_repeatable(schema)}  ")
-    md.append(f"**Accepted Values:** {get_type(schema)}  ")
+        md.append(f"**Description:** {desc}\n")
+    md.append(f"**Required:** {required}\n")
+    md.append(f"**Repeatable:** {get_repeatable(schema)}\n")
+    md.append(f"**Accepted Values:** {get_type(schema)}\n")
 
     # Check for additional keywords: controlledVocab and usageNotes
     if "controlledVocab" in schema and mode == "legacy":
         controlledVocab = get_yaml_notes(schema['controlledVocab'], "controlledVocab", ROOT)
-        md.append(f"**Controlled Vocabulary:** {controlledVocab}  ")
-        if controlledVocab != "N/A":
-            md.append('\n')
+        md.append(f"**Controlled Vocabulary:** {controlledVocab}  ")            
+        md.append('\n')
 
     if "usageNotes" in schema:
         note = get_yaml_notes(schema['usageNotes'], "usageNotes", ROOT)
         if note:
-            md.append(f"**Usage Notes:** {note}  ")
+            md.append(f"**Usage Notes:** {note}\n")
 
     if "icpsrGuidance" in schema:
         icpsrGuidance = get_yaml_notes(schema['icpsrGuidance'], "icpsrGuidance", ROOT)
-        md.append(f"**ICPSR Input Guidance:** {icpsrGuidance}  ")
+        md.append(f"**ICPSR Input Guidance:** {icpsrGuidance}\n")
 
     properties, required_subfields = get_subfields(schema)
     if properties:
@@ -459,7 +456,12 @@ def main():
     sections = []
     toc = []
 
-    for name, schema in sorted(schemas.items()):
+    if mode == "current":
+        schema_items = sorted(schemas.items())
+    else:
+        schema_items = schemas.items()
+
+    for name, schema in schema_items:
         try:
             md, entry = render_property(name, schema, ROOT, mode)
         except TypeError:

@@ -1,9 +1,11 @@
 ---
   $schema: https://json-schema.org/draft-07/schema#
   $id: https://schemas.icpsr.umich.edu/schema/notes/time_period_date?version=v1
-  usageNotes: |
+  usageNotes: |+
     Time Periods focus on the dates the data are actually about, regardless of when the data were collected. 
     
     Time Periods generally correspond to the dates that appear in the Title; days and months may be included in the Time Period even though they are not in the Title.
 
     Dates are formatted in accordance with ISO 8601 (YYYY, YYYY-MM, or YYYY-MM-DD). One hyphen separates the parts of a date; two hyphens separate two dates. Ranges may be expressed in years (YYYY--YYYY), months (YYYY-MM--YYYY-MM), or days (YYYY-MM-DD--YYYY-MM-DD). No spaces are permitted in date expressions.
+
+    
