@@ -16,19 +16,19 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
       - name: Get changed files in schema folder
         id: changed-schema
-        uses: tj-actions/changed-files@v44
+        uses: tj-actions/changed-files@v47
         with:
           files: schema/**
 
       - name: Get changed files in rde_schema folder
         id: changed-rde
-        uses: tj-actions/changed-files@v44
+        uses: tj-actions/changed-files@v47
         with:
           files: rde_schema/**
 
@@ -37,7 +37,7 @@ jobs:
         run: echo "No relevant changes detected"
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: 3.11
 
