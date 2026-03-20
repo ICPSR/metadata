@@ -79,6 +79,8 @@ Full information for each ICPSR study metadata element includes the following fi
 **Repeatable:** Yes  
 **Accepted Values:** Text  
 **Controlled Vocabulary:** N/A  
+
+
 **Usage Notes:** Alternate Title often takes the form of a shortened (by abbreviation or acronym) version of the official title.  
 **Examples:**
 
@@ -109,6 +111,8 @@ Full information for each ICPSR study metadata element includes the following fi
 **Repeatable:** Yes  
 **Accepted Values:** Multi-part element; see subfields  
 **Controlled Vocabulary:** N/A  
+
+
 **Usage Notes:** Textual changes are recorded only when data or documentation files are updated or added to the data collection (and the Version number is incremented).  
 #### Subfields:
 
@@ -181,6 +185,8 @@ Full information for each ICPSR study metadata element includes the following fi
 **Repeatable:** No  
 **Accepted Values:** Text  
 **Controlled Vocabulary:** N/A  
+
+
 **Usage Notes:** The Citation is dynamically assembled from other entry elements in this format: Principal-Investigator-list. Study-Title. Distributor-list, Version-Date. DOI. ICPSR 'union catalog' records â€“ i.e., external resource to which ICPSR links as a courtesy â€“ do not have citations generated.
 
 For additional information about how DOIs for citations are generated, see the Digital Object Identifier element usage notes.  
@@ -205,6 +211,8 @@ For additional information about how DOIs for citations are generated, see the D
 **Repeatable:** Yes  
 **Accepted Values:** Text  
 **Controlled Vocabulary:** [ICPSR Topic Classifications](https://www.icpsr.umich.edu/web/pages/ICPSR/access/subject.html)  
+
+
 **ICPSR Input Guidance:** When there are multiple subclassifications, the smallest (most detailed) one is chosen to represent the data collection. Each data collection must have at least one ICPSR classification, as well as a classification from the collection's home archive. Classifications can also be used to cross-list a study among multiple archives. Curators should choose the topical classifications that best match the study's focus.  
 **Examples:**
 
@@ -241,6 +249,8 @@ For additional information about how DOIs for citations are generated, see the D
 **Repeatable:** No  
 **Accepted Values:** Text  
 **Controlled Vocabulary:** N/A  
+
+
 **Usage Notes:** Dates are formatted in accordance with ISO 8601 (YYYY, YYYY-MM, or YYYY-MM-DD). One hyphen separates the parts of a date; two hyphens separate two dates. Ranges may be expressed in years (YYYY--YYYY), months (YYYY-MM--YYYY-MM), or days (YYYY-MM-DD--YYYY-MM-DD). No spaces are permitted in date expressions.  
 **Examples:**
 
@@ -268,6 +278,8 @@ For additional information about how DOIs for citations are generated, see the D
 **Repeatable:** No  
 **Accepted Values:** Text  
 **Controlled Vocabulary:** N/A  
+
+
 **Usage Notes:** The textual description ('time frame') is used to add context to the Collection Date when multiple time periods exist (e.g., to describe different study waves, dataset names, or fiscal year designation) and/or when the date cannot be expressed exclusively through numbers, such as seasons or other units of time where the data producer did not clarify the exact dates they meant.
 
 The textual description should not simply restate the time period in words. For example, if the Time Period is 2020-01, the Time Frame should not be 'January 2020'.  
@@ -333,6 +345,8 @@ The textual description should not simply restate the time period in words. For 
 | telephone interview | Interview administered on the telephone. Use this broader term if not CATI, or if not known whether CATI or not. |
 | web-based survey | An interview conducted via the Internet. For example, interviews conducted within online forums or using web-based audio-visual technology that enables the interviewer(s) and interviewee(s) to communicate in real time. |
 | web scraping | A technique employed to extract large amounts of data from websites whereby the data is extracted and saved to a local file or to a database.|  
+
+
 **Examples:**
 
 ```text
@@ -355,6 +369,8 @@ The textual description should not simply restate the time period in words. For 
 **Repeatable:** Yes  
 **Accepted Values:** Text  
 **Controlled Vocabulary:** N/A  
+
+
 **Usage Notes:** Collection Notes should include any information that does not fit anywhere else in the metadata, such as: information about unique aspects of the way the data was processed, discrepancies between the metadata and documentation files, information about the research team, or series-specific notes.  
 **Examples:**
 
@@ -386,6 +402,8 @@ The textual description should not simply restate the time period in words. For 
 **Repeatable:** Yes  
 **Accepted Values:** Text  
 **Controlled Vocabulary:** N/A  
+
+
 **Usage Notes:** Data Source includes such source entities as books, journal articles, administrative records, agency-sponsored surveys, or machine-readable files. Each source includes at minimum the title, author, publication year, and journal (if applicable). Any citation format is accepted.  
 **Examples:**
 
@@ -432,6 +450,8 @@ The textual description should not simply restate the time period in words. For 
 | survey data | Data collected from a sample of respondents, generally through structured interviews or self-administered questionnaires. |
 | text | Written work, readable by a machine or human. |
 | video: film, animation, etc. | Moving image with, or without sound recorded either in analog or digital form. |  
+
+
 **Examples:**
 
 ```text
@@ -473,6 +493,8 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 **Repeatable:** No  
 **Accepted Values:** Text  
 **Controlled Vocabulary:** [ICPSR Organization Names Authority List](https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10004)  
+
+
 **Examples:**
 
 ```text
@@ -491,6 +513,8 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 **Repeatable:** No  
 **Accepted Values:** Text  
 **Controlled Vocabulary:** N/A  
+
+
 **Usage Notes:** Include the city and state (or country) where the distributor is located.  
 **Examples:**
 
@@ -510,6 +534,8 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 **Repeatable:** No  
 **Accepted Values:** Number  
 **Controlled Vocabulary:** N/A  
+
+
 **Usage Notes:** A value of '1' indicates the primary distributor, '2' the second, and so forth.  
 **Examples:**
 
@@ -554,6 +580,8 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 **Repeatable:** No  
 **Accepted Values:** Text  
 **Controlled Vocabulary:** N/A  
+
+
 **Usage Notes:** The DOI (digital object identifier) is a persistent identifier provided by DataCite, a DOI registration agency. The DOI name is divided into three parts, separated by slashes ('/'): 'https://doi.org' is the HTTP URL link; followed by '10.3886', a globally unique number that identifies ICPSR as the registrant within the DOI namespace; followed by 'ICPSR', the ICPSR study number, and then the version number. The study number is automatically generated by ICPSR and is unique. Current study numbers are five digits, though four digit numbers were once standard and are still acceptable. Studies with fewer than five digits will have zeroes prepended in the DOI (e.g., '10.3886/ICPSR02760).  
 **Examples:**
 
@@ -585,6 +613,8 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 | Performed consistency checks | Selected if the ICPSR curator performed any of the following consistency checks on at least half of the variables in the data collection and corrected or reported in the codebook any inconsistencies discovered by these checks:<br> &nbsp; &nbsp;- Checked to see that skip patterns in questionnaires were followed correctly.  <br> &nbsp; &nbsp;- Checked the logical consistency of response patterns across variables. |
 | Performed recodes and/or calculated derived variables | Selected if the ICPSR curator recoded at least one original variable in the data collection and/or produced at least one new variable derived from one or more original variables. The following kinds of recodes DO NOT qualify for this task:<br> &nbsp; &nbsp;- Recodes performed for reasons of confidentiality. This type of recoding may be mentioned in other sections of the metadata description, usually in Restrictions or Collection Notes.  <br> &nbsp; &nbsp;- Recodes performed to correct errors uncovered by consistency checks.  <br> &nbsp; &nbsp;- Recodes performed to correct errors uncovered by checks for undocumented codes.  <br> &nbsp; &nbsp;- Recodes performed by standardized missing data codes.  <br> &nbsp; &nbsp;- When a unique record identifier is created that is not derived from an original variable. |
 | Standardized missing values | Selected if the ICPSR curator standardized missing values for at least half of the variables in the data collection. Standardization of missing values means that all 'missing' responses are coded according to a fixed set of rules. There are various ways in which this standardization is typically applied:  <br>&nbsp;&nbsp;- In some data collections, each kind of 'missing response' may be assigned the same code across all variables, e.g., 'inapplicable' cases may be coded -1 for all variables, 'don't know' may be coded -2, and 'no answer' may be coded -3.  <br>&nbsp;&nbsp;- In other instances, standards may be specific to the type of variable involved, e.g., blanks may denote missing data for all alphabetic variables, codes -1, -2, and -3 may denote missing data for all dummy variables, and codes 7, 8, and 9 may represent missing data for all other variables.  <br>&nbsp;&nbsp;- In yet other instances, standard codes may depend on the column width of each variable, e.g., 99 may denote 'no answer' for all two column variables and 999 may denote the same for all three column variables. |  
+
+
 **ICPSR Input Guidance:** This element is displayed to end-users in version history.  
 **Examples:**
 
@@ -609,6 +639,8 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 **Repeatable:** Yes  
 **Accepted Values:** Text  
 **Controlled Vocabulary:** N/A  
+
+
 **ICPSR Input Guidance:** This is an internal ICPSR element that is not publicly displayed. An External Source ID consists of: an ICPSR-defined source organization code, a colon, and a Depositor-supplied ID.  
 **Examples:**
 
@@ -631,6 +663,8 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 **Repeatable:** Yes  
 **Accepted Values:** Multi-part element; see subfields  
 **Controlled Vocabulary:** N/A  
+
+
 **Usage Notes:** Filesets are used at ICPSR to make a convenient package for description, discovery, preservation and dissemination -- a package that is smaller than the data collection but larger than the individual file. A fileset typically contains a single file of statistical data plus additional files that support the data -- such as setups for statistical software, documentation, and alternative data representations. Every ICPSR data collection with at least one file must have at least one defined Fileset; a data collection may have multiple filesets. Each Fileset has a Number, and may also have a Name and an SDA (Survey Documentation and Analysis) Note.  
 #### Subfields:
 
@@ -670,6 +704,8 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 **Repeatable:** No  
 **Accepted Values:** Text  
 **Controlled Vocabulary:** N/A  
+
+
 **Usage Notes:** Fileset Names are required for data collections that include multiple Filesets. If a data collection includes only one fileset, a Fileset Name is not included. Fileset Names use title case (all main words are capitalized) and do not begin with articles (a, the) or dates.  
 **Examples:**
 
@@ -697,6 +733,8 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 **Repeatable:** No  
 **Accepted Values:** Text  
 **Controlled Vocabulary:** N/A  
+
+
 **Examples:**
 
 ```text
@@ -760,6 +798,8 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 **Repeatable:** No  
 **Accepted Values:** Text  
 **Controlled Vocabulary:** The [ICPSR Organization Names Authority List](https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10004) is the primary authority control source for funding agencies. The [Virtual International Authority File](https://viaf.org/) (VIAF) serves as a secondary resource if names are not present in the ICPSR list.  
+
+
 **Usage Notes:** When entering the name of a funding agency, the following hierarchy of authority control sources should be used to make sure the name conforms to best practices within ICPSR and the broader academic community:
 
   1. If the funding agency has sponsored archived data at ICPSR, use the name as it has been displayed previously within the ICPSR catalog.  
@@ -789,6 +829,8 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 **Repeatable:** Yes  
 **Accepted Values:** Text  
 **Controlled Vocabulary:** N/A  
+
+
 **Usage Notes:** Internal blanks in the Grant Number are replaced with hyphens. Multiple grants from the same funding agency are separated by a comma.  
 **Examples:**
 
@@ -819,6 +861,8 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 | collection and/or analysis of data | The funder supported the collection and/or analysis of the study's data. |
 | secondary analysis of data | The funder supported secondary analysis performed on the data. |
 | archiving of data | The funder supported the archiving and preservation of the data. |  
+
+
 **ICPSR Input Guidance:** This is an internal ICPSR element that is not publicly displayed. Certain ICPSR topical archives find this useful as they assemble reports for their funding agencies.  
 **Examples:**
 
@@ -839,6 +883,8 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 **Repeatable:** No  
 **Accepted Values:** Number  
 **Controlled Vocabulary:** N/A  
+
+
 **Usage Notes:** A value of '1' indicates the primary funder, '2' the second, and so forth.  
 **Examples:**
 
@@ -888,6 +934,8 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 **Repeatable:** Yes  
 **Accepted Values:** Text  
 **Controlled Vocabulary:** [ICPSR Geographic Names Thesaurus](https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10003).  
+
+
 **Usage Notes:** Each geographic term's full hierarchy must be included; please note: 
 
 * For a U.S. city, the state and country are listed alongside (e.g., 'Los Angeles, California, United States'). 
@@ -926,6 +974,8 @@ The [Getty Thesaurus of Geographic Names](http://www.getty.edu/research/tools/vo
 **Repeatable:** No  
 **Accepted Values:** Text  
 **Controlled Vocabulary:** N/A  
+
+
 **Usage Notes:** Always appears with the Link URL.  
 **Examples:**
 
@@ -944,6 +994,8 @@ The [Getty Thesaurus of Geographic Names](http://www.getty.edu/research/tools/vo
 **Repeatable:** No  
 **Accepted Values:** Text  
 **Controlled Vocabulary:** N/A  
+
+
 **Usage Notes:** Always appears with the Link Title.  
 **Examples:**
 
@@ -962,6 +1014,8 @@ The [Getty Thesaurus of Geographic Names](http://www.getty.edu/research/tools/vo
 **Repeatable:** No  
 **Accepted Values:** Boolean  
 **Controlled Vocabulary:** N/A  
+
+
 **Usage Notes:** True indicates the data are only available to members; false indicates that the data are available to all users. Additional access restrictions (i.e., due to sensitive data or disclosure risks) may still apply.  
 **Examples:**
 
@@ -984,6 +1038,8 @@ The [Getty Thesaurus of Geographic Names](http://www.getty.edu/research/tools/vo
 **Repeatable:** No  
 **Accepted Values:** Text  
 **Controlled Vocabulary:** N/A  
+
+
 **Usage Notes:** ICPSR automatically generates the release date.  
 **Examples:**
 
@@ -1006,6 +1062,8 @@ The [Getty Thesaurus of Geographic Names](http://www.getty.edu/research/tools/vo
 **Repeatable:** Yes  
 **Accepted Values:** Multi-part element; see subfields  
 **Controlled Vocabulary:** The [ICPSR Personal Names Authority List](https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10002) and [Organization Names Authority List](https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10004) are the primary authority control sources for PI names. The [Virtual International Authority File](https://viaf.org/) (VIAF) serves as a secondary resource if names are not present in ICPSR lists.  
+
+
 **Usage Notes:** List individuals and organizations that are chiefly responsible for the study across its entire life cycle or made significant intellectual contributions to the research. A principal investigator (PI) may be a person or an organization; use the Person or Organization element as appropriate. If the PI is identified as a person, their affiliated organization (if applicable) should be included in the Organization element.
 
 When entering the name of an individual or organizational PI, the following hierarchy of authority control sources should be used to make sure the name conforms to best practices within ICPSR and the broader academic community:  
@@ -1122,6 +1180,8 @@ Additional points regarding affiliated organizations:
 **Repeatable:** No  
 **Accepted Values:** Number  
 **Controlled Vocabulary:** N/A  
+
+
 **Usage Notes:** A value of '1' indicates the primary PI, '2' the second, and so forth.  
 **Examples:**
 
@@ -1169,6 +1229,8 @@ Additional points regarding affiliated organizations:
 **Repeatable:** No  
 **Accepted Values:** Text  
 **Controlled Vocabulary:** N/A  
+
+
 **Usage Notes:** Only applicable if the data were collected with a survey instrument and the response rates are provided.  
 **Examples:**
 
@@ -1195,6 +1257,8 @@ Additional points regarding affiliated organizations:
 **Repeatable:** No  
 **Accepted Values:** Boolean  
 **Controlled Vocabulary:** N/A  
+
+
 **Usage Notes:** True indicates that an access restriction is associated with the data collection; false indicates no access restrictions are present. Additional membership requirements may still apply.  
 **Examples:**
 
@@ -1217,6 +1281,8 @@ Additional points regarding affiliated organizations:
 **Repeatable:** No  
 **Accepted Values:** Text  
 **Controlled Vocabulary:** N/A  
+
+
 **Usage Notes:** Restrictions informs users that access to certain variables in a collection may be limited, and that they should contact ICPSR directly to inquire about accessing them.  
 **Examples:**
 
@@ -1235,6 +1301,8 @@ Additional points regarding affiliated organizations:
 **Repeatable:** No  
 **Accepted Values:** Text  
 **Controlled Vocabulary:** N/A  
+
+
 **Usage Notes:** The sample is a selection out of the universe of all possible relevant cases (e.g., adults in the United States, housing units in three counties of Michigan, etc.) that could have been included in the data collection. A detailed discussion of such things as sampling error or other limitations of the sampling methodology is not required here. Note that some studies, such as censuses, do not utilize samples but include all members of the universe. In such cases, 'inap.' may be entered in Sampling to indicate it was not omitted in error.  
 **ICPSR Input Guidance:** Sampling is distinct from Universe as it describes the methods the researcher used to select or recruit participants among the target population, while Universe describes the whole population the researchers sought to analyze. If no information about Sampling methodology is available, it is not appropriate to simply restate the Universe.  
 **Examples:**
@@ -1271,6 +1339,8 @@ Additional points regarding affiliated organizations:
 **Repeatable:** No  
 **Accepted Values:** Text  
 **Controlled Vocabulary:** N/A  
+
+
 **Usage Notes:** Include common scales that can be readily identified from the data, documentation, or other related materials. ICPSR curators are not expected to infer or research scales that are not explicitly indicated. The scales can be cited either as a list or described in full sentences. If the questionnaire used has a finite list of responses (e.g., 'Always, Sometimes, Rarely, Never' or Strongly Agree, Agree, Disagree, Strongly Disagree'), it is acceptable for this element to note 'A Likert-type scale was used,' or 'Several Likert-type scales were used.' However, it is not required to note Likart-type scales in situations where only such scales were used, given their ubiquity.  
 **Examples:**
 
@@ -1295,6 +1365,8 @@ Additional points regarding affiliated organizations:
 **Repeatable:** No  
 **Accepted Values:** Text  
 **Controlled Vocabulary:** [ICPSR Series](https://www.icpsr.umich.edu/web/ICPSR/search/series)  
+
+
 **Usage Notes:** Typically the studies in an ICPSR series are produced by the same group of investigators, and either explore different facets of the same topic, or repeat the same investigation over time. Each series name is given in title case (all major words are capitalized, while minor words are lowercased) and ends with the word 'Series'.  
 **Examples:**
 
@@ -1325,6 +1397,8 @@ Additional points regarding affiliated organizations:
 **Repeatable:** No  
 **Accepted Values:** Text  
 **Controlled Vocabulary:** N/A  
+
+
 **Usage Notes:** Geographic Unit is intended to represent specific, known geography -- e.g., county, census district, FIPS code, electoral district, and any other conveyor of specific geography that is represented by a variable.
 
 If the data do not include a geographic variable by which the data can be analyzed, this element is not indicated. If all the cases are from a single state, but the cases are not subdivided geographically within that state, then 'state' is not indicated.
@@ -1356,6 +1430,8 @@ This element is only meant to convey specific, known, geography. If there is a v
 **Repeatable:** No  
 **Accepted Values:** Text  
 **Controlled Vocabulary:** N/A  
+
+
 **Usage Notes:** The Study Design provides more detailed information than the Summary, including how surveys were prepared and administered, how interviews were conducted, or how the data were obtained and compiled, as well as information about deadlines and follow-ups to respondents.  
 **ICPSR Input Guidance:** It is acceptable to summarize information contained in study documentation and point users to that study documentation for more details. If the Summary already contains text that would be appropriate in Study Design, it is acceptable to duplicate that text.  
 **Examples:**
@@ -1375,6 +1451,8 @@ This element is only meant to convey specific, known, geography. If there is a v
 **Repeatable:** No  
 **Accepted Values:** Number  
 **Controlled Vocabulary:** N/A  
+
+
 **Usage Notes:** The study number is automatically generated by ICPSR and is unique. Current study numbers are five digits, though four digit numbers were once standard and are still acceptable.  
 **Examples:**
 
@@ -1401,6 +1479,8 @@ This element is only meant to convey specific, known, geography. If there is a v
 **Repeatable:** No  
 **Accepted Values:** Text  
 **Controlled Vocabulary:** N/A  
+
+
 **Usage Notes:** The Study Purpose provides more specific information than the Summary element, including the data collection's objectives, intended achievements, and lists of questions it sought to answer. This element can also include historical or background information about the research project. As with the Summary, the text should be written in third person and avoid any commentary on the data collection's outcomes.  
 **Examples:**
 
@@ -1427,6 +1507,8 @@ This element is only meant to convey specific, known, geography. If there is a v
 **Repeatable:** Yes  
 **Accepted Values:** Text  
 **Controlled Vocabulary:** The [ICPSR Subject Thesaurus](https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001) and the [ICPSR Personal Names Authority List](https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10002) are preferred sources.  
+
+
 **Usage Notes:** The [Library of Congress Subject Terms](https://authorities.loc.gov) and the [European Language Social Science Thesaurus](https://elsst.cessda.eu/) are referenced when adding new terms to the ICPSR Subject Thesaurus.  
 **ICPSR Input Guidance:** Non-thesaurus terms can be submitted in the metadata editor and will be reviewed by the metadata librarian. If an ICPSR staff member submits a non-thesaurus term, the metadata librarian will gauge the necessity of this term, check it against the Library of Congress Subject Headings and European Language Social Science Thesaurus to see if a different related term should be used, and consider it for addition to the ICPSR thesaurus.  
 **Examples:**
@@ -1457,6 +1539,8 @@ This element is only meant to convey specific, known, geography. If there is a v
 **Repeatable:** No  
 **Accepted Values:** Text  
 **Controlled Vocabulary:** N/A  
+
+
 **Usage Notes:** The main goal of the Summary is to give the reader a clear sense of what the data collection is about, including substantive information about the different parts of the data collection not adequately conveyed by the Fileset names or found elsewhere in the metadata. 
 
 A listing of major variables or categories of variables with a few examples is also important. It is also salient to indicate the unit of analysis for the data collection, i.e., who or what is being studied: individuals, housing units, courts, criminal acts, etc. Most often the unit of analysis is the individual; where it is not, it is particularly important to make this clear.
@@ -1497,6 +1581,8 @@ The Summary is written in the third person and avoids attempting to address issu
 | Time Series | Data collected repeatedly over time to study change in observations. These are typically "objective" measurements of phenomena that can be observed externally, as opposed to attitudes/opinions or feelings. Examples may include economic/financial indicators, natural/meteorological phenomena, vital statistics, etc. |
 | Time Series: Continuous | Measurements are taken at every instant in time. Examples: lie detectors, electrocardiograms, etc. |
 | Time Series: Discrete | Measurements are taken at (usually regularly) spaced intervals. Examples: macroeconomics (weekly share prices, monthly profits, sales); meteorology (hourly temperature); measurements of individuals (blood pressure, weight, height); sociology (crime figures, employment figures), etc. |  
+
+
 **Examples:**
 
 ```text
@@ -1533,6 +1619,8 @@ The Summary is written in the third person and avoids attempting to address issu
 **Repeatable:** No  
 **Accepted Values:** Text  
 **Controlled Vocabulary:** N/A  
+
+
 **Usage Notes:** Time Periods focus on the dates the data are actually about, regardless of when the data were collected. 
 
 Time Periods generally correspond to the dates that appear in the Title; days and months may be included in the Time Period even though they are not in the Title.
@@ -1564,6 +1652,8 @@ Dates are formatted in accordance with ISO 8601 (YYYY, YYYY-MM, or YYYY-MM-DD). 
 **Repeatable:** No  
 **Accepted Values:** Text  
 **Controlled Vocabulary:** N/A  
+
+
 **Usage Notes:** The textual description ('time frame') is used to add context to the Time Period when multiple time periods exist (e.g., to describe different waves, dataset names, or fiscal year designation) and/or when the date cannot be expressed exclusively through numbers, such as seasons or other units of time where the data producer did not clarify the exact dates they meant.
 
 The textual description should not simply restate the time period in words. For example, if the Time Period is 2020-01, the Time Frame should not be 'January 2020'.  
@@ -1606,6 +1696,8 @@ The textual description should not simply restate the time period in words. For 
 **Repeatable:** No  
 **Accepted Values:** Text  
 **Controlled Vocabulary:** N/A  
+
+
 **Usage Notes:** The Title includes three essential parts: the title proper, the geography, and the time period.
 
 Title Proper:
@@ -1674,6 +1766,8 @@ Time Period:
 **Repeatable:** Yes  
 **Accepted Values:** Text  
 **Controlled Vocabulary:** N/A  
+
+
 **Usage Notes:** Use a brief phrase, for example: 'Individual,' 'Family,' 'Household,' or 'Organization'; when possible, conform to the [DDI Controlled Vocabulary for Analysis Unit](https://vocabularies.cessda.eu/vocabulary/AnalysisUnit).  
 **Examples:**
 
@@ -1700,6 +1794,8 @@ Time Period:
 **Repeatable:** No  
 **Accepted Values:** Text  
 **Controlled Vocabulary:** N/A  
+
+
 **Usage Notes:** Age, nationality, and residence commonly help to delineate a given universe, but any of a number of factors may be involved, such as sex, race, income, veteran status, criminal convictions, etc. The Universe may consist of elements other than persons, such as housing units, court cases, deaths, countries, etc. It should be possible to tell from the description of the universe whether a given individual or element (hypothetical or real) is a member of the population under study. Typically, the Universe statement is about one sentence or shorter, and reflects the entire possible population a data collection sought to study.  
 **ICPSR Input Guidance:** Universe is distinct from Sampling as it describes the population the study seeks to analyze, while Sampling describes how the researchers selected participants among that population. Universe should not contain information about methodology, only general information about the target population.  
 **Examples:**
@@ -1739,6 +1835,8 @@ Time Period:
 **Repeatable:** No  
 **Accepted Values:** Text  
 **Controlled Vocabulary:** N/A  
+
+
 **Usage Notes:** The Variable Description provides more detailed information than the Summary, including a review of variables that are important for users to know about. The codebook, setup files, and variable groups are appropriate sources of information for Variable Description.  
 **Examples:**
 
@@ -1761,6 +1859,8 @@ Time Period:
 **Repeatable:** No  
 **Accepted Values:** Number  
 **Controlled Vocabulary:** N/A  
+
+
 **Usage Notes:** Version numbers are integers without leading zeros. Versioning begins when a data collection is first archived. Each subsequent update of the data collection increments the version number by 1. The version number is incremented when modifying or adding:
 
   * Data files, including additions of datasets or supplemental data files, additional masking, increasing curation level, or resupplied datasets
@@ -1789,6 +1889,8 @@ Metadata-only updates to the data collection do not increment the version number
 **Repeatable:** No  
 **Accepted Values:** Text  
 **Controlled Vocabulary:** N/A  
+
+
 **Usage Notes:** ICPSR automatically generates this date for data collection additions and updates. For metadata-only updates, the date remains unchanged.  
 **Examples:**
 
@@ -1811,6 +1913,8 @@ Metadata-only updates to the data collection do not increment the version number
 **Repeatable:** No  
 **Accepted Values:** Text  
 **Controlled Vocabulary:** N/A  
+
+
 **Usage Notes:** Weight includes any information about weighting variables in the data, as well as any other weight information provided by the Principal Investigator. If a weighting formula or coefficient was developed, provide this formula, define its elements, and indicate how the formula is applied to the data. It is acceptable to summarize information contained in documentation and refer users to that documentation for more information.  
 **Examples:**
 

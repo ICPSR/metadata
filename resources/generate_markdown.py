@@ -296,6 +296,7 @@ def render_subfields(ROOT, mode, properties, required, parent_anchor, level=4):
         if "controlledVocab" in prop and mode == "legacy":
             controlledVocab = get_yaml_notes(prop['controlledVocab'], "controlledVocab", ROOT)
             md.append(f"**Controlled Vocabulary:** {controlledVocab}  ")
+            md.append('\n')
 
         if "usageNotes" in prop:
             note = get_yaml_notes(prop['usageNotes'], "usageNotes", ROOT)
@@ -338,6 +339,7 @@ def render_property(name, schema, ROOT, mode):
     if "controlledVocab" in schema and mode == "legacy":
         controlledVocab = get_yaml_notes(schema['controlledVocab'], "controlledVocab", ROOT)
         md.append(f"**Controlled Vocabulary:** {controlledVocab}  ")
+        md.append('\n')
 
     if "usageNotes" in schema:
         note = get_yaml_notes(schema['usageNotes'], "usageNotes", ROOT)
