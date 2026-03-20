@@ -118,7 +118,7 @@ def render_yaml_examples(examples, schema):
 
     return md
 
-def get_usage_notes(note, ROOT):
+def get_yaml_notes(note, term, ROOT):
     """
     Returns usage notes text for a property.
     Supports either inline string or $ref to local YAML file.
@@ -134,7 +134,7 @@ def get_usage_notes(note, ROOT):
         if notes_file.exists():
             with open(notes_file, "r") as f:
                 data = yaml.safe_load(f)
-            match = data.get('usageNotes')
+            match = data.get(term)
             
             return match.strip() if match else None
             
@@ -237,7 +237,7 @@ def render_examples(examples):
         md.append("```\n")
     return md
 
-def render_subfields(ROOT, properties, required, parent_anchor, level=4):
+def render_subfields(ROOT, mode, properties, required, parent_anchor, level=4):
     """
     Render subfields table AND detailed per-subfield sections with anchors and examples.
     """
@@ -292,13 +292,18 @@ def render_subfields(ROOT, properties, required, parent_anchor, level=4):
         md.append(f"**Repeatable:** {rep}  ")
         md.append(f"**Accepted Values:** {typ}  ")
 
-        # if "controlledVocab" in prop:
-        #     md.append(f"**Controlled Vocabulary:** {check_cvs(prop['controlledVocab'])}  ")
+        if "controlledVocab" in prop and mode == "legacy":
+            controlledVocab = get_yaml_notes(prop['controlledVocab'], "controlledVocab", ROOT)
+            md.append(f"**Controlled Vocabulary:** {controlledVocab}  ")
 
         if "usageNotes" in prop:
-            note = get_usage_notes(prop['usageNotes'], ROOT)
+            note = get_yaml_notes(prop['usageNotes'], "usageNotes", ROOT)
             if note:
                 md.append(f"**Usage Notes:** {note}  ")
+
+        if "icpsrGuidance" in prop:
+            icpsrGuidance = get_yaml_notes(prop['icpsrGuidance'], "icpsrGuidance", ROOT)
+            md.append(f"**ICPSR Input Guidance:** {icpsrGuidance}  ")
 
         # Examples per subfield
         if "examples" in prop:
@@ -308,11 +313,11 @@ def render_subfields(ROOT, properties, required, parent_anchor, level=4):
         # Recurse for nested subfields
         subprops, subreq = get_subfields(prop)
         if subprops:
-            md.extend(render_subfields(ROOT, subprops, subreq, anchor_id, level + 1))
+            md.extend(render_subfields(ROOT, mode, subprops, subreq, anchor_id, level + 1))
 
     return md
 
-def render_property(name, schema, ROOT):
+def render_property(name, schema, ROOT, mode):
     md = []
 
     title = schema.get("title", name.replace("_", " ").title())
@@ -329,17 +334,22 @@ def render_property(name, schema, ROOT):
     md.append(f"**Accepted Values:** {get_type(schema)}  ")
 
     # Check for additional keywords: controlledVocab and usageNotes
-    # if "controlledVocab" in schema:
-    #     md.append(f"**Controlled Vocabulary:** {check_cvs(schema['controlledVocab'])}  ")
+    if "controlledVocab" in schema and mode == "legacy":
+        controlledVocab = get_yaml_notes(schema['controlledVocab'], "controlledVocab", ROOT)
+        md.append(f"**Controlled Vocabulary:** {controlledVocab}  ")
 
     if "usageNotes" in schema:
-        note = get_usage_notes(schema['usageNotes'], ROOT)
+        note = get_yaml_notes(schema['usageNotes'], "usageNotes", ROOT)
         if note:
             md.append(f"**Usage Notes:** {note}  ")
 
+    if "icpsrGuidance" in schema:
+        icpsrGuidance = get_yaml_notes(schema['icpsrGuidance'], "icpsrGuidance", ROOT)
+        md.append(f"**ICPSR Input Guidance:** {icpsrGuidance}  ")
+
     properties, required_subfields = get_subfields(schema)
     if properties:
-        md.extend(render_subfields(ROOT, properties, required_subfields, anchor_id))
+        md.extend(render_subfields(ROOT, mode, properties, required_subfields, anchor_id))
 
     # Examples
     schema_type = schema.get("type")
@@ -446,7 +456,7 @@ def main():
 
     for name, schema in sorted(schemas.items()):
         try:
-            md, entry = render_property(name, schema, ROOT)
+            md, entry = render_property(name, schema, ROOT, mode)
         except TypeError:
             print(name)
             sys.exit(1)

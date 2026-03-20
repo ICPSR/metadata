@@ -16,7 +16,7 @@ theme:
   custom_dir: custom_theme/
   prev_next_buttons_location: none
   logo: ./assets/ICPSR_logo_rgb_white-01.png
-  navigation_depth: 5
+  navigation_depth: 3
   sticky_navigation: true
   include_homepage_in_sidebar: false
 plugins:
