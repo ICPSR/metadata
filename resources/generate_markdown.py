@@ -183,8 +183,9 @@ def load_schemas(PROPERTY_DIR, mode):
     file_list = PROPERTY_DIR.glob("*.json")
 
     if mode == "legacy":
-        if len(file_list) == 1:
-            f = Path(file_list[0])
+        legacy_file_list = list(file_list)
+        if len(legacy_file_list) == 1:
+            f = Path(legacy_file_list[0])
             data = json.loads(f.read_text(encoding="utf-8"))
             schemas = data['properties']
     
