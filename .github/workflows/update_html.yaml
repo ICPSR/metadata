@@ -11,6 +11,7 @@ jobs:
   update_html:
     runs-on: ubuntu-latest
     name: Update HTML
+    if: github.event.pull_request.merged == true   # Only run if the PR was merged
 
     steps:
       - name: Checkout repository
@@ -37,12 +38,12 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-    needs: update_html  # Specify that this job depends on the completion of 'update_html'
+    needs: update_html
     permissions:
       contents: read
       pages: write
       id-token: write
-    
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -55,7 +56,6 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
           path: '.'
 
       - name: Deploy to GitHub Pages

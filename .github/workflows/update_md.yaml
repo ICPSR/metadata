@@ -7,6 +7,7 @@ on:
       - gh-pages
     paths:
       - 'schema/**'
+      - 'rde_schema/**'
 
 jobs:
   update_markdown:
@@ -19,15 +20,21 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Get changed files in the schema folder
-        id: changed-schema-specific
+      - name: Get changed files in schema folder
+        id: changed-schema
         uses: tj-actions/changed-files@v44
         with:
           files: schema/**
 
-      - name: Prevent from running if no schema files changed
-        if: steps.changed-schema-specific.outputs.any_changed != 'true'
-        run: exit 1
+      - name: Get changed files in rde_schema folder
+        id: changed-rde
+        uses: tj-actions/changed-files@v44
+        with:
+          files: rde_schema/**
+
+      - name: Prevent running if no relevant files changed
+        if: steps.changed-schema.outputs.any_changed != 'true' && steps.changed-rde.outputs.any_changed != 'true'
+        run: echo "No relevant changes detected"
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -38,16 +45,26 @@ jobs:
         run: |
           pip install -r resources/requirements.txt
 
-      - name: Generate Schema Documentation
+      - name: Generate Legacy Schema Documentation
+        if: steps.changed-schema.outputs.any_changed == 'true'
         run: |
-          python resources/generate_markdown_schema.py --source-dir $GITHUB_WORKSPACE
+          python resources/generate_markdown_schema.py \
+            --input $GITHUB_WORKSPACE \
+            --mode legacy
+
+      - name: Generate Current Schema Documentation
+        if: steps.changed-rde.outputs.any_changed == 'true'
+        run: |
+          python resources/generate_markdown_schema.py \
+            --input $GITHUB_WORKSPACE \
+            --mode current
 
       - name: Commit and push changes
         run: |
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git config user.name "${GITHUB_ACTOR}"
           git add markdown/
-          git commit -am "Generated new copy of schema in markdown"
+          git diff --cached --quiet || git commit -m "Generated new copy of schema in markdown"
           git push origin HEAD:$GITHUB_REF
 
       - name: Deploy to GitHub Pages
