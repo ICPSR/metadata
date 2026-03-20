@@ -302,7 +302,7 @@ def render_subfields(ROOT, properties, required, parent_anchor, level=4):
 
         # Examples per subfield
         if "examples" in prop:
-            md.append("\n**Examples:**\n")
+            md.append("**Examples:**\n")
             md.extend(render_yaml_examples(prop["examples"], prop))
 
         # Recurse for nested subfields
@@ -353,7 +353,7 @@ def render_property(name, schema, ROOT):
         if schema_type == "object" or (schema_type == "array" and items_type == "object"):
             md.append(f"###### Complete {title} Examples (with Subfields):\n")
         else:
-            md.append("\n**Examples:**\n")
+            md.append("**Examples:**\n")
 
         md.extend(render_yaml_examples(schema["examples"], schema))
 

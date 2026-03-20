@@ -83,7 +83,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** Yes  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -101,7 +100,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** Yes  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -119,7 +117,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** Yes  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -154,7 +151,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** No  
 **Repeatable:** Yes  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -184,7 +180,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Repeatable:** No  
 **Accepted Values:** Text  
 **Usage Notes:** The Citation is dynamically assembled from other entry fields in this format: PI (list). Title. Distributor (list), Issued Date. DOI. Note: ICPSR 'union catalog' records (i.e., external resource to which ICPSR links as a courtesy) do not have citations.  
-
 **Examples:**
 
 ```text
@@ -220,7 +215,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** Yes  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -242,7 +236,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** Yes  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -265,7 +258,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Repeatable:** No  
 **Accepted Values:** Text  
 **Usage Notes:** The Time Frame should not simply restate the date(s) in words. For example, if the Collection Date starts in 2020-01, the Time Frame should repeat 'January 2020'.  
-
 **Examples:**
 
 ```text
@@ -319,7 +311,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** Yes  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -341,7 +332,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** Yes  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -363,7 +353,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** Yes  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -398,7 +387,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** No  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -431,7 +419,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** Yes  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -453,7 +440,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** Yes  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -475,7 +461,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** Yes  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -540,7 +525,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Repeatable:** No  
 **Accepted Values:** Number  
 **Usage Notes:** A value of '0' indicates the primary distributor, '1' the second, and so forth.  
-
 **Examples:**
 
 ```text
@@ -586,7 +570,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Repeatable:** Yes  
 **Accepted Values:** Text  
 **Usage Notes:** External data sources include books, journal articles, administrative records, agency-sponsored surveys, and machine-readable files. Each source includes at minimum the title, author, publication year, and journal (if applicable). Any citation format is accepted.  
-
 **Examples:**
 
 ```text
@@ -648,7 +631,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** Yes  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -670,7 +652,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** No  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -684,7 +665,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** Yes  
 **Repeatable:** No  
 **Accepted Values:** Number  
-
 **Examples:**
 
 ```text
@@ -751,7 +731,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** Yes  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -773,7 +752,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** Yes  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -841,7 +819,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** No  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -863,7 +840,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** No  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -885,7 +861,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** No  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -907,7 +882,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** Yes  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -929,7 +903,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** No  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -984,7 +957,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** Yes  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -1006,7 +978,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** Yes  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -1028,7 +999,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** Yes  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -1083,7 +1053,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** Yes  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -1105,7 +1074,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** Yes  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -1127,7 +1095,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** Yes  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -1185,7 +1152,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** Yes  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -1203,7 +1169,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** Yes  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -1221,7 +1186,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** Yes  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -1272,7 +1236,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** Yes  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -1290,7 +1253,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** Yes  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -1309,7 +1271,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Repeatable:** No  
 **Accepted Values:** Text  
 **Usage Notes:** Enter the MeSH RDF Unique Identifier.  
-
 **Examples:**
 
 ```text
@@ -1342,7 +1303,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** No  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -1363,7 +1323,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** No  
 **Repeatable:** Yes  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -1400,7 +1359,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** Yes  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -1418,7 +1376,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** No  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -1432,7 +1389,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** No  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -1473,7 +1429,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** Yes  
 **Repeatable:** No  
 **Accepted Values:** Multi-part element; see subfields  
-
 **Examples:**
 
 ```yaml
@@ -1500,7 +1455,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** Yes  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -1526,7 +1480,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** Yes  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -1548,7 +1501,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** No  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -1569,7 +1521,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** No  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -1606,7 +1557,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** No  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -1652,7 +1602,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** No  
 **Repeatable:** No  
 **Accepted Values:** Number  
-
 **Examples:**
 
 ```text
@@ -1707,7 +1656,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Repeatable:** No  
 **Accepted Values:** Text  
 **Usage Notes:** This field is only applicable if the data were collected with a survey instrument and the response rates are provided.  
-
 **Examples:**
 
 ```text
@@ -1729,7 +1677,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Repeatable:** No  
 **Accepted Values:** Text  
 **Usage Notes:** A detailed discussion of such things as sampling error or other limitations of the sampling methodology is not required here.  
-
 **Examples:**
 
 ```text
@@ -1751,7 +1698,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Repeatable:** Yes  
 **Accepted Values:** Text  
 **Usage Notes:** The sample is a selection out of the universe of all possible relevant cases (e.g., adults in the United States, housing units in three counties of Michigan, etc.) that could have been included in the data collection. Note that some studies, such as censuses, do not utilize samples but include all members of the universe. This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance CV SamplingProcedure https://rdf-vocabulary.ddialliance.org/ddi-cv/SamplingProcedure/1.1.4/SamplingProcedure.html.  
-
 **Examples:**
 
 ```yaml
@@ -1781,7 +1727,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Repeatable:** No  
 **Accepted Values:** Text  
 **Usage Notes:** Include common scales that can be readily identified from the data, documentation, or other related materials. ICPSR curators are not expected to infer or research scales that are not explicitly indicated. The scales can be cited either as a list or described in full sentences. If the questionnaire used has a finite list of responses (e.g., 'Always, Sometimes, Rarely, Never' or Strongly Agree, Agree, Disagree, Strongly Disagree'), it is acceptable for this element to note 'A Likert-type scale was used,' or 'Several Likert-type scales were used.' However, it is not required to note Likart-type scales in situations where only such scales were used, given their ubiquity.  
-
 **Examples:**
 
 ```text
@@ -1820,7 +1765,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** No  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -1842,7 +1786,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** No  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -1864,7 +1807,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** No  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -1934,7 +1876,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** Yes  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -1956,7 +1897,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** No  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -1978,7 +1918,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** No  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -1996,7 +1935,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** No  
 **Repeatable:** Yes  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -2019,7 +1957,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** No  
 **Repeatable:** Yes  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -2043,7 +1980,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** No  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -2065,7 +2001,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** No  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -2087,7 +2022,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** No  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -2109,7 +2043,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** No  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -2131,7 +2064,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** No  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 <a name="software-applications_license"></a>
@@ -2141,7 +2073,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** No  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -2159,7 +2090,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** No  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -2177,7 +2107,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Required:** No  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -2220,7 +2149,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Repeatable:** No  
 **Accepted Values:** Text  
 **Usage Notes:** The Study Design provides more detailed information than the Summary, including how surveys were prepared and administered, how interviews were conducted, or how the data were obtained and compiled, as well as information about deadlines and follow-ups to respondents.  
-
 **Examples:**
 
 ```text
@@ -2240,7 +2168,6 @@ Full information for each ICPSR study metadata element includes the following fi
 **Usage Notes:** The Summary may include information about the different parts of the data collection not adequately conveyed by the Fileset names or found elsewhere in the metadata. Other important components include a listing of major variables or categories of variables (with examples) as well as an indication of the data collection's unit of analysis (i.e., who or what is being studied: individuals, housing units, courts, criminal acts, etc.). Most often the unit of analysis is the individual; where it is not, it is particularly important to make this clear.
 
 The Summary is written in the third person and avoids attempting to address issues of how the data might be used, who might be interested in the data, or any evaluative comments about the worth or usefulness of the data collection. The Summary uses past tense when describing the process of collecting the data and present tense when necessary, such as when describing the data (e.g., 'The MIDUS Refresher collection is split into two datasets.'). Numerals are used instead of spelling them out; if a number is spelled out for emphasis, the number is attached in parentheses (e.g. 'Two thousand (2,000)').  
-
 **Examples:**
 
 ```text
@@ -2277,7 +2204,6 @@ The Summary is written in the third person and avoids attempting to address issu
 **Required:** Yes  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -2299,7 +2225,6 @@ The Summary is written in the third person and avoids attempting to address issu
 **Required:** Yes  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -2321,7 +2246,6 @@ The Summary is written in the third person and avoids attempting to address issu
 **Required:** Yes  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -2379,7 +2303,6 @@ The Summary is written in the third person and avoids attempting to address issu
 **Required:** Yes  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -2401,7 +2324,6 @@ The Summary is written in the third person and avoids attempting to address issu
 **Required:** Yes  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -2424,7 +2346,6 @@ The Summary is written in the third person and avoids attempting to address issu
 **Repeatable:** No  
 **Accepted Values:** Text  
 **Usage Notes:** The Time Frame should not simply restate the date(s) in words. For example, if the Time Period starts in 2020-01, the Time Frame should repeat 'January 2020'.  
-
 **Examples:**
 
 ```text
@@ -2461,7 +2382,6 @@ The Summary is written in the third person and avoids attempting to address issu
 **Required:** Yes  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -2510,7 +2430,6 @@ The Summary is written in the third person and avoids attempting to address issu
 **Required:** Yes  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -2532,7 +2451,6 @@ The Summary is written in the third person and avoids attempting to address issu
 **Required:** Yes  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -2554,7 +2472,6 @@ The Summary is written in the third person and avoids attempting to address issu
 **Required:** Yes  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -2598,7 +2515,6 @@ The Summary is written in the third person and avoids attempting to address issu
 **Repeatable:** No  
 **Accepted Values:** Text  
 **Usage Notes:** Age, nationality, and residence commonly help to delineate a given universe, but any of a number of factors may be involved, such as sex, race, income, veteran status, criminal convictions, etc. The Universe may consist of elements other than persons, such as housing units, court cases, deaths, countries, etc. It should be possible to tell from the description of the universe whether a given individual or element (hypothetical or real) is a member of the population under study. Typically, the Universe statement is about one sentence or shorter, and reflects the entire possible population a data collection sought to study.  
-
 **Examples:**
 
 ```text
@@ -2636,7 +2552,6 @@ The Summary is written in the third person and avoids attempting to address issu
 **Repeatable:** No  
 **Accepted Values:** Text  
 **Usage Notes:** The Variable Description provides more detailed information than the Summary, including a review of variables that are important for users to know about. The codebook, setup files, and variable groups are appropriate sources of information for Variable Description.  
-
 **Examples:**
 
 ```text
@@ -2673,7 +2588,6 @@ The Summary is written in the third person and avoids attempting to address issu
 **Repeatable:** No  
 **Accepted Values:** Text  
 **Usage Notes:** Versioning should follow ICPSR conventions  
-
 **Examples:**
 
 ```text
@@ -2695,7 +2609,6 @@ The Summary is written in the third person and avoids attempting to address issu
 **Required:** No  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -2713,7 +2626,6 @@ The Summary is written in the third person and avoids attempting to address issu
 **Required:** No  
 **Repeatable:** No  
 **Accepted Values:** Text  
-
 **Examples:**
 
 ```text
@@ -2757,7 +2669,6 @@ The Summary is written in the third person and avoids attempting to address issu
 **Repeatable:** No  
 **Accepted Values:** Text  
 **Usage Notes:** Weight includes any information about weighting variables in the data, as well as any other weight information provided by the Principal Investigator. If a weighting formula or coefficient was developed, provide this formula, define its elements, and indicate how the formula is applied to the data. It is acceptable to summarize additional documentation and refer users to those resources for more information.  
-
 **Examples:**
 
 ```text
