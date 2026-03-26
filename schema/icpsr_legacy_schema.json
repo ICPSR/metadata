@@ -96,32 +96,33 @@
               "given_name": {
                 "title": "Given (First) Name",
                 "description": "The person's given name.",
-                "type": "string"
+                "type": "string",
+                "examples": [
+                  "James A.", "Lois", "E.V."
+                ]
               },
               "family_name": {
                 "title": "Family (Last) Name",
                 "description": "The person's family name (e.g., surname).",
-                "type": "string"
+                "type": "string",
+                "examples": [
+                  "McCann Jr.", "Smith", "Oppenhuis"
+                ]
               }
             },
             "required": ["given_name", "family_name"],
-            "additionalProperties": false,
             "examples": [   
               {
                 "given_name": "James A.",
-                "family_name": "McCann"
+                "family_name": "McCann Jr."
               },
               {
-                "given_name": "Warren",
-                "family_name": "Winkelstein Jr."
+                "given_name": "Lois",
+                "family_name": "Smith"
               },
               {
                 "given_name": "E.V.",
                 "family_name": "Oppenhuis"
-              },
-              {
-                "given_name": "Miner P.",
-                "family_name": "Marchbanks III"
               }
             ]
           },

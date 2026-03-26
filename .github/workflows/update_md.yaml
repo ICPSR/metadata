@@ -8,6 +8,7 @@ on:
     paths:
       - 'schema/**'
       - 'rde_schema/**'
+      - 'markdown/**'
 
 jobs:
   update_markdown:
@@ -32,6 +33,12 @@ jobs:
         with:
           files: rde_schema/**
 
+      - name: Get changed files in markdown folder
+        id: changed-markdown
+        uses: tj-actions/changed-files@v47
+        with:
+          files: markdown/**
+
       - name: Prevent running if no relevant files changed
         if: steps.changed-schema.outputs.any_changed != 'true' && steps.changed-rde.outputs.any_changed != 'true'
         run: echo "No relevant changes detected"
@@ -46,14 +53,14 @@ jobs:
           pip install -r resources/requirements.txt
 
       - name: Generate Legacy Schema Documentation
-        if: steps.changed-schema.outputs.any_changed == 'true'
+        if: steps.changed-schema.outputs.any_changed == 'true' || steps.changed-markdown.outputs.any_changed == 'true'
         run: |
           python resources/generate_markdown.py \
             --input $GITHUB_WORKSPACE \
             --mode legacy
 
       - name: Generate Current Schema Documentation
-        if: steps.changed-rde.outputs.any_changed == 'true'
+        if: steps.changed-rde.outputs.any_changed == 'true' || steps.changed-markdown.outputs.any_changed == 'true'
         run: |
           python resources/generate_markdown.py \
             --input $GITHUB_WORKSPACE \
