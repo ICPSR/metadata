@@ -392,22 +392,17 @@ Additional points regarding affiliated organizations:
 
 ```yaml
 "Given (First) Name": "James A."
-"Family (Last) Name": "McCann"
+"Family (Last) Name": "McCann Jr."
 ```
 
 ```yaml
-"Given (First) Name": "Warren"
-"Family (Last) Name": "Winkelstein Jr."
+"Given (First) Name": "Lois"
+"Family (Last) Name": "Smith"
 ```
 
 ```yaml
 "Given (First) Name": "E.V."
 "Family (Last) Name": "Oppenhuis"
-```
-
-```yaml
-"Given (First) Name": "Miner P."
-"Family (Last) Name": "Marchbanks III"
 ```
 
 ##### Subfields:
@@ -428,6 +423,20 @@ Additional points regarding affiliated organizations:
 
 **Accepted Values:** Text
 
+**Examples:**
+
+```text
+"James A."
+```
+
+```text
+"Lois"
+```
+
+```text
+"E.V."
+```
+
 <a name="principal-investigator_person_family_name"></a>
 ###### Family (Last) Name
 
@@ -438,6 +447,20 @@ Additional points regarding affiliated organizations:
 **Repeatable:** No
 
 **Accepted Values:** Text
+
+**Examples:**
+
+```text
+"McCann Jr."
+```
+
+```text
+"Smith"
+```
+
+```text
+"Oppenhuis"
+```
 
 <a name="principal-investigator_organization"></a>
 ##### Organization
@@ -1837,7 +1860,7 @@ The textual description should not simply restate the time period in words. For 
 **Controlled Vocabulary:** N/A  
 
 
-**Usage Notes:** Geographic Unit is intended to represent specific, known geography â€“ e.g., county, census district, FIPS code, electoral district, and any other conveyor of specific geography that is represented by a variable.
+**Usage Notes:** Geographic Unit is intended to represent specific, known geography – e.g., county, census district, FIPS code, electoral district, and any other conveyor of specific geography that is represented by a variable.
 
 If the data do not include a geographic variable by which the data can be analyzed, this element is not indicated. If all the cases are from a single state, but the cases are not subdivided geographically within that state, then 'state' is not indicated.
 
