@@ -560,7 +560,7 @@ def main():
     output = []
     output.append(main_title)
     output.append(f"Last updated: {current_date}\n\n")
-    output.append(intro_text)
+    output.extend(intro_text)
 
     # Add over table
     output.append("## Metadata Elements: Overview\n")
@@ -578,7 +578,7 @@ def main():
     output.append("\n---\n")
     
     # add key to understand documentation
-    output.append(key_text)
+    output.extend(key_text)
 
     # add detailed metadata information
     output.append("\n---\n## Metadata Elements: Detailed Information\n")

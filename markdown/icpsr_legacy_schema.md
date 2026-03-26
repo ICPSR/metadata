@@ -1,13 +1,13 @@
 # ICPSR Legacy Metadata Schema
-Last updated: March 24, 2026
 
-**PLEASE NOTE:** This documentation describes the legacy ICPSR Metadata Schema. ICPSR is transitioning to a new metadata framework used for studies published in our new data repository at [https://www.icpsr.umich.edu/sites/](https://www.icpsr.umich.edu/sites/). For details on the new framework, see the [ICPSR Metadata Schema documentation](https://icpsr.github.io/metadata/icpsr_metadata_schema/).
-
-This legacy metadata schema was used to describe data collections at the Inter-university Consortium for Political and Social Research (ICPSR) over the previous decade. These rules and definitions represent ICPSR's metadata practices and are provided as a historical resource to help ICPSR users and staff understand past practices.
-
-A machine-readable copy of this information is also available as a [JSON Schema](https://github.com/ICPSR/metadata/blob/main/schema/icpsr_study_schema.json)
+Last updated: March 26, 2026
 
 
+**PLEASE NOTE:** This is documentation for ICPSR's legacy metadata schema, which was used to describe data collections until approximately 2026. This legacy schema is being phased out and replaced by the new [ICPSR Metadata Schema](https://icpsr.github.io/metadata/icpsr_metadata_schema/).  
+
+These rules and definitions represent ICPSR's past metadata practices and are provided as a historical resource for ICPSR users and staff.  
+
+A machine-readable copy of this information is also available as a [JSON Schema](https://github.com/ICPSR/metadata/blob/main/schema/icpsr_study_schema.json).  
 ## Metadata Elements: Overview
 
 | Property | Required? | Repeatable? | Accepted Values | Description |
@@ -54,19 +54,22 @@ A machine-readable copy of this information is also available as a [JSON Schema]
 | [Series](#series) | No | No | Text | A named collection of related studies. |
 | [Classification](#classification) | No | Yes | Text | Topics used to organize data collections and help users explore the ICPSR catalog. |
 | [Filesets](#filesets) | No | Yes | Multi-part element; see subfields | The grouping of files in the data collection. |
-## Key for Metadata Element Entries
-Full information for each ICPSR study metadata element includes the following fields:
+
+---
+
+## Key for Legacy ICPSR Metadata Schema Entries
+
+Full information for each legacy ICPSR study metadata element includes the following fields:
 
 - **Description:** A short description of the metadata element and the information it is intended to convey.
-- **Required:** Indicates whether the metadata element is mandatory ('Yes') or optional ('No'). Required elements must include at least one value.
-- **Repeatable:** Indicates whether the metadata element may be repeated ('Yes') or if it may only occur once ('No').
+- **Required:** Indicates whether the metadata element is mandatory ("Yes") or optional ("No"). Required elements must include at least one value.
+- **Repeatable:** Indicates whether the metadata element may be repeated ("Yes") or if it may only occur once ("No").
 - **Accepted values:** The type of values that may be used with the metadata element; options include text (with additional requirements, such as date formatting, noted when present) and numbers. Multi-part metadata elements have accepted value information provided in entries for individual subelements.
-- **Controlled Vocabulary:** Indicates the specific controlled vocabulary (i.e., a set of standardized terms) that must be used to provide values for the metadata element ('N/A' indicates no controlled vocabulary is required).
-- **Usage Notes:** Additional information about the nature, scope, and conventions for values that may be added to the metadata element.
-- **ICPSR Input Guidance:** Information for ICPSR staff related to using internal tools and resources to create and input metadata values. These notes are made available to the general ICPSR community for transparency.
+- **Controlled Vocabulary:** Indicates the specific controlled vocabulary (i.e., a set of standardized terms) that must be used to provide values for the metadata element ('N/A' indicates no controlled vocabulary is required). 
+- **Usage Notes:** Additional information about the nature, scope, and conventions for values that may be added to the metadata element.  
+- **ICPSR Input Guidance:** Information for ICPSR staff related to using internal tools and resources to create and input metadata values. These notes are made available to the general ICPSR community for transparency.  
 - **Examples:** Examples of valid values for the metadata element.
-
-
+ 
 
 ---
 ## Metadata Elements: Detailed Information
@@ -1834,7 +1837,7 @@ The textual description should not simply restate the time period in words. For 
 **Controlled Vocabulary:** N/A  
 
 
-**Usage Notes:** Geographic Unit is intended to represent specific, known geography -- e.g., county, census district, FIPS code, electoral district, and any other conveyor of specific geography that is represented by a variable.
+**Usage Notes:** Geographic Unit is intended to represent specific, known geography â€“ e.g., county, census district, FIPS code, electoral district, and any other conveyor of specific geography that is represented by a variable.
 
 If the data do not include a geographic variable by which the data can be analyzed, this element is not indicated. If all the cases are from a single state, but the cases are not subdivided geographically within that state, then 'state' is not indicated.
 
@@ -2109,7 +2112,7 @@ This element is only meant to convey specific, known, geography. If there is a v
 **Controlled Vocabulary:** N/A  
 
 
-**Usage Notes:** Filesets are used at ICPSR to make a convenient package for description, discovery, preservation and dissemination -- a package that is smaller than the data collection but larger than the individual file. A fileset typically contains a single file of statistical data plus additional files that support the data -- such as setups for statistical software, documentation, and alternative data representations. Every ICPSR data collection with at least one file must have at least one defined Fileset; a data collection may have multiple filesets. Each Fileset has a Number, and may also have a Name and an SDA (Survey Documentation and Analysis) Note.
+**Usage Notes:** Filesets are used at ICPSR to make a convenient package for description, discovery, preservation and dissemination – a package that is smaller than the data collection but larger than the individual file. A fileset typically contains a single file of statistical data plus additional files that support the data – such as setups for statistical software, documentation, and alternative data representations. Every ICPSR data collection with at least one file must have at least one defined Fileset; a data collection may have multiple filesets. Each Fileset has a Number, and may also have a Name and an SDA (Survey Documentation and Analysis) Note.
 
 #### Subfields:
 
