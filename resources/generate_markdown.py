@@ -25,7 +25,7 @@ TOP_LEVEL_REQUIRED = {
     "summary"
 }
 
-skip_files = {
+SKIP_FILES = {
     "common_data_elements.json",
     "contributors.json",
     "deposits.json",
@@ -34,11 +34,52 @@ skip_files = {
     "languages.json",
     "link_title.json",
     "link_url.json",
-    "manuscript_number.json",
     "oversamples.json",
     "restrictions.json",
     "study_purpose.json"
 }
+
+PROCESSING_ORDER = [
+    "title",
+    "alternate_titles",
+    "principal_investigators",
+    "funding_sources",
+    "summary",
+    "icpsr_subject_terms",
+    "jel_classifications",
+    "mesh_subject_terms",
+    "time_periods",
+    "nationally_representative_sample",
+    "geographic_coverage_areas",
+    "smallest_geographic_unit",
+    "study_design",
+    "universe",
+    "time_methods",
+    "units_of_analysis",
+    "sampling_procedures",
+    "sampling_note",
+    "weight",
+    "response_rates",
+    "data_source_types",
+    "external_data_sources",
+    "collection_modes",
+    "collection_dates",
+    "variable_description",
+    "scales",
+    "data_management_plan",
+    "preregistration",
+    "software_applications",
+    "general_data_formats",
+    "notes",
+    "manuscript_number",
+    "ada_accessibility",
+    "license",
+    "version_history",
+    "distributors",
+    "citation",
+    "person",
+    "organization"
+]
 
 # ----------------------------
 # Utilities
@@ -191,7 +232,7 @@ def load_schemas(PROPERTY_DIR, mode):
     
     else:
         for f in PROPERTY_DIR.glob("*.json"):
-            if f.name in skip_files:
+            if f.name in SKIP_FILES:
                 continue
             data = json.loads(f.read_text(encoding="utf-8"))
             schemas[f.stem] = data
@@ -227,6 +268,45 @@ def get_type(schema):
 # Rendering helpers
 # ----------------------------
 
+def get_conditional_required(schema):
+    """
+    Detect oneOf-based required constraints.
+    """
+    #Normalize object
+    if schema.get("type") == "array":
+        schema = schema.get("items", {})
+
+    conditional_map = {}
+
+    for clause in schema.get("allOf", []):
+        if "oneOf" in clause:
+            options = clause["oneOf"]
+
+            # collect required fields per option
+            groups = []
+            for opt in options:
+                req = opt.get("required", [])
+                if req:
+                    groups.append(req)
+
+            if groups:
+                # flatten unique field names
+                all_fields = set(f for group in groups for f in group)
+
+                # build readable label
+                label = " or ".join(
+                    [", ".join(f.title() for f in g) for g in groups]
+                )
+
+                for field in all_fields:
+                    conditional_map[field] = f"Conditional (must include either {label})"
+        elif "required" in clause:
+            # Handle regular required fields
+            for field in clause["required"]:
+                conditional_map[field] = "Yes"
+
+    return conditional_map
+
 def render_examples(examples):
     md = []
     for ex in examples:
@@ -238,11 +318,13 @@ def render_examples(examples):
         md.append("```\n")
     return md
 
-def render_subfields(ROOT, mode, properties, required, parent_anchor, level=4):
+def render_subfields(ROOT, mode, schema, properties, required, parent_anchor, level=4):
     """
     Render subfields table AND detailed per-subfield sections with anchors and examples.
     """
     md = []
+
+    conditional_required = get_conditional_required(schema)
 
     md.append(f"{'#' * level} Subfields:\n")
 
@@ -263,8 +345,23 @@ def render_subfields(ROOT, mode, properties, required, parent_anchor, level=4):
             typ = "Object"
         else:
             typ = get_type(prop)
+
+        #set variables    
         anchor_id = f"{parent_anchor}_{name}"
-        md.append(f"| [{title}](#{anchor_id}) | {'Yes' if name in required else 'No'} | "
+        if name in required:
+            req_label = "Yes"
+        elif name in conditional_required:
+            val = conditional_required[name]
+            if "Conditional" in val:
+                req_label = "Conditional"
+            elif val == "Yes":
+                req_label = "Yes"
+            else:
+                req_label = "No"
+        else:
+            req_label = "No"
+        # build out table
+        md.append(f"| [{title}](#{anchor_id}) | {req_label} | "
                   f"{get_repeatable(prop)} | {typ} | {desc} |")
 
     md.append("")
@@ -273,7 +370,12 @@ def render_subfields(ROOT, mode, properties, required, parent_anchor, level=4):
     for name, prop in properties.items():
         title = prop.get("title", name.replace("_", " ").title())
         rep = get_repeatable(prop)
-        req = "Yes" if name in required else "No"
+        if name in required:
+            req = "Yes"
+        elif name in conditional_required:
+            req = conditional_required[name]
+        else:
+            req = "No"
 
         if "$ref" in prop and ("property_banks/person/" in prop["$ref"] or "property_banks/organization/" in prop["$ref"]):
             ref_title, ref_link = ref_to_link(prop["$ref"])
@@ -314,7 +416,7 @@ def render_subfields(ROOT, mode, properties, required, parent_anchor, level=4):
         # Recurse for nested subfields
         subprops, subreq = get_subfields(prop)
         if subprops:
-            md.extend(render_subfields(ROOT, mode, subprops, subreq, anchor_id, level + 1))
+            md.extend(render_subfields(ROOT, mode, prop, subprops, subreq, anchor_id, level + 1))
 
     return md
 
@@ -351,7 +453,7 @@ def render_property(name, schema, ROOT, mode):
 
     properties, required_subfields = get_subfields(schema)
     if properties:
-        md.extend(render_subfields(ROOT, mode, properties, required_subfields, anchor_id))
+        md.extend(render_subfields(ROOT, mode, schema, properties, required_subfields, anchor_id))
 
     # Examples
     schema_type = schema.get("type")
@@ -406,46 +508,18 @@ def main():
         PROPERTY_DIR = ROOT 
         OUTPUT_FILE = input_path / "markdown" / "icpsr_legacy_schema.md"
         version_file = input_path / "markdown" / "legacy_schema_version_history.md"
-        intro_text=(
-           "# ICPSR Legacy Metadata Schema\n"
-           f"Last updated: {current_date}\n\n"
-           "**PLEASE NOTE:** This documentation describes the legacy ICPSR Metadata Schema. ICPSR is transitioning to a new metadata framework used for studies published in our new data repository at [https://www.icpsr.umich.edu/sites/](https://www.icpsr.umich.edu/sites/). For details on the new framework, see the [ICPSR Metadata Schema documentation](https://icpsr.github.io/metadata/icpsr_metadata_schema/).\n\n"
-           "This legacy metadata schema was used to describe data collections at the Inter-university Consortium for Political and Social Research (ICPSR) over the previous decade. These rules and definitions represent ICPSR's metadata practices and are provided as a historical resource to help ICPSR users and staff understand past practices.\n\n"
-           "A machine-readable copy of this information is also available as a [JSON Schema](https://github.com/ICPSR/metadata/blob/main/schema/icpsr_study_schema.json)\n\n"
-        )
-        key_text = (
-            "## Key for Metadata Element Entries\n"
-            "Full information for each ICPSR study metadata element includes the following fields:\n\n"
-            "- **Description:** A short description of the metadata element and the information it is intended to convey.\n"
-            "- **Required:** Indicates whether the metadata element is mandatory ('Yes') or optional ('No'). Required elements must include at least one value.\n"
-            "- **Repeatable:** Indicates whether the metadata element may be repeated ('Yes') or if it may only occur once ('No').\n"
-            "- **Accepted values:** The type of values that may be used with the metadata element; options include text (with additional requirements, such as date formatting, noted when present) and numbers. Multi-part metadata elements have accepted value information provided in entries for individual subelements.\n"
-            "- **Controlled Vocabulary:** Indicates the specific controlled vocabulary (i.e., a set of standardized terms) that must be used to provide values for the metadata element ('N/A' indicates no controlled vocabulary is required).\n"
-            "- **Usage Notes:** Additional information about the nature, scope, and conventions for values that may be added to the metadata element.\n"
-            "- **ICPSR Input Guidance:** Information for ICPSR staff related to using internal tools and resources to create and input metadata values. These notes are made available to the general ICPSR community for transparency.\n"
-            "- **Examples:** Examples of valid values for the metadata element.\n\n"
-        )
+        key_file = input_path / "markdown" / "legacy_schema_key.md"
+        intro_file = input_path / "markdown" / "legacy_schema_intro_text.md"
+        main_title = "# ICPSR Legacy Metadata Schema\n"
         
     else:
         ROOT = input_path / "rde_schema"
         PROPERTY_DIR = ROOT / "property_bank"
         OUTPUT_FILE = input_path / "markdown" / "icpsr_metadata_schema.md"
         version_file = input_path / "markdown" / "schema_version_history.md"
-        intro_text=(
-           "# ICPSR Metadata Schema\n"
-           f"Last updated: {current_date}\n\n"
-           "This is the metadata schema used to describe data collections at the Inter-university Consortium for Political and Social Research (ICPSR). These rules and definitions represent ICPSR's metadata practices and are intended to (a) assist ICPSR staff with metadata entry, and (b) help ICPSR users -- including data depositors and researchers accessing data -- understand how to use and interpret our metadata.\n\n"
-        )
-        key_text = (
-        "## Key for Metadata Element Entries\n"
-        "Full information for each ICPSR study metadata element includes the following fields:\n\n"
-        "- **Description:** A short description of the metadata element and the information it is intended to convey.\n"
-        "- **Required:** Indicates whether the metadata element is mandatory ('Yes') or optional ('No'). Required elements must include at least one value.\n"
-        "- **Repeatable:** Indicates whether the metadata element may be repeated ('Yes') or if it may only occur once ('No').\n"
-        "- **Accepted values:** The type of values that may be used with the metadata element; options include text (with additional requirements, such as date formatting, noted when present) and numbers. Multi-part metadata elements have accepted value information provided in entries for individual subelements.\n"
-        "- **Usage Notes:** Additional information about the nature, scope, and conventions for values that may be added to the metadata element.\n"
-        "- **Examples:** Examples of valid values for the metadata element.\n\n"
-    )
+        key_file = input_path / "markdown" / "schema_key.md"
+        intro_file = input_path / "markdown" / "schema_intro_text.md" 
+        main_title = "# ICPSR Metadata Schema\n"
 
     schemas = load_schemas(PROPERTY_DIR, mode)
 
@@ -457,7 +531,14 @@ def main():
     toc = []
 
     if mode == "current":
-        schema_items = sorted(schemas.items())
+        schema_items = []
+        for key in PROCESSING_ORDER:
+            if key in schemas:
+                schema_items.append((key, schemas[key]))
+        # Add any remaining keys not in PROCESSING_ORDER at the end
+        for key in schemas:
+            if key not in PROCESSING_ORDER:
+                schema_items.append((key, schemas[key]))
     else:
         schema_items = schemas.items()
 
@@ -471,10 +552,18 @@ def main():
         sections.append("\n---\n")
         toc.append(entry)
 
-    output = []
-    output.append(intro_text)
-    output.append("## Metadata Elements: Overview\n")
+    # pull in text from files
+    intro_text = intro_file.read_text(encoding="utf-8").splitlines()
+    key_text = key_file.read_text(encoding="utf-8").splitlines()
+    version_text = version_file.read_text(encoding="utf-8").splitlines()
 
+    output = []
+    output.append(main_title)
+    output.append(f"Last updated: {current_date}\n\n")
+    output.append(intro_text)
+
+    # Add over table
+    output.append("## Metadata Elements: Overview\n")
     output.append("| Property | Required? | Repeatable? | Accepted Values | Description |")
     output.append("|---|---|---|---|---|")
 
@@ -486,14 +575,17 @@ def main():
             f"{e['type']} | "
             f"{e['description']} |"
         )
-
+    output.append("\n---\n")
+    
+    # add key to understand documentation
     output.append(key_text)
+
+    # add detailed metadata information
     output.append("\n---\n## Metadata Elements: Detailed Information\n")
     output.extend(sections)
 
     # Add version history information
-    version_lines = version_file.read_text(encoding="utf-8").splitlines()
-    output.extend(version_lines)
+    output.extend(version_text)
 
     OUTPUT_FILE.write_text("\n".join(output), encoding="utf-8")
     print(f"Markdown generated: {OUTPUT_FILE}")

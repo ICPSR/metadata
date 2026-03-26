@@ -1,5 +1,5 @@
 # ICPSR Legacy Metadata Schema
-Last updated: March 20, 2026
+Last updated: March 24, 2026
 
 **PLEASE NOTE:** This documentation describes the legacy ICPSR Metadata Schema. ICPSR is transitioning to a new metadata framework used for studies published in our new data repository at [https://www.icpsr.umich.edu/sites/](https://www.icpsr.umich.edu/sites/). For details on the new framework, see the [ICPSR Metadata Schema documentation](https://icpsr.github.io/metadata/icpsr_metadata_schema/).
 
@@ -370,8 +370,8 @@ Additional points regarding affiliated organizations:
 
 | Property | Required? | Repeatable? | Accepted Values | Description |
 |---|---|---|---|---|
-| [Person](#principal-investigator_person) | No | No | Multi-part element; see subfields | The name of a person primarily responsible for the data collection. |
-| [Organization](#principal-investigator_organization) | No | No | Text | The name of the organization primarily responsible for the data collection OR the organization with which an individual PI was affiliated at the time of a data collection's deposit at ICPSR. |
+| [Person](#principal-investigator_person) | Conditional | No | Multi-part element; see subfields | The name of a person primarily responsible for the data collection. |
+| [Organization](#principal-investigator_organization) | Conditional | No | Text | The name of the organization primarily responsible for the data collection OR the organization with which an individual PI was affiliated at the time of a data collection's deposit at ICPSR. |
 | [Order](#principal-investigator_order) | Yes | No | Number | The order or rank of importance for the PIs associated with the data collection, typically provided to ICPSR by the lead PI. |
 
 <a name="principal-investigator_person"></a>
@@ -379,7 +379,7 @@ Additional points regarding affiliated organizations:
 
 **Description:** The name of a person primarily responsible for the data collection.
 
-**Required:** No
+**Required:** Conditional (must include either Person or Organization)
 
 **Repeatable:** No
 
@@ -441,7 +441,7 @@ Additional points regarding affiliated organizations:
 
 **Description:** The name of the organization primarily responsible for the data collection OR the organization with which an individual PI was affiliated at the time of a data collection's deposit at ICPSR.
 
-**Required:** No
+**Required:** Conditional (must include either Person or Organization)
 
 **Repeatable:** No
 

@@ -2,7 +2,7 @@
   $schema: https://json-schema.org/draft-07/schema#
   $id: https://schemas.icpsr.umich.edu/schema/notes/smallest_geographic_unit?version=v1
   usageNotes: |+
-    Geographic Unit is intended to represent specific, known geography -- e.g., county, census district, FIPS code, electoral district, and any other conveyor of specific geography that is represented by a variable.
+    Geographic Unit is intended to represent specific, known geography – e.g., county, census district, FIPS code, electoral district, and any other conveyor of specific geography that is represented by a variable.
 
     If the data do not include a geographic variable by which the data can be analyzed, this element is not indicated. If all the cases are from a single state, but the cases are not subdivided geographically within that state, then 'state' is not indicated.
 

@@ -1,6 +1,6 @@
-## Key for Metadata Element Entries
+## Key for Legacy ICPSR Metadata Schema Entries
 
-Full information for each ICPSR study metadata element includes the following fields:
+Full information for each legacy ICPSR study metadata element includes the following fields:
 
 - **Description:** A short description of the metadata element and the information it is intended to convey.
 - **Required:** Indicates whether the metadata element is mandatory ("Yes") or optional ("No"). Required elements must include at least one value.

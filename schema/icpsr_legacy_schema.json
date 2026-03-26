@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft-07/schema#",
   "$id": "https://schemas.icpsr.umich.edu/schema/icpsr_study_schema?version=v1",
   "title": "ICPSR Metadata Schema",
-  "description": "This is the metadata schema used to describe data collections at the Inter-university Consortium for Political and Social Research (ICPSR). These rules and definitions represent ICPSR's metadata practices and are intended to (a) assist ICPSR staff with metadata entry, and (b) help ICPSR users -- including data depositors and researchers accessing data -- understand how to use and interpret our metadata.",
+  "description": "This is the metadata schema used to describe data collections at the Inter-university Consortium for Political and Social Research (ICPSR). These rules and definitions represent ICPSR's metadata practices and are intended to (a) assist ICPSR staff with metadata entry, and (b) help ICPSR users – including data depositors and researchers accessing data – understand how to use and interpret our metadata.",
   "type": "object",
   "required": [ "title", "principal_investigator", "version", "version_date", "distributor", "summary", "subject_term", "time_period", "geographic_coverage_area", "study_number" ],
   "additionalProperties": false,
@@ -145,11 +145,17 @@
             "examples": [1,2,3]
           }
         },
-        "oneOf": [
-          { "required": ["person"] },
-          { "required": ["organization"] }
+        "allOf": [
+          {
+            "oneOf": [
+              { "required": ["person"] },
+              { "required": ["organization"] }
+            ]   
+          },
+          {
+            "required": ["order"]
+          }
         ],
-        "required": ["order"],
         "additionalProperties": false
       },
       "minItems": 1,
@@ -966,7 +972,7 @@
         "dependentRequired": { "name": ["number"] },
         "additionalProperties": false
       },
-      "usageNotes": "Filesets are used at ICPSR to make a convenient package for description, discovery, preservation and dissemination -- a package that is smaller than the data collection but larger than the individual file. A fileset typically contains a single file of statistical data plus additional files that support the data -- such as setups for statistical software, documentation, and alternative data representations. Every ICPSR data collection with at least one file must have at least one defined Fileset; a data collection may have multiple filesets. Each Fileset has a Number, and may also have a Name and an SDA (Survey Documentation and Analysis) Note.",
+      "usageNotes": "Filesets are used at ICPSR to make a convenient package for description, discovery, preservation and dissemination – a package that is smaller than the data collection but larger than the individual file. A fileset typically contains a single file of statistical data plus additional files that support the data – such as setups for statistical software, documentation, and alternative data representations. Every ICPSR data collection with at least one file must have at least one defined Fileset; a data collection may have multiple filesets. Each Fileset has a Number, and may also have a Name and an SDA (Survey Documentation and Analysis) Note.",
       "examples": [
         [
           {
