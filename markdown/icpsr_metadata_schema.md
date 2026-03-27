@@ -1,9 +1,9 @@
 # ICPSR Metadata Schema
-Last updated: March 24, 2026
 
-This is the metadata schema used to describe data collections at the Inter-university Consortium for Political and Social Research (ICPSR). These rules and definitions represent ICPSR's metadata practices and are intended to (a) assist ICPSR staff with metadata entry, and (b) help ICPSR users -- including data depositors and researchers accessing data -- understand how to use and interpret our metadata.
+Last updated: March 27, 2026
 
 
+This is the metadata schema used to describe data collections at the Inter-university Consortium for Political and Social Research (ICPSR). These rules and definitions represent ICPSR's metadata practices and are intended to (a) assist ICPSR staff with metadata entry, and (b) help ICPSR users – including data depositors and researchers accessing data – understand how to use and interpret our metadata.
 ## Metadata Elements: Overview
 
 | Property | Required? | Repeatable? | Accepted Values | Description |
@@ -47,17 +47,20 @@ This is the metadata schema used to describe data collections at the Inter-unive
 | [Citation](#citation) | No | No | Text | The official way to reference the data collection in writing. |
 | [Person](#person) | No | No | Multi-part element; see subfields | A person associated with an ICPSR data collection or service. |
 | [Organization](#organization) | No | No | Multi-part element; see subfields | An organization associated with an ICPSR data collection or service. |
-## Key for Metadata Element Entries
+
+---
+
+## Key for ICPSR Metadata Schema Entries
+
 Full information for each ICPSR study metadata element includes the following fields:
 
 - **Description:** A short description of the metadata element and the information it is intended to convey.
-- **Required:** Indicates whether the metadata element is mandatory ('Yes') or optional ('No'). Required elements must include at least one value.
-- **Repeatable:** Indicates whether the metadata element may be repeated ('Yes') or if it may only occur once ('No').
+- **Required:** Indicates whether the metadata element is mandatory ("Yes") or optional ("No"). Required elements must include at least one value.
+- **Repeatable:** Indicates whether the metadata element may be repeated ("Yes") or if it may only occur once ("No").
 - **Accepted values:** The type of values that may be used with the metadata element; options include text (with additional requirements, such as date formatting, noted when present) and numbers. Multi-part metadata elements have accepted value information provided in entries for individual subelements.
-- **Usage Notes:** Additional information about the nature, scope, and conventions for values that may be added to the metadata element.
+- **Usage Notes:** Additional information about the nature, scope, and conventions for values that may be added to the metadata element.   
 - **Examples:** Examples of valid values for the metadata element.
-
-
+ 
 
 ---
 ## Metadata Elements: Detailed Information
@@ -196,7 +199,7 @@ Full information for each ICPSR study metadata element includes the following fi
 "2"
 ```
 
-#### Complete Examples (with Subfields):
+#### Complete Principal Investigators Examples (with Subfields):
 
 ```yaml
 - "Person":
@@ -343,7 +346,7 @@ Full information for each ICPSR study metadata element includes the following fi
 "2"
 ```
 
-#### Complete Examples (with Subfields):
+#### Complete Funding Sources Examples (with Subfields):
 
 ```yaml
 - "Organization":
@@ -492,7 +495,7 @@ The Summary is written in the third person and avoids attempting to address issu
 "https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/24040"
 ```
 
-#### Complete Examples (with Subfields):
+#### Complete ICPSR Subject Terms Examples (with Subfields):
 
 ```yaml
 - "ICPSR Subject Term": "biographical data"
@@ -609,7 +612,7 @@ The Summary is written in the third person and avoids attempting to address issu
 "/api/v1/vocab-terms/jelClassifications/terms/N22"
 ```
 
-#### Complete Examples (with Subfields):
+#### Complete Journal of Economic Literature (JEL) Classification Codes Examples (with Subfields):
 
 ```yaml
 - "Label": "Relation of Economics to Other Disciplines"
@@ -716,7 +719,7 @@ The Summary is written in the third person and avoids attempting to address issu
 "http://id.nlm.nih.gov/mesh/D058256"
 ```
 
-#### Complete Examples (with Subfields):
+#### Complete Medical Subject Headings (MeSH) Terms Examples (with Subfields):
 
 ```yaml
 - "Label": "anxiety"
@@ -823,7 +826,7 @@ The Summary is written in the third person and avoids attempting to address issu
 "Winter Semester 2019"
 ```
 
-#### Complete Examples (with Subfields):
+#### Complete Time Periods Examples (with Subfields):
 
 ```yaml
 - "Start Date": "2018"
@@ -1010,7 +1013,7 @@ The Summary is written in the third person and avoids attempting to address issu
 "https://sws.geonames.org/6269554/"
 ```
 
-#### Complete Examples (with Subfields):
+#### Complete Geographic Coverage Areas Examples (with Subfields):
 
 ```yaml
 - "City": "Cleveland"
@@ -1127,7 +1130,7 @@ The Summary is written in the third person and avoids attempting to address issu
 "/api/v1/vocab-terms/smallestGeographicUnits/terms/StateProvince"
 ```
 
-#### Complete Examples (with Subfields):
+#### Complete Smallest Geographic Unit Examples (with Subfields):
 
 ```yaml
 "Label": "Basic Geographic Units"
@@ -1310,7 +1313,7 @@ The Summary is written in the third person and avoids attempting to address issu
 "/api/v1/vocab-terms/timeMethods/terms/TimeSeries"
 ```
 
-#### Complete Examples (with Subfields):
+#### Complete Time Methods Examples (with Subfields):
 
 ```yaml
 - "Label": "Registers/Records/Accounts: Medical/Clinical"
@@ -1427,7 +1430,7 @@ The Summary is written in the third person and avoids attempting to address issu
 "/api/v1/vocab-terms/analysisUnits/Household"
 ```
 
-#### Complete Examples (with Subfields):
+#### Complete Units of Analysis Examples (with Subfields):
 
 ```yaml
 - "Label": "Organization/Institution"
@@ -1656,7 +1659,7 @@ The Summary is written in the third person and avoids attempting to address issu
 "/api/v1/vocab-terms/dataSourceTypes/terms/ResearchData.Published"
 ```
 
-#### Complete Examples (with Subfields):
+#### Complete Data Source Types Examples (with Subfields):
 
 ```yaml
 - "Label": "Registers/Records/Accounts: Medical/Clinical"
@@ -1796,7 +1799,7 @@ The Summary is written in the third person and avoids attempting to address issu
 "/api/v1/vocab-terms/collectionModes/terms/Interview.FaceToFace.CAPIorCAMI"
 ```
 
-#### Complete Examples (with Subfields):
+#### Complete Collection Modes Examples (with Subfields):
 
 ```yaml
 - "Label": "Face-to-face interview: Computer-assisted (CAPI/CAMI)"
@@ -1909,7 +1912,7 @@ The Summary is written in the third person and avoids attempting to address issu
 "Student data"
 ```
 
-#### Complete Examples (with Subfields):
+#### Complete Collection Dates Examples (with Subfields):
 
 ```yaml
 - "Start Date": "2018"
@@ -2352,7 +2355,7 @@ The Summary is written in the third person and avoids attempting to address issu
 "https://www.nationalarchives.gov.uk/information-management/manage-information/preserving-digital-records/droid/"
 ```
 
-#### Complete Examples (with Subfields):
+#### Complete Software Applications Examples (with Subfields):
 
 ```yaml
 - "Software Name": "siegfried"
@@ -2458,7 +2461,7 @@ The Summary is written in the third person and avoids attempting to address issu
 
 **Accepted Values:** Text
 
-#### Complete Examples (with Subfields):
+#### Complete General Data Formats Examples (with Subfields):
 
 ```yaml
 - "Label": "Text"
@@ -2604,7 +2607,7 @@ The Summary is written in the third person and avoids attempting to address issu
 "/api/v1/vocab-terms/adaAccessibility/terms/ada.archival"
 ```
 
-#### Complete Examples (with Subfields):
+#### Complete ADA Accessibility Examples (with Subfields):
 
 ```yaml
 "Label": "ADA Accessible"
@@ -2703,7 +2706,7 @@ The Summary is written in the third person and avoids attempting to address issu
 "/api/v1/vocab-terms/licenses/terms/Apache-1.0"
 ```
 
-#### Complete Examples (with Subfields):
+#### Complete License Examples (with Subfields):
 
 ```yaml
 "Label": "Creative Commons Attribution Non Commercial 4.0 International"
@@ -2812,7 +2815,7 @@ The Summary is written in the third person and avoids attempting to address issu
 "The codebook descriptions of variables TANSUP, EMOSUP, and SOCSUP were corrected."
 ```
 
-#### Complete Examples (with Subfields):
+#### Complete Version History Examples (with Subfields):
 
 ```yaml
 - "Version Number": "V2"
@@ -2889,7 +2892,7 @@ The Summary is written in the third person and avoids attempting to address issu
 "2"
 ```
 
-#### Complete Examples (with Subfields):
+#### Complete Distributors Examples (with Subfields):
 
 ```yaml
 - "Organization":
@@ -2969,18 +2972,6 @@ The Summary is written in the third person and avoids attempting to address issu
 
 **Accepted Values:** Multi-part element; see subfields
 
-**Examples:**
-
-```yaml
-"Given Name (First Name)": "Susan B."
-"Family Name (Last Name)": "Anthony"
-```
-
-```yaml
-"Given Name (First Name)": "John"
-"Family Name (Last Name)": "Doe IV"
-```
-
 ##### Subfields:
 
 | Property | Required? | Repeatable? | Accepted Values | Description |
@@ -3042,6 +3033,18 @@ The Summary is written in the third person and avoids attempting to address issu
 "Escobar-Vega"
 ```
 
+#### Complete Personal Name Examples (with Subfields):
+
+```yaml
+"Given Name (First Name)": "Susan B."
+"Family Name (Last Name)": "Anthony"
+```
+
+```yaml
+"Given Name (First Name)": "John"
+"Family Name (Last Name)": "Doe IV"
+```
+
 <a name="person_orcid"></a>
 ##### ORCID Identifier
 
@@ -3087,7 +3090,7 @@ The Summary is written in the third person and avoids attempting to address issu
 "j.doe@example.com"
 ```
 
-#### Complete Examples (with Subfields):
+#### Complete Person Examples (with Subfields):
 
 ```yaml
 "Personal Name":
@@ -3184,7 +3187,7 @@ The Summary is written in the third person and avoids attempting to address issu
 "info@example.com"
 ```
 
-#### Complete Examples (with Subfields):
+#### Complete Organization Examples (with Subfields):
 
 ```yaml
 "Organization Name": "Urban Institute"

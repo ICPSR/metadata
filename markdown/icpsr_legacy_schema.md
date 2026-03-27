@@ -1,6 +1,6 @@
 # ICPSR Legacy Metadata Schema
 
-Last updated: March 26, 2026
+Last updated: March 27, 2026
 
 
 **PLEASE NOTE:** This is documentation for ICPSR's legacy metadata schema, which was used to describe data collections until approximately 2026. This legacy schema is being phased out and replaced by the new [ICPSR Metadata Schema](https://icpsr.github.io/metadata/icpsr_metadata_schema/).  
@@ -388,28 +388,6 @@ Additional points regarding affiliated organizations:
 
 **Accepted Values:** Multi-part element; see subfields
 
-**Examples:**
-
-```yaml
-"Given (First) Name": "James A."
-"Family (Last) Name": "McCann"
-```
-
-```yaml
-"Given (First) Name": "Warren"
-"Family (Last) Name": "Winkelstein Jr."
-```
-
-```yaml
-"Given (First) Name": "E.V."
-"Family (Last) Name": "Oppenhuis"
-```
-
-```yaml
-"Given (First) Name": "Miner P."
-"Family (Last) Name": "Marchbanks III"
-```
-
 ##### Subfields:
 
 | Property | Required? | Repeatable? | Accepted Values | Description |
@@ -428,6 +406,20 @@ Additional points regarding affiliated organizations:
 
 **Accepted Values:** Text
 
+**Examples:**
+
+```text
+"James A."
+```
+
+```text
+"Lois"
+```
+
+```text
+"E.V."
+```
+
 <a name="principal-investigator_person_family_name"></a>
 ###### Family (Last) Name
 
@@ -438,6 +430,37 @@ Additional points regarding affiliated organizations:
 **Repeatable:** No
 
 **Accepted Values:** Text
+
+**Examples:**
+
+```text
+"McCann Jr."
+```
+
+```text
+"Smith"
+```
+
+```text
+"Oppenhuis"
+```
+
+#### Complete Person Examples (with Subfields):
+
+```yaml
+"Given (First) Name": "James A."
+"Family (Last) Name": "McCann Jr."
+```
+
+```yaml
+"Given (First) Name": "Lois"
+"Family (Last) Name": "Smith"
+```
+
+```yaml
+"Given (First) Name": "E.V."
+"Family (Last) Name": "Oppenhuis"
+```
 
 <a name="principal-investigator_organization"></a>
 ##### Organization
@@ -497,7 +520,7 @@ Additional points regarding affiliated organizations:
 "3"
 ```
 
-#### Complete Examples (with Subfields):
+#### Complete Principal Investigator Examples (with Subfields):
 
 ```yaml
 - "Person":
@@ -652,7 +675,7 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 "3"
 ```
 
-#### Complete Examples (with Subfields):
+#### Complete Distributor Examples (with Subfields):
 
 ```yaml
 - "Name": "Inter-university Consortium for Political and Social Research"
@@ -882,7 +905,7 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 "3"
 ```
 
-#### Complete Examples (with Subfields):
+#### Complete Funding Source Examples (with Subfields):
 
 ```yaml
 - "Agency": "Robert Wood Johnson Foundation"
@@ -1144,7 +1167,7 @@ The textual description should not simply restate the time period in words. For 
 "Post-Survey Follow-Up"
 ```
 
-#### Complete Examples (with Subfields):
+#### Complete Time Period Examples (with Subfields):
 
 ```yaml
 - "Date": "2020-01-21--2020-06-21"
@@ -1243,7 +1266,7 @@ The textual description should not simply restate the time period in words. For 
 "Post-Survey Follow-Up"
 ```
 
-#### Complete Examples (with Subfields):
+#### Complete Collection Date Examples (with Subfields):
 
 ```yaml
 - "Date": "2020-01-21--2020-06-21"
@@ -1837,7 +1860,7 @@ The textual description should not simply restate the time period in words. For 
 **Controlled Vocabulary:** N/A  
 
 
-**Usage Notes:** Geographic Unit is intended to represent specific, known geography â€“ e.g., county, census district, FIPS code, electoral district, and any other conveyor of specific geography that is represented by a variable.
+**Usage Notes:** Geographic Unit is intended to represent specific, known geography – e.g., county, census district, FIPS code, electoral district, and any other conveyor of specific geography that is represented by a variable.
 
 If the data do not include a geographic variable by which the data can be analyzed, this element is not indicated. If all the cases are from a single state, but the cases are not subdivided geographically within that state, then 'state' is not indicated.
 
@@ -2018,7 +2041,7 @@ This element is only meant to convey specific, known, geography. If there is a v
 "The codebook descriptions of variables TANSUP, EMOSUP, and SOCSUP were corrected."
 ```
 
-#### Complete Examples (with Subfields):
+#### Complete Changes to Collection Examples (with Subfields):
 
 ```yaml
 - "Date": "2003-09-10"
@@ -2205,7 +2228,7 @@ This element is only meant to convey specific, known, geography. If there is a v
 "Please note that the replicate weights are needed to obtain accurate standard error estimates. Users are advised to download the data to use the replicate weights. Users should refer to the study description page or User Guide for further details regarding weights."
 ```
 
-#### Complete Examples (with Subfields):
+#### Complete Filesets Examples (with Subfields):
 
 ```yaml
 - "Number": 1
