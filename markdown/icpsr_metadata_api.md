@@ -3,7 +3,7 @@
 ICPSR has developed a new application programming interface (API) to help researchers and data users:
 
   - **Search** data collections by specific metadata fields such as study identifier, subject terms, geographic coverage area, original release date -- and even run more advanced queries.
-  - **Export** metadata about those collections in widely used formats such as DCAT-US, MARCXML, and Dublin Core, making it easier to share and integrate with other systems.
+  - **Export** metadata about those collections in widely used formats such as DCAT-US, MARCXML, and Dublin Core, making it easier to share and integrate with other systems. 
 
 ## Getting Started
 
