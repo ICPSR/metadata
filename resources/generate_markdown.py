@@ -17,14 +17,6 @@ QuoteDumper.add_representer(str, quoted_str_representer)
 # Configuration
 # ----------------------------
 
-TOP_LEVEL_REQUIRED = {
-    "title",
-    "time_periods",
-    "geographic_coverage_areas",
-    "icpsr_subject_terms",
-    "summary"
-}
-
 SKIP_FILES = {
     "common_data_elements.json",
     "contributors.json",
@@ -429,7 +421,7 @@ def render_subfields(ROOT, mode, schema, properties, required, parent_anchor, le
 
     return md
 
-def render_property(name, schema, ROOT, mode):
+def render_property(name, schema, ROOT, mode, TOP_LEVEL_REQUIRED):
     md = []
 
     title = schema.get("title", name.replace("_", " ").title())
@@ -513,6 +505,18 @@ def main():
     current_date = datetime.now().strftime('%B %d, %Y')
 
     if mode == "legacy":
+        TOP_LEVEL_REQUIRED = {
+            "title", 
+            "principal_investigator", 
+            "version", 
+            "version_date", 
+            "distributor", 
+            "summary", 
+            "subject_term", 
+            "time_period", 
+            "geographic_coverage_area", 
+            "study_number"
+        }
         ROOT = input_path / "schema"
         PROPERTY_DIR = ROOT 
         OUTPUT_FILE = input_path / "markdown" / "icpsr_legacy_schema.md"
@@ -522,6 +526,13 @@ def main():
         main_title = "# ICPSR Legacy Metadata Schema\n"
         
     else:
+        TOP_LEVEL_REQUIRED = {
+            "title",
+            "time_periods",
+            "geographic_coverage_areas",
+            "icpsr_subject_terms",
+            "summary"
+        }
         ROOT = input_path / "rde_schema"
         PROPERTY_DIR = ROOT / "property_bank"
         OUTPUT_FILE = input_path / "markdown" / "icpsr_metadata_schema.md"
@@ -553,7 +564,7 @@ def main():
 
     for name, schema in schema_items:
         try:
-            md, entry = render_property(name, schema, ROOT, mode)
+            md, entry = render_property(name, schema, ROOT, mode, TOP_LEVEL_REQUIRED)
         except TypeError:
             print(name)
             sys.exit(1)

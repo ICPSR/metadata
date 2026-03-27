@@ -6,4 +6,4 @@ The [Inter-university Consortium for Political and Social Research](https://www.
 
 This portal provides information about how to use and apply ICPSR metadata.
 
-*Acknowledgements:* Documentation drew heavily from earlier internal ICPSR metadata documentation created by Cole Whiteman, Karen Collamore Sullivan, Carolyn Geda, and Mary Vardigan. Contributors to this portal include: jay winkler, Mike Shallcross, Sanda Ionescu, and Jared Lyle.
+*Acknowledgements:* Documentation drew heavily from earlier internal ICPSR metadata documentation created by Cole Whiteman, Karen Collamore Sullivan, Carolyn Geda, and Mary Vardigan. Contributors to this portal include: jay winkler, Mike Shallcross, Sanda Ionescu, Megan Chenoweth, and Jared Lyle.
