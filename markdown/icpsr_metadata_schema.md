@@ -16,7 +16,7 @@ This is the metadata schema used to describe data collections at the Inter-unive
 | [ICPSR Subject Terms](#icpsr-subject-terms) | Yes | Yes | Multi-part element; see subfields | A controlled list of social science terms maintained by ICPSR and used to indicate topics related to the data collection. |
 | [Journal of Economic Literature (JEL) Classification Codes](#journal-of-economic-literature-(jel)-classification-codes) | No | Yes | Multi-part element; see subfields | Classification codes used to categorize economic research. |
 | [Medical Subject Headings (MeSH) Terms](#medical-subject-headings-(mesh)-terms) | No | Yes | Multi-part element; see subfields | Biomedical and health-related terms from the National Library of Medicine that describe the data collection's topics. |
-| [Time Periods](#time-periods) | Yes | Yes | Multi-part element; see subfields | The time period(s) to which the data refer, regardless of when the data were collected. |
+| [Time Periods](#time-periods) | No | Yes | Multi-part element; see subfields | The time period(s) to which the data refer, regardless of when the data were collected. |
 | [Nationally Representative Sample](#nationally-representative-sample) | No | No | Text | Indicates whether the data collection uses a sampling design intended to represent the demographics, behaviors, and/or characteristics of the entire nation. This typically involves probability-based methods that allow generalization. It does not include convenience samples that appear similar to the nation by chance. |
 | [Geographic Coverage Areas](#geographic-coverage-areas) | Yes | Yes | Multi-part element; see subfields | The geographic locations where the data refer or are related. |
 | [Smallest Geographic Unit](#smallest-geographic-unit) | No | No | Multi-part element; see subfields | The smallest geographic unit (e.g., state or census tract) used in the dataset. |
@@ -739,7 +739,7 @@ The Summary is written in the third person and avoids attempting to address issu
 
 **Description:** The time period(s) to which the data refer, regardless of when the data were collected.
 
-**Required:** Yes
+**Required:** No
 
 **Repeatable:** Yes
 
