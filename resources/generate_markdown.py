@@ -528,7 +528,7 @@ def main():
     else:
         TOP_LEVEL_REQUIRED = {
             "title",
-            "principal_investigators"
+            "principal_investigators",
             "time_periods",
             "geographic_coverage_areas",
             "icpsr_subject_terms",
