@@ -12,24 +12,24 @@ A machine-readable copy of this information is also available as a [JSON Schema]
 
 | Property | Required? | Repeatable? | Accepted Values | Description |
 |---|---|---|---|---|
-| [Version](#version) | No | No | Number | The current version number for the data collection. |
-| [Version Date](#version-date) | No | No | Text | The date on which the current version of the data collection was released by ICPSR. |
+| [Version](#version) | Yes | No | Number | The current version number for the data collection. |
+| [Version Date](#version-date) | Yes | No | Text | The date on which the current version of the data collection was released by ICPSR. |
 | [Original Release Date](#original-release-date) | No | No | Text | The date on which the data collection was originally released by ICPSR. |
 | [Title](#title) | Yes | No | Text | The official title that describes what the data collection is about, its geographic scope, and the time period it covered. |
 | [Alternate Title](#alternate-title) | No | Yes | Text | The alternate name(s) or acronym(s) commonly used to refer to the data collection. |
 | [Link Title](#link-title) | No | No | Text | The title of an external resource that is included in the ICPSR catalog as a courtesy to users. |
 | [Link URL](#link-url) | No | No | Text | The URL of an external resource that is included in the ICPSR catalog as a courtesy to users. |
-| [Principal Investigator](#principal-investigator) | No | Yes | Multi-part element; see subfields | The key people or organizations responsible for the data collection, listed by importance. Each data collection requires at least one PI, either a person or an organization. |
+| [Principal Investigator](#principal-investigator) | Yes | Yes | Multi-part element; see subfields | The key people or organizations responsible for the data collection, listed by importance. Each data collection requires at least one PI, either a person or an organization. |
 | [Citation](#citation) | No | No | Text | The official way to reference the data collection in writing. |
-| [Distributor](#distributor) | No | Yes | Multi-part element; see subfields | The organization(s) responsible for distributing the data collection. |
-| [Study Number](#study-number) | No | No | Number | A unique, numerical value used by ICPSR to identify and track data collections. |
+| [Distributor](#distributor) | Yes | Yes | Multi-part element; see subfields | The organization(s) responsible for distributing the data collection. |
+| [Study Number](#study-number) | Yes | No | Number | A unique, numerical value used by ICPSR to identify and track data collections. |
 | [Digital Object Identifier (DOI)](#digital-object-identifier-(doi)) | No | No | Text | The registered persistent digital object identifier (DOI) associated with the data collection. |
 | [Funding Source](#funding-source) | No | Yes | Multi-part element; see subfields | The sources of funding that supported the data collection. |
 | [External Source ID](#external-source-id) | No | Yes | Text | A unique identifier supplied by the data depositor. |
 | [Summary](#summary) | Yes | No | Text | A description of the data collection that helps users understand its purpose, substance, and key topics. |
-| [Subject Term](#subject-term) | No | Yes | Text | A controlled list of social science terms maintained by ICPSR and used to indicate topics related to the data collection. |
-| [Geographic Coverage Area](#geographic-coverage-area) | No | Yes | Text | The geographic locations where the data refer or are related. |
-| [Time Period](#time-period) | No | Yes | Multi-part element; see subfields | The time period(s) to which the data refer, regardless of when the data were collected. |
+| [Subject Term](#subject-term) | Yes | Yes | Text | A controlled list of social science terms maintained by ICPSR and used to indicate topics related to the data collection. |
+| [Geographic Coverage Area](#geographic-coverage-area) | Yes | Yes | Text | The geographic locations where the data refer or are related. |
+| [Time Period](#time-period) | Yes | Yes | Multi-part element; see subfields | The time period(s) to which the data refer, regardless of when the data were collected. |
 | [Collection Date](#collection-date) | No | Yes | Multi-part element; see subfields | The date(s) when the data were physically collected. |
 | [Universe](#universe) | No | No | Text | The total group of persons or other entities (e.g., households or organizations) that were the object of research and to which analytic results refer. |
 | [Data Type](#data-type) | No | Yes | Text | The types of data included in the data collection. |
@@ -79,7 +79,7 @@ Full information for each legacy ICPSR study metadata element includes the follo
 
 **Description:** The current version number for the data collection.
 
-**Required:** No
+**Required:** Yes
 
 **Repeatable:** No
 
@@ -114,7 +114,7 @@ Metadata-only updates to the data collection do not increment the version number
 
 **Description:** The date on which the current version of the data collection was released by ICPSR.
 
-**Required:** No
+**Required:** Yes
 
 **Repeatable:** No
 
@@ -334,7 +334,7 @@ Time Period:
 
 **Description:** The key people or organizations responsible for the data collection, listed by importance. Each data collection requires at least one PI, either a person or an organization.
 
-**Required:** No
+**Required:** Yes
 
 **Repeatable:** Yes
 
@@ -580,7 +580,7 @@ For additional information about how DOIs for citations are generated, see the D
 
 **Description:** The organization(s) responsible for distributing the data collection.
 
-**Required:** No
+**Required:** Yes
 
 **Repeatable:** Yes
 
@@ -701,7 +701,7 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 
 **Description:** A unique, numerical value used by ICPSR to identify and track data collections.
 
-**Required:** No
+**Required:** Yes
 
 **Repeatable:** No
 
@@ -1002,7 +1002,7 @@ The Summary is written in the third person and avoids attempting to address issu
 
 **Description:** A controlled list of social science terms maintained by ICPSR and used to indicate topics related to the data collection.
 
-**Required:** No
+**Required:** Yes
 
 **Repeatable:** Yes
 
@@ -1040,7 +1040,7 @@ The Summary is written in the third person and avoids attempting to address issu
 
 **Description:** The geographic locations where the data refer or are related.
 
-**Required:** No
+**Required:** Yes
 
 **Repeatable:** Yes
 
@@ -1086,7 +1086,7 @@ The [Getty Thesaurus of Geographic Names](http://www.getty.edu/research/tools/vo
 
 **Description:** The time period(s) to which the data refer, regardless of when the data were collected.
 
-**Required:** No
+**Required:** Yes
 
 **Repeatable:** Yes
 
