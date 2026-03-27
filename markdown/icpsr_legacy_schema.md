@@ -388,23 +388,6 @@ Additional points regarding affiliated organizations:
 
 **Accepted Values:** Multi-part element; see subfields
 
-**Examples:**
-
-```yaml
-"Given (First) Name": "James A."
-"Family (Last) Name": "McCann Jr."
-```
-
-```yaml
-"Given (First) Name": "Lois"
-"Family (Last) Name": "Smith"
-```
-
-```yaml
-"Given (First) Name": "E.V."
-"Family (Last) Name": "Oppenhuis"
-```
-
 ##### Subfields:
 
 | Property | Required? | Repeatable? | Accepted Values | Description |
@@ -460,6 +443,23 @@ Additional points regarding affiliated organizations:
 
 ```text
 "Oppenhuis"
+```
+
+#### Complete Examples (with Subfields):
+
+```yaml
+"Given (First) Name": "James A."
+"Family (Last) Name": "McCann Jr."
+```
+
+```yaml
+"Given (First) Name": "Lois"
+"Family (Last) Name": "Smith"
+```
+
+```yaml
+"Given (First) Name": "E.V."
+"Family (Last) Name": "Oppenhuis"
 ```
 
 <a name="principal-investigator_organization"></a>
@@ -1860,7 +1860,7 @@ The textual description should not simply restate the time period in words. For 
 **Controlled Vocabulary:** N/A  
 
 
-**Usage Notes:** Geographic Unit is intended to represent specific, known geography – e.g., county, census district, FIPS code, electoral district, and any other conveyor of specific geography that is represented by a variable.
+**Usage Notes:** Geographic Unit is intended to represent specific, known geography â€“ e.g., county, census district, FIPS code, electoral district, and any other conveyor of specific geography that is represented by a variable.
 
 If the data do not include a geographic variable by which the data can be analyzed, this element is not indicated. If all the cases are from a single state, but the cases are not subdivided geographically within that state, then 'state' is not indicated.
 

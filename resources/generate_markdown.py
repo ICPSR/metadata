@@ -408,15 +408,24 @@ def render_subfields(ROOT, mode, schema, properties, required, parent_anchor, le
             icpsrGuidance = get_yaml_notes(prop['icpsrGuidance'], "icpsrGuidance", ROOT)
             md.append(f"**ICPSR Input Guidance:** {icpsrGuidance}\n")
 
-        # Examples per subfield
-        if "examples" in prop:
-            md.append("**Examples:**\n")
-            md.extend(render_yaml_examples(prop["examples"], prop))
-
         # Recurse for nested subfields
         subprops, subreq = get_subfields(prop)
         if subprops:
             md.extend(render_subfields(ROOT, mode, prop, subprops, subreq, anchor_id, level + 1))
+
+        # Examples per subfield
+        if "examples" in prop:
+
+            schema_type = prop.get("type")
+            items_type = prop.get("items", {}).get("type")
+
+            if schema_type == "object" or (schema_type == "array" and items_type == "object"):
+                md.append(f"#### Complete {title} Examples (with Subfields):\n")
+            else:
+                md.append("**Examples:**\n")
+
+            md.extend(render_yaml_examples(prop["examples"], prop))
+
 
     return md
 
@@ -465,7 +474,7 @@ def render_property(name, schema, ROOT, mode):
         items_type = schema.get("items", {}).get("type")
 
         if schema_type == "object" or (schema_type == "array" and items_type == "object"):
-            md.append("#### Complete Examples (with Subfields):\n")
+            md.append(f"#### Complete {title} Examples (with Subfields):\n")
         else:
             md.append("**Examples:**\n")
 
