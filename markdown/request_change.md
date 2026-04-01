@@ -2,7 +2,7 @@
 
 Modifications of ICPSR's metadata follow a four-step governance process:
 
-![Schema Governance Process](assets/governance-process.png)
+![](assets/governance-process.png)
 
 1. **Evaluate**: Using this documentation portal, an ICPSR team member evaluates the existing metadata properties to determine if the existing schema will meet their project needs.
 

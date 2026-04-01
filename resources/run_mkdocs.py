@@ -24,8 +24,8 @@ def main():
         site_dir = os.path.join(args.source_dir, 'site')
         resource_dir = os.path.join(args.source_dir, 'resources')
         mkdocs_yml = os.path.join(resource_dir, 'mkdocs.yml')
-        rtd_css = os.path.join(resource_dir, 'readthedocs_theme.css')
-        rtd_extra_css = os.path.join(resource_dir, 'readthedocs_theme_extra.css')
+        # rtd_css = os.path.join(resource_dir, 'readthedocs_theme.css')
+        # rtd_extra_css = os.path.join(resource_dir, 'readthedocs_theme_extra.css')
         
         if not os.path.exists(site_dir):
             os.makedirs(site_dir)
@@ -35,8 +35,8 @@ def main():
         subprocess.run(cmd, shell=True)
 
         #add improved CSS
-        shutil.copy(rtd_css, os.path.join(site_dir, 'css', 'theme.css'))
-        shutil.copy(rtd_extra_css, os.path.join(site_dir, 'css', 'theme_extra.css'))
+        # shutil.copy(rtd_css, os.path.join(site_dir, 'css', 'theme.css'))
+        # shutil.copy(rtd_extra_css, os.path.join(site_dir, 'css', 'theme_extra.css'))
 
     except Exception as ex: # pylint: disable=broad-except
         sys.exit(1)
