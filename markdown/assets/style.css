@@ -79,7 +79,7 @@ a {
 }
 
 .wy-menu-vertical li.current a {
-    color: #757575;
+    color: #404040;
 }
 
 .wy-menu-vertical li.current>a,
@@ -97,6 +97,18 @@ a {
     color: #757575;
 }
 
+.wy-menu-vertical li.toctree-l2 a, 
+.wy-menu-vertical li.toctree-l3 a, 
+.wy-menu-vertical li.toctree-l4 a, 
+.wy-menu-vertical li.toctree-l5 a, 
+.wy-menu-vertical li.toctree-l6 a, 
+.wy-menu-vertical li.toctree-l7 a, 
+.wy-menu-vertical li.toctree-l8 a, 
+.wy-menu-vertical li.toctree-l9 a, 
+.wy-menu-vertical li.toctree-l10 a  {
+    color: #404040;
+}
+
 .wy-menu-vertical li.toctree-l2 a:hover button.toctree-expand,
 .wy-menu-vertical li.toctree-l3 a:hover button.toctree-expand,
 .wy-menu-vertical li.toctree-l4 a:hover button.toctree-expand,
@@ -111,6 +123,7 @@ a {
 
 .wy-side-nav-search {
     color: #ffffff;
+    background-color: #115BFB;
 }
 
 .wy-side-nav-search .wy-dropdown>a,
