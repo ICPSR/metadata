@@ -93,7 +93,7 @@
           <a href="{{ nav.homepage.url|url }}" class="icon icon-home"> {{ config.site_name }}
         {%- endif %}
         {%- if config.theme.logo %}
-          <img src="{{ config.theme.logo|url }}" class="logo" alt="{% trans %}ICPSR Logo{% endtrans %}"/>
+          <img src="{{ config.theme.logo|url }}" class="logo" alt="{% trans %}ICPSR Metadata Documentation Portal{% endtrans %}"/>
           {{ config.site_name }}
         {%- endif %}
         </a>
@@ -173,6 +173,10 @@
     <script src="{{ 'js/theme_extra.js'|url }}"></script>
     <script src="{{ 'js/theme.js'|url }}"></script>
     <script src="{{ 'search/main.js'|url }}"></script>
+
+     <!-- Accessibility JS -->
+    <script src="{{ 'assets/a11y-nav.js'|url }}"></script>
+
     <script>
         jQuery(function () {
             SphinxRtdTheme.Navigation.enable({{ 'true' if config.theme.sticky_navigation else 'false' }});
