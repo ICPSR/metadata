@@ -1,6 +1,6 @@
 # ICPSR Legacy Metadata Schema
 
-Last updated: March 27, 2026
+Last updated: April 02, 2026
 
 
 **PLEASE NOTE:** This is documentation for ICPSR's legacy metadata schema, which was used to describe data collections until approximately 2026. This legacy schema is being phased out and replaced by the new [ICPSR Metadata Schema](https://icpsr.github.io/metadata/icpsr_metadata_schema/).  
