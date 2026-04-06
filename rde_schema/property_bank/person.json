@@ -50,8 +50,8 @@
       "type": "array",
       "items": {
         "$ref": "https://archive.icpsr.umich.edu/schema/property_banks/organization/version/1",
-        "title": "Affiliated Organizations",
-        "description": "The organization(s) with which the person is affiliated."
+        "title": "Organization",
+        "description": "Name and other details about the principal investigator’s affiliation."
       }
     },
     "email": {

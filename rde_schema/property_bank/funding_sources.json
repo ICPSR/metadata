@@ -9,19 +9,19 @@
     "properties": {
       "organization": {
         "$ref": "https://archive.icpsr.umich.edu/schema/property_banks/organization/version/1",
-        "title": "Funding Agency",
-        "description": "An organization responsible for funding the study."
+        "title": "Organization",
+        "description": "Name and other details about the organization that provided the funding."
       },
       "grants": {
         "title": "Funding Awards",
-        "description": "Financial support for the data collection.",
+        "description": "Identifiers and other details about financial support for the data collection.",
         "type": "array",
         "items": {
           "type": "object",
           "properties": {
               "grant_number": {
                 "title": "Funding Identifier",
-                "description": "The unique identifier for the funding (e.g., ABC-0123456.",
+                "description": "The unique identifier for the funding (e.g., ABC-0123456).",
                 "type": "string",
                 "examples": [
                     "SES-1835721",

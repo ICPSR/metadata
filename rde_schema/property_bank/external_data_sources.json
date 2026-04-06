@@ -7,13 +7,10 @@
   "items": {
     "type": "string"
   },                
-  "usageNotes": "External data sources include books, journal articles, administrative records, agency-sponsored surveys, and machine-readable files. Each source includes at minimum the title, author, publication year, and journal (if applicable). Any citation format is accepted.",
+  "usageNotes": "External data sources can include websites, datasets, books, journal articles, and other sources. Each source includes at minimum the title, author, publication year, journal (if applicable), and DOI or URL for online sources. Any citation format is accepted.",
   "examples": [
     ["'Voting Scores.' Congressional Quarterly Almanac 33 (1977), 487-498"],
-    [
-      "United States Bureau of the Census Economic Surveys, 1998-2000",           
-      "United States Congressional Record, 1989"
-    ],
-    ["Annual Company Organization Survey, 2003"]
+    ["Multi-Resolution Land Characteristics Consortium. \"National Land Cover Database (CONUS), All Years,\" 2016. https://www.mrlc.gov/data/nlcd-land-cover-conus-all-years"],
+    ["Data file 1: United States Census Bureau (2010). TIGER/Line shapefiles, 2010 census tracts (2010 version) [Data set]. https://www2.census.gov/geo/tiger/TIGER2010/TRACT/2010/tl_2010_01_tract10.zip"]
   ]
 }

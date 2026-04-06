@@ -22,7 +22,7 @@
           "type": "object",
           "properties": {
             "label": {
-              "title": "Contributor Type",
+              "title": "Label",
               "description": "A human-readable form of the term.",
               "type": "string",
               "examples": [
@@ -32,7 +32,7 @@
               ]
             },
             "code": {
-              "title": "Contributor Type Code",
+              "title": "Code",
               "description": "A machine-readable/-actionable form of the term.",
               "type": "string",
               "examples": [
@@ -42,7 +42,7 @@
               ]
             },
             "uri": {
-              "title": "Contributor Type URI",
+              "title": "URI",
               "description": "The URI for the term.",
               "type": "string"
             }

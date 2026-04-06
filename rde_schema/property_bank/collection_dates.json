@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft-07/schema#",
   "$id": "https://archive.icpsr.umich.edu/schema/property_banks/collection_dates",
   "title": "Collection Dates",
-  "description": "The date(s) when the data were physically collected.",
+  "description": "The date(s) data collection took place.",
   "type": "array",
   "items": {
     "type": "object",
@@ -23,7 +23,7 @@
         "title": "Time Frame",
         "description": "An optional free-text description of the data collection period, used for non-numeric dates (e.g., 'Fall 2012') or to add context when multiple dates are present.",
         "type": "string",
-        "usageNotes": "The Time Frame should not simply restate the date(s) in words. For example, if the Collection Date starts in 2020-01, the Time Frame should repeat 'January 2020'.",
+        "usageNotes": "The Time Frame should not simply restate the date(s) in words. For example, if the Collection Date starts in 2020-01, the Time Frame should not repeat 'January 2020'.",
         "examples": [ "Fall 2001", "Student data"]
       }
     },

@@ -4,7 +4,7 @@
   "title": "ADA Accessibility",
   "description": "Indicates whether the data collection is ADA accessible, conforming to WCAG 2.1 AA standards, or qualifies for the ADA archival exception.",
   "controlledVocab": "adaAccessibility",
-  "type": "object", 
+  "type": "object",
   "properties": {
     "label": {
         "title": "Label",

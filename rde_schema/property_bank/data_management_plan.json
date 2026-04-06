@@ -6,6 +6,6 @@
   "type": "string",
   "format": "uri",
   "examples": [
-    "https://doi.org/10.1000/182"
+    "https://doi.org/10.48321/D1EA6EF78D", "https://rdm.mcmaster.ca/dmps/promoting-healthy-families-data-management-plan"
   ]
 }

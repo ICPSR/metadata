@@ -8,10 +8,14 @@
     "type": "object",
     "properties": {
       "person": {
-        "$ref": "https://archive.icpsr.umich.edu/schema/property_banks/person/version/1"
+        "$ref": "https://archive.icpsr.umich.edu/schema/property_banks/person/version/1",
+        "title": "Person",
+        "description": "Name and other details about the principal investigator, if it is an individual person."
       },
       "organization": {
-        "$ref": "https://archive.icpsr.umich.edu/schema/property_banks/organization/version/1"
+        "$ref": "https://archive.icpsr.umich.edu/schema/property_banks/organization/version/1",
+        "title": "Organization",
+        "description": "Name and other details about the principal investigator, if it is an organization."
       },
       "order": {
         "title": "Order",
@@ -69,8 +73,8 @@
       {
         "organization": 
           {
-            "name": "Harvard University",
-            "ror": "https://ror.org/456cg6k91"
+            "name": "New York Times",
+            "ror": "https://ror.org/011w6k548"
           },
         "order": 1
       }

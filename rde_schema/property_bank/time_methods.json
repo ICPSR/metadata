@@ -15,7 +15,7 @@
         "type": "string",
         "examples": [
           "Cross-section",
-          "Longitudinal: Cohort/Event-based",
+          "Longitudinal: Panel",
           "Time series"
         ]
       },
@@ -25,7 +25,7 @@
         "type": "string",
         "examples": [
           "CrossSection",
-          "Longitudinal.CohortEventBased",
+          "Longitudinal.Panel",
           "TimeSeries"
         ]
       },
@@ -35,7 +35,7 @@
         "type": "string",
         "examples": [
           "/api/v1/vocab-terms/timeMethods/terms/CrossSection",
-          "/api/v1/vocab-terms/timeMethods/terms/Longitudinal.CohortEventBased",
+          "/api/v1/vocab-terms/timeMethods/terms/Longitudinal.Panel"
           "/api/v1/vocab-terms/timeMethods/terms/TimeSeries"
         ]
       }
@@ -45,14 +45,14 @@
   "examples": [
     [
       {
-        "label": "Registers/Records/Accounts: Medical/Clinical",
-        "code": "RegistersRecordsAccounts.MedicalClinical",
-        "uri": "/api/v1/vocab-terms/timeMethods/terms/RegistersRecordsAccounts.MedicalClinical"
+        "label": "Cross-section",
+        "code": "CrossSection",
+        "uri": "/api/v1/vocab-terms/timeMethods/terms/CrossSection"
       },
       {
-        "label": "Events/Interactions",
-        "code": "EventsInteractions",
-        "uri": "/api/v1/vocab-terms/timeMethods/terms/EventsInteractions"
+        "label": "Longitudinal: Panel",
+        "code": "Longitudinal.Panel",
+        "uri": "/api/v1/vocab-terms/timeMethods/terms/Longitudinal.Panel"
       }
     ],
     [

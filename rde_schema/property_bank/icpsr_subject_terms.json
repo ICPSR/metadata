@@ -13,21 +13,21 @@
         "title": "ICPSR Subject Term",
         "description": "A human-readable form of the subject term.",
         "type": "string",
-        "examples": ["abduction", "ability", "Abolition movement"]
+        "examples": ["employment", "marriage", "recidivism"]
       },
       "code": {
         "title": "ICPSR Subject Term Code",
         "description": "A machine-readable/-actionable form of the subject term.",
         "type": "string",
-        "examples": ["20391", "24123", "23632"]
+        "examples": ["25220", "26180", "26961"]
       },
       "uri": {
         "title": "ICPSR Subject Term URI",
         "description": "The URI for the subject term.",
         "type": "string",
         "examples": [
-          "https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/20391",
-          "https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/24040"
+          "https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/25220",
+          "https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/26180"
         ]
       }
     },
@@ -36,9 +36,9 @@
   "examples": [
     [
       {
-        "label": "biographical data",
-        "code": "20391",
-        "uri": "https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/20391"
+        "label": "lobbying",
+        "code": "26131",
+        "uri": "https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/26131"
       },
       {
         "label": "age",

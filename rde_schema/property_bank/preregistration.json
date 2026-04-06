@@ -6,6 +6,6 @@
   "type": "string",
   "format": "uri",
   "examples": [
-    "https://doi.org/10.1000/182"
+    "https://doi.org/10.17605/OSF.IO/67DUT", "https://doi.org/10.1257/rct.15789-1.0"
   ]
 }
