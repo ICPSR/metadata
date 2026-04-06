@@ -1,13 +1,13 @@
 # ICPSR Legacy Metadata Schema
 
-Last updated: April 02, 2026
+Last updated: April 06, 2026
 
 
-**PLEASE NOTE:** This is documentation for ICPSR's legacy metadata schema, which was used to describe data collections until approximately 2026. This legacy schema is being phased out and replaced by the new [ICPSR Metadata Schema](https://icpsr.github.io/metadata/icpsr_metadata_schema/).  
+This metadata schema was used to describe curated data collections at the Inter-university Consortium for Political and Social Research (ICPSR) through approximately 2026. Beginning in 2026, it is being phased out and replaced by [an updated metadata schema](https://icpsr.github.io/metadata/icpsr_metadata_schema/).
 
-These rules and definitions represent ICPSR's past metadata practices and are provided as a historical resource for ICPSR users and staff.  
-
-A machine-readable copy of this information is also available as a [JSON Schema](https://github.com/ICPSR/metadata/blob/main/schema/icpsr_study_schema.json).  
+These rules and definitions document ICPSR's metadata practices and are intended to (a) assist ICPSR staff with metadata entry, and (b) help users – including data depositors and researchers – understand and interpret ICPSR metadata.  
+  
+A machine-actionable version of this schema is available in [JSON Schema](https://github.com/ICPSR/metadata/blob/main/schema/icpsr_study_schema.json) format.  
 ## Metadata Elements: Overview
 
 | Property | Required? | Repeatable? | Accepted Values | Description |
