@@ -199,13 +199,48 @@ def type_label(t):
     }
     return mapping.get(t, t or "")
 
+def get_ref(prop):
+    if "$ref" in prop:
+        return prop["$ref"]
+
+    if prop.get("type") == "array":
+        items = prop.get("items", {})
+        if "$ref" in items:
+            return items["$ref"]
+
+    return None
+
+def resolve_ref_property(prop):
+    """
+    Normalize $ref-based person/organization properties.
+    Returns (title, description, type, ref_title)
+    """
+    ref = get_ref(prop)
+
+    if ref and (
+        "property_banks/person/" in ref or
+        "property_banks/organization/" in ref
+    ):
+        name = ref.split("/")[-3] if "/version/" in ref else ref.split("/")[-1]
+        
+        ref_title = name.replace("_", " ").title()
+        ref_desc = f"See the [{ref_title}](#{anchor(ref_title)}) field."
+
+        title = prop.get("title", ref_title)
+        desc = prop.get("description", ref_desc)
+        typ = "Multi-part element; see subfields"
+
+        return title, desc, typ, ref_title
+
+    return None
+
 def ref_to_link(ref):
     """
     Convert schema $ref → markdown link
     """
     name = ref.split("/")[-3] if "/version/" in ref else ref.split("/")[-1]
     title = name.replace("_", " ").title()
-    return title, f"See the [{title}](#{anchor(title)}) property."
+    return title, f"See the [{title}](#{anchor(title)}) field."
 
 # ----------------------------
 # Schema loading
@@ -326,16 +361,12 @@ def render_subfields(ROOT, mode, schema, properties, required, parent_anchor, le
 
     # Table rows
     for name, prop in properties.items():
-        try:
-            title = prop.get("title", name.replace("_", " ").title())
-        except AttributeError:
-            print(name, prop)
-            sys.exit(1)
-        desc = prop.get("description", "")
-        if "$ref" in prop and ("property_banks/person/" in prop["$ref"] or "property_banks/organization/" in prop["$ref"]):
-            ref_title, desc = ref_to_link(prop["$ref"])
-            typ = "Object"
+        resolved = resolve_ref_property(prop)
+        if resolved:
+            title, desc, typ, _ = resolved
         else:
+            title = prop.get("title", name.replace("_", " ").title())
+            desc = prop.get("description", "")
             typ = get_type(prop)
 
         #set variables    
@@ -360,8 +391,10 @@ def render_subfields(ROOT, mode, schema, properties, required, parent_anchor, le
 
     # ---- Per-subfield detailed sections ----
     for name, prop in properties.items():
-        title = prop.get("title", name.replace("_", " ").title())
+        #check if this property is repeatable
         rep = get_repeatable(prop)
+        
+        #check if this property is required (or conditionally required)
         if name in required:
             req = "Yes"
         elif name in conditional_required:
@@ -369,15 +402,16 @@ def render_subfields(ROOT, mode, schema, properties, required, parent_anchor, le
         else:
             req = "No"
 
-        if "$ref" in prop and ("property_banks/person/" in prop["$ref"] or "property_banks/organization/" in prop["$ref"]):
-            ref_title, ref_link = ref_to_link(prop["$ref"])
-            desc = f"See the [{ref_title}](#{anchor(ref_title)}) property."
-            typ = f"See the [{ref_title}](#{anchor(ref_title)}) property"
+        #check if we have a $ref keyword; handle accordingly
+        resolved = resolve_ref_property(prop)
+        if resolved:
+            title, desc, typ, ref_title = resolved
+            typ = f"Multi-part element; for more information, see the [{ref_title}](#{anchor(ref_title)}) field"
         else:
+            title = prop.get("title", name.replace("_", " ").title())
             desc = prop.get("description", "")
             typ = get_type(prop)
-
-
+        
         anchor_id = f"{parent_anchor}_{name}"
         md.append(f"<a name=\"{anchor_id}\"></a>")
         md.append(f"{'#' * (level + 1)} {title}\n")

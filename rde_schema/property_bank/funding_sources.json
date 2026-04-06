@@ -8,7 +8,9 @@
     "type": "object",
     "properties": {
       "organization": {
-        "$ref": "https://archive.icpsr.umich.edu/schema/property_banks/organization/version/1"
+        "$ref": "https://archive.icpsr.umich.edu/schema/property_banks/organization/version/1",
+        "title": "Funding Agency",
+        "description": "An organization responsible for funding the study."
       },
       "grants": {
         "title": "Funding Awards",

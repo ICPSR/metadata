@@ -49,7 +49,9 @@
       "description": "The person's affiliated organization(s).",
       "type": "array",
       "items": {
-        "$ref": "https://archive.icpsr.umich.edu/schema/property_banks/organization/version/1"
+        "$ref": "https://archive.icpsr.umich.edu/schema/property_banks/organization/version/1",
+        "title": "Affiliated Organizations",
+        "description": "The organization(s) with which the person is affiliated."
       }
     },
     "email": {
