@@ -35,7 +35,7 @@
         "type": "string",
         "examples": [
           "/api/v1/vocab-terms/timeMethods/terms/CrossSection",
-          "/api/v1/vocab-terms/timeMethods/terms/Longitudinal.Panel"
+          "/api/v1/vocab-terms/timeMethods/terms/Longitudinal.Panel",
           "/api/v1/vocab-terms/timeMethods/terms/TimeSeries"
         ]
       }

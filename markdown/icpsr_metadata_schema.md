@@ -32,10 +32,10 @@ These rules and definitions document ICPSR's metadata practices and are intended
 | [Response Rates](#response-rates) | No | No | Text | The percentage of respondents in the sample who participated in the data collection. |
 | [Data Source Types](#data-source-types) | No | Yes | Multi-part element; see subfields | The source(s) of the data as collected by the Principal Investigators. |
 | [External Data Sources](#external-data-sources) | No | Yes | Text | The source of the data, when that source is external to the data collection and can be independently cited. |
-| [Collection Modes](#collection-modes) | No | Yes | Multi-part element; see subfields | The method(s) or procedure(s) used to collect the data. |
-| [Collection Dates](#collection-dates) | No | Yes | Multi-part element; see subfields | The date(s) when the data were physically collected. |
+| [Collection Modes](#collection-modes) | No | Yes | Multi-part element; see subfields | The method(s) or procedure(s) used to collect the data, such as an interview or experiment. |
+| [Collection Dates](#collection-dates) | No | Yes | Multi-part element; see subfields | The date(s) data collection took place. |
 | [Variable Description](#variable-description) | No | No | Text | Significant variables (particularly demographic variables) in the data files. |
-| [Scales](#scales) | No | No | Text | Any commonly known scales used to collect data for the data collection (e.g., MMPI, CPI, the Census Occupational Codes, etc.). |
+| [Scales](#scales) | No | No | Text | Any commonly known scales, measures, or inventories used in the data collection. |
 | [Data Management Plan](#data-management-plan) | No | No | Text | A link to the data management plan (preferably a persistent identifier such as a DOI). |
 | [Preregistration](#preregistration) | No | No | Text | A link to a research plan for the data collection (preferably a persistent identifier such as a DOI). |
 | [Software Applications](#software-applications) | No | Yes | Multi-part element; see subfields | Software used by the principal investigator(s) to collect or analyze data, required to understand how the data were obtained or to reproduce results. |
@@ -150,14 +150,14 @@ Full information for each ICPSR study metadata element includes the following fi
 
 | Property | Required? | Repeatable? | Accepted Values | Description |
 |---|---|---|---|---|
-| [Person](#principal-investigators_person) | Conditional | No | Multi-part element; see subfields | See the [Person](#person) field. |
-| [Organization](#principal-investigators_organization) | Conditional | No | Multi-part element; see subfields | See the [Organization](#organization) field. |
+| [Person](#principal-investigators_person) | Conditional | No | Multi-part element; see subfields | Name and other details about the principal investigator, if it is an individual person. |
+| [Organization](#principal-investigators_organization) | Conditional | No | Multi-part element; see subfields | Name and other details about the principal investigator, if it is an organization. |
 | [Order](#principal-investigators_order) | Yes | No | Number | The order or rank of importance for the PIs associated with the data collection, typically provided to ICPSR by the lead PI. |
 
 <a name="principal-investigators_person"></a>
 ##### Person
 
-**Description:** See the [Person](#person) field.
+**Description:** Name and other details about the principal investigator, if it is an individual person.
 
 **Required:** Conditional (must include either Person or Organization)
 
@@ -168,7 +168,7 @@ Full information for each ICPSR study metadata element includes the following fi
 <a name="principal-investigators_organization"></a>
 ##### Organization
 
-**Description:** See the [Organization](#organization) field.
+**Description:** Name and other details about the principal investigator, if it is an organization.
 
 **Required:** Conditional (must include either Person or Organization)
 
@@ -225,8 +225,8 @@ Full information for each ICPSR study metadata element includes the following fi
   "Order": 0
 
 - "Organization":
-    "Name": "Harvard University"
-    "Ror": "https://ror.org/456cg6k91"
+    "Name": "New York Times"
+    "Ror": "https://ror.org/011w6k548"
   "Order": 1
 ```
 
@@ -248,14 +248,14 @@ Full information for each ICPSR study metadata element includes the following fi
 
 | Property | Required? | Repeatable? | Accepted Values | Description |
 |---|---|---|---|---|
-| [Funding Agency](#funding-sources_organization) | Yes | No | Multi-part element; see subfields | An organization responsible for funding the study. |
-| [Funding Awards](#funding-sources_grants) | No | Yes | Multi-part element; see subfields | Financial support for the data collection. |
+| [Organization](#funding-sources_organization) | Yes | No | Multi-part element; see subfields | Name and other details about the organization that provided the funding. |
+| [Funding Awards](#funding-sources_grants) | No | Yes | Multi-part element; see subfields | Identifiers and other details about financial support for the data collection. |
 | [Order](#funding-sources_order) | Yes | No | Number | Internal ICPSR field used to determine the order of importance for the funders associated with the data collection. |
 
 <a name="funding-sources_organization"></a>
-##### Funding Agency
+##### Organization
 
-**Description:** An organization responsible for funding the study.
+**Description:** Name and other details about the organization that provided the funding.
 
 **Required:** Yes
 
@@ -266,7 +266,7 @@ Full information for each ICPSR study metadata element includes the following fi
 <a name="funding-sources_grants"></a>
 ##### Funding Awards
 
-**Description:** Financial support for the data collection.
+**Description:** Identifiers and other details about financial support for the data collection.
 
 **Required:** No
 
@@ -278,13 +278,13 @@ Full information for each ICPSR study metadata element includes the following fi
 
 | Property | Required? | Repeatable? | Accepted Values | Description |
 |---|---|---|---|---|
-| [Funding Identifier](#funding-sources_grants_grant_number) | Yes | No | Text | The unique identifier for the funding (e.g., ABC-0123456. |
+| [Funding Identifier](#funding-sources_grants_grant_number) | Yes | No | Text | The unique identifier for the funding (e.g., ABC-0123456). |
 | [Funding URL](#funding-sources_grants_grant_uri) | No | No | Text | A unique identifier (URL), preferably a persistent one like a DOI,  linking to a landing page with funding information. |
 
 <a name="funding-sources_grants_grant_number"></a>
 ###### Funding Identifier
 
-**Description:** The unique identifier for the funding (e.g., ABC-0123456.
+**Description:** The unique identifier for the funding (e.g., ABC-0123456).
 
 **Required:** Yes
 
@@ -351,7 +351,7 @@ Full information for each ICPSR study metadata element includes the following fi
 #### Complete Funding Sources Examples (with Subfields):
 
 ```yaml
-- "Funding Agency":
+- "Organization":
     "Name": "Robert Wood Johnson Foundation"
     "Ror": "https://ror.org/02ymmdj85"
   "Funding Awards":
@@ -359,7 +359,7 @@ Full information for each ICPSR study metadata element includes the following fi
   - "Funding Identifier": "MDR-8550204"
   "Order": 0
 
-- "Funding Agency":
+- "Organization":
     "Name": "Bureau of Justice Statistics"
     "Ror": "https://ror.org/0006s4z66"
   "Funding Awards":
@@ -369,7 +369,7 @@ Full information for each ICPSR study metadata element includes the following fi
 ```
 
 ```yaml
-- "Funding Agency":
+- "Organization":
     "Name": "Acme Foundation"
   "Order": 0
 ```
@@ -440,15 +440,15 @@ The Summary is written in the third person and avoids attempting to address issu
 **Examples:**
 
 ```text
-"abduction"
+"employment"
 ```
 
 ```text
-"ability"
+"marriage"
 ```
 
 ```text
-"Abolition movement"
+"recidivism"
 ```
 
 <a name="icpsr-subject-terms_code"></a>
@@ -465,15 +465,15 @@ The Summary is written in the third person and avoids attempting to address issu
 **Examples:**
 
 ```text
-"20391"
+"25220"
 ```
 
 ```text
-"24123"
+"26180"
 ```
 
 ```text
-"23632"
+"26961"
 ```
 
 <a name="icpsr-subject-terms_uri"></a>
@@ -490,19 +490,19 @@ The Summary is written in the third person and avoids attempting to address issu
 **Examples:**
 
 ```text
-"https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/20391"
+"https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/25220"
 ```
 
 ```text
-"https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/24040"
+"https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/26180"
 ```
 
 #### Complete ICPSR Subject Terms Examples (with Subfields):
 
 ```yaml
-- "ICPSR Subject Term": "biographical data"
-  "ICPSR Subject Term Code": "20391"
-  "ICPSR Subject Term URI": "https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/20391"
+- "ICPSR Subject Term": "lobbying"
+  "ICPSR Subject Term Code": "26131"
+  "ICPSR Subject Term URI": "https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/26131"
 
 - "ICPSR Subject Term": "age"
   "ICPSR Subject Term Code": "24123"
@@ -1030,7 +1030,8 @@ The Summary is written in the third person and avoids attempting to address issu
 ```
 
 ```yaml
-- "Country": "Prussia"
+- "Country": "France"
+  "Geographic Coverage Area URI": "https://sws.geonames.org/3017382/"
 ```
 
 
@@ -1258,7 +1259,7 @@ The Summary is written in the third person and avoids attempting to address issu
 ```
 
 ```text
-"Longitudinal: Cohort/Event-based"
+"Longitudinal: Panel"
 ```
 
 ```text
@@ -1283,7 +1284,7 @@ The Summary is written in the third person and avoids attempting to address issu
 ```
 
 ```text
-"Longitudinal.CohortEventBased"
+"Longitudinal.Panel"
 ```
 
 ```text
@@ -1308,7 +1309,7 @@ The Summary is written in the third person and avoids attempting to address issu
 ```
 
 ```text
-"/api/v1/vocab-terms/timeMethods/terms/Longitudinal.CohortEventBased"
+"/api/v1/vocab-terms/timeMethods/terms/Longitudinal.Panel"
 ```
 
 ```text
@@ -1318,13 +1319,13 @@ The Summary is written in the third person and avoids attempting to address issu
 #### Complete Time Methods Examples (with Subfields):
 
 ```yaml
-- "Label": "Registers/Records/Accounts: Medical/Clinical"
-  "Code": "RegistersRecordsAccounts.MedicalClinical"
-  "URI": "/api/v1/vocab-terms/timeMethods/terms/RegistersRecordsAccounts.MedicalClinical"
+- "Label": "Cross-section"
+  "Code": "CrossSection"
+  "URI": "/api/v1/vocab-terms/timeMethods/terms/CrossSection"
 
-- "Label": "Events/Interactions"
-  "Code": "EventsInteractions"
-  "URI": "/api/v1/vocab-terms/timeMethods/terms/EventsInteractions"
+- "Label": "Longitudinal: Panel"
+  "Code": "Longitudinal.Panel"
+  "URI": "/api/v1/vocab-terms/timeMethods/terms/Longitudinal.Panel"
 ```
 
 ```yaml
@@ -1576,7 +1577,7 @@ The Summary is written in the third person and avoids attempting to address issu
 
 **Accepted Values:** Multi-part element; see subfields
 
-**Usage Notes:** This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance CV DataSourceType https://rdf-vocabulary.ddialliance.org/ddi-cv/DataSourceType/1.0.2/DataSourceType.html.
+**Usage Notes:** This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance CV DataSourceType https://rdf-vocabulary.ddialliance.org/ddi-cv/DataSourceType/1.0.2/DataSourceType.html. People, things, and other data can all be Data Source Types.
 
 #### Subfields:
 
@@ -1693,7 +1694,7 @@ The Summary is written in the third person and avoids attempting to address issu
 
 **Accepted Values:** Text
 
-**Usage Notes:** External data sources include books, journal articles, administrative records, agency-sponsored surveys, and machine-readable files. Each source includes at minimum the title, author, publication year, and journal (if applicable). Any citation format is accepted.
+**Usage Notes:** External data sources can include websites, datasets, books, journal articles, and other sources. Each source includes at minimum the title, author, publication year, journal (if applicable), and DOI or URL for online sources. Any citation format is accepted.
 
 **Examples:**
 
@@ -1702,12 +1703,11 @@ The Summary is written in the third person and avoids attempting to address issu
 ```
 
 ```text
-"United States Bureau of the Census Economic Surveys, 1998-2000"
-"United States Congressional Record, 1989"
+"Multi-Resolution Land Characteristics Consortium. "National Land Cover Database (CONUS), All Years," 2016. https://www.mrlc.gov/data/nlcd-land-cover-conus-all-years"
 ```
 
 ```text
-"Annual Company Organization Survey, 2003"
+"Data file 1: United States Census Bureau (2010). TIGER/Line shapefiles, 2010 census tracts (2010 version) [Data set]. https://www2.census.gov/geo/tiger/TIGER2010/TRACT/2010/tl_2010_01_tract10.zip"
 ```
 
 
@@ -1716,7 +1716,7 @@ The Summary is written in the third person and avoids attempting to address issu
 <a id="collection-modes"></a>
 ### Collection Modes
 
-**Description:** The method(s) or procedure(s) used to collect the data.
+**Description:** The method(s) or procedure(s) used to collect the data, such as an interview or experiment.
 
 **Required:** No
 
@@ -1825,7 +1825,7 @@ The Summary is written in the third person and avoids attempting to address issu
 <a id="collection-dates"></a>
 ### Collection Dates
 
-**Description:** The date(s) when the data were physically collected.
+**Description:** The date(s) data collection took place.
 
 **Required:** No
 
@@ -1902,7 +1902,7 @@ The Summary is written in the third person and avoids attempting to address issu
 
 **Accepted Values:** Text
 
-**Usage Notes:** The Time Frame should not simply restate the date(s) in words. For example, if the Collection Date starts in 2020-01, the Time Frame should repeat 'January 2020'.
+**Usage Notes:** The Time Frame should not simply restate the date(s) in words. For example, if the Collection Date starts in 2020-01, the Time Frame should not repeat 'January 2020'.
 
 **Examples:**
 
@@ -1963,7 +1963,7 @@ The Summary is written in the third person and avoids attempting to address issu
 <a id="scales"></a>
 ### Scales
 
-**Description:** Any commonly known scales used to collect data for the data collection (e.g., MMPI, CPI, the Census Occupational Codes, etc.).
+**Description:** Any commonly known scales, measures, or inventories used in the data collection.
 
 **Required:** No
 
@@ -1971,18 +1971,18 @@ The Summary is written in the third person and avoids attempting to address issu
 
 **Accepted Values:** Text
 
-**Usage Notes:** Include common scales that can be readily identified from the data, documentation, or other related materials. ICPSR curators are not expected to infer or research scales that are not explicitly indicated. The scales can be cited either as a list or described in full sentences. If the questionnaire used has a finite list of responses (e.g., 'Always, Sometimes, Rarely, Never' or Strongly Agree, Agree, Disagree, Strongly Disagree'), it is acceptable for this element to note 'A Likert-type scale was used,' or 'Several Likert-type scales were used.' However, it is not required to note Likart-type scales in situations where only such scales were used, given their ubiquity.
+**Usage Notes:** Include common scales that can be readily identified from the data, documentation, or other related materials. Examples of common scales include the Minnesota Multiphasic Personality Inventory (MMPI) and the Consumer Price Index (CPI). ICPSR curators are not expected to infer or research scales that are not explicitly indicated. The scales can be cited either as a list or described in full sentences and include DOIs or URLs whenever possible. If the questionnaire used has a finite list of responses (e.g., 'Always, Sometimes, Rarely, Never' or 'Strongly Agree, Agree, Disagree, Strongly Disagree'), it is acceptable for this element to note 'A Likert-type scale was used,' or 'Several Likert-type scales were used.' However, it is not required to note Likert-type scales in situations where only such scales were used, given their ubiquity.
 
 **Examples:**
 
 ```text
-"The baseline data collection included one scale - the CES-D index for maternal depression [Cole, J. C., Rabin, A. S., Smith, T. L., and Kaufman, A. S. (2004). Development and validation of a Rasch-derived CES-D short form. Psychological assessment, 16(4), 360]. All scales used for outcomes at ages 1 through 3 are listed in Appendix Tables 1 and 2 in the User Guide. Please refer to the User Guide and P.I. Codebook, available under the 'Data and Documentation' tab, for details."
+"The baseline data collection included one scale - the CES-D index for maternal depression [Cole, J. C., Rabin, A. S., Smith, T. L., and Kaufman, A. S. (2004). Development and validation of a Rasch-derived CES-D short form. Psychological assessment, 16(4), 360. https://doi.org/10.1037/1040-3590.16.4.360]. All scales used for outcomes at ages 1 through 3 are listed in Appendix Tables 1 and 2 in the User Guide. Please refer to the User Guide and P.I. Codebook, available under the 'Data and Documentation' tab, for details."
 ```
 
 ```text
 "Squires, J., Bricker, D. D., and Twombly, E. (2009). Ages and stages questionnaires. Baltimore, MD: Paul H. Brookes."
-"Briggs-Gowan, M. J., Carter, A. S., Irwin, J. R., Wachtel, K., and Cicchetti, D. V. (2004). The Brief Infant-Toddler Social and Emotional Assessment: screening for social-emotional problems and delays in competence. Journal of pediatric psychology, 29(2), 143-155."
-"Yu, L., Buysse, D. J., Germain, A., Moul, D. E., Stover, A., Dodds, N. E., ... and Pilkonis, P. A. (2012). Development of short forms from the PROMIS sleep disturbance and sleep-related impairment item banks. Behavioral sleep medicine, 10(1), 6-24."
+"Briggs-Gowan, M. J., Carter, A. S., Irwin, J. R., Wachtel, K., and Cicchetti, D. V. (2004). The Brief Infant-Toddler Social and Emotional Assessment: screening for social-emotional problems and delays in competence. Journal of pediatric psychology, 29(2), 143-155. https://doi.org/10.1093/jpepsy/jsh017"
+"Yu, L., Buysse, D. J., Germain, A., Moul, D. E., Stover, A., Dodds, N. E., ... and Pilkonis, P. A. (2012). Development of short forms from the PROMIS sleep disturbance and sleep-related impairment item banks. Behavioral sleep medicine, 10(1), 6-24. https://doi.org/10.1080/15402002.2012.636266"
 ```
 
 
@@ -2002,7 +2002,11 @@ The Summary is written in the third person and avoids attempting to address issu
 **Examples:**
 
 ```text
-"https://doi.org/10.1000/182"
+"https://doi.org/10.48321/D1EA6EF78D"
+```
+
+```text
+"https://rdm.mcmaster.ca/dmps/promoting-healthy-families-data-management-plan"
 ```
 
 
@@ -2022,7 +2026,11 @@ The Summary is written in the third person and avoids attempting to address issu
 **Examples:**
 
 ```text
-"https://doi.org/10.1000/182"
+"https://doi.org/10.17605/OSF.IO/67DUT"
+```
+
+```text
+"https://doi.org/10.1257/rct.15789-1.0"
 ```
 
 
@@ -2466,19 +2474,19 @@ The Summary is written in the third person and avoids attempting to address issu
 #### Complete General Data Formats Examples (with Subfields):
 
 ```yaml
-- "Label": "Text"
-  "Code": "Text"
-  "URI": "/api/v1/vocab-terms/generalDataFormats/terms/Text"
-
-- "Label": "Still image"
-  "Code": "StillImage"
-  "URI": "/api/v1/vocab-terms/generalDataFormats/terms/StillImage"
-```
-
-```yaml
 - "Label": "Numeric"
   "Code": "Numeric"
   "URI": "/api/v1/vocab-terms/generalDataFormats/terms/Numeric"
+
+- "Label": "Text"
+  "Code": "Text"
+  "URI": "/api/v1/vocab-terms/generalDataFormats/terms/Text"
+```
+
+```yaml
+- "Label": "Still image"
+  "Code": "StillImage"
+  "URI": "/api/v1/vocab-terms/generalDataFormats/terms/StillImage"
 ```
 
 
@@ -2853,13 +2861,13 @@ The Summary is written in the third person and avoids attempting to address issu
 
 | Property | Required? | Repeatable? | Accepted Values | Description |
 |---|---|---|---|---|
-| [Organization](#distributors_organization) | Yes | No | Multi-part element; see subfields | See the [Organization](#organization) field. |
+| [Organization](#distributors_organization) | Yes | No | Multi-part element; see subfields | Name and other details about the organization that distributes the data collection. |
 | [Order](#distributors_order) | Yes | No | Number | The order of importance for the distributors of the data collection. |
 
 <a name="distributors_organization"></a>
 ##### Organization
 
-**Description:** See the [Organization](#organization) field.
+**Description:** Name and other details about the organization that distributes the data collection.
 
 **Required:** Yes
 
@@ -2933,11 +2941,11 @@ The Summary is written in the third person and avoids attempting to address issu
 **Examples:**
 
 ```text
-"University of Michigan. Survey Research Center. Economic Behavior Program. Survey of Consumer Attitudes and Behavior, September 2018. Inter-university Consortium for Political and Social Research [distributor], 2021-11-18. https://doi.org/10.3886/ICPSR38121.v1"
+"Sickmund, Melissa, Hockenberry, Sarah, and Puzzanchera, Charles M. National Juvenile Court Data Archive, United States, 1985-2019. Inter-university Consortium for Political and Social Research [distributor], 2022-07-28. https://doi.org/10.3886/ICPSR38418.v1"
 ```
 
 ```text
-"United States Department of Justice. Office of Justice Programs. Office of Juvenile Justice and Delinquency Prevention. Juvenile Residential Facility Census, 2020 [United States]. Inter-university Consortium for Political and Social Research [distributor], 2024-07-15. https://doi.org/10.3886/ICPSR38914.v1"
+"Institute of Museum and Library Services. Public Libraries in the United States Survey, 2016-2018. Inter-university Consortium for Political and Social Research [distributor], 2021-10-07. https://doi.org/10.3886/ICPSR37992.v1"
 ```
 
 

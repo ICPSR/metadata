@@ -261,6 +261,7 @@ def load_schemas(PROPERTY_DIR, mode):
         for f in PROPERTY_DIR.glob("*.json"):
             if f.name in SKIP_FILES:
                 continue
+            print(f.name)
             data = json.loads(f.read_text(encoding="utf-8"))
             schemas[f.stem] = data
 
