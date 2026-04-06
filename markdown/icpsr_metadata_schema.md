@@ -1,6 +1,6 @@
 # ICPSR Metadata Schema
 
-Last updated: April 02, 2026
+Last updated: April 06, 2026
 
 
 This is the metadata schema used to describe data collections at the Inter-university Consortium for Political and Social Research (ICPSR). These rules and definitions represent ICPSR's metadata practices and are intended to (a) assist ICPSR staff with metadata entry, and (b) help ICPSR users – including data depositors and researchers accessing data – understand how to use and interpret our metadata.
@@ -148,31 +148,31 @@ Full information for each ICPSR study metadata element includes the following fi
 
 | Property | Required? | Repeatable? | Accepted Values | Description |
 |---|---|---|---|---|
-| [Person](#principal-investigators_person) | Conditional | No | Object | See the [Person](#person) property. |
-| [Organization](#principal-investigators_organization) | Conditional | No | Object | See the [Organization](#organization) property. |
+| [Person](#principal-investigators_person) | Conditional | No | Multi-part element; see subfields | See the [Person](#person) field. |
+| [Organization](#principal-investigators_organization) | Conditional | No | Multi-part element; see subfields | See the [Organization](#organization) field. |
 | [Order](#principal-investigators_order) | Yes | No | Number | The order or rank of importance for the PIs associated with the data collection, typically provided to ICPSR by the lead PI. |
 
 <a name="principal-investigators_person"></a>
 ##### Person
 
-**Description:** See the [Person](#person) property.
+**Description:** See the [Person](#person) field.
 
 **Required:** Conditional (must include either Person or Organization)
 
 **Repeatable:** No
 
-**Accepted Values:** See the [Person](#person) property
+**Accepted Values:** Multi-part element; for more information, see the [Person](#person) field
 
 <a name="principal-investigators_organization"></a>
 ##### Organization
 
-**Description:** See the [Organization](#organization) property.
+**Description:** See the [Organization](#organization) field.
 
 **Required:** Conditional (must include either Person or Organization)
 
 **Repeatable:** No
 
-**Accepted Values:** See the [Organization](#organization) property
+**Accepted Values:** Multi-part element; for more information, see the [Organization](#organization) field
 
 <a name="principal-investigators_order"></a>
 ##### Order
@@ -246,20 +246,20 @@ Full information for each ICPSR study metadata element includes the following fi
 
 | Property | Required? | Repeatable? | Accepted Values | Description |
 |---|---|---|---|---|
-| [Organization](#funding-sources_organization) | Yes | No | Object | See the [Organization](#organization) property. |
+| [Funding Agency](#funding-sources_organization) | Yes | No | Multi-part element; see subfields | An organization responsible for funding the study. |
 | [Funding Awards](#funding-sources_grants) | No | Yes | Multi-part element; see subfields | Financial support for the data collection. |
 | [Order](#funding-sources_order) | Yes | No | Number | Internal ICPSR field used to determine the order of importance for the funders associated with the data collection. |
 
 <a name="funding-sources_organization"></a>
-##### Organization
+##### Funding Agency
 
-**Description:** See the [Organization](#organization) property.
+**Description:** An organization responsible for funding the study.
 
 **Required:** Yes
 
 **Repeatable:** No
 
-**Accepted Values:** See the [Organization](#organization) property
+**Accepted Values:** Multi-part element; for more information, see the [Organization](#organization) field
 
 <a name="funding-sources_grants"></a>
 ##### Funding Awards
@@ -349,7 +349,7 @@ Full information for each ICPSR study metadata element includes the following fi
 #### Complete Funding Sources Examples (with Subfields):
 
 ```yaml
-- "Organization":
+- "Funding Agency":
     "Name": "Robert Wood Johnson Foundation"
     "Ror": "https://ror.org/02ymmdj85"
   "Funding Awards":
@@ -357,7 +357,7 @@ Full information for each ICPSR study metadata element includes the following fi
   - "Funding Identifier": "MDR-8550204"
   "Order": 0
 
-- "Organization":
+- "Funding Agency":
     "Name": "Bureau of Justice Statistics"
     "Ror": "https://ror.org/0006s4z66"
   "Funding Awards":
@@ -367,7 +367,7 @@ Full information for each ICPSR study metadata element includes the following fi
 ```
 
 ```yaml
-- "Organization":
+- "Funding Agency":
     "Name": "Acme Foundation"
   "Order": 0
 ```
@@ -2851,19 +2851,19 @@ The Summary is written in the third person and avoids attempting to address issu
 
 | Property | Required? | Repeatable? | Accepted Values | Description |
 |---|---|---|---|---|
-| [Organization](#distributors_organization) | Yes | No | Object | See the [Organization](#organization) property. |
+| [Organization](#distributors_organization) | Yes | No | Multi-part element; see subfields | See the [Organization](#organization) field. |
 | [Order](#distributors_order) | Yes | No | Number | The order of importance for the distributors of the data collection. |
 
 <a name="distributors_organization"></a>
 ##### Organization
 
-**Description:** See the [Organization](#organization) property.
+**Description:** See the [Organization](#organization) field.
 
 **Required:** Yes
 
 **Repeatable:** No
 
-**Accepted Values:** See the [Organization](#organization) property
+**Accepted Values:** Multi-part element; for more information, see the [Organization](#organization) field
 
 <a name="distributors_order"></a>
 ##### Order
@@ -2958,7 +2958,7 @@ The Summary is written in the third person and avoids attempting to address issu
 |---|---|---|---|---|
 | [Personal Name](#person_name) | Yes | No | Multi-part element; see subfields | The person's name. |
 | [ORCID Identifier](#person_orcid) | No | No | Text | The person's Open Researcher and Contributor ID (ORCID). |
-| [Affiliation(s)](#person_affiliations) | No | Yes | Array | The person's affiliated organization(s). |
+| [Affiliation(s)](#person_affiliations) | No | Yes | Multi-part element; see subfields | The person's affiliated organization(s). |
 | [Email Address](#person_email) | No | No | Text | The person's email address. |
 
 <a name="person_name"></a>
@@ -3071,7 +3071,7 @@ The Summary is written in the third person and avoids attempting to address issu
 
 **Repeatable:** Yes
 
-**Accepted Values:** Array
+**Accepted Values:** Multi-part element; for more information, see the [Organization](#organization) field
 
 <a name="person_email"></a>
 ##### Email Address
