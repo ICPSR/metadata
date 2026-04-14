@@ -173,21 +173,26 @@ def get_yaml_notes(note, term, ROOT):
             
     return None
 
-def check_cvs(short_cv):
-    cv_definitions = Path(ROOT, "vocab_preset", "definitions.json")
-    with open(cv_definitions, 'r', encoding='utf-8') as cvd:
-        cv_data = json.load(cvd)
-
-    match = [d for d in cv_data if d['code'] == short_cv]
-
-    if match:
-        if match[0].get('externalURI'):
-            external_uri = f" ({match[0]['externalURI']})"
-        else:
-            external_uri = ""
-        return f"{match[0]['description']}{external_uri}"
-    else:
+def cv_to_table(cv_name):   
+    cv_file = Path(ROOT / "vocab_preset" / "data" f"{cv_name}.json")
+    # return None if there is no matching CV
+    if not cv_file.is_file():
         return None
+
+    # otherwise, build Markdown table of terms
+    with cv_file.open("r", encoding="utf-8") as f:
+        cv_data = json.load(f)
+
+    temp_md = []
+    temp_md.append("| Term | Definition |\n")
+    temp_md.append("|------|------------|\n")
+
+    for item in cv_data:
+        term = item.get("label", "")
+        definiton = item.get("description", "")
+        temp_md.append(f"| {term} | {definition} |\n")
+
+    return temp_md
 
 def type_label(t):
     mapping = {
@@ -422,9 +427,15 @@ def render_subfields(ROOT, mode, schema, properties, required, parent_anchor, le
         md.append(f"**Repeatable:** {rep}\n")
         md.append(f"**Accepted Values:** {typ}\n")
 
-        if "controlledVocab" in prop and mode == "legacy":
-            controlledVocab = get_yaml_notes(prop['controlledVocab'], "controlledVocab", ROOT)
-            md.append(f"**Controlled Vocabulary:** {controlledVocab}\n")
+        if "controlledVocab" in prop:
+            if mode == "legacy"
+                controlledVocab = get_yaml_notes(prop['controlledVocab'], "controlledVocab", ROOT)
+                md.append(f"**Controlled Vocabulary:** {controlledVocab}\n")
+            else:
+                controlledVocab = cv_to_table(prop['controlledVocab'])
+                if controlledVocab:
+                    md.append(f"**Controlled Vocabulary:** Local ICPSR controlled vocabulary. See below for terms and definitions:\n")
+                    md.extend(controlledVocab)
 
         if "usageNotes" in prop:
             note = get_yaml_notes(prop['usageNotes'], "usageNotes", ROOT)
@@ -473,10 +484,15 @@ def render_property(name, schema, ROOT, mode, TOP_LEVEL_REQUIRED):
     md.append(f"**Accepted Values:** {get_type(schema)}\n")
 
     # Check for additional keywords: controlledVocab and usageNotes
-    if "controlledVocab" in schema and mode == "legacy":
-        controlledVocab = get_yaml_notes(schema['controlledVocab'], "controlledVocab", ROOT)
-        md.append(f"**Controlled Vocabulary:** {controlledVocab}  ")            
-        md.append('\n')
+    if "controlledVocab" in schema:
+        if mode == "legacy"
+            controlledVocab = get_yaml_notes(schema['controlledVocab'], "controlledVocab", ROOT)
+            md.append(f"**Controlled Vocabulary:** {controlledVocab}\n")
+        else:
+            controlledVocab = cv_to_table(schema['controlledVocab'])
+            if controlledVocab:
+                md.append(f"**Controlled Vocabulary:** Local ICPSR controlled vocabulary. See below for terms and definitions:\n\n")
+                md.extend(controlledVocab)
 
     if "usageNotes" in schema:
         note = get_yaml_notes(schema['usageNotes'], "usageNotes", ROOT)
