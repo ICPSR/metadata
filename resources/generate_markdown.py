@@ -184,13 +184,13 @@ def cv_to_table(cv_name, ROOT):
         cv_data = json.load(f)
 
     temp_md = []
-    temp_md.append("| Term | Definition |\n")
-    temp_md.append("|------|------------|\n")
+    temp_md.append("| Term | Definition |")
+    temp_md.append("|------|------------|")
 
     for item in cv_data:
         term = item.get("label", "")
         definition = item.get("description", "")
-        temp_md.append(f"| {term} | {definition} |\n")
+        temp_md.append(f"| {term} | {definition} |")
 
     return temp_md
 
@@ -435,6 +435,7 @@ def render_subfields(ROOT, mode, schema, properties, required, parent_anchor, le
                 if controlledVocab:
                     md.append(f"**Controlled Vocabulary:** Local ICPSR controlled vocabulary. See below for terms and definitions:\n")
                     md.extend(controlledVocab)
+                    md.append("\n")
 
         if "usageNotes" in prop:
             note = get_yaml_notes(prop['usageNotes'], "usageNotes", ROOT)
@@ -492,6 +493,7 @@ def render_property(name, schema, ROOT, mode, TOP_LEVEL_REQUIRED):
             if controlledVocab:
                 md.append(f"**Controlled Vocabulary:** Local ICPSR controlled vocabulary. See below for terms and definitions:\n\n")
                 md.extend(controlledVocab)
+                md.append("\n")
 
     if "usageNotes" in schema:
         note = get_yaml_notes(schema['usageNotes'], "usageNotes", ROOT)

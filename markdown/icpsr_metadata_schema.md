@@ -1051,68 +1051,38 @@ The Summary is written in the third person and avoids attempting to address issu
 
 
 | Term | Definition |
-
 |------|------------|
-
 | Basic Geographic Units | Basic geographic units for use with the Smallest Geographic Unit metadata property |
-
 | Geocoded Location | A precise geographic point derived from an address, typically represented as coordinates or address strings. |
-
 | Parcel | A discrete use of land ownership, often defined in property records or tax assessments. |
-
 | Grid Cell | A unit of spatial data that divides an area into rectangular, square intervals (e.g., 1km x 1km grid), typically used in mapping or environmental studies. |
-
 | Local Geographic Units | Local geographic units for use with the Smallest Geographic Unit metadata property |
-
 | Postal Code/Zip Code | Geographic areas defined by postal delivery routes or regions, used for organizing mail delivery. |
-
 | Neighborhood/Community Area | Informally defined areas within a city, usually based on local recognition rather than official administrative boundaries. |
-
 | City/Municipality | A local government jurisdictions that covers urban areas, which can range from large cities to small towns and villages. |
-
 | County/District/Parish | A geographic area that is part of a state or province (e.g., parishes in Louisiana, boroughs in Alaska). |
-
 | Larger Geographic Units | Larger geographic units for use with the Smallest Geographic Unit metadata property |
-
 | State/Province | A major administrative division within a country.  In the U.S., this includes the 50 states and the District of Columbia.  Other countries, like Canada and Australia, have provinces or states (e.g., Ontario in Canada, New South Wales in Australia). |
-
 | Territory | A region under the jurisdiction of a national government, but not a fully self-governing state or province (e.g., Puerto Rico, Northwest Territories, Falkland Islands). |
-
 | Country | A sovereign nation or territory that is recognized as an independent political entity, such as the United States, Canada, or France. |
-
 | Census Units | Census units for use with the Smallest Geographic Unit metadata property |
-
 | Census Block | The smallest geographic unit used in national censuses, often corresponding to a city block or small neighborhood. |
-
 | Census Block Group | A collection of adjacent census blocks—typically all blocks within part of a census tract. |
-
 | Census Tract | Small geographic units used in national censuses, typically representing 2,500 to 8,000 people.  They are designed to provide detailed statistical data for neighborhoods or communities. |
-
 | Census Division | Larger geographic areas used for statistical reporting, grouping states or provinces within a country.  These divisions are smaller than regions but larger than individual states or provinces. |
-
 | Census Region | Broader groupings of census divisions used to organize and report data at a national level (e.g., Northeast, Midwest, South, West). |
-
 | Public Use Microdata Area (PUMA) | Geographic areas with populations of 100,000 or more, used for the release of detailed public-use microdata from the U.S. Census. |
-
 | Core-Based Statistical Area (CBSA) | A term that includes both Metropolitan and Micropolitan Statistical Areas.  These areas are based on urban centers and their surrounding communities as defined by the U.S. Office of Management and Budget (OMB). |
-
 | Metropolitan Statistical Area (MSA) | A Core-Based Statistical Area (CBSA) that includes an urban core with a population of 50,000 or more. |
-
 | Micropolitan Statistical Area | A Core-Based Statistical Area (CBSA) that includes an urban core population of at least 10,000 but less than 50,000. |
-
 | ZIP Code Tabulation Area (ZCTA) | Geographic areas created by the U.S. Census Bureau to approximate the boundaries of ZIP Codes for demographic analysis. |
-
 | Electoral, Legal, Cross-Jurisdictional, and Educational Districts | Geographic units that represent electoral, legal, cross-jurisdictional, and educational districts for use with the Smallest Geographic Unit metadata property |
-
 | Voting District/Precinct | Geographic areas used for organizing elections, often serving as the smallest electoral units where voters cast their ballots. |
-
 | Congressional District | A geographic area used for electing representatives to federal or state legislative offices in the United States. |
-
 | Federal Court District | A geographic area where a U.S. District Court has jurisdiction to hear and decide federal cases. |
-
 | School District | The administrative boundaries for local education systems, typically overseeing public schools from elementary through secondary levels. |
-
 | Indigenous/Tribal Lands | Areas legally recognized as Indigenous or tribal nations, often with unique legal, cultural, or sovereignty status. |
+
 
 **Usage Notes:** Geographic Unit is intended to represent specific, known geography -- e.g., county, census district, FIPS code, electoral district, and any other conveyor of specific geography that is represented by a variable. If the data do not include a geographic variable by which the data can be analyzed, this element is not indicated. If all the cases are from a single state, but the cases are not subdivided geographically within that state, then 'state' is not indicated. This element is only meant to convey specific, known, geography. If there is a variable indicating which testing site a survey was taken at, but the locations of the testing sites were masked by the PI, this element is likely not indicated.
 
@@ -2614,12 +2584,10 @@ The Summary is written in the third person and avoids attempting to address issu
 
 
 | Term | Definition |
-
 |------|------------|
-
 | ADA Accessible | The item is ADA accessible, conforming to WCAG 2.1 AA standards. |
-
 | ADA Archival | The item is not ADA accessible, but qualifies for the ADA archival exception. |
+
 
 #### Subfields:
 
