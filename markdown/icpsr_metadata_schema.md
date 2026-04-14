@@ -1,6 +1,6 @@
 # ICPSR Metadata Schema
 
-Last updated: April 06, 2026
+Last updated: April 14, 2026
 
 
 This metadata schema is used to describe data collections at the Inter-university Consortium for Political and Social Research (ICPSR) after 2026. 
@@ -28,7 +28,7 @@ These rules and definitions document ICPSR's metadata practices and are intended
 | [Units of Analysis](#units-of-analysis) | No | Yes | Multi-part element; see subfields | The object(s) of analysis for the data collection, such as an organization, individual, or household. |
 | [Sampling Procedures](#sampling-procedures) | No | Yes | Text | The type(s) of sample and sample design used to select survey respondents to represent the population. |
 | [Sampling Note](#sampling-note) | No | No | Text | Supplemental information about the sampling process that does not fit neatly into the Sampling Procedure field. |
-| [Weights](#weights) | No | No | Text | The weight variables and the criteria for using them in data analysis or other information about how the data are weighted if no weight variables are present. |
+| [Weights](#weights) | No | No | Text | The weight variables and the criteria for using them in data analysis, or other information about how the data are weighted if no weight variables are present. |
 | [Response Rates](#response-rates) | No | No | Text | The percentage of respondents in the sample who participated in the data collection. |
 | [Data Source Types](#data-source-types) | No | Yes | Multi-part element; see subfields | The source(s) of the data as collected by the Principal Investigators. |
 | [External Data Sources](#external-data-sources) | No | Yes | Text | The source of the data, when that source is external to the data collection and can be independently cited. |
@@ -670,11 +670,11 @@ The Summary is written in the third person and avoids attempting to address issu
 **Examples:**
 
 ```text
-"anxiety"
+"Anxiety"
 ```
 
 ```text
-"brain waves"
+"Diabetes Mellitus"
 ```
 
 <a name="medical-subject-headings-(mesh)-terms_code"></a>
@@ -695,7 +695,7 @@ The Summary is written in the third person and avoids attempting to address issu
 ```
 
 ```text
-"D058256"
+"T011730"
 ```
 
 <a name="medical-subject-headings-(mesh)-terms_uri"></a>
@@ -718,19 +718,19 @@ The Summary is written in the third person and avoids attempting to address issu
 ```
 
 ```text
-"http://id.nlm.nih.gov/mesh/D058256"
+"http://id.nlm.nih.gov/mesh/T011730"
 ```
 
 #### Complete Medical Subject Headings (MeSH) Terms Examples (with Subfields):
 
 ```yaml
-- "Label": "anxiety"
+- "Label": "Anxiety"
   "Code": "D001007"
   "URI": "http://id.nlm.nih.gov/mesh/D001007"
 
-- "Label": "brain waves"
-  "Code": "D058256"
-  "URI": "http://id.nlm.nih.gov/mesh/D058256"
+- "Label": "Diabetes Mellitus"
+  "Code": "T011730"
+  "URI": "http://id.nlm.nih.gov/mesh/T011730"
 ```
 
 
@@ -1023,10 +1023,9 @@ The Summary is written in the third person and avoids attempting to address issu
   "Country": "United States"
   "Geographic Coverage Area URI": "https://sws.geonames.org/5150529/"
 
-- "City": "Pittsburgh"
-  "State": "Pennsylvania"
-  "Country": "United States"
-  "Geographic Coverage Area URI": "https://sws.geonames.org/5206379/"
+- "State": "Manitoba"
+  "Country": "Canada"
+  "Geographic Coverage Area URI": "https://sws.geonames.org/6065171/"
 ```
 
 ```yaml
@@ -1517,7 +1516,7 @@ The Summary is written in the third person and avoids attempting to address issu
 <a id="weights"></a>
 ### Weights
 
-**Description:** The weight variables and the criteria for using them in data analysis or other information about how the data are weighted if no weight variables are present.
+**Description:** The weight variables and the criteria for using them in data analysis, or other information about how the data are weighted if no weight variables are present.
 
 **Required:** No
 
@@ -2474,19 +2473,19 @@ The Summary is written in the third person and avoids attempting to address issu
 #### Complete General Data Formats Examples (with Subfields):
 
 ```yaml
-- "Label": "Numeric"
-  "Code": "Numeric"
-  "URI": "/api/v1/vocab-terms/generalDataFormats/terms/Numeric"
-
 - "Label": "Text"
   "Code": "Text"
   "URI": "/api/v1/vocab-terms/generalDataFormats/terms/Text"
-```
 
-```yaml
 - "Label": "Still image"
   "Code": "StillImage"
   "URI": "/api/v1/vocab-terms/generalDataFormats/terms/StillImage"
+```
+
+```yaml
+- "Label": "Numeric"
+  "Code": "Numeric"
+  "URI": "/api/v1/vocab-terms/generalDataFormats/terms/Numeric"
 ```
 
 
@@ -2527,8 +2526,6 @@ The Summary is written in the third person and avoids attempting to address issu
 **Repeatable:** No
 
 **Accepted Values:** Text
-
-**Usage Notes:** The manuscript number helps the journal manage the data deposit. It is an internal field and will not be displayed to the public.
 
 **Examples:**
 
@@ -2667,7 +2664,7 @@ The Summary is written in the third person and avoids attempting to address issu
 **Examples:**
 
 ```text
-"Creative Commons Attribution Non Commercial 4.0 International"
+"Creative Commons Attribution 4.0 International"
 ```
 
 ```text
@@ -2719,7 +2716,7 @@ The Summary is written in the third person and avoids attempting to address issu
 #### Complete License Examples (with Subfields):
 
 ```yaml
-"Label": "Creative Commons Attribution Non Commercial 4.0 International"
+"Label": "Creative Commons Attribution 4.0 International"
 "Code": "CC-BY-NC-4.0"
 "URI": "/api/v1/vocab-terms/licenses/terms/CC-BY-4.0"
 ```
