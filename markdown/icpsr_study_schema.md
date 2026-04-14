@@ -1,6 +1,6 @@
 # ICPSR Metadata Schema
 
-Last updated: January 05, 2026
+Last updated: April 14, 2026
 
 This is the metadata schema used to describe data collections at the Inter-university Consortium for Political and Social Research (ICPSR). These rules and definitions represent ICPSR's metadata practices and are intended to (a) assist ICPSR staff with metadata entry, and (b) help ICPSR users -- including data depositors and researchers accessing data -- understand how to use and interpret our metadata.
 
@@ -990,17 +990,18 @@ The Summary is written in the third person and avoids attempting to address issu
 
 **Controlled Vocabulary:** [ICPSR Geographic Names Thesaurus](https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10003).
 
-**Usage Notes:**   
-Each geographic term's full hierarchy must be included; please note:   
+**Usage Notes:** Each geographic term's full hierarchy must be included; please note:   
 
 * For a U.S. city, the state and country are listed alongside (e.g., 'Los Angeles, California, United States').   
 * Non-U.S. geographic subdivisions need not include hierarchical relations, with the specific exceptions of Canadian provinces and the countries within the United Kingdom.  
 * 'Global' may be appropriate for studies where the universe of participants is truly worldwide. Possible examples include online surveys that are not restricted by geography, or studies of organizations, such as NGOs.  
 * County-level information is typically not indicated. If a U.S. county will be included, the state name and 'United States' must be listed as well.  
 
-The [Getty Thesaurus of Geographic Names](http://www.getty.edu/research/tools/vocabularies/tgn/index.html) is referenced when introducing new geographic names.  
+The [Getty Thesaurus of Geographic Names](http://www.getty.edu/research/tools/vocabularies/tgn/index.html) is referenced when introducing new geographic names.    
 
 **ICPSR Input Guidance:** The metadata editor will automatically put this element's values in alphabetical order, regardless of hierarchy.
+
+For United States-based data collections that include some or all U.S. island territories (e.g., American Samoa, Puerto Rico, Northern Mariana Islands, Virgin Islands of the United States, and Guam), list each of these territories separately in the Geographic Coverage Areas field.
 
 **Examples:** 
 
