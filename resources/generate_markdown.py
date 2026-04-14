@@ -174,7 +174,7 @@ def get_yaml_notes(note, term, ROOT):
     return None
 
 def cv_to_table(cv_name, ROOT):   
-    cv_file = Path(ROOT / "vocab_preset" / "data" f"{cv_name}.json")
+    cv_file = Path(ROOT / "vocab_preset" / "data" / f"{cv_name}.json")
     # return None if there is no matching CV
     if not cv_file.is_file():
         return None
@@ -189,7 +189,7 @@ def cv_to_table(cv_name, ROOT):
 
     for item in cv_data:
         term = item.get("label", "")
-        definiton = item.get("description", "")
+        definition = item.get("description", "")
         temp_md.append(f"| {term} | {definition} |\n")
 
     return temp_md
