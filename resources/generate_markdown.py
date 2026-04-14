@@ -173,7 +173,7 @@ def get_yaml_notes(note, term, ROOT):
             
     return None
 
-def cv_to_table(cv_name):   
+def cv_to_table(cv_name, ROOT):   
     cv_file = Path(ROOT / "vocab_preset" / "data" f"{cv_name}.json")
     # return None if there is no matching CV
     if not cv_file.is_file():
@@ -266,7 +266,6 @@ def load_schemas(PROPERTY_DIR, mode):
         for f in PROPERTY_DIR.glob("*.json"):
             if f.name in SKIP_FILES:
                 continue
-            print(f.name)
             data = json.loads(f.read_text(encoding="utf-8"))
             schemas[f.stem] = data
 
@@ -428,11 +427,11 @@ def render_subfields(ROOT, mode, schema, properties, required, parent_anchor, le
         md.append(f"**Accepted Values:** {typ}\n")
 
         if "controlledVocab" in prop:
-            if mode == "legacy"
+            if mode == "legacy":
                 controlledVocab = get_yaml_notes(prop['controlledVocab'], "controlledVocab", ROOT)
                 md.append(f"**Controlled Vocabulary:** {controlledVocab}\n")
             else:
-                controlledVocab = cv_to_table(prop['controlledVocab'])
+                controlledVocab = cv_to_table(prop['controlledVocab'], ROOT)
                 if controlledVocab:
                     md.append(f"**Controlled Vocabulary:** Local ICPSR controlled vocabulary. See below for terms and definitions:\n")
                     md.extend(controlledVocab)
@@ -485,11 +484,11 @@ def render_property(name, schema, ROOT, mode, TOP_LEVEL_REQUIRED):
 
     # Check for additional keywords: controlledVocab and usageNotes
     if "controlledVocab" in schema:
-        if mode == "legacy"
+        if mode == "legacy":
             controlledVocab = get_yaml_notes(schema['controlledVocab'], "controlledVocab", ROOT)
             md.append(f"**Controlled Vocabulary:** {controlledVocab}\n")
         else:
-            controlledVocab = cv_to_table(schema['controlledVocab'])
+            controlledVocab = cv_to_table(schema['controlledVocab'], ROOT)
             if controlledVocab:
                 md.append(f"**Controlled Vocabulary:** Local ICPSR controlled vocabulary. See below for terms and definitions:\n\n")
                 md.extend(controlledVocab)
