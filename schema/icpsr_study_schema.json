@@ -378,7 +378,6 @@
       "minItems": 1,
       "controlledVocab": "[ICPSR Geographic Names Thesaurus](https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10003).",
       "$ref": "https://schemas.icpsr.umich.edu/schema/yaml/geographic_coverage_area?version=v1",
-      "icpsrGuidance": "The metadata editor will automatically put this element's values in alphabetical order, regardless of hierarchy.",
       "examples": [
         ["United States", "Maryland", "Baltimore"],
         ["United Kingdom", "China"],
