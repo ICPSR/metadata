@@ -990,8 +990,7 @@ The Summary is written in the third person and avoids attempting to address issu
 
 **Controlled Vocabulary:** [ICPSR Geographic Names Thesaurus](https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10003).
 
-**Usage Notes:**   
-Each geographic term's full hierarchy must be included; please note:   
+**Usage Notes:** Each geographic term's full hierarchy must be included; please note:   
 
 * For a U.S. city, the state and country are listed alongside (e.g., 'Los Angeles, California, United States').   
 * Non-U.S. geographic subdivisions need not include hierarchical relations, with the specific exceptions of Canadian provinces and the countries within the United Kingdom.  
@@ -1001,6 +1000,8 @@ Each geographic term's full hierarchy must be included; please note:
 The [Getty Thesaurus of Geographic Names](http://www.getty.edu/research/tools/vocabularies/tgn/index.html) is referenced when introducing new geographic names.    
 
 **ICPSR Input Guidance:** The metadata editor will automatically put this element's values in alphabetical order, regardless of hierarchy.
+
+For United States-based data collections that include some or all U.S. island territories (e.g., American Samoa, Puerto Rico, Northern Mariana Islands, Virgin Islands of the United States, and Guam), list each of these territories separately in the Geographic Coverage Areas field.
 
 **Examples:** 
 
