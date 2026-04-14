@@ -1,6 +1,6 @@
 # ICPSR Legacy Metadata Schema
 
-Last updated: April 06, 2026
+Last updated: April 14, 2026
 
 
 This metadata schema was used to describe curated data collections at the Inter-university Consortium for Political and Social Research (ICPSR) through approximately 2026. Beginning in 2026, it is being phased out and replaced by [an updated metadata schema](https://icpsr.github.io/metadata/icpsr_metadata_schema/).
@@ -1059,6 +1059,8 @@ The Summary is written in the third person and avoids attempting to address issu
 The [Getty Thesaurus of Geographic Names](http://www.getty.edu/research/tools/vocabularies/tgn/index.html) is referenced when introducing new geographic names.
 
 **ICPSR Input Guidance:** The metadata editor will automatically put this element's values in alphabetical order, regardless of hierarchy.
+
+For United States-based data collections that include some or all U.S. island territories (e.g., American Samoa, Puerto Rico, Northern Mariana Islands, Virgin Islands of the United States, and Guam), list each of these territories separately in the Geographic Coverage Areas field.
 
 **Examples:**
 
