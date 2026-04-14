@@ -13,13 +13,13 @@
         "title": "Label",
         "description": "A human-readable form of the subject term.",
         "type": "string",
-        "examples": ["anxiety", "brain waves"]
+        "examples": ["Anxiety", "Diabetes Mellitus"]
       },
       "code": {
         "title": "Code",
         "description": "A machine-readable/-actionable form of the subject term.",
         "type": "string",
-        "examples": ["D001007", "D058256"]
+        "examples": ["D001007", "T011730"]
       },
       "uri": {
         "title": "URI",
@@ -28,7 +28,7 @@
         "usageNotes": "Enter the MeSH RDF Unique Identifier.",
         "examples": [
           "http://id.nlm.nih.gov/mesh/D001007",
-          "http://id.nlm.nih.gov/mesh/D058256"
+          "http://id.nlm.nih.gov/mesh/T011730"
         ]
       }
     },
@@ -37,14 +37,14 @@
   "examples": [
     [
       {
-        "label": "anxiety",
+        "label": "Anxiety",
         "code": "D001007",
         "uri": "http://id.nlm.nih.gov/mesh/D001007"
       },
       {
-        "label": "brain waves",
-        "code": "D058256",
-        "uri": "http://id.nlm.nih.gov/mesh/D058256"
+        "label": "Diabetes Mellitus",
+        "code": "T011730",
+        "uri": "http://id.nlm.nih.gov/mesh/T011730"
       }
     ]
   ]

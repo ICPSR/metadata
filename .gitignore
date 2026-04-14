@@ -9,3 +9,15 @@ projects/jinja_tests/export_request-*.json
 projects/datacite/
 projects/ddi_doi_cleanup/input/
 projects/ddi_doi_cleanup/output
+rde_schema/property_bank/contributors.json
+rde_schema/property_bank/link_title.json
+rde_schema/property_bank/extent_of_processing.json
+rde_schema/property_bank/common_data_elements.json
+rde_schema/property_bank/deposits.json
+rde_schema/property_bank/restrictions.json
+rde_schema/property_bank/README.md
+rde_schema/property_bank/external_source_id.json
+rde_schema/property_bank/languages.json
+rde_schema/property_bank/oversamples.json
+rde_schema/property_bank/link_url.json
+rde_schema/property_bank/study_purpose.json

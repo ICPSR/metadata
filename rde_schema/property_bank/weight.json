@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft-07/schema#",
   "$id": "https://archive.icpsr.umich.edu/schema/property_banks/weight",
   "title": "Weights",
-  "description": "The weight variables and the criteria for using them in data analysis or other information about how the data are weighted if no weight variables are present.",
+  "description": "The weight variables and the criteria for using them in data analysis, or other information about how the data are weighted if no weight variables are present.",
   "type": "string",
   "usageNotes": "Weight includes any information about weighting variables in the data, as well as any other weight information provided by the Principal Investigator. If a weighting formula or coefficient was developed, provide this formula, define its elements, and indicate how the formula is applied to the data. It is acceptable to summarize additional documentation and refer users to those resources for more information.",
   "examples": [

@@ -11,7 +11,7 @@
       "description": "A human-readable form of the term.",
       "type": "string",
       "examples": [
-        "Creative Commons Attribution Non Commercial 4.0 International",
+        "Creative Commons Attribution 4.0 International",
         "Apache License 1.0"
       ]
     },
@@ -37,7 +37,7 @@
   "required": ["label", "code", "uri"],
   "examples": [
     {
-      "label": "Creative Commons Attribution Non Commercial 4.0 International",
+      "label": "Creative Commons Attribution 4.0 International",
       "code": "CC-BY-NC-4.0",
       "uri": "/api/v1/vocab-terms/licenses/terms/CC-BY-4.0"
     },

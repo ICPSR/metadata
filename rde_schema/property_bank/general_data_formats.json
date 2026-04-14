@@ -40,22 +40,21 @@
   "examples": [
     [
       {
-        "label": "Numeric",
-        "code": "Numeric",
-        "uri": "/api/v1/vocab-terms/generalDataFormats/terms/Numeric"
-      },
-      {
         "label": "Text",
         "code": "Text",
         "uri": "/api/v1/vocab-terms/generalDataFormats/terms/Text"
-      }
-      
-    ],
-    [
+      },
       {
         "label": "Still image",
         "code": "StillImage",
         "uri": "/api/v1/vocab-terms/generalDataFormats/terms/StillImage"
+      }
+    ],
+    [
+      {
+        "label": "Numeric",
+        "code": "Numeric",
+        "uri": "/api/v1/vocab-terms/generalDataFormats/terms/Numeric"
       }
     ]
   ]

@@ -4,6 +4,5 @@
   "title": "Manuscript Number",
   "description": "A unique identifier that associates the data collection with a manuscript submitted to a journal.",
   "type": "string",
-  "usageNotes": "The manuscript number helps the journal manage the data deposit. It is an internal field and will not be displayed to the public.",
   "examples": []
 }
