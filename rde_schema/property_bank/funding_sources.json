@@ -9,7 +9,7 @@
     "properties": {
       "organization": {
         "$ref": "https://archive.icpsr.umich.edu/schema/property_banks/organization/version/1",
-        "title": "Organization",
+        "title": "Funding Organization",
         "description": "Name and other details about the organization that provided the funding."
       },
       "grants": {
