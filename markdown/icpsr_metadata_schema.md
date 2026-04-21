@@ -259,12 +259,12 @@ Full information for each ICPSR study metadata element includes the following fi
 
 | Property | Required? | Repeatable? | Accepted Values | Description |
 |---|---|---|---|---|
-| [Organization](#funding-sources_organization) | Yes | No | Multi-part element; see subfields | Name and other details about the organization that provided the funding. |
+| [Funding Organization](#funding-sources_organization) | Yes | No | Multi-part element; see subfields | Name and other details about the organization that provided the funding. |
 | [Funding Awards](#funding-sources_grants) | No | Yes | Multi-part element; see subfields | Identifiers and other details about financial support for the data collection. |
 | [Order](#funding-sources_order) | Yes | No | Number | Internal ICPSR field used to determine the order of importance for the funders associated with the data collection. |
 
 <a name="funding-sources_organization"></a>
-##### Organization
+##### Funding Organization
 
 **Description:** Name and other details about the organization that provided the funding.
 
@@ -362,7 +362,7 @@ Full information for each ICPSR study metadata element includes the following fi
 #### Complete Funding Sources Examples (with Subfields):
 
 ```yaml
-- "Organization":
+- "Funding Organization":
     "Name": "Robert Wood Johnson Foundation"
     "Ror": "https://ror.org/02ymmdj85"
   "Funding Awards":
@@ -370,7 +370,7 @@ Full information for each ICPSR study metadata element includes the following fi
   - "Funding Identifier": "MDR-8550204"
   "Order": 0
 
-- "Organization":
+- "Funding Organization":
     "Name": "Bureau of Justice Statistics"
     "Ror": "https://ror.org/0006s4z66"
   "Funding Awards":
@@ -380,7 +380,7 @@ Full information for each ICPSR study metadata element includes the following fi
 ```
 
 ```yaml
-- "Organization":
+- "Funding Organization":
     "Name": "Acme Foundation"
   "Order": 0
 ```
