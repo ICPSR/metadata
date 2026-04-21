@@ -11,37 +11,62 @@
     "properties": {
       "city": {
         "title": "City",
-        "description": "A town, city, or similar political entity covered in a data collection",
+        "description": "A town, city, or similar populated place covered in the data collection",
         "type": "string",
         "examples": ["Ann Arbor", "Hanover", "Chongqing"]
       },
       "county": {
         "title": "County",
-        "description": "A county or similar administrative area covered in a data collection",
+        "description": "A United States county or similar administrative area covered in the data collection",
         "type": "string",
         "examples": ["Monroe County", "Washtenaw County", "Cuyahoga County"]
       },
       "state": {
         "title": "State",
-        "description": "A state, province, canton or similar political entity covered in a data collection",
+        "description": "A state, province, canton or similar political entity covered in the data collection",
         "type": "string",
         "examples": ["Michigan", "Manitoba", "Yunnan"]
       },
       "country": {
         "title": "Country",
-        "description": "A country covered in a data collection",
+        "description": "A country covered in the data collection",
         "type": "string",
         "examples": ["United States", "China", "Ghana"]
       },
+      "region": {
+        "title": "Region",
+        "description": "An area distinguished by one or more observable physical or cultural characteristics that is covered in the data collection.",
+        "type": "string",
+        "examples": ["Sub-Saharan Africa", "Eastern Europe", "Siberia"]
+      },
+      "continent": {
+        "title": "Continent",
+        "description": "A continent covered in the data collection",
+        "type": "string",
+        "examples": ["Africa", "Asia", "South America"]
+      },
+      "other_area": {
+        "title": "Other Geographic Area",
+        "description": "An area covered in the data collection that cannot be represented using the defined categories above or matched to an appropriate GeoNames record.",
+        "type": "string",
+        "usageNotes": "Use this for user-provided terms, loosely defined geographic concepts, GeoNames feature types not covered by city/county/state/country/region/continent, or historical geographic entities (e.g., Prussia) not represented in GeoNames.",
+        "examples": ["Global", "Eurasia", "13 U.S. states in 3 regions"]
+      },
       "uri": {
-        "title": "Geographic Coverage Area URI",
-        "description": "The unique identifier for the geographic coverage area.",
+        "title": "URI",
+        "description": "A local unique identifier for the geographic coverage area.",
         "type": "string",
         "format": "uri",
-        "examples": [ "https://sws.geonames.org/4990729/", "https://sws.geonames.org/6269554/" ]
+        "examples": [ "/api/v1/vocab-terms/geoNames/terms/6252001", "/api/v1/vocab-terms/geoNames/terms/6269554" ]
+      },
+      "externalURI": {
+        "title": "External URI",
+        "description": "The GeoNames unique identifier for the geographic coverage area.",
+        "type": "string",
+        "format": "uri",
+        "examples": [ "https://sws.geonames.org/4990729/", "https://sws.geonames.org/6269554" ]
       }
-    },
-    "required": ["country"]
+    }
   },
   "usageNotes": "In addition to the total geographic scope of the data, may include any additional levels of geographic coding provided in the variables.",
   "examples": [
@@ -50,18 +75,49 @@
         "city": "Cleveland",
         "state": "Ohio",
         "country": "United States",
-        "uri":  "https://sws.geonames.org/5150529/"
+        "continent": "North America",
+        "externalURI":  "https://sws.geonames.org/5150529",
+        "uri": "/api/v1/vocab-terms/geoNames/terms/5150529"
       },
       {
-        "state": "Manitoba",
-        "country": "Canada",
-        "uri": "https://sws.geonames.org/6065171/"
+        "county": "Washtenaw County",
+        "state": "Michigan",
+        "country": "United States",
+        "continent": "North America",
+        "externalURI": "https://sws.geonames.org/5014120",
+        "uri": "/api/v1/vocab-terms/geoNames/terms/5014120"
+      },
+      {
+        "state": "Pennsylvania",
+        "country": "United States",
+        "continent": "North America",
+        "externalURI": "https://sws.geonames.org/5206379",
+        "uri": "/api/v1/vocab-terms/geoNames/terms/5206379"
       }
     ],
     [
       {
-        "country": "France",
-        "uri": "https://sws.geonames.org/3017382/"
+        "country": "Germany",
+        "continent": "Europe",
+        "externalURI": "https://sws.geonames.org/2921044",
+        "uri": "/api/v1/vocab-terms/geoNames/terms/2921044"
+      },
+      {
+        "continent": "Africa",
+        "externalURI": "https://sws.geonames.org/6255146",
+        "uri": "/api/v1/vocab-terms/geoNames/terms/6255146"
+      }
+    ],
+    [
+      {
+        "other_area": "Global",
+        "externalURI": "https://sws.geonames.org/6295630",
+        "uri": "/api/v1/vocab-terms/geoNames/terms/6295630"
+      }
+    ],
+    [
+      {
+        "other_area": "13 U.S. states in 3 regions"
       }
     ]
   ]

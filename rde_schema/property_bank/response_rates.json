@@ -7,6 +7,6 @@
   "usageNotes": "This field is only applicable if the data were collected with a survey instrument and the response rates are provided.",
   "examples": [
     "The overall response rate for this survey was 20.22%; 72.6% for existing panelists and 10.4% for new panelists, using AAPOR Response Rate 1.",
-    "Not applicable."
+    "Of the 1,843 Midlife in the United States (MIDUS) respondents that researchers attempted to contact, 1,483 agreed to participate (8 percent refused participation and 11 percent either moved or were difficult to contact), yielding a response rate of approximately 81 percent."
   ]
 }

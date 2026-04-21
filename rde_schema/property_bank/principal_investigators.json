@@ -42,8 +42,8 @@
       {
         "person": {
           "name": {
-            "given": "Jane",
-            "family": "Smith"
+            "given": "Miner P.",
+            "family": "Marchbanks III"
           }
         },
         "order": 0
@@ -53,30 +53,45 @@
       {
         "person": {
           "name": {
-            "given": "Joe Q.",
-            "family": "Doe IV"
+            "given": "Robert J.",
+            "family": "Shiller"
           },
-          "orcid": "https://orcid.org/0000-0001-6666-5717",
+          "orcid": "https://orcid.org/0009-0006-2316-6486",
           "affiliations": [
             {
-              "name": "Urban Institute",
-              "ror": "https://ror.org/017pz3h73",
-              "icpsr_org_id": "xyz123"
+              "name": "Yale University",
+              "ror": "https://ror.org/03v76x132"
             },
             {
-              "name": "Example University"
+              "name": "MacroMarkets"
             }
           ]
         },
         "order": 0
       },
       {
+        "person": {
+          "name": {
+            "given": "Claudia",
+            "family": "Goldin"
+          },
+          "orcid": "https://orcid.org/0000-0003-3842-1604",
+          "affiliations": [
+            {
+              "name": "Harvard University",
+              "ror": "https://ror.org/03vek6s52"
+            }
+          ]
+        },
+        "order": 1
+      },
+      {
         "organization": 
           {
-            "name": "New York Times",
-            "ror": "https://ror.org/011w6k548"
+            "name": "Bureau of Justice Statistics",
+            "ror": "https://ror.org/0006s4z66"
           },
-        "order": 1
+        "order": 2
       }
     ]
   ]

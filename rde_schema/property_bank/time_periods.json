@@ -23,7 +23,7 @@
           "title": "Time Frame",
           "description": "An optional free-text description of the time period, used for non-numeric dates (e.g., 'Fall 2012') or to add context when multiple dates are present.",
           "type": "string",
-          "usageNotes": "The Time Frame should not simply restate the date(s) in words. For example, if the Time Period starts in 2020-01, the Time Frame should repeat 'January 2020'.",
+          "usageNotes": "The Time Frame should not simply restate the date(s) in words. For example, if the Time Period starts in 2020-01, the Time Frame should not repeat 'January 2020'.",
           "examples": [ "Fall 2001", "Winter Semester 2019"]
         }
     },

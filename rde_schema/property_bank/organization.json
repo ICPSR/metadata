@@ -11,8 +11,8 @@
       "description": "The organization's name.",
       "type": "string",
       "examples": [
-        "Federal Reserve Bank of St. Louis. Research Division", 
-        "University of Michigan. Institute for Social Research"
+        "Federal Reserve Bank of St. Louis", 
+        "University of Michigan"
       ]
     },
     "ror": {

@@ -36,21 +36,21 @@
     {
         "code": "PostalCodeZipCode",
         "label": "Postal Code/Zip Code",
-        "description": "Geographic areas defined by postal delivery routes or regions, used for organizing mail delivery.",
+        "description": "A geographic area defined by postal delivery routes or regions, used for organizing mail delivery.",
         "type": "TreeVocabTermDTO",
         "path": "LocalUnits"
     },
     {
         "code": "NeighborhoodCommunityArea",
         "label": "Neighborhood/Community Area",
-        "description": "Informally defined areas within a city, usually based on local recognition rather than official administrative boundaries.",
+        "description": "An informally defined area within a city, usually based on local recognition rather than official administrative boundaries.",
         "type": "TreeVocabTermDTO",
         "path": "LocalUnits"
     },
     {
         "code": "CityMunicipality",
         "label": "City/Municipality",
-        "description": "A local government jurisdictions that covers urban areas, which can range from large cities to small towns and villages.",
+        "description": "A local government jurisdiction that covers urban areas, which can range from large cities to small towns and villages.",
         "type": "TreeVocabTermDTO",
         "path": "LocalUnits"
     },
@@ -111,28 +111,28 @@
     {
         "code": "CensusTract",
         "label": "Census Tract",
-        "description": "Small geographic units used in national censuses, typically representing 2,500 to 8,000 people.  They are designed to provide detailed statistical data for neighborhoods or communities.",
+        "description": "A small geographic unit used in national censuses, typically representing 2,500 to 8,000 people.  Census tracts are designed to provide detailed statistical data for neighborhoods or communities.",
         "type": "TreeVocabTermDTO",
         "path": "CensusUnits"
     },
     {
         "code": "CensusDivision",
         "label": "Census Division",
-        "description": "Larger geographic areas used for statistical reporting, grouping states or provinces within a country.  These divisions are smaller than regions but larger than individual states or provinces.",
+        "description": "A larger geographic area used for statistical reporting, grouping states or provinces within a country.  Census divisions are smaller than regions but larger than individual states or provinces.",
         "type": "TreeVocabTermDTO",
         "path": "CensusUnits"
     },
     {
         "code": "CensusRegion",
         "label": "Census Region",
-        "description": "Broader groupings of census divisions used to organize and report data at a national level (e.g., Northeast, Midwest, South, West).",
+        "description": "A broader grouping of census divisions used to organize and report data at a national level (e.g., Northeast, Midwest, South, West).",
         "type": "TreeVocabTermDTO",
         "path": "CensusUnits"
     },
     {
         "code": "PublicUseMicrodataArea",
         "label": "Public Use Microdata Area (PUMA)",
-        "description": "Geographic areas with populations of 100,000 or more, used for the release of detailed public-use microdata from the U.S. Census.",
+        "description": "A geographic area with a population of 100,000 or more, used for the release of detailed public-use microdata from the U.S. Census.",
         "type": "TreeVocabTermDTO",
         "path": "CensusUnits"
     },
@@ -160,7 +160,7 @@
     {
         "code": "ZIPCodeTabulationArea",
         "label": "ZIP Code Tabulation Area (ZCTA)",
-        "description": "Geographic areas created by the U.S. Census Bureau to approximate the boundaries of ZIP Codes for demographic analysis.",
+        "description": "A geographic area created by the U.S. Census Bureau to approximate the boundaries of ZIP Codes for demographic analysis.",
         "type": "TreeVocabTermDTO",
         "path": "CensusUnits"
     },
@@ -173,7 +173,7 @@
     {
         "code": "VotingDistrictPrecinct",
         "label": "Voting District/Precinct",
-        "description": "Geographic areas used for organizing elections, often serving as the smallest electoral units where voters cast their ballots.",
+        "description": "A geographic area used for organizing elections, often serving as the smallest electoral units where voters cast their ballots.",
         "type": "TreeVocabTermDTO",
         "path": "ElectoralLegalCrossJurisdictionalEducationalDistricts"
     },
@@ -194,14 +194,14 @@
     {
         "code": "SchoolDistrict",
         "label": "School District",
-        "description": "The administrative boundaries for local education systems, typically overseeing public schools from elementary through secondary levels.",
+        "description": "The administrative boundary for local education systems, typically overseeing public schools from elementary through secondary levels.",
         "type": "TreeVocabTermDTO",
         "path": "ElectoralLegalCrossJurisdictionalEducationalDistricts"
     },
     {
         "code": "IndigenousTribalLands",
         "label": "Indigenous/Tribal Lands",
-        "description": "Areas legally recognized as Indigenous or tribal nations, often with unique legal, cultural, or sovereignty status.",
+        "description": "An area legally recognized as an Indigenous or tribal nation, often with unique legal, cultural, or sovereignty status.",
         "type": "TreeVocabTermDTO",
         "path": "ElectoralLegalCrossJurisdictionalEducationalDistricts"
     }
