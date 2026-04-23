@@ -1,6 +1,6 @@
 # ICPSR Metadata Schema
 
-Last updated: April 21, 2026
+Last updated: April 23, 2026
 
 
 This metadata schema is used to describe data collections at the Inter-university Consortium for Political and Social Research (ICPSR) after 2026. 
@@ -2946,7 +2946,7 @@ The Summary is written in the third person and avoids attempting to address issu
 
 **Accepted Values:** Text
 
-**Usage Notes:** Versioning should follow ICPSR conventions
+**Usage Notes:** Every ICPSR data collection is assigned version 1.0 when it is first published. When the data collection is updated, a new version number is assigned. For substantive changes to the data collection, including changes to data files, title, or principal investigators, a new major version is created, the version number increases by 1 (for example, from 1.0 to 2.0), and a new version-specific digital object identifier (DOI) is created. For all other changes, a new minor version is created, the version number increases by 0.1 (for example, from 2.0 to 2.1), and the DOI does not change.
 
 **Examples:**
 
