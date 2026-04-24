@@ -1,6 +1,6 @@
 # ICPSR Metadata Schema
 
-Last updated: April 23, 2026
+Last updated: April 24, 2026
 
 
 This metadata schema is used to describe data collections at the Inter-university Consortium for Political and Social Research (ICPSR) after 2026. 
@@ -3011,6 +3011,10 @@ The Summary is written in the third person and avoids attempting to address issu
 #### Complete Version History Examples (with Subfields):
 
 ```yaml
+- "Version Number": "V2.1"
+  "Version Date": "2025-10-03"
+  "Version Note": "Updated study summary."
+
 - "Version Number": "V2"
   "Version Date": "2023-08-12"
   "Version Note": "The data producer provided additional data files."
