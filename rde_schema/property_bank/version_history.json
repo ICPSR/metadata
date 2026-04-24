@@ -41,6 +41,11 @@
     "examples": [
       [
         {
+          "version_number": "V2.1",
+          "version_date": "2025-10-03",
+          "version_note": "Updated study summary."
+        },
+        {
           "version_number": "V2",
           "version_date": "2023-08-12",
           "version_note": "The data producer provided additional data files."
