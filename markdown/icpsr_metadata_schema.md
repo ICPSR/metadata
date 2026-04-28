@@ -776,8 +776,6 @@ The Summary is written in the third person and avoids attempting to address issu
 
 **Accepted Values:** Text
 
-**Usage Notes:** Enter the MeSH RDF Unique Identifier.
-
 **Examples:**
 
 ```text
