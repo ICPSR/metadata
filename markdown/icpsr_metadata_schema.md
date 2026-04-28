@@ -1,6 +1,6 @@
 # ICPSR Metadata Schema
 
-Last updated: April 24, 2026
+Last updated: April 28, 2026
 
 
 This metadata schema is used to describe data collections at the Inter-university Consortium for Political and Social Research (ICPSR) after 2026. 
@@ -80,6 +80,42 @@ Full information for each ICPSR study metadata element includes the following fi
 
 **Accepted Values:** Text
 
+**Usage Notes:** The Title includes three essential parts: the title proper, the geography, and the time period.
+
+Title Proper:
+
+  * The title proper is a descriptive string that captures what the data collection contains. 
+  
+  * The title proper uses title case: all major words are capitalized, while minor words are lowercased.
+
+  * For new studies, ICPSR starts with the title proper provided by the data depositor. Most title propers are straightforward about their contents, such as the 'American Community Survey' or the 'Census of Law Enforcement Training Academies.' Some title propers include a more branded description, such as 'Bridge of Faith: Aim4Peace Community-Based Violence Prevention Project or Contents' and 'Contexts of Cyberbullying: An Epidemiologic Study using Electronic Detection and Social Network Analysis.'
+
+  * For updated studies, ICPSR uses the existing title in production, making changes as necessary to add new years or additional geographical locations. For studies that are part of an ICPSR series, titles remain consistent with the previous series studies.
+
+Geography:
+
+  * All titles include the data collection's geography. If the geography is already included in the title proper, it is not repeated.
+  
+  * Cities are paired with state or province names that are spelled out (e.g., Portland, Oregon), unless the city names are unique or well-known.
+
+  * Studies with more than four geographic locations typically are summarized using, for example, '5 countries,' '8 German cities,' '20 U.S. states' instead of listing all locations. In the latter case, 'U.S.' is used rather than 'United States' or 'American'.
+  
+  * Descriptors that do not have a distinct geographic area, such as 'communities' or 'regions', are not included in titles. 
+
+  * 'Global' may be appropriate for studies where the universe of participants is truly worldwide. Possible examples include online surveys that are not restricted by geography, or studies of organizations, such as NGOs. 
+
+  * Brackets are typically not indicated. They are indicated when a study has National, Federal, Congressional, or American in the title. Brackets can be indicated if a non-United States study has “National” in the title, or a similar word specific to that country.
+
+Time Period:
+
+  * All titles include the data collection's time period, which reflects the time period that the data collection covers and should match the Time Period. For example, in the 'Uganda Elite Study, 1964-1968', it is assumed that the Ugandans were surveyed about events in 1964-1968, even if the actual data collection might not have taken place until later.
+
+  * If the time period is already included in the title proper, it is not repeated.
+
+  * For most studies, a single year or range of years is acceptable. Years are written as four digits, including when used in a range (e.g., '1999', '2001-2003', or '1999, 2010, 2015').
+
+  * Months are included only when part of ICPSR series that have multiple releases, which are otherwise identical, each year. In these cases, months are spelled out (e.g., 'September 2020' instead of '9/2020' or 'Sept. 2020').
+
 **Examples:**
 
 ```text
@@ -115,6 +151,8 @@ Full information for each ICPSR study metadata element includes the following fi
 **Repeatable:** Yes
 
 **Accepted Values:** Text
+
+**Usage Notes:** Alternate Title often takes the form of a shortened (by abbreviation or acronym) version of the official title.
 
 **Examples:**
 
@@ -167,6 +205,13 @@ Full information for each ICPSR study metadata element includes the following fi
 
 **Accepted Values:** Multi-part element; for more information, see the [Person](#person) field
 
+**Usage Notes:** When the PI is a person:
+
+  *  Use "Search for a Person" to enter the name, affiliation, and ORCID ID that appear in the person's [ORCID](https://orcid.org/) profile.  
+  *  If you can't find an ORCID ID for a PI, enter their full name the way it appears in publications or their curriculum vitae. Enter middle names and initials in the Given Name field and suffixes (e.g. Jr., III) in the Family Name field.  
+  *  Enter the PI's affiliation as it appears in the [Research Organization Registry](https://ror.org/) (ROR). If the organization doesn't have a ROR ID, use its full name, avoid acronyms, and do not include departments or colleges.  
+  *  Enter a PI's affiliation at the time the research was conducted.
+
 <a name="principal-investigators_organization"></a>
 ##### Organization
 
@@ -177,6 +222,8 @@ Full information for each ICPSR study metadata element includes the following fi
 **Repeatable:** No
 
 **Accepted Values:** Multi-part element; for more information, see the [Organization](#organization) field
+
+**Usage Notes:** When the PI is an organization, Enter the name as it appears in the [Research Organization Registry](https://ror.org/) (ROR). If the organization doesn’t have a ROR ID, use its full name and avoid acronyms.
 
 <a name="principal-investigators_order"></a>
 ##### Order
@@ -274,6 +321,13 @@ Full information for each ICPSR study metadata element includes the following fi
 
 **Accepted Values:** Multi-part element; for more information, see the [Organization](#organization) field
 
+**Usage Notes:** Tips for entering the funding organization:
+
+  * Whenever possible, enter the organization’s name as it appears in the [Research Organization Registry](https://ror.org/) (ROR).  
+  * Enter the name without any organization hierarchy, for example, "National Institute on Aging" instead of "United States Department of Health and Human Services. National Institutes of Health. National Institute on Aging". 
+  * If the organization doesn’t have a ROR, use its full name and avoid acronyms.  
+  * Whenever possible, include a unique identifier for the funding award. This can be a grant number; a URL, preferably a persistent one like a digital object identifier (DOI); or both.
+
 <a name="funding-sources_grants"></a>
 ##### Funding Awards
 
@@ -284,6 +338,8 @@ Full information for each ICPSR study metadata element includes the following fi
 **Repeatable:** Yes
 
 **Accepted Values:** Multi-part element; see subfields
+
+**Usage Notes:** Whenever possible, include a unique identifier for the funding award. This can be a grant number; a URL, preferably a persistent one like a digital object identifier (DOI); or both.
 
 ##### Subfields:
 
@@ -777,6 +833,8 @@ The Summary is written in the third person and avoids attempting to address issu
 
 **Accepted Values:** Text
 
+**Usage Notes:** Dates are formatted in accordance with ISO 8601 (YYYY-MM-DD, YYYY-MM, or YYYY). No spaces are permitted in date expressions.
+
 **Examples:**
 
 ```text
@@ -801,6 +859,8 @@ The Summary is written in the third person and avoids attempting to address issu
 **Repeatable:** No
 
 **Accepted Values:** Text
+
+**Usage Notes:** Dates are formatted in accordance with ISO 8601 (YYYY-MM-DD, YYYY-MM, or YYYY). No spaces are permitted in date expressions.
 
 **Examples:**
 
@@ -827,7 +887,9 @@ The Summary is written in the third person and avoids attempting to address issu
 
 **Accepted Values:** Text
 
-**Usage Notes:** The Time Frame should not simply restate the date(s) in words. For example, if the Time Period starts in 2020-01, the Time Frame should not repeat 'January 2020'.
+**Usage Notes:** The textual description ('time frame') is used to add context to the Time Period when multiple time periods exist (e.g., to describe different waves, dataset names, or fiscal year designation) and/or when the date cannot be expressed exclusively through numbers, such as seasons or other units of time where the data producer did not clarify the exact dates they meant.
+
+The textual description should not simply restate the time period in words. For example, if the start and end dates for Time Period are 2020-01, the associated Time Frame should not be 'January 2020'.
 
 **Examples:**
 
@@ -2028,6 +2090,8 @@ The Summary is written in the third person and avoids attempting to address issu
 
 **Accepted Values:** Text
 
+**Usage Notes:** Dates are formatted in accordance with ISO 8601 (YYYY-MM-DD, YYYY-MM, or YYYY). No spaces are permitted in date expressions.
+
 **Examples:**
 
 ```text
@@ -2052,6 +2116,8 @@ The Summary is written in the third person and avoids attempting to address issu
 **Repeatable:** No
 
 **Accepted Values:** Text
+
+**Usage Notes:** Dates are formatted in accordance with ISO 8601 (YYYY-MM-DD, YYYY-MM, or YYYY). No spaces are permitted in date expressions.
 
 **Examples:**
 
@@ -2078,7 +2144,9 @@ The Summary is written in the third person and avoids attempting to address issu
 
 **Accepted Values:** Text
 
-**Usage Notes:** The Time Frame should not simply restate the date(s) in words. For example, if the Collection Date starts in 2020-01, the Time Frame should not repeat 'January 2020'.
+**Usage Notes:** The textual description ('time frame') is used to add context to the Collection Date when multiple time periods exist (e.g., to describe different study waves, dataset names, or fiscal year designation) and/or when the date cannot be expressed exclusively through numbers, such as seasons or other units of time where the data producer did not clarify the exact dates they meant.
+
+The textual description should not simply restate the time period in words. For example, if the Collection Date is 2020-01, the Time Frame should not be 'January 2020'.
 
 **Examples:**
 
@@ -2679,6 +2747,8 @@ The Summary is written in the third person and avoids attempting to address issu
 
 **Accepted Values:** Text
 
+**Usage Notes:** Collection Notes should include any information that does not fit anywhere else in the metadata, such as: information about unique aspects of the way the data was processed, discrepancies between the metadata and documentation files, information about the research team, or series-specific notes.
+
 **Examples:**
 
 ```text
@@ -2972,6 +3042,8 @@ The Summary is written in the third person and avoids attempting to address issu
 **Repeatable:** No
 
 **Accepted Values:** Text
+
+**Usage Notes:** ICPSR automatically generates this date for data collection additions and updates.
 
 **Examples:**
 
