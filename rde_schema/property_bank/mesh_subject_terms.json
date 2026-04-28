@@ -25,7 +25,6 @@
         "title": "URI",
         "description": "The URI for the subject term as maintained in MeSH.",
         "type": "string",
-        "usageNotes": "Enter the MeSH RDF Unique Identifier.",
         "examples": [
           "http://id.nlm.nih.gov/mesh/D001007",
           "http://id.nlm.nih.gov/mesh/T011730"
