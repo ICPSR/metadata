@@ -10,12 +10,14 @@
       "start_date": {
         "title": "Start Date",
         "description": "The start date of the data collection period. Must be in YYYY-MM-DD, YYYY-MM, or YYYY format with no spaces.",
+        "usageNotes": "Dates are formatted in accordance with ISO 8601 (YYYY-MM-DD, YYYY-MM, or YYYY). No spaces are permitted in date expressions.",
         "type": "string",
         "examples": ["2000", "2019-10", "2021-03-01"]
       },
       "end_date": {
         "title": "End Date",
         "description": "The end date of the data collection period. Must be in YYYY-MM-DD, YYYY-MM, or YYYY format with no spaces.",
+        "usageNotes": "Dates are formatted in accordance with ISO 8601 (YYYY-MM-DD, YYYY-MM, or YYYY). No spaces are permitted in date expressions.",
         "type": "string",
         "examples": ["2000", "2019-10", "2021-03-01"]
       },
@@ -23,7 +25,7 @@
         "title": "Time Frame",
         "description": "An optional free-text description of the data collection period, used for non-numeric dates (e.g., 'Fall 2012') or to add context when multiple dates are present.",
         "type": "string",
-        "usageNotes": "The Time Frame should not simply restate the date(s) in words. For example, if the Collection Date starts in 2020-01, the Time Frame should not repeat 'January 2020'.",
+        "usageNotes": { "$ref": "https://schemas.icpsr.umich.edu/notes/collection_dates_time_frame#/usageNotes" },
         "examples": [ "Fall 2001", "Student data"]
       }
     },

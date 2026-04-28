@@ -10,11 +10,13 @@
       "organization": {
         "$ref": "https://archive.icpsr.umich.edu/schema/property_banks/organization/version/1",
         "title": "Funding Organization",
-        "description": "Name and other details about the organization that provided the funding."
+        "description": "Name and other details about the organization that provided the funding.",
+        "usageNotes": { "$ref": "https://schemas.icpsr.umich.edu/notes/funding_organization#/usageNotes" }
       },
       "grants": {
         "title": "Funding Awards",
         "description": "Identifiers and other details about financial support for the data collection.",
+        "usageNotes": "Whenever possible, include a unique identifier for the funding award. This can be a grant number; a URL, preferably a persistent one like a digital object identifier (DOI); or both.",
         "type": "array",
         "items": {
           "type": "object",

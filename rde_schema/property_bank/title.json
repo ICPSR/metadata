@@ -3,6 +3,7 @@
   "$id": "https://archive.icpsr.umich.edu/schema/property_banks/title",
   "title": "Title",
   "description": "The official title that describes what the data collection is about, its geographic scope, and the time period it covered.",
+  "usageNotes": { "$ref": "https://schemas.icpsr.umich.edu/notes/title#/usageNotes" },
   "type": "string",
   "examples": [
     "Bridge of Faith: Aim4Peace Community-Based Violence Prevention Project, Kansas City, Missouri, 2014-2017",

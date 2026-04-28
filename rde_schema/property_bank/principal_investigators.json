@@ -10,12 +10,14 @@
       "person": {
         "$ref": "https://archive.icpsr.umich.edu/schema/property_banks/person/version/1",
         "title": "Person",
-        "description": "Name and other details about the principal investigator, if it is an individual person."
+        "description": "Name and other details about the principal investigator, if it is an individual person.",
+        "usageNotes": { "$ref": "https://schemas.icpsr.umich.edu/notes/pi_person#/usageNotes" }
       },
       "organization": {
         "$ref": "https://archive.icpsr.umich.edu/schema/property_banks/organization/version/1",
         "title": "Organization",
-        "description": "Name and other details about the principal investigator, if it is an organization."
+        "description": "Name and other details about the principal investigator, if it is an organization.",
+        "usageNotes": "When the PI is an organization, Enter the name as it appears in the [Research Organization Registry](https://ror.org/) (ROR). If the organization doesn’t have a ROR ID, use its full name and avoid acronyms."
       },
       "order": {
         "title": "Order",

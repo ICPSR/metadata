@@ -3,6 +3,7 @@
   "$id": "https://archive.icpsr.umich.edu/schema/property_banks/smallest_geographic_unit",
   "title": "Smallest Geographic Unit",
   "description": "The smallest geographic unit (e.g., state or census tract) used in the dataset.",
+  "usageNotes": { "$ref": "https://schemas.icpsr.umich.edu/notes/smallest_geographic_unit#/usageNotes" },
   "controlledVocab": "smallestGeographicUnits",
   "type": "object",
   "properties": {

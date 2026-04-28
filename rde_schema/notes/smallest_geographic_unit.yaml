@@ -1,0 +1,9 @@
+---
+  $schema: https://json-schema.org/draft-07/schema#
+  $id: https://schemas.icpsr.umich.edu/notes/smallest_geographic_unit
+  usageNotes: |
+    Smallest Geographic Unit is intended to represent specific, known geography – e.g., county, census district, Zip code, electoral district, etc. – that is represented by a variable.
+
+    If the data do not include a geographic variable by which the data can be analyzed, this element is not indicated. If all the cases are from a single state, but the cases are not subdivided geographically within that state, then 'state' is not indicated.
+
+    This element is only meant to convey specific, known, geography. If there is a variable indicating which testing site a survey was taken at, but the locations of the testing sites were masked by the PI, this element is likely not indicated.

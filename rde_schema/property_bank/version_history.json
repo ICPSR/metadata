@@ -22,6 +22,7 @@
         "version_date": {
           "title": "Version Date",
           "description": "The date on which a given version of a data collection was released.",
+          "usageNotes": "ICPSR automatically generates this date for data collection additions and updates.",
           "type": "string",
           "format": "date",
           "examples": ["2020-07-20", "2022-01-31"]

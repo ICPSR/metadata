@@ -1,0 +1,10 @@
+---
+  $schema: https://json-schema.org/draft-07/schema#
+  $id: https://schemas.icpsr.umich.edu/notes/pi_person
+  usageNotes: |
+    When the PI is a person:
+
+      *  Use "Search for a Person" to enter the name, affiliation, and ORCID ID that appear in the person's [ORCID](https://orcid.org/) profile.  
+      *  If you can't find an ORCID ID for a PI, enter their full name the way it appears in publications or their curriculum vitae. Enter middle names and initials in the Given Name field and suffixes (e.g. Jr., III) in the Family Name field.  
+      *  Enter the PI's affiliation as it appears in the [Research Organization Registry](https://ror.org/) (ROR). If the organization doesn't have a ROR ID, use its full name, avoid acronyms, and do not include departments or colleges.  
+      *  Enter a PI's affiliation at the time the research was conducted.  

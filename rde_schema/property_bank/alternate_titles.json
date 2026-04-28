@@ -3,6 +3,7 @@
     "$id": "https://archive.icpsr.umich.edu/schema/property_banks/alternate_titles",
     "title": "Alternate Titles",
     "description": "The alternate name(s) or acronym(s) commonly used to refer to the data collection.",
+    "usageNotes": "Alternate Title often takes the form of a shortened (by abbreviation or acronym) version of the official title.",
     "type": "array",
     "items": { "type": "string" },
     "examples": [
