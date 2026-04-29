@@ -1,8 +1,10 @@
 ---
   $schema: https://json-schema.org/draft-07/schema#
-  $id: https://schemas.icpsr.umich.edu/notes/geographic_coverage_area
+  $id: https://schemas.icpsr.umich.edu/notes/geographic_coverage_areas
   usageNotes: |
-    Tips for choosing Geographic Coverage Areas: 
+    Geographic locations are drawn from the GeoNames geographical database. Source: [https://www.geonames.org/](https://www.geonames.org/).
+
+    When choosing Geographic Coverage Areas: 
     
     * Select the country, state, city, county, region, or continent covered by the study.  
     * Spell out place names completely instead of using acronyms. For example, enter "United States" instead of "USA."  

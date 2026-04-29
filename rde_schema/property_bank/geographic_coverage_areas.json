@@ -3,7 +3,7 @@
   "$id": "https://archive.icpsr.umich.edu/schema/property_banks/geographic_coverage_areas",
   "title": "Geographic Coverage Areas",
   "description": "The geographic locations where the data refer or are related.",
-  "usageNotes": "Geographic locations are drawn from the GeoNames geographical database. Source: https://www.geonames.org/",
+  "usageNotes": { "$ref": "https://schemas.icpsr.umich.edu/notes/geographic_coverage_areas#/usageNotes" },
   "controlledVocab": "geoNames",
   "type": "array",
   "items": {
