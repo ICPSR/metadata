@@ -68,6 +68,8 @@ PROCESSING_ORDER = [
     "license",
     "version_history",
     "distributors",
+    "study_number",
+    "doi",
     "citation",
     "person",
     "organization"
@@ -567,7 +569,8 @@ def main():
             "subject_term", 
             "time_period", 
             "geographic_coverage_area", 
-            "study_number"
+            "study_number",
+            "doi"
         }
         ROOT = input_path / "schema"
         PROPERTY_DIR = ROOT 
@@ -584,7 +587,9 @@ def main():
             "time_periods",
             "geographic_coverage_areas",
             "icpsr_subject_terms",
-            "summary"
+            "summary",
+            "study_number",
+            "doi"
         }
         ROOT = input_path / "rde_schema"
         PROPERTY_DIR = ROOT / "property_bank"
