@@ -1,6 +1,6 @@
 # ICPSR Legacy Metadata Schema
 
-Last updated: April 15, 2026
+Last updated: April 30, 2026
 
 
 This metadata schema was used to describe curated data collections at the Inter-university Consortium for Political and Social Research (ICPSR) through approximately 2026. Beginning in 2026, it is being phased out and replaced by [an updated metadata schema](https://icpsr.github.io/metadata/icpsr_metadata_schema/).
@@ -23,7 +23,7 @@ A machine-actionable version of this schema is available in [JSON Schema](https:
 | [Citation](#citation) | No | No | Text | The official way to reference the data collection in writing. |
 | [Distributor](#distributor) | Yes | Yes | Multi-part element; see subfields | The organization(s) responsible for distributing the data collection. |
 | [Study Number](#study-number) | Yes | No | Number | A unique, numerical value used by ICPSR to identify and track data collections. |
-| [Digital Object Identifier (DOI)](#digital-object-identifier-(doi)) | No | No | Text | The registered persistent digital object identifier (DOI) associated with the data collection. |
+| [Digital Object Identifier (DOI)](#digital-object-identifier-(doi)) | Yes | No | Text | The registered persistent digital object identifier (DOI) associated with the data collection. |
 | [Funding Source](#funding-source) | No | Yes | Multi-part element; see subfields | The sources of funding that supported the data collection. |
 | [External Source ID](#external-source-id) | No | Yes | Text | A unique identifier supplied by the data depositor. |
 | [Summary](#summary) | Yes | No | Text | A description of the data collection that helps users understand its purpose, substance, and key topics. |
@@ -724,7 +724,7 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 
 **Description:** The registered persistent digital object identifier (DOI) associated with the data collection.
 
-**Required:** No
+**Required:** Yes
 
 **Repeatable:** No
 
