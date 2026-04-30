@@ -153,7 +153,18 @@ def render_yaml_examples(examples, schema):
 
     return md
 
-def get_yaml_notes(note, term, ROOT):
+def add_table_usageNotes(md_table, old_usage_note):
+
+    # set up header and table for later use
+    header = "This field employs a local ICPSR controlled vocabulary; see below for terms and definitions:"
+    if old_usage_note:
+        usage_notes = [old_usage_note, "\n\n", header, "\n\n", *md_table, "\n"]
+    else:
+        usage_notes = [header, "\n\n", *md_table, "\n"]
+
+    return usage_notes
+
+def get_schema_values(note, term, ROOT):
     """
     Returns usage notes text for a property.
     Supports either inline string or $ref to local YAML file.
@@ -428,24 +439,28 @@ def render_subfields(ROOT, mode, schema, properties, required, parent_anchor, le
         md.append(f"**Repeatable:** {rep}\n")
         md.append(f"**Accepted Values:** {typ}\n")
 
+        #check for usage note, but don't write just yet
+        if "usageNotes" in prop:
+            usage_note = get_schema_values(prop['usageNotes'], "usageNotes", ROOT)
+
         if "controlledVocab" in prop:
             if mode == "legacy":
-                controlledVocab = get_yaml_notes(prop['controlledVocab'], "controlledVocab", ROOT)
+                controlledVocab = get_schema_values(prop['controlledVocab'], "controlledVocab", ROOT)
                 md.append(f"**Controlled Vocabulary:** {controlledVocab}\n")
             else:
-                controlledVocab = cv_to_table(prop['controlledVocab'], ROOT)
-                if controlledVocab:
-                    md.append(f"**Controlled Vocabulary:** Local ICPSR controlled vocabulary. See below for terms and definitions:\n")
-                    md.extend(controlledVocab)
-                    md.append("\n")
+                md_table = cv_to_table(prop['controlledVocab'], ROOT)
+                #if table, then update usageNote
+                if md_table:
+                    usage_note = add_table_usageNotes(md_table, usage_note)
 
-        if "usageNotes" in prop:
-            note = get_yaml_notes(prop['usageNotes'], "usageNotes", ROOT)
-            if note:
-                md.append(f"**Usage Notes:** {note}\n")
+        if isinstance(usage_note, str):
+            md.append(f"**Usage Notes:** {usage_note}\n")
+        elif isinstance(usage_note, list):
+            usage_note[0] = "**Usage Notes:** " + usage_note[0]
+            md.extend(usage_note)
 
         if "icpsrGuidance" in prop:
-            icpsrGuidance = get_yaml_notes(prop['icpsrGuidance'], "icpsrGuidance", ROOT)
+            icpsrGuidance = get_schema_values(prop['icpsrGuidance'], "icpsrGuidance", ROOT)
             md.append(f"**ICPSR Input Guidance:** {icpsrGuidance}\n")
 
         # Recurse for nested subfields
@@ -486,24 +501,27 @@ def render_property(name, schema, ROOT, mode, TOP_LEVEL_REQUIRED):
     md.append(f"**Accepted Values:** {get_type(schema)}\n")
 
     # Check for additional keywords: controlledVocab and usageNotes
+    if "usageNotes" in schema:
+        usage_note = get_schema_values(schema['usageNotes'], "usageNotes", ROOT)
+
     if "controlledVocab" in schema:
         if mode == "legacy":
-            controlledVocab = get_yaml_notes(schema['controlledVocab'], "controlledVocab", ROOT)
+            controlledVocab = get_schema_values(schema['controlledVocab'], "controlledVocab", ROOT)
             md.append(f"**Controlled Vocabulary:** {controlledVocab}\n")
         else:
-            controlledVocab = cv_to_table(schema['controlledVocab'], ROOT)
-            if controlledVocab:
-                md.append(f"**Controlled Vocabulary:** Local ICPSR controlled vocabulary. See below for terms and definitions:\n\n")
-                md.extend(controlledVocab)
-                md.append("\n")
+            md_table = cv_to_table(schema['controlledVocab'], ROOT)
+            #if table, then update usageNote
+            if md_table:
+                usage_note = add_table_usageNotes(md_table, usage_note)
 
-    if "usageNotes" in schema:
-        note = get_yaml_notes(schema['usageNotes'], "usageNotes", ROOT)
-        if note:
-            md.append(f"**Usage Notes:** {note}\n")
+    if isinstance(usage_note, str):
+        md.append(f"**Usage Notes:** {usage_note}\n")
+    elif isinstance(usage_note, list):
+        usage_note[0] = "**Usage Notes:** " + usage_note[0]
+        md.extend(usage_note)
 
     if "icpsrGuidance" in schema:
-        icpsrGuidance = get_yaml_notes(schema['icpsrGuidance'], "icpsrGuidance", ROOT)
+        icpsrGuidance = get_schema_values(schema['icpsrGuidance'], "icpsrGuidance", ROOT)
         md.append(f"**ICPSR Input Guidance:** {icpsrGuidance}\n")
 
     properties, required_subfields = get_subfields(schema)

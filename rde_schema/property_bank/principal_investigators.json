@@ -11,7 +11,7 @@
         "$ref": "https://archive.icpsr.umich.edu/schema/property_banks/person/version/1",
         "title": "Person",
         "description": "Name and other details about the principal investigator, if it is an individual person.",
-        "usageNotes": { "$ref": "https://schemas.icpsr.umich.edu/notes/pi_person#/usageNotes" }
+        "usageNotes": { "$ref": "https://schemas.icpsr.umich.edu/notes/principal_investigators_person#/usageNotes" }
       },
       "organization": {
         "$ref": "https://archive.icpsr.umich.edu/schema/property_banks/organization/version/1",

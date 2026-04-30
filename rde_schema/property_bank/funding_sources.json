@@ -11,7 +11,7 @@
         "$ref": "https://archive.icpsr.umich.edu/schema/property_banks/organization/version/1",
         "title": "Funding Organization",
         "description": "Name and other details about the organization that provided the funding.",
-        "usageNotes": { "$ref": "https://schemas.icpsr.umich.edu/notes/funding_organization#/usageNotes" }
+        "usageNotes": { "$ref": "https://schemas.icpsr.umich.edu/notes/funding_sources_organization#/usageNotes" }
       },
       "grants": {
         "title": "Funding Awards",

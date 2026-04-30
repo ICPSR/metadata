@@ -3,7 +3,6 @@
   "$id": "https://archive.icpsr.umich.edu/schema/property_banks/ada_accessibility",
   "title": "ADA Accessibility",
   "description": "Indicates whether the data collection is ADA accessible, conforming to WCAG 2.1 AA standards, or qualifies for the ADA archival exception.",
-  "usageNotes": { "$ref": "https://schemas.icpsr.umich.edu/notes/ada_accessibility#/usageNotes" },
   "controlledVocab": "adaAccessibility",
   "type": "object",
   "properties": {
