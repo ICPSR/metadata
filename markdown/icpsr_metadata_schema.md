@@ -957,6 +957,16 @@ The textual description should not simply restate the time period in words. For 
 
 **Usage Notes:** In addition to the total geographic scope of the data, may include any additional levels of geographic coding provided in the variables.
 
+Geographic locations are drawn from the GeoNames geographical database. Source: https://www.geonames.org/
+
+When choosing Geographic Coverage Areas: 
+
+* Select the country, state, city, county, region, or continent covered by the study.  
+* Spell out place names completely instead of using acronyms. For example, enter "United States" instead of "USA."  
+* Type at least four characters to see matches.  
+* Choose only the narrowest level of geographic coverage. For example, if you select "Los Angeles, California, United States," do not also add "California, United States" and "United States."  
+* For studies with participants from around the world or that are applicable everywhere, select "Earth."
+
 #### Subfields:
 
 | Property | Required? | Repeatable? | Accepted Values | Description |
