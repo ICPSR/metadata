@@ -2,7 +2,7 @@
   $schema: https://json-schema.org/draft-07/schema#
   $id: https://schemas.icpsr.umich.edu/notes/funding_sources_organization
   usageNotes: |
-    Tips for entering the funding organization:
+    Tips for entering the Funding Organization:
 
       * Whenever possible, enter the organization’s name as it appears in the [Research Organization Registry](https://ror.org/) (ROR).  
       * Enter the name without any organization hierarchy, for example, "National Institute on Aging" instead of "United States Department of Health and Human Services. National Institutes of Health. National Institute on Aging". 
