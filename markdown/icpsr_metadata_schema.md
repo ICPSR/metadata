@@ -1,6 +1,6 @@
 # ICPSR Metadata Schema
 
-Last updated: April 29, 2026
+Last updated: April 30, 2026
 
 
 This metadata schema is used to describe data collections at the Inter-university Consortium for Political and Social Research (ICPSR) after 2026. 
@@ -106,7 +106,7 @@ Geography:
 
   * 'Global' may be appropriate for studies where the universe of participants is truly worldwide. Possible examples include online surveys that are not restricted by geography, or studies of organizations, such as NGOs. 
 
-  * Brackets are typically not indicated. They are indicated when a study has National, Federal, Congressional, or American in the title. Brackets can be indicated if a non-United States study has “National” in the title, or a similar word specific to that country.
+  * Brackets are typically not indicated. They are indicated when a study has National, Federal, Congressional, or American in the title. Brackets can be indicated if a non-United States study has "National" in the title, or a similar word specific to that country.
 
 Time Period:
 
@@ -1249,7 +1249,14 @@ The textual description should not simply restate the time period in words. For 
 
 **Accepted Values:** Multi-part element; see subfields
 
-**Controlled Vocabulary:** Local ICPSR controlled vocabulary. See below for terms and definitions:
+**Usage Notes:** Geographic Unit is intended to represent specific, known geography – e.g., county, census district, Zip code, electoral district, etc. – that is represented by a variable. 
+
+If the data do not include a geographic variable by which the data can be analyzed, this element is not indicated. If all the cases are from a single state, but the cases are not subdivided geographically within that state, then 'state' is not indicated. 
+
+If there is a variable indicating which testing site a survey was taken at, but the locations of the testing sites were masked by the PI, this element is likely not indicated.
+
+
+This field employs a local ICPSR controlled vocabulary; see below for terms and definitions:
 
 
 | Term | Definition |
@@ -1285,8 +1292,6 @@ The textual description should not simply restate the time period in words. For 
 | School District | The administrative boundary for local education systems, typically overseeing public schools from elementary through secondary levels. |
 | Indigenous/Tribal Lands | An area legally recognized as an Indigenous or tribal nation, often with unique legal, cultural, or sovereignty status. |
 
-
-**Usage Notes:** Geographic Unit is intended to represent specific, known geography -- e.g., county, census district, FIPS code, electoral district, and any other conveyor of specific geography that is represented by a variable. If the data do not include a geographic variable by which the data can be analyzed, this element is not indicated. If all the cases are from a single state, but the cases are not subdivided geographically within that state, then 'state' is not indicated. If there is a variable indicating which testing site a survey was taken at, but the locations of the testing sites were masked by the PI, this element is likely not indicated.
 
 #### Subfields:
 
@@ -2790,7 +2795,7 @@ The textual description should not simply restate the time period in words. For 
 
 **Accepted Values:** Multi-part element; see subfields
 
-**Controlled Vocabulary:** Local ICPSR controlled vocabulary. See below for terms and definitions:
+**Usage Notes:** This field employs a local ICPSR controlled vocabulary; see below for terms and definitions:
 
 
 | Term | Definition |
@@ -2798,13 +2803,6 @@ The textual description should not simply restate the time period in words. For 
 | ADA Accessible | The item is ADA accessible, conforming to WCAG 2.1 AA standards. |
 | ADA Archival | The item is not ADA accessible, but qualifies for the ADA archival exception. |
 
-
-**Usage Notes:** Local ICPSR controlled vocabulary. See below for terms and definitions:
-
-| Term | Definition |
-|------|------------|
-| ADA Accessible | The item is ADA accessible, conforming to WCAG 2.1 AA standards. |
-| ADA Archival | The item is not ADA accessible, but qualifies for the ADA archival exception. |
 
 #### Subfields:
 

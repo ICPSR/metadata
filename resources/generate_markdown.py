@@ -158,9 +158,9 @@ def add_table_usageNotes(md_table, old_usage_note):
     # set up header and table for later use
     header = "This field employs a local ICPSR controlled vocabulary; see below for terms and definitions:"
     if old_usage_note:
-        usage_notes = [old_usage_note, "\n\n", header, "\n\n", *md_table, "\n"]
+        usage_notes = [old_usage_note, "\n", header, "\n", *md_table, "\n"]
     else:
-        usage_notes = [header, "\n\n", *md_table, "\n"]
+        usage_notes = [header, "\n", *md_table, "\n"]
 
     return usage_notes
 
@@ -178,7 +178,7 @@ def get_schema_values(note, term, ROOT):
         filename = ref.split("notes/")[-1].split("#")[0].rstrip("/")
         notes_file = Path(ROOT, "notes", f"{filename}.yaml")
         if notes_file.exists():
-            with open(notes_file, "r") as f:
+            with open(notes_file, "r", encoding="utf-8") as f:
                 data = yaml.safe_load(f)
             match = data.get(term)
             
@@ -440,6 +440,7 @@ def render_subfields(ROOT, mode, schema, properties, required, parent_anchor, le
         md.append(f"**Accepted Values:** {typ}\n")
 
         #check for usage note, but don't write just yet
+        usage_note = None
         if "usageNotes" in prop:
             usage_note = get_schema_values(prop['usageNotes'], "usageNotes", ROOT)
 
@@ -501,6 +502,7 @@ def render_property(name, schema, ROOT, mode, TOP_LEVEL_REQUIRED):
     md.append(f"**Accepted Values:** {get_type(schema)}\n")
 
     # Check for additional keywords: controlledVocab and usageNotes
+    usage_note = None
     if "usageNotes" in schema:
         usage_note = get_schema_values(schema['usageNotes'], "usageNotes", ROOT)
 
@@ -569,7 +571,8 @@ def main():
         "--mode",
         choices=["legacy", "current"],
         default="directory",
-        help="Whether to process legacy or current ICPSR metadata schema."
+        help="Whether to process legacy or current ICPSR metadata schema.",
+        required=True
     )
     args = parser.parse_args()
     input_path = Path(args.input)
