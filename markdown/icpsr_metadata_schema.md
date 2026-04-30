@@ -323,7 +323,7 @@ Time Period:
 
 **Accepted Values:** Multi-part element; for more information, see the [Organization](#organization) field
 
-**Usage Notes:** Tips for entering the funding organization:
+**Usage Notes:** Tips for entering the Funding Organization:
 
   * Whenever possible, enter the organization’s name as it appears in the [Research Organization Registry](https://ror.org/) (ROR).  
   * Enter the name without any organization hierarchy, for example, "National Institute on Aging" instead of "United States Department of Health and Human Services. National Institutes of Health. National Institute on Aging". 
@@ -1249,7 +1249,7 @@ The textual description should not simply restate the time period in words. For 
 
 **Accepted Values:** Multi-part element; see subfields
 
-**Usage Notes:** Geographic Unit is intended to represent specific, known geography – e.g., county, census district, Zip code, electoral district, etc. – that is represented by a variable. 
+**Usage Notes:** Smallest Geographic Unit is intended to represent specific, known geography – e.g., county, census district, Zip code, electoral district, etc. – that is represented by a variable. 
 
 If the data do not include a geographic variable by which the data can be analyzed, this element is not indicated. If all the cases are from a single state, but the cases are not subdivided geographically within that state, then 'state' is not indicated. 
 
