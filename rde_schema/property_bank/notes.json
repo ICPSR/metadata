@@ -3,7 +3,7 @@
   "$id": "https://archive.icpsr.umich.edu/schema/property_banks/notes",
   "title": "Notes",
   "description": "Important details about the data collection (like unique authoring, discrepancies, or processing information) that can't be recorded in other metadata elements.",
-  "usageNotes": "Collection Notes should include any information that does not fit anywhere else in the metadata, such as: information about unique aspects of the way the data was processed, discrepancies between the metadata and documentation files, information about the research team, or series-specific notes.",
+  "usageNotes": "Notes should include any information that does not fit anywhere else in the metadata, such as: information about unique aspects of the way the data was processed, discrepancies between the metadata and documentation files, information about the research team, or series-specific notes.",
   "type": "array",
   "items": { "type": "string" },
   "examples": [

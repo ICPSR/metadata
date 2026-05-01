@@ -3,7 +3,7 @@
   "$id": "https://archive.icpsr.umich.edu/schema/property_banks/data_source_types",
   "title": "Data Source Types",
   "description": "The source(s) of the data as collected by the Principal Investigators.",
-  "usageNotes": "This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance CV DataSourceType https://rdf-vocabulary.ddialliance.org/ddi-cv/DataSourceType/1.0.2/DataSourceType.html. People, things, and other data can all be Data Source Types.",
+  "usageNotes": "This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance CV DataSourceType [https://rdf-vocabulary.ddialliance.org/ddi-cv/DataSourceType/1.0.2/DataSourceType.html](https://rdf-vocabulary.ddialliance.org/ddi-cv/DataSourceType/1.0.2/DataSourceType.html).",
   "controlledVocab": "dataSourceTypes",
   "type": "array",
   "items": {
