@@ -3,7 +3,7 @@
   "$id": "https://archive.icpsr.umich.edu/schema/property_banks/mesh_subject_terms",
   "title": "Medical Subject Headings (MeSH) Terms",
   "description": "Biomedical and health-related terms from the National Library of Medicine that describe the data collection's topics.",
-  "usageNotes": "This controlled vocabulary was taken from the National Library of Medicine's Medical Subject Headings (MeSH). Source: https://www.ncbi.nlm.nih.gov/mesh/",
+  "usageNotes": "This controlled vocabulary was taken from the National Library of Medicine's Medical Subject Headings (MeSH). Source: [https://www.ncbi.nlm.nih.gov/mesh/](https://www.ncbi.nlm.nih.gov/mesh/)",
   "type": "array",
   "controlledVocab": "mesh",
   "items": {

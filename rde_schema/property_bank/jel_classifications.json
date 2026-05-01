@@ -3,7 +3,7 @@
   "$id": "https://archive.icpsr.umich.edu/schema/property_banks/jel_classifications",
   "title": "Journal of Economic Literature (JEL) Classification Codes",
   "description": "Classification codes used to categorize economic research.",
-  "usageNotes": "This controlled vocabulary was taken from the American Economic Association's JEL Classifications Codes. Source: https://www.aeaweb.org/jel/guide/jel.php",
+  "usageNotes": "This controlled vocabulary was taken from the American Economic Association's JEL Classifications Codes. Source: [https://www.aeaweb.org/jel/guide/jel.php](https://www.aeaweb.org/jel/guide/jel.php)",
   "controlledVocab": "jelClassifications",
   "type": "array",
   "items": {

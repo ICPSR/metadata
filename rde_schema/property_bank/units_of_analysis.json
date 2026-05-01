@@ -3,7 +3,7 @@
   "$id": "https://archive.icpsr.umich.edu/schema/property_banks/units_of_analysis",
   "title": "Units of Analysis",
   "description": "The object(s) of analysis for the data collection, such as an organization, individual, or household.",
-  "usageNotes": "This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance CV AnalysisUnit https://rdf-vocabulary.ddialliance.org/ddi-cv/AnalysisUnit/2.1.3/AnalysisUnit.html.",
+  "usageNotes": "This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance CV AnalysisUnit [https://rdf-vocabulary.ddialliance.org/ddi-cv/AnalysisUnit/2.1.3/AnalysisUnit.html](https://rdf-vocabulary.ddialliance.org/ddi-cv/AnalysisUnit/2.1.3/AnalysisUnit.html).",
   "controlledVocab": "analysisUnits",
   "type": "array",
   "items": {

@@ -3,7 +3,7 @@
   "$id": "https://archive.icpsr.umich.edu/schema/property_banks/time_methods",
   "title": "Time Methods",
   "description": "The methods used to collect data over time, like snapshots at one point (cross-sectional) or repeatedly (longitudinal) to study changes or trends.",
-  "usageNotes": "This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance CV TimeMethod https://rdf-vocabulary.ddialliance.org/ddi-cv/TimeMethod/1.2.3/TimeMethod.html.",
+  "usageNotes": "This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance CV TimeMethod [https://rdf-vocabulary.ddialliance.org/ddi-cv/TimeMethod/1.2.3/TimeMethod.html](https://rdf-vocabulary.ddialliance.org/ddi-cv/TimeMethod/1.2.3/TimeMethod.html).",
   "controlledVocab": "timeMethods",
   "type": "array",
   "items": {

@@ -3,7 +3,7 @@
   "$id": "https://archive.icpsr.umich.edu/schema/property_banks/collection_modes",
   "title": "Collection Modes",
   "description": "The method(s) or procedure(s) used to collect the data, such as an interview or experiment.",
-  "usageNotes": "This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance CV ModeOfCollection https://rdf-vocabulary.ddialliance.org/ddi-cv/ModeOfCollection/4.0.3/ModeOfCollection.html.",
+  "usageNotes": "This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance CV ModeOfCollection [https://rdf-vocabulary.ddialliance.org/ddi-cv/ModeOfCollection/4.0.3/ModeOfCollection.html](https://rdf-vocabulary.ddialliance.org/ddi-cv/ModeOfCollection/4.0.3/ModeOfCollection.html).",
   "controlledVocab": "collectionModes",
   "type": "array",
   "items": {

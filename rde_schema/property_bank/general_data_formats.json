@@ -3,7 +3,7 @@
   "$id": "https://archive.icpsr.umich.edu/schema/property_banks/general_data_formats",
   "title": "General Data Formats",
   "description": "The file format types present in the data collection.",
-  "usageNotes": "This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance CV GeneralDataFormat https://rdf-vocabulary.ddialliance.org/ddi-cv/GeneralDataFormat/2.0.3/GeneralDataFormat.html.",
+  "usageNotes": "This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance CV GeneralDataFormat [https://rdf-vocabulary.ddialliance.org/ddi-cv/GeneralDataFormat/2.0.3/GeneralDataFormat.html](https://rdf-vocabulary.ddialliance.org/ddi-cv/GeneralDataFormat/2.0.3/GeneralDataFormat.html).",
   "controlledVocab": "generalDataFormats",
   "type": "array",
   "items": {

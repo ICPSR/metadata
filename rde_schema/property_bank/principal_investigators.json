@@ -17,7 +17,7 @@
         "$ref": "https://archive.icpsr.umich.edu/schema/property_banks/organization/version/1",
         "title": "Organization",
         "description": "Name and other details about the principal investigator, if it is an organization.",
-        "usageNotes": "When the PI is an organization, Enter the name as it appears in the [Research Organization Registry](https://ror.org/) (ROR). If the organization doesn’t have a ROR ID, use its full name and avoid acronyms."
+        "usageNotes": "When the PI is an organization, enter the name as it appears in the [Research Organization Registry](https://ror.org/) (ROR). If the organization doesn’t have a ROR ID, use its full name and avoid acronyms."
       },
       "order": {
         "title": "Order",

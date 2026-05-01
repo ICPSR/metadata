@@ -3,7 +3,7 @@
   "$id": "https://archive.icpsr.umich.edu/schema/property_banks/icpsr_subject_terms",
   "title": "ICPSR Subject Terms",
   "description": "A controlled list of social science terms maintained by ICPSR and used to indicate topics related to the data collection.",
-  "usageNotes": "This controlled vocabulary was taken from the ICPSR Subject Terms Thesaurus. Source: https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001.",
+  "usageNotes": "This controlled vocabulary was taken from the ICPSR Subject Terms Thesaurus. Source: [https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001](https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001).",
   "controlledVocab": "subjectTerms",
   "type": "array",
   "items": {
