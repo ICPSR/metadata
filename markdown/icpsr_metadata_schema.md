@@ -1831,7 +1831,7 @@ This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance
 
 **Accepted Values:** Multi-part element; see subfields
 
-**Usage Notes:** This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance CV DataSourceType [https://rdf-vocabulary.ddialliance.org/ddi-cv/DataSourceType/1.0.2/DataSourceType.html](https://rdf-vocabulary.ddialliance.org/ddi-cv/DataSourceType/1.0.2/DataSourceType.html).
+**Usage Notes:** People, things, and other data can all be Data Source Types. This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance CV DataSourceType [https://rdf-vocabulary.ddialliance.org/ddi-cv/DataSourceType/1.0.2/DataSourceType.html](https://rdf-vocabulary.ddialliance.org/ddi-cv/DataSourceType/1.0.2/DataSourceType.html).
 
 #### Subfields:
 
