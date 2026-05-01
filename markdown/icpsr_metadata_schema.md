@@ -1,6 +1,6 @@
 # ICPSR Metadata Schema
 
-Last updated: April 30, 2026
+Last updated: May 01, 2026
 
 
 This metadata schema is used to describe data collections at the Inter-university Consortium for Political and Social Research (ICPSR) after 2026. 
@@ -225,7 +225,7 @@ Time Period:
 
 **Accepted Values:** Multi-part element; for more information, see the [Organization](#organization) field
 
-**Usage Notes:** When the PI is an organization, Enter the name as it appears in the [Research Organization Registry](https://ror.org/) (ROR). If the organization doesn’t have a ROR ID, use its full name and avoid acronyms.
+**Usage Notes:** When the PI is an organization, enter the name as it appears in the [Research Organization Registry](https://ror.org/) (ROR). If the organization doesn’t have a ROR ID, use its full name and avoid acronyms.
 
 <a name="principal-investigators_order"></a>
 ##### Order
@@ -327,8 +327,7 @@ Time Period:
 
   * Whenever possible, enter the organization’s name as it appears in the [Research Organization Registry](https://ror.org/) (ROR).  
   * Enter the name without any organization hierarchy, for example, "National Institute on Aging" instead of "United States Department of Health and Human Services. National Institutes of Health. National Institute on Aging". 
-  * If the organization doesn’t have a ROR, use its full name and avoid acronyms.  
-  * Whenever possible, include a unique identifier for the funding award. This can be a grant number; a URL, preferably a persistent one like a digital object identifier (DOI); or both.
+  * If the organization doesn’t have a ROR, use its full name and avoid acronyms.
 
 <a name="funding-sources_grants"></a>
 ##### Funding Awards
@@ -459,7 +458,7 @@ Time Period:
 
 **Usage Notes:** The Summary may include information about the different parts of the data collection not adequately conveyed by the Fileset names or found elsewhere in the metadata. Other important components include a listing of major variables or categories of variables (with examples) as well as an indication of the data collection's unit of analysis (i.e., who or what is being studied: individuals, housing units, courts, criminal acts, etc.). Most often the unit of analysis is the individual; where it is not, it is particularly important to make this clear.
 
-The Summary is written in the third person and avoids attempting to address issues of how the data might be used, who might be interested in the data, or any evaluative comments about the worth or usefulness of the data collection. The Summary uses past tense when describing the process of collecting the data and present tense when necessary, such as when describing the data (e.g., 'The MIDUS Refresher collection is split into two datasets.'). Numerals are used instead of spelling them out; if a number is spelled out for emphasis, the number is attached in parentheses (e.g. 'Two thousand (2,000)').
+The Summary is written in the third person and avoids attempting to address issues of how the data might be used, who might be interested in the data, or any evaluative comments about the worth or usefulness of the data collection. The Summary uses past tense when describing the process of collecting the data and present tense when necessary, such as when describing the data (e.g., 'The MIDUS Refresher collection is split into two datasets.'). Numerals are used instead of spelling them out; if a number is spelled out for emphasis, the number is attached in parentheses – e.g. 'Two thousand (2,000)'.
 
 **Examples:**
 
@@ -485,7 +484,7 @@ The Summary is written in the third person and avoids attempting to address issu
 
 **Accepted Values:** Multi-part element; see subfields
 
-**Usage Notes:** This controlled vocabulary was taken from the ICPSR Subject Terms Thesaurus. Source: https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001.
+**Usage Notes:** This controlled vocabulary was taken from the ICPSR Subject Terms Thesaurus. Source: [https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001](https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001).
 
 #### Subfields:
 
@@ -598,7 +597,7 @@ The Summary is written in the third person and avoids attempting to address issu
 
 **Accepted Values:** Multi-part element; see subfields
 
-**Usage Notes:** This controlled vocabulary was taken from the American Economic Association's JEL Classifications Codes. Source: https://www.aeaweb.org/jel/guide/jel.php
+**Usage Notes:** This controlled vocabulary was taken from the American Economic Association's JEL Classifications Codes. Source: [https://www.aeaweb.org/jel/guide/jel.php](https://www.aeaweb.org/jel/guide/jel.php)
 
 #### Subfields:
 
@@ -715,7 +714,7 @@ The Summary is written in the third person and avoids attempting to address issu
 
 **Accepted Values:** Multi-part element; see subfields
 
-**Usage Notes:** This controlled vocabulary was taken from the National Library of Medicine's Medical Subject Headings (MeSH). Source: https://www.ncbi.nlm.nih.gov/mesh/
+**Usage Notes:** This controlled vocabulary was taken from the National Library of Medicine's Medical Subject Headings (MeSH). Source: [https://www.ncbi.nlm.nih.gov/mesh/](https://www.ncbi.nlm.nih.gov/mesh/)
 
 #### Subfields:
 
@@ -957,7 +956,7 @@ The textual description should not simply restate the time period in words. For 
 
 **Usage Notes:** In addition to the total geographic scope of the data, may include any additional levels of geographic coding provided in the variables.
 
-Geographic locations are drawn from the GeoNames geographical database. Source: https://www.geonames.org/
+Geographic locations are drawn from the GeoNames geographical database. Source: [https://www.geonames.org/](https://www.geonames.org/)
 
 When choosing Geographic Coverage Areas: 
 
@@ -1484,7 +1483,7 @@ This field employs a local ICPSR controlled vocabulary; see below for terms and 
 
 **Accepted Values:** Multi-part element; see subfields
 
-**Usage Notes:** This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance CV TimeMethod https://rdf-vocabulary.ddialliance.org/ddi-cv/TimeMethod/1.2.3/TimeMethod.html.
+**Usage Notes:** This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance CV TimeMethod [https://rdf-vocabulary.ddialliance.org/ddi-cv/TimeMethod/1.2.3/TimeMethod.html](https://rdf-vocabulary.ddialliance.org/ddi-cv/TimeMethod/1.2.3/TimeMethod.html).
 
 #### Subfields:
 
@@ -1601,7 +1600,7 @@ This field employs a local ICPSR controlled vocabulary; see below for terms and 
 
 **Accepted Values:** Multi-part element; see subfields
 
-**Usage Notes:** This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance CV AnalysisUnit https://rdf-vocabulary.ddialliance.org/ddi-cv/AnalysisUnit/2.1.3/AnalysisUnit.html.
+**Usage Notes:** This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance CV AnalysisUnit [https://rdf-vocabulary.ddialliance.org/ddi-cv/AnalysisUnit/2.1.3/AnalysisUnit.html](https://rdf-vocabulary.ddialliance.org/ddi-cv/AnalysisUnit/2.1.3/AnalysisUnit.html).
 
 #### Subfields:
 
@@ -1718,7 +1717,9 @@ This field employs a local ICPSR controlled vocabulary; see below for terms and 
 
 **Accepted Values:** Text
 
-**Usage Notes:** The sample is a selection out of the universe of all possible relevant cases (e.g., adults in the United States, housing units in three counties of Michigan, etc.) that could have been included in the data collection. Note that some studies, such as censuses, do not utilize samples but include all members of the universe. This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance CV SamplingProcedure https://rdf-vocabulary.ddialliance.org/ddi-cv/SamplingProcedure/1.1.4/SamplingProcedure.html.
+**Usage Notes:** The sample is a selection out of the universe of all possible relevant cases (e.g., adults in the United States, housing units in three counties of Michigan, etc.) that could have been included in the data collection. Note that some studies, such as censuses, do not utilize samples but include all members of the universe.  
+
+This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance CV SamplingProcedure [https://rdf-vocabulary.ddialliance.org/ddi-cv/SamplingProcedure/1.1.4/SamplingProcedure.html](https://rdf-vocabulary.ddialliance.org/ddi-cv/SamplingProcedure/1.1.4/SamplingProcedure.html)
 
 **Examples:**
 
@@ -1977,7 +1978,7 @@ This field employs a local ICPSR controlled vocabulary; see below for terms and 
 
 **Accepted Values:** Multi-part element; see subfields
 
-**Usage Notes:** This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance CV ModeOfCollection https://rdf-vocabulary.ddialliance.org/ddi-cv/ModeOfCollection/4.0.3/ModeOfCollection.html.
+**Usage Notes:** This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance CV ModeOfCollection [https://rdf-vocabulary.ddialliance.org/ddi-cv/ModeOfCollection/4.0.3/ModeOfCollection.html](https://rdf-vocabulary.ddialliance.org/ddi-cv/ModeOfCollection/4.0.3/ModeOfCollection.html).
 
 #### Subfields:
 
@@ -2659,7 +2660,7 @@ The textual description should not simply restate the time period in words. For 
 
 **Accepted Values:** Multi-part element; see subfields
 
-**Usage Notes:** This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance CV GeneralDataFormat https://rdf-vocabulary.ddialliance.org/ddi-cv/GeneralDataFormat/2.0.3/GeneralDataFormat.html.
+**Usage Notes:** This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance CV GeneralDataFormat [https://rdf-vocabulary.ddialliance.org/ddi-cv/GeneralDataFormat/2.0.3/GeneralDataFormat.html](https://rdf-vocabulary.ddialliance.org/ddi-cv/GeneralDataFormat/2.0.3/GeneralDataFormat.html).
 
 #### Subfields:
 
