@@ -1,6 +1,6 @@
 # ICPSR Legacy Metadata Schema
 
-Last updated: April 30, 2026
+Last updated: May 04, 2026
 
 
 This metadata schema was used to describe curated data collections at the Inter-university Consortium for Political and Social Research (ICPSR) through approximately 2026. Beginning in 2026, it is being phased out and replaced by [an updated metadata schema](https://icpsr.github.io/metadata/icpsr_metadata_schema/).
