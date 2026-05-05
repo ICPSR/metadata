@@ -201,9 +201,10 @@ def cv_to_table(cv_name, ROOT):
     temp_md.append("|------|------------|")
 
     for item in cv_data:
-        term = item.get("label", "")
-        definition = item.get("description", "")
-        temp_md.append(f"| {term} | {definition} |")
+        if item.get("path", ""):
+            term = item.get("label", "")
+            definition = item.get("description", "")
+            temp_md.append(f"| {term} | {definition} |")
 
     return temp_md
 
