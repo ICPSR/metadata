@@ -2869,6 +2869,8 @@ The textual description should not simply restate the time period in words. For 
 
 | Term | Definition |
 |------|------------|
+| ADA Accessible | The item is ADA accessible, conforming to WCAG 2.1 AA standards. |
+| ADA Archival | The item is not ADA accessible, but qualifies for the ADA archival exception. |
 
 
 #### Subfields:

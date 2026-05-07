@@ -186,7 +186,7 @@ def get_schema_values(note, term, ROOT):
             
     return None
 
-def cv_to_table(cv_name, ROOT):   
+def cv_to_table(cv_name, ROOT):
     cv_file = Path(ROOT / "vocab_preset" / "data" / f"{cv_name}.json")
     # return None if there is no matching CV
     if not cv_file.is_file():
@@ -196,16 +196,18 @@ def cv_to_table(cv_name, ROOT):
     with cv_file.open("r", encoding="utf-8") as f:
         cv_data = json.load(f)
 
+    has_paths = any('path' in obj for obj in cv_data)
+
     temp_md = []
     temp_md.append("| Term | Definition |")
     temp_md.append("|------|------------|")
 
     for item in cv_data:
-        if item.get("path", ""):
-            term = item.get("label", "")
-            definition = item.get("description", "")
-            temp_md.append(f"| {term} | {definition} |")
-
+        if has_paths and not item.get("path"):
+            continue
+        term = item.get("label", "")
+        definition = item.get("description", "")
+        temp_md.append(f"| {term} | {definition} |")
     return temp_md
 
 def type_label(t):
