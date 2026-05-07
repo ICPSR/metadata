@@ -1,6 +1,6 @@
 # ICPSR Metadata Schema
 
-Last updated: May 05, 2026
+Last updated: May 07, 2026
 
 
 This metadata schema is used to describe data collections at the Inter-university Consortium for Political and Social Research (ICPSR) after 2026. 
@@ -188,6 +188,8 @@ Time Period:
 
 **Accepted Values:** Multi-part element; see subfields
 
+**Usage Notes:** List individuals and organizations that are chiefly responsible for the study across its entire life cycle or made significant intellectual contributions to the research.
+
 #### Subfields:
 
 | Property | Required? | Repeatable? | Accepted Values | Description |
@@ -207,12 +209,36 @@ Time Period:
 
 **Accepted Values:** Multi-part element; for more information, see the [Person](#person) field
 
-**Usage Notes:** When the PI is a person:
+**Usage Notes:** When entering the name of a principal investigator who is a person:
 
-  *  Use "Search for a Person" to enter the name, affiliation, and ORCID ID that appear in the person's [ORCID](https://orcid.org/) profile.  
-  *  If you can't find an ORCID ID for a PI, enter their full name the way it appears in publications or their curriculum vitae. Enter middle names and initials in the Given Name field and suffixes (e.g. Jr., III) in the Family Name field.  
-  *  Enter the PI's affiliation as it appears in the [Research Organization Registry](https://ror.org/) (ROR). If the organization doesn't have a ROR ID, use its full name, avoid acronyms, and do not include departments or colleges.  
-  *  Enter a PI's affiliation at the time the research was conducted.
+  * Enter a specific and unique name, for example, by including full names and middle initials where appropriate.  
+  * Follow commonly accepted, language-appropriate practices for capitalization and punctuation.  
+  * Within the bounds of these first two principles, follow the PI’s precedent for how their name appears in print.
+
+To determine the preferred form of name to appear in ICPSR’s metadata catalog, consult the following authority sources, in this order. 
+  * ICPSR's metadata catalog. If the PI has published data with ICPSR before, especially curated data, use the name as it appears in previous studies.
+  * The PI’s curriculum vitae published on an institutional website.
+  * The [Virtual International Authority File](https://viaf.org/en) (VIAF). 
+  * The PI’s [Open Researcher and Contributor Identifier](https://orcid.org/) (ORCID) record.
+  * The PI’s Google Scholar profile.
+  * The PI’s other published works.
+  * The PI’s bio on their organization’s website.
+
+The given (i.e., 'first') name may include the middle name or initial. If the person only uses an inital for the given name, do not include a space between first and middle initials (e.g., 'E.V.'). The family (i.e., 'last') name can include any suffixes (such as 'II' or 'Jr.'). Abbreviations are discouraged (especially 'et al.').
+
+Whenever possible, add an ORCID for each principal investigator.
+
+When entering a principal investigator's affiliation(s):
+  * Enter the PI's affiliation as it appears in the Research Organization Registry (ROR).  
+  * If the organization doesn't have a ROR ID, enter its full name, avoid acronyms, and do not include departments or colleges. Consult the following sources authority sources to determine the preferred name form.
+    * ICPSR’s metadata catalog. If other PIs affiliated with this organization have published data with ICPSR before, especially curated data, use the name as it appears in previous studies.
+    * The organization's website.
+    * The Virtual International Authority File (VIAF).
+  * Enter a PI's affiliation at the time the research was conducted. If the organization's name has changed over time, enter the name that applied at the time the research was conducted.
+  * If a PI's affiliation has both English and non-English name forms in ROR or VIAF, select a preferred English language form.
+  * If a PI's organizational affiliation is not known, use the term 'Unknown' in the PI Organization element.
+  * If multiple PIs (people) are affiliated with the same organization, include the affiliated organization's name for each person.
+  * If a PI has multiple affiliations, enter each organization as its own affiliation.
 
 <a name="principal-investigators_organization"></a>
 ##### Organization
@@ -224,8 +250,6 @@ Time Period:
 **Repeatable:** No
 
 **Accepted Values:** Multi-part element; for more information, see the [Organization](#organization) field
-
-**Usage Notes:** When the PI is an organization, enter the name as it appears in the [Research Organization Registry](https://ror.org/) (ROR). If the organization doesn’t have a ROR ID, use its full name and avoid acronyms.
 
 <a name="principal-investigators_order"></a>
 ##### Order
@@ -323,11 +347,18 @@ Time Period:
 
 **Accepted Values:** Multi-part element; for more information, see the [Organization](#organization) field
 
-**Usage Notes:** Tips for entering the Funding Organization:
+**Usage Notes:** When entering the name of a funding organization:
 
   * Whenever possible, enter the organization’s name as it appears in the [Research Organization Registry](https://ror.org/) (ROR).  
-  * Enter the name without any organization hierarchy, for example, "National Institute on Aging" instead of "United States Department of Health and Human Services. National Institutes of Health. National Institute on Aging". 
-  * If the organization doesn’t have a ROR, use its full name and avoid acronyms.
+  * If the funding organization is a department or subunit of an organization that appears in ROR, but does not have its own ROR ID, enter the organization name as it appears in ROR, followed by a period and the name of the department or subunit.
+  * If the organization doesn't have a ROR ID, use its full name and avoid acronyms. Consult the following sources authority sources to determine the preferred name form.
+    * ICPSR’s metadata catalog. If the organization has funded data collections with ICPSR before, especially curated data, use the name as it appears in previous studies.
+    * The organization's website.
+    * The [Virtual International Authority File](https://viaf.org/en) (VIAF).
+  * Except for principal investigators that are departments or subunits of organizations in ROR, do not prepend the organization's name with its institutional hierarchy. For example, enter "National Institute on Aging" instead of "United States Department of Health and Human Services. National Institutes of Health. National Institute on Aging". 
+  * If the organization's name has changed over time, enter the name that applied at the time the research was conducted.
+
+  The Principal Investigator's home institution does not need to be listed as a funding agency unless the PI provides a grant number (or other award information) or makes a specific request.
 
 <a name="funding-sources_grants"></a>
 ##### Funding Awards
@@ -832,8 +863,6 @@ The Summary is written in the third person and avoids attempting to address issu
 
 **Accepted Values:** Text
 
-**Usage Notes:** Dates are formatted in accordance with ISO 8601 (YYYY-MM-DD, YYYY-MM, or YYYY). No spaces are permitted in date expressions.
-
 **Examples:**
 
 ```text
@@ -858,8 +887,6 @@ The Summary is written in the third person and avoids attempting to address issu
 **Repeatable:** No
 
 **Accepted Values:** Text
-
-**Usage Notes:** Dates are formatted in accordance with ISO 8601 (YYYY-MM-DD, YYYY-MM, or YYYY). No spaces are permitted in date expressions.
 
 **Examples:**
 
@@ -954,17 +981,36 @@ The textual description should not simply restate the time period in words. For 
 
 **Accepted Values:** Multi-part element; see subfields
 
-**Usage Notes:** In addition to the total geographic scope of the data, Geographic Coverage Areas may include any additional levels of geographic coding provided in the variables.
-
-Geographic locations are drawn from the GeoNames geographical database. Source: [https://www.geonames.org/](https://www.geonames.org/)
-
-When choosing Geographic Coverage Areas: 
+**Usage Notes:** When choosing Geographic Coverage Areas: 
 
 * Select the country, state, city, county, region, or continent covered by the study.  
 * Spell out place names completely instead of using acronyms. For example, enter "United States" instead of "USA."  
 * Type at least four characters to see matches.  
 * Choose only the narrowest level of geographic coverage. For example, if you select "Los Angeles, California, United States," do not also add "California, United States" and "United States."  
-* For studies with participants from around the world or that are applicable everywhere, select "Earth."
+* For studies with participants from around the world or that are applicable everywhere, select "Earth."   
+
+Geographic locations are drawn from the GeoNames geographical database. Source: [https://www.geonames.org/](https://www.geonames.org/). Allowable feature codes include:
+
+* From Feature Class A (country, state, region,... – e.g., Administrative Divisions):
+  * ADM1 (first-order administrative division – e.g., US states, Canadian provinces, etc.)
+  * ADM2 (second-order administrative division – e.g. US counties)
+  * PCLI (independent political entity – e.g., countries)
+  * PCLD (dependent political entity – e.g., Puerto Rico and Guam)
+  * PCLF (freely associated state – e.g., Palau, Micronesia, and Marshall Islands)
+  * PCLH (historical political entity – e.g., former entities like Yugoslavia and USSR) 
+  * PCLS (semi-independent political entity – e.g., Palestine, Macao, and Hong Kong)
+  * PCL (political entity – e.g., Guernsey, Jersey, and Isle of Man)
+  * TERR (territory – e.g., American Samoa, Svalbard and Jan Mayen, etc.)
+  * ZN (zone – e.g., European Union, Commonwealth of Nations, and NATO)
+* From Feature Class P (city, village,... – e.g., Populated Places)
+  * PPLG (seat of government of a political entity)
+  * PPLC (capital of a political entity)
+  * PPLA (seat of a first-order administrative division)
+  * PPLA2 (seat of a second-order administrative division)
+  * PPL (populated place)
+* From Feature Class L (parks,area, ..)
+  * RGN (region)
+  * CONT (continent)
 
 #### Subfields:
 
@@ -2101,8 +2147,6 @@ This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance
 
 **Accepted Values:** Text
 
-**Usage Notes:** Dates are formatted in accordance with ISO 8601 (YYYY-MM-DD, YYYY-MM, or YYYY). No spaces are permitted in date expressions.
-
 **Examples:**
 
 ```text
@@ -2127,8 +2171,6 @@ This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance
 **Repeatable:** No
 
 **Accepted Values:** Text
-
-**Usage Notes:** Dates are formatted in accordance with ISO 8601 (YYYY-MM-DD, YYYY-MM, or YYYY). No spaces are permitted in date expressions.
 
 **Examples:**
 
@@ -2786,6 +2828,14 @@ The textual description should not simply restate the time period in words. For 
 **Accepted Values:** Text
 
 **Examples:**
+
+```text
+"ECIN-Mar-2025-0078.R2"
+```
+
+```text
+"AER-2019-0000"
+```
 
 
 ---
