@@ -4,5 +4,5 @@
   "title": "Manuscript Number",
   "description": "A unique identifier that associates the data collection with a manuscript submitted to a journal.",
   "type": "string",
-  "examples": []
+  "examples": ["ECIN-Mar-2025-0078.R2", "AER-2019-0000"]
 }

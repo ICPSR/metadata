@@ -10,14 +10,12 @@
       "start_date": {
         "title": "Start Date",
         "description": "The start date of the data collection period. Must be in YYYY-MM-DD, YYYY-MM, or YYYY format with no spaces.",
-        "usageNotes": "Dates are formatted in accordance with ISO 8601 (YYYY-MM-DD, YYYY-MM, or YYYY). No spaces are permitted in date expressions.",
         "type": "string",
         "examples": ["2000", "2019-10", "2021-03-01"]
       },
       "end_date": {
         "title": "End Date",
         "description": "The end date of the data collection period. Must be in YYYY-MM-DD, YYYY-MM, or YYYY format with no spaces.",
-        "usageNotes": "Dates are formatted in accordance with ISO 8601 (YYYY-MM-DD, YYYY-MM, or YYYY). No spaces are permitted in date expressions.",
         "type": "string",
         "examples": ["2000", "2019-10", "2021-03-01"]
       },

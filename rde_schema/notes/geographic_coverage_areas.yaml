@@ -2,10 +2,6 @@
   $schema: https://json-schema.org/draft-07/schema#
   $id: https://schemas.icpsr.umich.edu/notes/geographic_coverage_areas
   usageNotes: |
-    In addition to the total geographic scope of the data, Geographic Coverage Areas may include any additional levels of geographic coding provided in the variables.
-
-    Geographic locations are drawn from the GeoNames geographical database. Source: [https://www.geonames.org/](https://www.geonames.org/)
-
     When choosing Geographic Coverage Areas: 
     
     * Select the country, state, city, county, region, or continent covered by the study.  
@@ -13,3 +9,26 @@
     * Type at least four characters to see matches.  
     * Choose only the narrowest level of geographic coverage. For example, if you select "Los Angeles, California, United States," do not also add "California, United States" and "United States."  
     * For studies with participants from around the world or that are applicable everywhere, select "Earth."   
+
+    Geographic locations are drawn from the GeoNames geographical database. Source: [https://www.geonames.org/](https://www.geonames.org/). Allowable feature codes include:
+    
+    * From Feature Class A (country, state, region,... – e.g., Administrative Divisions):
+      * ADM1 (first-order administrative division – e.g., US states, Canadian provinces, etc.)
+      * ADM2 (second-order administrative division – e.g. US counties)
+      * PCLI (independent political entity – e.g., countries)
+      * PCLD (dependent political entity – e.g., Puerto Rico and Guam)
+      * PCLF (freely associated state – e.g., Palau, Micronesia, and Marshall Islands)
+      * PCLH (historical political entity – e.g., former entities like Yugoslavia and USSR) 
+      * PCLS (semi-independent political entity – e.g., Palestine, Macao, and Hong Kong)
+      * PCL (political entity – e.g., Guernsey, Jersey, and Isle of Man)
+      * TERR (territory – e.g., American Samoa, Svalbard and Jan Mayen, etc.)
+      * ZN (zone – e.g., European Union, Commonwealth of Nations, and NATO)
+    * From Feature Class P (city, village,... – e.g., Populated Places)
+      * PPLG (seat of government of a political entity)
+      * PPLC (capital of a political entity)
+      * PPLA (seat of a first-order administrative division)
+      * PPLA2 (seat of a second-order administrative division)
+      * PPL (populated place)
+    * From Feature Class L (parks,area, ..)
+      * RGN (region)
+      * CONT (continent)

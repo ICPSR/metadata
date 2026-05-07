@@ -3,6 +3,7 @@
   "$id": "https://archive.icpsr.umich.edu/schema/property_banks/principal_investigators",
   "title": "Principal Investigators",
   "description": "The key people or organizations responsible for the data collection, listed by importance. Each data collection requires at least one PI, either a person or an organization.",
+  "usageNotes": "List individuals and organizations that are chiefly responsible for the study across its entire life cycle or made significant intellectual contributions to the research.",
   "type": "array",
   "items": {
     "type": "object",
@@ -17,7 +18,7 @@
         "$ref": "https://archive.icpsr.umich.edu/schema/property_banks/organization/version/1",
         "title": "Organization",
         "description": "Name and other details about the principal investigator, if it is an organization.",
-        "usageNotes": "When the PI is an organization, enter the name as it appears in the [Research Organization Registry](https://ror.org/) (ROR). If the organization doesn’t have a ROR ID, use its full name and avoid acronyms."
+        "usageNotes": { "$ref": "https://schemas.icpsr.umich.edu/notes/principal_investigators_organization#/usageNotes" }
       },
       "order": {
         "title": "Order",
