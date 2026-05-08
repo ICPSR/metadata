@@ -7,7 +7,7 @@
   "format": "uri",
   "usageNotes": { "$ref": "https://schemas.icpsr.umich.edu/notes/doi#/usageNotes" },
   "examples": [ 
-    "https://doi.org/10.3886/ICPSR03025.v2", 
+    "https://doi.org/10.3886/ICPSR300449.V2", 
     "https://doi.org/10.3886/ICPSR06425.v1" 
   ]
 }
