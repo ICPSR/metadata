@@ -1,6 +1,6 @@
 # ICPSR Metadata Schema
 
-Last updated: May 08, 2026
+Last updated: May 11, 2026
 
 
 This metadata schema is used to describe data collections at the Inter-university Consortium for Political and Social Research (ICPSR) after 2026. 
@@ -384,7 +384,7 @@ When entering a principal investigator's affiliation(s):
 
 **Accepted Values:** Multi-part element; see subfields
 
-**Usage Notes:** Whenever possible, include a unique identifier for the funding award. This can be a grant number; a URL, preferably a persistent one like a digital object identifier (DOI); or both.
+**Usage Notes:** Whenever possible, provide a grant number for the funding award. If one exists, you can also provide a URL, preferably a persistent one like a digital object identifier (DOI).
 
 ##### Subfields:
 
@@ -3400,19 +3400,15 @@ Study numbers with less than five digits will have zeroes prepended in the DOI (
 **Examples:**
 
 ```text
-"Chantel"
+"Miner P."
 ```
 
 ```text
-"Giannis"
+"Robert J."
 ```
 
 ```text
-"Mary Kate"
-```
-
-```text
-"John Q."
+"Claudia"
 ```
 
 <a name="person_name_family"></a>
@@ -3429,15 +3425,15 @@ Study numbers with less than five digits will have zeroes prepended in the DOI (
 **Examples:**
 
 ```text
-"Smith"
+"Marchbanks III"
 ```
 
 ```text
-"Jordan Jr."
+"Shiller"
 ```
 
 ```text
-"Escobar-Vega"
+"Goldin"
 ```
 
 #### Complete Personal Name Examples (with Subfields):
@@ -3466,7 +3462,11 @@ Study numbers with less than five digits will have zeroes prepended in the DOI (
 **Examples:**
 
 ```text
-"https://orcid.org/0000-0001-6289-1234"
+"https://orcid.org/0009-0006-2316-6486"
+```
+
+```text
+"https://orcid.org/0000-0003-3842-1604"
 ```
 
 <a name="person_affiliations"></a>
@@ -3501,20 +3501,29 @@ Study numbers with less than five digits will have zeroes prepended in the DOI (
 
 ```yaml
 "Personal Name":
-  "Given Name (First Name)": "Jane Q."
-  "Family Name (Last Name)": "Doe II"
-"ORCID Identifier": "https://orcid.org/0000-0001-6666-5717"
+  "Given Name (First Name)": "Robert J."
+  "Family Name (Last Name)": "Shiller"
+"ORCID Identifier": "https://orcid.org/0009-0006-2316-6486"
 "Affiliation(s)":
-- "Name": "Urban Institute"
-  "Ror": "https://ror.org/017pz3h73"
-- "Name": "Example University"
-"Email Address": "jane.doe@example.com"
+- "Name": "Yale University"
+  "Ror": "https://ror.org/03v76x132"
+- "Name": "MacroMarkets"
 ```
 
 ```yaml
 "Personal Name":
-  "Given Name (First Name)": "Joe"
-  "Family Name (Last Name)": "Smith"
+  "Given Name (First Name)": "Claudia"
+  "Family Name (Last Name)": "Goldin"
+"ORCID Identifier": "https://orcid.org/0000-0003-3842-1604"
+"Affiliation(s)":
+- "Name": "Harvard University"
+  "Ror": "https://ror.org/03vek6s52"
+```
+
+```yaml
+"Personal Name":
+  "Given Name (First Name)": "Miner P."
+  "Family Name (Last Name)": "Marchbanks III"
 ```
 
 
@@ -3600,6 +3609,15 @@ Study numbers with less than five digits will have zeroes prepended in the DOI (
 "Organization Name": "Urban Institute"
 "ROR Identifier": "https://ror.org/017pz3h73"
 "Email Address": "info@urban.institute"
+```
+
+```yaml
+"Organization Name": "Bureau of Justice Statistics"
+"ROR Identifier": "https://ror.org/0006s4z66"
+```
+
+```yaml
+"Organization Name": "Internal Revenue Service"
 ```
 
 
