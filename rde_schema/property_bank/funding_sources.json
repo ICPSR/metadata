@@ -16,7 +16,7 @@
       "grants": {
         "title": "Funding Awards",
         "description": "Identifiers and other details about financial support for the data collection.",
-        "usageNotes": "Whenever possible, include a unique identifier for the funding award. This can be a grant number; a URL, preferably a persistent one like a digital object identifier (DOI); or both.",
+        "usageNotes": "Whenever possible, provide a grant number for the funding award. If one exists, you can also provide a URL, preferably a persistent one like a digital object identifier (DOI).",
         "type": "array",
         "items": {
           "type": "object",

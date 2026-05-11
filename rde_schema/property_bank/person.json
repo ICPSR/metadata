@@ -15,14 +15,14 @@
           "description": "The person's first (given) name, which may include a middle name or initial.",
           "type": "string",
           "mapsTo": ["foaf:givenName"],
-          "examples": ["Chantel", "Giannis", "Mary Kate", "John Q."]
+          "examples": ["Miner P.", "Robert J.", "Claudia"]
         },
         "family": {
           "title": "Family Name (Last Name)",
           "description": "The person's last (family) name, which may include a suffix (e.g., Jr., Sr., IV).",
           "type": "string",
           "mapsTo": ["foaf:familyName"],
-          "examples": ["Smith", "Jordan Jr.", "Escobar-Vega"]
+          "examples": ["Marchbanks III", "Shiller", "Goldin"]
         }
       },
       "required": ["given", "family"],
@@ -42,7 +42,7 @@
       "description": "The person's Open Researcher and Contributor ID (ORCID).",
       "type": "string",
       "format": "uri",
-      "examples": [ "https://orcid.org/0000-0001-6289-1234" ]
+      "examples": [ "https://orcid.org/0009-0006-2316-6486", "https://orcid.org/0000-0003-3842-1604" ]
     },
     "affiliations": {
       "title": "Affiliation(s)",
@@ -66,25 +66,37 @@
   "examples": [
     {
       "name": {
-        "given": "Jane Q.",
-        "family": "Doe II"
+        "given": "Robert J.",
+        "family": "Shiller"
       },
-      "orcid": "https://orcid.org/0000-0001-6666-5717",
+      "orcid": "https://orcid.org/0009-0006-2316-6486",
       "affiliations": [
         {
-          "name": "Urban Institute",
-          "ror": "https://ror.org/017pz3h73"
+          "name": "Yale University",
+          "ror": "https://ror.org/03v76x132"
         },
         {
-          "name": "Example University"
+          "name": "MacroMarkets"
         }
-      ],
-      "email": "jane.doe@example.com"
+      ]
     },
     {
       "name": {
-        "given": "Joe",
-        "family": "Smith"
+        "given": "Claudia",
+        "family": "Goldin"
+      },
+      "orcid": "https://orcid.org/0000-0003-3842-1604",
+      "affiliations": [
+        {
+          "name": "Harvard University",
+          "ror": "https://ror.org/03vek6s52"
+        }
+      ]
+    },
+    {
+      "name": {
+        "given": "Miner P.",
+        "family": "Marchbanks III"
       }
     }
   ]
