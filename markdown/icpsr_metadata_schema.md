@@ -3627,4 +3627,4 @@ Study numbers with less than five digits will have zeroes prepended in the DOI (
 
 | Date | Version | Note |
 |------|---------|------|
-| May 5, 2026 | v1 | Initial release and publication of the ICPSR Metadata Schema. |
+| May 11, 2026 | v1 | Initial release and publication of the ICPSR Metadata Schema. |
