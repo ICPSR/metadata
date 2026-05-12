@@ -228,15 +228,16 @@ The given (i.e., 'first') name may include the middle name or initial. If the pe
 Whenever possible, add an ORCID for each principal investigator.
 
 When entering a principal investigator's affiliation(s):
-  * Enter the PI's affiliation as it appears in the Research Organization Registry (ROR).  
-  * If the organization doesn't have a ROR ID, enter its full name, avoid acronyms, and do not include departments or colleges. Consult the following sources authority sources to determine the preferred name form.
-    * ICPSR’s metadata catalog. If other PIs affiliated with this organization have published data with ICPSR before, especially curated data, use the name as it appears in previous studies.
-    * The organization's website.
-    * The Virtual International Authority File (VIAF).
-  * Enter a PI's affiliation at the time the research was conducted. If the organization's name has changed over time, enter the name that applied at the time the research was conducted.
-  * If a PI's affiliation has both English and non-English name forms in ROR or VIAF, select a preferred English language form.
-  * If a PI's organizational affiliation is not known, use the term 'Unknown' in the PI Organization element.
-  * If multiple PIs (people) are affiliated with the same organization, include the affiliated organization's name for each person.
+
+  * Enter the PI's affiliation as it appears in the Research Organization Registry (ROR). 
+  * If the organization doesn't have a ROR ID, enter its full name, avoid acronyms, and do not include departments or colleges.   Consult the following sources authority sources to determine the preferred name form.  
+      * ICPSR’s metadata catalog. If other PIs affiliated with this organization have published data with ICPSR before, especially curated data, use the name as it appears in previous studies.  
+      * The organization's website.  
+      * The Virtual International Authority File (VIAF).  
+  * Enter a PI's affiliation at the time the research was conducted. If the organization's name has changed over time, enter the name that applied at the time the research was conducted.  
+  * If a PI's affiliation has both English and non-English name forms in ROR or VIAF, select a preferred English language form.  
+  * If a PI's organizational affiliation is not known, use the term 'Unknown' in the PI Organization element.  
+  * If multiple PIs (people) are affiliated with the same organization, include the affiliated organization's name for each person.  
   * If a PI has multiple affiliations, enter each organization as its own affiliation.
 
 ##### Organization {#principal-investigators_organization}
@@ -361,9 +362,9 @@ When entering a principal investigator's affiliation(s):
   * Whenever possible, enter the organization’s name as it appears in the [Research Organization Registry](https://ror.org/) (ROR).  
   * If the funding organization is a department or subunit of an organization that appears in ROR, but does not have its own ROR ID, enter the organization name as it appears in ROR, followed by a period and the name of the department or subunit.
   * If the organization doesn't have a ROR ID, use its full name and avoid acronyms. Consult the following sources authority sources to determine the preferred name form.
-    * ICPSR’s metadata catalog. If the organization has funded data collections with ICPSR before, especially curated data, use the name as it appears in previous studies.
-    * The organization's website.
-    * The [Virtual International Authority File](https://viaf.org/en) (VIAF).
+      * ICPSR’s metadata catalog. If the organization has funded data collections with ICPSR before, especially curated data, use the name as it appears in previous studies.
+      * The organization's website.
+      * The [Virtual International Authority File](https://viaf.org/en) (VIAF).
   * Except for principal investigators that are departments or subunits of organizations in ROR, do not prepend the organization's name with its institutional hierarchy. For example, enter "National Institute on Aging" instead of "United States Department of Health and Human Services. National Institutes of Health. National Institute on Aging". 
   * If the organization's name has changed over time, enter the name that applied at the time the research was conducted.
 
@@ -985,25 +986,27 @@ The textual description should not simply restate the time period in words. For 
 Geographic locations are drawn from the GeoNames geographical database. Source: [https://www.geonames.org/](https://www.geonames.org/). Allowable feature codes include:
 
 * From Feature Class A (country, state, region,... – e.g., Administrative Divisions):
-  * ADM1 (first-order administrative division – e.g., US states, Canadian provinces, etc.)
-  * ADM2 (second-order administrative division – e.g. US counties)
-  * PCLI (independent political entity – e.g., countries)
-  * PCLD (dependent political entity – e.g., Puerto Rico and Guam)
-  * PCLF (freely associated state – e.g., Palau, Micronesia, and Marshall Islands)
-  * PCLH (historical political entity – e.g., former entities like Yugoslavia and USSR) 
-  * PCLS (semi-independent political entity – e.g., Palestine, Macao, and Hong Kong)
-  * PCL (political entity – e.g., Guernsey, Jersey, and Isle of Man)
-  * TERR (territory – e.g., American Samoa, Svalbard and Jan Mayen, etc.)
-  * ZN (zone – e.g., European Union, Commonwealth of Nations, and NATO)
+    * ADM1 (first-order administrative division – e.g., US states, Canadian provinces, etc.)
+    * ADM2 (second-order administrative division – e.g. US counties)
+    * PCLI (independent political entity – e.g., countries)
+    * PCLD (dependent political entity – e.g., Puerto Rico and Guam)
+    * PCLF (freely associated state – e.g., Palau, Micronesia, and Marshall Islands)
+    * PCLH (historical political entity – e.g., former entities like Yugoslavia and USSR) 
+    * PCLS (semi-independent political entity – e.g., Palestine, Macao, and Hong Kong)
+    * PCL (political entity – e.g., Guernsey, Jersey, and Isle of Man)
+    * TERR (territory – e.g., American Samoa, Svalbard and Jan Mayen, etc.)
+    * ZN (zone – e.g., European Union, Commonwealth of Nations, and NATO)
+
 * From Feature Class P (city, village,... – e.g., Populated Places)
-  * PPLG (seat of government of a political entity)
-  * PPLC (capital of a political entity)
-  * PPLA (seat of a first-order administrative division)
-  * PPLA2 (seat of a second-order administrative division)
-  * PPL (populated place)
+    * PPLG (seat of government of a political entity)
+    * PPLC (capital of a political entity)
+    * PPLA (seat of a first-order administrative division)
+    * PPLA2 (seat of a second-order administrative division)
+    * PPL (populated place)
+
 * From Feature Class L (parks,area, ..)
-  * RGN (region)
-  * CONT (continent)
+    * RGN (region)
+    * CONT (continent)
 
 #### Subfields:
 
