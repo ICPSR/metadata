@@ -7,7 +7,7 @@ This metadata schema was used to describe curated data collections at the Inter-
 
 These rules and definitions document ICPSR's metadata practices and are intended to (a) assist ICPSR staff with metadata entry, and (b) help users – including data depositors and researchers – understand and interpret ICPSR metadata.  
   
-A machine-actionable version of this schema is available in [JSON Schema](https://github.com/ICPSR/metadata/blob/main/schema/icpsr_study_schema.json) format.  
+A machine-actionable version of this schema is available in [JSON Schema](https://github.com/ICPSR/metadata/blob/main/schema/icpsr_legacy_schema.json) format.  
 ## Metadata Elements: Overview
 
 | Property | Required? | Repeatable? | Accepted Values | Description |
