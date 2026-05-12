@@ -198,8 +198,7 @@ Time Period:
 | [Organization](#principal-investigators_organization) | Conditional | No | Multi-part element; see subfields | Name and other details about the principal investigator, if it is an organization. |
 | [Order](#principal-investigators_order) | Yes | No | Number | The order or rank of importance for the PIs associated with the data collection, typically provided to ICPSR by the lead PI. |
 
-<a name="principal-investigators_person"></a>
-##### Person
+##### Person {#principal-investigators_person}
 
 **Description:** Name and other details about the principal investigator, if it is an individual person.
 
@@ -240,8 +239,7 @@ When entering a principal investigator's affiliation(s):
   * If multiple PIs (people) are affiliated with the same organization, include the affiliated organization's name for each person.
   * If a PI has multiple affiliations, enter each organization as its own affiliation.
 
-<a name="principal-investigators_organization"></a>
-##### Organization
+##### Organization {#principal-investigators_organization}
 
 **Description:** Name and other details about the principal investigator, if it is an organization.
 
@@ -264,8 +262,7 @@ When entering a principal investigator's affiliation(s):
 
   When selecting a ROR ID, choose the most specific applicable ROR (for example, Inter-university Consortium for Political and Social Research, not University of Michigan).
 
-<a name="principal-investigators_order"></a>
-##### Order
+##### Order {#principal-investigators_order}
 
 **Description:** The order or rank of importance for the PIs associated with the data collection, typically provided to ICPSR by the lead PI.
 
@@ -349,8 +346,7 @@ When entering a principal investigator's affiliation(s):
 | [Funding Awards](#funding-sources_grants) | No | Yes | Multi-part element; see subfields | Identifiers and other details about financial support for the data collection. |
 | [Order](#funding-sources_order) | Yes | No | Number | Internal ICPSR field used to determine the order of importance for the funders associated with the data collection. |
 
-<a name="funding-sources_organization"></a>
-##### Funding Organization
+##### Funding Organization {#funding-sources_organization}
 
 **Description:** Name and other details about the organization that provided the funding.
 
@@ -373,8 +369,7 @@ When entering a principal investigator's affiliation(s):
 
   The Principal Investigator's home institution does not need to be listed as a funding agency unless the PI provides a grant number (or other award information) or makes a specific request.
 
-<a name="funding-sources_grants"></a>
-##### Funding Awards
+##### Funding Awards {#funding-sources_grants}
 
 **Description:** Identifiers and other details about financial support for the data collection.
 
@@ -393,8 +388,7 @@ When entering a principal investigator's affiliation(s):
 | [Funding Identifier](#funding-sources_grants_grant_number) | Yes | No | Text | The unique identifier for the funding (e.g., ABC-0123456). |
 | [Funding URL](#funding-sources_grants_grant_uri) | No | No | Text | A unique identifier (URL), preferably a persistent one like a DOI,  linking to a landing page with funding information. |
 
-<a name="funding-sources_grants_grant_number"></a>
-###### Funding Identifier
+###### Funding Identifier {#funding-sources_grants_grant_number}
 
 **Description:** The unique identifier for the funding (e.g., ABC-0123456).
 
@@ -418,8 +412,7 @@ When entering a principal investigator's affiliation(s):
 "40791"
 ```
 
-<a name="funding-sources_grants_grant_uri"></a>
-###### Funding URL
+###### Funding URL {#funding-sources_grants_grant_uri}
 
 **Description:** A unique identifier (URL), preferably a persistent one like a DOI,  linking to a landing page with funding information.
 
@@ -435,8 +428,7 @@ When entering a principal investigator's affiliation(s):
 "https://doi.org/10.35802/212242"
 ```
 
-<a name="funding-sources_order"></a>
-##### Order
+##### Order {#funding-sources_order}
 
 **Description:** Internal ICPSR field used to determine the order of importance for the funders associated with the data collection.
 
@@ -538,8 +530,7 @@ The Summary is written in the third person and avoids attempting to address issu
 | [ICPSR Subject Term Code](#icpsr-subject-terms_code) | Yes | No | Text | A machine-readable/-actionable form of the subject term. |
 | [ICPSR Subject Term URI](#icpsr-subject-terms_uri) | Yes | No | Text | The URI for the subject term. |
 
-<a name="icpsr-subject-terms_label"></a>
-##### ICPSR Subject Term
+##### ICPSR Subject Term {#icpsr-subject-terms_label}
 
 **Description:** A human-readable form of the subject term.
 
@@ -563,8 +554,7 @@ The Summary is written in the third person and avoids attempting to address issu
 "recidivism"
 ```
 
-<a name="icpsr-subject-terms_code"></a>
-##### ICPSR Subject Term Code
+##### ICPSR Subject Term Code {#icpsr-subject-terms_code}
 
 **Description:** A machine-readable/-actionable form of the subject term.
 
@@ -588,8 +578,7 @@ The Summary is written in the third person and avoids attempting to address issu
 "26961"
 ```
 
-<a name="icpsr-subject-terms_uri"></a>
-##### ICPSR Subject Term URI
+##### ICPSR Subject Term URI {#icpsr-subject-terms_uri}
 
 **Description:** The URI for the subject term.
 
@@ -651,8 +640,7 @@ The Summary is written in the third person and avoids attempting to address issu
 | [Code](#journal-of-economic-literature-(jel)-classification-codes_code) | Yes | No | Text | A machine-readable/-actionable form of the term. |
 | [URI](#journal-of-economic-literature-(jel)-classification-codes_uri) | Yes | No | Text | The URI for the JEL classification code. |
 
-<a name="journal-of-economic-literature-(jel)-classification-codes_label"></a>
-##### Label
+##### Label {#journal-of-economic-literature-(jel)-classification-codes_label}
 
 **Description:** A human-readable form of the term.
 
@@ -676,8 +664,7 @@ The Summary is written in the third person and avoids attempting to address issu
 "Economic History: Financial Markets and Institutions: U.S.; Canada: 1913-"
 ```
 
-<a name="journal-of-economic-literature-(jel)-classification-codes_code"></a>
-##### Code
+##### Code {#journal-of-economic-literature-(jel)-classification-codes_code}
 
 **Description:** A machine-readable/-actionable form of the term.
 
@@ -701,8 +688,7 @@ The Summary is written in the third person and avoids attempting to address issu
 "N22"
 ```
 
-<a name="journal-of-economic-literature-(jel)-classification-codes_uri"></a>
-##### URI
+##### URI {#journal-of-economic-literature-(jel)-classification-codes_uri}
 
 **Description:** The URI for the JEL classification code.
 
@@ -768,8 +754,7 @@ The Summary is written in the third person and avoids attempting to address issu
 | [Code](#medical-subject-headings-(mesh)-terms_code) | Yes | No | Text | A machine-readable/-actionable form of the subject term. |
 | [URI](#medical-subject-headings-(mesh)-terms_uri) | Yes | No | Text | The URI for the subject term as maintained in MeSH. |
 
-<a name="medical-subject-headings-(mesh)-terms_label"></a>
-##### Label
+##### Label {#medical-subject-headings-(mesh)-terms_label}
 
 **Description:** A human-readable form of the subject term.
 
@@ -789,8 +774,7 @@ The Summary is written in the third person and avoids attempting to address issu
 "Diabetes Mellitus"
 ```
 
-<a name="medical-subject-headings-(mesh)-terms_code"></a>
-##### Code
+##### Code {#medical-subject-headings-(mesh)-terms_code}
 
 **Description:** A machine-readable/-actionable form of the subject term.
 
@@ -810,8 +794,7 @@ The Summary is written in the third person and avoids attempting to address issu
 "T011730"
 ```
 
-<a name="medical-subject-headings-(mesh)-terms_uri"></a>
-##### URI
+##### URI {#medical-subject-headings-(mesh)-terms_uri}
 
 **Description:** The URI for the subject term as maintained in MeSH.
 
@@ -865,8 +848,7 @@ The Summary is written in the third person and avoids attempting to address issu
 | [End Date](#time-periods_end_date) | Yes | No | Text | The end date for the time period the data refer to, formatted as YYYY, YYYY-MM, or YYYY-MM-DD, with no spaces in date expressions. |
 | [Time Frame](#time-periods_time_frame) | No | No | Text | An optional free-text description of the time period, used for non-numeric dates (e.g., 'Fall 2012') or to add context when multiple dates are present. |
 
-<a name="time-periods_start_date"></a>
-##### Start Date
+##### Start Date {#time-periods_start_date}
 
 **Description:** The start date for the time period the data refer to, formatted as YYYY, YYYY-MM, or YYYY-MM-DD, with no spaces in date expressions.
 
@@ -890,8 +872,7 @@ The Summary is written in the third person and avoids attempting to address issu
 "2021-03-01"
 ```
 
-<a name="time-periods_end_date"></a>
-##### End Date
+##### End Date {#time-periods_end_date}
 
 **Description:** The end date for the time period the data refer to, formatted as YYYY, YYYY-MM, or YYYY-MM-DD, with no spaces in date expressions.
 
@@ -915,8 +896,7 @@ The Summary is written in the third person and avoids attempting to address issu
 "2021-03-01"
 ```
 
-<a name="time-periods_time_frame"></a>
-##### Time Frame
+##### Time Frame {#time-periods_time_frame}
 
 **Description:** An optional free-text description of the time period, used for non-numeric dates (e.g., 'Fall 2012') or to add context when multiple dates are present.
 
@@ -1039,8 +1019,7 @@ Geographic locations are drawn from the GeoNames geographical database. Source: 
 | [URI](#geographic-coverage-areas_uri) | No | No | Text | A local unique identifier for the geographic coverage area. |
 | [External URI](#geographic-coverage-areas_externalURI) | No | No | Text | The GeoNames unique identifier for the geographic coverage area. |
 
-<a name="geographic-coverage-areas_city"></a>
-##### City
+##### City {#geographic-coverage-areas_city}
 
 **Description:** A town, city, or similar populated place covered in the data collection
 
@@ -1064,8 +1043,7 @@ Geographic locations are drawn from the GeoNames geographical database. Source: 
 "Chongqing"
 ```
 
-<a name="geographic-coverage-areas_county"></a>
-##### County
+##### County {#geographic-coverage-areas_county}
 
 **Description:** A United States county or similar administrative area covered in the data collection
 
@@ -1089,8 +1067,7 @@ Geographic locations are drawn from the GeoNames geographical database. Source: 
 "Cuyahoga County"
 ```
 
-<a name="geographic-coverage-areas_state"></a>
-##### State
+##### State {#geographic-coverage-areas_state}
 
 **Description:** A state, province, canton or similar political entity covered in the data collection
 
@@ -1114,8 +1091,7 @@ Geographic locations are drawn from the GeoNames geographical database. Source: 
 "Yunnan"
 ```
 
-<a name="geographic-coverage-areas_country"></a>
-##### Country
+##### Country {#geographic-coverage-areas_country}
 
 **Description:** A country covered in the data collection
 
@@ -1139,8 +1115,7 @@ Geographic locations are drawn from the GeoNames geographical database. Source: 
 "Ghana"
 ```
 
-<a name="geographic-coverage-areas_region"></a>
-##### Region
+##### Region {#geographic-coverage-areas_region}
 
 **Description:** An area distinguished by one or more observable physical or cultural characteristics that is covered in the data collection.
 
@@ -1164,8 +1139,7 @@ Geographic locations are drawn from the GeoNames geographical database. Source: 
 "Siberia"
 ```
 
-<a name="geographic-coverage-areas_continent"></a>
-##### Continent
+##### Continent {#geographic-coverage-areas_continent}
 
 **Description:** A continent covered in the data collection
 
@@ -1189,8 +1163,7 @@ Geographic locations are drawn from the GeoNames geographical database. Source: 
 "South America"
 ```
 
-<a name="geographic-coverage-areas_other_area"></a>
-##### Other Geographic Area
+##### Other Geographic Area {#geographic-coverage-areas_other_area}
 
 **Description:** An area covered in the data collection that cannot be represented using the defined categories above or matched to an appropriate GeoNames record.
 
@@ -1216,8 +1189,7 @@ Geographic locations are drawn from the GeoNames geographical database. Source: 
 "13 U.S. states in 3 regions"
 ```
 
-<a name="geographic-coverage-areas_uri"></a>
-##### URI
+##### URI {#geographic-coverage-areas_uri}
 
 **Description:** A local unique identifier for the geographic coverage area.
 
@@ -1237,8 +1209,7 @@ Geographic locations are drawn from the GeoNames geographical database. Source: 
 "/api/v1/vocab-terms/geoNames/terms/6269554"
 ```
 
-<a name="geographic-coverage-areas_externalURI"></a>
-##### External URI
+##### External URI {#geographic-coverage-areas_externalURI}
 
 **Description:** The GeoNames unique identifier for the geographic coverage area.
 
@@ -1364,8 +1335,7 @@ This field employs a local ICPSR controlled vocabulary; see below for terms and 
 | [Code](#smallest-geographic-unit_code) | No | No | Text | A machine-readable/-actionable form of the term. |
 | [URI](#smallest-geographic-unit_uri) | No | No | Text | The URI for the term. |
 
-<a name="smallest-geographic-unit_label"></a>
-##### Label
+##### Label {#smallest-geographic-unit_label}
 
 **Description:** A human-readable form of the term.
 
@@ -1389,8 +1359,7 @@ This field employs a local ICPSR controlled vocabulary; see below for terms and 
 "State/Province"
 ```
 
-<a name="smallest-geographic-unit_code"></a>
-##### Code
+##### Code {#smallest-geographic-unit_code}
 
 **Description:** A machine-readable/-actionable form of the term.
 
@@ -1414,8 +1383,7 @@ This field employs a local ICPSR controlled vocabulary; see below for terms and 
 "StateProvince"
 ```
 
-<a name="smallest-geographic-unit_uri"></a>
-##### URI
+##### URI {#smallest-geographic-unit_uri}
 
 **Description:** The URI for the term.
 
@@ -1547,8 +1515,7 @@ This field employs a local ICPSR controlled vocabulary; see below for terms and 
 | [Code](#time-methods_code) | Yes | No | Text | A machine-readable/-actionable form of the term. |
 | [URI](#time-methods_uri) | Yes | No | Text | The URI for the term. |
 
-<a name="time-methods_label"></a>
-##### Label
+##### Label {#time-methods_label}
 
 **Description:** A human-readable form of the term.
 
@@ -1572,8 +1539,7 @@ This field employs a local ICPSR controlled vocabulary; see below for terms and 
 "Time series"
 ```
 
-<a name="time-methods_code"></a>
-##### Code
+##### Code {#time-methods_code}
 
 **Description:** A machine-readable/-actionable form of the term.
 
@@ -1597,8 +1563,7 @@ This field employs a local ICPSR controlled vocabulary; see below for terms and 
 "TimeSeries"
 ```
 
-<a name="time-methods_uri"></a>
-##### URI
+##### URI {#time-methods_uri}
 
 **Description:** The URI for the term.
 
@@ -1664,8 +1629,7 @@ This field employs a local ICPSR controlled vocabulary; see below for terms and 
 | [Code](#units-of-analysis_code) | Yes | No | Text | A machine-readable/-actionable form of the term. |
 | [URI](#units-of-analysis_uri) | Yes | No | Text | The URI for the term. |
 
-<a name="units-of-analysis_label"></a>
-##### Label
+##### Label {#units-of-analysis_label}
 
 **Description:** A human-readable form of the term.
 
@@ -1689,8 +1653,7 @@ This field employs a local ICPSR controlled vocabulary; see below for terms and 
 "Household"
 ```
 
-<a name="units-of-analysis_code"></a>
-##### Code
+##### Code {#units-of-analysis_code}
 
 **Description:** A machine-readable/-actionable form of the term.
 
@@ -1714,8 +1677,7 @@ This field employs a local ICPSR controlled vocabulary; see below for terms and 
 "Household"
 ```
 
-<a name="units-of-analysis_uri"></a>
-##### URI
+##### URI {#units-of-analysis_uri}
 
 **Description:** The URI for the term.
 
@@ -1895,8 +1857,7 @@ This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance
 | [Code](#data-source-types_code) | Yes | No | Text | A machine-readable/-actionable form of the term. |
 | [URI](#data-source-types_uri) | Yes | No | Text | The URI for the term. |
 
-<a name="data-source-types_label"></a>
-##### Label
+##### Label {#data-source-types_label}
 
 **Description:** A human-readable form of the term.
 
@@ -1920,8 +1881,7 @@ This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance
 "Research data: Published"
 ```
 
-<a name="data-source-types_code"></a>
-##### Code
+##### Code {#data-source-types_code}
 
 **Description:** A machine-readable/-actionable form of the term.
 
@@ -1945,8 +1905,7 @@ This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance
 "ResearchData.Published"
 ```
 
-<a name="data-source-types_uri"></a>
-##### URI
+##### URI {#data-source-types_uri}
 
 **Description:** The URI for the term.
 
@@ -2042,8 +2001,7 @@ This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance
 | [Code](#collection-modes_code) | Yes | No | Text | A machine-readable/-actionable form of the term. |
 | [URI](#collection-modes_uri) | Yes | No | Text | The URI for the term. |
 
-<a name="collection-modes_label"></a>
-##### Label
+##### Label {#collection-modes_label}
 
 **Description:** A human-readable form of the term.
 
@@ -2067,8 +2025,7 @@ This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance
 "Computer-based observation"
 ```
 
-<a name="collection-modes_code"></a>
-##### Code
+##### Code {#collection-modes_code}
 
 **Description:** A machine-readable/-actionable form of the term.
 
@@ -2092,8 +2049,7 @@ This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance
 "Observation.ComputerBased"
 ```
 
-<a name="collection-modes_uri"></a>
-##### URI
+##### URI {#collection-modes_uri}
 
 **Description:** The URI for the term.
 
@@ -2149,8 +2105,7 @@ This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance
 | [End Date](#collection-dates_end_date) | Yes | No | Text | The end date of the data collection period. Must be in YYYY-MM-DD, YYYY-MM, or YYYY format with no spaces. |
 | [Time Frame](#collection-dates_time_frame) | No | No | Text | An optional free-text description of the data collection period, used for non-numeric dates (e.g., 'Fall 2012') or to add context when multiple dates are present. |
 
-<a name="collection-dates_start_date"></a>
-##### Start Date
+##### Start Date {#collection-dates_start_date}
 
 **Description:** The start date of the data collection period. Must be in YYYY-MM-DD, YYYY-MM, or YYYY format with no spaces.
 
@@ -2174,8 +2129,7 @@ This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance
 "2021-03-01"
 ```
 
-<a name="collection-dates_end_date"></a>
-##### End Date
+##### End Date {#collection-dates_end_date}
 
 **Description:** The end date of the data collection period. Must be in YYYY-MM-DD, YYYY-MM, or YYYY format with no spaces.
 
@@ -2199,8 +2153,7 @@ This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance
 "2021-03-01"
 ```
 
-<a name="collection-dates_time_frame"></a>
-##### Time Frame
+##### Time Frame {#collection-dates_time_frame}
 
 **Description:** An optional free-text description of the data collection period, used for non-numeric dates (e.g., 'Fall 2012') or to add context when multiple dates are present.
 
@@ -2375,8 +2328,7 @@ The textual description should not simply restate the time period in words. For 
 | [Download URL](#software-applications_download_url) | No | No | Text | A direct link to a downloadable software artifact (e.g., executable, package, archive, or single script file) that retrieves the application itself, without additional navigation or instructions. |
 | [Installation URL](#software-applications_install_url) | No | No | Text | A link to a repository or project landing page where users can obtain resources and instructions to install the application (as opposed to directly downloading a single file). |
 
-<a name="software-applications_name"></a>
-##### Software Name
+##### Software Name {#software-applications_name}
 
 **Description:** The name of the software application.
 
@@ -2400,8 +2352,7 @@ The textual description should not simply restate the time period in words. For 
 "json-schema-for-humans"
 ```
 
-<a name="software-applications_software_version"></a>
-##### Software Version
+##### Software Version {#software-applications_software_version}
 
 **Description:** The version of the application.
 
@@ -2425,8 +2376,7 @@ The textual description should not simply restate the time period in words. For 
 "Auto-Build 2023-01-15 12:36"
 ```
 
-<a name="software-applications_description"></a>
-##### Software Description
+##### Software Description {#software-applications_description}
 
 **Description:** Short description or overview of the application and its intended purpose
 
@@ -2446,8 +2396,7 @@ The textual description should not simply restate the time period in words. For 
 "ffmpeg is a very fast video and audio converter that can also grab from a live audio/video source. It can also convert between arbitrary sample rates and resize video on the fly with a high quality polyphase filter."
 ```
 
-<a name="software-applications_programming_languages"></a>
-##### Programming Languages
+##### Programming Languages {#software-applications_programming_languages}
 
 **Description:** The programming language(s) used in the development of the application
 
@@ -2472,8 +2421,7 @@ The textual description should not simply restate the time period in words. For 
 "other"
 ```
 
-<a name="software-applications_operating_systems"></a>
-##### Operating Systems
+##### Operating Systems {#software-applications_operating_systems}
 
 **Description:** Computer operating systems supported by the application
 
@@ -2499,8 +2447,7 @@ The textual description should not simply restate the time period in words. For 
 "other"
 ```
 
-<a name="software-applications_memory_requirements"></a>
-##### Memory Requirements
+##### Memory Requirements {#software-applications_memory_requirements}
 
 **Description:** Minimum memory (e.g., RAM) requirements to operate the application
 
@@ -2524,8 +2471,7 @@ The textual description should not simply restate the time period in words. For 
 "4 GB of GPU memory for HD and some 4K media; 6 GB or more for 4K and higher"
 ```
 
-<a name="software-applications_processor_requirements"></a>
-##### Processor Requirements
+##### Processor Requirements {#software-applications_processor_requirements}
 
 **Description:** Processor architecture required to run the application
 
@@ -2549,8 +2495,7 @@ The textual description should not simply restate the time period in words. For 
 "2.5–2.9 GHz or faster processor"
 ```
 
-<a name="software-applications_software_requirements"></a>
-##### Software Requirements
+##### Software Requirements {#software-applications_software_requirements}
 
 **Description:** Required components for the application, like runtime environments and shared libraries not included in the package but needed to run it.
 
@@ -2574,8 +2519,7 @@ The textual description should not simply restate the time period in words. For 
 "Compile with GNU auto tools"
 ```
 
-<a name="software-applications_storage_requirements"></a>
-##### Storage Requirements
+##### Storage Requirements {#software-applications_storage_requirements}
 
 **Description:** Amount of storage space required by the application
 
@@ -2599,8 +2543,7 @@ The textual description should not simply restate the time period in words. For 
 "8 GB of available hard-disk space for installation; additional free space required during installation"
 ```
 
-<a name="software-applications_device_requirements"></a>
-##### Device Requirements
+##### Device Requirements {#software-applications_device_requirements}
 
 **Description:** Device required to run the application. Used in cases where a specific make/model is required to run the application
 
@@ -2612,8 +2555,7 @@ The textual description should not simply restate the time period in words. For 
 
 **Examples:**
 
-<a name="software-applications_license"></a>
-##### License
+##### License {#software-applications_license}
 
 **Description:** The license associated with the application, preferably expressed as a URL.
 
@@ -2633,8 +2575,7 @@ The textual description should not simply restate the time period in words. For 
 "https://opensource.org/licenses/LGPL-2.0"
 ```
 
-<a name="software-applications_download_url"></a>
-##### Download URL
+##### Download URL {#software-applications_download_url}
 
 **Description:** A direct link to a downloadable software artifact (e.g., executable, package, archive, or single script file) that retrieves the application itself, without additional navigation or instructions.
 
@@ -2654,8 +2595,7 @@ The textual description should not simply restate the time period in words. For 
 "https://cdn.nationalarchives.gov.uk/documents/droid-binary-6.5.2-bin-win32-with-jre.zip"
 ```
 
-<a name="software-applications_install_url"></a>
-##### Installation URL
+##### Installation URL {#software-applications_install_url}
 
 **Description:** A link to a repository or project landing page where users can obtain resources and instructions to install the application (as opposed to directly downloading a single file).
 
@@ -2720,8 +2660,7 @@ The textual description should not simply restate the time period in words. For 
 | [Code](#general-data-formats_code) | Yes | No | Text | A machine-readable/-actionable form of the term. |
 | [URI](#general-data-formats_uri) | Yes | No | Text | The URI for the term. |
 
-<a name="general-data-formats_label"></a>
-##### Label
+##### Label {#general-data-formats_label}
 
 **Description:** A human-readable form of the term.
 
@@ -2745,8 +2684,7 @@ The textual description should not simply restate the time period in words. For 
 "Numeric"
 ```
 
-<a name="general-data-formats_code"></a>
-##### Code
+##### Code {#general-data-formats_code}
 
 **Description:** A machine-readable/-actionable form of the term.
 
@@ -2770,8 +2708,7 @@ The textual description should not simply restate the time period in words. For 
 "Numeric"
 ```
 
-<a name="general-data-formats_uri"></a>
-##### URI
+##### URI {#general-data-formats_uri}
 
 **Description:** The URI for the term.
 
@@ -2881,8 +2818,7 @@ The textual description should not simply restate the time period in words. For 
 | [Code](#ada-accessibility_code) | Yes | No | Text | A machine-readable/-actionable form of the term. |
 | [URI](#ada-accessibility_uri) | Yes | No | Text | The URI for the term. |
 
-<a name="ada-accessibility_label"></a>
-##### Label
+##### Label {#ada-accessibility_label}
 
 **Description:** A human-readable form of the term.
 
@@ -2902,8 +2838,7 @@ The textual description should not simply restate the time period in words. For 
 "ADA Archival"
 ```
 
-<a name="ada-accessibility_code"></a>
-##### Code
+##### Code {#ada-accessibility_code}
 
 **Description:** A machine-readable/-actionable form of the term.
 
@@ -2923,8 +2858,7 @@ The textual description should not simply restate the time period in words. For 
 "ada.archival"
 ```
 
-<a name="ada-accessibility_uri"></a>
-##### URI
+##### URI {#ada-accessibility_uri}
 
 **Description:** The URI for the term.
 
@@ -2980,8 +2914,7 @@ The textual description should not simply restate the time period in words. For 
 | [Code](#license_code) | Yes | No | Text | A machine-readable/-actionable form of the term. |
 | [URI](#license_uri) | Yes | No | Text | The URI for the term. |
 
-<a name="license_label"></a>
-##### Label
+##### Label {#license_label}
 
 **Description:** A human-readable form of the term.
 
@@ -3001,8 +2934,7 @@ The textual description should not simply restate the time period in words. For 
 "Apache License 1.0"
 ```
 
-<a name="license_code"></a>
-##### Code
+##### Code {#license_code}
 
 **Description:** A machine-readable/-actionable form of the term.
 
@@ -3022,8 +2954,7 @@ The textual description should not simply restate the time period in words. For 
 "Apache-1.0"
 ```
 
-<a name="license_uri"></a>
-##### URI
+##### URI {#license_uri}
 
 **Description:** The URI for the term.
 
@@ -3079,8 +3010,7 @@ The textual description should not simply restate the time period in words. For 
 | [Version Date](#version-history_version_date) | No | No | Text | The date on which a given version of a data collection was released. |
 | [Version Note](#version-history_version_note) | No | No | Text | Provenance information about a given version of the data collection. |
 
-<a name="version-history_version_number"></a>
-##### Version Number
+##### Version Number {#version-history_version_number}
 
 **Description:** A version number for a study.
 
@@ -3106,8 +3036,7 @@ The textual description should not simply restate the time period in words. For 
 "V3.2"
 ```
 
-<a name="version-history_version_date"></a>
-##### Version Date
+##### Version Date {#version-history_version_date}
 
 **Description:** The date on which a given version of a data collection was released.
 
@@ -3129,8 +3058,7 @@ The textual description should not simply restate the time period in words. For 
 "2022-01-31"
 ```
 
-<a name="version-history_version_note"></a>
-##### Version Note
+##### Version Note {#version-history_version_note}
 
 **Description:** Provenance information about a given version of the data collection.
 
@@ -3197,8 +3125,7 @@ The textual description should not simply restate the time period in words. For 
 | [Organization](#distributors_organization) | Yes | No | Multi-part element; see subfields | Name and other details about the organization that distributes the data collection. |
 | [Order](#distributors_order) | Yes | No | Number | The order of importance for the distributors of the data collection. |
 
-<a name="distributors_organization"></a>
-##### Organization
+##### Organization {#distributors_organization}
 
 **Description:** Name and other details about the organization that distributes the data collection.
 
@@ -3208,8 +3135,7 @@ The textual description should not simply restate the time period in words. For 
 
 **Accepted Values:** Multi-part element; for more information, see the [Organization](#organization) field
 
-<a name="distributors_order"></a>
-##### Order
+##### Order {#distributors_order}
 
 **Description:** The order of importance for the distributors of the data collection.
 
@@ -3368,8 +3294,7 @@ Study numbers with less than five digits will have zeroes prepended in the DOI (
 | [Affiliation(s)](#person_affiliations) | No | Yes | Multi-part element; see subfields | The person's affiliated organization(s). |
 | [Email Address](#person_email) | No | No | Text | The person's email address. |
 
-<a name="person_name"></a>
-##### Personal Name
+##### Personal Name {#person_name}
 
 **Description:** The person's name.
 
@@ -3386,8 +3311,7 @@ Study numbers with less than five digits will have zeroes prepended in the DOI (
 | [Given Name (First Name)](#person_name_given) | Yes | No | Text | The person's first (given) name, which may include a middle name or initial. |
 | [Family Name (Last Name)](#person_name_family) | Yes | No | Text | The person's last (family) name, which may include a suffix (e.g., Jr., Sr., IV). |
 
-<a name="person_name_given"></a>
-###### Given Name (First Name)
+###### Given Name (First Name) {#person_name_given}
 
 **Description:** The person's first (given) name, which may include a middle name or initial.
 
@@ -3411,8 +3335,7 @@ Study numbers with less than five digits will have zeroes prepended in the DOI (
 "Claudia"
 ```
 
-<a name="person_name_family"></a>
-###### Family Name (Last Name)
+###### Family Name (Last Name) {#person_name_family}
 
 **Description:** The person's last (family) name, which may include a suffix (e.g., Jr., Sr., IV).
 
@@ -3448,8 +3371,7 @@ Study numbers with less than five digits will have zeroes prepended in the DOI (
 "Family Name (Last Name)": "Doe IV"
 ```
 
-<a name="person_orcid"></a>
-##### ORCID Identifier
+##### ORCID Identifier {#person_orcid}
 
 **Description:** The person's Open Researcher and Contributor ID (ORCID).
 
@@ -3469,8 +3391,7 @@ Study numbers with less than five digits will have zeroes prepended in the DOI (
 "https://orcid.org/0000-0003-3842-1604"
 ```
 
-<a name="person_affiliations"></a>
-##### Affiliation(s)
+##### Affiliation(s) {#person_affiliations}
 
 **Description:** The person's affiliated organization(s).
 
@@ -3480,8 +3401,7 @@ Study numbers with less than five digits will have zeroes prepended in the DOI (
 
 **Accepted Values:** Multi-part element; for more information, see the [Organization](#organization) field
 
-<a name="person_email"></a>
-##### Email Address
+##### Email Address {#person_email}
 
 **Description:** The person's email address.
 
@@ -3548,8 +3468,7 @@ Study numbers with less than five digits will have zeroes prepended in the DOI (
 | [ROR Identifier](#organization_ror) | No | No | Text | The organization's Research Organization Registry (ROR) identifier. |
 | [Email Address](#organization_email) | No | No | Text | The organization's email address. |
 
-<a name="organization_name"></a>
-##### Organization Name
+##### Organization Name {#organization_name}
 
 **Description:** The organization's name.
 
@@ -3569,8 +3488,7 @@ Study numbers with less than five digits will have zeroes prepended in the DOI (
 "University of Michigan"
 ```
 
-<a name="organization_ror"></a>
-##### ROR Identifier
+##### ROR Identifier {#organization_ror}
 
 **Description:** The organization's Research Organization Registry (ROR) identifier.
 
@@ -3586,8 +3504,7 @@ Study numbers with less than five digits will have zeroes prepended in the DOI (
 "https://ror.org/02q7mkh03"
 ```
 
-<a name="organization_email"></a>
-##### Email Address
+##### Email Address {#organization_email}
 
 **Description:** The organization's email address.
 

@@ -369,8 +369,7 @@ Additional points regarding affiliated organizations:
 | [Organization](#principal-investigator_organization) | Conditional | No | Text | The name of the organization primarily responsible for the data collection OR the organization with which an individual PI was affiliated at the time of a data collection's deposit at ICPSR. |
 | [Order](#principal-investigator_order) | Yes | No | Number | The order or rank of importance for the PIs associated with the data collection, typically provided to ICPSR by the lead PI. |
 
-<a name="principal-investigator_person"></a>
-##### Person
+##### Person {#principal-investigator_person}
 
 **Description:** The name of a person primarily responsible for the data collection.
 
@@ -387,8 +386,7 @@ Additional points regarding affiliated organizations:
 | [Given (First) Name](#principal-investigator_person_given_name) | Yes | No | Text | The person's given name. |
 | [Family (Last) Name](#principal-investigator_person_family_name) | Yes | No | Text | The person's family name (e.g., surname). |
 
-<a name="principal-investigator_person_given_name"></a>
-###### Given (First) Name
+###### Given (First) Name {#principal-investigator_person_given_name}
 
 **Description:** The person's given name.
 
@@ -412,8 +410,7 @@ Additional points regarding affiliated organizations:
 "E.V."
 ```
 
-<a name="principal-investigator_person_family_name"></a>
-###### Family (Last) Name
+###### Family (Last) Name {#principal-investigator_person_family_name}
 
 **Description:** The person's family name (e.g., surname).
 
@@ -454,8 +451,7 @@ Additional points regarding affiliated organizations:
 "Family (Last) Name": "Oppenhuis"
 ```
 
-<a name="principal-investigator_organization"></a>
-##### Organization
+##### Organization {#principal-investigator_organization}
 
 **Description:** The name of the organization primarily responsible for the data collection OR the organization with which an individual PI was affiliated at the time of a data collection's deposit at ICPSR.
 
@@ -483,8 +479,7 @@ Additional points regarding affiliated organizations:
 "United States Department of Health and Human Services. Centers for Disease Control and Prevention. Office of Minority Health and Health Disparities"
 ```
 
-<a name="principal-investigator_order"></a>
-##### Order
+##### Order {#principal-investigator_order}
 
 **Description:** The order or rank of importance for the PIs associated with the data collection, typically provided to ICPSR by the lead PI.
 
@@ -589,8 +584,7 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 | [Location](#distributor_location) | Yes | No | Text | The location of the data distributor. |
 | [Title](#distributor_order) | Yes | No | Number | The order of importance for the distributors of the data collection. |
 
-<a name="distributor_name"></a>
-##### Name
+##### Name {#distributor_name}
 
 **Description:** The name of the data distributor.
 
@@ -612,8 +606,7 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 "Roper Center for Public Opinion Research"
 ```
 
-<a name="distributor_location"></a>
-##### Location
+##### Location {#distributor_location}
 
 **Description:** The location of the data distributor.
 
@@ -637,8 +630,7 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 "Chicago, IL"
 ```
 
-<a name="distributor_order"></a>
-##### Title
+##### Title {#distributor_order}
 
 **Description:** The order of importance for the distributors of the data collection.
 
@@ -767,8 +759,7 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 | [Purpose](#funding-source_purpose) | No | Yes | Text | The purpose of the funding. |
 | [Order](#funding-source_order) | Yes | No | Number | The relative order of funding sources associated with the data collection. |
 
-<a name="funding-source_agency"></a>
-##### Agency
+##### Agency {#funding-source_agency}
 
 **Description:** An organization that supported the data collection.
 
@@ -803,8 +794,7 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 "Robert Wood Johnson Foundation"
 ```
 
-<a name="funding-source_grant_number"></a>
-##### Grant Number
+##### Grant Number {#funding-source_grant_number}
 
 **Description:** A unique identifier associated with the funding.
 
@@ -833,8 +823,7 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 "40791"
 ```
 
-<a name="funding-source_purpose"></a>
-##### Purpose
+##### Purpose {#funding-source_purpose}
 
 **Description:** The purpose of the funding.
 
@@ -865,8 +854,7 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 "archiving of data"
 ```
 
-<a name="funding-source_order"></a>
-##### Order
+##### Order {#funding-source_order}
 
 **Description:** The relative order of funding sources associated with the data collection.
 
@@ -1086,8 +1074,7 @@ For United States-based data collections that include some or all U.S. island te
 | [Date](#time-period_date) | Yes | No | Text | The date (or date range) for a time period to which the data refer. |
 | [Time Frame](#time-period_time_frame) | No | No | Text | An optional free-text description of the time period, used for non-numeric dates (e.g., 'Fall 2012') or to add context when multiple dates are present. |
 
-<a name="time-period_date"></a>
-##### Date
+##### Date {#time-period_date}
 
 **Description:** The date (or date range) for a time period to which the data refer.
 
@@ -1123,8 +1110,7 @@ Dates are formatted in accordance with ISO 8601 (YYYY, YYYY-MM, or YYYY-MM-DD). 
 "2020-01-21--2021-01-21"
 ```
 
-<a name="time-period_time_frame"></a>
-##### Time Frame
+##### Time Frame {#time-period_time_frame}
 
 **Description:** An optional free-text description of the time period, used for non-numeric dates (e.g., 'Fall 2012') or to add context when multiple dates are present.
 
@@ -1189,8 +1175,7 @@ The textual description should not simply restate the time period in words. For 
 | [Date](#collection-date_date) | Yes | No | Text | The date (or date range) of the data collection period. |
 | [Time Frame](#collection-date_time_frame) | No | No | Text | An optional free-text description of the data collection period, used for non-numeric dates (e.g., 'Fall 2012') or to add context when multiple dates are present. |
 
-<a name="collection-date_date"></a>
-##### Date
+##### Date {#collection-date_date}
 
 **Description:** The date (or date range) of the data collection period.
 
@@ -1222,8 +1207,7 @@ The textual description should not simply restate the time period in words. For 
 "2020-01-21--2021-01-21"
 ```
 
-<a name="collection-date_time_frame"></a>
-##### Time Frame
+##### Time Frame {#collection-date_time_frame}
 
 **Description:** An optional free-text description of the data collection period, used for non-numeric dates (e.g., 'Fall 2012') or to add context when multiple dates are present.
 
@@ -1958,8 +1942,7 @@ This element is only meant to convey specific, known, geography. If there is a v
 | [Date](#changes-to-collection_date) | No | No | Text | The date on which an update occurred. ICPSR automatically generates this date. |
 | [Note](#changes-to-collection_note) | No | No | Text | An explanation of the nature of the update. |
 
-<a name="changes-to-collection_date"></a>
-##### Date
+##### Date {#changes-to-collection_date}
 
 **Description:** The date on which an update occurred. ICPSR automatically generates this date.
 
@@ -1979,8 +1962,7 @@ This element is only meant to convey specific, known, geography. If there is a v
 "2019-05-05"
 ```
 
-<a name="changes-to-collection_note"></a>
-##### Note
+##### Note {#changes-to-collection_note}
 
 **Description:** An explanation of the nature of the update.
 
@@ -2109,8 +2091,7 @@ This element is only meant to convey specific, known, geography. If there is a v
 | [Name](#filesets_name) | No | No | Text | A brief title used to distinguish each fileset within a data collection. |
 | [SDA Note](#filesets_sda_note) | No | No | Text | Additional information about the fileset for the purpose of helping online analysis users. |
 
-<a name="filesets_number"></a>
-##### Number
+##### Number {#filesets_number}
 
 **Description:** A number that uniquely identifies a 'part' or component file that is associated with the data collection.
 
@@ -2136,8 +2117,7 @@ This element is only meant to convey specific, known, geography. If there is a v
 "3"
 ```
 
-<a name="filesets_name"></a>
-##### Name
+##### Name {#filesets_name}
 
 **Description:** A brief title used to distinguish each fileset within a data collection.
 
@@ -2169,8 +2149,7 @@ This element is only meant to convey specific, known, geography. If there is a v
 "Northbound Restricted-Use Data"
 ```
 
-<a name="filesets_sda_note"></a>
-##### SDA Note
+##### SDA Note {#filesets_sda_note}
 
 **Description:** Additional information about the fileset for the purpose of helping online analysis users.
 

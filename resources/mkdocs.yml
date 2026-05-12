@@ -19,6 +19,8 @@ theme:
   navigation_depth: 3
   sticky_navigation: true
   include_homepage_in_sidebar: false
+markdown_extensions:
+  - attr_list
 plugins:
   - redirects:
       redirect_maps:
