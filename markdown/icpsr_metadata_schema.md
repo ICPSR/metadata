@@ -986,7 +986,6 @@ The textual description should not simply restate the time period in words. For 
 Geographic locations are drawn from the GeoNames geographical database. Source: [https://www.geonames.org/](https://www.geonames.org/). Allowable feature codes include:
 
 * From Feature Class A (country, state, region,... – e.g., Administrative Divisions):
-
     * ADM1 (first-order administrative division – e.g., US states, Canadian provinces, etc.)
     * ADM2 (second-order administrative division – e.g. US counties)
     * PCLI (independent political entity – e.g., countries)
@@ -999,7 +998,6 @@ Geographic locations are drawn from the GeoNames geographical database. Source: 
     * ZN (zone – e.g., European Union, Commonwealth of Nations, and NATO)
 
 * From Feature Class P (city, village,... – e.g., Populated Places)
-
     * PPLG (seat of government of a political entity)
     * PPLC (capital of a political entity)
     * PPLA (seat of a first-order administrative division)
@@ -1007,7 +1005,6 @@ Geographic locations are drawn from the GeoNames geographical database. Source: 
     * PPL (populated place)
 
 * From Feature Class L (parks,area, ..)
-
     * RGN (region)
     * CONT (continent)
 
