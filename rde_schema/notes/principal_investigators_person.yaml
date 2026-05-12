@@ -22,13 +22,14 @@
     Whenever possible, add an ORCID for each principal investigator.
 
     When entering a principal investigator's affiliation(s):
-      * Enter the PI's affiliation as it appears in the Research Organization Registry (ROR).  
-      * If the organization doesn't have a ROR ID, enter its full name, avoid acronyms, and do not include departments or colleges. Consult the following sources authority sources to determine the preferred name form.
-        * ICPSR’s metadata catalog. If other PIs affiliated with this organization have published data with ICPSR before, especially curated data, use the name as it appears in previous studies.
-        * The organization's website.
-        * The Virtual International Authority File (VIAF).
-      * Enter a PI's affiliation at the time the research was conducted. If the organization's name has changed over time, enter the name that applied at the time the research was conducted.
-      * If a PI's affiliation has both English and non-English name forms in ROR or VIAF, select a preferred English language form.
-      * If a PI's organizational affiliation is not known, use the term 'Unknown' in the PI Organization element.
-      * If multiple PIs (people) are affiliated with the same organization, include the affiliated organization's name for each person.
-      * If a PI has multiple affiliations, enter each organization as its own affiliation.
+
+      * Enter the PI's affiliation as it appears in the Research Organization Registry (ROR). 
+      * If the organization doesn't have a ROR ID, enter its full name, avoid acronyms, and do not include departments or colleges.   Consult the following sources authority sources to determine the preferred name form.  
+          * ICPSR’s metadata catalog. If other PIs affiliated with this organization have published data with ICPSR before, especially curated data, use the name as it appears in previous studies.  
+          * The organization's website.  
+          * The Virtual International Authority File (VIAF).  
+      * Enter a PI's affiliation at the time the research was conducted. If the organization's name has changed over time, enter the name that applied at the time the research was conducted.  
+      * If a PI's affiliation has both English and non-English name forms in ROR or VIAF, select a preferred English language form.  
+      * If a PI's organizational affiliation is not known, use the term 'Unknown' in the PI Organization element.  
+      * If multiple PIs (people) are affiliated with the same organization, include the affiliated organization's name for each person.  
+      * If a PI has multiple affiliations, enter each organization as its own affiliation.  
