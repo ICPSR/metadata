@@ -1,6 +1,6 @@
 # ICPSR Metadata Schema
 
-Last updated: May 11, 2026
+Last updated: May 12, 2026
 
 
 This metadata schema is used to describe data collections at the Inter-university Consortium for Political and Social Research (ICPSR) after 2026. 

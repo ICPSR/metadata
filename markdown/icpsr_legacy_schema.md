@@ -1,6 +1,6 @@
 # ICPSR Legacy Metadata Schema
 
-Last updated: May 11, 2026
+Last updated: May 12, 2026
 
 
 This metadata schema was used to describe curated data collections at the Inter-university Consortium for Political and Social Research (ICPSR) through approximately 2026. Beginning in 2026, it is being phased out and replaced by [an updated metadata schema](https://icpsr.github.io/metadata/icpsr_metadata_schema/).
@@ -2225,6 +2225,7 @@ This element is only meant to convey specific, known, geography. If there is a v
 
 | Date | Version | Note |
 |------|---------|------|
+| April 14, 2026 | v1.3 | Updated ICPSR input guidance for Geographic Coverage Area. |
 | April 11, 2025 | v1.2 | Updated field definitions to improve clarity. |
 | June 28, 2024 | v1.1 | Removed guidance regarding null entries for National Institute of Justice studies. Several fields previously required "None" when otherwise a field would be left blank. Updated internal guidance for 'external source id' and 'funding purpose' elements. Added 'study number' and distributor 'order' elements to address earlier oversights. |
 | Oct. 30, 2023 | v1 | Initial release and publication of the legacy ICPSR Metadata Schema. |
