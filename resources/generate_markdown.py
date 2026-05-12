@@ -434,8 +434,8 @@ def render_subfields(ROOT, mode, schema, properties, required, parent_anchor, le
             typ = get_type(prop)
         
         anchor_id = f"{parent_anchor}_{name}"
-        md.append(f"<a name=\"{anchor_id}\"></a>")
-        md.append(f"{'#' * (level + 1)} {title}\n")
+        #md.append(f"<a name=\"{anchor_id}\"></a>")
+        md.append(f"{'#' * (level + 1)} {title} {{#{anchor_id}}}\n")
 
         md.append(f"**Description:** {desc}\n")
         md.append(f"**Required:** {req}\n")
