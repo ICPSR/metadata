@@ -1,0 +1,34 @@
+---
+  $schema: https://json-schema.org/draft-07/schema#
+  $id: https://schemas.icpsr.umich.edu/notes/principal_investigators_person
+  usageNotes: |
+    When entering the name of a principal investigator who is a person:
+
+      * Enter a specific and unique name, for example, by including full names and middle initials where appropriate.  
+      * Follow commonly accepted, language-appropriate practices for capitalization and punctuation.  
+      * Within the bounds of these first two principles, follow the PI’s precedent for how their name appears in print.
+
+    To determine the preferred form of name to appear in ICPSR’s metadata catalog, consult the following authority sources, in this order. 
+      * ICPSR's metadata catalog. If the PI has published data with ICPSR before, especially curated data, use the name as it appears in previous studies.
+      * The PI’s curriculum vitae published on an institutional website.
+      * The [Virtual International Authority File](https://viaf.org/en) (VIAF). 
+      * The PI’s [Open Researcher and Contributor Identifier](https://orcid.org/) (ORCID) record.
+      * The PI’s Google Scholar profile.
+      * The PI’s other published works.
+      * The PI’s bio on their organization’s website.
+
+    The given (i.e., 'first') name may include the middle name or initial. If the person only uses an inital for the given name, do not include a space between first and middle initials (e.g., 'E.V.'). The family (i.e., 'last') name can include any suffixes (such as 'II' or 'Jr.'). Abbreviations are discouraged (especially 'et al.').
+
+    Whenever possible, add an ORCID for each principal investigator.
+
+    When entering a principal investigator's affiliation(s):
+      * Enter the PI's affiliation as it appears in the Research Organization Registry (ROR).  
+      * If the organization doesn't have a ROR ID, enter its full name, avoid acronyms, and do not include departments or colleges. Consult the following sources authority sources to determine the preferred name form.
+        * ICPSR’s metadata catalog. If other PIs affiliated with this organization have published data with ICPSR before, especially curated data, use the name as it appears in previous studies.
+        * The organization's website.
+        * The Virtual International Authority File (VIAF).
+      * Enter a PI's affiliation at the time the research was conducted. If the organization's name has changed over time, enter the name that applied at the time the research was conducted.
+      * If a PI's affiliation has both English and non-English name forms in ROR or VIAF, select a preferred English language form.
+      * If a PI's organizational affiliation is not known, use the term 'Unknown' in the PI Organization element.
+      * If multiple PIs (people) are affiliated with the same organization, include the affiliated organization's name for each person.
+      * If a PI has multiple affiliations, enter each organization as its own affiliation.

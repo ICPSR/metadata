@@ -1,0 +1,14 @@
+[
+  {
+    "label": "ADA Accessible",
+    "code": "ada.accessible",
+    "description": "The item is ADA accessible, conforming to WCAG 2.1 AA standards.",
+    "type": "TreeVocabTermDTO"
+  },
+  {
+    "label": "ADA Archival",
+    "code": "ada.archival",
+    "description": "The item is not ADA accessible, but qualifies for the ADA archival exception.",
+    "type": "TreeVocabTermDTO"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://archive.icpsr.umich.edu/schema/property_banks/sampling_note",
+  "title": "Sampling Note",
+  "description": "Supplemental information about the sampling process that does not fit neatly into the Sampling Procedure field.",
+  "type": "string",
+  "usageNotes": "A detailed discussion of such things as sampling error or other limitations of the sampling methodology is not required here.",
+  "examples": [
+    "National sample of telephone numbers from cell (RDD) sampling frame.",
+    "The probability sample selected to represent the universe consists of approximately 71,000 households."
+  ]
+}

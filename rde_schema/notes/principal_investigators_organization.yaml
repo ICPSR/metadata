@@ -1,0 +1,16 @@
+---
+  $schema: https://json-schema.org/draft-07/schema#
+  $id: https://schemas.icpsr.umich.edu/notes/principal_investigators_organization
+  usageNotes: |
+    When entering the name of a principal investigator that is an organization:
+
+      * Whenever possible, enter the organization name as it appears in the [Research Organization Registry](https://ror.org/) (ROR).  
+      * If the principal investigator is a department or subunit of an organization that appears in ROR, but does not have its own ROR ID, enter the organization name as it appears in ROR, followed by a period and the name of the department or subunit.  
+      * If the organization doesn’t have a ROR ID, use its full name and avoid acronyms. Consult the following sources authority sources to determine the preferred name form.
+         * ICPSR’s metadata catalog. If the PI has published data with ICPSR before, especially curated data, use the name as it appears in previous studies.
+         * The organization's website.
+         * The [Virtual International Authority File](https://viaf.org/en) (VIAF).
+      * Except for principal investigators that are departments or subunits of organizations in ROR, do not prepend the organization's name with its institutional hierarchy. For example, enter "National Institute on Aging," not "United States Department of Health and Human Services. National Institutes of Health. National Institute on Aging."
+      * If the organization's name has changed over time, enter the name that applied at the time the research was conducted.
+
+      When selecting a ROR ID, choose the most specific applicable ROR (for example, Inter-university Consortium for Political and Social Research, not University of Michigan).

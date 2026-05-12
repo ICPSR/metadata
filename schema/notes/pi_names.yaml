@@ -1,0 +1,30 @@
+---
+  $schema: https://json-schema.org/draft-07/schema#
+  $id: https://schemas.icpsr.umich.edu/schema/notes/pi_names?version=v1
+  usageNotes: |+
+    List individuals and organizations that are chiefly responsible for the study across its entire life cycle or made significant intellectual contributions to the research. A principal investigator (PI) may be a person or an organization; use the Person or Organization element as appropriate. If the PI is identified as a person, their affiliated organization (if applicable) should be included in the Organization element.
+
+    When entering the name of an individual or organizational PI, the following hierarchy of authority control sources should be used to make sure the name conforms to best practices within ICPSR and the broader academic community:  
+
+      1. If the person or organization has published data with ICPSR in the past, use the name as it has been displayed previously within the ICPSR catalog.  
+      2. If the person or organization is in the [ICPSR Personal Name Authority List](https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10002) or the [ICPSR Organization Names Authority List](https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10004), conform to the listed name form.
+      3. If the person or organization is not available in an ICPSR authority list, consult [VIAF](https://viaf.org).  
+      4. If the person or organization does not have a VIAF record, consult another authoritative source, such as an organization's website, Google Scholar, or a personal C.V. published on an institutional website.  
+
+    For the names of people: 
+      
+      * The given (i.e., 'first') name may include the middle name or initial. If the person only uses an inital for the given name, do not include a space between first and middle initials (e.g., 'E.V.').
+      * The family (i.e., 'last') name can include any suffixes (such as 'II' or 'Jr.'). 
+      * Abbreviations are discouraged (especially 'et al.').
+
+    For the names of organizations:
+
+      * Include the full hierarchy of the organization, going from the highest level down to the most specific. Note that the higher level of the organization must be listed before the lower level, and levels should be separated by a period (e.g., 'University of Michigan. College of Literature, Science, and the Arts'). There is no period following the last level listed.
+      * Abbreviations are discouraged, except 'Inc.' and 'Co.' In particular, governmental PI's are spelled out completely (e.g., 'United States Department of Commerce' rather than 'U.S. Dept. of Commerce').
+      * 'The' is not included at the start of an organization name unless it is actually part of the official name (e.g., 'The New York Times' but not 'The National Institute of Justice')
+
+    Additional points regarding affiliated organizations:
+      
+      * If a PI's organizational affiliation is not known, use the term 'Unknown' in the PI Organization element.
+      * If multiple PIs (people) are affiliated with the same organization, the affiliated organization's name must be included for each person.
+

@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://archive.icpsr.umich.edu/schema/property_banks/jel_classifications",
+  "title": "Journal of Economic Literature (JEL) Classification Codes",
+  "description": "Classification codes used to categorize economic research.",
+  "usageNotes": "This controlled vocabulary was taken from the American Economic Association's JEL Classifications Codes. Source: [https://www.aeaweb.org/jel/guide/jel.php](https://www.aeaweb.org/jel/guide/jel.php)",
+  "controlledVocab": "jelClassifications",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "label": {
+        "title": "Label",
+        "description": "A human-readable form of the term.",
+        "type": "string",
+        "examples": [
+          "Relation of Economics to Other Disciplines",
+          "History of Economic Thought, Methodology, and Heterodox Approaches",
+          "Economic History: Financial Markets and Institutions: U.S.; Canada: 1913-"
+        ]
+      },
+      "code": {
+        "title": "Code",
+        "description": "A machine-readable/-actionable form of the term.",
+        "type": "string",
+        "examples": [
+          "A12",
+          "B00",
+          "N22"
+        ]
+      },
+      "uri": {
+        "title": "URI",
+        "description": "The URI for the JEL classification code.",
+        "type": "string",
+        "examples": [
+          "/api/v1/vocab-terms/jelClassifications/terms/A12",
+          "/api/v1/vocab-terms/jelClassifications/terms/B00",
+          "/api/v1/vocab-terms/jelClassifications/terms/N22"
+        ]
+      }
+    },
+    "required": ["label", "code", "uri"]
+  },
+  "examples": [
+    [
+      {
+        "label": "Relation of Economics to Other Disciplines",
+        "code": "A12",
+        "uri": "/api/v1/vocab-terms/jelClassifications/terms/A12"
+      },
+      {
+        "label": "History of Economic Thought, Methodology, and Heterodox Approaches",
+        "code": "B00",
+        "uri": "/api/v1/vocab-terms/jelClassifications/terms/B00"
+      }
+    ],
+    [
+      {
+        "label": "Economic History: Financial Markets and Institutions: U.S.; Canada: 1913-",
+        "code": "N22",
+        "uri": "/api/v1/vocab-terms/jelClassifications/terms/N22"
+      }
+    ]
+  ]
+}

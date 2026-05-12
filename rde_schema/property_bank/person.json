@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://archive.icpsr.umich.edu/schema/property_banks/person",
+  "title": "Person",
+  "description": "A person associated with an ICPSR data collection or service.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "title": "Personal Name",
+      "description": "The person's name.",
+      "type": "object",
+      "properties": {
+        "given": {
+          "title": "Given Name (First Name)",
+          "description": "The person's first (given) name, which may include a middle name or initial.",
+          "type": "string",
+          "mapsTo": ["foaf:givenName"],
+          "examples": ["Miner P.", "Robert J.", "Claudia"]
+        },
+        "family": {
+          "title": "Family Name (Last Name)",
+          "description": "The person's last (family) name, which may include a suffix (e.g., Jr., Sr., IV).",
+          "type": "string",
+          "mapsTo": ["foaf:familyName"],
+          "examples": ["Marchbanks III", "Shiller", "Goldin"]
+        }
+      },
+      "required": ["given", "family"],
+      "examples": [ 
+        { 
+          "given": "Susan B.",
+          "family": "Anthony" 
+        },
+        {
+          "given": "John",
+          "family": "Doe IV"
+        }
+      ]
+    },
+    "orcid": {
+      "title": "ORCID Identifier",
+      "description": "The person's Open Researcher and Contributor ID (ORCID).",
+      "type": "string",
+      "format": "uri",
+      "examples": [ "https://orcid.org/0009-0006-2316-6486", "https://orcid.org/0000-0003-3842-1604" ]
+    },
+    "affiliations": {
+      "title": "Affiliation(s)",
+      "description": "The person's affiliated organization(s).",
+      "type": "array",
+      "items": {
+        "$ref": "https://archive.icpsr.umich.edu/schema/property_banks/organization/version/1",
+        "title": "Organization",
+        "description": "Name and other details about the principal investigator’s affiliation."
+      }
+    },
+    "email": {
+      "title": "Email Address",
+      "description": "The person's email address.",
+      "type": "string",
+      "format": "email",
+      "examples": ["j.doe@example.com"]
+    }
+  },
+  "required": ["name"],
+  "examples": [
+    {
+      "name": {
+        "given": "Robert J.",
+        "family": "Shiller"
+      },
+      "orcid": "https://orcid.org/0009-0006-2316-6486",
+      "affiliations": [
+        {
+          "name": "Yale University",
+          "ror": "https://ror.org/03v76x132"
+        },
+        {
+          "name": "MacroMarkets"
+        }
+      ]
+    },
+    {
+      "name": {
+        "given": "Claudia",
+        "family": "Goldin"
+      },
+      "orcid": "https://orcid.org/0000-0003-3842-1604",
+      "affiliations": [
+        {
+          "name": "Harvard University",
+          "ror": "https://ror.org/03vek6s52"
+        }
+      ]
+    },
+    {
+      "name": {
+        "given": "Miner P.",
+        "family": "Marchbanks III"
+      }
+    }
+  ]
+}

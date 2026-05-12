@@ -20,19 +20,6 @@ When referencing ICPSR data collections within metadata records, use the ICPSR i
 
 Unless referencing a specific version of an ICPSR data collection, use the unversioned DOI (e.g., https://doi.org/10.3886/ICPSR06425 rather than https://doi.org/10.3886/ICPSR06425.v1) since the unversioned DOI resolves to the latest version of an archived ICPSR data collection.  
 
-## Authority Control
-
-The [ICPSR Personal Name Authority List](https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10002) and the [ICPSR Organization Names Authority List](https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10004) are the primary authority control sources for names in ICPSR metadata records.  
-
-If names are not present in ICPSR lists, the [Virtual International Authority File](https://viaf.org/) (VIAF) serves as a secondary resource. VIAF is a name authority service that links multiple national authority files (i.e., catalogs of authoritative names such as the [Library of Congress Name Authority File](https://id.loc.gov/authorities/names.html)) into a single international resource. Once the record for an entity is found in VIAF, click on the link next to the American flag to access the Library of Congress entry and use the name in the 100 field (for personal names) or 110 field (for organizational names) of the record. If there are only foreign catalog entries, use of those are acceptable.  
-
-When entering the name of a person or organization, the following hierarchy of authority control sources should be used to make sure the name conforms to best practices within ICPSR and the broader academic community:  
-
-  1. If the person or organization has published/distributed/sponsored data for ICPSR in the past, use the name as it has been displayed previously within the ICPSR catalog.  
-  2. If the person or organization is in the [ICPSR Personal Name Authority List](https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10002) or the [ICPSR Organization Names Authority List](https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10004), conform to the listed name form.
-  3. If the person or organization is not available in an ICPSR authority list, consult [VIAF](https://viaf.org).  
-  4. If the person or organization does not have a VIAF record, consult another authoritative source, such as an organization's website, Google Scholar, or a personal C.V. published on an institutional website.  
-
 ## Grammar
 
 ### Commas

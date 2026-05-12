@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://archive.icpsr.umich.edu/schema/property_banks/sampling_procedures",
+  "title": "Sampling Procedures",
+  "description": "The type(s) of sample and sample design used to select survey respondents to represent the population.",
+  "usageNotes": { "$ref": "https://schemas.icpsr.umich.edu/notes/sampling_procedures#/usageNotes" },
+  "controlledVocab": "samplingProcedures",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "label": {
+        "title": "Label",
+        "description": "A human-readable form of the term.",
+        "type": "string",
+        "examples": [
+          "Probability: Systematic random", 
+          "Theoretical Sampling",
+          "Total universe/Complete enumeration"
+        ]
+      },
+      "code": {
+        "title": "Code",
+        "description": "A machine-readable/-actionable form of the term.",
+        "type": "string",
+        "examples": [
+          "Probability.SystematicRandom",
+          "TheoreticalSampling",
+          "TotalUniverseCompleteEnumeration"
+        ]
+      },
+      "uri": {
+        "title": "URI",
+        "description": "The URI for the term.",
+        "type": "string",
+        "examples": [
+          "/api/v1/vocab-terms/samplingProcedures/terms/Probability.SystematicRandom",
+          "/api/v1/vocab-terms/samplingProcedures/terms/TheoreticalSampling",
+          "/api/v1/vocab-terms/samplingProcedures/terms/TotalUniverseCompleteEnumeration"
+        ]
+      }
+    },
+    "required": ["label", "code", "uri"]
+  },
+  "items": {
+      "type": "string"
+  }, 
+  "examples": [
+    [
+      {
+        "label": "Probability: Systematic random",
+        "code": "Probability.SystematicRandom",
+        "uri": "/api/v1/vocab-terms/samplingProcedures/terms/Probability.SystematicRandom"
+      },
+      {
+        "label": "Theoretical Sampling",
+        "code": "TheoreticalSampling",
+        "uri": "/api/v1/vocab-terms/samplingProcedures/terms/TheoreticalSampling"
+      }
+    ],
+    [
+      {
+        "label": "Total universe/Complete enumeration",
+        "code": "TotalUniverseCompleteEnumeration",
+        "uri": "/api/v1/vocab-terms/samplingProcedures/terms/TotalUniverseCompleteEnumeration"
+      }
+    ]
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://archive.icpsr.umich.edu/schema/property_banks/variable_description",
+  "title": "Variable Description",
+  "description": "Significant variables (particularly demographic variables) in the data files.",
+  "type": "string",
+  "usageNotes": "The Variable Description provides more detailed information than the Summary, including a review of variables that are important for users to know about. The codebook, setup files, and variable groups are appropriate sources of information for Variable Description.",
+  "examples": [
+    "The data includes variables about participants' and their parents' moods, interviewer observations, families' activities, families' health history, participants' school records, and parents' substance use. Demographic variables include race, religion, annual household income, and the participants' parents' employment statuses.",
+    "The LGBTQ Hate Crimes Interviews dataset contains more in-depth information, including victim demographic information, substance abuse history, information on whether the victim is open about their LGBTQ identification, the victim's job status, and information about how the victim reacted to the crime, such as whether or not they reported the crime to the police and their level of cooperation with the police and prosecution."
+  ]
+}

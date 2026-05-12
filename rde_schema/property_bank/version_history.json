@@ -1,0 +1,68 @@
+{
+    "$schema": "https://json-schema.org/draft-07/schema#",
+    "$id": "https://archive.icpsr.umich.edu/schema/property_banks/version_history",
+    "title": "Version History",
+    "description": "A record of how the data collection has changed over time.",
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "version_number": {
+          "title": "Version Number",
+          "description": "A version number for a study.",
+          "type": "string",
+          "pattern": "^[vV]\\d+(.\\d+)?(.\\d+)?$",
+          "usageNotes": "Every ICPSR data collection is assigned version 1.0 when it is first published. When the data collection is updated, a new version number is assigned. For substantive changes to the data collection, including changes to data files, title, or principal investigators, a new major version is created, the version number increases by 1 (for example, from 1.0 to 2.0), and a new version-specific digital object identifier (DOI) is created. For all other changes, a new minor version is created, the version number increases by 0.1 (for example, from 2.0 to 2.1), and the DOI does not change.",
+          "examples": [
+            "V1",
+            "V2.1",
+            "V3.2"
+          ]
+        },
+        "version_date": {
+          "title": "Version Date",
+          "description": "The date on which a given version of a data collection was released.",
+          "usageNotes": "ICPSR automatically generates this date for data collection additions and updates.",
+          "type": "string",
+          "format": "date",
+          "examples": ["2020-07-20", "2022-01-31"]
+        },
+        "version_note": {
+          "title": "Version Note",
+          "description": "Provenance information about a given version of the data collection.",
+          "type": "string",
+          "examples": [
+            "File CB3025.ALL.PDF was removed from any previous datasets and flagged as a study-level file, so that it will accompany all downloads.",
+            "The data producer provided additional data files.",
+            "The codebook descriptions of variables TANSUP, EMOSUP, and SOCSUP were corrected."
+          ]
+        }
+      }
+    },
+    "examples": [
+      [
+        {
+          "version_number": "V2.1",
+          "version_date": "2025-10-03",
+          "version_note": "Updated study summary."
+        },
+        {
+          "version_number": "V2",
+          "version_date": "2023-08-12",
+          "version_note": "The data producer provided additional data files."
+        },
+        {
+          "version_number": "V1",
+          "version_date": "2021-03-01",
+          "version_note": "Initial release"
+        }
+      ],
+      [
+        {
+          "version_number": "V1",
+          "version_date": "2024-06-28",
+          "version_note": "Initial release"
+        }
+      ]
+    ]
+}

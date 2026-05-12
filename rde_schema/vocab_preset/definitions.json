@@ -1,0 +1,174 @@
+[
+    {
+        "code": "classifications",
+        "label": "Classifications",
+        "description": "ICPSR Classification System",
+        "adapter": "icpsr_classification",
+        "termCodeType": "STRING"
+    },
+    {
+        "code": "collectionModes",
+        "label": "Collection Modes",
+        "description": "DDI Collection Mode Controlled Vocabulary",
+        "adapter": "ddi",
+        "externalURI": "https://vocabularies.cessda.eu/vocabulary/ModeOfCollection",
+        "externalVersion": "5.0.0",
+        "termCodeType": "STRING",
+        "initParams": "ModeOfCollection"
+    },
+    {
+        "code": "dataSourceTypes",
+        "label": "Data Source Types",
+        "description": "DDI Data Source Type Controlled Vocabulary",
+        "adapter": "ddi",
+        "externalURI": "https://vocabularies.cessda.eu/vocabulary/DataSourceType",
+        "externalVersion": "1.0.2",
+        "termCodeType": "STRING",
+        "initParams": "DataSourceType"
+    },
+    {
+        "code": "generalDataFormats",
+        "label": "General Data Formats",
+        "description": "DDI General Data Format Controlled Vocabulary",
+        "adapter": "ddi",
+        "externalURI": "https://vocabularies.cessda.eu/vocabulary/GeneralDataFormat",
+        "externalVersion": "2.0.3",
+        "termCodeType": "STRING",
+        "initParams": "GeneralDataFormat"
+    },
+    {
+        "code": "subjectTerms",
+        "label": "Subject Terms",
+        "description": "ICPSR Subject Terms Thesaurus",
+        "adapter": "icpsr_thesaurus",
+        "termCodeType": "STRING",
+        "initParams": "10001"
+    },
+    {
+        "code": "jelClassifications",
+        "label": "JEL Classifications",
+        "description": "Journal of Economic Literature Classification System",
+        "adapter": "jel",
+        "termCodeType": "STRING"
+    },
+    {
+        "code": "licenses",
+        "label": "Licenses",
+        "description": "SPDX License List",
+        "adapter": "licenses",
+        "externalURI": "https://spdx.org/licenses/",
+        "externalVersion": "",
+        "termCodeType": "STRING"
+    },
+    {
+        "code": "mesh",
+        "label": "MESH",
+        "description": "NLM Medical Subject Headings",
+        "adapter": "mesh_proxy",
+        "externalURI": "https://id.nlm.nih.gov/mesh/",
+        "externalVersion": "",
+        "termCodeType": "STRING"
+    },
+    {
+        "code": "organizations",
+        "label": "Organizations",
+        "description": "ICPSR Organization Authority List",
+        "adapter": "icpsr_thesaurus",
+        "termCodeType": "STRING",
+        "initParams": "10004"
+    },
+    {
+        "code": "samplingProcedures",
+        "label": "Sampling Procedures",
+        "description": "DDI Sampling Procedure Controlled Vocabulary",
+        "adapter": "ddi",
+        "externalURI": "https://vocabularies.cessda.eu/vocabulary/SamplingProcedure",
+        "externalVersion": "1.1.4",
+        "termCodeType": "STRING",
+        "initParams": "SamplingProcedure"
+    },
+    {
+        "code": "smallestGeographicUnits",
+        "label": "Smallest Geographic Units",
+        "description": "ICPSR Smallest Geographic Unit Controlled Vocabulary",
+        "adapter": "tree",
+        "termCodeType": "STRING"
+    },
+    {
+        "code": "timeMethods",
+        "label": "Time Methods",
+        "description": "DDI Time Method Controlled Vocabulary",
+        "adapter": "ddi",
+        "externalURI": "https://vocabularies.cessda.eu/vocabulary/TimeMethod",
+        "externalVersion": "1.2.3",
+        "termCodeType": "STRING",
+        "initParams": "TimeMethod"
+    },
+    {
+        "code": "analysisUnits",
+        "label": "Units of Analysis",
+        "description": "DDI Units of Analysis Controlled Vocabulary",
+        "adapter": "ddi",
+        "externalURI": "https://vocabularies.cessda.eu/vocabulary/AnalysisUnit",
+        "externalVersion": "2.1.3",
+        "termCodeType": "STRING",
+        "initParams": "AnalysisUnit"
+    },
+    {
+        "code": "ror",
+        "label": "Research Organization Registry",
+        "description": "Research Organization Registry",
+        "adapter": "ror_proxy",
+        "termCodeType": "STRING"
+    },
+    {
+        "code": "orcid",
+        "label": "ORCID",
+        "description": "ORCID",
+        "adapter": "orcid_proxy",
+        "termCodeType": "STRING"
+    },    
+    {
+        "code": "geographicNames",
+        "label": "Geographic Names",
+        "description": "ICPSR Geographic Names Thesaurus",
+        "adapter": "icpsr_thesaurus",
+        "termCodeType": "STRING",
+        "initParams": "10003"
+    },
+    {
+        "code": "geoNames",
+        "label": "GeoName Terms",
+        "description": "GeoName Terms",
+        "adapter": "geonames_proxy",    
+        "termCodeType": "STRING"
+    },
+    {
+        "code": "oversamples",
+        "label": "Oversamples",
+        "description": "ICPSR Oversamples Controlled Vocabulary",
+        "adapter": "tree",
+        "termCodeType": "STRING"
+    },
+    {
+        "code": "contributorTypes",
+        "label": "Contributor Types",
+        "description": "ICPSR Contributor Types Controlled Vocabulary",
+        "adapter": "tree",
+        "termCodeType": "STRING"
+    },
+    {
+        "code": "psidLicense",
+        "label": "PSID License",
+        "description": "PSID (Panel Study of Income Dynamics) Public Data Extract License",
+        "adapter": "tree",
+        "termCodeType": "STRING"
+    },
+    {
+        "code": "adaAccessibility",
+        "label": "ADA Accessibility",
+        "description": "ICPSR ADA Accessibility Status Controlled Vocabulary",
+        "adapter": "tree",
+        "termCodeType": "STRING"
+    }
+]

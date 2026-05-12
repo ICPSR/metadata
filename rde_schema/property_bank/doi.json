@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://archive.icpsr.umich.edu/schema/property_banks/doi",
+  "title": "Digital Object Identifier (DOI)",
+  "description": "The registered persistent digital object identifier (DOI) associated with the data collection.",
+  "type": "string",
+  "format": "uri",
+  "usageNotes": { "$ref": "https://schemas.icpsr.umich.edu/notes/doi#/usageNotes" },
+  "examples": [ 
+    "https://doi.org/10.3886/ICPSR300449.V2", 
+    "https://doi.org/10.3886/ICPSR06425.v1" 
+  ]
+}

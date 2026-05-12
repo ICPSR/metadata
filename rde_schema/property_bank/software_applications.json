@@ -1,0 +1,179 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://archive.icpsr.umich.edu/schema/property_banks/core/software_applications",
+  "title": "Software Applications",
+  "description": "Software used by the principal investigator(s) to collect or analyze data, required to understand how the data were obtained or to reproduce results.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "title": "Software Name",
+        "description": "The name of the software application.",
+        "type": "string",
+        "examples": [
+          "JHOVE",
+          "ffmpeg",
+          "json-schema-for-humans"
+        ]
+      },
+      "software_version": {
+        "title": "Software Version",
+        "description": "The version of the application.",
+        "type": "string",
+        "examples": [
+          "1",
+          "2.0.4",
+          "Auto-Build 2023-01-15 12:36"
+        ]
+      },
+      "description": {
+        "title": "Software Description",
+        "description": "Short description or overview of the application and its intended purpose",
+        "type": "string",
+        "examples": [
+          "JHOVE, the JSTOR/Harvard Object Validation Environment, is an extensible software framework for performing format identification, validation, and characterization of digital objects.",
+          "ffmpeg is a very fast video and audio converter that can also grab from a live audio/video source. It can also convert between arbitrary sample rates and resize video on the fly with a high quality polyphase filter."
+        ]
+      },
+      "programming_languages": {
+        "title": "Programming Languages",
+        "description": "The programming language(s) used in the development of the application",
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "examples": [
+          [
+            "python"
+          ],
+          [
+            "shell",
+            "r"
+          ],
+          [
+            "other"
+          ]
+        ]
+      },
+      "operating_systems": {
+        "title": "Operating Systems",
+        "description": "Computer operating systems supported by the application",
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "examples": [
+          [
+            "windows"
+          ],
+          [
+            "windows",
+            "mac",
+            "linux"
+          ],
+          [
+            "other"
+          ]
+        ]
+      },
+      "memory_requirements": {
+        "title": "Memory Requirements",
+        "description": "Minimum memory (e.g., RAM) requirements to operate the application",
+        "type": "string",
+        "examples": [
+          "4 GB",
+          "1GB of RAM (2GB for a 64-bit version)",
+          "4 GB of GPU memory for HD and some 4K media; 6 GB or more for 4K and higher"
+        ]
+      },
+      "processor_requirements": {
+        "title": "Processor Requirements",
+        "description": "Processor architecture required to run the application",
+        "type": "string",
+        "examples": [
+          "Intel i5/ i7/ Ryzen 7",
+          "Minimum 1 GHz; Recommended 2GHz or more",
+          "2.5–2.9 GHz or faster processor"
+        ]
+      },
+      "software_requirements": {
+        "title": "Software Requirements",
+        "description": "Required components for the application, like runtime environments and shared libraries not included in the package but needed to run it.",
+        "type": "string",
+        "examples": [
+          "Java runtime environment",
+          "Requires additional Python libraries: numpy, v1.11.2; scipy, v0.18.1, and pandas, v0.19.0",
+          "Compile with GNU auto tools"
+        ]
+      },
+      "storage_requirements": {
+        "title": "Storage Requirements",
+        "description": "Amount of storage space required by the application",
+        "type": "string",
+        "examples": [
+          "3.5 GB for new installations, 5 GB for upgrades (including temporary files required during installation)",
+          "15 GB of free disk space",
+          "8 GB of available hard-disk space for installation; additional free space required during installation"
+        ]
+      },
+      "device_requirements": {
+        "title": "Device Requirements",
+        "description": "Device required to run the application. Used in cases where a specific make/model is required to run the application",
+        "type": "string",
+        "examples": []
+      },
+      "license": {
+        "title": "License",
+        "description": "The license associated with the application, preferably expressed as a URL.",
+        "type": "string",
+        "examples": [
+          "https://www.apache.org/licenses/LICENSE-2.0",
+          "https://opensource.org/licenses/LGPL-2.0"
+        ]
+      },
+      "download_url": {
+        "title": "Download URL",        
+        "description": "A direct link to a downloadable software artifact (e.g., executable, package, archive, or single script file) that retrieves the application itself, without additional navigation or instructions.",
+        "type": "string",
+        "format": "uri",
+        "examples": [
+          "https://github.com/richardlehane/siegfried/archive/refs/heads/main.zip",
+          "https://cdn.nationalarchives.gov.uk/documents/droid-binary-6.5.2-bin-win32-with-jre.zip"
+        ]
+      },
+      "install_url": {
+        "title": "Installation URL",
+        "description": "A link to a repository or project landing page where users can obtain resources and instructions to install the application (as opposed to directly downloading a single file).",
+        "type": "string",
+        "format": "uri",
+        "examples": [
+          "https://github.com/richardlehane/siegfried",
+          "https://www.nationalarchives.gov.uk/information-management/manage-information/preserving-digital-records/droid/"
+        ]
+      }
+    },
+    "required": ["name"]
+  },
+  "examples": [
+    [
+      {
+        "name": "siegfried",
+        "software_version": "1.11.1",
+        "description": "Siegfried is a signature-based file format identification tool, implementing the National Archives UK's PRONOM file format signatures; freedesktop.org's MIME-info file format signatures; the Library of Congress's FDD file format signatures (beta); and Wikidata (beta).",
+        "programming_languages": [
+          "go",
+          "javascript",
+          "other"
+        ],
+        "operating_systems": [
+          "mac",
+          "linux",
+          "windows"
+        ],
+        "license": "https://www.apache.org/licenses/LICENSE-2.0",
+        "download_url": "https://github.com/richardlehane/siegfried/archive/refs/heads/main.zip"
+      }
+    ]
+  ]
+}

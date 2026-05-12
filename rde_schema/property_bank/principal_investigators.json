@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://archive.icpsr.umich.edu/schema/property_banks/principal_investigators",
+  "title": "Principal Investigators",
+  "description": "The key people or organizations responsible for the data collection, listed by importance. Each data collection requires at least one PI, either a person or an organization.",
+  "usageNotes": "List individuals and organizations that are chiefly responsible for the study across its entire life cycle or made significant intellectual contributions to the research.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "person": {
+        "$ref": "https://archive.icpsr.umich.edu/schema/property_banks/person/version/1",
+        "title": "Person",
+        "description": "Name and other details about the principal investigator, if it is an individual person.",
+        "usageNotes": { "$ref": "https://schemas.icpsr.umich.edu/notes/principal_investigators_person#/usageNotes" }
+      },
+      "organization": {
+        "$ref": "https://archive.icpsr.umich.edu/schema/property_banks/organization/version/1",
+        "title": "Organization",
+        "description": "Name and other details about the principal investigator, if it is an organization.",
+        "usageNotes": { "$ref": "https://schemas.icpsr.umich.edu/notes/principal_investigators_organization#/usageNotes" }
+      },
+      "order": {
+        "title": "Order",
+        "description": "The order or rank of importance for the PIs associated with the data collection, typically provided to ICPSR by the lead PI.",
+        "type": "integer",
+        "examples": [0,1,2]
+      }
+    },
+    "allOf": [
+      {
+        "oneOf": [
+          { "required": ["person"] },
+          { "required": ["organization"] }
+        ]   
+      },
+      {
+        "required": ["order"]
+      }
+    ]
+  },
+  "minItems": 1,
+  "examples": [
+    [
+      {
+        "person": {
+          "name": {
+            "given": "Miner P.",
+            "family": "Marchbanks III"
+          }
+        },
+        "order": 0
+      }
+    ],
+    [
+      {
+        "person": {
+          "name": {
+            "given": "Robert J.",
+            "family": "Shiller"
+          },
+          "orcid": "https://orcid.org/0009-0006-2316-6486",
+          "affiliations": [
+            {
+              "name": "Yale University",
+              "ror": "https://ror.org/03v76x132"
+            },
+            {
+              "name": "MacroMarkets"
+            }
+          ]
+        },
+        "order": 0
+      },
+      {
+        "person": {
+          "name": {
+            "given": "Claudia",
+            "family": "Goldin"
+          },
+          "orcid": "https://orcid.org/0000-0003-3842-1604",
+          "affiliations": [
+            {
+              "name": "Harvard University",
+              "ror": "https://ror.org/03vek6s52"
+            }
+          ]
+        },
+        "order": 1
+      },
+      {
+        "organization": 
+          {
+            "name": "Bureau of Justice Statistics",
+            "ror": "https://ror.org/0006s4z66"
+          },
+        "order": 2
+      }
+    ]
+  ]
+}

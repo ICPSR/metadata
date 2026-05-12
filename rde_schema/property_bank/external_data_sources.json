@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://archive.icpsr.umich.edu/schema/property_banks/external_data_sources",
+  "title": "External Data Sources",
+  "description": "The source of the data, when that source is external to the data collection and can be independently cited.",
+  "type": "array",
+  "items": {
+    "type": "string"
+  },                
+  "usageNotes": "External data sources can include websites, datasets, books, journal articles, and other sources. Each source includes at minimum the title, author, publication year, journal (if applicable), and DOI or URL for online sources. Any citation format is accepted.",
+  "examples": [
+    ["'Voting Scores.' Congressional Quarterly Almanac 33 (1977), 487-498"],
+    ["Multi-Resolution Land Characteristics Consortium. \"National Land Cover Database (CONUS), All Years,\" 2016. https://www.mrlc.gov/data/nlcd-land-cover-conus-all-years"],
+    ["Data file 1: United States Census Bureau (2010). TIGER/Line shapefiles, 2010 census tracts (2010 version) [Data set]. https://www2.census.gov/geo/tiger/TIGER2010/TRACT/2010/tl_2010_01_tract10.zip"]
+  ]
+}

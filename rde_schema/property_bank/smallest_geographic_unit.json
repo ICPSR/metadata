@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://archive.icpsr.umich.edu/schema/property_banks/smallest_geographic_unit",
+  "title": "Smallest Geographic Unit",
+  "description": "The smallest geographic unit (e.g., state or census tract) used in the dataset.",
+  "usageNotes": { "$ref": "https://schemas.icpsr.umich.edu/notes/smallest_geographic_unit#/usageNotes" },
+  "controlledVocab": "smallestGeographicUnits",
+  "type": "object",
+  "properties": {
+    "label": {
+      "title": "Label",
+      "description": "A human-readable form of the term.",
+      "type": "string",
+      "examples": [
+        "Basic Geographic Units",
+        "Postal Code/Zip Code",
+        "State/Province"
+      ]
+    },
+    "code": {
+      "title": "Code",
+      "description": "A machine-readable/-actionable form of the term.",
+      "type": "string",
+      "examples": [
+        "BasicUnits",
+        "PostalCodeZipCode",
+        "StateProvince"
+      ]
+    },
+    "uri": {
+      "title": "URI",
+      "description": "The URI for the term.",
+      "type": "string",
+      "examples": [
+        "/api/v1/vocab-terms/smallestGeographicUnits/terms/BasicUnits",
+        "/api/v1/vocab-terms/smallestGeographicUnits/terms/PostalCodeZipCode",
+        "/api/v1/vocab-terms/smallestGeographicUnits/terms/StateProvince"
+      ]
+    }
+  },
+  "examples": [
+    {
+      "label": "Basic Geographic Units",
+      "code": "BasicUnits",
+      "uri": "/api/v1/vocab-terms/smallestGeographicUnits/terms/BasicUnits"
+    }, 
+    {
+      "label": "Postal Code/Zip Code",
+      "code": "PostalCodeZipCode",
+      "uri": "/api/v1/vocab-terms/smallestGeographicUnits/terms/PostalCodeZipCode"
+    }, 
+    {
+      "label": "State/Province",
+      "code": "StateProvince",
+      "uri": "/api/v1/vocab-terms/smallestGeographicUnits/terms/StateProvince"
+    }
+  ]
+}

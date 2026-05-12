@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://archive.icpsr.umich.edu/schema/property_banks/universe",
+  "title": "Universe",
+  "description": "The total group of persons or other entities (e.g., households or organizations) that were the object of research and to which analytic results refer.",
+  "type": "string",
+  "usageNotes": "Age, nationality, and residence commonly help to delineate a given universe, but any of a number of factors may be involved, such as sex, race, income, veteran status, criminal convictions, etc. The Universe may consist of elements other than persons, such as housing units, court cases, deaths, countries, etc. It should be possible to tell from the description of the universe whether a given individual or element (hypothetical or real) is a member of the population under study. Typically, the Universe statement is about one sentence or shorter, and reflects the entire possible population a data collection sought to study.",
+  "examples":
+  [
+    "All households in the United States with phones.",
+    "Part 1: Thirty cities in Massachusetts during 1980-1986. Parts 2-4: All residents in Massachusetts during 1986.",
+    "Individuals self-identified as transgender, trans, genderqueer, non-binary, or other identities on the transgender identity spectrum aged 18 and older residing in the fifty U.S. states, the District of Columbia, American Samoa, Guam, Puerto Rico, and U.S. military bases overseas.",
+    "Jihadists from the United States and Canada, along with Incels from Germany, Canada, the United States, and United Kingdom.",
+    "All publicly funded medical examiner and coroner offices.",
+    "Uncertified ballots for the 2000 United States presidential election in Florida."
+  ]
+}

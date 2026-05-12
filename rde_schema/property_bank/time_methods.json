@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://archive.icpsr.umich.edu/schema/property_banks/time_methods",
+  "title": "Time Methods",
+  "description": "The methods used to collect data over time, like snapshots at one point (cross-sectional) or repeatedly (longitudinal) to study changes or trends.",
+  "usageNotes": "This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance CV TimeMethod [https://rdf-vocabulary.ddialliance.org/ddi-cv/TimeMethod/1.2.3/TimeMethod.html](https://rdf-vocabulary.ddialliance.org/ddi-cv/TimeMethod/1.2.3/TimeMethod.html).",
+  "controlledVocab": "timeMethods",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "label": {
+        "title": "Label",
+        "description": "A human-readable form of the term.",
+        "type": "string",
+        "examples": [
+          "Cross-section",
+          "Longitudinal: Panel",
+          "Time series"
+        ]
+      },
+      "code": {
+        "title": "Code",
+        "description": "A machine-readable/-actionable form of the term.",
+        "type": "string",
+        "examples": [
+          "CrossSection",
+          "Longitudinal.Panel",
+          "TimeSeries"
+        ]
+      },
+      "uri": {
+        "title": "URI",
+        "description": "The URI for the term.",
+        "type": "string",
+        "examples": [
+          "/api/v1/vocab-terms/timeMethods/terms/CrossSection",
+          "/api/v1/vocab-terms/timeMethods/terms/Longitudinal.Panel",
+          "/api/v1/vocab-terms/timeMethods/terms/TimeSeries"
+        ]
+      }
+    },
+    "required": [ "label", "code", "uri" ]
+    },
+  "examples": [
+    [
+      {
+        "label": "Cross-section",
+        "code": "CrossSection",
+        "uri": "/api/v1/vocab-terms/timeMethods/terms/CrossSection"
+      },
+      {
+        "label": "Longitudinal: Panel",
+        "code": "Longitudinal.Panel",
+        "uri": "/api/v1/vocab-terms/timeMethods/terms/Longitudinal.Panel"
+      }
+    ],
+    [
+      {
+        "label": "Time series",
+        "code": "TimeSeries",
+        "uri": "/api/v1/vocab-terms/timeMethods/terms/TimeSeries"
+      }
+    ]
+  ]
+}

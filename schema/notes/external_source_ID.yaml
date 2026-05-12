@@ -1,0 +1,10 @@
+---
+  $schema: https://json-schema.org/draft-07/schema#
+  $id: https://schemas.icpsr.umich.edu/schema/notes/external_source_ID?version=v1
+  icpsrGuidance: |+
+    This is an internal ICPSR element that is not publicly displayed. An External Source ID consists of: 
+
+      * an ICPSR-defined source organization code  
+      * a colon  
+      * a Depositor-supplied ID.
+

@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://archive.icpsr.umich.edu/schema/property_banks/data_source_types",
+  "title": "Data Source Types",
+  "description": "The source(s) of the data as collected by the Principal Investigators.",
+  "usageNotes": "People, things, and other data can all be Data Source Types. This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance CV DataSourceType [https://rdf-vocabulary.ddialliance.org/ddi-cv/DataSourceType/1.0.2/DataSourceType.html](https://rdf-vocabulary.ddialliance.org/ddi-cv/DataSourceType/1.0.2/DataSourceType.html).",
+  "controlledVocab": "dataSourceTypes",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "label": {
+        "title": "Label",
+        "description": "A human-readable form of the term.",
+        "type": "string",
+        "examples": [
+          "Registers/Records/Accounts: Medical/Clinical",
+          "Events/Interactions", 
+          "Research data: Published"
+        ]
+      },
+      "code": {
+        "title": "Code",
+        "description": "A machine-readable/-actionable form of the term.",
+        "type": "string",
+        "examples": [
+          "RegistersRecordsAccounts.MedicalClinical", 
+          "EventsInteractions", 
+          "ResearchData.Published"]
+      },
+      "uri": {
+        "title": "URI",
+        "description": "The URI for the term.",
+        "type": "string",
+        "examples": [
+          "/api/v1/vocab-terms/dataSourceTypes/terms/RegistersRecordsAccounts.MedicalClinical",
+          "/api/v1/vocab-terms/dataSourceTypes/terms/EventsInteractions",
+          "/api/v1/vocab-terms/dataSourceTypes/terms/ResearchData.Published"
+        ]
+      }
+    },
+    "required": ["label", "code", "uri"]
+  },
+  "examples": [
+    [
+      {
+        "label": "Registers/Records/Accounts: Medical/Clinical",
+        "code": "RegistersRecordsAccounts.MedicalClinical",
+        "uri": "/api/v1/vocab-terms/dataSourceTypes/terms/RegistersRecordsAccounts.MedicalClinical"
+      },
+      {
+        "label": "Events/Interactions",
+        "code": "EventsInteractions",
+        "uri": "/api/v1/vocab-terms/dataSourceTypes/terms/EventsInteractions"
+      }
+    ],
+    [
+      {
+        "label": "Research data: Published",
+        "code": "ResearchData.Published",
+        "uri": "/api/v1/vocab-terms/dataSourceTypes/terms/ResearchData.Published"
+      }
+    ]
+  ]
+}
