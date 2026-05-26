@@ -22,6 +22,7 @@ theme:
 markdown_extensions:
   - attr_list
 plugins:
+  - search
   - redirects:
       redirect_maps:
         'icpsr_study_schema.md': 'icpsr_legacy_schema.md'
