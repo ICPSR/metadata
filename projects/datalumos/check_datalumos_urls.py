@@ -691,12 +691,6 @@ def normalize_title_for_fuzzy(value):
     if not value:
         return ""
 
-    # Remove common site-branding suffixes.
-    # Example: "Some Dataset | HUD USER" -> "Some Dataset"
-    for separator in [" | ", " - ", " — ", " – "]:
-        if separator in value:
-            value = value.split(separator)[0]
-
     value = value.casefold()
 
     # Replace punctuation with spaces.
