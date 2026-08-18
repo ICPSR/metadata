@@ -189,11 +189,6 @@ def main():
                         top_level_date = data.get("dateCreated")
 
                         if top_level_date is not None:
-                            print(
-                                f"  WARNING: versionDate for versionLabel 'V1' "
-                                f"not found in {json_file.name}; using top-level "
-                                f"'dateCreated' instead"
-                            )
                             row[field] = top_level_date
                         else:
                             print(
