@@ -65,6 +65,18 @@ jobs:
             --input $GITHUB_WORKSPACE \
             --mode current
 
+      - name: Check remote branch
+        run: |
+          git fetch origin "${GITHUB_REF_NAME}"
+          echo "Local HEAD:"
+          git log -1 --oneline
+
+          echo "Remote branch:"
+          git log -1 --oneline "origin/${GITHUB_REF_NAME}"
+
+          echo "Commits on remote but not local:"
+          git log --oneline "HEAD..origin/${GITHUB_REF_NAME}"
+
       - name: Commit and push changes
         run: |
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
