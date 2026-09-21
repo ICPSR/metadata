@@ -208,12 +208,40 @@ Eurobarometer 85.2
 
 #### Complete Principal Investigators Examples (with Subfields):
 
-```text
-<p><b>Personal Principal Investigator</b></p><p><table><thead><tr><th>First Name</th><th>Last Name</th><th>Affiliation</th></tr></thead><tbody><tr><td>Veronica</td><td>Martinez-Ebers</td><td>National Institute for Law and Equity</td></tr><tr><td>Lawrence F.</td><td>Travis III</td><td>University of Cincinnati</td></tr></tbody></table></p>
+```yaml
+- Person:
+    Name:
+      Given: Miner P.
+      Family: Marchbanks III
+  Order: 0
 ```
 
-```text
-<p><b>Organizational Principal Investigator</b></p><p><table><thead><tr><th>Name</th></tr></thead><tbody><tr><td>United States Department of Labor. Bureau of Labor Statistics</td></tr><tr><td>The Washington Post</td></tr></tbody></table></p>
+```yaml
+- Person:
+    Name:
+      Given: Robert J.
+      Family: Shiller
+    Orcid: https://orcid.org/0009-0006-2316-6486
+    Affiliations:
+    - Name: Yale University
+      Ror: https://ror.org/03v76x132
+    - Name: MacroMarkets
+  Order: 0
+
+- Person:
+    Name:
+      Given: Claudia
+      Family: Goldin
+    Orcid: https://orcid.org/0000-0003-3842-1604
+    Affiliations:
+    - Name: Harvard University
+      Ror: https://ror.org/03vek6s52
+  Order: 1
+
+- Organization:
+    Name: Bureau of Justice Statistics
+    Ror: https://ror.org/0006s4z66
+  Order: 2
 ```
 
 
