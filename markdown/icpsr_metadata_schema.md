@@ -2831,7 +2831,7 @@ https://doi.org/10.3886/ICPSR06425.v1
 
 **Accepted Values:** Text
 
-**Usage Notes:** The Citation is dynamically assembled from other entry fields in this format: PI (list). Title. Distributor (list), Issued Date. DOI. Note: ICPSR 'union catalog' records (i.e., external resource to which ICPSR links as a courtesy) do not have citations.
+**Usage Notes:** The Citation is dynamically assembled from other entry fields in this format: PI (list). Title. Distributor (list), Issued Date. DOI. Note: ICPSR 'union catalog' records (i.e., external resource to which ICPSR links as a courtesy) do not have citations. 
 
 **Examples:**
 
