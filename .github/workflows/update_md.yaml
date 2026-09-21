@@ -73,9 +73,3 @@ jobs:
           git add markdown/
           git diff --cached --quiet || git commit -m "Generated new copy of schema in markdown"
           git push origin HEAD:$GITHUB_REF
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./site
