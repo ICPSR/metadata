@@ -8,11 +8,6 @@ on:
     paths:
       - 'schema/**'
       - 'rde_schema/**'
-      - 'markdown/**'
-
-concurrency:
-  group: update-markdown-${{ github.ref }}
-  cancel-in-progress: true
 
 jobs:
   update_markdown:
