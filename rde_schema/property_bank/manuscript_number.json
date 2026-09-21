@@ -4,5 +4,6 @@
   "title": "Manuscript Number",
   "description": "A unique identifier that associates the data collection with a manuscript submitted to a journal.",
   "type": "string",
-  "examples": ["ECIN-Mar-2025-0078.R2", "AER-2019-0000"]
+  "usageNotes": "The manuscript number helps the journal manage the data deposit. It is an internal field and will not be displayed to the public.",
+  "examples": []
 }

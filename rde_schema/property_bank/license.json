@@ -6,45 +6,25 @@
   "type": "object",
   "controlledVocab": "licenses",
   "properties": {
-    "label": {
-      "title": "Label",
-      "description": "A human-readable form of the term.",
-      "type": "string",
-      "examples": [
-        "Creative Commons Attribution 4.0 International",
-        "Apache License 1.0"
-      ]
+    "name": {
+      "title": "License Name",
+      "type": "string"
     },
     "code": {
-      "title": "Code",
-      "description": "A machine-readable/-actionable form of the term.",
-      "type": "string",
-      "examples": [
-        "CC-BY-NC-4.0",
-        "Apache-1.0"
-      ]
+      "title": "License Code",
+      "type": "string"
     },
     "uri": {
-      "title": "URI",
-      "description": "The URI for the term.",
+      "title": "License URI",
       "type": "string",
-      "examples": [
-        "/api/v1/vocab-terms/licenses/terms/CC-BY-4.0",
-        "/api/v1/vocab-terms/licenses/terms/Apache-1.0"
-      ]
+      "format": "uri"
     }
   },
-  "required": ["label", "code", "uri"],
   "examples": [
     {
-      "label": "Creative Commons Attribution 4.0 International",
+      "name": "Creative Commons Attribution Non Commercial 4.0 International",
       "code": "CC-BY-NC-4.0",
-      "uri": "/api/v1/vocab-terms/licenses/terms/CC-BY-4.0"
-    },
-    {
-      "label": "Apache License 1.0",
-      "code": "Apache-1.0",
-      "uri": "/api/v1/vocab-terms/licenses/terms/Apache-1.0"
+      "uri": "https://creativecommons.org/licenses/by-nc/4.0/"
     }
   ]
 }

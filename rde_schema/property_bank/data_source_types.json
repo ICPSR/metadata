@@ -3,40 +3,32 @@
   "$id": "https://archive.icpsr.umich.edu/schema/property_banks/data_source_types",
   "title": "Data Source Types",
   "description": "The source(s) of the data as collected by the Principal Investigators.",
-  "usageNotes": "People, things, and other data can all be Data Source Types. This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance CV DataSourceType [https://rdf-vocabulary.ddialliance.org/ddi-cv/DataSourceType/1.0.2/DataSourceType.html](https://rdf-vocabulary.ddialliance.org/ddi-cv/DataSourceType/1.0.2/DataSourceType.html).",
+  "usageNotes": "This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance CV DataSourceType https://rdf-vocabulary.ddialliance.org/ddi-cv/DataSourceType/1.0.2/DataSourceType.html.",
   "controlledVocab": "dataSourceTypes",
   "type": "array",
   "items": {
     "type": "object",
     "properties": {
       "label": {
-        "title": "Label",
+        "title": "Data Source Type",
         "description": "A human-readable form of the term.",
         "type": "string",
         "examples": [
           "Registers/Records/Accounts: Medical/Clinical",
           "Events/Interactions", 
-          "Research data: Published"
+          "Other"
         ]
       },
       "code": {
-        "title": "Code",
+        "title": "Data Source Type Code",
         "description": "A machine-readable/-actionable form of the term.",
         "type": "string",
-        "examples": [
-          "RegistersRecordsAccounts.MedicalClinical", 
-          "EventsInteractions", 
-          "ResearchData.Published"]
+        "examples": ["RegistersRecordsAccounts.MedicalClinical", "EventsInteractions", "Other"]
       },
       "uri": {
-        "title": "URI",
+        "title": "Data Source Type URI",
         "description": "The URI for the term.",
-        "type": "string",
-        "examples": [
-          "/api/v1/vocab-terms/dataSourceTypes/terms/RegistersRecordsAccounts.MedicalClinical",
-          "/api/v1/vocab-terms/dataSourceTypes/terms/EventsInteractions",
-          "/api/v1/vocab-terms/dataSourceTypes/terms/ResearchData.Published"
-        ]
+        "type": "string"
       }
     },
     "required": ["label", "code", "uri"]
@@ -46,19 +38,19 @@
       {
         "label": "Registers/Records/Accounts: Medical/Clinical",
         "code": "RegistersRecordsAccounts.MedicalClinical",
-        "uri": "/api/v1/vocab-terms/dataSourceTypes/terms/RegistersRecordsAccounts.MedicalClinical"
+        "uri": "https://example.com/data_source_type/123"
       },
       {
         "label": "Events/Interactions",
         "code": "EventsInteractions",
-        "uri": "/api/v1/vocab-terms/dataSourceTypes/terms/EventsInteractions"
+        "uri": "https://example.com/data_source_type/234"
       }
     ],
     [
       {
-        "label": "Research data: Published",
-        "code": "ResearchData.Published",
-        "uri": "/api/v1/vocab-terms/dataSourceTypes/terms/ResearchData.Published"
+        "label": "Other",
+        "code": "Other",
+        "uri": "https://example.com/data_source_type/737"
       }
     ]
   ]

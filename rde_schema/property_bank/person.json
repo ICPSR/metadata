@@ -15,14 +15,14 @@
           "description": "The person's first (given) name, which may include a middle name or initial.",
           "type": "string",
           "mapsTo": ["foaf:givenName"],
-          "examples": ["Miner P.", "Robert J.", "Claudia"]
+          "examples": ["Chantel", "Giannis", "Mary Kate", "John Q."]
         },
         "family": {
           "title": "Family Name (Last Name)",
           "description": "The person's last (family) name, which may include a suffix (e.g., Jr., Sr., IV).",
           "type": "string",
           "mapsTo": ["foaf:familyName"],
-          "examples": ["Marchbanks III", "Shiller", "Goldin"]
+          "examples": ["Smith", "Jordan Jr.", "Escobar-Vega"]
         }
       },
       "required": ["given", "family"],
@@ -38,20 +38,23 @@
       ]
     },
     "orcid": {
-      "title": "ORCID Identifier",
+      "Title": "ORCID Identifier",
       "description": "The person's Open Researcher and Contributor ID (ORCID).",
       "type": "string",
       "format": "uri",
-      "examples": [ "https://orcid.org/0009-0006-2316-6486", "https://orcid.org/0000-0003-3842-1604" ]
+      "examples": [ "https://orcid.org/0000-0001-6289-1234" ]
+    },
+    "researcher_passport_profile_id": {
+      "description": "The person's ICPSR Researcher Passport Identifier.",
+      "type": "string",
+      "examples": []
     },
     "affiliations": {
       "title": "Affiliation(s)",
       "description": "The person's affiliated organization(s).",
       "type": "array",
       "items": {
-        "$ref": "https://archive.icpsr.umich.edu/schema/property_banks/organization/version/1",
-        "title": "Organization",
-        "description": "Name and other details about the principal investigator’s affiliation."
+        "$ref": "https://archive.icpsr.umich.edu/schema/property_banks/organization/version/1"
       }
     },
     "email": {
@@ -66,37 +69,28 @@
   "examples": [
     {
       "name": {
-        "given": "Robert J.",
-        "family": "Shiller"
+        "given": "Jane Q.",
+        "family": "Doe II"
       },
-      "orcid": "https://orcid.org/0009-0006-2316-6486",
+      "orcid": "https://orcid.org/0000-0001-6666-5717",
+      "researcher_passport_profile_id": "1234",
       "affiliations": [
         {
-          "name": "Yale University",
-          "ror": "https://ror.org/03v76x132"
+          "name": "Urban Institute",
+          "name_code": "2342",
+          "name_uri": "https://icpsr.example.com/organizations/2342",
+          "ror": "https://ror.org/017pz3h73",
+          "icpsr_org_id": "xyz123"
         },
         {
-          "name": "MacroMarkets"
+          "name": "Example University"
         }
-      ]
+      ],
+      "email": "jane.doe@example.com"
     },
     {
       "name": {
-        "given": "Claudia",
-        "family": "Goldin"
-      },
-      "orcid": "https://orcid.org/0000-0003-3842-1604",
-      "affiliations": [
-        {
-          "name": "Harvard University",
-          "ror": "https://ror.org/03vek6s52"
-        }
-      ]
-    },
-    {
-      "name": {
-        "given": "Miner P.",
-        "family": "Marchbanks III"
+        "given": "Joe"
       }
     }
   ]

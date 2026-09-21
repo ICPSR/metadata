@@ -3,41 +3,33 @@
   "$id": "https://archive.icpsr.umich.edu/schema/property_banks/sampling_procedures",
   "title": "Sampling Procedures",
   "description": "The type(s) of sample and sample design used to select survey respondents to represent the population.",
-  "usageNotes": { "$ref": "https://schemas.icpsr.umich.edu/notes/sampling_procedures#/usageNotes" },
+  "usageNotes": "The sample is a selection out of the universe of all possible relevant cases (e.g., adults in the United States, housing units in three counties of Michigan, etc.) that could have been included in the data collection. Note that some studies, such as censuses, do not utilize samples but include all members of the universe. This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance CV SamplingProcedure https://rdf-vocabulary.ddialliance.org/ddi-cv/SamplingProcedure/1.1.4/SamplingProcedure.html.",
   "controlledVocab": "samplingProcedures",
   "type": "array",
   "items": {
     "type": "object",
     "properties": {
       "label": {
-        "title": "Label",
         "description": "A human-readable form of the term.",
         "type": "string",
         "examples": [
           "Probability: Systematic random", 
-          "Theoretical Sampling",
+          "Other",
           "Total universe/Complete enumeration"
         ]
       },
       "code": {
-        "title": "Code",
         "description": "A machine-readable/-actionable form of the term.",
         "type": "string",
         "examples": [
           "Probability.SystematicRandom",
-          "TheoreticalSampling",
+          "Other",
           "TotalUniverseCompleteEnumeration"
         ]
       },
       "uri": {
-        "title": "URI",
         "description": "The URI for the term.",
-        "type": "string",
-        "examples": [
-          "/api/v1/vocab-terms/samplingProcedures/terms/Probability.SystematicRandom",
-          "/api/v1/vocab-terms/samplingProcedures/terms/TheoreticalSampling",
-          "/api/v1/vocab-terms/samplingProcedures/terms/TotalUniverseCompleteEnumeration"
-        ]
+        "type": "string"
       }
     },
     "required": ["label", "code", "uri"]
@@ -50,19 +42,19 @@
       {
         "label": "Probability: Systematic random",
         "code": "Probability.SystematicRandom",
-        "uri": "/api/v1/vocab-terms/samplingProcedures/terms/Probability.SystematicRandom"
+        "uri": "https://example.com/sampling_procedures/123"
       },
       {
-        "label": "Theoretical Sampling",
-        "code": "TheoreticalSampling",
-        "uri": "/api/v1/vocab-terms/samplingProcedures/terms/TheoreticalSampling"
+        "label": "Other",
+        "code": "Other",
+        "uri": "https://example.com/sampling_procedures/737"
       }
     ],
     [
       {
         "label": "Total universe/Complete enumeration",
         "code": "TotalUniverseCompleteEnumeration",
-        "uri": "/api/v1/vocab-terms/samplingProcedures/terms/TotalUniverseCompleteEnumeration"
+        "uri": "https://example.com/sampling_procedures/234"
       }
     ]
   ]

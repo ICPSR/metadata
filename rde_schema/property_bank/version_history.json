@@ -8,27 +8,23 @@
       "type": "object",
       "properties": {
         "version_number": {
-          "title": "Version Number",
           "description": "A version number for a study.",
           "type": "string",
           "pattern": "^[vV]\\d+(.\\d+)?(.\\d+)?$",
-          "usageNotes": "Every ICPSR data collection is assigned version 1.0 when it is first published. When the data collection is updated, a new version number is assigned. For substantive changes to the data collection, including changes to data files, title, or principal investigators, a new major version is created, the version number increases by 1 (for example, from 1.0 to 2.0), and a new version-specific digital object identifier (DOI) is created. For all other changes, a new minor version is created, the version number increases by 0.1 (for example, from 2.0 to 2.1), and the DOI does not change.",
+          "usageNotes": "Versioning should follow ICPSR conventions",
           "examples": [
             "V1",
-            "V2.1",
-            "V3.2"
+            "V2",
+            "V3"
           ]
         },
         "version_date": {
-          "title": "Version Date",
           "description": "The date on which a given version of a data collection was released.",
-          "usageNotes": "ICPSR automatically generates this date for data collection additions and updates.",
           "type": "string",
           "format": "date",
           "examples": ["2020-07-20", "2022-01-31"]
         },
         "version_note": {
-          "title": "Version Note",
           "description": "Provenance information about a given version of the data collection.",
           "type": "string",
           "examples": [
@@ -41,11 +37,6 @@
     },
     "examples": [
       [
-        {
-          "version_number": "V2.1",
-          "version_date": "2025-10-03",
-          "version_note": "Updated study summary."
-        },
         {
           "version_number": "V2",
           "version_date": "2023-08-12",

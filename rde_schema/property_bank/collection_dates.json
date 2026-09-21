@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft-07/schema#",
   "$id": "https://archive.icpsr.umich.edu/schema/property_banks/collection_dates",
   "title": "Collection Dates",
-  "description": "The date(s) data collection took place.",
+  "description": "The date(s) when the data were physically collected.",
   "type": "array",
   "items": {
     "type": "object",
@@ -23,7 +23,7 @@
         "title": "Time Frame",
         "description": "An optional free-text description of the data collection period, used for non-numeric dates (e.g., 'Fall 2012') or to add context when multiple dates are present.",
         "type": "string",
-        "usageNotes": { "$ref": "https://schemas.icpsr.umich.edu/notes/collection_dates_time_frame#/usageNotes" },
+        "usageNotes": "The Time Frame should not simply restate the date(s) in words. For example, if the Collection Date starts in 2020-01, the Time Frame should repeat 'January 2020'.",
         "examples": [ "Fall 2001", "Student data"]
       }
     },
@@ -35,18 +35,11 @@
       {
         "start_date": "2018",
         "end_date": "2018",
-        "time_frame": "Wave 1"
+        "time_frame": "Summer and Fall 2018"
       },
       {
         "start_date": "2020-10",
-        "end_date": "2020-10",
-        "time_frame": "Wave 2"
-      }
-    ],
-    [
-      {
-        "start_date": "2003-01-01",
-        "end_date": "2003-12-31"
+        "end_date": "2020-10"
       }
     ]
   ]

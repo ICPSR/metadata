@@ -8,22 +8,18 @@
     "type": "object",
     "properties": {
       "organization": {
-        "$ref": "https://archive.icpsr.umich.edu/schema/property_banks/organization/version/1",
-        "title": "Funding Organization",
-        "description": "Name and other details about the organization that provided the funding.",
-        "usageNotes": { "$ref": "https://schemas.icpsr.umich.edu/notes/funding_sources_organization#/usageNotes" }
+        "$ref": "https://archive.icpsr.umich.edu/schema/property_banks/organization/version/1"
       },
       "grants": {
         "title": "Funding Awards",
-        "description": "Identifiers and other details about financial support for the data collection.",
-        "usageNotes": "Whenever possible, provide a grant number for the funding award. If one exists, you can also provide a URL, preferably a persistent one like a digital object identifier (DOI).",
+        "description": "Financial support for the data collection.",
         "type": "array",
         "items": {
           "type": "object",
           "properties": {
               "grant_number": {
                 "title": "Funding Identifier",
-                "description": "The unique identifier for the funding (e.g., ABC-0123456).",
+                "description": "The unique identifier for the funding (e.g., ABC-0123456.",
                 "type": "string",
                 "examples": [
                     "SES-1835721",
@@ -51,7 +47,8 @@
         "examples": [
           0,
           1,
-          2
+          2,
+          3
         ]
       }
     },
@@ -62,6 +59,8 @@
       {
         "organization": {
           "name": "Robert Wood Johnson Foundation",
+          "name_code": "5643",
+          "name_uri": "https://icpsr.example.com/organizations/5643",
           "ror": "https://ror.org/02ymmdj85"
         },
         "grants": [
@@ -76,7 +75,9 @@
       },
       {
         "organization": {
-          "name": "Bureau of Justice Statistics",
+          "name": "United States Department of Justice. Office of Justice Programs. Bureau of Justice Statistics",
+          "name_code": "2342",
+          "name_uri": "https://icpsr.example.com/organizations/2342",
           "ror": "https://ror.org/0006s4z66"
         },
         "grants": [

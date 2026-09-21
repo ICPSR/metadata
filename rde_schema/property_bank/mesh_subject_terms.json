@@ -3,31 +3,33 @@
   "$id": "https://archive.icpsr.umich.edu/schema/property_banks/mesh_subject_terms",
   "title": "Medical Subject Headings (MeSH) Terms",
   "description": "Biomedical and health-related terms from the National Library of Medicine that describe the data collection's topics.",
-  "usageNotes": "This controlled vocabulary was taken from the National Library of Medicine's Medical Subject Headings (MeSH). Source: [https://www.ncbi.nlm.nih.gov/mesh/](https://www.ncbi.nlm.nih.gov/mesh/)",
+  "usageNotes": "This controlled vocabulary was taken from the National Library of Medicine's Medical Subject Headings (MeSH). Source: https://www.ncbi.nlm.nih.gov/mesh/",
   "type": "array",
   "controlledVocab": "mesh",
   "items": {
     "type": "object",
     "properties": {
       "label": {
-        "title": "Label",
+        "title": "MeSH Subject Term",
         "description": "A human-readable form of the subject term.",
         "type": "string",
-        "examples": ["Anxiety", "Diabetes Mellitus"]
+        "examples": ["anxiety", "brain waves"]
       },
       "code": {
-        "title": "Code",
+        "title": "MeSH Subject Term Code",
         "description": "A machine-readable/-actionable form of the subject term.",
         "type": "string",
-        "examples": ["D001007", "T011730"]
+        "examples": ["D001007", "D058256"]
       },
       "uri": {
-        "title": "URI",
+        "title": "MeSH Subject Term URI",
         "description": "The URI for the subject term as maintained in MeSH.",
         "type": "string",
+        "format": "uri",
+        "usageNotes": "Enter the MeSH RDF Unique Identifier.",
         "examples": [
           "http://id.nlm.nih.gov/mesh/D001007",
-          "http://id.nlm.nih.gov/mesh/T011730"
+          "http://id.nlm.nih.gov/mesh/D058256"
         ]
       }
     },
@@ -36,14 +38,14 @@
   "examples": [
     [
       {
-        "label": "Anxiety",
+        "label": "anxiety",
         "code": "D001007",
         "uri": "http://id.nlm.nih.gov/mesh/D001007"
       },
       {
-        "label": "Diabetes Mellitus",
-        "code": "T011730",
-        "uri": "http://id.nlm.nih.gov/mesh/T011730"
+        "label": "brain waves",
+        "code": "D058256",
+        "uri": "http://id.nlm.nih.gov/mesh/D058256"
       }
     ]
   ]

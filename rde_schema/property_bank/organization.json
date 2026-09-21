@@ -11,9 +11,20 @@
       "description": "The organization's name.",
       "type": "string",
       "examples": [
-        "Federal Reserve Bank of St. Louis", 
-        "University of Michigan"
+        "Federal Reserve Bank of St. Louis. Research Division", 
+        "University of Michigan. Institute for Social Research"
       ]
+    },
+    "name_code": {
+      "title": "Organization Name Code",
+        "description": "A machine-readable/-actionable form of the organization's name.",
+      "type": "string",
+      "examples": ["1234", "2345", "3456"]
+    },
+    "name_uri": {
+      "title": "Organization Name URI",
+      "description": "The URI for the organization's name.",
+      "type": "string"
     },
     "ror": {
       "title": "ROR Identifier",
@@ -34,15 +45,10 @@
   "examples": [
     {
       "name": "Urban Institute",
+      "name_code": "1234",
+      "name_uri": "https://icpsr.example.com/organizations/1234",
       "ror": "https://ror.org/017pz3h73",
       "email": "info@urban.institute"
-    },
-    {
-      "name": "Bureau of Justice Statistics",
-      "ror": "https://ror.org/0006s4z66"
-    },
-    {
-      "name": "Internal Revenue Service"
     }
   ]
 }

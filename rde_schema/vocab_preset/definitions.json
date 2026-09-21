@@ -16,6 +16,13 @@
         "termCodeType": "STRING",
         "initParams": "ModeOfCollection"
     },
+	{
+	    "code": "collectionTypes",
+	    "label": "Collection Types",
+	    "description": "ICPSR Collection Types",
+	    "adapter": "tree",
+	    "termCodeType": "STRING"
+	},
     {
         "code": "dataSourceTypes",
         "label": "Data Source Types",

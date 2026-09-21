@@ -114,7 +114,7 @@ def render_yaml_examples(examples, schema):
         # strings stay unchanged
         if isinstance(ex, (str, int, float)):
             md.append("```text")
-            md.append(f'"{ex}"')
+            md.append(f'{ex}')
             md.append("```\n")
             continue
 
@@ -122,7 +122,7 @@ def render_yaml_examples(examples, schema):
         if isinstance(ex, list) and all(isinstance(i, (str, int, float)) for i in ex):
             md.append("```text")
             for item in ex:
-                md.append(f'"{item}"')
+                md.append(f'{item}')
             md.append("```\n")
             continue
 
@@ -130,11 +130,11 @@ def render_yaml_examples(examples, schema):
         human_ex = convert_example_to_titles(ex, schema)
 
         # dump YAML normally
-        #yaml_str = yaml.safe_dump(human_ex, sort_keys=False)
+        yaml_str = yaml.safe_dump(human_ex, sort_keys=False)
 
         # dump YAML; enclose everything in quotes
-        yaml_str = yaml.dump(human_ex, Dumper=QuoteDumper, sort_keys=False)
-        yaml_str = yaml_str.replace("\n...\n", "\n").rstrip(".\n")
+        # yaml_str = yaml.dump(human_ex, Dumper=QuoteDumper, sort_keys=False)
+        # yaml_str = yaml_str.replace("\n...\n", "\n").rstrip(".\n")
 
         # insert a blank line between top-level list items
         if isinstance(human_ex, list):
