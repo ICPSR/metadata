@@ -1,6 +1,6 @@
 # ICPSR Metadata Schema
 
-Last updated: September 21, 2026
+Last updated: September 22, 2026
 
 
 This metadata schema is used to describe data collections at the Inter-university Consortium for Political and Social Research (ICPSR) after 2026. 
@@ -28,7 +28,7 @@ Machine-actionable copies of metadata field definitions are also available in [J
 | [Universe](#universe) | No | No | Text | The total group of persons or other entities (e.g., households or organizations) that were the object of research and to which analytic results refer. |
 | [Time Methods](#time-methods) | No | Yes | Multi-part element; see subfields | The methods used to collect data over time, like snapshots at one point (cross-sectional) or repeatedly (longitudinal) to study changes or trends. |
 | [Units of Analysis](#units-of-analysis) | No | Yes | Multi-part element; see subfields | The object(s) of analysis for the data collection, such as an organization, individual, or household. |
-| [Sampling Procedures](#sampling-procedures) | No | Yes | Text | The type(s) of sample and sample design used to select survey respondents to represent the population. |
+| [Sampling Procedures](#sampling-procedures) | No | Yes | Multi-part element; see subfields | The type(s) of sample and sample design used to select survey respondents to represent the population. |
 | [Sampling Note](#sampling-note) | No | No | Text | Supplemental information about the sampling process that does not fit neatly into the Sampling Procedure field. |
 | [Weights](#weights) | No | No | Text | The weight variables and the criteria for using them in data analysis, or other information about how the data are weighted if no weight variables are present. |
 | [Response Rates](#response-rates) | No | No | Text | The percentage of respondents in the sample who participated in the data collection. |
@@ -212,17 +212,17 @@ Time Period:
 
   * Enter a specific and unique name, for example, by including full names and middle initials where appropriate.  
   * Follow commonly accepted, language-appropriate practices for capitalization and punctuation.  
-  * Within the bounds of these first two principles, follow the PI’s precedent for how their name appears in print.
+  * Within the bounds of these first two principles, follow the PI's precedent for how their name appears in print.
 
-To determine the preferred form of name to appear in ICPSR’s metadata catalog, consult the following authority sources, in this order. 
+To determine the preferred form of name to appear in ICPSR's metadata catalog, consult the following authority sources, in this order. 
 
   * ICPSR's metadata catalog. If the PI has published data with ICPSR before, especially curated data, use the name as it appears in previous studies.
-  * The PI’s curriculum vitae published on an institutional website.
-  * The PI’s other published works.
+  * The PI's curriculum vitae published on an institutional website.
+  * The PI's other published works.
   * The [Virtual International Authority File](https://viaf.org/en) (VIAF). 
-  * The PI’s [Open Researcher and Contributor Identifier](https://orcid.org/) (ORCID) record.
-  * The PI’s Google Scholar profile.
-  * The PI’s bio on their organization’s website.
+  * The PI's [Open Researcher and Contributor Identifier](https://orcid.org/) (ORCID) record.
+  * The PI's Google Scholar profile.
+  * The PI's bio on their organization's website.
 
 The given (i.e., 'first') name may include the middle name or initial. If the person only uses an inital for the given name, do not include a space between first and middle initials (e.g., 'E.V.'). The family (i.e., 'last') name can include any suffixes (such as 'II' or 'Jr.'). Abbreviations are discouraged (especially 'et al.').
 
@@ -232,7 +232,7 @@ When entering a principal investigator's affiliation(s):
 
   * Enter the PI's affiliation as it appears in the Research Organization Registry (ROR). 
   * If the organization doesn't have a ROR ID, enter its full name, avoid acronyms, and do not include departments or colleges.   Consult the following sources authority sources to determine the preferred name form.  
-      * ICPSR’s metadata catalog. If other PIs affiliated with this organization have published data with ICPSR before, especially curated data, use the name as it appears in previous studies.  
+      * ICPSR's metadata catalog. If other PIs affiliated with this organization have published data with ICPSR before, especially curated data, use the name as it appears in previous studies.  
       * The organization's website.  
       * The Virtual International Authority File (VIAF).  
   * Enter a PI's affiliation at the time the research was conducted. If the organization's name has changed over time, enter the name that applied at the time the research was conducted.  
@@ -255,8 +255,8 @@ When entering a principal investigator's affiliation(s):
 
   * Whenever possible, enter the organization name as it appears in the [Research Organization Registry](https://ror.org/) (ROR).  
   * If the principal investigator is a department or subunit of an organization that appears in ROR, but does not have its own ROR ID, enter the organization name as it appears in ROR, followed by a period and the name of the department or subunit.  
-  * If the organization doesn’t have a ROR ID, use its full name and avoid acronyms. Consult the following sources authority sources to determine the preferred name form.
-     * ICPSR’s metadata catalog. If the PI has published data with ICPSR before, especially curated data, use the name as it appears in previous studies.
+  * If the organization doesn't have a ROR ID, use its full name and avoid acronyms. Consult the following sources authority sources to determine the preferred name form.
+     * ICPSR's metadata catalog. If the PI has published data with ICPSR before, especially curated data, use the name as it appears in previous studies.
      * The organization's website.
      * The [Virtual International Authority File](https://viaf.org/en) (VIAF).
   * Except for principal investigators that are departments or subunits of organizations in ROR, do not prepend the organization's name with its institutional hierarchy. For example, enter "National Institute on Aging," not "United States Department of Health and Human Services. National Institutes of Health. National Institute on Aging."
@@ -360,10 +360,10 @@ When entering a principal investigator's affiliation(s):
 
 **Usage Notes:** When entering the name of a funding organization:
 
-  * Whenever possible, enter the organization’s name as it appears in the [Research Organization Registry](https://ror.org/) (ROR).  
+  * Whenever possible, enter the organization's name as it appears in the [Research Organization Registry](https://ror.org/) (ROR).  
   * If the funding organization is a department or subunit of an organization that appears in ROR, but does not have its own ROR ID, enter the organization name as it appears in ROR, followed by a period and the name of the department or subunit.
   * If the organization doesn't have a ROR ID, use its full name and avoid acronyms. Consult the following sources authority sources to determine the preferred name form.
-      * ICPSR’s metadata catalog. If the organization has funded data collections with ICPSR before, especially curated data, use the name as it appears in previous studies.
+      * ICPSR's metadata catalog. If the organization has funded data collections with ICPSR before, especially curated data, use the name as it appears in previous studies.
       * The organization's website.
       * The [Virtual International Authority File](https://viaf.org/en) (VIAF).
   * Except for principal investigators that are departments or subunits of organizations in ROR, do not prepend the organization's name with its institutional hierarchy. For example, enter "National Institute on Aging" instead of "United States Department of Health and Human Services. National Institutes of Health. National Institute on Aging". 
@@ -388,7 +388,7 @@ When entering a principal investigator's affiliation(s):
 | Property | Required? | Repeatable? | Accepted Values | Description |
 |---|---|---|---|---|
 | [Funding Identifier](#funding-sources_grants_grant_number) | Yes | No | Text | The unique identifier for the funding (e.g., ABC-0123456). |
-| [Funding URL](#funding-sources_grants_grant_uri) | No | No | Text | A unique identifier (URL), preferably a persistent one like a DOI,  linking to a landing page with funding information. |
+| [Funding URL](#funding-sources_grants_grant_uri) | No | No | Text | A unique identifier (URL), preferably a persistent one like a DOI, linking to a landing page with funding information. |
 
 ###### Funding Identifier {#funding-sources_grants_grant_number}
 
@@ -416,7 +416,7 @@ When entering a principal investigator's affiliation(s):
 
 ###### Funding URL {#funding-sources_grants_grant_uri}
 
-**Description:** A unique identifier (URL), preferably a persistent one like a DOI,  linking to a landing page with funding information.
+**Description:** A unique identifier (URL), preferably a persistent one like a DOI, linking to a landing page with funding information.
 
 **Required:** No
 
@@ -528,11 +528,11 @@ The Summary is written in the third person and avoids attempting to address issu
 
 | Property | Required? | Repeatable? | Accepted Values | Description |
 |---|---|---|---|---|
-| [ICPSR Subject Term](#icpsr-subject-terms_label) | Yes | No | Text | A human-readable form of the subject term. |
-| [ICPSR Subject Term Code](#icpsr-subject-terms_code) | Yes | No | Text | A machine-readable/-actionable form of the subject term. |
-| [ICPSR Subject Term URI](#icpsr-subject-terms_uri) | Yes | No | Text | The URI for the subject term. |
+| [Label](#icpsr-subject-terms_label) | Yes | No | Text | A human-readable form of the subject term. |
+| [Code](#icpsr-subject-terms_code) | Yes | No | Text | A machine-readable/-actionable form of the subject term. |
+| [URI](#icpsr-subject-terms_uri) | Yes | No | Text | The URI for the subject term. |
 
-##### ICPSR Subject Term {#icpsr-subject-terms_label}
+##### Label {#icpsr-subject-terms_label}
 
 **Description:** A human-readable form of the subject term.
 
@@ -556,7 +556,7 @@ The Summary is written in the third person and avoids attempting to address issu
 "recidivism"
 ```
 
-##### ICPSR Subject Term Code {#icpsr-subject-terms_code}
+##### Code {#icpsr-subject-terms_code}
 
 **Description:** A machine-readable/-actionable form of the subject term.
 
@@ -580,7 +580,7 @@ The Summary is written in the third person and avoids attempting to address issu
 "26961"
 ```
 
-##### ICPSR Subject Term URI {#icpsr-subject-terms_uri}
+##### URI {#icpsr-subject-terms_uri}
 
 **Description:** The URI for the subject term.
 
@@ -603,19 +603,19 @@ The Summary is written in the third person and avoids attempting to address issu
 #### Complete ICPSR Subject Terms Examples (with Subfields):
 
 ```yaml
-- "ICPSR Subject Term": "lobbying"
-  "ICPSR Subject Term Code": "26131"
-  "ICPSR Subject Term URI": "https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/26131"
+- "Label": "lobbying"
+  "Code": "26131"
+  "URI": "https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/26131"
 
-- "ICPSR Subject Term": "age"
-  "ICPSR Subject Term Code": "24123"
-  "ICPSR Subject Term URI": "https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/24123"
+- "Label": "age"
+  "Code": "24123"
+  "URI": "https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/24123"
 ```
 
 ```yaml
-- "ICPSR Subject Term": "happiness"
-  "ICPSR Subject Term Code": "25624"
-  "ICPSR Subject Term URI": "https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/25624"
+- "Label": "happiness"
+  "Code": "25624"
+  "URI": "https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/25624"
 ```
 
 
@@ -632,7 +632,7 @@ The Summary is written in the third person and avoids attempting to address issu
 
 **Accepted Values:** Multi-part element; see subfields
 
-**Usage Notes:** This controlled vocabulary was taken from the American Economic Association's JEL Classifications Codes. Source: [https://www.aeaweb.org/jel/guide/jel.php](https://www.aeaweb.org/jel/guide/jel.php)
+**Usage Notes:** This controlled vocabulary was taken from the American Economic Association's JEL Classifications Codes. Source: [https://www.aeaweb.org/jel/guide/jel.php](https://www.aeaweb.org/jel/guide/jel.php).
 
 #### Subfields:
 
@@ -640,7 +640,7 @@ The Summary is written in the third person and avoids attempting to address issu
 |---|---|---|---|---|
 | [Label](#journal-of-economic-literature-(jel)-classification-codes_label) | Yes | No | Text | A human-readable form of the term. |
 | [Code](#journal-of-economic-literature-(jel)-classification-codes_code) | Yes | No | Text | A machine-readable/-actionable form of the term. |
-| [URI](#journal-of-economic-literature-(jel)-classification-codes_uri) | Yes | No | Text | The URI for the JEL classification code. |
+| [URI](#journal-of-economic-literature-(jel)-classification-codes_uri) | Yes | No | Text | The URI for the term. |
 
 ##### Label {#journal-of-economic-literature-(jel)-classification-codes_label}
 
@@ -692,7 +692,7 @@ The Summary is written in the third person and avoids attempting to address issu
 
 ##### URI {#journal-of-economic-literature-(jel)-classification-codes_uri}
 
-**Description:** The URI for the JEL classification code.
+**Description:** The URI for the term.
 
 **Required:** Yes
 
@@ -746,7 +746,7 @@ The Summary is written in the third person and avoids attempting to address issu
 
 **Accepted Values:** Multi-part element; see subfields
 
-**Usage Notes:** This controlled vocabulary was taken from the National Library of Medicine's Medical Subject Headings (MeSH). Source: [https://www.ncbi.nlm.nih.gov/mesh/](https://www.ncbi.nlm.nih.gov/mesh/)
+**Usage Notes:** This controlled vocabulary was taken from the National Library of Medicine's Medical Subject Headings (MeSH). Source: [https://www.ncbi.nlm.nih.gov/mesh/](https://www.ncbi.nlm.nih.gov/mesh/).
 
 #### Subfields:
 
@@ -754,7 +754,7 @@ The Summary is written in the third person and avoids attempting to address issu
 |---|---|---|---|---|
 | [Label](#medical-subject-headings-(mesh)-terms_label) | Yes | No | Text | A human-readable form of the subject term. |
 | [Code](#medical-subject-headings-(mesh)-terms_code) | Yes | No | Text | A machine-readable/-actionable form of the subject term. |
-| [URI](#medical-subject-headings-(mesh)-terms_uri) | Yes | No | Text | The URI for the subject term as maintained in MeSH. |
+| [URI](#medical-subject-headings-(mesh)-terms_uri) | Yes | No | Text | The URI for the subject term. |
 
 ##### Label {#medical-subject-headings-(mesh)-terms_label}
 
@@ -798,7 +798,7 @@ The Summary is written in the third person and avoids attempting to address issu
 
 ##### URI {#medical-subject-headings-(mesh)-terms_uri}
 
-**Description:** The URI for the subject term as maintained in MeSH.
+**Description:** The URI for the subject term.
 
 **Required:** Yes
 
@@ -1013,19 +1013,19 @@ Geographic locations are drawn from the GeoNames geographical database. Source: 
 
 | Property | Required? | Repeatable? | Accepted Values | Description |
 |---|---|---|---|---|
-| [City](#geographic-coverage-areas_city) | No | No | Text | A town, city, or similar populated place covered in the data collection |
-| [County](#geographic-coverage-areas_county) | No | No | Text | A United States county or similar administrative area covered in the data collection |
-| [State](#geographic-coverage-areas_state) | No | No | Text | A state, province, canton or similar political entity covered in the data collection |
-| [Country](#geographic-coverage-areas_country) | No | No | Text | A country covered in the data collection |
+| [City](#geographic-coverage-areas_city) | No | No | Text | A town, city, or similar populated place covered in the data collection. |
+| [County](#geographic-coverage-areas_county) | No | No | Text | A United States county or similar administrative area covered in the data collection. |
+| [State](#geographic-coverage-areas_state) | No | No | Text | A state, province, canton or similar political entity covered in the data collection. |
+| [Country](#geographic-coverage-areas_country) | No | No | Text | A country covered in the data collection. |
 | [Region](#geographic-coverage-areas_region) | No | No | Text | An area distinguished by one or more observable physical or cultural characteristics that is covered in the data collection. |
-| [Continent](#geographic-coverage-areas_continent) | No | No | Text | A continent covered in the data collection |
+| [Continent](#geographic-coverage-areas_continent) | No | No | Text | A continent covered in the data collection. |
 | [Other Geographic Area](#geographic-coverage-areas_other_area) | No | No | Text | An area covered in the data collection that cannot be represented using the defined categories above or matched to an appropriate GeoNames record. |
 | [URI](#geographic-coverage-areas_uri) | No | No | Text | A local unique identifier for the geographic coverage area. |
 | [External URI](#geographic-coverage-areas_externalURI) | No | No | Text | The GeoNames unique identifier for the geographic coverage area. |
 
 ##### City {#geographic-coverage-areas_city}
 
-**Description:** A town, city, or similar populated place covered in the data collection
+**Description:** A town, city, or similar populated place covered in the data collection.
 
 **Required:** No
 
@@ -1049,7 +1049,7 @@ Geographic locations are drawn from the GeoNames geographical database. Source: 
 
 ##### County {#geographic-coverage-areas_county}
 
-**Description:** A United States county or similar administrative area covered in the data collection
+**Description:** A United States county or similar administrative area covered in the data collection.
 
 **Required:** No
 
@@ -1073,7 +1073,7 @@ Geographic locations are drawn from the GeoNames geographical database. Source: 
 
 ##### State {#geographic-coverage-areas_state}
 
-**Description:** A state, province, canton or similar political entity covered in the data collection
+**Description:** A state, province, canton or similar political entity covered in the data collection.
 
 **Required:** No
 
@@ -1097,7 +1097,7 @@ Geographic locations are drawn from the GeoNames geographical database. Source: 
 
 ##### Country {#geographic-coverage-areas_country}
 
-**Description:** A country covered in the data collection
+**Description:** A country covered in the data collection.
 
 **Required:** No
 
@@ -1145,7 +1145,7 @@ Geographic locations are drawn from the GeoNames geographical database. Source: 
 
 ##### Continent {#geographic-coverage-areas_continent}
 
-**Description:** A continent covered in the data collection
+**Description:** A continent covered in the data collection.
 
 **Required:** No
 
@@ -1735,28 +1735,108 @@ This field employs a local ICPSR controlled vocabulary; see below for terms and 
 
 **Repeatable:** Yes
 
-**Accepted Values:** Text
+**Accepted Values:** Multi-part element; see subfields
 
 **Usage Notes:** The sample is a selection out of the universe of all possible relevant cases (e.g., adults in the United States, housing units in three counties of Michigan, etc.) that could have been included in the data collection. Note that some studies, such as censuses, do not utilize samples but include all members of the universe.  
 
 This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance CV SamplingProcedure [https://rdf-vocabulary.ddialliance.org/ddi-cv/SamplingProcedure/1.1.4/SamplingProcedure.html](https://rdf-vocabulary.ddialliance.org/ddi-cv/SamplingProcedure/1.1.4/SamplingProcedure.html)
 
+#### Subfields:
+
+| Property | Required? | Repeatable? | Accepted Values | Description |
+|---|---|---|---|---|
+| [Label](#sampling-procedures_label) | Yes | No | Text | A human-readable form of the term. |
+| [Code](#sampling-procedures_code) | Yes | No | Text | A machine-readable/-actionable form of the term. |
+| [URI](#sampling-procedures_uri) | Yes | No | Text | The URI for the term. |
+
+##### Label {#sampling-procedures_label}
+
+**Description:** A human-readable form of the term.
+
+**Required:** Yes
+
+**Repeatable:** No
+
+**Accepted Values:** Text
+
 **Examples:**
+
+```text
+"Probability: Systematic random"
+```
+
+```text
+"Theoretical Sampling"
+```
+
+```text
+"Total universe/Complete enumeration"
+```
+
+##### Code {#sampling-procedures_code}
+
+**Description:** A machine-readable/-actionable form of the term.
+
+**Required:** Yes
+
+**Repeatable:** No
+
+**Accepted Values:** Text
+
+**Examples:**
+
+```text
+"Probability.SystematicRandom"
+```
+
+```text
+"TheoreticalSampling"
+```
+
+```text
+"TotalUniverseCompleteEnumeration"
+```
+
+##### URI {#sampling-procedures_uri}
+
+**Description:** The URI for the term.
+
+**Required:** Yes
+
+**Repeatable:** No
+
+**Accepted Values:** Text
+
+**Examples:**
+
+```text
+"/api/v1/vocab-terms/samplingProcedures/terms/Probability.SystematicRandom"
+```
+
+```text
+"/api/v1/vocab-terms/samplingProcedures/terms/TheoreticalSampling"
+```
+
+```text
+"/api/v1/vocab-terms/samplingProcedures/terms/TotalUniverseCompleteEnumeration"
+```
+
+#### Complete Sampling Procedures Examples (with Subfields):
 
 ```yaml
 - "Label": "Probability: Systematic random"
   "Code": "Probability.SystematicRandom"
-  "Uri": "/api/v1/vocab-terms/samplingProcedures/terms/Probability.SystematicRandom"
+  "URI": "/api/v1/vocab-terms/samplingProcedures/terms/Probability.SystematicRandom"
 
 - "Label": "Theoretical Sampling"
   "Code": "TheoreticalSampling"
-  "Uri": "/api/v1/vocab-terms/samplingProcedures/terms/TheoreticalSampling"
+  "URI": "/api/v1/vocab-terms/samplingProcedures/terms/TheoreticalSampling"
 ```
 
 ```yaml
 - "Label": "Total universe/Complete enumeration"
   "Code": "TotalUniverseCompleteEnumeration"
-  "Uri": "/api/v1/vocab-terms/samplingProcedures/terms/TotalUniverseCompleteEnumeration"
+  "URI": "/api/v1/vocab-terms/samplingProcedures/terms/TotalUniverseCompleteEnumeration"
 ```
 
 
@@ -2722,6 +2802,20 @@ The textual description should not simply restate the time period in words. For 
 
 **Accepted Values:** Text
 
+**Examples:**
+
+```text
+"/api/v1/vocab-terms/generalDataFormats/terms/Text"
+```
+
+```text
+"/api/v1/vocab-terms/generalDataFormats/terms/StillImage"
+```
+
+```text
+"/api/v1/vocab-terms/generalDataFormats/terms/Numeric"
+```
+
 #### Complete General Data Formats Examples (with Subfields):
 
 ```yaml
@@ -2982,7 +3076,7 @@ The textual description should not simply restate the time period in words. For 
 
 ```yaml
 "Label": "Creative Commons Attribution 4.0 International"
-"Code": "CC-BY-NC-4.0"
+"Code": "CC-BY-4.0"
 "URI": "/api/v1/vocab-terms/licenses/terms/CC-BY-4.0"
 ```
 
@@ -3366,13 +3460,13 @@ Study numbers with less than five digits will have zeroes prepended in the DOI (
 #### Complete Personal Name Examples (with Subfields):
 
 ```yaml
-"Given Name (First Name)": "Susan B."
-"Family Name (Last Name)": "Anthony"
+"Given Name (First Name)": "Miner P."
+"Family Name (Last Name)": "Marchbanks III"
 ```
 
 ```yaml
-"Given Name (First Name)": "John"
-"Family Name (Last Name)": "Doe IV"
+"Given Name (First Name)": "Claudia"
+"Family Name (Last Name)": "Goldin"
 ```
 
 ##### ORCID Identifier {#person_orcid}
