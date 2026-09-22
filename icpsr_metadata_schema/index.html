@@ -181,7 +181,7 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="icpsr-metadata-schema">ICPSR Metadata Schema</h1>
-<p>Last updated: September 21, 2026</p>
+<p>Last updated: September 22, 2026</p>
 <p>This metadata schema is used to describe data collections at the Inter-university Consortium for Political and Social Research (ICPSR) after 2026. </p>
 <p>These rules and definitions document ICPSR's metadata practices and are intended to (a) assist ICPSR staff with metadata entry, and (b) help users – including data depositors and researchers – understand and interpret ICPSR metadata.</p>
 <p>Machine-actionable copies of metadata field definitions are also available in <a href="https://github.com/ICPSR/metadata/tree/main/rde_schema/property_bank">JSON Schema</a> format.</p>
@@ -313,7 +313,7 @@
 <td><a href="#sampling-procedures">Sampling Procedures</a></td>
 <td>No</td>
 <td>Yes</td>
-<td>Text</td>
+<td>Multi-part element; see subfields</td>
 <td>The type(s) of sample and sample design used to select survey respondents to represent the population.</td>
 </tr>
 <tr>
@@ -637,17 +637,17 @@
 <ul>
 <li>Enter a specific and unique name, for example, by including full names and middle initials where appropriate.  </li>
 <li>Follow commonly accepted, language-appropriate practices for capitalization and punctuation.  </li>
-<li>Within the bounds of these first two principles, follow the PI’s precedent for how their name appears in print.</li>
+<li>Within the bounds of these first two principles, follow the PI's precedent for how their name appears in print.</li>
 </ul>
-<p>To determine the preferred form of name to appear in ICPSR’s metadata catalog, consult the following authority sources, in this order. </p>
+<p>To determine the preferred form of name to appear in ICPSR's metadata catalog, consult the following authority sources, in this order. </p>
 <ul>
 <li>ICPSR's metadata catalog. If the PI has published data with ICPSR before, especially curated data, use the name as it appears in previous studies.</li>
-<li>The PI’s curriculum vitae published on an institutional website.</li>
-<li>The PI’s other published works.</li>
+<li>The PI's curriculum vitae published on an institutional website.</li>
+<li>The PI's other published works.</li>
 <li>The <a href="https://viaf.org/en">Virtual International Authority File</a> (VIAF). </li>
-<li>The PI’s <a href="https://orcid.org/">Open Researcher and Contributor Identifier</a> (ORCID) record.</li>
-<li>The PI’s Google Scholar profile.</li>
-<li>The PI’s bio on their organization’s website.</li>
+<li>The PI's <a href="https://orcid.org/">Open Researcher and Contributor Identifier</a> (ORCID) record.</li>
+<li>The PI's Google Scholar profile.</li>
+<li>The PI's bio on their organization's website.</li>
 </ul>
 <p>The given (i.e., 'first') name may include the middle name or initial. If the person only uses an inital for the given name, do not include a space between first and middle initials (e.g., 'E.V.'). The family (i.e., 'last') name can include any suffixes (such as 'II' or 'Jr.'). Abbreviations are discouraged (especially 'et al.').</p>
 <p>Whenever possible, add an ORCID for each principal investigator.</p>
@@ -655,7 +655,7 @@
 <ul>
 <li>Enter the PI's affiliation as it appears in the Research Organization Registry (ROR). </li>
 <li>If the organization doesn't have a ROR ID, enter its full name, avoid acronyms, and do not include departments or colleges.   Consult the following sources authority sources to determine the preferred name form.  <ul>
-<li>ICPSR’s metadata catalog. If other PIs affiliated with this organization have published data with ICPSR before, especially curated data, use the name as it appears in previous studies.  </li>
+<li>ICPSR's metadata catalog. If other PIs affiliated with this organization have published data with ICPSR before, especially curated data, use the name as it appears in previous studies.  </li>
 <li>The organization's website.  </li>
 <li>The Virtual International Authority File (VIAF).  </li>
 </ul>
@@ -675,8 +675,8 @@
 <ul>
 <li>Whenever possible, enter the organization name as it appears in the <a href="https://ror.org/">Research Organization Registry</a> (ROR).  </li>
 <li>If the principal investigator is a department or subunit of an organization that appears in ROR, but does not have its own ROR ID, enter the organization name as it appears in ROR, followed by a period and the name of the department or subunit.  </li>
-<li>If the organization doesn’t have a ROR ID, use its full name and avoid acronyms. Consult the following sources authority sources to determine the preferred name form.<ul>
-<li>ICPSR’s metadata catalog. If the PI has published data with ICPSR before, especially curated data, use the name as it appears in previous studies.</li>
+<li>If the organization doesn't have a ROR ID, use its full name and avoid acronyms. Consult the following sources authority sources to determine the preferred name form.<ul>
+<li>ICPSR's metadata catalog. If the PI has published data with ICPSR before, especially curated data, use the name as it appears in previous studies.</li>
 <li>The organization's website.</li>
 <li>The <a href="https://viaf.org/en">Virtual International Authority File</a> (VIAF).</li>
 </ul>
@@ -779,10 +779,10 @@
 <p><strong>Accepted Values:</strong> Multi-part element; for more information, see the <a href="#organization">Organization</a> field</p>
 <p><strong>Usage Notes:</strong> When entering the name of a funding organization:</p>
 <ul>
-<li>Whenever possible, enter the organization’s name as it appears in the <a href="https://ror.org/">Research Organization Registry</a> (ROR).  </li>
+<li>Whenever possible, enter the organization's name as it appears in the <a href="https://ror.org/">Research Organization Registry</a> (ROR).  </li>
 <li>If the funding organization is a department or subunit of an organization that appears in ROR, but does not have its own ROR ID, enter the organization name as it appears in ROR, followed by a period and the name of the department or subunit.</li>
 <li>If the organization doesn't have a ROR ID, use its full name and avoid acronyms. Consult the following sources authority sources to determine the preferred name form.<ul>
-<li>ICPSR’s metadata catalog. If the organization has funded data collections with ICPSR before, especially curated data, use the name as it appears in previous studies.</li>
+<li>ICPSR's metadata catalog. If the organization has funded data collections with ICPSR before, especially curated data, use the name as it appears in previous studies.</li>
 <li>The organization's website.</li>
 <li>The <a href="https://viaf.org/en">Virtual International Authority File</a> (VIAF).</li>
 </ul>
@@ -821,7 +821,7 @@
 <td>No</td>
 <td>No</td>
 <td>Text</td>
-<td>A unique identifier (URL), preferably a persistent one like a DOI,  linking to a landing page with funding information.</td>
+<td>A unique identifier (URL), preferably a persistent one like a DOI, linking to a landing page with funding information.</td>
 </tr>
 </tbody>
 </table>
@@ -838,7 +838,7 @@
 <pre><code class="language-text">&quot;40791&quot;
 </code></pre>
 <h6 id="funding-sources_grants_grant_uri">Funding URL</h6>
-<p><strong>Description:</strong> A unique identifier (URL), preferably a persistent one like a DOI,  linking to a landing page with funding information.</p>
+<p><strong>Description:</strong> A unique identifier (URL), preferably a persistent one like a DOI, linking to a landing page with funding information.</p>
 <p><strong>Required:</strong> No</p>
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
@@ -913,21 +913,21 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="#icpsr-subject-terms_label">ICPSR Subject Term</a></td>
+<td><a href="#icpsr-subject-terms_label">Label</a></td>
 <td>Yes</td>
 <td>No</td>
 <td>Text</td>
 <td>A human-readable form of the subject term.</td>
 </tr>
 <tr>
-<td><a href="#icpsr-subject-terms_code">ICPSR Subject Term Code</a></td>
+<td><a href="#icpsr-subject-terms_code">Code</a></td>
 <td>Yes</td>
 <td>No</td>
 <td>Text</td>
 <td>A machine-readable/-actionable form of the subject term.</td>
 </tr>
 <tr>
-<td><a href="#icpsr-subject-terms_uri">ICPSR Subject Term URI</a></td>
+<td><a href="#icpsr-subject-terms_uri">URI</a></td>
 <td>Yes</td>
 <td>No</td>
 <td>Text</td>
@@ -935,7 +935,7 @@
 </tr>
 </tbody>
 </table>
-<h5 id="icpsr-subject-terms_label">ICPSR Subject Term</h5>
+<h5 id="icpsr-subject-terms_label">Label</h5>
 <p><strong>Description:</strong> A human-readable form of the subject term.</p>
 <p><strong>Required:</strong> Yes</p>
 <p><strong>Repeatable:</strong> No</p>
@@ -947,7 +947,7 @@
 </code></pre>
 <pre><code class="language-text">&quot;recidivism&quot;
 </code></pre>
-<h5 id="icpsr-subject-terms_code">ICPSR Subject Term Code</h5>
+<h5 id="icpsr-subject-terms_code">Code</h5>
 <p><strong>Description:</strong> A machine-readable/-actionable form of the subject term.</p>
 <p><strong>Required:</strong> Yes</p>
 <p><strong>Repeatable:</strong> No</p>
@@ -959,7 +959,7 @@
 </code></pre>
 <pre><code class="language-text">&quot;26961&quot;
 </code></pre>
-<h5 id="icpsr-subject-terms_uri">ICPSR Subject Term URI</h5>
+<h5 id="icpsr-subject-terms_uri">URI</h5>
 <p><strong>Description:</strong> The URI for the subject term.</p>
 <p><strong>Required:</strong> Yes</p>
 <p><strong>Repeatable:</strong> No</p>
@@ -970,17 +970,17 @@
 <pre><code class="language-text">&quot;https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/26180&quot;
 </code></pre>
 <h4 id="complete-icpsr-subject-terms-examples-with-subfields">Complete ICPSR Subject Terms Examples (with Subfields):</h4>
-<pre><code class="language-yaml">- &quot;ICPSR Subject Term&quot;: &quot;lobbying&quot;
-  &quot;ICPSR Subject Term Code&quot;: &quot;26131&quot;
-  &quot;ICPSR Subject Term URI&quot;: &quot;https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/26131&quot;
+<pre><code class="language-yaml">- &quot;Label&quot;: &quot;lobbying&quot;
+  &quot;Code&quot;: &quot;26131&quot;
+  &quot;URI&quot;: &quot;https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/26131&quot;
 
-- &quot;ICPSR Subject Term&quot;: &quot;age&quot;
-  &quot;ICPSR Subject Term Code&quot;: &quot;24123&quot;
-  &quot;ICPSR Subject Term URI&quot;: &quot;https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/24123&quot;
+- &quot;Label&quot;: &quot;age&quot;
+  &quot;Code&quot;: &quot;24123&quot;
+  &quot;URI&quot;: &quot;https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/24123&quot;
 </code></pre>
-<pre><code class="language-yaml">- &quot;ICPSR Subject Term&quot;: &quot;happiness&quot;
-  &quot;ICPSR Subject Term Code&quot;: &quot;25624&quot;
-  &quot;ICPSR Subject Term URI&quot;: &quot;https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/25624&quot;
+<pre><code class="language-yaml">- &quot;Label&quot;: &quot;happiness&quot;
+  &quot;Code&quot;: &quot;25624&quot;
+  &quot;URI&quot;: &quot;https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/25624&quot;
 </code></pre>
 <hr />
 <p><a id="journal-of-economic-literature-(jel)-classification-codes"></a></p>
@@ -989,7 +989,7 @@
 <p><strong>Required:</strong> No</p>
 <p><strong>Repeatable:</strong> Yes</p>
 <p><strong>Accepted Values:</strong> Multi-part element; see subfields</p>
-<p><strong>Usage Notes:</strong> This controlled vocabulary was taken from the American Economic Association's JEL Classifications Codes. Source: <a href="https://www.aeaweb.org/jel/guide/jel.php">https://www.aeaweb.org/jel/guide/jel.php</a></p>
+<p><strong>Usage Notes:</strong> This controlled vocabulary was taken from the American Economic Association's JEL Classifications Codes. Source: <a href="https://www.aeaweb.org/jel/guide/jel.php">https://www.aeaweb.org/jel/guide/jel.php</a>.</p>
 <h4 id="subfields_4">Subfields:</h4>
 <table>
 <thead>
@@ -1021,7 +1021,7 @@
 <td>Yes</td>
 <td>No</td>
 <td>Text</td>
-<td>The URI for the JEL classification code.</td>
+<td>The URI for the term.</td>
 </tr>
 </tbody>
 </table>
@@ -1050,7 +1050,7 @@
 <pre><code class="language-text">&quot;N22&quot;
 </code></pre>
 <h5 id="journal-of-economic-literature-(jel)-classification-codes_uri">URI</h5>
-<p><strong>Description:</strong> The URI for the JEL classification code.</p>
+<p><strong>Description:</strong> The URI for the term.</p>
 <p><strong>Required:</strong> Yes</p>
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
@@ -1081,7 +1081,7 @@
 <p><strong>Required:</strong> No</p>
 <p><strong>Repeatable:</strong> Yes</p>
 <p><strong>Accepted Values:</strong> Multi-part element; see subfields</p>
-<p><strong>Usage Notes:</strong> This controlled vocabulary was taken from the National Library of Medicine's Medical Subject Headings (MeSH). Source: <a href="https://www.ncbi.nlm.nih.gov/mesh/">https://www.ncbi.nlm.nih.gov/mesh/</a></p>
+<p><strong>Usage Notes:</strong> This controlled vocabulary was taken from the National Library of Medicine's Medical Subject Headings (MeSH). Source: <a href="https://www.ncbi.nlm.nih.gov/mesh/">https://www.ncbi.nlm.nih.gov/mesh/</a>.</p>
 <h4 id="subfields_5">Subfields:</h4>
 <table>
 <thead>
@@ -1113,7 +1113,7 @@
 <td>Yes</td>
 <td>No</td>
 <td>Text</td>
-<td>The URI for the subject term as maintained in MeSH.</td>
+<td>The URI for the subject term.</td>
 </tr>
 </tbody>
 </table>
@@ -1138,7 +1138,7 @@
 <pre><code class="language-text">&quot;T011730&quot;
 </code></pre>
 <h5 id="medical-subject-headings-(mesh)-terms_uri">URI</h5>
-<p><strong>Description:</strong> The URI for the subject term as maintained in MeSH.</p>
+<p><strong>Description:</strong> The URI for the subject term.</p>
 <p><strong>Required:</strong> Yes</p>
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
@@ -1324,28 +1324,28 @@
 <td>No</td>
 <td>No</td>
 <td>Text</td>
-<td>A town, city, or similar populated place covered in the data collection</td>
+<td>A town, city, or similar populated place covered in the data collection.</td>
 </tr>
 <tr>
 <td><a href="#geographic-coverage-areas_county">County</a></td>
 <td>No</td>
 <td>No</td>
 <td>Text</td>
-<td>A United States county or similar administrative area covered in the data collection</td>
+<td>A United States county or similar administrative area covered in the data collection.</td>
 </tr>
 <tr>
 <td><a href="#geographic-coverage-areas_state">State</a></td>
 <td>No</td>
 <td>No</td>
 <td>Text</td>
-<td>A state, province, canton or similar political entity covered in the data collection</td>
+<td>A state, province, canton or similar political entity covered in the data collection.</td>
 </tr>
 <tr>
 <td><a href="#geographic-coverage-areas_country">Country</a></td>
 <td>No</td>
 <td>No</td>
 <td>Text</td>
-<td>A country covered in the data collection</td>
+<td>A country covered in the data collection.</td>
 </tr>
 <tr>
 <td><a href="#geographic-coverage-areas_region">Region</a></td>
@@ -1359,7 +1359,7 @@
 <td>No</td>
 <td>No</td>
 <td>Text</td>
-<td>A continent covered in the data collection</td>
+<td>A continent covered in the data collection.</td>
 </tr>
 <tr>
 <td><a href="#geographic-coverage-areas_other_area">Other Geographic Area</a></td>
@@ -1385,7 +1385,7 @@
 </tbody>
 </table>
 <h5 id="geographic-coverage-areas_city">City</h5>
-<p><strong>Description:</strong> A town, city, or similar populated place covered in the data collection</p>
+<p><strong>Description:</strong> A town, city, or similar populated place covered in the data collection.</p>
 <p><strong>Required:</strong> No</p>
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
@@ -1397,7 +1397,7 @@
 <pre><code class="language-text">&quot;Chongqing&quot;
 </code></pre>
 <h5 id="geographic-coverage-areas_county">County</h5>
-<p><strong>Description:</strong> A United States county or similar administrative area covered in the data collection</p>
+<p><strong>Description:</strong> A United States county or similar administrative area covered in the data collection.</p>
 <p><strong>Required:</strong> No</p>
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
@@ -1409,7 +1409,7 @@
 <pre><code class="language-text">&quot;Cuyahoga County&quot;
 </code></pre>
 <h5 id="geographic-coverage-areas_state">State</h5>
-<p><strong>Description:</strong> A state, province, canton or similar political entity covered in the data collection</p>
+<p><strong>Description:</strong> A state, province, canton or similar political entity covered in the data collection.</p>
 <p><strong>Required:</strong> No</p>
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
@@ -1421,7 +1421,7 @@
 <pre><code class="language-text">&quot;Yunnan&quot;
 </code></pre>
 <h5 id="geographic-coverage-areas_country">Country</h5>
-<p><strong>Description:</strong> A country covered in the data collection</p>
+<p><strong>Description:</strong> A country covered in the data collection.</p>
 <p><strong>Required:</strong> No</p>
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
@@ -1445,7 +1445,7 @@
 <pre><code class="language-text">&quot;Siberia&quot;
 </code></pre>
 <h5 id="geographic-coverage-areas_continent">Continent</h5>
-<p><strong>Description:</strong> A continent covered in the data collection</p>
+<p><strong>Description:</strong> A continent covered in the data collection.</p>
 <p><strong>Required:</strong> No</p>
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
@@ -1952,21 +1952,92 @@
 <p><strong>Description:</strong> The type(s) of sample and sample design used to select survey respondents to represent the population.</p>
 <p><strong>Required:</strong> No</p>
 <p><strong>Repeatable:</strong> Yes</p>
-<p><strong>Accepted Values:</strong> Text</p>
+<p><strong>Accepted Values:</strong> Multi-part element; see subfields</p>
 <p><strong>Usage Notes:</strong> The sample is a selection out of the universe of all possible relevant cases (e.g., adults in the United States, housing units in three counties of Michigan, etc.) that could have been included in the data collection. Note that some studies, such as censuses, do not utilize samples but include all members of the universe.  </p>
 <p>This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance CV SamplingProcedure <a href="https://rdf-vocabulary.ddialliance.org/ddi-cv/SamplingProcedure/1.1.4/SamplingProcedure.html">https://rdf-vocabulary.ddialliance.org/ddi-cv/SamplingProcedure/1.1.4/SamplingProcedure.html</a></p>
+<h4 id="subfields_11">Subfields:</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Required?</th>
+<th>Repeatable?</th>
+<th>Accepted Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#sampling-procedures_label">Label</a></td>
+<td>Yes</td>
+<td>No</td>
+<td>Text</td>
+<td>A human-readable form of the term.</td>
+</tr>
+<tr>
+<td><a href="#sampling-procedures_code">Code</a></td>
+<td>Yes</td>
+<td>No</td>
+<td>Text</td>
+<td>A machine-readable/-actionable form of the term.</td>
+</tr>
+<tr>
+<td><a href="#sampling-procedures_uri">URI</a></td>
+<td>Yes</td>
+<td>No</td>
+<td>Text</td>
+<td>The URI for the term.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="sampling-procedures_label">Label</h5>
+<p><strong>Description:</strong> A human-readable form of the term.</p>
+<p><strong>Required:</strong> Yes</p>
+<p><strong>Repeatable:</strong> No</p>
+<p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
+<pre><code class="language-text">&quot;Probability: Systematic random&quot;
+</code></pre>
+<pre><code class="language-text">&quot;Theoretical Sampling&quot;
+</code></pre>
+<pre><code class="language-text">&quot;Total universe/Complete enumeration&quot;
+</code></pre>
+<h5 id="sampling-procedures_code">Code</h5>
+<p><strong>Description:</strong> A machine-readable/-actionable form of the term.</p>
+<p><strong>Required:</strong> Yes</p>
+<p><strong>Repeatable:</strong> No</p>
+<p><strong>Accepted Values:</strong> Text</p>
+<p><strong>Examples:</strong></p>
+<pre><code class="language-text">&quot;Probability.SystematicRandom&quot;
+</code></pre>
+<pre><code class="language-text">&quot;TheoreticalSampling&quot;
+</code></pre>
+<pre><code class="language-text">&quot;TotalUniverseCompleteEnumeration&quot;
+</code></pre>
+<h5 id="sampling-procedures_uri">URI</h5>
+<p><strong>Description:</strong> The URI for the term.</p>
+<p><strong>Required:</strong> Yes</p>
+<p><strong>Repeatable:</strong> No</p>
+<p><strong>Accepted Values:</strong> Text</p>
+<p><strong>Examples:</strong></p>
+<pre><code class="language-text">&quot;/api/v1/vocab-terms/samplingProcedures/terms/Probability.SystematicRandom&quot;
+</code></pre>
+<pre><code class="language-text">&quot;/api/v1/vocab-terms/samplingProcedures/terms/TheoreticalSampling&quot;
+</code></pre>
+<pre><code class="language-text">&quot;/api/v1/vocab-terms/samplingProcedures/terms/TotalUniverseCompleteEnumeration&quot;
+</code></pre>
+<h4 id="complete-sampling-procedures-examples-with-subfields">Complete Sampling Procedures Examples (with Subfields):</h4>
 <pre><code class="language-yaml">- &quot;Label&quot;: &quot;Probability: Systematic random&quot;
   &quot;Code&quot;: &quot;Probability.SystematicRandom&quot;
-  &quot;Uri&quot;: &quot;/api/v1/vocab-terms/samplingProcedures/terms/Probability.SystematicRandom&quot;
+  &quot;URI&quot;: &quot;/api/v1/vocab-terms/samplingProcedures/terms/Probability.SystematicRandom&quot;
 
 - &quot;Label&quot;: &quot;Theoretical Sampling&quot;
   &quot;Code&quot;: &quot;TheoreticalSampling&quot;
-  &quot;Uri&quot;: &quot;/api/v1/vocab-terms/samplingProcedures/terms/TheoreticalSampling&quot;
+  &quot;URI&quot;: &quot;/api/v1/vocab-terms/samplingProcedures/terms/TheoreticalSampling&quot;
 </code></pre>
 <pre><code class="language-yaml">- &quot;Label&quot;: &quot;Total universe/Complete enumeration&quot;
   &quot;Code&quot;: &quot;TotalUniverseCompleteEnumeration&quot;
-  &quot;Uri&quot;: &quot;/api/v1/vocab-terms/samplingProcedures/terms/TotalUniverseCompleteEnumeration&quot;
+  &quot;URI&quot;: &quot;/api/v1/vocab-terms/samplingProcedures/terms/TotalUniverseCompleteEnumeration&quot;
 </code></pre>
 <hr />
 <p><a id="sampling-note"></a></p>
@@ -2015,7 +2086,7 @@
 <p><strong>Repeatable:</strong> Yes</p>
 <p><strong>Accepted Values:</strong> Multi-part element; see subfields</p>
 <p><strong>Usage Notes:</strong> People, things, and other data can all be Data Source Types. This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance CV DataSourceType <a href="https://rdf-vocabulary.ddialliance.org/ddi-cv/DataSourceType/1.0.2/DataSourceType.html">https://rdf-vocabulary.ddialliance.org/ddi-cv/DataSourceType/1.0.2/DataSourceType.html</a>.</p>
-<h4 id="subfields_11">Subfields:</h4>
+<h4 id="subfields_12">Subfields:</h4>
 <table>
 <thead>
 <tr>
@@ -2122,7 +2193,7 @@
 <p><strong>Repeatable:</strong> Yes</p>
 <p><strong>Accepted Values:</strong> Multi-part element; see subfields</p>
 <p><strong>Usage Notes:</strong> This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance CV ModeOfCollection <a href="https://rdf-vocabulary.ddialliance.org/ddi-cv/ModeOfCollection/4.0.3/ModeOfCollection.html">https://rdf-vocabulary.ddialliance.org/ddi-cv/ModeOfCollection/4.0.3/ModeOfCollection.html</a>.</p>
-<h4 id="subfields_12">Subfields:</h4>
+<h4 id="subfields_13">Subfields:</h4>
 <table>
 <thead>
 <tr>
@@ -2209,7 +2280,7 @@
 <p><strong>Required:</strong> No</p>
 <p><strong>Repeatable:</strong> Yes</p>
 <p><strong>Accepted Values:</strong> Multi-part element; see subfields</p>
-<h4 id="subfields_13">Subfields:</h4>
+<h4 id="subfields_14">Subfields:</h4>
 <table>
 <thead>
 <tr>
@@ -2351,7 +2422,7 @@
 <p><strong>Required:</strong> No</p>
 <p><strong>Repeatable:</strong> Yes</p>
 <p><strong>Accepted Values:</strong> Multi-part element; see subfields</p>
-<h4 id="subfields_14">Subfields:</h4>
+<h4 id="subfields_15">Subfields:</h4>
 <table>
 <thead>
 <tr>
@@ -2627,7 +2698,7 @@
 <p><strong>Repeatable:</strong> Yes</p>
 <p><strong>Accepted Values:</strong> Multi-part element; see subfields</p>
 <p><strong>Usage Notes:</strong> This controlled vocabulary was taken from the DDI Alliance. Source: DDI Alliance CV GeneralDataFormat <a href="https://rdf-vocabulary.ddialliance.org/ddi-cv/GeneralDataFormat/2.0.3/GeneralDataFormat.html">https://rdf-vocabulary.ddialliance.org/ddi-cv/GeneralDataFormat/2.0.3/GeneralDataFormat.html</a>.</p>
-<h4 id="subfields_15">Subfields:</h4>
+<h4 id="subfields_16">Subfields:</h4>
 <table>
 <thead>
 <tr>
@@ -2691,6 +2762,13 @@
 <p><strong>Required:</strong> Yes</p>
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
+<p><strong>Examples:</strong></p>
+<pre><code class="language-text">&quot;/api/v1/vocab-terms/generalDataFormats/terms/Text&quot;
+</code></pre>
+<pre><code class="language-text">&quot;/api/v1/vocab-terms/generalDataFormats/terms/StillImage&quot;
+</code></pre>
+<pre><code class="language-text">&quot;/api/v1/vocab-terms/generalDataFormats/terms/Numeric&quot;
+</code></pre>
 <h4 id="complete-general-data-formats-examples-with-subfields">Complete General Data Formats Examples (with Subfields):</h4>
 <pre><code class="language-yaml">- &quot;Label&quot;: &quot;Text&quot;
   &quot;Code&quot;: &quot;Text&quot;
@@ -2756,7 +2834,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="subfields_16">Subfields:</h4>
+<h4 id="subfields_17">Subfields:</h4>
 <table>
 <thead>
 <tr>
@@ -2837,7 +2915,7 @@
 <p><strong>Required:</strong> No</p>
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Multi-part element; see subfields</p>
-<h4 id="subfields_17">Subfields:</h4>
+<h4 id="subfields_18">Subfields:</h4>
 <table>
 <thead>
 <tr>
@@ -2904,7 +2982,7 @@
 </code></pre>
 <h4 id="complete-license-examples-with-subfields">Complete License Examples (with Subfields):</h4>
 <pre><code class="language-yaml">&quot;Label&quot;: &quot;Creative Commons Attribution 4.0 International&quot;
-&quot;Code&quot;: &quot;CC-BY-NC-4.0&quot;
+&quot;Code&quot;: &quot;CC-BY-4.0&quot;
 &quot;URI&quot;: &quot;/api/v1/vocab-terms/licenses/terms/CC-BY-4.0&quot;
 </code></pre>
 <pre><code class="language-yaml">&quot;Label&quot;: &quot;Apache License 1.0&quot;
@@ -2918,7 +2996,7 @@
 <p><strong>Required:</strong> No</p>
 <p><strong>Repeatable:</strong> Yes</p>
 <p><strong>Accepted Values:</strong> Multi-part element; see subfields</p>
-<h4 id="subfields_18">Subfields:</h4>
+<h4 id="subfields_19">Subfields:</h4>
 <table>
 <thead>
 <tr>
@@ -3013,7 +3091,7 @@
 <p><strong>Required:</strong> No</p>
 <p><strong>Repeatable:</strong> Yes</p>
 <p><strong>Accepted Values:</strong> Multi-part element; see subfields</p>
-<h4 id="subfields_19">Subfields:</h4>
+<h4 id="subfields_20">Subfields:</h4>
 <table>
 <thead>
 <tr>
@@ -3129,7 +3207,7 @@
 <p><strong>Required:</strong> No</p>
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Multi-part element; see subfields</p>
-<h4 id="subfields_20">Subfields:</h4>
+<h4 id="subfields_21">Subfields:</h4>
 <table>
 <thead>
 <tr>
@@ -3176,7 +3254,7 @@
 <p><strong>Required:</strong> Yes</p>
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Multi-part element; see subfields</p>
-<h5 id="subfields_21">Subfields:</h5>
+<h5 id="subfields_22">Subfields:</h5>
 <table>
 <thead>
 <tr>
@@ -3229,11 +3307,11 @@
 <pre><code class="language-text">&quot;Goldin&quot;
 </code></pre>
 <h4 id="complete-personal-name-examples-with-subfields">Complete Personal Name Examples (with Subfields):</h4>
-<pre><code class="language-yaml">&quot;Given Name (First Name)&quot;: &quot;Susan B.&quot;
-&quot;Family Name (Last Name)&quot;: &quot;Anthony&quot;
+<pre><code class="language-yaml">&quot;Given Name (First Name)&quot;: &quot;Miner P.&quot;
+&quot;Family Name (Last Name)&quot;: &quot;Marchbanks III&quot;
 </code></pre>
-<pre><code class="language-yaml">&quot;Given Name (First Name)&quot;: &quot;John&quot;
-&quot;Family Name (Last Name)&quot;: &quot;Doe IV&quot;
+<pre><code class="language-yaml">&quot;Given Name (First Name)&quot;: &quot;Claudia&quot;
+&quot;Family Name (Last Name)&quot;: &quot;Goldin&quot;
 </code></pre>
 <h5 id="person_orcid">ORCID Identifier</h5>
 <p><strong>Description:</strong> The person's Open Researcher and Contributor ID (ORCID).</p>
@@ -3287,7 +3365,7 @@
 <p><strong>Required:</strong> No</p>
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Multi-part element; see subfields</p>
-<h4 id="subfields_22">Subfields:</h4>
+<h4 id="subfields_23">Subfields:</h4>
 <table>
 <thead>
 <tr>
