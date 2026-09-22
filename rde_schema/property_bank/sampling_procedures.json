@@ -42,9 +42,6 @@
     },
     "required": ["label", "code", "uri"]
   },
-  "items": {
-      "type": "string"
-  }, 
   "examples": [
     [
       {

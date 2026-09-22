@@ -10,19 +10,19 @@
     "type": "object",
     "properties": {
       "label": {
-        "title": "ICPSR Subject Term",
+        "title": "Label",
         "description": "A human-readable form of the subject term.",
         "type": "string",
         "examples": ["employment", "marriage", "recidivism"]
       },
       "code": {
-        "title": "ICPSR Subject Term Code",
+        "title": "Code",
         "description": "A machine-readable/-actionable form of the subject term.",
         "type": "string",
         "examples": ["25220", "26180", "26961"]
       },
       "uri": {
-        "title": "ICPSR Subject Term URI",
+        "title": "URI",
         "description": "The URI for the subject term.",
         "type": "string",
         "examples": [

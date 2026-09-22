@@ -33,7 +33,7 @@
               },
               "grant_uri": {
                 "title": "Funding URL",
-                "description": "A unique identifier (URL), preferably a persistent one like a DOI,  linking to a landing page with funding information.",
+                "description": "A unique identifier (URL), preferably a persistent one like a DOI, linking to a landing page with funding information.",
                 "type": "string",
                 "format": "uri",
                 "examples": [

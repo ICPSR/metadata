@@ -32,7 +32,12 @@
       "uri": {
         "title": "URI",
         "description": "The URI for the term.",
-        "type": "string"
+        "type": "string",
+        "examples": [
+          "/api/v1/vocab-terms/generalDataFormats/terms/Text",
+          "/api/v1/vocab-terms/generalDataFormats/terms/StillImage",
+          "/api/v1/vocab-terms/generalDataFormats/terms/Numeric"
+        ]
       }
     },
     "required": ["label", "code", "uri"]
