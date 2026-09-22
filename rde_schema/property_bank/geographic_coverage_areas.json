@@ -11,25 +11,25 @@
     "properties": {
       "city": {
         "title": "City",
-        "description": "A town, city, or similar populated place covered in the data collection",
+        "description": "A town, city, or similar populated place covered in the data collection.",
         "type": "string",
         "examples": ["Ann Arbor", "Hanover", "Chongqing"]
       },
       "county": {
         "title": "County",
-        "description": "A United States county or similar administrative area covered in the data collection",
+        "description": "A United States county or similar administrative area covered in the data collection.",
         "type": "string",
         "examples": ["Monroe County", "Washtenaw County", "Cuyahoga County"]
       },
       "state": {
         "title": "State",
-        "description": "A state, province, canton or similar political entity covered in the data collection",
+        "description": "A state, province, canton or similar political entity covered in the data collection.",
         "type": "string",
         "examples": ["Michigan", "Manitoba", "Yunnan"]
       },
       "country": {
         "title": "Country",
-        "description": "A country covered in the data collection",
+        "description": "A country covered in the data collection.",
         "type": "string",
         "examples": ["United States", "China", "Ghana"]
       },
@@ -41,7 +41,7 @@
       },
       "continent": {
         "title": "Continent",
-        "description": "A continent covered in the data collection",
+        "description": "A continent covered in the data collection.",
         "type": "string",
         "examples": ["Africa", "Asia", "South America"]
       },

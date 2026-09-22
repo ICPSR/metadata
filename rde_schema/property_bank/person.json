@@ -28,12 +28,12 @@
       "required": ["given", "family"],
       "examples": [ 
         { 
-          "given": "Susan B.",
-          "family": "Anthony" 
+          "given": "Miner P.",
+          "family": "Marchbanks III" 
         },
         {
-          "given": "John",
-          "family": "Doe IV"
+          "given": "Claudia",
+          "family": "Goldin"
         }
       ]
     },
@@ -51,7 +51,7 @@
       "items": {
         "$ref": "https://archive.icpsr.umich.edu/schema/property_banks/organization/version/1",
         "title": "Organization",
-        "description": "Name and other details about the principal investigator’s affiliation."
+        "description": "Name and other details about the principal investigator's affiliation."
       }
     },
     "email": {

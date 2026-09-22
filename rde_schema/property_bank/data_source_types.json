@@ -26,7 +26,8 @@
         "examples": [
           "RegistersRecordsAccounts.MedicalClinical", 
           "EventsInteractions", 
-          "ResearchData.Published"]
+          "ResearchData.Published"
+        ]
       },
       "uri": {
         "title": "URI",
