@@ -53,8 +53,6 @@ Machine-actionable copies of metadata field definitions are also available in [J
 | [Citation](#citation) | No | No | Text | The official way to reference the data collection in writing. |
 | [Person](#person) | No | No | Multi-part element; see subfields | A person associated with an ICPSR data collection or service. |
 | [Organization](#organization) | No | No | Multi-part element; see subfields | An organization associated with an ICPSR data collection or service. |
-| [Collection Type](#collection-type) | No | Yes | Text | Type of collection. |
-| [Study Curation Request](#study-curation-request) | No | No | Text | Would you like your study to be curated? |
 
 ---
 
@@ -3650,71 +3648,6 @@ ROR Identifier: https://ror.org/0006s4z66
 ```yaml
 Organization Name: Internal Revenue Service
 
-```
-
-
----
-
-<a id="collection-type"></a>
-### Collection Type
-
-**Description:** Type of collection.
-
-**Required:** No
-
-**Repeatable:** Yes
-
-**Accepted Values:** Text
-
-**Usage Notes:** Use collection as default is no other value applies.
-
-
-This field employs a local ICPSR controlled vocabulary; see below for terms and definitions:
-
-
-| Term | Definition |
-|------|------------|
-| series | A collection of studies where the same questions are asked year-to-year. |
-| archive | An aggregation of collections and studies with their own website (and funding). |
-| collection | A generic aggregation of studies and other collections. |
-
-
-**Examples:**
-
-```text
-series
-```
-
-```text
-archive
-```
-
-```text
-collection
-```
-
-
----
-
-<a id="study-curation-request"></a>
-### Study Curation Request
-
-**Description:** Would you like your study to be curated?
-
-**Required:** No
-
-**Repeatable:** No
-
-**Accepted Values:** Text
-
-**Examples:**
-
-```text
-Yes
-```
-
-```text
-No
 ```
 
 

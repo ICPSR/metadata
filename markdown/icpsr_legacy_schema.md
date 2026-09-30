@@ -1,6 +1,6 @@
 # ICPSR Legacy Metadata Schema
 
-Last updated: May 12, 2026
+Last updated: September 30, 2026
 
 
 This metadata schema was used to describe curated data collections at the Inter-university Consortium for Political and Social Research (ICPSR) through approximately 2026. Beginning in 2026, it is being phased out and replaced by [an updated metadata schema](https://icpsr.github.io/metadata/icpsr_metadata_schema/).
@@ -98,11 +98,11 @@ Metadata-only updates to the data collection do not increment the version number
 **Examples:**
 
 ```text
-"1"
+1
 ```
 
 ```text
-"2"
+2
 ```
 
 
@@ -126,11 +126,11 @@ Metadata-only updates to the data collection do not increment the version number
 **Examples:**
 
 ```text
-"2006-03-30"
+2006-03-30
 ```
 
 ```text
-"2019-05-05"
+2019-05-05
 ```
 
 
@@ -154,11 +154,11 @@ Metadata-only updates to the data collection do not increment the version number
 **Examples:**
 
 ```text
-"2001-02-07"
+2001-02-07
 ```
 
 ```text
-"2020-08-12"
+2020-08-12
 ```
 
 
@@ -216,23 +216,23 @@ Time Period:
 **Examples:**
 
 ```text
-"Bridge of Faith: Aim4Peace Community-Based Violence Prevention Project, Kansas City, Missouri, 2014-2017"
+Bridge of Faith: Aim4Peace Community-Based Violence Prevention Project, Kansas City, Missouri, 2014-2017
 ```
 
 ```text
-"Health and Relationships Project, United States, 2014-2015"
+Health and Relationships Project, United States, 2014-2015
 ```
 
 ```text
-"Targeted Interventions to Prevent Chronic Low Back Pain in High Risk Patients: A Multi-Site Pragmatic Randomized Controlled Trial (TARGET Trial), 4 U.S. cities, 2016-2019"
+Targeted Interventions to Prevent Chronic Low Back Pain in High Risk Patients: A Multi-Site Pragmatic Randomized Controlled Trial (TARGET Trial), 4 U.S. cities, 2016-2019
 ```
 
 ```text
-"Aid Like A Paycheck (ALAP), Texas and California, 2014-2017"
+Aid Like A Paycheck (ALAP), Texas and California, 2014-2017
 ```
 
 ```text
-"COVID-19 Disruptions Disproportionately Affect Female Academics, Global, 2020"
+COVID-19 Disruptions Disproportionately Affect Female Academics, Global, 2020
 ```
 
 
@@ -256,19 +256,19 @@ Time Period:
 **Examples:**
 
 ```text
-"Add Health Parent Study"
+Add Health Parent Study
 ```
 
 ```text
-"FACES 2009"
+FACES 2009
 ```
 
 ```text
-"Surveys of Consumers"
+Surveys of Consumers
 ```
 
 ```text
-"Eurobarometer 85.2"
+Eurobarometer 85.2
 ```
 
 
@@ -292,7 +292,7 @@ Time Period:
 **Examples:**
 
 ```text
-"Cebu Longitudinal Health and Nutrition Survey"
+Cebu Longitudinal Health and Nutrition Survey
 ```
 
 
@@ -316,7 +316,7 @@ Time Period:
 **Examples:**
 
 ```text
-"https://cebu.cpc.unc.edu/"
+https://cebu.cpc.unc.edu/
 ```
 
 
@@ -399,15 +399,15 @@ Additional points regarding affiliated organizations:
 **Examples:**
 
 ```text
-"James A."
+James A.
 ```
 
 ```text
-"Lois"
+Lois
 ```
 
 ```text
-"E.V."
+E.V.
 ```
 
 ###### Family (Last) Name {#principal-investigator_person_family_name}
@@ -423,32 +423,35 @@ Additional points regarding affiliated organizations:
 **Examples:**
 
 ```text
-"McCann Jr."
+McCann Jr.
 ```
 
 ```text
-"Smith"
+Smith
 ```
 
 ```text
-"Oppenhuis"
+Oppenhuis
 ```
 
 #### Complete Person Examples (with Subfields):
 
 ```yaml
-"Given (First) Name": "James A."
-"Family (Last) Name": "McCann Jr."
+Given (First) Name: James A.
+Family (Last) Name: McCann Jr.
+
 ```
 
 ```yaml
-"Given (First) Name": "Lois"
-"Family (Last) Name": "Smith"
+Given (First) Name: Lois
+Family (Last) Name: Smith
+
 ```
 
 ```yaml
-"Given (First) Name": "E.V."
-"Family (Last) Name": "Oppenhuis"
+Given (First) Name: E.V.
+Family (Last) Name: Oppenhuis
+
 ```
 
 ##### Organization {#principal-investigator_organization}
@@ -464,19 +467,19 @@ Additional points regarding affiliated organizations:
 **Examples:**
 
 ```text
-"University of Michigan"
+University of Michigan
 ```
 
 ```text
-"Harvard University. Medical School"
+Harvard University. Medical School
 ```
 
 ```text
-"University of California, Irvine"
+University of California, Irvine
 ```
 
 ```text
-"United States Department of Health and Human Services. Centers for Disease Control and Prevention. Office of Minority Health and Health Disparities"
+United States Department of Health and Human Services. Centers for Disease Control and Prevention. Office of Minority Health and Health Disparities
 ```
 
 ##### Order {#principal-investigator_order}
@@ -496,36 +499,36 @@ Additional points regarding affiliated organizations:
 **Examples:**
 
 ```text
-"1"
+1
 ```
 
 ```text
-"2"
+2
 ```
 
 ```text
-"3"
+3
 ```
 
 #### Complete Principal Investigator Examples (with Subfields):
 
 ```yaml
-- "Person":
-    "Given (First) Name": "Jane"
-    "Family (Last) Name": "Doe"
-  "Organization": "Urban Institute"
-  "Order": 1
+- Person:
+    Given (First) Name: Jane
+    Family (Last) Name: Doe
+  Organization: Urban Institute
+  Order: 1
 
-- "Person":
-    "Given (First) Name": "John Q."
-    "Family (Last) Name": "Public"
-  "Organization": "Harvard University. Medical School"
-  "Order": 2
+- Person:
+    Given (First) Name: John Q.
+    Family (Last) Name: Public
+  Organization: Harvard University. Medical School
+  Order: 2
 ```
 
 ```yaml
-- "Organization": "Urban Institute"
-  "Order": 1
+- Organization: Urban Institute
+  Order: 1
 ```
 
 
@@ -551,11 +554,11 @@ For additional information about how DOIs for citations are generated, see the D
 **Examples:**
 
 ```text
-"University of Michigan. Survey Research Center. Economic Behavior Program. Survey of Consumer Attitudes and Behavior, September 2018. Inter-university Consortium for Political and Social Research [distributor], 2021-11-18. https://doi.org/10.3886/ICPSR38121.v1"
+University of Michigan. Survey Research Center. Economic Behavior Program. Survey of Consumer Attitudes and Behavior, September 2018. Inter-university Consortium for Political and Social Research [distributor], 2021-11-18. https://doi.org/10.3886/ICPSR38121.v1
 ```
 
 ```text
-"Goldin, Claudia, and Lawrence Katz. The 1915 Iowa State Census Project. ICPSR28501-v1. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor], 2010-12-14. http://doi.org/10.3886/ICPSR28501.v1"
+Goldin, Claudia, and Lawrence Katz. The 1915 Iowa State Census Project. ICPSR28501-v1. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor], 2010-12-14. http://doi.org/10.3886/ICPSR28501.v1
 ```
 
 
@@ -599,11 +602,11 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 **Examples:**
 
 ```text
-"Inter-university Consortium for Political and Social Research"
+Inter-university Consortium for Political and Social Research
 ```
 
 ```text
-"Roper Center for Public Opinion Research"
+Roper Center for Public Opinion Research
 ```
 
 ##### Location {#distributor_location}
@@ -623,11 +626,11 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 **Examples:**
 
 ```text
-"Ann Arbor, MI"
+Ann Arbor, MI
 ```
 
 ```text
-"Chicago, IL"
+Chicago, IL
 ```
 
 ##### Title {#distributor_order}
@@ -647,33 +650,33 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 **Examples:**
 
 ```text
-"1"
+1
 ```
 
 ```text
-"2"
+2
 ```
 
 ```text
-"3"
+3
 ```
 
 #### Complete Distributor Examples (with Subfields):
 
 ```yaml
-- "Name": "Inter-university Consortium for Political and Social Research"
-  "Location": "Ann Arbor, MI"
-  "Title": 1
+- Name: Inter-university Consortium for Political and Social Research
+  Location: Ann Arbor, MI
+  Title: 1
 ```
 
 ```yaml
-- "Name": "Inter-university Consortium for Political and Social Research"
-  "Location": "Ann Arbor, MI"
-  "Title": 1
+- Name: Inter-university Consortium for Political and Social Research
+  Location: Ann Arbor, MI
+  Title: 1
 
-- "Name": "Roper Center for Public Opinion Research"
-  "Location": "Princeton, NJ"
-  "Title": 2
+- Name: Roper Center for Public Opinion Research
+  Location: Princeton, NJ
+  Title: 2
 ```
 
 
@@ -697,15 +700,15 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 **Examples:**
 
 ```text
-"2760"
+2760
 ```
 
 ```text
-"3025"
+3025
 ```
 
 ```text
-"38672"
+38672
 ```
 
 
@@ -729,11 +732,11 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 **Examples:**
 
 ```text
-"https://doi.org/10.3886/ICPSR03025.v2"
+https://doi.org/10.3886/ICPSR03025.v2
 ```
 
 ```text
-"https://doi.org/10.3886/ICPSR06425.v1"
+https://doi.org/10.3886/ICPSR06425.v1
 ```
 
 
@@ -783,15 +786,15 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 **Examples:**
 
 ```text
-"United States Department of Justice. Office of Justice Programs. Bureau of Justice Statistics"
+United States Department of Justice. Office of Justice Programs. Bureau of Justice Statistics
 ```
 
 ```text
-"Institute of Museum and Library Services"
+Institute of Museum and Library Services
 ```
 
 ```text
-"Robert Wood Johnson Foundation"
+Robert Wood Johnson Foundation
 ```
 
 ##### Grant Number {#funding-source_grant_number}
@@ -811,16 +814,16 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 **Examples:**
 
 ```text
-"SES-1835721"
+SES-1835721
 ```
 
 ```text
-"MDR-8550085"
-"MDR-8550204"
+MDR-8550085
+MDR-8550204
 ```
 
 ```text
-"40791"
+40791
 ```
 
 ##### Purpose {#funding-source_purpose}
@@ -846,12 +849,12 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 **Examples:**
 
 ```text
-"collection and/or analysis of data"
-"secondary analysis of data"
+collection and/or analysis of data
+secondary analysis of data
 ```
 
 ```text
-"archiving of data"
+archiving of data
 ```
 
 ##### Order {#funding-source_order}
@@ -871,38 +874,38 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 **Examples:**
 
 ```text
-"1"
+1
 ```
 
 ```text
-"2"
+2
 ```
 
 ```text
-"3"
+3
 ```
 
 #### Complete Funding Source Examples (with Subfields):
 
 ```yaml
-- "Agency": "Robert Wood Johnson Foundation"
-  "Grant Numbers":
-  - "MDR-8550085"
-  - "MDR-8550204"
-  "Purpose":
-  - "collection and/or analysis of data"
-  "Order": 1
+- Agency: Robert Wood Johnson Foundation
+  Grant Numbers:
+  - MDR-8550085
+  - MDR-8550204
+  Purpose:
+  - collection and/or analysis of data
+  Order: 1
 
-- "Agency": "United States Department of Justice. Office of Justice Programs. Bureau\
-    \ of Justice Statistics"
-  "Grant Numbers":
-  - "SES-1835721"
-  "Order": 2
+- Agency: United States Department of Justice. Office of Justice Programs. Bureau
+    of Justice Statistics
+  Grant Numbers:
+  - SES-1835721
+  Order: 2
 ```
 
 ```yaml
-- "Agency": "Institute of Museum and Library Services"
-  "Order": 1
+- Agency: Institute of Museum and Library Services
+  Order: 1
 ```
 
 
@@ -930,11 +933,11 @@ If a non-ICPSR distributor is necessary, please confirm the standards with the M
 **Examples:**
 
 ```text
-"BJS:271"
+BJS:271
 ```
 
 ```text
-"PSC:12345"
+PSC:12345
 ```
 
 
@@ -962,11 +965,11 @@ The Summary is written in the third person and avoids attempting to address issu
 **Examples:**
 
 ```text
-"In 2014, Chicago Public Schools, looking to reduce the possibility of gun violence among school-aged youth, applied for a grant through the National Institute of Justice. CPS was awarded the Comprehensive School Safety Initiative grant and use said grant to establish the 'Connect and Redirect to Respect' program. This program used student social media data to identify and intervene with students thought to be at higher risk for committing violence. At-risk behaviors included brandishing a weapon, instigating conflict online, signaling gang involvement, and threats towards others. Identified at-risk students would be contacted by a member of the CPS Network Safety Team or the Chicago Police Department's Gang School Safety Team, depending on the risk level of the behavior. To evaluate the efficacy of CRR, the University of Chicago Crime Lab compared outcomes for students enrolled in schools that received the program to outcomes for students enrolled in comparison schools, which did not receive the program. 32 schools were selected for the study, with a total of 44,503 students. Demographic variables included age, race, sex, and ethnicity. Misconduct and academic variables included arrest history, in-school suspensions, out-of-school suspensions, GPA, and attendance days."
+In 2014, Chicago Public Schools, looking to reduce the possibility of gun violence among school-aged youth, applied for a grant through the National Institute of Justice. CPS was awarded the Comprehensive School Safety Initiative grant and use said grant to establish the 'Connect and Redirect to Respect' program. This program used student social media data to identify and intervene with students thought to be at higher risk for committing violence. At-risk behaviors included brandishing a weapon, instigating conflict online, signaling gang involvement, and threats towards others. Identified at-risk students would be contacted by a member of the CPS Network Safety Team or the Chicago Police Department's Gang School Safety Team, depending on the risk level of the behavior. To evaluate the efficacy of CRR, the University of Chicago Crime Lab compared outcomes for students enrolled in schools that received the program to outcomes for students enrolled in comparison schools, which did not receive the program. 32 schools were selected for the study, with a total of 44,503 students. Demographic variables included age, race, sex, and ethnicity. Misconduct and academic variables included arrest history, in-school suspensions, out-of-school suspensions, GPA, and attendance days.
 ```
 
 ```text
-"The Health and Relationship Project is a study of both spouses in same-sex and different-sex marriages who were legally married and aged 35 to 65 at the time of data collection (2015). There are two parts of this study: a baseline questionnaire and a daily diary questionnaire completed for 10 consecutive days; both components were completed online and spouses were asked to complete the surveys separately. The baseline questionnaire asks participants about a number of topics related to marriage and health, including stress, health status and health behaviors, relationship quality, and how they have approached health problems in the past. The diary questionnaire asks participants a number of questions about the past 24 hours, including daily stress experiences, social interactions, and health behaviors."
+The Health and Relationship Project is a study of both spouses in same-sex and different-sex marriages who were legally married and aged 35 to 65 at the time of data collection (2015). There are two parts of this study: a baseline questionnaire and a daily diary questionnaire completed for 10 consecutive days; both components were completed online and spouses were asked to complete the surveys separately. The baseline questionnaire asks participants about a number of topics related to marriage and health, including stress, health status and health behaviors, relationship quality, and how they have approached health problems in the past. The diary questionnaire asks participants a number of questions about the past 24 hours, including daily stress experiences, social interactions, and health behaviors.
 ```
 
 
@@ -992,18 +995,18 @@ The Summary is written in the third person and avoids attempting to address issu
 **Examples:**
 
 ```text
-"child care"
+child care
 ```
 
 ```text
-"Social Security"
-"crime"
-"victimization"
+Social Security
+crime
+victimization
 ```
 
 ```text
-"COVID-19"
-"Biden, Joe"
+COVID-19
+Biden, Joe
 ```
 
 
@@ -1038,19 +1041,19 @@ For United States-based data collections that include some or all U.S. island te
 **Examples:**
 
 ```text
-"United States"
-"Maryland"
-"Baltimore"
+United States
+Maryland
+Baltimore
 ```
 
 ```text
-"United Kingdom"
-"China"
+United Kingdom
+China
 ```
 
 ```text
-"Canada"
-"Alberta"
+Canada
+Alberta
 ```
 
 
@@ -1095,19 +1098,19 @@ Dates are formatted in accordance with ISO 8601 (YYYY, YYYY-MM, or YYYY-MM-DD). 
 **Examples:**
 
 ```text
-"2020"
+2020
 ```
 
 ```text
-"2021--2022"
+2021--2022
 ```
 
 ```text
-"2006-03--2006-04"
+2006-03--2006-04
 ```
 
 ```text
-"2020-01-21--2021-01-21"
+2020-01-21--2021-01-21
 ```
 
 ##### Time Frame {#time-period_time_frame}
@@ -1129,29 +1132,29 @@ The textual description should not simply restate the time period in words. For 
 **Examples:**
 
 ```text
-"Wave 1"
+Wave 1
 ```
 
 ```text
-"Spring 2013"
+Spring 2013
 ```
 
 ```text
-"Post-Survey Follow-Up"
+Post-Survey Follow-Up
 ```
 
 #### Complete Time Period Examples (with Subfields):
 
 ```yaml
-- "Date": "2020-01-21--2020-06-21"
-  "Time Frame": "Wave 1"
+- Date: 2020-01-21--2020-06-21
+  Time Frame: Wave 1
 
-- "Date": "2022-01--2023-01"
-  "Time Frame": "Wave 2"
+- Date: 2022-01--2023-01
+  Time Frame: Wave 2
 ```
 
 ```yaml
-- "Date": "2020"
+- Date: '2020'
 ```
 
 
@@ -1192,19 +1195,19 @@ The textual description should not simply restate the time period in words. For 
 **Examples:**
 
 ```text
-"2020"
+2020
 ```
 
 ```text
-"2021--2022"
+2021--2022
 ```
 
 ```text
-"2006-03--2006-04"
+2006-03--2006-04
 ```
 
 ```text
-"2020-01-21--2021-01-21"
+2020-01-21--2021-01-21
 ```
 
 ##### Time Frame {#collection-date_time_frame}
@@ -1226,29 +1229,29 @@ The textual description should not simply restate the time period in words. For 
 **Examples:**
 
 ```text
-"Wave 1"
+Wave 1
 ```
 
 ```text
-"Spring 2013"
+Spring 2013
 ```
 
 ```text
-"Post-Survey Follow-Up"
+Post-Survey Follow-Up
 ```
 
 #### Complete Collection Date Examples (with Subfields):
 
 ```yaml
-- "Date": "2020-01-21--2020-06-21"
-  "Time Frame": "Wave 1"
+- Date: 2020-01-21--2020-06-21
+  Time Frame: Wave 1
 
-- "Date": "2022-01--2023-01"
-  "Time Frame": "Wave 2"
+- Date: 2022-01--2023-01
+  Time Frame: Wave 2
 ```
 
 ```yaml
-- "Date": "2020"
+- Date: '2020'
 ```
 
 
@@ -1274,27 +1277,27 @@ The textual description should not simply restate the time period in words. For 
 **Examples:**
 
 ```text
-"All households in the United States with phones."
+All households in the United States with phones.
 ```
 
 ```text
-"Part 1: Thirty cities in Massachusetts during 1980-1986. Parts 2-4: All residents in Massachusetts during 1986."
+Part 1: Thirty cities in Massachusetts during 1980-1986. Parts 2-4: All residents in Massachusetts during 1986.
 ```
 
 ```text
-"Individuals self-identified as transgender, trans, genderqueer, non-binary, or other identities on the transgender identity spectrum aged 18 and older residing in the fifty U.S. states, the District of Columbia, American Samoa, Guam, Puerto Rico, and U.S. military bases overseas."
+Individuals self-identified as transgender, trans, genderqueer, non-binary, or other identities on the transgender identity spectrum aged 18 and older residing in the fifty U.S. states, the District of Columbia, American Samoa, Guam, Puerto Rico, and U.S. military bases overseas.
 ```
 
 ```text
-"Jihadists from the United States and Canada, along with Incels from Germany, Canada, the United States, and United Kingdom."
+Jihadists from the United States and Canada, along with Incels from Germany, Canada, the United States, and United Kingdom.
 ```
 
 ```text
-"All publicly funded medical examiner and coroner offices."
+All publicly funded medical examiner and coroner offices.
 ```
 
 ```text
-"Uncertified ballots for the 2000 United States presidential election in Florida."
+Uncertified ballots for the 2000 United States presidential election in Florida.
 ```
 
 
@@ -1335,13 +1338,13 @@ The textual description should not simply restate the time period in words. For 
 **Examples:**
 
 ```text
-"administrative records data"
+administrative records data
 ```
 
 ```text
-"census/enumeration data"
-"survey data"
-"video: film, animation, etc."
+census/enumeration data
+survey data
+video: film, animation, etc.
 ```
 
 
@@ -1365,20 +1368,20 @@ The textual description should not simply restate the time period in words. For 
 **Examples:**
 
 ```text
-"Exchange rates are expressed in United States dollars per national currency unit or vice versa, and two rates are given for the special drawing right (SDR) value of the national currency unit."
+Exchange rates are expressed in United States dollars per national currency unit or vice versa, and two rates are given for the special drawing right (SDR) value of the national currency unit.
 ```
 
 ```text
-"Percentage distributions provided in the codebook were generated using full weights, which are not available on the public use files. Therefore, these results cannot be replicated using the public use files. The differences between results produced using the full weights and those produced using the sampling weights available on the public use files are estimated to be below 1 percent."
+Percentage distributions provided in the codebook were generated using full weights, which are not available on the public use files. Therefore, these results cannot be replicated using the public use files. The differences between results produced using the full weights and those produced using the sampling weights available on the public use files are estimated to be below 1 percent.
 ```
 
 ```text
-"Information on the Index of Consumer Sentiment, the Index of Current Economic Conditions, and the Index of Consumer Expectations and how they were created can be found in the P.I. Codebook."
-"Additional information on the Survey of Consumers can be found by visiting the Survey of Consumers Website."
+Information on the Index of Consumer Sentiment, the Index of Current Economic Conditions, and the Index of Consumer Expectations and how they were created can be found in the P.I. Codebook.
+Additional information on the Survey of Consumers can be found by visiting the Survey of Consumers Website.
 ```
 
 ```text
-"At PI request, dataset 1 should be attributed to Anura P. Jayasumana while datasets 2-6 should be attributed to Jytte Klausen. Please refer to the PI user guide for additional information."
+At PI request, dataset 1 should be attributed to Anura P. Jayasumana while datasets 2-6 should be attributed to Jytte Klausen. Please refer to the PI user guide for additional information.
 ```
 
 
@@ -1402,15 +1405,15 @@ The textual description should not simply restate the time period in words. For 
 **Examples:**
 
 ```text
-"The purpose of this study is to advance understanding of the barriers and enablers associated with colorectal cancer (CRC) screening among Somali men ages 50-74 in Minnesota."
+The purpose of this study is to advance understanding of the barriers and enablers associated with colorectal cancer (CRC) screening among Somali men ages 50-74 in Minnesota.
 ```
 
 ```text
-"The purpose of the study's qualitative phase is to explore veterans' experiences by identifying factors that they believe caused or contributed to their contact with the criminal justice system."
+The purpose of the study's qualitative phase is to explore veterans' experiences by identifying factors that they believe caused or contributed to their contact with the criminal justice system.
 ```
 
 ```text
-"The purpose of the study was to explore the impact of interventions by Sexual Assault Nurse Examiners/Sexual Assault Response Teams (SANE/SART) on the judicial process. The goal of this study was to test the efficacy of SANE/SART programs as a tool in the criminal justice system. The American Prosecutors Research Institute and Boston College tested the hypotheses that SANE/SART exams increase arrest and prosecution rates. In testing this hypothesis, the project team sought to answer five primary research questions: (1) Is the arrest rate higher in cases where a SANE/SART exam is performed as compared with cases in which no exam is performed?, (2) Is the indictment/charging rate higher in such cases?, (3) Are guilty pleas more likely to be entered in such cases, and are pleas likely to be to the existing charge or to a lesser charge?, (4) Is the conviction rate higher in such cases?, and (5) Is the sentence more severe in such cases? In addition, the project team examined the participation of victims in the criminal justice process and the types of services that were offered them. As a large portion of SANE/SART programs focus on understanding victims' reactions to sexual assault and ensuring proper treatment to minimize the chance of further trauma, a central hypothesis to be tested was that improved case outcomes may be a result of increased participation by the victim in the identification, apprehension, and prosecution of the perpetrator. Moreover, the level of services offered and provided to victims, particularly those related to prosecution would likely affect case outcomes as well. Both the victim's participation in the criminal justice system and specifics of SANE/SART services, including evidence collection, were considered in determining the true impact of SANE/SART interventions on case outcomes."
+The purpose of the study was to explore the impact of interventions by Sexual Assault Nurse Examiners/Sexual Assault Response Teams (SANE/SART) on the judicial process. The goal of this study was to test the efficacy of SANE/SART programs as a tool in the criminal justice system. The American Prosecutors Research Institute and Boston College tested the hypotheses that SANE/SART exams increase arrest and prosecution rates. In testing this hypothesis, the project team sought to answer five primary research questions: (1) Is the arrest rate higher in cases where a SANE/SART exam is performed as compared with cases in which no exam is performed?, (2) Is the indictment/charging rate higher in such cases?, (3) Are guilty pleas more likely to be entered in such cases, and are pleas likely to be to the existing charge or to a lesser charge?, (4) Is the conviction rate higher in such cases?, and (5) Is the sentence more severe in such cases? In addition, the project team examined the participation of victims in the criminal justice process and the types of services that were offered them. As a large portion of SANE/SART programs focus on understanding victims' reactions to sexual assault and ensuring proper treatment to minimize the chance of further trauma, a central hypothesis to be tested was that improved case outcomes may be a result of increased participation by the victim in the identification, apprehension, and prosecution of the perpetrator. Moreover, the level of services offered and provided to victims, particularly those related to prosecution would likely affect case outcomes as well. Both the victim's participation in the criminal justice system and specifics of SANE/SART services, including evidence collection, were considered in determining the true impact of SANE/SART interventions on case outcomes.
 ```
 
 
@@ -1436,7 +1439,7 @@ The textual description should not simply restate the time period in words. For 
 **Examples:**
 
 ```text
-"Data on organizational culture in each of the 12 courts (Part 1) were obtained by administering the Court Culture Assessment Instrument (CCAI) to all judges with a felony criminal court docket and to all senior court administrators. A total of 224 respondents completed the questionnaire. The CCAI was used to assess five key dimensions of current court culture orientation: (1) dominant case management style, (2) judicial and court staff relations, (3) change management, (4) courthouse leadership, and (5) internal organization. The determination of what culture judges and court administrators desired to establish in the near future was also obtained through the application of the same instrument (CACI) as practitioners were asked to indicate the type of culture in each work area (or content dimension) they would like to see in their court in the next five years. Additionally, surveys were conducted of prosecuting attorneys (Part 2) and public defender attorneys (Part 3) to gauge their views on how well the courts in which they practice achieve the goals of access, fairness, and managerial effectiveness. Every prosecutor and public defender with two years or more experience in representing the state or criminal defendants in felony cases was asked to complete a questionnaire probing their thoughts on how well their court acted to promote access to records through availability and staff cooperation, treating litigants, witnesses, jurors and others fairly, and demonstrating concern for the rights and interests of others in the criminal trial process, including attorney and victims. A total of 334 prosecuting attorneys and 260 public defense attorneys completed the 46-item trial court process survey."
+Data on organizational culture in each of the 12 courts (Part 1) were obtained by administering the Court Culture Assessment Instrument (CCAI) to all judges with a felony criminal court docket and to all senior court administrators. A total of 224 respondents completed the questionnaire. The CCAI was used to assess five key dimensions of current court culture orientation: (1) dominant case management style, (2) judicial and court staff relations, (3) change management, (4) courthouse leadership, and (5) internal organization. The determination of what culture judges and court administrators desired to establish in the near future was also obtained through the application of the same instrument (CACI) as practitioners were asked to indicate the type of culture in each work area (or content dimension) they would like to see in their court in the next five years. Additionally, surveys were conducted of prosecuting attorneys (Part 2) and public defender attorneys (Part 3) to gauge their views on how well the courts in which they practice achieve the goals of access, fairness, and managerial effectiveness. Every prosecutor and public defender with two years or more experience in representing the state or criminal defendants in felony cases was asked to complete a questionnaire probing their thoughts on how well their court acted to promote access to records through availability and staff cooperation, treating litigants, witnesses, jurors and others fairly, and demonstrating concern for the rights and interests of others in the criminal trial process, including attorney and victims. A total of 334 prosecuting attorneys and 260 public defense attorneys completed the 46-item trial court process survey.
 ```
 
 
@@ -1460,11 +1463,11 @@ The textual description should not simply restate the time period in words. For 
 **Examples:**
 
 ```text
-"The data includes variables about participants' and their parents' moods, interviewer observations, families' activities, families' health history, participants' school records, and parents' substance use. Demographic variables include race, religion, annual household income, and the participants' parents' employment statuses."
+The data includes variables about participants' and their parents' moods, interviewer observations, families' activities, families' health history, participants' school records, and parents' substance use. Demographic variables include race, religion, annual household income, and the participants' parents' employment statuses.
 ```
 
 ```text
-"The LGBTQ Hate Crimes Interviews dataset contains more in-depth information, including victim demographic information, substance abuse history, information on whether the victim is open about their LGBTQ identification, the victim's job status, and information about how the victim reacted to the crime, such as whether or not they reported the crime to the police and their level of cooperation with the police and prosecution."
+The LGBTQ Hate Crimes Interviews dataset contains more in-depth information, including victim demographic information, substance abuse history, information on whether the victim is open about their LGBTQ identification, the victim's job status, and information about how the victim reacted to the crime, such as whether or not they reported the crime to the police and their level of cooperation with the police and prosecution.
 ```
 
 
@@ -1490,24 +1493,24 @@ The textual description should not simply restate the time period in words. For 
 **Examples:**
 
 ```text
-"National sample of telephone numbers from cell (RDD) sampling frame."
+National sample of telephone numbers from cell (RDD) sampling frame.
 ```
 
 ```text
-"The probability sample selected to represent the universe consists of approximately 71,000 households."
+The probability sample selected to represent the universe consists of approximately 71,000 households.
 ```
 
 ```text
-"The data collection is a pooled cross-sectional time-series of bank robberies in 50 states over a period of 6 years (1970-1975), resulting in 300 observations."
+The data collection is a pooled cross-sectional time-series of bank robberies in 50 states over a period of 6 years (1970-1975), resulting in 300 observations.
 ```
 
 ```text
-"Three target groups were identified: lawyers 36 years of age and above who were members of the American Bar Association (ABA), all the remaining members of the ABA excluding law students, and all lawyers in the nonmember files kept by the ABA. A systematic random probability sample was drawn to represent each of the three groups. The group of young lawyers was oversampled."
+Three target groups were identified: lawyers 36 years of age and above who were members of the American Bar Association (ABA), all the remaining members of the ABA excluding law students, and all lawyers in the nonmember files kept by the ABA. A systematic random probability sample was drawn to represent each of the three groups. The group of young lawyers was oversampled.
 ```
 
 ```text
-"The original National Longitudinal Survey of Youth Children and Young Adults 1979 (NLSY79) was a multi-stage, stratified random national sample. Sampling weights are available in the public-use datasets to adjust for minority oversamples and year-to-year attrition. There are mother and child specific weights. Primary Sampling Units (PSUs) were counties and independent cities. PSUs were stratified prior to sampling based on 9 Census divisions and 2 urban/rural classes."
-"The initial Panel Study of Income Dynamics (PSID) combined two independent samples: a cross-sectional, national sample (based on stratified multistage selection of the civilian noninstitutional population of the U.S.) and a national sample of low-income families. The cross-section sample was an equal probability sample of households in the 48 coterminous states designed to yield about 3,000 completed interviews. The second sample was selected from the Census Bureau's Survey of Economic Opportunity (SEO) using unequal selection probabilities. "
+The original National Longitudinal Survey of Youth Children and Young Adults 1979 (NLSY79) was a multi-stage, stratified random national sample. Sampling weights are available in the public-use datasets to adjust for minority oversamples and year-to-year attrition. There are mother and child specific weights. Primary Sampling Units (PSUs) were counties and independent cities. PSUs were stratified prior to sampling based on 9 Census divisions and 2 urban/rural classes.
+The initial Panel Study of Income Dynamics (PSID) combined two independent samples: a cross-sectional, national sample (based on stratified multistage selection of the civilian noninstitutional population of the U.S.) and a national sample of low-income families. The cross-section sample was an equal probability sample of households in the 48 coterminous states designed to yield about 3,000 completed interviews. The second sample was selected from the Census Bureau's Survey of Economic Opportunity (SEO) using unequal selection probabilities. 
 ```
 
 
@@ -1543,12 +1546,12 @@ The textual description should not simply restate the time period in words. For 
 **Examples:**
 
 ```text
-"Cross-sectional"
+Cross-sectional
 ```
 
 ```text
-"Longitudinal: Cohort / Event-based"
-"Time Series"
+Longitudinal: Cohort / Event-based
+Time Series
 ```
 
 
@@ -1572,16 +1575,16 @@ The textual description should not simply restate the time period in words. For 
 **Examples:**
 
 ```text
-"'Voting Scores.' Congressional Quarterly Almanac 33 (1977), 487-498"
+'Voting Scores.' Congressional Quarterly Almanac 33 (1977), 487-498
 ```
 
 ```text
-"United States Bureau of the Census Economic Surveys, 1998-2000"
-"United States Congressional Record, 1989"
+United States Bureau of the Census Economic Surveys, 1998-2000
+United States Congressional Record, 1989
 ```
 
 ```text
-"Annual Company Organization Survey, 2003"
+Annual Company Organization Survey, 2003
 ```
 
 
@@ -1626,12 +1629,12 @@ The textual description should not simply restate the time period in words. For 
 **Examples:**
 
 ```text
-"audio computer-assisted self interview (ACASI)"
+audio computer-assisted self interview (ACASI)
 ```
 
 ```text
-"computer-assisted self interview (CASI)"
-"face-to-face interview"
+computer-assisted self interview (CASI)
+face-to-face interview
 ```
 
 
@@ -1664,13 +1667,13 @@ The textual description should not simply restate the time period in words. For 
 **Examples:**
 
 ```text
-"Created variable labels and/or value labels."
-"Standardized missing values."
-"Checked for undocumented or out-of-range codes."
+Created variable labels and/or value labels.
+Standardized missing values.
+Checked for undocumented or out-of-range codes.
 ```
 
 ```text
-"Created online analysis version with question text."
+Created online analysis version with question text.
 ```
 
 
@@ -1694,15 +1697,15 @@ The textual description should not simply restate the time period in words. For 
 **Examples:**
 
 ```text
-"A weight variable with two implied decimal places has been included and must be used in any analysis."
+A weight variable with two implied decimal places has been included and must be used in any analysis.
 ```
 
 ```text
-"Both the TransPop and Cisgender datasets have the same variable named WEIGHT as the weighting variable. The combination datasets have a set of three weight variables (WEIGHT_TRANSPOP, WEIGHT_CISGENDER, WEIGHT_CISGENDER_TRANSPOP). The results will be representative of the sample when the weight is applied. Pages 41 and 42 of the user guide contain instructions that detail how to apply the final sample weight using Stata or SPSS."
+Both the TransPop and Cisgender datasets have the same variable named WEIGHT as the weighting variable. The combination datasets have a set of three weight variables (WEIGHT_TRANSPOP, WEIGHT_CISGENDER, WEIGHT_CISGENDER_TRANSPOP). The results will be representative of the sample when the weight is applied. Pages 41 and 42 of the user guide contain instructions that detail how to apply the final sample weight using Stata or SPSS.
 ```
 
 ```text
-"The 1996 NES dataset includes two final person-level analysis weights which incorporate sampling, nonresponse, and post-stratification factors. One weight (variable #4) is for longitudinal micro-level analysis using the 1996 NES Panel. The other weight (variable #3) is for analysis of the 1996 NES combined sample (Panel component cases plus Cross-section supplement cases). In addition, a Time Series Weight (variable #5) which corrects for Panel attrition was constructed. This weight should be used in analyses which compare the 1996 NES to earlier unweighted National Election Study data collections."
+The 1996 NES dataset includes two final person-level analysis weights which incorporate sampling, nonresponse, and post-stratification factors. One weight (variable #4) is for longitudinal micro-level analysis using the 1996 NES Panel. The other weight (variable #3) is for analysis of the 1996 NES combined sample (Panel component cases plus Cross-section supplement cases). In addition, a Time Series Weight (variable #5) which corrects for Panel attrition was constructed. This weight should be used in analyses which compare the 1996 NES to earlier unweighted National Election Study data collections.
 ```
 
 
@@ -1726,15 +1729,15 @@ The textual description should not simply restate the time period in words. For 
 **Examples:**
 
 ```text
-"The overall response rate for this survey was 20.22%; 72.6% for existing panelists and 10.4% for new panelists, using AAPOR Response Rate 1."
+The overall response rate for this survey was 20.22%; 72.6% for existing panelists and 10.4% for new panelists, using AAPOR Response Rate 1.
 ```
 
 ```text
-"The response rate for the pre-election interview was 55.8 percent (66.5 percent for the Panel and 35.2 percent for the Fresh Cross). The response rate for the post-election interview was 89.1 (90.1 percent for the Panel and 85.2 percent for the Fresh Cross)."
+The response rate for the pre-election interview was 55.8 percent (66.5 percent for the Panel and 35.2 percent for the Fresh Cross). The response rate for the post-election interview was 89.1 (90.1 percent for the Panel and 85.2 percent for the Fresh Cross).
 ```
 
 ```text
-"Not applicable."
+Not applicable.
 ```
 
 
@@ -1758,13 +1761,13 @@ The textual description should not simply restate the time period in words. For 
 **Examples:**
 
 ```text
-"The baseline data collection included one scale - the CES-D index for maternal depression [Cole, J. C., Rabin, A. S., Smith, T. L., and Kaufman, A. S. (2004). Development and validation of a Rasch-derived CES-D short form. Psychological assessment, 16(4), 360]. All scales used for outcomes at ages 1 through 3 are listed in Appendix Tables 1 and 2 in the User Guide. Please refer to the User Guide and P.I. Codebook, available under the 'Data and Documentation' tab, for details."
+The baseline data collection included one scale - the CES-D index for maternal depression [Cole, J. C., Rabin, A. S., Smith, T. L., and Kaufman, A. S. (2004). Development and validation of a Rasch-derived CES-D short form. Psychological assessment, 16(4), 360]. All scales used for outcomes at ages 1 through 3 are listed in Appendix Tables 1 and 2 in the User Guide. Please refer to the User Guide and P.I. Codebook, available under the 'Data and Documentation' tab, for details.
 ```
 
 ```text
-"Squires, J., Bricker, D. D., and Twombly, E. (2009). Ages and stages questionnaires. Baltimore, MD: Paul H. Brookes."
-"Briggs-Gowan, M. J., Carter, A. S., Irwin, J. R., Wachtel, K., and Cicchetti, D. V. (2004). The Brief Infant-Toddler Social and Emotional Assessment: screening for social-emotional problems and delays in competence. Journal of pediatric psychology, 29(2), 143-155."
-"Yu, L., Buysse, D. J., Germain, A., Moul, D. E., Stover, A., Dodds, N. E., ... and Pilkonis, P. A. (2012). Development of short forms from the PROMIS sleep disturbance and sleep-related impairment item banks. Behavioral sleep medicine, 10(1), 6-24."
+Squires, J., Bricker, D. D., and Twombly, E. (2009). Ages and stages questionnaires. Baltimore, MD: Paul H. Brookes.
+Briggs-Gowan, M. J., Carter, A. S., Irwin, J. R., Wachtel, K., and Cicchetti, D. V. (2004). The Brief Infant-Toddler Social and Emotional Assessment: screening for social-emotional problems and delays in competence. Journal of pediatric psychology, 29(2), 143-155.
+Yu, L., Buysse, D. J., Germain, A., Moul, D. E., Stover, A., Dodds, N. E., ... and Pilkonis, P. A. (2012). Development of short forms from the PROMIS sleep disturbance and sleep-related impairment item banks. Behavioral sleep medicine, 10(1), 6-24.
 ```
 
 
@@ -1788,15 +1791,15 @@ The textual description should not simply restate the time period in words. For 
 **Examples:**
 
 ```text
-"Organization"
+Organization
 ```
 
 ```text
-"Individual, Household"
+Individual, Household
 ```
 
 ```text
-"Family"
+Family
 ```
 
 
@@ -1826,15 +1829,15 @@ This element is only meant to convey specific, known, geography. If there is a v
 **Examples:**
 
 ```text
-"state"
+state
 ```
 
 ```text
-"Census tract"
+Census tract
 ```
 
 ```text
-"precinct"
+precinct
 ```
 
 
@@ -1858,7 +1861,7 @@ This element is only meant to convey specific, known, geography. If there is a v
 **Examples:**
 
 ```text
-"These data may not be used for any purpose other than statistical reporting and analysis. Use of these data to learn the identity of any person or establishment is strictly prohibited. To protect respondent privacy, certain files within this data collection are restricted from general dissemination. To obtain these files, researchers must agree to the terms and conditions of a Restricted Data Use Agreement in accordance with existing ICPSR servicing policies."
+These data may not be used for any purpose other than statistical reporting and analysis. Use of these data to learn the identity of any person or establishment is strictly prohibited. To protect respondent privacy, certain files within this data collection are restricted from general dissemination. To obtain these files, researchers must agree to the terms and conditions of a Restricted Data Use Agreement in accordance with existing ICPSR servicing policies.
 ```
 
 
@@ -1882,11 +1885,11 @@ This element is only meant to convey specific, known, geography. If there is a v
 **Examples:**
 
 ```text
-"True"
+True
 ```
 
 ```text
-"False"
+False
 ```
 
 
@@ -1910,11 +1913,11 @@ This element is only meant to convey specific, known, geography. If there is a v
 **Examples:**
 
 ```text
-"True"
+True
 ```
 
 ```text
-"False"
+False
 ```
 
 
@@ -1955,11 +1958,11 @@ This element is only meant to convey specific, known, geography. If there is a v
 **Examples:**
 
 ```text
-"2006-03-30"
+2006-03-30
 ```
 
 ```text
-"2019-05-05"
+2019-05-05
 ```
 
 ##### Note {#changes-to-collection_note}
@@ -1975,30 +1978,29 @@ This element is only meant to convey specific, known, geography. If there is a v
 **Examples:**
 
 ```text
-"File CB3025.ALL.PDF was removed from any previous datasets and flagged as a study-level file, so that it will accompany all downloads."
+File CB3025.ALL.PDF was removed from any previous datasets and flagged as a study-level file, so that it will accompany all downloads.
 ```
 
 ```text
-"The data producer provided additional data files."
+The data producer provided additional data files.
 ```
 
 ```text
-"SAS and SPSS setup files were created."
+SAS and SPSS setup files were created.
 ```
 
 ```text
-"The codebook descriptions of variables TANSUP, EMOSUP, and SOCSUP were corrected."
+The codebook descriptions of variables TANSUP, EMOSUP, and SOCSUP were corrected.
 ```
 
 #### Complete Changes to Collection Examples (with Subfields):
 
 ```yaml
-- "Date": "2003-09-10"
-  "Note": "A variable specifying the date of interview has been added to the collection."
+- Date: '2003-09-10'
+  Note: A variable specifying the date of interview has been added to the collection.
 
-- "Date": "2003-12-09"
-  "Note": "The codebook descriptions of variables TANSUP, EMOSUP, and SOCSUP were\
-    \ corrected."
+- Date: '2003-12-09'
+  Note: The codebook descriptions of variables TANSUP, EMOSUP, and SOCSUP were corrected.
 ```
 
 
@@ -2022,19 +2024,19 @@ This element is only meant to convey specific, known, geography. If there is a v
 **Examples:**
 
 ```text
-"American National Election Study (ANES) Series"
+American National Election Study (ANES) Series
 ```
 
 ```text
-"Census of Population and Housing, 1990 [United States] Series"
+Census of Population and Housing, 1990 [United States] Series
 ```
 
 ```text
-"National Black Election Study Series"
+National Black Election Study Series
 ```
 
 ```text
-"Study of Women's Health Across the Nation (SWAN) Series"
+Study of Women's Health Across the Nation (SWAN) Series
 ```
 
 
@@ -2058,11 +2060,11 @@ This element is only meant to convey specific, known, geography. If there is a v
 **Examples:**
 
 ```text
-"I.A.2. Census Enumerations: Historical and Contemporary Population Characteristics, United States, American Housing Survey Series"
+I.A.2. Census Enumerations: Historical and Contemporary Population Characteristics, United States, American Housing Survey Series
 ```
 
 ```text
-"XVII.C.1. Social Institutions and Behavior, Socialization, Students, and Youth, United States"
+XVII.C.1. Social Institutions and Behavior, Socialization, Students, and Youth, United States
 ```
 
 
@@ -2106,15 +2108,15 @@ This element is only meant to convey specific, known, geography. If there is a v
 **Examples:**
 
 ```text
-"1"
+1
 ```
 
 ```text
-"2"
+2
 ```
 
 ```text
-"3"
+3
 ```
 
 ##### Name {#filesets_name}
@@ -2134,19 +2136,19 @@ This element is only meant to convey specific, known, geography. If there is a v
 **Examples:**
 
 ```text
-"Each Region, Wealth Summary: Middle Colonies (MIDLCOL)"
+Each Region, Wealth Summary: Middle Colonies (MIDLCOL)
 ```
 
 ```text
-"Each Region, Wealth Summary: New England (NEWENGL)"
+Each Region, Wealth Summary: New England (NEWENGL)
 ```
 
 ```text
-"Northbound Public-Use Data"
+Northbound Public-Use Data
 ```
 
 ```text
-"Northbound Restricted-Use Data"
+Northbound Restricted-Use Data
 ```
 
 ##### SDA Note {#filesets_sda_note}
@@ -2164,37 +2166,37 @@ This element is only meant to convey specific, known, geography. If there is a v
 **Examples:**
 
 ```text
-"Please note that the AABS provides estimates for 32 states. It also supplies arts participation estimates for 11 metropolitan areas. Users are encouraged to review the Data Collection Notes on the Study Description page for specific states and metropolitan areas."
+Please note that the AABS provides estimates for 32 states. It also supplies arts participation estimates for 11 metropolitan areas. Users are encouraged to review the Data Collection Notes on the Study Description page for specific states and metropolitan areas.
 ```
 
 ```text
-"Please note that the replicate weights are needed to obtain accurate standard error estimates. Users are advised to download the data to use the replicate weights. Users should refer to the study description page or User Guide for further details regarding weights."
+Please note that the replicate weights are needed to obtain accurate standard error estimates. Users are advised to download the data to use the replicate weights. Users should refer to the study description page or User Guide for further details regarding weights.
 ```
 
 #### Complete Filesets Examples (with Subfields):
 
 ```yaml
-- "Number": 1
+- Number: 1
 ```
 
 ```yaml
-- "Number": 1
-  "Name": "Northbound Public-Use Data"
+- Number: 1
+  Name: Northbound Public-Use Data
 
-- "Number": 2
-  "Name": "Northbound Restricted-Use Data"
+- Number: 2
+  Name: Northbound Restricted-Use Data
 ```
 
 ```yaml
-- "Number": 1
-  "Name": "Original File"
+- Number: 1
+  Name: Original File
 
-- "Number": 2
-  "Name": "Replicate Weight File"
-  "SDA Note": "Please note that the replicate weights are needed to obtain accurate\
-    \ standard error estimates. Users are advised to download the data to use the\
-    \ replicate weights. Users should refer to the study description page or User\
-    \ Guide for further details regarding weights."
+- Number: 2
+  Name: Replicate Weight File
+  SDA Note: Please note that the replicate weights are needed to obtain accurate standard
+    error estimates. Users are advised to download the data to use the replicate weights.
+    Users should refer to the study description page or User Guide for further details
+    regarding weights.
 ```
 
 
