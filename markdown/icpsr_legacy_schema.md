@@ -436,19 +436,19 @@ Oppenhuis
 
 #### Complete Person Examples (with Subfields):
 
-```yaml
+```text
 Given (First) Name: James A.
 Family (Last) Name: McCann Jr.
 
 ```
 
-```yaml
+```text
 Given (First) Name: Lois
 Family (Last) Name: Smith
 
 ```
 
-```yaml
+```text
 Given (First) Name: E.V.
 Family (Last) Name: Oppenhuis
 
@@ -512,7 +512,7 @@ United States Department of Health and Human Services. Centers for Disease Contr
 
 #### Complete Principal Investigator Examples (with Subfields):
 
-```yaml
+```text
 - Person:
     Given (First) Name: Jane
     Family (Last) Name: Doe
@@ -526,7 +526,7 @@ United States Department of Health and Human Services. Centers for Disease Contr
   Order: 2
 ```
 
-```yaml
+```text
 - Organization: Urban Institute
   Order: 1
 ```
@@ -663,13 +663,13 @@ Chicago, IL
 
 #### Complete Distributor Examples (with Subfields):
 
-```yaml
+```text
 - Name: Inter-university Consortium for Political and Social Research
   Location: Ann Arbor, MI
   Title: 1
 ```
 
-```yaml
+```text
 - Name: Inter-university Consortium for Political and Social Research
   Location: Ann Arbor, MI
   Title: 1
@@ -887,7 +887,7 @@ archiving of data
 
 #### Complete Funding Source Examples (with Subfields):
 
-```yaml
+```text
 - Agency: Robert Wood Johnson Foundation
   Grant Numbers:
   - MDR-8550085
@@ -903,7 +903,7 @@ archiving of data
   Order: 2
 ```
 
-```yaml
+```text
 - Agency: Institute of Museum and Library Services
   Order: 1
 ```
@@ -1145,7 +1145,7 @@ Post-Survey Follow-Up
 
 #### Complete Time Period Examples (with Subfields):
 
-```yaml
+```text
 - Date: 2020-01-21--2020-06-21
   Time Frame: Wave 1
 
@@ -1153,7 +1153,7 @@ Post-Survey Follow-Up
   Time Frame: Wave 2
 ```
 
-```yaml
+```text
 - Date: 2020
 ```
 
@@ -1242,7 +1242,7 @@ Post-Survey Follow-Up
 
 #### Complete Collection Date Examples (with Subfields):
 
-```yaml
+```text
 - Date: 2020-01-21--2020-06-21
   Time Frame: Wave 1
 
@@ -1250,7 +1250,7 @@ Post-Survey Follow-Up
   Time Frame: Wave 2
 ```
 
-```yaml
+```text
 - Date: 2020
 ```
 
@@ -1995,7 +1995,7 @@ The codebook descriptions of variables TANSUP, EMOSUP, and SOCSUP were corrected
 
 #### Complete Changes to Collection Examples (with Subfields):
 
-```yaml
+```text
 - Date: 2003-09-10
   Note: A variable specifying the date of interview has been added to the collection.
 
@@ -2175,11 +2175,11 @@ Please note that the replicate weights are needed to obtain accurate standard er
 
 #### Complete Filesets Examples (with Subfields):
 
-```yaml
+```text
 - Number: 1
 ```
 
-```yaml
+```text
 - Number: 1
   Name: Northbound Public-Use Data
 
@@ -2187,7 +2187,7 @@ Please note that the replicate weights are needed to obtain accurate standard er
   Name: Northbound Restricted-Use Data
 ```
 
-```yaml
+```text
 - Number: 1
   Name: Original File
 
