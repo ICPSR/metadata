@@ -131,6 +131,9 @@ def render_yaml_examples(examples, schema):
         # Remove YAML quotation marks for Markdown display.
         yaml_str = re.sub(r"(: )'([^']*)'$", r"\1\2", yaml_str, flags=re.MULTILINE)
 
+        # remove trailing whitespace / blank lines
+        yaml_str = yaml_str.rstrip()
+
         # insert a blank line between top-level list items
         if isinstance(human_ex, list):
             lines = yaml_str.splitlines()
