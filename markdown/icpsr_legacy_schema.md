@@ -1154,7 +1154,7 @@ Post-Survey Follow-Up
 ```
 
 ```yaml
-- Date: '2020'
+- Date: 2020
 ```
 
 
@@ -1251,7 +1251,7 @@ Post-Survey Follow-Up
 ```
 
 ```yaml
-- Date: '2020'
+- Date: 2020
 ```
 
 
@@ -1996,10 +1996,10 @@ The codebook descriptions of variables TANSUP, EMOSUP, and SOCSUP were corrected
 #### Complete Changes to Collection Examples (with Subfields):
 
 ```yaml
-- Date: '2003-09-10'
+- Date: 2003-09-10
   Note: A variable specifying the date of interview has been added to the collection.
 
-- Date: '2003-12-09'
+- Date: 2003-12-09
   Note: The codebook descriptions of variables TANSUP, EMOSUP, and SOCSUP were corrected.
 ```
 
