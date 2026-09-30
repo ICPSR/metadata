@@ -439,19 +439,16 @@ Oppenhuis
 ```text
 Given (First) Name: James A.
 Family (Last) Name: McCann Jr.
-
 ```
 
 ```text
 Given (First) Name: Lois
 Family (Last) Name: Smith
-
 ```
 
 ```text
 Given (First) Name: E.V.
 Family (Last) Name: Oppenhuis
-
 ```
 
 ##### Organization {#principal-investigator_organization}
