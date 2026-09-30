@@ -53,8 +53,6 @@ Machine-actionable copies of metadata field definitions are also available in [J
 | [Citation](#citation) | No | No | Text | The official way to reference the data collection in writing. |
 | [Person](#person) | No | No | Multi-part element; see subfields | A person associated with an ICPSR data collection or service. |
 | [Organization](#organization) | No | No | Multi-part element; see subfields | An organization associated with an ICPSR data collection or service. |
-| [Collection Type](#collection-type) | No | Yes | Text | Type of collection. |
-| [Study Curation Request](#study-curation-request) | No | No | Text | Would you like your study to be curated? |
 
 ---
 
@@ -1419,18 +1417,21 @@ StateProvince
 Label: Basic Geographic Units
 Code: BasicUnits
 URI: /api/v1/vocab-terms/smallestGeographicUnits/terms/BasicUnits
+
 ```
 
 ```text
 Label: Postal Code/Zip Code
 Code: PostalCodeZipCode
 URI: /api/v1/vocab-terms/smallestGeographicUnits/terms/PostalCodeZipCode
+
 ```
 
 ```text
 Label: State/Province
 Code: StateProvince
 URI: /api/v1/vocab-terms/smallestGeographicUnits/terms/StateProvince
+
 ```
 
 
@@ -2984,12 +2985,14 @@ ada.archival
 Label: ADA Accessible
 Code: ada.accessible
 URI: /api/v1/vocab-terms/adaAccessibility/terms/ada.accessible
+
 ```
 
 ```text
 Label: ADA Archival
 Code: ada.archival
 URI: /api/v1/vocab-terms/adaAccessibility/terms/ada.archival
+
 ```
 
 
@@ -3080,12 +3083,14 @@ Apache-1.0
 Label: Creative Commons Attribution 4.0 International
 Code: CC-BY-4.0
 URI: /api/v1/vocab-terms/licenses/terms/CC-BY-4.0
+
 ```
 
 ```text
 Label: Apache License 1.0
 Code: Apache-1.0
 URI: /api/v1/vocab-terms/licenses/terms/Apache-1.0
+
 ```
 
 
@@ -3464,11 +3469,13 @@ Goldin
 ```text
 Given Name (First Name): Miner P.
 Family Name (Last Name): Marchbanks III
+
 ```
 
 ```text
 Given Name (First Name): Claudia
 Family Name (Last Name): Goldin
+
 ```
 
 ##### ORCID Identifier {#person_orcid}
@@ -3528,6 +3535,7 @@ Affiliation(s):
 - Name: Yale University
   ROR: https://ror.org/03v76x132
 - Name: MacroMarkets
+
 ```
 
 ```text
@@ -3538,12 +3546,14 @@ ORCID Identifier: https://orcid.org/0000-0003-3842-1604
 Affiliation(s):
 - Name: Harvard University
   ROR: https://ror.org/03vek6s52
+
 ```
 
 ```text
 Personal Name:
   Given Name (First Name): Miner P.
   Family Name (Last Name): Marchbanks III
+
 ```
 
 
@@ -3626,80 +3636,18 @@ info@example.com
 Organization Name: Urban Institute
 ROR Identifier: https://ror.org/017pz3h73
 Email Address: info@urban.institute
+
 ```
 
 ```text
 Organization Name: Bureau of Justice Statistics
 ROR Identifier: https://ror.org/0006s4z66
+
 ```
 
 ```text
 Organization Name: Internal Revenue Service
-```
 
-
----
-
-<a id="collection-type"></a>
-### Collection Type
-
-**Description:** Type of collection.
-
-**Required:** No
-
-**Repeatable:** Yes
-
-**Accepted Values:** Text
-
-**Usage Notes:** Use collection as default is no other value applies.
-
-
-This field employs a local ICPSR controlled vocabulary; see below for terms and definitions:
-
-
-| Term | Definition |
-|------|------------|
-| series | A collection of studies where the same questions are asked year-to-year. |
-| archive | An aggregation of collections and studies with their own website (and funding). |
-| collection | A generic aggregation of studies and other collections. |
-
-
-**Examples:**
-
-```text
-series
-```
-
-```text
-archive
-```
-
-```text
-collection
-```
-
-
----
-
-<a id="study-curation-request"></a>
-### Study Curation Request
-
-**Description:** Would you like your study to be curated?
-
-**Required:** No
-
-**Repeatable:** No
-
-**Accepted Values:** Text
-
-**Examples:**
-
-```text
-Yes
-```
-
-```text
-No
 ```
 
 
