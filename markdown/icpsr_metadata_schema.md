@@ -53,6 +53,8 @@ Machine-actionable copies of metadata field definitions are also available in [J
 | [Citation](#citation) | No | No | Text | The official way to reference the data collection in writing. |
 | [Person](#person) | No | No | Multi-part element; see subfields | A person associated with an ICPSR data collection or service. |
 | [Organization](#organization) | No | No | Multi-part element; see subfields | An organization associated with an ICPSR data collection or service. |
+| [Collection Type](#collection-type) | No | Yes | Text | Type of collection. |
+| [Study Curation Request](#study-curation-request) | No | No | Text | Would you like your study to be curated? |
 
 ---
 
@@ -290,7 +292,7 @@ When entering a principal investigator's affiliation(s):
 
 #### Complete Principal Investigators Examples (with Subfields):
 
-```yaml
+```text
 - Person:
     Name:
       Given: Miner P.
@@ -298,7 +300,7 @@ When entering a principal investigator's affiliation(s):
   Order: 0
 ```
 
-```yaml
+```text
 - Person:
     Name:
       Given: Robert J.
@@ -456,7 +458,7 @@ https://doi.org/10.35802/212242
 
 #### Complete Funding Sources Examples (with Subfields):
 
-```yaml
+```text
 - Funding Organization:
     Name: Robert Wood Johnson Foundation
     ROR: https://ror.org/02ymmdj85
@@ -474,7 +476,7 @@ https://doi.org/10.35802/212242
   Order: 1
 ```
 
-```yaml
+```text
 - Funding Organization:
     Name: Acme Foundation
   Order: 0
@@ -602,7 +604,7 @@ https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/26180
 
 #### Complete ICPSR Subject Terms Examples (with Subfields):
 
-```yaml
+```text
 - Label: lobbying
   Code: 26131
   URI: https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/26131
@@ -612,7 +614,7 @@ https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/26180
   URI: https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/24123
 ```
 
-```yaml
+```text
 - Label: happiness
   Code: 25624
   URI: https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/25624
@@ -716,7 +718,7 @@ N22
 
 #### Complete Journal of Economic Literature (JEL) Classification Codes Examples (with Subfields):
 
-```yaml
+```text
 - Label: Relation of Economics to Other Disciplines
   Code: A12
   URI: /api/v1/vocab-terms/jelClassifications/terms/A12
@@ -726,7 +728,7 @@ N22
   URI: /api/v1/vocab-terms/jelClassifications/terms/B00
 ```
 
-```yaml
+```text
 - Label: Economic History: Financial Markets and Institutions: U.S.; Canada: 1913-
   Code: N22
   URI: /api/v1/vocab-terms/jelClassifications/terms/N22
@@ -818,7 +820,7 @@ http://id.nlm.nih.gov/mesh/T011730
 
 #### Complete Medical Subject Headings (MeSH) Terms Examples (with Subfields):
 
-```yaml
+```text
 - Label: Anxiety
   Code: D001007
   URI: http://id.nlm.nih.gov/mesh/D001007
@@ -924,7 +926,7 @@ Winter Semester 2019
 
 #### Complete Time Periods Examples (with Subfields):
 
-```yaml
+```text
 - Start Date: 2018
   End Date: 2018
   Time Frame: Summer and Fall 2018
@@ -933,7 +935,7 @@ Winter Semester 2019
   End Date: 2020-10
 ```
 
-```yaml
+```text
 - Start Date: 2003-01-01
   End Date: 2003-12-31
 ```
@@ -1235,7 +1237,7 @@ https://sws.geonames.org/6269554
 
 #### Complete Geographic Coverage Areas Examples (with Subfields):
 
-```yaml
+```text
 - City: Cleveland
   State: Ohio
   Country: United States
@@ -1257,7 +1259,7 @@ https://sws.geonames.org/6269554
   URI: /api/v1/vocab-terms/geoNames/terms/5206379
 ```
 
-```yaml
+```text
 - Country: Germany
   Continent: Europe
   External URI: https://sws.geonames.org/2921044
@@ -1268,13 +1270,13 @@ https://sws.geonames.org/6269554
   URI: /api/v1/vocab-terms/geoNames/terms/6255146
 ```
 
-```yaml
+```text
 - Other Geographic Area: Global
   External URI: https://sws.geonames.org/6295630
   URI: /api/v1/vocab-terms/geoNames/terms/6295630
 ```
 
-```yaml
+```text
 - Other Geographic Area: 13 U.S. states in 3 regions
 ```
 
@@ -1413,21 +1415,21 @@ StateProvince
 
 #### Complete Smallest Geographic Unit Examples (with Subfields):
 
-```yaml
+```text
 Label: Basic Geographic Units
 Code: BasicUnits
 URI: /api/v1/vocab-terms/smallestGeographicUnits/terms/BasicUnits
 
 ```
 
-```yaml
+```text
 Label: Postal Code/Zip Code
 Code: PostalCodeZipCode
 URI: /api/v1/vocab-terms/smallestGeographicUnits/terms/PostalCodeZipCode
 
 ```
 
-```yaml
+```text
 Label: State/Province
 Code: StateProvince
 URI: /api/v1/vocab-terms/smallestGeographicUnits/terms/StateProvince
@@ -1596,7 +1598,7 @@ TimeSeries
 
 #### Complete Time Methods Examples (with Subfields):
 
-```yaml
+```text
 - Label: Cross-section
   Code: CrossSection
   URI: /api/v1/vocab-terms/timeMethods/terms/CrossSection
@@ -1606,7 +1608,7 @@ TimeSeries
   URI: /api/v1/vocab-terms/timeMethods/terms/Longitudinal.Panel
 ```
 
-```yaml
+```text
 - Label: Time series
   Code: TimeSeries
   URI: /api/v1/vocab-terms/timeMethods/terms/TimeSeries
@@ -1710,7 +1712,7 @@ Household
 
 #### Complete Units of Analysis Examples (with Subfields):
 
-```yaml
+```text
 - Label: Organization/Institution
   Code: OrganizationOrInstitution
   URI: /api/v1/vocab-terms/analysisUnits/OrganizationOrInstitution
@@ -1720,7 +1722,7 @@ Household
   URI: /api/v1/vocab-terms/analysisUnits/Individual
 ```
 
-```yaml
+```text
 - Label: Household
   Code: Household
   URI: /api/v1/vocab-terms/analysisUnits/Household
@@ -1826,7 +1828,7 @@ TotalUniverseCompleteEnumeration
 
 #### Complete Sampling Procedures Examples (with Subfields):
 
-```yaml
+```text
 - Label: Probability: Systematic random
   Code: Probability.SystematicRandom
   URI: /api/v1/vocab-terms/samplingProcedures/terms/Probability.SystematicRandom
@@ -1836,7 +1838,7 @@ TotalUniverseCompleteEnumeration
   URI: /api/v1/vocab-terms/samplingProcedures/terms/TheoreticalSampling
 ```
 
-```yaml
+```text
 - Label: Total universe/Complete enumeration
   Code: TotalUniverseCompleteEnumeration
   URI: /api/v1/vocab-terms/samplingProcedures/terms/TotalUniverseCompleteEnumeration
@@ -2018,7 +2020,7 @@ ResearchData.Published
 
 #### Complete Data Source Types Examples (with Subfields):
 
-```yaml
+```text
 - Label: Registers/Records/Accounts: Medical/Clinical
   Code: RegistersRecordsAccounts.MedicalClinical
   URI: /api/v1/vocab-terms/dataSourceTypes/terms/RegistersRecordsAccounts.MedicalClinical
@@ -2028,7 +2030,7 @@ ResearchData.Published
   URI: /api/v1/vocab-terms/dataSourceTypes/terms/EventsInteractions
 ```
 
-```yaml
+```text
 - Label: Research data: Published
   Code: ResearchData.Published
   URI: /api/v1/vocab-terms/dataSourceTypes/terms/ResearchData.Published
@@ -2154,13 +2156,13 @@ Observation.ComputerBased
 
 #### Complete Collection Modes Examples (with Subfields):
 
-```yaml
+```text
 - Label: Face-to-face interview: Computer-assisted (CAPI/CAMI)
   Code: Interview.FaceToFace.CAPIorCAMI
   URI: /api/v1/vocab-terms/collectionModes/terms/Interview.FaceToFace.CAPIorCAMI
 ```
 
-```yaml
+```text
 - Label: Measurements and tests
   Code: MeasurementsAndTests
   URI: /api/v1/vocab-terms/collectionModes/terms/MeasurementsAndTests
@@ -2266,7 +2268,7 @@ Student data
 
 #### Complete Collection Dates Examples (with Subfields):
 
-```yaml
+```text
 - Start Date: 2018
   End Date: 2018
   Time Frame: Wave 1
@@ -2276,7 +2278,7 @@ Student data
   Time Frame: Wave 2
 ```
 
-```yaml
+```text
 - Start Date: 2003-01-01
   End Date: 2003-12-31
 ```
@@ -2704,7 +2706,7 @@ https://www.nationalarchives.gov.uk/information-management/manage-information/pr
 
 #### Complete Software Applications Examples (with Subfields):
 
-```yaml
+```text
 - Software Name: siegfried
   Software Version: 1.11.1
   Software Description: Siegfried is a signature-based file format identification
@@ -2821,7 +2823,7 @@ Numeric
 
 #### Complete General Data Formats Examples (with Subfields):
 
-```yaml
+```text
 - Label: Text
   Code: Text
   URI: /api/v1/vocab-terms/generalDataFormats/terms/Text
@@ -2831,7 +2833,7 @@ Numeric
   URI: /api/v1/vocab-terms/generalDataFormats/terms/StillImage
 ```
 
-```yaml
+```text
 - Label: Numeric
   Code: Numeric
   URI: /api/v1/vocab-terms/generalDataFormats/terms/Numeric
@@ -2981,14 +2983,14 @@ ada.archival
 
 #### Complete ADA Accessibility Examples (with Subfields):
 
-```yaml
+```text
 Label: ADA Accessible
 Code: ada.accessible
 URI: /api/v1/vocab-terms/adaAccessibility/terms/ada.accessible
 
 ```
 
-```yaml
+```text
 Label: ADA Archival
 Code: ada.archival
 URI: /api/v1/vocab-terms/adaAccessibility/terms/ada.archival
@@ -3079,14 +3081,14 @@ Apache-1.0
 
 #### Complete License Examples (with Subfields):
 
-```yaml
+```text
 Label: Creative Commons Attribution 4.0 International
 Code: CC-BY-4.0
 URI: /api/v1/vocab-terms/licenses/terms/CC-BY-4.0
 
 ```
 
-```yaml
+```text
 Label: Apache License 1.0
 Code: Apache-1.0
 URI: /api/v1/vocab-terms/licenses/terms/Apache-1.0
@@ -3189,7 +3191,7 @@ The codebook descriptions of variables TANSUP, EMOSUP, and SOCSUP were corrected
 
 #### Complete Version History Examples (with Subfields):
 
-```yaml
+```text
 - Version Number: V2.1
   Version Date: 2025-10-03
   Version Note: Updated study summary.
@@ -3203,7 +3205,7 @@ The codebook descriptions of variables TANSUP, EMOSUP, and SOCSUP were corrected
   Version Note: Initial release
 ```
 
-```yaml
+```text
 - Version Number: V1
   Version Date: 2024-06-28
   Version Note: Initial release
@@ -3268,7 +3270,7 @@ The codebook descriptions of variables TANSUP, EMOSUP, and SOCSUP were corrected
 
 #### Complete Distributors Examples (with Subfields):
 
-```yaml
+```text
 - Organization:
     Name: Inter-university Consortium for Political and Social Research
     ROR: https://ror.org/02q7mkh03
@@ -3280,7 +3282,7 @@ The codebook descriptions of variables TANSUP, EMOSUP, and SOCSUP were corrected
   Order: 1
 ```
 
-```yaml
+```text
 - Organization:
     Name: Roper Center for Public Opinion Research
   Order: 0
@@ -3466,13 +3468,13 @@ Goldin
 
 #### Complete Personal Name Examples (with Subfields):
 
-```yaml
+```text
 Given Name (First Name): Miner P.
 Family Name (Last Name): Marchbanks III
 
 ```
 
-```yaml
+```text
 Given Name (First Name): Claudia
 Family Name (Last Name): Goldin
 
@@ -3526,7 +3528,7 @@ j.doe@example.com
 
 #### Complete Person Examples (with Subfields):
 
-```yaml
+```text
 Personal Name:
   Given Name (First Name): Robert J.
   Family Name (Last Name): Shiller
@@ -3538,7 +3540,7 @@ Affiliation(s):
 
 ```
 
-```yaml
+```text
 Personal Name:
   Given Name (First Name): Claudia
   Family Name (Last Name): Goldin
@@ -3549,7 +3551,7 @@ Affiliation(s):
 
 ```
 
-```yaml
+```text
 Personal Name:
   Given Name (First Name): Miner P.
   Family Name (Last Name): Marchbanks III
@@ -3632,22 +3634,87 @@ info@example.com
 
 #### Complete Organization Examples (with Subfields):
 
-```yaml
+```text
 Organization Name: Urban Institute
 ROR Identifier: https://ror.org/017pz3h73
 Email Address: info@urban.institute
 
 ```
 
-```yaml
+```text
 Organization Name: Bureau of Justice Statistics
 ROR Identifier: https://ror.org/0006s4z66
 
 ```
 
-```yaml
+```text
 Organization Name: Internal Revenue Service
 
+```
+
+
+---
+
+<a id="collection-type"></a>
+### Collection Type
+
+**Description:** Type of collection.
+
+**Required:** No
+
+**Repeatable:** Yes
+
+**Accepted Values:** Text
+
+**Usage Notes:** Use collection as default is no other value applies.
+
+
+This field employs a local ICPSR controlled vocabulary; see below for terms and definitions:
+
+
+| Term | Definition |
+|------|------------|
+| series | A collection of studies where the same questions are asked year-to-year. |
+| archive | An aggregation of collections and studies with their own website (and funding). |
+| collection | A generic aggregation of studies and other collections. |
+
+
+**Examples:**
+
+```text
+series
+```
+
+```text
+archive
+```
+
+```text
+collection
+```
+
+
+---
+
+<a id="study-curation-request"></a>
+### Study Curation Request
+
+**Description:** Would you like your study to be curated?
+
+**Required:** No
+
+**Repeatable:** No
+
+**Accepted Values:** Text
+
+**Examples:**
+
+```text
+Yes
+```
+
+```text
+No
 ```
 
 

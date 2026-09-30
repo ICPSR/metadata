@@ -142,7 +142,7 @@ def render_yaml_examples(examples, schema):
                     new_lines.append("")  # blank line between items
             yaml_str = "\n".join(new_lines)
 
-        md.append("```yaml")
+        md.append("```text")
         md.append(yaml_str)
         md.append("```\n")
 
