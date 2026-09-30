@@ -4,6 +4,7 @@ from datetime import datetime
 import yaml
 import sys
 import argparse
+import re
 
 # ----------------------------
 # Configuration
@@ -126,6 +127,9 @@ def render_yaml_examples(examples, schema):
 
         # dump YAML
         yaml_str = yaml.safe_dump(human_ex, sort_keys=False)
+
+        # Remove YAML quotation marks for Markdown display.
+        yaml_str = re.sub(r"(: )'([^']*)'$", r"\1\2", yaml_str, flags=re.MULTILINE)
 
         # insert a blank line between top-level list items
         if isinstance(human_ex, list):

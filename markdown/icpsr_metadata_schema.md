@@ -53,6 +53,8 @@ Machine-actionable copies of metadata field definitions are also available in [J
 | [Citation](#citation) | No | No | Text | The official way to reference the data collection in writing. |
 | [Person](#person) | No | No | Multi-part element; see subfields | A person associated with an ICPSR data collection or service. |
 | [Organization](#organization) | No | No | Multi-part element; see subfields | An organization associated with an ICPSR data collection or service. |
+| [Collection Type](#collection-type) | No | Yes | Text | Type of collection. |
+| [Study Curation Request](#study-curation-request) | No | No | Text | Would you like your study to be curated? |
 
 ---
 
@@ -604,17 +606,17 @@ https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/26180
 
 ```yaml
 - Label: lobbying
-  Code: '26131'
+  Code: 26131
   URI: https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/26131
 
 - Label: age
-  Code: '24123'
+  Code: 24123
   URI: https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/24123
 ```
 
 ```yaml
 - Label: happiness
-  Code: '25624'
+  Code: 25624
   URI: https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/25624
 ```
 
@@ -727,7 +729,7 @@ N22
 ```
 
 ```yaml
-- Label: 'Economic History: Financial Markets and Institutions: U.S.; Canada: 1913-'
+- Label: Economic History: Financial Markets and Institutions: U.S.; Canada: 1913-
   Code: N22
   URI: /api/v1/vocab-terms/jelClassifications/terms/N22
 ```
@@ -925,8 +927,8 @@ Winter Semester 2019
 #### Complete Time Periods Examples (with Subfields):
 
 ```yaml
-- Start Date: '2018'
-  End Date: '2018'
+- Start Date: 2018
+  End Date: 2018
   Time Frame: Summer and Fall 2018
 
 - Start Date: 2020-10
@@ -934,8 +936,8 @@ Winter Semester 2019
 ```
 
 ```yaml
-- Start Date: '2003-01-01'
-  End Date: '2003-12-31'
+- Start Date: 2003-01-01
+  End Date: 2003-12-31
 ```
 
 
@@ -1601,7 +1603,7 @@ TimeSeries
   Code: CrossSection
   URI: /api/v1/vocab-terms/timeMethods/terms/CrossSection
 
-- Label: 'Longitudinal: Panel'
+- Label: Longitudinal: Panel
   Code: Longitudinal.Panel
   URI: /api/v1/vocab-terms/timeMethods/terms/Longitudinal.Panel
 ```
@@ -1827,7 +1829,7 @@ TotalUniverseCompleteEnumeration
 #### Complete Sampling Procedures Examples (with Subfields):
 
 ```yaml
-- Label: 'Probability: Systematic random'
+- Label: Probability: Systematic random
   Code: Probability.SystematicRandom
   URI: /api/v1/vocab-terms/samplingProcedures/terms/Probability.SystematicRandom
 
@@ -2019,7 +2021,7 @@ ResearchData.Published
 #### Complete Data Source Types Examples (with Subfields):
 
 ```yaml
-- Label: 'Registers/Records/Accounts: Medical/Clinical'
+- Label: Registers/Records/Accounts: Medical/Clinical
   Code: RegistersRecordsAccounts.MedicalClinical
   URI: /api/v1/vocab-terms/dataSourceTypes/terms/RegistersRecordsAccounts.MedicalClinical
 
@@ -2029,7 +2031,7 @@ ResearchData.Published
 ```
 
 ```yaml
-- Label: 'Research data: Published'
+- Label: Research data: Published
   Code: ResearchData.Published
   URI: /api/v1/vocab-terms/dataSourceTypes/terms/ResearchData.Published
 ```
@@ -2155,7 +2157,7 @@ Observation.ComputerBased
 #### Complete Collection Modes Examples (with Subfields):
 
 ```yaml
-- Label: 'Face-to-face interview: Computer-assisted (CAPI/CAMI)'
+- Label: Face-to-face interview: Computer-assisted (CAPI/CAMI)
   Code: Interview.FaceToFace.CAPIorCAMI
   URI: /api/v1/vocab-terms/collectionModes/terms/Interview.FaceToFace.CAPIorCAMI
 ```
@@ -2267,8 +2269,8 @@ Student data
 #### Complete Collection Dates Examples (with Subfields):
 
 ```yaml
-- Start Date: '2018'
-  End Date: '2018'
+- Start Date: 2018
+  End Date: 2018
   Time Frame: Wave 1
 
 - Start Date: 2020-10
@@ -2277,8 +2279,8 @@ Student data
 ```
 
 ```yaml
-- Start Date: '2003-01-01'
-  End Date: '2003-12-31'
+- Start Date: 2003-01-01
+  End Date: 2003-12-31
 ```
 
 
@@ -3191,21 +3193,21 @@ The codebook descriptions of variables TANSUP, EMOSUP, and SOCSUP were corrected
 
 ```yaml
 - Version Number: V2.1
-  Version Date: '2025-10-03'
+  Version Date: 2025-10-03
   Version Note: Updated study summary.
 
 - Version Number: V2
-  Version Date: '2023-08-12'
+  Version Date: 2023-08-12
   Version Note: The data producer provided additional data files.
 
 - Version Number: V1
-  Version Date: '2021-03-01'
+  Version Date: 2021-03-01
   Version Note: Initial release
 ```
 
 ```yaml
 - Version Number: V1
-  Version Date: '2024-06-28'
+  Version Date: 2024-06-28
   Version Note: Initial release
 ```
 
@@ -3648,6 +3650,71 @@ ROR Identifier: https://ror.org/0006s4z66
 ```yaml
 Organization Name: Internal Revenue Service
 
+```
+
+
+---
+
+<a id="collection-type"></a>
+### Collection Type
+
+**Description:** Type of collection.
+
+**Required:** No
+
+**Repeatable:** Yes
+
+**Accepted Values:** Text
+
+**Usage Notes:** Use collection as default is no other value applies.
+
+
+This field employs a local ICPSR controlled vocabulary; see below for terms and definitions:
+
+
+| Term | Definition |
+|------|------------|
+| series | A collection of studies where the same questions are asked year-to-year. |
+| archive | An aggregation of collections and studies with their own website (and funding). |
+| collection | A generic aggregation of studies and other collections. |
+
+
+**Examples:**
+
+```text
+series
+```
+
+```text
+archive
+```
+
+```text
+collection
+```
+
+
+---
+
+<a id="study-curation-request"></a>
+### Study Curation Request
+
+**Description:** Would you like your study to be curated?
+
+**Required:** No
+
+**Repeatable:** No
+
+**Accepted Values:** Text
+
+**Examples:**
+
+```text
+Yes
+```
+
+```text
+No
 ```
 
 
