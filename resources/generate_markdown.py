@@ -4,14 +4,7 @@ from datetime import datetime
 import yaml
 import sys
 import argparse
-
-class QuoteDumper(yaml.SafeDumper):
-    pass
-
-def quoted_str_representer(dumper, data):
-    return dumper.represent_scalar("tag:yaml.org,2002:str", data, style='"')
-
-QuoteDumper.add_representer(str, quoted_str_representer)
+import re
 
 # ----------------------------
 # Configuration
@@ -95,6 +88,9 @@ def convert_example_to_titles(data, schema):
             prop_schema = props.get(key, {})
             title = prop_schema.get("title", key.replace("_", " ").title())
 
+            if title in {"Ror", "Orcid"}:
+                title = title.upper()
+
             result[title] = convert_example_to_titles(value, prop_schema)
 
         return result
@@ -114,7 +110,7 @@ def render_yaml_examples(examples, schema):
         # strings stay unchanged
         if isinstance(ex, (str, int, float)):
             md.append("```text")
-            md.append(f'"{ex}"')
+            md.append(f'{ex}')
             md.append("```\n")
             continue
 
@@ -122,19 +118,18 @@ def render_yaml_examples(examples, schema):
         if isinstance(ex, list) and all(isinstance(i, (str, int, float)) for i in ex):
             md.append("```text")
             for item in ex:
-                md.append(f'"{item}"')
+                md.append(f'{item}')
             md.append("```\n")
             continue
 
         # convert keys to titles
         human_ex = convert_example_to_titles(ex, schema)
 
-        # dump YAML normally
-        #yaml_str = yaml.safe_dump(human_ex, sort_keys=False)
+        # dump YAML
+        yaml_str = yaml.safe_dump(human_ex, sort_keys=False)
 
-        # dump YAML; enclose everything in quotes
-        yaml_str = yaml.dump(human_ex, Dumper=QuoteDumper, sort_keys=False)
-        yaml_str = yaml_str.replace("\n...\n", "\n").rstrip(".\n")
+        # Remove YAML quotation marks for Markdown display.
+        yaml_str = re.sub(r"(: )'([^']*)'$", r"\1\2", yaml_str, flags=re.MULTILINE)
 
         # insert a blank line between top-level list items
         if isinstance(human_ex, list):
@@ -147,8 +142,8 @@ def render_yaml_examples(examples, schema):
                     new_lines.append("")  # blank line between items
             yaml_str = "\n".join(new_lines)
 
-        md.append("```yaml")
-        md.append(yaml_str)
+        md.append("```text")
+        md.append(yaml_str.rstrip())
         md.append("```\n")
 
     return md
