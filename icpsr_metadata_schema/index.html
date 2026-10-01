@@ -181,7 +181,7 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="icpsr-metadata-schema">ICPSR Metadata Schema</h1>
-<p>Last updated: September 22, 2026</p>
+<p>Last updated: September 30, 2026</p>
 <p>This metadata schema is used to describe data collections at the Inter-university Consortium for Political and Social Research (ICPSR) after 2026. </p>
 <p>These rules and definitions document ICPSR's metadata practices and are intended to (a) assist ICPSR staff with metadata entry, and (b) help users – including data depositors and researchers – understand and interpret ICPSR metadata.</p>
 <p>Machine-actionable copies of metadata field definitions are also available in <a href="https://github.com/ICPSR/metadata/tree/main/rde_schema/property_bank">JSON Schema</a> format.</p>
@@ -558,15 +558,15 @@
 </li>
 </ul>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;Bridge of Faith: Aim4Peace Community-Based Violence Prevention Project, Kansas City, Missouri, 2014-2017&quot;
+<pre><code class="language-text">Bridge of Faith: Aim4Peace Community-Based Violence Prevention Project, Kansas City, Missouri, 2014-2017
 </code></pre>
-<pre><code class="language-text">&quot;Health and Relationships Project, United States, 2014-2015&quot;
+<pre><code class="language-text">Health and Relationships Project, United States, 2014-2015
 </code></pre>
-<pre><code class="language-text">&quot;Targeted Interventions to Prevent Chronic Low Back Pain in High Risk Patients: A Multi-Site Pragmatic Randomized Controlled Trial (TARGET Trial), 4 U.S. cities, 2016-2019&quot;
+<pre><code class="language-text">Targeted Interventions to Prevent Chronic Low Back Pain in High Risk Patients: A Multi-Site Pragmatic Randomized Controlled Trial (TARGET Trial), 4 U.S. cities, 2016-2019
 </code></pre>
-<pre><code class="language-text">&quot;Aid Like A Paycheck (ALAP), Texas and California, 2014-2017&quot;
+<pre><code class="language-text">Aid Like A Paycheck (ALAP), Texas and California, 2014-2017
 </code></pre>
-<pre><code class="language-text">&quot;COVID-19 Disruptions Disproportionately Affect Female Academics, Global, 2020&quot;
+<pre><code class="language-text">COVID-19 Disruptions Disproportionately Affect Female Academics, Global, 2020
 </code></pre>
 <hr />
 <p><a id="alternate-titles"></a></p>
@@ -577,13 +577,13 @@
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Usage Notes:</strong> Alternate Title often takes the form of a shortened (by abbreviation or acronym) version of the official title.</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;Add Health Parent Study&quot;
+<pre><code class="language-text">Add Health Parent Study
 </code></pre>
-<pre><code class="language-text">&quot;FACES 2009&quot;
+<pre><code class="language-text">FACES 2009
 </code></pre>
-<pre><code class="language-text">&quot;Survey of Consumers&quot;
+<pre><code class="language-text">Survey of Consumers
 </code></pre>
-<pre><code class="language-text">&quot;Eurobarometer 85.2&quot;
+<pre><code class="language-text">Eurobarometer 85.2
 </code></pre>
 <hr />
 <p><a id="principal-investigators"></a></p>
@@ -691,44 +691,44 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Number</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;0&quot;
+<pre><code class="language-text">0
 </code></pre>
-<pre><code class="language-text">&quot;1&quot;
+<pre><code class="language-text">1
 </code></pre>
-<pre><code class="language-text">&quot;2&quot;
+<pre><code class="language-text">2
 </code></pre>
 <h4 id="complete-principal-investigators-examples-with-subfields">Complete Principal Investigators Examples (with Subfields):</h4>
-<pre><code class="language-yaml">- &quot;Person&quot;:
-    &quot;Name&quot;:
-      &quot;Given&quot;: &quot;Miner P.&quot;
-      &quot;Family&quot;: &quot;Marchbanks III&quot;
-  &quot;Order&quot;: 0
+<pre><code class="language-text">- Person:
+    Name:
+      Given: Miner P.
+      Family: Marchbanks III
+  Order: 0
 </code></pre>
-<pre><code class="language-yaml">- &quot;Person&quot;:
-    &quot;Name&quot;:
-      &quot;Given&quot;: &quot;Robert J.&quot;
-      &quot;Family&quot;: &quot;Shiller&quot;
-    &quot;Orcid&quot;: &quot;https://orcid.org/0009-0006-2316-6486&quot;
-    &quot;Affiliations&quot;:
-    - &quot;Name&quot;: &quot;Yale University&quot;
-      &quot;Ror&quot;: &quot;https://ror.org/03v76x132&quot;
-    - &quot;Name&quot;: &quot;MacroMarkets&quot;
-  &quot;Order&quot;: 0
+<pre><code class="language-text">- Person:
+    Name:
+      Given: Robert J.
+      Family: Shiller
+    ORCID: https://orcid.org/0009-0006-2316-6486
+    Affiliations:
+    - Name: Yale University
+      ROR: https://ror.org/03v76x132
+    - Name: MacroMarkets
+  Order: 0
 
-- &quot;Person&quot;:
-    &quot;Name&quot;:
-      &quot;Given&quot;: &quot;Claudia&quot;
-      &quot;Family&quot;: &quot;Goldin&quot;
-    &quot;Orcid&quot;: &quot;https://orcid.org/0000-0003-3842-1604&quot;
-    &quot;Affiliations&quot;:
-    - &quot;Name&quot;: &quot;Harvard University&quot;
-      &quot;Ror&quot;: &quot;https://ror.org/03vek6s52&quot;
-  &quot;Order&quot;: 1
+- Person:
+    Name:
+      Given: Claudia
+      Family: Goldin
+    ORCID: https://orcid.org/0000-0003-3842-1604
+    Affiliations:
+    - Name: Harvard University
+      ROR: https://ror.org/03vek6s52
+  Order: 1
 
-- &quot;Organization&quot;:
-    &quot;Name&quot;: &quot;Bureau of Justice Statistics&quot;
-    &quot;Ror&quot;: &quot;https://ror.org/0006s4z66&quot;
-  &quot;Order&quot;: 2
+- Organization:
+    Name: Bureau of Justice Statistics
+    ROR: https://ror.org/0006s4z66
+  Order: 2
 </code></pre>
 <hr />
 <p><a id="funding-sources"></a></p>
@@ -831,11 +831,11 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;SES-1835721&quot;
+<pre><code class="language-text">SES-1835721
 </code></pre>
-<pre><code class="language-text">&quot;MDR-8550085&quot;
+<pre><code class="language-text">MDR-8550085
 </code></pre>
-<pre><code class="language-text">&quot;40791&quot;
+<pre><code class="language-text">40791
 </code></pre>
 <h6 id="funding-sources_grants_grant_uri">Funding URL</h6>
 <p><strong>Description:</strong> A unique identifier (URL), preferably a persistent one like a DOI, linking to a landing page with funding information.</p>
@@ -843,7 +843,7 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;https://doi.org/10.35802/212242&quot;
+<pre><code class="language-text">https://doi.org/10.35802/212242
 </code></pre>
 <h5 id="funding-sources_order">Order</h5>
 <p><strong>Description:</strong> Internal ICPSR field used to determine the order of importance for the funders associated with the data collection.</p>
@@ -851,32 +851,32 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Number</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;0&quot;
+<pre><code class="language-text">0
 </code></pre>
-<pre><code class="language-text">&quot;1&quot;
+<pre><code class="language-text">1
 </code></pre>
-<pre><code class="language-text">&quot;2&quot;
+<pre><code class="language-text">2
 </code></pre>
 <h4 id="complete-funding-sources-examples-with-subfields">Complete Funding Sources Examples (with Subfields):</h4>
-<pre><code class="language-yaml">- &quot;Funding Organization&quot;:
-    &quot;Name&quot;: &quot;Robert Wood Johnson Foundation&quot;
-    &quot;Ror&quot;: &quot;https://ror.org/02ymmdj85&quot;
-  &quot;Funding Awards&quot;:
-  - &quot;Funding Identifier&quot;: &quot;MDR-8550085&quot;
-  - &quot;Funding Identifier&quot;: &quot;MDR-8550204&quot;
-  &quot;Order&quot;: 0
+<pre><code class="language-text">- Funding Organization:
+    Name: Robert Wood Johnson Foundation
+    ROR: https://ror.org/02ymmdj85
+  Funding Awards:
+  - Funding Identifier: MDR-8550085
+  - Funding Identifier: MDR-8550204
+  Order: 0
 
-- &quot;Funding Organization&quot;:
-    &quot;Name&quot;: &quot;Bureau of Justice Statistics&quot;
-    &quot;Ror&quot;: &quot;https://ror.org/0006s4z66&quot;
-  &quot;Funding Awards&quot;:
-  - &quot;Funding Identifier&quot;: &quot;SES-1835721&quot;
-    &quot;Funding URL&quot;: &quot;https://doi.org/10.35802/000000&quot;
-  &quot;Order&quot;: 1
+- Funding Organization:
+    Name: Bureau of Justice Statistics
+    ROR: https://ror.org/0006s4z66
+  Funding Awards:
+  - Funding Identifier: SES-1835721
+    Funding URL: https://doi.org/10.35802/000000
+  Order: 1
 </code></pre>
-<pre><code class="language-yaml">- &quot;Funding Organization&quot;:
-    &quot;Name&quot;: &quot;Acme Foundation&quot;
-  &quot;Order&quot;: 0
+<pre><code class="language-text">- Funding Organization:
+    Name: Acme Foundation
+  Order: 0
 </code></pre>
 <hr />
 <p><a id="summary"></a></p>
@@ -888,9 +888,9 @@
 <p><strong>Usage Notes:</strong> The Summary may include information about the different parts of the data collection not adequately conveyed by the Fileset names or found elsewhere in the metadata. Other important components include a listing of major variables or categories of variables (with examples) as well as an indication of the data collection's unit of analysis (i.e., who or what is being studied: individuals, housing units, courts, criminal acts, etc.). Most often the unit of analysis is the individual; where it is not, it is particularly important to make this clear.</p>
 <p>The Summary is written in the third person and avoids attempting to address issues of how the data might be used, who might be interested in the data, or any evaluative comments about the worth or usefulness of the data collection. The Summary uses past tense when describing the process of collecting the data and present tense when necessary, such as when describing the data (e.g., 'The MIDUS Refresher collection is split into two datasets.'). Numerals are used instead of spelling them out; if a number is spelled out for emphasis, the number is attached in parentheses – e.g. 'Two thousand (2,000)'.</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;In 2014, Chicago Public Schools, looking to reduce the possibility of gun violence among school-aged youth, applied for a grant through the National Institute of Justice. CPS was awarded the Comprehensive School Safety Initiative grant and use said grant to establish the 'Connect and Redirect to Respect' program. This program used student social media data to identify and intervene with students thought to be at higher risk for committing violence. At-risk behaviors included brandishing a weapon, instigating conflict online, signaling gang involvement, and threats towards others. Identified at-risk students would be contacted by a member of the CPS Network Safety Team or the Chicago Police Department's Gang School Safety Team, depending on the risk level of the behavior. To evaluate the efficacy of CRR, the University of Chicago Crime Lab compared outcomes for students enrolled in schools that received the program to outcomes for students enrolled in comparison schools, which did not receive the program. 32 schools were selected for the study, with a total of 44,503 students. Demographic variables included age, race, sex, and ethnicity. Misconduct and academic variables included arrest history, in-school suspensions, out-of-school suspensions, GPA, and attendance days.&quot;
+<pre><code class="language-text">In 2014, Chicago Public Schools, looking to reduce the possibility of gun violence among school-aged youth, applied for a grant through the National Institute of Justice. CPS was awarded the Comprehensive School Safety Initiative grant and use said grant to establish the 'Connect and Redirect to Respect' program. This program used student social media data to identify and intervene with students thought to be at higher risk for committing violence. At-risk behaviors included brandishing a weapon, instigating conflict online, signaling gang involvement, and threats towards others. Identified at-risk students would be contacted by a member of the CPS Network Safety Team or the Chicago Police Department's Gang School Safety Team, depending on the risk level of the behavior. To evaluate the efficacy of CRR, the University of Chicago Crime Lab compared outcomes for students enrolled in schools that received the program to outcomes for students enrolled in comparison schools, which did not receive the program. 32 schools were selected for the study, with a total of 44,503 students. Demographic variables included age, race, sex, and ethnicity. Misconduct and academic variables included arrest history, in-school suspensions, out-of-school suspensions, GPA, and attendance days.
 </code></pre>
-<pre><code class="language-text">&quot;The Health and Relationship Project is a study of both spouses in same-sex and different-sex marriages who were legally married and aged 35 to 65 at the time of data collection (2015). There are two parts of this study: a baseline questionnaire and a daily diary questionnaire completed for 10 consecutive days; both components were completed online and spouses were asked to complete the surveys separately. The baseline questionnaire asks participants about a number of topics related to marriage and health, including stress, health status and health behaviors, relationship quality, and how they have approached health problems in the past. The diary questionnaire asks participants a number of questions about the past 24 hours, including daily stress experiences, social interactions, and health behaviors.&quot;
+<pre><code class="language-text">The Health and Relationship Project is a study of both spouses in same-sex and different-sex marriages who were legally married and aged 35 to 65 at the time of data collection (2015). There are two parts of this study: a baseline questionnaire and a daily diary questionnaire completed for 10 consecutive days; both components were completed online and spouses were asked to complete the surveys separately. The baseline questionnaire asks participants about a number of topics related to marriage and health, including stress, health status and health behaviors, relationship quality, and how they have approached health problems in the past. The diary questionnaire asks participants a number of questions about the past 24 hours, including daily stress experiences, social interactions, and health behaviors.
 </code></pre>
 <hr />
 <p><a id="icpsr-subject-terms"></a></p>
@@ -941,11 +941,11 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;employment&quot;
+<pre><code class="language-text">employment
 </code></pre>
-<pre><code class="language-text">&quot;marriage&quot;
+<pre><code class="language-text">marriage
 </code></pre>
-<pre><code class="language-text">&quot;recidivism&quot;
+<pre><code class="language-text">recidivism
 </code></pre>
 <h5 id="icpsr-subject-terms_code">Code</h5>
 <p><strong>Description:</strong> A machine-readable/-actionable form of the subject term.</p>
@@ -953,11 +953,11 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;25220&quot;
+<pre><code class="language-text">25220
 </code></pre>
-<pre><code class="language-text">&quot;26180&quot;
+<pre><code class="language-text">26180
 </code></pre>
-<pre><code class="language-text">&quot;26961&quot;
+<pre><code class="language-text">26961
 </code></pre>
 <h5 id="icpsr-subject-terms_uri">URI</h5>
 <p><strong>Description:</strong> The URI for the subject term.</p>
@@ -965,22 +965,22 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/25220&quot;
+<pre><code class="language-text">https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/25220
 </code></pre>
-<pre><code class="language-text">&quot;https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/26180&quot;
+<pre><code class="language-text">https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/26180
 </code></pre>
 <h4 id="complete-icpsr-subject-terms-examples-with-subfields">Complete ICPSR Subject Terms Examples (with Subfields):</h4>
-<pre><code class="language-yaml">- &quot;Label&quot;: &quot;lobbying&quot;
-  &quot;Code&quot;: &quot;26131&quot;
-  &quot;URI&quot;: &quot;https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/26131&quot;
+<pre><code class="language-text">- Label: lobbying
+  Code: 26131
+  URI: https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/26131
 
-- &quot;Label&quot;: &quot;age&quot;
-  &quot;Code&quot;: &quot;24123&quot;
-  &quot;URI&quot;: &quot;https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/24123&quot;
+- Label: age
+  Code: 24123
+  URI: https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/24123
 </code></pre>
-<pre><code class="language-yaml">- &quot;Label&quot;: &quot;happiness&quot;
-  &quot;Code&quot;: &quot;25624&quot;
-  &quot;URI&quot;: &quot;https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/25624&quot;
+<pre><code class="language-text">- Label: happiness
+  Code: 25624
+  URI: https://www.icpsr.umich.edu/web/ICPSR/thesaurus/10001/terms/25624
 </code></pre>
 <hr />
 <p><a id="journal-of-economic-literature-(jel)-classification-codes"></a></p>
@@ -1031,11 +1031,11 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;Relation of Economics to Other Disciplines&quot;
+<pre><code class="language-text">Relation of Economics to Other Disciplines
 </code></pre>
-<pre><code class="language-text">&quot;History of Economic Thought, Methodology, and Heterodox Approaches&quot;
+<pre><code class="language-text">History of Economic Thought, Methodology, and Heterodox Approaches
 </code></pre>
-<pre><code class="language-text">&quot;Economic History: Financial Markets and Institutions: U.S.; Canada: 1913-&quot;
+<pre><code class="language-text">Economic History: Financial Markets and Institutions: U.S.; Canada: 1913-
 </code></pre>
 <h5 id="journal-of-economic-literature-(jel)-classification-codes_code">Code</h5>
 <p><strong>Description:</strong> A machine-readable/-actionable form of the term.</p>
@@ -1043,11 +1043,11 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;A12&quot;
+<pre><code class="language-text">A12
 </code></pre>
-<pre><code class="language-text">&quot;B00&quot;
+<pre><code class="language-text">B00
 </code></pre>
-<pre><code class="language-text">&quot;N22&quot;
+<pre><code class="language-text">N22
 </code></pre>
 <h5 id="journal-of-economic-literature-(jel)-classification-codes_uri">URI</h5>
 <p><strong>Description:</strong> The URI for the term.</p>
@@ -1055,24 +1055,24 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;/api/v1/vocab-terms/jelClassifications/terms/A12&quot;
+<pre><code class="language-text">/api/v1/vocab-terms/jelClassifications/terms/A12
 </code></pre>
-<pre><code class="language-text">&quot;/api/v1/vocab-terms/jelClassifications/terms/B00&quot;
+<pre><code class="language-text">/api/v1/vocab-terms/jelClassifications/terms/B00
 </code></pre>
-<pre><code class="language-text">&quot;/api/v1/vocab-terms/jelClassifications/terms/N22&quot;
+<pre><code class="language-text">/api/v1/vocab-terms/jelClassifications/terms/N22
 </code></pre>
 <h4 id="complete-journal-of-economic-literature-jel-classification-codes-examples-with-subfields">Complete Journal of Economic Literature (JEL) Classification Codes Examples (with Subfields):</h4>
-<pre><code class="language-yaml">- &quot;Label&quot;: &quot;Relation of Economics to Other Disciplines&quot;
-  &quot;Code&quot;: &quot;A12&quot;
-  &quot;URI&quot;: &quot;/api/v1/vocab-terms/jelClassifications/terms/A12&quot;
+<pre><code class="language-text">- Label: Relation of Economics to Other Disciplines
+  Code: A12
+  URI: /api/v1/vocab-terms/jelClassifications/terms/A12
 
-- &quot;Label&quot;: &quot;History of Economic Thought, Methodology, and Heterodox Approaches&quot;
-  &quot;Code&quot;: &quot;B00&quot;
-  &quot;URI&quot;: &quot;/api/v1/vocab-terms/jelClassifications/terms/B00&quot;
+- Label: History of Economic Thought, Methodology, and Heterodox Approaches
+  Code: B00
+  URI: /api/v1/vocab-terms/jelClassifications/terms/B00
 </code></pre>
-<pre><code class="language-yaml">- &quot;Label&quot;: &quot;Economic History: Financial Markets and Institutions: U.S.; Canada: 1913-&quot;
-  &quot;Code&quot;: &quot;N22&quot;
-  &quot;URI&quot;: &quot;/api/v1/vocab-terms/jelClassifications/terms/N22&quot;
+<pre><code class="language-text">- Label: Economic History: Financial Markets and Institutions: U.S.; Canada: 1913-
+  Code: N22
+  URI: /api/v1/vocab-terms/jelClassifications/terms/N22
 </code></pre>
 <hr />
 <p><a id="medical-subject-headings-(mesh)-terms"></a></p>
@@ -1123,9 +1123,9 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;Anxiety&quot;
+<pre><code class="language-text">Anxiety
 </code></pre>
-<pre><code class="language-text">&quot;Diabetes Mellitus&quot;
+<pre><code class="language-text">Diabetes Mellitus
 </code></pre>
 <h5 id="medical-subject-headings-(mesh)-terms_code">Code</h5>
 <p><strong>Description:</strong> A machine-readable/-actionable form of the subject term.</p>
@@ -1133,9 +1133,9 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;D001007&quot;
+<pre><code class="language-text">D001007
 </code></pre>
-<pre><code class="language-text">&quot;T011730&quot;
+<pre><code class="language-text">T011730
 </code></pre>
 <h5 id="medical-subject-headings-(mesh)-terms_uri">URI</h5>
 <p><strong>Description:</strong> The URI for the subject term.</p>
@@ -1143,18 +1143,18 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;http://id.nlm.nih.gov/mesh/D001007&quot;
+<pre><code class="language-text">http://id.nlm.nih.gov/mesh/D001007
 </code></pre>
-<pre><code class="language-text">&quot;http://id.nlm.nih.gov/mesh/T011730&quot;
+<pre><code class="language-text">http://id.nlm.nih.gov/mesh/T011730
 </code></pre>
 <h4 id="complete-medical-subject-headings-mesh-terms-examples-with-subfields">Complete Medical Subject Headings (MeSH) Terms Examples (with Subfields):</h4>
-<pre><code class="language-yaml">- &quot;Label&quot;: &quot;Anxiety&quot;
-  &quot;Code&quot;: &quot;D001007&quot;
-  &quot;URI&quot;: &quot;http://id.nlm.nih.gov/mesh/D001007&quot;
+<pre><code class="language-text">- Label: Anxiety
+  Code: D001007
+  URI: http://id.nlm.nih.gov/mesh/D001007
 
-- &quot;Label&quot;: &quot;Diabetes Mellitus&quot;
-  &quot;Code&quot;: &quot;T011730&quot;
-  &quot;URI&quot;: &quot;http://id.nlm.nih.gov/mesh/T011730&quot;
+- Label: Diabetes Mellitus
+  Code: T011730
+  URI: http://id.nlm.nih.gov/mesh/T011730
 </code></pre>
 <hr />
 <p><a id="time-periods"></a></p>
@@ -1204,11 +1204,11 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;2000&quot;
+<pre><code class="language-text">2000
 </code></pre>
-<pre><code class="language-text">&quot;2019-10&quot;
+<pre><code class="language-text">2019-10
 </code></pre>
-<pre><code class="language-text">&quot;2021-03-01&quot;
+<pre><code class="language-text">2021-03-01
 </code></pre>
 <h5 id="time-periods_end_date">End Date</h5>
 <p><strong>Description:</strong> The end date for the time period the data refer to, formatted as YYYY, YYYY-MM, or YYYY-MM-DD, with no spaces in date expressions.</p>
@@ -1216,11 +1216,11 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;2000&quot;
+<pre><code class="language-text">2000
 </code></pre>
-<pre><code class="language-text">&quot;2019-10&quot;
+<pre><code class="language-text">2019-10
 </code></pre>
-<pre><code class="language-text">&quot;2021-03-01&quot;
+<pre><code class="language-text">2021-03-01
 </code></pre>
 <h5 id="time-periods_time_frame">Time Frame</h5>
 <p><strong>Description:</strong> An optional free-text description of the time period, used for non-numeric dates (e.g., 'Fall 2012') or to add context when multiple dates are present.</p>
@@ -1230,20 +1230,20 @@
 <p><strong>Usage Notes:</strong> The textual description ('time frame') is used to add context to the Time Period when multiple time periods exist (e.g., to describe different waves, dataset names, or fiscal year designation) and/or when the date cannot be expressed exclusively through numbers, such as seasons or other units of time where the data producer did not clarify the exact dates they meant.</p>
 <p>The textual description should not simply restate the time period in words. For example, if the start and end dates for Time Period are 2020-01, the associated Time Frame should not be 'January 2020'.</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;Fall 2001&quot;
+<pre><code class="language-text">Fall 2001
 </code></pre>
-<pre><code class="language-text">&quot;Winter Semester 2019&quot;
+<pre><code class="language-text">Winter Semester 2019
 </code></pre>
 <h4 id="complete-time-periods-examples-with-subfields">Complete Time Periods Examples (with Subfields):</h4>
-<pre><code class="language-yaml">- &quot;Start Date&quot;: &quot;2018&quot;
-  &quot;End Date&quot;: &quot;2018&quot;
-  &quot;Time Frame&quot;: &quot;Summer and Fall 2018&quot;
+<pre><code class="language-text">- Start Date: 2018
+  End Date: 2018
+  Time Frame: Summer and Fall 2018
 
-- &quot;Start Date&quot;: &quot;2020-10&quot;
-  &quot;End Date&quot;: &quot;2020-10&quot;
+- Start Date: 2020-10
+  End Date: 2020-10
 </code></pre>
-<pre><code class="language-yaml">- &quot;Start Date&quot;: &quot;2003-01-01&quot;
-  &quot;End Date&quot;: &quot;2003-12-31&quot;
+<pre><code class="language-text">- Start Date: 2003-01-01
+  End Date: 2003-12-31
 </code></pre>
 <hr />
 <p><a id="nationally-representative-sample"></a></p>
@@ -1253,9 +1253,9 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;Yes&quot;
+<pre><code class="language-text">Yes
 </code></pre>
-<pre><code class="language-text">&quot;No&quot;
+<pre><code class="language-text">No
 </code></pre>
 <hr />
 <p><a id="geographic-coverage-areas"></a></p>
@@ -1390,11 +1390,11 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;Ann Arbor&quot;
+<pre><code class="language-text">Ann Arbor
 </code></pre>
-<pre><code class="language-text">&quot;Hanover&quot;
+<pre><code class="language-text">Hanover
 </code></pre>
-<pre><code class="language-text">&quot;Chongqing&quot;
+<pre><code class="language-text">Chongqing
 </code></pre>
 <h5 id="geographic-coverage-areas_county">County</h5>
 <p><strong>Description:</strong> A United States county or similar administrative area covered in the data collection.</p>
@@ -1402,11 +1402,11 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;Monroe County&quot;
+<pre><code class="language-text">Monroe County
 </code></pre>
-<pre><code class="language-text">&quot;Washtenaw County&quot;
+<pre><code class="language-text">Washtenaw County
 </code></pre>
-<pre><code class="language-text">&quot;Cuyahoga County&quot;
+<pre><code class="language-text">Cuyahoga County
 </code></pre>
 <h5 id="geographic-coverage-areas_state">State</h5>
 <p><strong>Description:</strong> A state, province, canton or similar political entity covered in the data collection.</p>
@@ -1414,11 +1414,11 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;Michigan&quot;
+<pre><code class="language-text">Michigan
 </code></pre>
-<pre><code class="language-text">&quot;Manitoba&quot;
+<pre><code class="language-text">Manitoba
 </code></pre>
-<pre><code class="language-text">&quot;Yunnan&quot;
+<pre><code class="language-text">Yunnan
 </code></pre>
 <h5 id="geographic-coverage-areas_country">Country</h5>
 <p><strong>Description:</strong> A country covered in the data collection.</p>
@@ -1426,11 +1426,11 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;United States&quot;
+<pre><code class="language-text">United States
 </code></pre>
-<pre><code class="language-text">&quot;China&quot;
+<pre><code class="language-text">China
 </code></pre>
-<pre><code class="language-text">&quot;Ghana&quot;
+<pre><code class="language-text">Ghana
 </code></pre>
 <h5 id="geographic-coverage-areas_region">Region</h5>
 <p><strong>Description:</strong> An area distinguished by one or more observable physical or cultural characteristics that is covered in the data collection.</p>
@@ -1438,11 +1438,11 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;Sub-Saharan Africa&quot;
+<pre><code class="language-text">Sub-Saharan Africa
 </code></pre>
-<pre><code class="language-text">&quot;Eastern Europe&quot;
+<pre><code class="language-text">Eastern Europe
 </code></pre>
-<pre><code class="language-text">&quot;Siberia&quot;
+<pre><code class="language-text">Siberia
 </code></pre>
 <h5 id="geographic-coverage-areas_continent">Continent</h5>
 <p><strong>Description:</strong> A continent covered in the data collection.</p>
@@ -1450,11 +1450,11 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;Africa&quot;
+<pre><code class="language-text">Africa
 </code></pre>
-<pre><code class="language-text">&quot;Asia&quot;
+<pre><code class="language-text">Asia
 </code></pre>
-<pre><code class="language-text">&quot;South America&quot;
+<pre><code class="language-text">South America
 </code></pre>
 <h5 id="geographic-coverage-areas_other_area">Other Geographic Area</h5>
 <p><strong>Description:</strong> An area covered in the data collection that cannot be represented using the defined categories above or matched to an appropriate GeoNames record.</p>
@@ -1463,11 +1463,11 @@
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Usage Notes:</strong> Use this for user-provided terms, loosely defined geographic concepts, GeoNames feature types not covered by city/county/state/country/region/continent, or historical geographic entities (e.g., Prussia) not represented in GeoNames.</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;Global&quot;
+<pre><code class="language-text">Global
 </code></pre>
-<pre><code class="language-text">&quot;Eurasia&quot;
+<pre><code class="language-text">Eurasia
 </code></pre>
-<pre><code class="language-text">&quot;13 U.S. states in 3 regions&quot;
+<pre><code class="language-text">13 U.S. states in 3 regions
 </code></pre>
 <h5 id="geographic-coverage-areas_uri">URI</h5>
 <p><strong>Description:</strong> A local unique identifier for the geographic coverage area.</p>
@@ -1475,9 +1475,9 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;/api/v1/vocab-terms/geoNames/terms/6252001&quot;
+<pre><code class="language-text">/api/v1/vocab-terms/geoNames/terms/6252001
 </code></pre>
-<pre><code class="language-text">&quot;/api/v1/vocab-terms/geoNames/terms/6269554&quot;
+<pre><code class="language-text">/api/v1/vocab-terms/geoNames/terms/6269554
 </code></pre>
 <h5 id="geographic-coverage-areas_externalURI">External URI</h5>
 <p><strong>Description:</strong> The GeoNames unique identifier for the geographic coverage area.</p>
@@ -1485,45 +1485,45 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;https://sws.geonames.org/4990729/&quot;
+<pre><code class="language-text">https://sws.geonames.org/4990729/
 </code></pre>
-<pre><code class="language-text">&quot;https://sws.geonames.org/6269554&quot;
+<pre><code class="language-text">https://sws.geonames.org/6269554
 </code></pre>
 <h4 id="complete-geographic-coverage-areas-examples-with-subfields">Complete Geographic Coverage Areas Examples (with Subfields):</h4>
-<pre><code class="language-yaml">- &quot;City&quot;: &quot;Cleveland&quot;
-  &quot;State&quot;: &quot;Ohio&quot;
-  &quot;Country&quot;: &quot;United States&quot;
-  &quot;Continent&quot;: &quot;North America&quot;
-  &quot;External URI&quot;: &quot;https://sws.geonames.org/5150529&quot;
-  &quot;URI&quot;: &quot;/api/v1/vocab-terms/geoNames/terms/5150529&quot;
+<pre><code class="language-text">- City: Cleveland
+  State: Ohio
+  Country: United States
+  Continent: North America
+  External URI: https://sws.geonames.org/5150529
+  URI: /api/v1/vocab-terms/geoNames/terms/5150529
 
-- &quot;County&quot;: &quot;Washtenaw County&quot;
-  &quot;State&quot;: &quot;Michigan&quot;
-  &quot;Country&quot;: &quot;United States&quot;
-  &quot;Continent&quot;: &quot;North America&quot;
-  &quot;External URI&quot;: &quot;https://sws.geonames.org/5014120&quot;
-  &quot;URI&quot;: &quot;/api/v1/vocab-terms/geoNames/terms/5014120&quot;
+- County: Washtenaw County
+  State: Michigan
+  Country: United States
+  Continent: North America
+  External URI: https://sws.geonames.org/5014120
+  URI: /api/v1/vocab-terms/geoNames/terms/5014120
 
-- &quot;State&quot;: &quot;Pennsylvania&quot;
-  &quot;Country&quot;: &quot;United States&quot;
-  &quot;Continent&quot;: &quot;North America&quot;
-  &quot;External URI&quot;: &quot;https://sws.geonames.org/5206379&quot;
-  &quot;URI&quot;: &quot;/api/v1/vocab-terms/geoNames/terms/5206379&quot;
+- State: Pennsylvania
+  Country: United States
+  Continent: North America
+  External URI: https://sws.geonames.org/5206379
+  URI: /api/v1/vocab-terms/geoNames/terms/5206379
 </code></pre>
-<pre><code class="language-yaml">- &quot;Country&quot;: &quot;Germany&quot;
-  &quot;Continent&quot;: &quot;Europe&quot;
-  &quot;External URI&quot;: &quot;https://sws.geonames.org/2921044&quot;
-  &quot;URI&quot;: &quot;/api/v1/vocab-terms/geoNames/terms/2921044&quot;
+<pre><code class="language-text">- Country: Germany
+  Continent: Europe
+  External URI: https://sws.geonames.org/2921044
+  URI: /api/v1/vocab-terms/geoNames/terms/2921044
 
-- &quot;Continent&quot;: &quot;Africa&quot;
-  &quot;External URI&quot;: &quot;https://sws.geonames.org/6255146&quot;
-  &quot;URI&quot;: &quot;/api/v1/vocab-terms/geoNames/terms/6255146&quot;
+- Continent: Africa
+  External URI: https://sws.geonames.org/6255146
+  URI: /api/v1/vocab-terms/geoNames/terms/6255146
 </code></pre>
-<pre><code class="language-yaml">- &quot;Other Geographic Area&quot;: &quot;Global&quot;
-  &quot;External URI&quot;: &quot;https://sws.geonames.org/6295630&quot;
-  &quot;URI&quot;: &quot;/api/v1/vocab-terms/geoNames/terms/6295630&quot;
+<pre><code class="language-text">- Other Geographic Area: Global
+  External URI: https://sws.geonames.org/6295630
+  URI: /api/v1/vocab-terms/geoNames/terms/6295630
 </code></pre>
-<pre><code class="language-yaml">- &quot;Other Geographic Area&quot;: &quot;13 U.S. states in 3 regions&quot;
+<pre><code class="language-text">- Other Geographic Area: 13 U.S. states in 3 regions
 </code></pre>
 <hr />
 <p><a id="smallest-geographic-unit"></a></p>
@@ -1687,11 +1687,11 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;Basic Geographic Units&quot;
+<pre><code class="language-text">Basic Geographic Units
 </code></pre>
-<pre><code class="language-text">&quot;Postal Code/Zip Code&quot;
+<pre><code class="language-text">Postal Code/Zip Code
 </code></pre>
-<pre><code class="language-text">&quot;State/Province&quot;
+<pre><code class="language-text">State/Province
 </code></pre>
 <h5 id="smallest-geographic-unit_code">Code</h5>
 <p><strong>Description:</strong> A machine-readable/-actionable form of the term.</p>
@@ -1699,11 +1699,11 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;BasicUnits&quot;
+<pre><code class="language-text">BasicUnits
 </code></pre>
-<pre><code class="language-text">&quot;PostalCodeZipCode&quot;
+<pre><code class="language-text">PostalCodeZipCode
 </code></pre>
-<pre><code class="language-text">&quot;StateProvince&quot;
+<pre><code class="language-text">StateProvince
 </code></pre>
 <h5 id="smallest-geographic-unit_uri">URI</h5>
 <p><strong>Description:</strong> The URI for the term.</p>
@@ -1711,24 +1711,24 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;/api/v1/vocab-terms/smallestGeographicUnits/terms/BasicUnits&quot;
+<pre><code class="language-text">/api/v1/vocab-terms/smallestGeographicUnits/terms/BasicUnits
 </code></pre>
-<pre><code class="language-text">&quot;/api/v1/vocab-terms/smallestGeographicUnits/terms/PostalCodeZipCode&quot;
+<pre><code class="language-text">/api/v1/vocab-terms/smallestGeographicUnits/terms/PostalCodeZipCode
 </code></pre>
-<pre><code class="language-text">&quot;/api/v1/vocab-terms/smallestGeographicUnits/terms/StateProvince&quot;
+<pre><code class="language-text">/api/v1/vocab-terms/smallestGeographicUnits/terms/StateProvince
 </code></pre>
 <h4 id="complete-smallest-geographic-unit-examples-with-subfields">Complete Smallest Geographic Unit Examples (with Subfields):</h4>
-<pre><code class="language-yaml">&quot;Label&quot;: &quot;Basic Geographic Units&quot;
-&quot;Code&quot;: &quot;BasicUnits&quot;
-&quot;URI&quot;: &quot;/api/v1/vocab-terms/smallestGeographicUnits/terms/BasicUnits&quot;
+<pre><code class="language-text">Label: Basic Geographic Units
+Code: BasicUnits
+URI: /api/v1/vocab-terms/smallestGeographicUnits/terms/BasicUnits
 </code></pre>
-<pre><code class="language-yaml">&quot;Label&quot;: &quot;Postal Code/Zip Code&quot;
-&quot;Code&quot;: &quot;PostalCodeZipCode&quot;
-&quot;URI&quot;: &quot;/api/v1/vocab-terms/smallestGeographicUnits/terms/PostalCodeZipCode&quot;
+<pre><code class="language-text">Label: Postal Code/Zip Code
+Code: PostalCodeZipCode
+URI: /api/v1/vocab-terms/smallestGeographicUnits/terms/PostalCodeZipCode
 </code></pre>
-<pre><code class="language-yaml">&quot;Label&quot;: &quot;State/Province&quot;
-&quot;Code&quot;: &quot;StateProvince&quot;
-&quot;URI&quot;: &quot;/api/v1/vocab-terms/smallestGeographicUnits/terms/StateProvince&quot;
+<pre><code class="language-text">Label: State/Province
+Code: StateProvince
+URI: /api/v1/vocab-terms/smallestGeographicUnits/terms/StateProvince
 </code></pre>
 <hr />
 <p><a id="study-design"></a></p>
@@ -1739,7 +1739,7 @@
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Usage Notes:</strong> The Study Design provides more detailed information than the Summary, including how surveys were prepared and administered, how interviews were conducted, or how the data were obtained and compiled, as well as information about deadlines and follow-ups to respondents.</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;Data on organizational culture in each of the 12 courts (Part 1) were obtained by administering the Court Culture Assessment Instrument (CCAI) to all judges with a felony criminal court docket and to all senior court administrators. A total of 224 respondents completed the questionnaire. The CCAI was used to assess five key dimensions of current court culture orientation: (1) dominant case management style, (2) judicial and court staff relations, (3) change management, (4) courthouse leadership, and (5) internal organization. The determination of what culture judges and court administrators desired to establish in the near future was also obtained through the application of the same instrument (CACI) as practitioners were asked to indicate the type of culture in each work area (or content dimension) they would like to see in their court in the next five years.&quot;
+<pre><code class="language-text">Data on organizational culture in each of the 12 courts (Part 1) were obtained by administering the Court Culture Assessment Instrument (CCAI) to all judges with a felony criminal court docket and to all senior court administrators. A total of 224 respondents completed the questionnaire. The CCAI was used to assess five key dimensions of current court culture orientation: (1) dominant case management style, (2) judicial and court staff relations, (3) change management, (4) courthouse leadership, and (5) internal organization. The determination of what culture judges and court administrators desired to establish in the near future was also obtained through the application of the same instrument (CACI) as practitioners were asked to indicate the type of culture in each work area (or content dimension) they would like to see in their court in the next five years.
 </code></pre>
 <hr />
 <p><a id="universe"></a></p>
@@ -1750,17 +1750,17 @@
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Usage Notes:</strong> Age, nationality, and residence commonly help to delineate a given universe, but any of a number of factors may be involved, such as sex, race, income, veteran status, criminal convictions, etc. The Universe may consist of elements other than persons, such as housing units, court cases, deaths, countries, etc. It should be possible to tell from the description of the universe whether a given individual or element (hypothetical or real) is a member of the population under study. Typically, the Universe statement is about one sentence or shorter, and reflects the entire possible population a data collection sought to study.</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;All households in the United States with phones.&quot;
+<pre><code class="language-text">All households in the United States with phones.
 </code></pre>
-<pre><code class="language-text">&quot;Part 1: Thirty cities in Massachusetts during 1980-1986. Parts 2-4: All residents in Massachusetts during 1986.&quot;
+<pre><code class="language-text">Part 1: Thirty cities in Massachusetts during 1980-1986. Parts 2-4: All residents in Massachusetts during 1986.
 </code></pre>
-<pre><code class="language-text">&quot;Individuals self-identified as transgender, trans, genderqueer, non-binary, or other identities on the transgender identity spectrum aged 18 and older residing in the fifty U.S. states, the District of Columbia, American Samoa, Guam, Puerto Rico, and U.S. military bases overseas.&quot;
+<pre><code class="language-text">Individuals self-identified as transgender, trans, genderqueer, non-binary, or other identities on the transgender identity spectrum aged 18 and older residing in the fifty U.S. states, the District of Columbia, American Samoa, Guam, Puerto Rico, and U.S. military bases overseas.
 </code></pre>
-<pre><code class="language-text">&quot;Jihadists from the United States and Canada, along with Incels from Germany, Canada, the United States, and United Kingdom.&quot;
+<pre><code class="language-text">Jihadists from the United States and Canada, along with Incels from Germany, Canada, the United States, and United Kingdom.
 </code></pre>
-<pre><code class="language-text">&quot;All publicly funded medical examiner and coroner offices.&quot;
+<pre><code class="language-text">All publicly funded medical examiner and coroner offices.
 </code></pre>
-<pre><code class="language-text">&quot;Uncertified ballots for the 2000 United States presidential election in Florida.&quot;
+<pre><code class="language-text">Uncertified ballots for the 2000 United States presidential election in Florida.
 </code></pre>
 <hr />
 <p><a id="time-methods"></a></p>
@@ -1811,11 +1811,11 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;Cross-section&quot;
+<pre><code class="language-text">Cross-section
 </code></pre>
-<pre><code class="language-text">&quot;Longitudinal: Panel&quot;
+<pre><code class="language-text">Longitudinal: Panel
 </code></pre>
-<pre><code class="language-text">&quot;Time series&quot;
+<pre><code class="language-text">Time series
 </code></pre>
 <h5 id="time-methods_code">Code</h5>
 <p><strong>Description:</strong> A machine-readable/-actionable form of the term.</p>
@@ -1823,11 +1823,11 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;CrossSection&quot;
+<pre><code class="language-text">CrossSection
 </code></pre>
-<pre><code class="language-text">&quot;Longitudinal.Panel&quot;
+<pre><code class="language-text">Longitudinal.Panel
 </code></pre>
-<pre><code class="language-text">&quot;TimeSeries&quot;
+<pre><code class="language-text">TimeSeries
 </code></pre>
 <h5 id="time-methods_uri">URI</h5>
 <p><strong>Description:</strong> The URI for the term.</p>
@@ -1835,24 +1835,24 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;/api/v1/vocab-terms/timeMethods/terms/CrossSection&quot;
+<pre><code class="language-text">/api/v1/vocab-terms/timeMethods/terms/CrossSection
 </code></pre>
-<pre><code class="language-text">&quot;/api/v1/vocab-terms/timeMethods/terms/Longitudinal.Panel&quot;
+<pre><code class="language-text">/api/v1/vocab-terms/timeMethods/terms/Longitudinal.Panel
 </code></pre>
-<pre><code class="language-text">&quot;/api/v1/vocab-terms/timeMethods/terms/TimeSeries&quot;
+<pre><code class="language-text">/api/v1/vocab-terms/timeMethods/terms/TimeSeries
 </code></pre>
 <h4 id="complete-time-methods-examples-with-subfields">Complete Time Methods Examples (with Subfields):</h4>
-<pre><code class="language-yaml">- &quot;Label&quot;: &quot;Cross-section&quot;
-  &quot;Code&quot;: &quot;CrossSection&quot;
-  &quot;URI&quot;: &quot;/api/v1/vocab-terms/timeMethods/terms/CrossSection&quot;
+<pre><code class="language-text">- Label: Cross-section
+  Code: CrossSection
+  URI: /api/v1/vocab-terms/timeMethods/terms/CrossSection
 
-- &quot;Label&quot;: &quot;Longitudinal: Panel&quot;
-  &quot;Code&quot;: &quot;Longitudinal.Panel&quot;
-  &quot;URI&quot;: &quot;/api/v1/vocab-terms/timeMethods/terms/Longitudinal.Panel&quot;
+- Label: Longitudinal: Panel
+  Code: Longitudinal.Panel
+  URI: /api/v1/vocab-terms/timeMethods/terms/Longitudinal.Panel
 </code></pre>
-<pre><code class="language-yaml">- &quot;Label&quot;: &quot;Time series&quot;
-  &quot;Code&quot;: &quot;TimeSeries&quot;
-  &quot;URI&quot;: &quot;/api/v1/vocab-terms/timeMethods/terms/TimeSeries&quot;
+<pre><code class="language-text">- Label: Time series
+  Code: TimeSeries
+  URI: /api/v1/vocab-terms/timeMethods/terms/TimeSeries
 </code></pre>
 <hr />
 <p><a id="units-of-analysis"></a></p>
@@ -1903,11 +1903,11 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;Organization/Institution&quot;
+<pre><code class="language-text">Organization/Institution
 </code></pre>
-<pre><code class="language-text">&quot;Individual&quot;
+<pre><code class="language-text">Individual
 </code></pre>
-<pre><code class="language-text">&quot;Household&quot;
+<pre><code class="language-text">Household
 </code></pre>
 <h5 id="units-of-analysis_code">Code</h5>
 <p><strong>Description:</strong> A machine-readable/-actionable form of the term.</p>
@@ -1915,11 +1915,11 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;OrganizationOrInstitution&quot;
+<pre><code class="language-text">OrganizationOrInstitution
 </code></pre>
-<pre><code class="language-text">&quot;Individual&quot;
+<pre><code class="language-text">Individual
 </code></pre>
-<pre><code class="language-text">&quot;Household&quot;
+<pre><code class="language-text">Household
 </code></pre>
 <h5 id="units-of-analysis_uri">URI</h5>
 <p><strong>Description:</strong> The URI for the term.</p>
@@ -1927,24 +1927,24 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;/api/v1/vocab-terms/analysisUnits/OrganizationOrInstitution&quot;
+<pre><code class="language-text">/api/v1/vocab-terms/analysisUnits/OrganizationOrInstitution
 </code></pre>
-<pre><code class="language-text">&quot;/api/v1/vocab-terms/analysisUnits/Individual&quot;
+<pre><code class="language-text">/api/v1/vocab-terms/analysisUnits/Individual
 </code></pre>
-<pre><code class="language-text">&quot;/api/v1/vocab-terms/analysisUnits/Household&quot;
+<pre><code class="language-text">/api/v1/vocab-terms/analysisUnits/Household
 </code></pre>
 <h4 id="complete-units-of-analysis-examples-with-subfields">Complete Units of Analysis Examples (with Subfields):</h4>
-<pre><code class="language-yaml">- &quot;Label&quot;: &quot;Organization/Institution&quot;
-  &quot;Code&quot;: &quot;OrganizationOrInstitution&quot;
-  &quot;URI&quot;: &quot;/api/v1/vocab-terms/analysisUnits/OrganizationOrInstitution&quot;
+<pre><code class="language-text">- Label: Organization/Institution
+  Code: OrganizationOrInstitution
+  URI: /api/v1/vocab-terms/analysisUnits/OrganizationOrInstitution
 
-- &quot;Label&quot;: &quot;Individual&quot;
-  &quot;Code&quot;: &quot;Individual&quot;
-  &quot;URI&quot;: &quot;/api/v1/vocab-terms/analysisUnits/Individual&quot;
+- Label: Individual
+  Code: Individual
+  URI: /api/v1/vocab-terms/analysisUnits/Individual
 </code></pre>
-<pre><code class="language-yaml">- &quot;Label&quot;: &quot;Household&quot;
-  &quot;Code&quot;: &quot;Household&quot;
-  &quot;URI&quot;: &quot;/api/v1/vocab-terms/analysisUnits/Household&quot;
+<pre><code class="language-text">- Label: Household
+  Code: Household
+  URI: /api/v1/vocab-terms/analysisUnits/Household
 </code></pre>
 <hr />
 <p><a id="sampling-procedures"></a></p>
@@ -1996,11 +1996,11 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;Probability: Systematic random&quot;
+<pre><code class="language-text">Probability: Systematic random
 </code></pre>
-<pre><code class="language-text">&quot;Theoretical Sampling&quot;
+<pre><code class="language-text">Theoretical Sampling
 </code></pre>
-<pre><code class="language-text">&quot;Total universe/Complete enumeration&quot;
+<pre><code class="language-text">Total universe/Complete enumeration
 </code></pre>
 <h5 id="sampling-procedures_code">Code</h5>
 <p><strong>Description:</strong> A machine-readable/-actionable form of the term.</p>
@@ -2008,11 +2008,11 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;Probability.SystematicRandom&quot;
+<pre><code class="language-text">Probability.SystematicRandom
 </code></pre>
-<pre><code class="language-text">&quot;TheoreticalSampling&quot;
+<pre><code class="language-text">TheoreticalSampling
 </code></pre>
-<pre><code class="language-text">&quot;TotalUniverseCompleteEnumeration&quot;
+<pre><code class="language-text">TotalUniverseCompleteEnumeration
 </code></pre>
 <h5 id="sampling-procedures_uri">URI</h5>
 <p><strong>Description:</strong> The URI for the term.</p>
@@ -2020,24 +2020,24 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;/api/v1/vocab-terms/samplingProcedures/terms/Probability.SystematicRandom&quot;
+<pre><code class="language-text">/api/v1/vocab-terms/samplingProcedures/terms/Probability.SystematicRandom
 </code></pre>
-<pre><code class="language-text">&quot;/api/v1/vocab-terms/samplingProcedures/terms/TheoreticalSampling&quot;
+<pre><code class="language-text">/api/v1/vocab-terms/samplingProcedures/terms/TheoreticalSampling
 </code></pre>
-<pre><code class="language-text">&quot;/api/v1/vocab-terms/samplingProcedures/terms/TotalUniverseCompleteEnumeration&quot;
+<pre><code class="language-text">/api/v1/vocab-terms/samplingProcedures/terms/TotalUniverseCompleteEnumeration
 </code></pre>
 <h4 id="complete-sampling-procedures-examples-with-subfields">Complete Sampling Procedures Examples (with Subfields):</h4>
-<pre><code class="language-yaml">- &quot;Label&quot;: &quot;Probability: Systematic random&quot;
-  &quot;Code&quot;: &quot;Probability.SystematicRandom&quot;
-  &quot;URI&quot;: &quot;/api/v1/vocab-terms/samplingProcedures/terms/Probability.SystematicRandom&quot;
+<pre><code class="language-text">- Label: Probability: Systematic random
+  Code: Probability.SystematicRandom
+  URI: /api/v1/vocab-terms/samplingProcedures/terms/Probability.SystematicRandom
 
-- &quot;Label&quot;: &quot;Theoretical Sampling&quot;
-  &quot;Code&quot;: &quot;TheoreticalSampling&quot;
-  &quot;URI&quot;: &quot;/api/v1/vocab-terms/samplingProcedures/terms/TheoreticalSampling&quot;
+- Label: Theoretical Sampling
+  Code: TheoreticalSampling
+  URI: /api/v1/vocab-terms/samplingProcedures/terms/TheoreticalSampling
 </code></pre>
-<pre><code class="language-yaml">- &quot;Label&quot;: &quot;Total universe/Complete enumeration&quot;
-  &quot;Code&quot;: &quot;TotalUniverseCompleteEnumeration&quot;
-  &quot;URI&quot;: &quot;/api/v1/vocab-terms/samplingProcedures/terms/TotalUniverseCompleteEnumeration&quot;
+<pre><code class="language-text">- Label: Total universe/Complete enumeration
+  Code: TotalUniverseCompleteEnumeration
+  URI: /api/v1/vocab-terms/samplingProcedures/terms/TotalUniverseCompleteEnumeration
 </code></pre>
 <hr />
 <p><a id="sampling-note"></a></p>
@@ -2048,9 +2048,9 @@
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Usage Notes:</strong> A detailed discussion of such things as sampling error or other limitations of the sampling methodology is not required here.</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;National sample of telephone numbers from cell (RDD) sampling frame.&quot;
+<pre><code class="language-text">National sample of telephone numbers from cell (RDD) sampling frame.
 </code></pre>
-<pre><code class="language-text">&quot;The probability sample selected to represent the universe consists of approximately 71,000 households.&quot;
+<pre><code class="language-text">The probability sample selected to represent the universe consists of approximately 71,000 households.
 </code></pre>
 <hr />
 <p><a id="weights"></a></p>
@@ -2061,9 +2061,9 @@
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Usage Notes:</strong> Weight includes any information about weighting variables in the data, as well as any other weight information provided by the Principal Investigator. If a weighting formula or coefficient was developed, provide this formula, define its elements, and indicate how the formula is applied to the data. It is acceptable to summarize additional documentation and refer users to those resources for more information.</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;Both the TransPop and Cisgender datasets have the same variable named WEIGHT as the weighting variable. The combination datasets have a set of three weight variables (WEIGHT_TRANSPOP, WEIGHT_CISGENDER, WEIGHT_CISGENDER_TRANSPOP)&quot;
+<pre><code class="language-text">Both the TransPop and Cisgender datasets have the same variable named WEIGHT as the weighting variable. The combination datasets have a set of three weight variables (WEIGHT_TRANSPOP, WEIGHT_CISGENDER, WEIGHT_CISGENDER_TRANSPOP)
 </code></pre>
-<pre><code class="language-text">&quot;A weight variable with two implied decimal places has been included and must be used in any analysis.&quot;
+<pre><code class="language-text">A weight variable with two implied decimal places has been included and must be used in any analysis.
 </code></pre>
 <hr />
 <p><a id="response-rates"></a></p>
@@ -2074,9 +2074,9 @@
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Usage Notes:</strong> This field is only applicable if the data were collected with a survey instrument and the response rates are provided.</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;The overall response rate for this survey was 20.22%; 72.6% for existing panelists and 10.4% for new panelists, using AAPOR Response Rate 1.&quot;
+<pre><code class="language-text">The overall response rate for this survey was 20.22%; 72.6% for existing panelists and 10.4% for new panelists, using AAPOR Response Rate 1.
 </code></pre>
-<pre><code class="language-text">&quot;Of the 1,843 Midlife in the United States (MIDUS) respondents that researchers attempted to contact, 1,483 agreed to participate (8 percent refused participation and 11 percent either moved or were difficult to contact), yielding a response rate of approximately 81 percent.&quot;
+<pre><code class="language-text">Of the 1,843 Midlife in the United States (MIDUS) respondents that researchers attempted to contact, 1,483 agreed to participate (8 percent refused participation and 11 percent either moved or were difficult to contact), yielding a response rate of approximately 81 percent.
 </code></pre>
 <hr />
 <p><a id="data-source-types"></a></p>
@@ -2127,11 +2127,11 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;Registers/Records/Accounts: Medical/Clinical&quot;
+<pre><code class="language-text">Registers/Records/Accounts: Medical/Clinical
 </code></pre>
-<pre><code class="language-text">&quot;Events/Interactions&quot;
+<pre><code class="language-text">Events/Interactions
 </code></pre>
-<pre><code class="language-text">&quot;Research data: Published&quot;
+<pre><code class="language-text">Research data: Published
 </code></pre>
 <h5 id="data-source-types_code">Code</h5>
 <p><strong>Description:</strong> A machine-readable/-actionable form of the term.</p>
@@ -2139,11 +2139,11 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;RegistersRecordsAccounts.MedicalClinical&quot;
+<pre><code class="language-text">RegistersRecordsAccounts.MedicalClinical
 </code></pre>
-<pre><code class="language-text">&quot;EventsInteractions&quot;
+<pre><code class="language-text">EventsInteractions
 </code></pre>
-<pre><code class="language-text">&quot;ResearchData.Published&quot;
+<pre><code class="language-text">ResearchData.Published
 </code></pre>
 <h5 id="data-source-types_uri">URI</h5>
 <p><strong>Description:</strong> The URI for the term.</p>
@@ -2151,24 +2151,24 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;/api/v1/vocab-terms/dataSourceTypes/terms/RegistersRecordsAccounts.MedicalClinical&quot;
+<pre><code class="language-text">/api/v1/vocab-terms/dataSourceTypes/terms/RegistersRecordsAccounts.MedicalClinical
 </code></pre>
-<pre><code class="language-text">&quot;/api/v1/vocab-terms/dataSourceTypes/terms/EventsInteractions&quot;
+<pre><code class="language-text">/api/v1/vocab-terms/dataSourceTypes/terms/EventsInteractions
 </code></pre>
-<pre><code class="language-text">&quot;/api/v1/vocab-terms/dataSourceTypes/terms/ResearchData.Published&quot;
+<pre><code class="language-text">/api/v1/vocab-terms/dataSourceTypes/terms/ResearchData.Published
 </code></pre>
 <h4 id="complete-data-source-types-examples-with-subfields">Complete Data Source Types Examples (with Subfields):</h4>
-<pre><code class="language-yaml">- &quot;Label&quot;: &quot;Registers/Records/Accounts: Medical/Clinical&quot;
-  &quot;Code&quot;: &quot;RegistersRecordsAccounts.MedicalClinical&quot;
-  &quot;URI&quot;: &quot;/api/v1/vocab-terms/dataSourceTypes/terms/RegistersRecordsAccounts.MedicalClinical&quot;
+<pre><code class="language-text">- Label: Registers/Records/Accounts: Medical/Clinical
+  Code: RegistersRecordsAccounts.MedicalClinical
+  URI: /api/v1/vocab-terms/dataSourceTypes/terms/RegistersRecordsAccounts.MedicalClinical
 
-- &quot;Label&quot;: &quot;Events/Interactions&quot;
-  &quot;Code&quot;: &quot;EventsInteractions&quot;
-  &quot;URI&quot;: &quot;/api/v1/vocab-terms/dataSourceTypes/terms/EventsInteractions&quot;
+- Label: Events/Interactions
+  Code: EventsInteractions
+  URI: /api/v1/vocab-terms/dataSourceTypes/terms/EventsInteractions
 </code></pre>
-<pre><code class="language-yaml">- &quot;Label&quot;: &quot;Research data: Published&quot;
-  &quot;Code&quot;: &quot;ResearchData.Published&quot;
-  &quot;URI&quot;: &quot;/api/v1/vocab-terms/dataSourceTypes/terms/ResearchData.Published&quot;
+<pre><code class="language-text">- Label: Research data: Published
+  Code: ResearchData.Published
+  URI: /api/v1/vocab-terms/dataSourceTypes/terms/ResearchData.Published
 </code></pre>
 <hr />
 <p><a id="external-data-sources"></a></p>
@@ -2179,11 +2179,11 @@
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Usage Notes:</strong> External data sources can include websites, datasets, books, journal articles, and other sources. Each source includes at minimum the title, author, publication year, journal (if applicable), and DOI or URL for online sources. Any citation format is accepted.</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;'Voting Scores.' Congressional Quarterly Almanac 33 (1977), 487-498&quot;
+<pre><code class="language-text">'Voting Scores.' Congressional Quarterly Almanac 33 (1977), 487-498
 </code></pre>
-<pre><code class="language-text">&quot;Multi-Resolution Land Characteristics Consortium. &quot;National Land Cover Database (CONUS), All Years,&quot; 2016. https://www.mrlc.gov/data/nlcd-land-cover-conus-all-years&quot;
+<pre><code class="language-text">Multi-Resolution Land Characteristics Consortium. &quot;National Land Cover Database (CONUS), All Years,&quot; 2016. https://www.mrlc.gov/data/nlcd-land-cover-conus-all-years
 </code></pre>
-<pre><code class="language-text">&quot;Data file 1: United States Census Bureau (2010). TIGER/Line shapefiles, 2010 census tracts (2010 version) [Data set]. https://www2.census.gov/geo/tiger/TIGER2010/TRACT/2010/tl_2010_01_tract10.zip&quot;
+<pre><code class="language-text">Data file 1: United States Census Bureau (2010). TIGER/Line shapefiles, 2010 census tracts (2010 version) [Data set]. https://www2.census.gov/geo/tiger/TIGER2010/TRACT/2010/tl_2010_01_tract10.zip
 </code></pre>
 <hr />
 <p><a id="collection-modes"></a></p>
@@ -2234,11 +2234,11 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;Face-to-face interview: Computer-assisted (CAPI/CAMI)&quot;
+<pre><code class="language-text">Face-to-face interview: Computer-assisted (CAPI/CAMI)
 </code></pre>
-<pre><code class="language-text">&quot;Measurements and tests&quot;
+<pre><code class="language-text">Measurements and tests
 </code></pre>
-<pre><code class="language-text">&quot;Computer-based observation&quot;
+<pre><code class="language-text">Computer-based observation
 </code></pre>
 <h5 id="collection-modes_code">Code</h5>
 <p><strong>Description:</strong> A machine-readable/-actionable form of the term.</p>
@@ -2246,11 +2246,11 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;Interview.FaceToFace.CAPIorCAMI&quot;
+<pre><code class="language-text">Interview.FaceToFace.CAPIorCAMI
 </code></pre>
-<pre><code class="language-text">&quot;MeasurementsAndTests&quot;
+<pre><code class="language-text">MeasurementsAndTests
 </code></pre>
-<pre><code class="language-text">&quot;Observation.ComputerBased&quot;
+<pre><code class="language-text">Observation.ComputerBased
 </code></pre>
 <h5 id="collection-modes_uri">URI</h5>
 <p><strong>Description:</strong> The URI for the term.</p>
@@ -2258,20 +2258,20 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;/api/v1/vocab-terms/collectionModes/terms/Interview.FaceToFace.CAPIorCAMI&quot;
+<pre><code class="language-text">/api/v1/vocab-terms/collectionModes/terms/Interview.FaceToFace.CAPIorCAMI
 </code></pre>
 <h4 id="complete-collection-modes-examples-with-subfields">Complete Collection Modes Examples (with Subfields):</h4>
-<pre><code class="language-yaml">- &quot;Label&quot;: &quot;Face-to-face interview: Computer-assisted (CAPI/CAMI)&quot;
-  &quot;Code&quot;: &quot;Interview.FaceToFace.CAPIorCAMI&quot;
-  &quot;URI&quot;: &quot;/api/v1/vocab-terms/collectionModes/terms/Interview.FaceToFace.CAPIorCAMI&quot;
+<pre><code class="language-text">- Label: Face-to-face interview: Computer-assisted (CAPI/CAMI)
+  Code: Interview.FaceToFace.CAPIorCAMI
+  URI: /api/v1/vocab-terms/collectionModes/terms/Interview.FaceToFace.CAPIorCAMI
 </code></pre>
-<pre><code class="language-yaml">- &quot;Label&quot;: &quot;Measurements and tests&quot;
-  &quot;Code&quot;: &quot;MeasurementsAndTests&quot;
-  &quot;URI&quot;: &quot;/api/v1/vocab-terms/collectionModes/terms/MeasurementsAndTests&quot;
+<pre><code class="language-text">- Label: Measurements and tests
+  Code: MeasurementsAndTests
+  URI: /api/v1/vocab-terms/collectionModes/terms/MeasurementsAndTests
 
-- &quot;Label&quot;: &quot;Computer-based observation&quot;
-  &quot;Code&quot;: &quot;Observation.ComputerBased&quot;
-  &quot;URI&quot;: &quot;/api/v1/vocab-terms/collectionModes/terms/Observation.ComputerBased&quot;
+- Label: Computer-based observation
+  Code: Observation.ComputerBased
+  URI: /api/v1/vocab-terms/collectionModes/terms/Observation.ComputerBased
 </code></pre>
 <hr />
 <p><a id="collection-dates"></a></p>
@@ -2321,11 +2321,11 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;2000&quot;
+<pre><code class="language-text">2000
 </code></pre>
-<pre><code class="language-text">&quot;2019-10&quot;
+<pre><code class="language-text">2019-10
 </code></pre>
-<pre><code class="language-text">&quot;2021-03-01&quot;
+<pre><code class="language-text">2021-03-01
 </code></pre>
 <h5 id="collection-dates_end_date">End Date</h5>
 <p><strong>Description:</strong> The end date of the data collection period. Must be in YYYY-MM-DD, YYYY-MM, or YYYY format with no spaces.</p>
@@ -2333,11 +2333,11 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;2000&quot;
+<pre><code class="language-text">2000
 </code></pre>
-<pre><code class="language-text">&quot;2019-10&quot;
+<pre><code class="language-text">2019-10
 </code></pre>
-<pre><code class="language-text">&quot;2021-03-01&quot;
+<pre><code class="language-text">2021-03-01
 </code></pre>
 <h5 id="collection-dates_time_frame">Time Frame</h5>
 <p><strong>Description:</strong> An optional free-text description of the data collection period, used for non-numeric dates (e.g., 'Fall 2012') or to add context when multiple dates are present.</p>
@@ -2347,21 +2347,21 @@
 <p><strong>Usage Notes:</strong> The textual description ('time frame') is used to add context to the Collection Date when multiple time periods exist (e.g., to describe different study waves, dataset names, or fiscal year designation) and/or when the date cannot be expressed exclusively through numbers, such as seasons or other units of time where the data producer did not clarify the exact dates they meant.</p>
 <p>The textual description should not simply restate the time period in words. For example, if the Collection Date is 2020-01, the Time Frame should not be 'January 2020'.</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;Fall 2001&quot;
+<pre><code class="language-text">Fall 2001
 </code></pre>
-<pre><code class="language-text">&quot;Student data&quot;
+<pre><code class="language-text">Student data
 </code></pre>
 <h4 id="complete-collection-dates-examples-with-subfields">Complete Collection Dates Examples (with Subfields):</h4>
-<pre><code class="language-yaml">- &quot;Start Date&quot;: &quot;2018&quot;
-  &quot;End Date&quot;: &quot;2018&quot;
-  &quot;Time Frame&quot;: &quot;Wave 1&quot;
+<pre><code class="language-text">- Start Date: 2018
+  End Date: 2018
+  Time Frame: Wave 1
 
-- &quot;Start Date&quot;: &quot;2020-10&quot;
-  &quot;End Date&quot;: &quot;2020-10&quot;
-  &quot;Time Frame&quot;: &quot;Wave 2&quot;
+- Start Date: 2020-10
+  End Date: 2020-10
+  Time Frame: Wave 2
 </code></pre>
-<pre><code class="language-yaml">- &quot;Start Date&quot;: &quot;2003-01-01&quot;
-  &quot;End Date&quot;: &quot;2003-12-31&quot;
+<pre><code class="language-text">- Start Date: 2003-01-01
+  End Date: 2003-12-31
 </code></pre>
 <hr />
 <p><a id="variable-description"></a></p>
@@ -2372,9 +2372,9 @@
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Usage Notes:</strong> The Variable Description provides more detailed information than the Summary, including a review of variables that are important for users to know about. The codebook, setup files, and variable groups are appropriate sources of information for Variable Description.</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;The data includes variables about participants' and their parents' moods, interviewer observations, families' activities, families' health history, participants' school records, and parents' substance use. Demographic variables include race, religion, annual household income, and the participants' parents' employment statuses.&quot;
+<pre><code class="language-text">The data includes variables about participants' and their parents' moods, interviewer observations, families' activities, families' health history, participants' school records, and parents' substance use. Demographic variables include race, religion, annual household income, and the participants' parents' employment statuses.
 </code></pre>
-<pre><code class="language-text">&quot;The LGBTQ Hate Crimes Interviews dataset contains more in-depth information, including victim demographic information, substance abuse history, information on whether the victim is open about their LGBTQ identification, the victim's job status, and information about how the victim reacted to the crime, such as whether or not they reported the crime to the police and their level of cooperation with the police and prosecution.&quot;
+<pre><code class="language-text">The LGBTQ Hate Crimes Interviews dataset contains more in-depth information, including victim demographic information, substance abuse history, information on whether the victim is open about their LGBTQ identification, the victim's job status, and information about how the victim reacted to the crime, such as whether or not they reported the crime to the police and their level of cooperation with the police and prosecution.
 </code></pre>
 <hr />
 <p><a id="scales"></a></p>
@@ -2385,11 +2385,11 @@
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Usage Notes:</strong> Include common scales that can be readily identified from the data, documentation, or other related materials. Examples of common scales include the Minnesota Multiphasic Personality Inventory (MMPI) and the Consumer Price Index (CPI). ICPSR curators are not expected to infer or research scales that are not explicitly indicated. The scales can be cited either as a list or described in full sentences and include DOIs or URLs whenever possible. If the questionnaire used has a finite list of responses (e.g., 'Always, Sometimes, Rarely, Never' or 'Strongly Agree, Agree, Disagree, Strongly Disagree'), it is acceptable for this element to note 'A Likert-type scale was used,' or 'Several Likert-type scales were used.' However, it is not required to note Likert-type scales in situations where only such scales were used, given their ubiquity.</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;The baseline data collection included one scale - the CES-D index for maternal depression [Cole, J. C., Rabin, A. S., Smith, T. L., and Kaufman, A. S. (2004). Development and validation of a Rasch-derived CES-D short form. Psychological assessment, 16(4), 360. https://doi.org/10.1037/1040-3590.16.4.360]. All scales used for outcomes at ages 1 through 3 are listed in Appendix Tables 1 and 2 in the User Guide. Please refer to the User Guide and P.I. Codebook, available under the 'Data and Documentation' tab, for details.&quot;
+<pre><code class="language-text">The baseline data collection included one scale - the CES-D index for maternal depression [Cole, J. C., Rabin, A. S., Smith, T. L., and Kaufman, A. S. (2004). Development and validation of a Rasch-derived CES-D short form. Psychological assessment, 16(4), 360. https://doi.org/10.1037/1040-3590.16.4.360]. All scales used for outcomes at ages 1 through 3 are listed in Appendix Tables 1 and 2 in the User Guide. Please refer to the User Guide and P.I. Codebook, available under the 'Data and Documentation' tab, for details.
 </code></pre>
-<pre><code class="language-text">&quot;Squires, J., Bricker, D. D., and Twombly, E. (2009). Ages and stages questionnaires. Baltimore, MD: Paul H. Brookes.&quot;
-&quot;Briggs-Gowan, M. J., Carter, A. S., Irwin, J. R., Wachtel, K., and Cicchetti, D. V. (2004). The Brief Infant-Toddler Social and Emotional Assessment: screening for social-emotional problems and delays in competence. Journal of pediatric psychology, 29(2), 143-155. https://doi.org/10.1093/jpepsy/jsh017&quot;
-&quot;Yu, L., Buysse, D. J., Germain, A., Moul, D. E., Stover, A., Dodds, N. E., ... and Pilkonis, P. A. (2012). Development of short forms from the PROMIS sleep disturbance and sleep-related impairment item banks. Behavioral sleep medicine, 10(1), 6-24. https://doi.org/10.1080/15402002.2012.636266&quot;
+<pre><code class="language-text">Squires, J., Bricker, D. D., and Twombly, E. (2009). Ages and stages questionnaires. Baltimore, MD: Paul H. Brookes.
+Briggs-Gowan, M. J., Carter, A. S., Irwin, J. R., Wachtel, K., and Cicchetti, D. V. (2004). The Brief Infant-Toddler Social and Emotional Assessment: screening for social-emotional problems and delays in competence. Journal of pediatric psychology, 29(2), 143-155. https://doi.org/10.1093/jpepsy/jsh017
+Yu, L., Buysse, D. J., Germain, A., Moul, D. E., Stover, A., Dodds, N. E., ... and Pilkonis, P. A. (2012). Development of short forms from the PROMIS sleep disturbance and sleep-related impairment item banks. Behavioral sleep medicine, 10(1), 6-24. https://doi.org/10.1080/15402002.2012.636266
 </code></pre>
 <hr />
 <p><a id="data-management-plan"></a></p>
@@ -2399,9 +2399,9 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;https://doi.org/10.48321/D1EA6EF78D&quot;
+<pre><code class="language-text">https://doi.org/10.48321/D1EA6EF78D
 </code></pre>
-<pre><code class="language-text">&quot;https://rdm.mcmaster.ca/dmps/promoting-healthy-families-data-management-plan&quot;
+<pre><code class="language-text">https://rdm.mcmaster.ca/dmps/promoting-healthy-families-data-management-plan
 </code></pre>
 <hr />
 <p><a id="preregistration"></a></p>
@@ -2411,9 +2411,9 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;https://doi.org/10.17605/OSF.IO/67DUT&quot;
+<pre><code class="language-text">https://doi.org/10.17605/OSF.IO/67DUT
 </code></pre>
-<pre><code class="language-text">&quot;https://doi.org/10.1257/rct.15789-1.0&quot;
+<pre><code class="language-text">https://doi.org/10.1257/rct.15789-1.0
 </code></pre>
 <hr />
 <p><a id="software-applications"></a></p>
@@ -2533,11 +2533,11 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;JHOVE&quot;
+<pre><code class="language-text">JHOVE
 </code></pre>
-<pre><code class="language-text">&quot;ffmpeg&quot;
+<pre><code class="language-text">ffmpeg
 </code></pre>
-<pre><code class="language-text">&quot;json-schema-for-humans&quot;
+<pre><code class="language-text">json-schema-for-humans
 </code></pre>
 <h5 id="software-applications_software_version">Software Version</h5>
 <p><strong>Description:</strong> The version of the application.</p>
@@ -2545,11 +2545,11 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;1&quot;
+<pre><code class="language-text">1
 </code></pre>
-<pre><code class="language-text">&quot;2.0.4&quot;
+<pre><code class="language-text">2.0.4
 </code></pre>
-<pre><code class="language-text">&quot;Auto-Build 2023-01-15 12:36&quot;
+<pre><code class="language-text">Auto-Build 2023-01-15 12:36
 </code></pre>
 <h5 id="software-applications_description">Software Description</h5>
 <p><strong>Description:</strong> Short description or overview of the application and its intended purpose</p>
@@ -2557,9 +2557,9 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;JHOVE, the JSTOR/Harvard Object Validation Environment, is an extensible software framework for performing format identification, validation, and characterization of digital objects.&quot;
+<pre><code class="language-text">JHOVE, the JSTOR/Harvard Object Validation Environment, is an extensible software framework for performing format identification, validation, and characterization of digital objects.
 </code></pre>
-<pre><code class="language-text">&quot;ffmpeg is a very fast video and audio converter that can also grab from a live audio/video source. It can also convert between arbitrary sample rates and resize video on the fly with a high quality polyphase filter.&quot;
+<pre><code class="language-text">ffmpeg is a very fast video and audio converter that can also grab from a live audio/video source. It can also convert between arbitrary sample rates and resize video on the fly with a high quality polyphase filter.
 </code></pre>
 <h5 id="software-applications_programming_languages">Programming Languages</h5>
 <p><strong>Description:</strong> The programming language(s) used in the development of the application</p>
@@ -2567,12 +2567,12 @@
 <p><strong>Repeatable:</strong> Yes</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;python&quot;
+<pre><code class="language-text">python
 </code></pre>
-<pre><code class="language-text">&quot;shell&quot;
-&quot;r&quot;
+<pre><code class="language-text">shell
+r
 </code></pre>
-<pre><code class="language-text">&quot;other&quot;
+<pre><code class="language-text">other
 </code></pre>
 <h5 id="software-applications_operating_systems">Operating Systems</h5>
 <p><strong>Description:</strong> Computer operating systems supported by the application</p>
@@ -2580,13 +2580,13 @@
 <p><strong>Repeatable:</strong> Yes</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;windows&quot;
+<pre><code class="language-text">windows
 </code></pre>
-<pre><code class="language-text">&quot;windows&quot;
-&quot;mac&quot;
-&quot;linux&quot;
+<pre><code class="language-text">windows
+mac
+linux
 </code></pre>
-<pre><code class="language-text">&quot;other&quot;
+<pre><code class="language-text">other
 </code></pre>
 <h5 id="software-applications_memory_requirements">Memory Requirements</h5>
 <p><strong>Description:</strong> Minimum memory (e.g., RAM) requirements to operate the application</p>
@@ -2594,11 +2594,11 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;4 GB&quot;
+<pre><code class="language-text">4 GB
 </code></pre>
-<pre><code class="language-text">&quot;1GB of RAM (2GB for a 64-bit version)&quot;
+<pre><code class="language-text">1GB of RAM (2GB for a 64-bit version)
 </code></pre>
-<pre><code class="language-text">&quot;4 GB of GPU memory for HD and some 4K media; 6 GB or more for 4K and higher&quot;
+<pre><code class="language-text">4 GB of GPU memory for HD and some 4K media; 6 GB or more for 4K and higher
 </code></pre>
 <h5 id="software-applications_processor_requirements">Processor Requirements</h5>
 <p><strong>Description:</strong> Processor architecture required to run the application</p>
@@ -2606,11 +2606,11 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;Intel i5/ i7/ Ryzen 7&quot;
+<pre><code class="language-text">Intel i5/ i7/ Ryzen 7
 </code></pre>
-<pre><code class="language-text">&quot;Minimum 1 GHz; Recommended 2GHz or more&quot;
+<pre><code class="language-text">Minimum 1 GHz; Recommended 2GHz or more
 </code></pre>
-<pre><code class="language-text">&quot;2.5–2.9 GHz or faster processor&quot;
+<pre><code class="language-text">2.5–2.9 GHz or faster processor
 </code></pre>
 <h5 id="software-applications_software_requirements">Software Requirements</h5>
 <p><strong>Description:</strong> Required components for the application, like runtime environments and shared libraries not included in the package but needed to run it.</p>
@@ -2618,11 +2618,11 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;Java runtime environment&quot;
+<pre><code class="language-text">Java runtime environment
 </code></pre>
-<pre><code class="language-text">&quot;Requires additional Python libraries: numpy, v1.11.2; scipy, v0.18.1, and pandas, v0.19.0&quot;
+<pre><code class="language-text">Requires additional Python libraries: numpy, v1.11.2; scipy, v0.18.1, and pandas, v0.19.0
 </code></pre>
-<pre><code class="language-text">&quot;Compile with GNU auto tools&quot;
+<pre><code class="language-text">Compile with GNU auto tools
 </code></pre>
 <h5 id="software-applications_storage_requirements">Storage Requirements</h5>
 <p><strong>Description:</strong> Amount of storage space required by the application</p>
@@ -2630,11 +2630,11 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;3.5 GB for new installations, 5 GB for upgrades (including temporary files required during installation)&quot;
+<pre><code class="language-text">3.5 GB for new installations, 5 GB for upgrades (including temporary files required during installation)
 </code></pre>
-<pre><code class="language-text">&quot;15 GB of free disk space&quot;
+<pre><code class="language-text">15 GB of free disk space
 </code></pre>
-<pre><code class="language-text">&quot;8 GB of available hard-disk space for installation; additional free space required during installation&quot;
+<pre><code class="language-text">8 GB of available hard-disk space for installation; additional free space required during installation
 </code></pre>
 <h5 id="software-applications_device_requirements">Device Requirements</h5>
 <p><strong>Description:</strong> Device required to run the application. Used in cases where a specific make/model is required to run the application</p>
@@ -2648,9 +2648,9 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;https://www.apache.org/licenses/LICENSE-2.0&quot;
+<pre><code class="language-text">https://www.apache.org/licenses/LICENSE-2.0
 </code></pre>
-<pre><code class="language-text">&quot;https://opensource.org/licenses/LGPL-2.0&quot;
+<pre><code class="language-text">https://opensource.org/licenses/LGPL-2.0
 </code></pre>
 <h5 id="software-applications_download_url">Download URL</h5>
 <p><strong>Description:</strong> A direct link to a downloadable software artifact (e.g., executable, package, archive, or single script file) that retrieves the application itself, without additional navigation or instructions.</p>
@@ -2658,9 +2658,9 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;https://github.com/richardlehane/siegfried/archive/refs/heads/main.zip&quot;
+<pre><code class="language-text">https://github.com/richardlehane/siegfried/archive/refs/heads/main.zip
 </code></pre>
-<pre><code class="language-text">&quot;https://cdn.nationalarchives.gov.uk/documents/droid-binary-6.5.2-bin-win32-with-jre.zip&quot;
+<pre><code class="language-text">https://cdn.nationalarchives.gov.uk/documents/droid-binary-6.5.2-bin-win32-with-jre.zip
 </code></pre>
 <h5 id="software-applications_install_url">Installation URL</h5>
 <p><strong>Description:</strong> A link to a repository or project landing page where users can obtain resources and instructions to install the application (as opposed to directly downloading a single file).</p>
@@ -2668,27 +2668,27 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;https://github.com/richardlehane/siegfried&quot;
+<pre><code class="language-text">https://github.com/richardlehane/siegfried
 </code></pre>
-<pre><code class="language-text">&quot;https://www.nationalarchives.gov.uk/information-management/manage-information/preserving-digital-records/droid/&quot;
+<pre><code class="language-text">https://www.nationalarchives.gov.uk/information-management/manage-information/preserving-digital-records/droid/
 </code></pre>
 <h4 id="complete-software-applications-examples-with-subfields">Complete Software Applications Examples (with Subfields):</h4>
-<pre><code class="language-yaml">- &quot;Software Name&quot;: &quot;siegfried&quot;
-  &quot;Software Version&quot;: &quot;1.11.1&quot;
-  &quot;Software Description&quot;: &quot;Siegfried is a signature-based file format identification\
-    \ tool, implementing the National Archives UK's PRONOM file format signatures;\
-    \ freedesktop.org's MIME-info file format signatures; the Library of Congress's\
-    \ FDD file format signatures (beta); and Wikidata (beta).&quot;
-  &quot;Programming Languages&quot;:
-  - &quot;go&quot;
-  - &quot;javascript&quot;
-  - &quot;other&quot;
-  &quot;Operating Systems&quot;:
-  - &quot;mac&quot;
-  - &quot;linux&quot;
-  - &quot;windows&quot;
-  &quot;License&quot;: &quot;https://www.apache.org/licenses/LICENSE-2.0&quot;
-  &quot;Download URL&quot;: &quot;https://github.com/richardlehane/siegfried/archive/refs/heads/main.zip&quot;
+<pre><code class="language-text">- Software Name: siegfried
+  Software Version: 1.11.1
+  Software Description: Siegfried is a signature-based file format identification
+    tool, implementing the National Archives UK's PRONOM file format signatures; freedesktop.org's
+    MIME-info file format signatures; the Library of Congress's FDD file format signatures
+    (beta); and Wikidata (beta).
+  Programming Languages:
+  - go
+  - javascript
+  - other
+  Operating Systems:
+  - mac
+  - linux
+  - windows
+  License: https://www.apache.org/licenses/LICENSE-2.0
+  Download URL: https://github.com/richardlehane/siegfried/archive/refs/heads/main.zip
 </code></pre>
 <hr />
 <p><a id="general-data-formats"></a></p>
@@ -2739,11 +2739,11 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;Text&quot;
+<pre><code class="language-text">Text
 </code></pre>
-<pre><code class="language-text">&quot;Still image&quot;
+<pre><code class="language-text">Still image
 </code></pre>
-<pre><code class="language-text">&quot;Numeric&quot;
+<pre><code class="language-text">Numeric
 </code></pre>
 <h5 id="general-data-formats_code">Code</h5>
 <p><strong>Description:</strong> A machine-readable/-actionable form of the term.</p>
@@ -2751,11 +2751,11 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;Text&quot;
+<pre><code class="language-text">Text
 </code></pre>
-<pre><code class="language-text">&quot;StillImage&quot;
+<pre><code class="language-text">StillImage
 </code></pre>
-<pre><code class="language-text">&quot;Numeric&quot;
+<pre><code class="language-text">Numeric
 </code></pre>
 <h5 id="general-data-formats_uri">URI</h5>
 <p><strong>Description:</strong> The URI for the term.</p>
@@ -2763,24 +2763,24 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;/api/v1/vocab-terms/generalDataFormats/terms/Text&quot;
+<pre><code class="language-text">/api/v1/vocab-terms/generalDataFormats/terms/Text
 </code></pre>
-<pre><code class="language-text">&quot;/api/v1/vocab-terms/generalDataFormats/terms/StillImage&quot;
+<pre><code class="language-text">/api/v1/vocab-terms/generalDataFormats/terms/StillImage
 </code></pre>
-<pre><code class="language-text">&quot;/api/v1/vocab-terms/generalDataFormats/terms/Numeric&quot;
+<pre><code class="language-text">/api/v1/vocab-terms/generalDataFormats/terms/Numeric
 </code></pre>
 <h4 id="complete-general-data-formats-examples-with-subfields">Complete General Data Formats Examples (with Subfields):</h4>
-<pre><code class="language-yaml">- &quot;Label&quot;: &quot;Text&quot;
-  &quot;Code&quot;: &quot;Text&quot;
-  &quot;URI&quot;: &quot;/api/v1/vocab-terms/generalDataFormats/terms/Text&quot;
+<pre><code class="language-text">- Label: Text
+  Code: Text
+  URI: /api/v1/vocab-terms/generalDataFormats/terms/Text
 
-- &quot;Label&quot;: &quot;Still image&quot;
-  &quot;Code&quot;: &quot;StillImage&quot;
-  &quot;URI&quot;: &quot;/api/v1/vocab-terms/generalDataFormats/terms/StillImage&quot;
+- Label: Still image
+  Code: StillImage
+  URI: /api/v1/vocab-terms/generalDataFormats/terms/StillImage
 </code></pre>
-<pre><code class="language-yaml">- &quot;Label&quot;: &quot;Numeric&quot;
-  &quot;Code&quot;: &quot;Numeric&quot;
-  &quot;URI&quot;: &quot;/api/v1/vocab-terms/generalDataFormats/terms/Numeric&quot;
+<pre><code class="language-text">- Label: Numeric
+  Code: Numeric
+  URI: /api/v1/vocab-terms/generalDataFormats/terms/Numeric
 </code></pre>
 <hr />
 <p><a id="notes"></a></p>
@@ -2791,10 +2791,10 @@
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Usage Notes:</strong> Notes should include any information that does not fit anywhere else in the metadata, such as: information about unique aspects of the way the data was processed, discrepancies between the metadata and documentation files, information about the research team, or series-specific notes.</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;Information on the Index of Consumer Sentiment, the Index of Current Economic Conditions, and the Index of Consumer Expectations and how they were created can be found in the P.I. Codebook&quot;
-&quot;Dataset 1 should be attributed to Jane Doe while datasets 2-6 should be attributed to John Doe&quot;
+<pre><code class="language-text">Information on the Index of Consumer Sentiment, the Index of Current Economic Conditions, and the Index of Consumer Expectations and how they were created can be found in the P.I. Codebook
+Dataset 1 should be attributed to Jane Doe while datasets 2-6 should be attributed to John Doe
 </code></pre>
-<pre><code class="language-text">&quot;Additional information on the Survey of Consumers can be found by visiting the Survey of Consumers Website&quot;
+<pre><code class="language-text">Additional information on the Survey of Consumers can be found by visiting the Survey of Consumers Website
 </code></pre>
 <hr />
 <p><a id="manuscript-number"></a></p>
@@ -2804,9 +2804,9 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;ECIN-Mar-2025-0078.R2&quot;
+<pre><code class="language-text">ECIN-Mar-2025-0078.R2
 </code></pre>
-<pre><code class="language-text">&quot;AER-2019-0000&quot;
+<pre><code class="language-text">AER-2019-0000
 </code></pre>
 <hr />
 <p><a id="ada-accessibility"></a></p>
@@ -2875,9 +2875,9 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;ADA Accessible&quot;
+<pre><code class="language-text">ADA Accessible
 </code></pre>
-<pre><code class="language-text">&quot;ADA Archival&quot;
+<pre><code class="language-text">ADA Archival
 </code></pre>
 <h5 id="ada-accessibility_code">Code</h5>
 <p><strong>Description:</strong> A machine-readable/-actionable form of the term.</p>
@@ -2885,9 +2885,9 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;ada.accessible&quot;
+<pre><code class="language-text">ada.accessible
 </code></pre>
-<pre><code class="language-text">&quot;ada.archival&quot;
+<pre><code class="language-text">ada.archival
 </code></pre>
 <h5 id="ada-accessibility_uri">URI</h5>
 <p><strong>Description:</strong> The URI for the term.</p>
@@ -2895,18 +2895,18 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;/api/v1/vocab-terms/adaAccessibility/terms/ada.accessible&quot;
+<pre><code class="language-text">/api/v1/vocab-terms/adaAccessibility/terms/ada.accessible
 </code></pre>
-<pre><code class="language-text">&quot;/api/v1/vocab-terms/adaAccessibility/terms/ada.archival&quot;
+<pre><code class="language-text">/api/v1/vocab-terms/adaAccessibility/terms/ada.archival
 </code></pre>
 <h4 id="complete-ada-accessibility-examples-with-subfields">Complete ADA Accessibility Examples (with Subfields):</h4>
-<pre><code class="language-yaml">&quot;Label&quot;: &quot;ADA Accessible&quot;
-&quot;Code&quot;: &quot;ada.accessible&quot;
-&quot;URI&quot;: &quot;/api/v1/vocab-terms/adaAccessibility/terms/ada.accessible&quot;
+<pre><code class="language-text">Label: ADA Accessible
+Code: ada.accessible
+URI: /api/v1/vocab-terms/adaAccessibility/terms/ada.accessible
 </code></pre>
-<pre><code class="language-yaml">&quot;Label&quot;: &quot;ADA Archival&quot;
-&quot;Code&quot;: &quot;ada.archival&quot;
-&quot;URI&quot;: &quot;/api/v1/vocab-terms/adaAccessibility/terms/ada.archival&quot;
+<pre><code class="language-text">Label: ADA Archival
+Code: ada.archival
+URI: /api/v1/vocab-terms/adaAccessibility/terms/ada.archival
 </code></pre>
 <hr />
 <p><a id="license"></a></p>
@@ -2956,9 +2956,9 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;Creative Commons Attribution 4.0 International&quot;
+<pre><code class="language-text">Creative Commons Attribution 4.0 International
 </code></pre>
-<pre><code class="language-text">&quot;Apache License 1.0&quot;
+<pre><code class="language-text">Apache License 1.0
 </code></pre>
 <h5 id="license_code">Code</h5>
 <p><strong>Description:</strong> A machine-readable/-actionable form of the term.</p>
@@ -2966,9 +2966,9 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;CC-BY-NC-4.0&quot;
+<pre><code class="language-text">CC-BY-NC-4.0
 </code></pre>
-<pre><code class="language-text">&quot;Apache-1.0&quot;
+<pre><code class="language-text">Apache-1.0
 </code></pre>
 <h5 id="license_uri">URI</h5>
 <p><strong>Description:</strong> The URI for the term.</p>
@@ -2976,18 +2976,18 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;/api/v1/vocab-terms/licenses/terms/CC-BY-4.0&quot;
+<pre><code class="language-text">/api/v1/vocab-terms/licenses/terms/CC-BY-4.0
 </code></pre>
-<pre><code class="language-text">&quot;/api/v1/vocab-terms/licenses/terms/Apache-1.0&quot;
+<pre><code class="language-text">/api/v1/vocab-terms/licenses/terms/Apache-1.0
 </code></pre>
 <h4 id="complete-license-examples-with-subfields">Complete License Examples (with Subfields):</h4>
-<pre><code class="language-yaml">&quot;Label&quot;: &quot;Creative Commons Attribution 4.0 International&quot;
-&quot;Code&quot;: &quot;CC-BY-4.0&quot;
-&quot;URI&quot;: &quot;/api/v1/vocab-terms/licenses/terms/CC-BY-4.0&quot;
+<pre><code class="language-text">Label: Creative Commons Attribution 4.0 International
+Code: CC-BY-4.0
+URI: /api/v1/vocab-terms/licenses/terms/CC-BY-4.0
 </code></pre>
-<pre><code class="language-yaml">&quot;Label&quot;: &quot;Apache License 1.0&quot;
-&quot;Code&quot;: &quot;Apache-1.0&quot;
-&quot;URI&quot;: &quot;/api/v1/vocab-terms/licenses/terms/Apache-1.0&quot;
+<pre><code class="language-text">Label: Apache License 1.0
+Code: Apache-1.0
+URI: /api/v1/vocab-terms/licenses/terms/Apache-1.0
 </code></pre>
 <hr />
 <p><a id="version-history"></a></p>
@@ -3038,11 +3038,11 @@
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Usage Notes:</strong> Every ICPSR data collection is assigned version 1.0 when it is first published. When the data collection is updated, a new version number is assigned. For substantive changes to the data collection, including changes to data files, title, or principal investigators, a new major version is created, the version number increases by 1 (for example, from 1.0 to 2.0), and a new version-specific digital object identifier (DOI) is created. For all other changes, a new minor version is created, the version number increases by 0.1 (for example, from 2.0 to 2.1), and the DOI does not change.</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;V1&quot;
+<pre><code class="language-text">V1
 </code></pre>
-<pre><code class="language-text">&quot;V2.1&quot;
+<pre><code class="language-text">V2.1
 </code></pre>
-<pre><code class="language-text">&quot;V3.2&quot;
+<pre><code class="language-text">V3.2
 </code></pre>
 <h5 id="version-history_version_date">Version Date</h5>
 <p><strong>Description:</strong> The date on which a given version of a data collection was released.</p>
@@ -3051,9 +3051,9 @@
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Usage Notes:</strong> ICPSR automatically generates this date for data collection additions and updates.</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;2020-07-20&quot;
+<pre><code class="language-text">2020-07-20
 </code></pre>
-<pre><code class="language-text">&quot;2022-01-31&quot;
+<pre><code class="language-text">2022-01-31
 </code></pre>
 <h5 id="version-history_version_note">Version Note</h5>
 <p><strong>Description:</strong> Provenance information about a given version of the data collection.</p>
@@ -3061,28 +3061,28 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;File CB3025.ALL.PDF was removed from any previous datasets and flagged as a study-level file, so that it will accompany all downloads.&quot;
+<pre><code class="language-text">File CB3025.ALL.PDF was removed from any previous datasets and flagged as a study-level file, so that it will accompany all downloads.
 </code></pre>
-<pre><code class="language-text">&quot;The data producer provided additional data files.&quot;
+<pre><code class="language-text">The data producer provided additional data files.
 </code></pre>
-<pre><code class="language-text">&quot;The codebook descriptions of variables TANSUP, EMOSUP, and SOCSUP were corrected.&quot;
+<pre><code class="language-text">The codebook descriptions of variables TANSUP, EMOSUP, and SOCSUP were corrected.
 </code></pre>
 <h4 id="complete-version-history-examples-with-subfields">Complete Version History Examples (with Subfields):</h4>
-<pre><code class="language-yaml">- &quot;Version Number&quot;: &quot;V2.1&quot;
-  &quot;Version Date&quot;: &quot;2025-10-03&quot;
-  &quot;Version Note&quot;: &quot;Updated study summary.&quot;
+<pre><code class="language-text">- Version Number: V2.1
+  Version Date: 2025-10-03
+  Version Note: Updated study summary.
 
-- &quot;Version Number&quot;: &quot;V2&quot;
-  &quot;Version Date&quot;: &quot;2023-08-12&quot;
-  &quot;Version Note&quot;: &quot;The data producer provided additional data files.&quot;
+- Version Number: V2
+  Version Date: 2023-08-12
+  Version Note: The data producer provided additional data files.
 
-- &quot;Version Number&quot;: &quot;V1&quot;
-  &quot;Version Date&quot;: &quot;2021-03-01&quot;
-  &quot;Version Note&quot;: &quot;Initial release&quot;
+- Version Number: V1
+  Version Date: 2021-03-01
+  Version Note: Initial release
 </code></pre>
-<pre><code class="language-yaml">- &quot;Version Number&quot;: &quot;V1&quot;
-  &quot;Version Date&quot;: &quot;2024-06-28&quot;
-  &quot;Version Note&quot;: &quot;Initial release&quot;
+<pre><code class="language-text">- Version Number: V1
+  Version Date: 2024-06-28
+  Version Note: Initial release
 </code></pre>
 <hr />
 <p><a id="distributors"></a></p>
@@ -3131,26 +3131,26 @@
 <p><strong>Accepted Values:</strong> Number</p>
 <p><strong>Usage Notes:</strong> A value of '0' indicates the primary distributor, '1' the second, and so forth.</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;0&quot;
+<pre><code class="language-text">0
 </code></pre>
-<pre><code class="language-text">&quot;1&quot;
+<pre><code class="language-text">1
 </code></pre>
-<pre><code class="language-text">&quot;2&quot;
+<pre><code class="language-text">2
 </code></pre>
 <h4 id="complete-distributors-examples-with-subfields">Complete Distributors Examples (with Subfields):</h4>
-<pre><code class="language-yaml">- &quot;Organization&quot;:
-    &quot;Name&quot;: &quot;Inter-university Consortium for Political and Social Research&quot;
-    &quot;Ror&quot;: &quot;https://ror.org/02q7mkh03&quot;
-  &quot;Order&quot;: 0
+<pre><code class="language-text">- Organization:
+    Name: Inter-university Consortium for Political and Social Research
+    ROR: https://ror.org/02q7mkh03
+  Order: 0
 
-- &quot;Organization&quot;:
-    &quot;Name&quot;: &quot;GESIS - Leibniz-Institute for the Social Sciences&quot;
-    &quot;Ror&quot;: &quot;https://ror.org/018afyw53&quot;
-  &quot;Order&quot;: 1
+- Organization:
+    Name: GESIS - Leibniz-Institute for the Social Sciences
+    ROR: https://ror.org/018afyw53
+  Order: 1
 </code></pre>
-<pre><code class="language-yaml">- &quot;Organization&quot;:
-    &quot;Name&quot;: &quot;Roper Center for Public Opinion Research&quot;
-  &quot;Order&quot;: 0
+<pre><code class="language-text">- Organization:
+    Name: Roper Center for Public Opinion Research
+  Order: 0
 </code></pre>
 <hr />
 <p><a id="study-number"></a></p>
@@ -3161,11 +3161,11 @@
 <p><strong>Accepted Values:</strong> Number</p>
 <p><strong>Usage Notes:</strong> The study number is automatically generated by ICPSR and is unique. Current study numbers are five or six digits, though four digit numbers were once standard and are still acceptable.</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;2760&quot;
+<pre><code class="language-text">2760
 </code></pre>
-<pre><code class="language-text">&quot;3025&quot;
+<pre><code class="language-text">3025
 </code></pre>
-<pre><code class="language-text">&quot;38672&quot;
+<pre><code class="language-text">38672
 </code></pre>
 <hr />
 <p><a id="digital-object-identifier-(doi)"></a></p>
@@ -3183,9 +3183,9 @@
 <p>The study number is automatically generated by ICPSR and is unique. Current study numbers are five or six digits. Four-digit numbers were once standard and are still acceptable. Additionally, DOIs containing six-digit study numbers prepended with E, for example, https://doi.org/10.3886/E247464V1, were once used for studies self-published at ICPSR.</p>
 <p>Study numbers with less than five digits will have zeroes prepended in the DOI (e.g., Study Number 4 is represented as 10.3886/ICPSR00004').</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;https://doi.org/10.3886/ICPSR300449.V2&quot;
+<pre><code class="language-text">https://doi.org/10.3886/ICPSR300449.V2
 </code></pre>
-<pre><code class="language-text">&quot;https://doi.org/10.3886/ICPSR06425.v1&quot;
+<pre><code class="language-text">https://doi.org/10.3886/ICPSR06425.v1
 </code></pre>
 <hr />
 <p><a id="citation"></a></p>
@@ -3196,9 +3196,9 @@
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Usage Notes:</strong> The Citation is dynamically assembled from other entry fields in this format: PI (list). Title. Distributor (list), Issued Date. DOI. Note: ICPSR 'union catalog' records (i.e., external resource to which ICPSR links as a courtesy) do not have citations.</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;Sickmund, Melissa, Hockenberry, Sarah, and Puzzanchera, Charles M. National Juvenile Court Data Archive, United States, 1985-2019. Inter-university Consortium for Political and Social Research [distributor], 2022-07-28. https://doi.org/10.3886/ICPSR38418.v1&quot;
+<pre><code class="language-text">Sickmund, Melissa, Hockenberry, Sarah, and Puzzanchera, Charles M. National Juvenile Court Data Archive, United States, 1985-2019. Inter-university Consortium for Political and Social Research [distributor], 2022-07-28. https://doi.org/10.3886/ICPSR38418.v1
 </code></pre>
-<pre><code class="language-text">&quot;Institute of Museum and Library Services. Public Libraries in the United States Survey, 2016-2018. Inter-university Consortium for Political and Social Research [distributor], 2021-10-07. https://doi.org/10.3886/ICPSR37992.v1&quot;
+<pre><code class="language-text">Institute of Museum and Library Services. Public Libraries in the United States Survey, 2016-2018. Inter-university Consortium for Political and Social Research [distributor], 2021-10-07. https://doi.org/10.3886/ICPSR37992.v1
 </code></pre>
 <hr />
 <p><a id="person"></a></p>
@@ -3288,11 +3288,11 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;Miner P.&quot;
+<pre><code class="language-text">Miner P.
 </code></pre>
-<pre><code class="language-text">&quot;Robert J.&quot;
+<pre><code class="language-text">Robert J.
 </code></pre>
-<pre><code class="language-text">&quot;Claudia&quot;
+<pre><code class="language-text">Claudia
 </code></pre>
 <h6 id="person_name_family">Family Name (Last Name)</h6>
 <p><strong>Description:</strong> The person's last (family) name, which may include a suffix (e.g., Jr., Sr., IV).</p>
@@ -3300,18 +3300,18 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;Marchbanks III&quot;
+<pre><code class="language-text">Marchbanks III
 </code></pre>
-<pre><code class="language-text">&quot;Shiller&quot;
+<pre><code class="language-text">Shiller
 </code></pre>
-<pre><code class="language-text">&quot;Goldin&quot;
+<pre><code class="language-text">Goldin
 </code></pre>
 <h4 id="complete-personal-name-examples-with-subfields">Complete Personal Name Examples (with Subfields):</h4>
-<pre><code class="language-yaml">&quot;Given Name (First Name)&quot;: &quot;Miner P.&quot;
-&quot;Family Name (Last Name)&quot;: &quot;Marchbanks III&quot;
+<pre><code class="language-text">Given Name (First Name): Miner P.
+Family Name (Last Name): Marchbanks III
 </code></pre>
-<pre><code class="language-yaml">&quot;Given Name (First Name)&quot;: &quot;Claudia&quot;
-&quot;Family Name (Last Name)&quot;: &quot;Goldin&quot;
+<pre><code class="language-text">Given Name (First Name): Claudia
+Family Name (Last Name): Goldin
 </code></pre>
 <h5 id="person_orcid">ORCID Identifier</h5>
 <p><strong>Description:</strong> The person's Open Researcher and Contributor ID (ORCID).</p>
@@ -3319,9 +3319,9 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;https://orcid.org/0009-0006-2316-6486&quot;
+<pre><code class="language-text">https://orcid.org/0009-0006-2316-6486
 </code></pre>
-<pre><code class="language-text">&quot;https://orcid.org/0000-0003-3842-1604&quot;
+<pre><code class="language-text">https://orcid.org/0000-0003-3842-1604
 </code></pre>
 <h5 id="person_affiliations">Affiliation(s)</h5>
 <p><strong>Description:</strong> The person's affiliated organization(s).</p>
@@ -3334,29 +3334,29 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;j.doe@example.com&quot;
+<pre><code class="language-text">j.doe@example.com
 </code></pre>
 <h4 id="complete-person-examples-with-subfields">Complete Person Examples (with Subfields):</h4>
-<pre><code class="language-yaml">&quot;Personal Name&quot;:
-  &quot;Given Name (First Name)&quot;: &quot;Robert J.&quot;
-  &quot;Family Name (Last Name)&quot;: &quot;Shiller&quot;
-&quot;ORCID Identifier&quot;: &quot;https://orcid.org/0009-0006-2316-6486&quot;
-&quot;Affiliation(s)&quot;:
-- &quot;Name&quot;: &quot;Yale University&quot;
-  &quot;Ror&quot;: &quot;https://ror.org/03v76x132&quot;
-- &quot;Name&quot;: &quot;MacroMarkets&quot;
+<pre><code class="language-text">Personal Name:
+  Given Name (First Name): Robert J.
+  Family Name (Last Name): Shiller
+ORCID Identifier: https://orcid.org/0009-0006-2316-6486
+Affiliation(s):
+- Name: Yale University
+  ROR: https://ror.org/03v76x132
+- Name: MacroMarkets
 </code></pre>
-<pre><code class="language-yaml">&quot;Personal Name&quot;:
-  &quot;Given Name (First Name)&quot;: &quot;Claudia&quot;
-  &quot;Family Name (Last Name)&quot;: &quot;Goldin&quot;
-&quot;ORCID Identifier&quot;: &quot;https://orcid.org/0000-0003-3842-1604&quot;
-&quot;Affiliation(s)&quot;:
-- &quot;Name&quot;: &quot;Harvard University&quot;
-  &quot;Ror&quot;: &quot;https://ror.org/03vek6s52&quot;
+<pre><code class="language-text">Personal Name:
+  Given Name (First Name): Claudia
+  Family Name (Last Name): Goldin
+ORCID Identifier: https://orcid.org/0000-0003-3842-1604
+Affiliation(s):
+- Name: Harvard University
+  ROR: https://ror.org/03vek6s52
 </code></pre>
-<pre><code class="language-yaml">&quot;Personal Name&quot;:
-  &quot;Given Name (First Name)&quot;: &quot;Miner P.&quot;
-  &quot;Family Name (Last Name)&quot;: &quot;Marchbanks III&quot;
+<pre><code class="language-text">Personal Name:
+  Given Name (First Name): Miner P.
+  Family Name (Last Name): Marchbanks III
 </code></pre>
 <hr />
 <p><a id="organization"></a></p>
@@ -3406,9 +3406,9 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;Federal Reserve Bank of St. Louis&quot;
+<pre><code class="language-text">Federal Reserve Bank of St. Louis
 </code></pre>
-<pre><code class="language-text">&quot;University of Michigan&quot;
+<pre><code class="language-text">University of Michigan
 </code></pre>
 <h5 id="organization_ror">ROR Identifier</h5>
 <p><strong>Description:</strong> The organization's Research Organization Registry (ROR) identifier.</p>
@@ -3416,7 +3416,7 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;https://ror.org/02q7mkh03&quot;
+<pre><code class="language-text">https://ror.org/02q7mkh03
 </code></pre>
 <h5 id="organization_email">Email Address</h5>
 <p><strong>Description:</strong> The organization's email address.</p>
@@ -3424,17 +3424,17 @@
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Text</p>
 <p><strong>Examples:</strong></p>
-<pre><code class="language-text">&quot;info@example.com&quot;
+<pre><code class="language-text">info@example.com
 </code></pre>
 <h4 id="complete-organization-examples-with-subfields">Complete Organization Examples (with Subfields):</h4>
-<pre><code class="language-yaml">&quot;Organization Name&quot;: &quot;Urban Institute&quot;
-&quot;ROR Identifier&quot;: &quot;https://ror.org/017pz3h73&quot;
-&quot;Email Address&quot;: &quot;info@urban.institute&quot;
+<pre><code class="language-text">Organization Name: Urban Institute
+ROR Identifier: https://ror.org/017pz3h73
+Email Address: info@urban.institute
 </code></pre>
-<pre><code class="language-yaml">&quot;Organization Name&quot;: &quot;Bureau of Justice Statistics&quot;
-&quot;ROR Identifier&quot;: &quot;https://ror.org/0006s4z66&quot;
+<pre><code class="language-text">Organization Name: Bureau of Justice Statistics
+ROR Identifier: https://ror.org/0006s4z66
 </code></pre>
-<pre><code class="language-yaml">&quot;Organization Name&quot;: &quot;Internal Revenue Service&quot;
+<pre><code class="language-text">Organization Name: Internal Revenue Service
 </code></pre>
 <hr />
 <h2 id="icpsr-metadata-schema-version-history">ICPSR Metadata Schema Version History</h2>
