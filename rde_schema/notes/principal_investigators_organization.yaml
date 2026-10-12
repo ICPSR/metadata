@@ -6,7 +6,7 @@
 
       * Whenever possible, enter the organization name as it appears in the [Research Organization Registry](https://ror.org/) (ROR).  
       * If the principal investigator is a department or subunit of an organization that appears in ROR, but does not have its own ROR ID, enter the organization name as it appears in ROR, followed by a period and the name of the department or subunit.  
-      * If the organization doesn't have a ROR ID, use its full name and avoid acronyms. Consult the following sources authority sources to determine the preferred name form.
+      * If the organization doesn't have a ROR ID, use its full name. Avoid acronyms unless they appear in the organization's preferred name, and spell them out before first use whenever possible. Consult the following sources authority sources to determine the preferred name form.
          * ICPSR's metadata catalog. If the PI has published data with ICPSR before, especially curated data, use the name as it appears in previous studies.
          * The organization's website.
          * The [Virtual International Authority File](https://viaf.org/en) (VIAF).
