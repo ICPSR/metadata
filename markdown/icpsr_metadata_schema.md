@@ -1,6 +1,6 @@
 # ICPSR Metadata Schema
 
-Last updated: September 30, 2026
+Last updated: October 12, 2026
 
 
 This metadata schema is used to describe data collections at the Inter-university Consortium for Political and Social Research (ICPSR) after 2026. 
@@ -23,7 +23,7 @@ Machine-actionable copies of metadata field definitions are also available in [J
 | [Time Periods](#time-periods) | Yes | Yes | Multi-part element; see subfields | The time period(s) to which the data refer, regardless of when the data were collected. |
 | [Nationally Representative Sample](#nationally-representative-sample) | No | No | Text | Indicates whether the data collection uses a sampling design intended to represent the demographics, behaviors, and/or characteristics of the entire nation. This typically involves probability-based methods that allow generalization. It does not include convenience samples that appear similar to the nation by chance. |
 | [Geographic Coverage Areas](#geographic-coverage-areas) | Yes | Yes | Multi-part element; see subfields | The geographic locations where the data refer or are related. |
-| [Smallest Geographic Unit](#smallest-geographic-unit) | No | No | Multi-part element; see subfields | The smallest geographic unit (e.g., state or census tract) used in the dataset. |
+| [Smallest Geographic Unit](#smallest-geographic-unit) | No | No | Multi-part element; see subfields | The smallest geographic unit (e.g., state or census tract) that can be readily identified from a variable in the data. |
 | [Study Design](#study-design) | No | No | Text | The procedures used to contact participants and gather data. |
 | [Universe](#universe) | No | No | Text | The total group of persons or other entities (e.g., households or organizations) that were the object of research and to which analytic results refer. |
 | [Time Methods](#time-methods) | No | Yes | Multi-part element; see subfields | The methods used to collect data over time, like snapshots at one point (cross-sectional) or repeatedly (longitudinal) to study changes or trends. |
@@ -255,7 +255,7 @@ When entering a principal investigator's affiliation(s):
 
   * Whenever possible, enter the organization name as it appears in the [Research Organization Registry](https://ror.org/) (ROR).  
   * If the principal investigator is a department or subunit of an organization that appears in ROR, but does not have its own ROR ID, enter the organization name as it appears in ROR, followed by a period and the name of the department or subunit.  
-  * If the organization doesn't have a ROR ID, use its full name and avoid acronyms. Consult the following sources authority sources to determine the preferred name form.
+  * If the organization doesn't have a ROR ID, use its full name. Avoid acronyms unless they appear in the organization's preferred name, and spell them out before first use whenever possible. Consult the following sources authority sources to determine the preferred name form.
      * ICPSR's metadata catalog. If the PI has published data with ICPSR before, especially curated data, use the name as it appears in previous studies.
      * The organization's website.
      * The [Virtual International Authority File](https://viaf.org/en) (VIAF).
@@ -1284,7 +1284,7 @@ https://sws.geonames.org/6269554
 <a id="smallest-geographic-unit"></a>
 ### Smallest Geographic Unit
 
-**Description:** The smallest geographic unit (e.g., state or census tract) used in the dataset.
+**Description:** The smallest geographic unit (e.g., state or census tract) that can be readily identified from a variable in the data.
 
 **Required:** No
 
@@ -1296,7 +1296,7 @@ https://sws.geonames.org/6269554
 
 If the data do not include a geographic variable by which the data can be analyzed, this element is not indicated. If all the cases are from a single state, but the cases are not subdivided geographically within that state, then 'state' is not indicated. 
 
-If there is a variable indicating which testing site a survey was taken at, but the locations of the testing sites were masked by the PI, this element is likely not indicated.
+If the data contain a variable indicating the institution, site, building, or campus at which data collection took place, but no explicit geographic identifier, this element is not indicated.
 
 
 This field employs a local ICPSR controlled vocabulary; see below for terms and definitions:
@@ -1304,31 +1304,30 @@ This field employs a local ICPSR controlled vocabulary; see below for terms and 
 
 | Term | Definition |
 |------|------------|
-| Geocoded Location | A precise geographic point derived from an address, typically represented as coordinates or address strings. |
-| Parcel | A discrete use of land ownership, often defined in property records or tax assessments. |
-| Grid Cell | A unit of spatial data that divides an area into rectangular, square intervals (e.g., 1km x 1km grid), typically used in mapping or environmental studies. |
-| Postal Code/Zip Code | A geographic area defined by postal delivery routes or regions, used for organizing mail delivery. |
-| Neighborhood/Community Area | An informally defined area within a city, usually based on local recognition rather than official administrative boundaries. |
-| City/Municipality | A local government jurisdiction that covers urban areas, which can range from large cities to small towns and villages. |
+| Geographic Coordinates | A location represented as a set of coordinate values (e.g., latitude/longitude, UTM coordinates) identifying a specific point on the earth's surface. |
+| Street Address | A location identified by a specific address (street number and street name) associated with an individual building, residence, or business. |
+| Postal Code/Zip Code | Geographic areas defined by postal delivery routes or regions, used for organizing mail delivery. |
+| Neighborhood/Community Area | Informally defined areas within a city, usually based on local recognition rather than official administrative boundaries. |
+| City/Municipality | A local government jurisdictions that covers urban areas, which can range from large cities to small towns and villages. |
 | County/District/Parish | A geographic area that is part of a state or province (e.g., parishes in Louisiana, boroughs in Alaska). |
 | State/Province | A major administrative division within a country.  In the U.S., this includes the 50 states and the District of Columbia.  Other countries, like Canada and Australia, have provinces or states (e.g., Ontario in Canada, New South Wales in Australia). |
 | Territory | A region under the jurisdiction of a national government, but not a fully self-governing state or province (e.g., Puerto Rico, Northwest Territories, Falkland Islands). |
 | Country | A sovereign nation or territory that is recognized as an independent political entity, such as the United States, Canada, or France. |
 | Census Block | The smallest geographic unit used in national censuses, often corresponding to a city block or small neighborhood. |
 | Census Block Group | A collection of adjacent census blocks—typically all blocks within part of a census tract. |
-| Census Tract | A small geographic unit used in national censuses, typically representing 2,500 to 8,000 people.  Census tracts are designed to provide detailed statistical data for neighborhoods or communities. |
-| Census Division | A larger geographic area used for statistical reporting, grouping states or provinces within a country.  Census divisions are smaller than regions but larger than individual states or provinces. |
-| Census Region | A broader grouping of census divisions used to organize and report data at a national level (e.g., Northeast, Midwest, South, West). |
-| Public Use Microdata Area (PUMA) | A geographic area with a population of 100,000 or more, used for the release of detailed public-use microdata from the U.S. Census. |
+| Census Tract | Small geographic units used in national censuses, typically representing 2,500 to 8,000 people.  They are designed to provide detailed statistical data for neighborhoods or communities. |
+| Census Division | Larger geographic areas used for statistical reporting, grouping states or provinces within a country.  These divisions are smaller than regions but larger than individual states or provinces. |
+| Census Region | Broader groupings of census divisions used to organize and report data at a national level (e.g., Northeast, Midwest, South, West). |
+| Public Use Microdata Area (PUMA) | Geographic areas with populations of 100,000 or more, used for the release of detailed public-use microdata from the U.S. Census. |
 | Core-Based Statistical Area (CBSA) | A term that includes both Metropolitan and Micropolitan Statistical Areas.  These areas are based on urban centers and their surrounding communities as defined by the U.S. Office of Management and Budget (OMB). |
 | Metropolitan Statistical Area (MSA) | A Core-Based Statistical Area (CBSA) that includes an urban core with a population of 50,000 or more. |
 | Micropolitan Statistical Area | A Core-Based Statistical Area (CBSA) that includes an urban core population of at least 10,000 but less than 50,000. |
-| ZIP Code Tabulation Area (ZCTA) | A geographic area created by the U.S. Census Bureau to approximate the boundaries of ZIP Codes for demographic analysis. |
-| Voting District/Precinct | A geographic area used for organizing elections, often serving as the smallest electoral units where voters cast their ballots. |
+| ZIP Code Tabulation Area (ZCTA) | Geographic areas created by the U.S. Census Bureau to approximate the boundaries of ZIP Codes for demographic analysis. |
+| Voting District/Precinct | Geographic areas used for organizing elections, often serving as the smallest electoral units where voters cast their ballots. |
 | Congressional District | A geographic area used for electing representatives to federal or state legislative offices in the United States. |
 | Federal Court District | A geographic area where a U.S. District Court has jurisdiction to hear and decide federal cases. |
-| School District | The administrative boundary for local education systems, typically overseeing public schools from elementary through secondary levels. |
-| Indigenous/Tribal Lands | An area legally recognized as an Indigenous or tribal nation, often with unique legal, cultural, or sovereignty status. |
+| School District | The administrative boundaries for local education systems, typically overseeing public schools from elementary through secondary levels. |
+| Indigenous/Tribal Lands | Areas legally recognized as Indigenous or tribal nations, often with unique legal, cultural, or sovereignty status. |
 
 
 #### Subfields:
