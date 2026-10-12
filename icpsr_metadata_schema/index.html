@@ -181,7 +181,7 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="icpsr-metadata-schema">ICPSR Metadata Schema</h1>
-<p>Last updated: September 30, 2026</p>
+<p>Last updated: October 12, 2026</p>
 <p>This metadata schema is used to describe data collections at the Inter-university Consortium for Political and Social Research (ICPSR) after 2026. </p>
 <p>These rules and definitions document ICPSR's metadata practices and are intended to (a) assist ICPSR staff with metadata entry, and (b) help users – including data depositors and researchers – understand and interpret ICPSR metadata.</p>
 <p>Machine-actionable copies of metadata field definitions are also available in <a href="https://github.com/ICPSR/metadata/tree/main/rde_schema/property_bank">JSON Schema</a> format.</p>
@@ -279,7 +279,7 @@
 <td>No</td>
 <td>No</td>
 <td>Multi-part element; see subfields</td>
-<td>The smallest geographic unit (e.g., state or census tract) used in the dataset.</td>
+<td>The smallest geographic unit (e.g., state or census tract) that can be readily identified from a variable in the data.</td>
 </tr>
 <tr>
 <td><a href="#study-design">Study Design</a></td>
@@ -675,7 +675,7 @@
 <ul>
 <li>Whenever possible, enter the organization name as it appears in the <a href="https://ror.org/">Research Organization Registry</a> (ROR).  </li>
 <li>If the principal investigator is a department or subunit of an organization that appears in ROR, but does not have its own ROR ID, enter the organization name as it appears in ROR, followed by a period and the name of the department or subunit.  </li>
-<li>If the organization doesn't have a ROR ID, use its full name and avoid acronyms. Consult the following sources authority sources to determine the preferred name form.<ul>
+<li>If the organization doesn't have a ROR ID, use its full name. Avoid acronyms unless they appear in the organization's preferred name, and spell them out before first use whenever possible. Consult the following sources authority sources to determine the preferred name form.<ul>
 <li>ICPSR's metadata catalog. If the PI has published data with ICPSR before, especially curated data, use the name as it appears in previous studies.</li>
 <li>The organization's website.</li>
 <li>The <a href="https://viaf.org/en">Virtual International Authority File</a> (VIAF).</li>
@@ -1528,13 +1528,13 @@
 <hr />
 <p><a id="smallest-geographic-unit"></a></p>
 <h3 id="smallest-geographic-unit">Smallest Geographic Unit</h3>
-<p><strong>Description:</strong> The smallest geographic unit (e.g., state or census tract) used in the dataset.</p>
+<p><strong>Description:</strong> The smallest geographic unit (e.g., state or census tract) that can be readily identified from a variable in the data.</p>
 <p><strong>Required:</strong> No</p>
 <p><strong>Repeatable:</strong> No</p>
 <p><strong>Accepted Values:</strong> Multi-part element; see subfields</p>
 <p><strong>Usage Notes:</strong> Smallest Geographic Unit is intended to represent specific, known geography – e.g., county, census district, Zip code, electoral district, etc. – that is represented by a variable. </p>
 <p>If the data do not include a geographic variable by which the data can be analyzed, this element is not indicated. If all the cases are from a single state, but the cases are not subdivided geographically within that state, then 'state' is not indicated. </p>
-<p>If there is a variable indicating which testing site a survey was taken at, but the locations of the testing sites were masked by the PI, this element is likely not indicated.</p>
+<p>If the data contain a variable indicating the institution, site, building, or campus at which data collection took place, but no explicit geographic identifier, this element is not indicated.</p>
 <p>This field employs a local ICPSR controlled vocabulary; see below for terms and definitions:</p>
 <table>
 <thead>
@@ -1545,28 +1545,24 @@
 </thead>
 <tbody>
 <tr>
-<td>Geocoded Location</td>
-<td>A precise geographic point derived from an address, typically represented as coordinates or address strings.</td>
+<td>Geographic Coordinates</td>
+<td>A location represented as a set of coordinate values (e.g., latitude/longitude, UTM coordinates) identifying a specific point on the earth's surface.</td>
 </tr>
 <tr>
-<td>Parcel</td>
-<td>A discrete use of land ownership, often defined in property records or tax assessments.</td>
-</tr>
-<tr>
-<td>Grid Cell</td>
-<td>A unit of spatial data that divides an area into rectangular, square intervals (e.g., 1km x 1km grid), typically used in mapping or environmental studies.</td>
+<td>Street Address</td>
+<td>A location identified by a specific address (street number and street name) associated with an individual building, residence, or business.</td>
 </tr>
 <tr>
 <td>Postal Code/Zip Code</td>
-<td>A geographic area defined by postal delivery routes or regions, used for organizing mail delivery.</td>
+<td>Geographic areas defined by postal delivery routes or regions, used for organizing mail delivery.</td>
 </tr>
 <tr>
 <td>Neighborhood/Community Area</td>
-<td>An informally defined area within a city, usually based on local recognition rather than official administrative boundaries.</td>
+<td>Informally defined areas within a city, usually based on local recognition rather than official administrative boundaries.</td>
 </tr>
 <tr>
 <td>City/Municipality</td>
-<td>A local government jurisdiction that covers urban areas, which can range from large cities to small towns and villages.</td>
+<td>A local government jurisdictions that covers urban areas, which can range from large cities to small towns and villages.</td>
 </tr>
 <tr>
 <td>County/District/Parish</td>
@@ -1594,19 +1590,19 @@
 </tr>
 <tr>
 <td>Census Tract</td>
-<td>A small geographic unit used in national censuses, typically representing 2,500 to 8,000 people.  Census tracts are designed to provide detailed statistical data for neighborhoods or communities.</td>
+<td>Small geographic units used in national censuses, typically representing 2,500 to 8,000 people.  They are designed to provide detailed statistical data for neighborhoods or communities.</td>
 </tr>
 <tr>
 <td>Census Division</td>
-<td>A larger geographic area used for statistical reporting, grouping states or provinces within a country.  Census divisions are smaller than regions but larger than individual states or provinces.</td>
+<td>Larger geographic areas used for statistical reporting, grouping states or provinces within a country.  These divisions are smaller than regions but larger than individual states or provinces.</td>
 </tr>
 <tr>
 <td>Census Region</td>
-<td>A broader grouping of census divisions used to organize and report data at a national level (e.g., Northeast, Midwest, South, West).</td>
+<td>Broader groupings of census divisions used to organize and report data at a national level (e.g., Northeast, Midwest, South, West).</td>
 </tr>
 <tr>
 <td>Public Use Microdata Area (PUMA)</td>
-<td>A geographic area with a population of 100,000 or more, used for the release of detailed public-use microdata from the U.S. Census.</td>
+<td>Geographic areas with populations of 100,000 or more, used for the release of detailed public-use microdata from the U.S. Census.</td>
 </tr>
 <tr>
 <td>Core-Based Statistical Area (CBSA)</td>
@@ -1622,11 +1618,11 @@
 </tr>
 <tr>
 <td>ZIP Code Tabulation Area (ZCTA)</td>
-<td>A geographic area created by the U.S. Census Bureau to approximate the boundaries of ZIP Codes for demographic analysis.</td>
+<td>Geographic areas created by the U.S. Census Bureau to approximate the boundaries of ZIP Codes for demographic analysis.</td>
 </tr>
 <tr>
 <td>Voting District/Precinct</td>
-<td>A geographic area used for organizing elections, often serving as the smallest electoral units where voters cast their ballots.</td>
+<td>Geographic areas used for organizing elections, often serving as the smallest electoral units where voters cast their ballots.</td>
 </tr>
 <tr>
 <td>Congressional District</td>
@@ -1638,11 +1634,11 @@
 </tr>
 <tr>
 <td>School District</td>
-<td>The administrative boundary for local education systems, typically overseeing public schools from elementary through secondary levels.</td>
+<td>The administrative boundaries for local education systems, typically overseeing public schools from elementary through secondary levels.</td>
 </tr>
 <tr>
 <td>Indigenous/Tribal Lands</td>
-<td>An area legally recognized as an Indigenous or tribal nation, often with unique legal, cultural, or sovereignty status.</td>
+<td>Areas legally recognized as Indigenous or tribal nations, often with unique legal, cultural, or sovereignty status.</td>
 </tr>
 </tbody>
 </table>
